@@ -1,0 +1,17 @@
+{
+  "width": 100,
+  "height": 10,
+  "comps": [
+    {
+      "type": "shape",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,0,0)",
+      "points": [
+        5.88905,
+        5,
+        96,
+        5
+      ]
+    }
+  ]
+}

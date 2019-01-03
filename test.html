@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>test.html</title>
+    <meta charset="UTF-8">
+    <style>
+    html,
+    body {
+        padding: 0;
+        margin: 0;
+    }
+    .main {
+        margin: 0px;
+        padding: 0px;
+        position: absolute;
+        top: 0px;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+    }
+    .container {
+        width: 100%;
+        height: 400px;
+        font: 18px black ;
+    }
+</style>
+
+<script type="text/javascript">
+    htconfig = {
+        Default: {
+                toolbarBackground: 'rgb(240,239,238)',  // 中间栏最上方
+                // toolbarBackground: '',
+                // 组件面板相关组件
+                paletteTitleBackground: 'rgb(240,239,238)',
+                paletteTitleHoverBackground: 'rgb(231,231,231)',
+                paletteTitleLabelColor: 'rgb(138, 138, 138)',
+                paletteItemSelectBackground: '',
+                paletteItemHoverBorderColor: 'rgb(138, 138, 138)',
+                toolTipBackground: 'rgb(255, 255, 255)',
+                propertyPaneHeaderBackground: 'rgb(240,239,238)',
+                propertyViewBackground: 'rgb(240,239,238)',
+                splitViewDividerBackground: 'rgb(228,228,228)'
+            }
+        };
+    </script>
+
+    <script src="../lib/core/ht.js"></script>
+    <script src="../lib/plugin/ht-cssanimation.js"></script>
+    <script src="../lib/plugin/ht-form.js"></script>
+    <script src="../lib/plugin/ht-dialog.js"></script>
+    <script src="../lib/plugin/ht-palette.js"></script>
+    <script src="../lib/plugin/ht-rulerframe.js"></script>
+    <script src="../lib/plugin/ht-propertypane.js"></script>
+    <script src="../lib/plugin/ht-edgetype.js"></script>
+    <script src="../lib/plugin/ht-contextmenu.js"></script>
+
+    <!--“连线”交互器-->
+    <script src="CreateEdgeInteractor.js"></script>
+    <!--“不规则图形”交互器-->
+    <script src="CreateShapeInteractor.js"></script>
+
+    <!--json图片-->
+    <script src="predefine.js"></script>
+    <script src="dialog.js"></script>
+    <!--面板的内容-->
+    <script src="palette-config.js"></script>
+    <!--导航栏的内容-->
+    <script src="toolbar-config.js"></script>
+    <!--属性栏的内容-->
+    <script src="properties-config.js"></script>
+    <!--初始化场景的内容-->
+    <script src="datamodel-config.js"></script>
+    <!--右键菜单栏的内容-->
+    <script src="contextmenu-config.js"></script>
+
+    <script src="dataModel.js"></script>
+
+
+    <script src = "/Users/xinwentao/Documents/Study/ajax.js"></script>
+
+    <script src="/Users/xinwentao/Desktop/Work/code-repo/jquery/jquery-3.1.1.js"></script>
+
+
+    <script type="text/javascript">
+        function init () {
+            var dataModel = new ht.DataModel();
+            var graphView = new ht.graph.GraphView(dataModel);
+            dataModel.deserialize(datamodel_config);
+
+            view = graphView.getView();            
+
+            view.className = 'main';
+            document.body.appendChild(view);  
+
+            graphView.fitContent(true);
+
+
+            var contextmenu = new ht.widget.ContextMenu(contextmenu_config);
+                contextmenu.enableGlobalKey();
+                contextmenu.setVisibleFunc(function(item) {
+                    var data = graphView.sm().ld();
+                    if (data instanceof ht.Node) {
+                        if (item.fordata === 1) {
+                            return true;
+                        } else {
+                            return false;
+                        }
+                    } 
+                    else {
+                        console.log ("11");
+                    }
+                    // else if (data === ht.Node) {
+                    //     if (item.fordata === 1) {
+                    //         return false;
+                    //     } else {
+                    //         return true;
+                    //     }
+                    // }
+                });
+                contextmenu.addTo(view);
+        }
+    </script>
+</head>
+
+<body onload="init();">
+</body>
+
+</html>
+
+
+
+
+
