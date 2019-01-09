@@ -269,6 +269,33 @@ data_properties = [// 所有的节点都有的属性
     }
 ];
 
+threshold_properties = [// 节点的阈值属性设置
+     {
+        categoryName: '阈值设置',
+        name: 'threshold',
+        displayName: '阈值1',
+        accessType: 'attr',
+        valueType: 'number',
+        editable: true                   
+    },
+    {
+        categoryName: '阈值设置',
+        name: 'moreThenThColor',
+        displayName: '高于阈值1时颜色',
+        accessType: 'attr',
+        valueType: 'color',
+        editable: true                   
+    },
+    {
+        categoryName: '阈值设置',
+        name: 'lessThenThColor',
+        displayName: '低于阈值1时颜色',
+        accessType: 'attr',
+        valueType: 'color',
+        editable: true                   
+    }
+];
+
 node_properties = [// node 节点的属性
     {
         categoryName: 'Node 节点',
