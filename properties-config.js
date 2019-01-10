@@ -281,18 +281,25 @@ threshold_properties = [// 节点的阈值属性设置
     {
         categoryName: '阈值设置',
         name: 'moreThenThColor',
-        displayName: '高于阈值1时颜色',
+        displayName: '高于阈值1颜色',
         accessType: 'attr',
-        valueType: 'color',
-        editable: true                   
+        editable: true,
+        enum: {
+            labels: ["", "绿色", "蓝色", "红色", "黄色", "黑色"],
+            values: ['', 'rgb(0,255,0)', 'rgb(0,0,255)', 'rgb(255,0,0)', 'rgb(255,255,0)', 'rgb(100,100,100)']
+        }               
     },
     {
         categoryName: '阈值设置',
         name: 'lessThenThColor',
-        displayName: '低于阈值1时颜色',
+        displayName: '低于阈值1颜色',
         accessType: 'attr',
-        valueType: 'color',
-        editable: true                   
+        editable: true,
+        defaultValue: '',
+        enum: {
+            labels: ["", "绿色", "蓝色", "红色", "黄色", "黑色"],
+            values: ['', 'rgb(0,255,0)', 'rgb(0,0,255)', 'rgb(255,0,0)', 'rgb(255,255,0)', 'rgb(100,100,100)']
+        }                  
     }
 ];
 
