@@ -74,7 +74,7 @@
 <!--右键菜单栏的内容-->
 <script src="contextmenu-config.js"></script>
 
-<script src="dataModel.js"></script>
+<!-- <script src="dataModel.js"></script> -->
 
 
 <script src = "/Users/xinwentao/Documents/Study/ajax.js"></script>
@@ -86,22 +86,26 @@
     function init () {
         var dm = new ht.DataModel();
         var graphView = new ht.graph.GraphView(dm);
-        dm.deserialize(datamodel_config);
+        ht.Default.xhrLoad("dataModel.json", function (data) {
+            var dataModel = ht.Default.parse(data);
+            dm.deserialize(dataModel);
+            view = graphView.getView();            
 
-        view = graphView.getView();            
+            view.className = 'main';
+            document.body.appendChild(view);  
 
-        view.className = 'main';
-        document.body.appendChild(view);  
+            graphView.fitContent(true);
+            setContextMenu(contextmenu_config, view);
 
-        graphView.fitContent(true);
-        setContextMenu(contextmenu_config, view);
+            var nodeArr = getNode(dm);
+            console.log (nodeArr);
+            sendNodeAndRefresh(dm, nodeArr);
+        });
 
-        var nodeArr = getNode(dm);
-        console.log (nodeArr);
-        sendNodeAndRefresh(dm, nodeArr);
+
     }
 
-    //
+    // 根据传入的 dataModel 
     function getNode (dataModel) {
         var nodeArr = [];
         dataModel.each(function(data) {
@@ -120,7 +124,14 @@
                 var dataArr = ht.Default.parse(data);
                 // console.log ("dataArr from fakeValue.json", dataArr);
                 dataArr.forEach(function (item, index) {
+                    if (!item) {
+                        console.error ("请检查服务器状态")
+                        return;
+                    }
                     setNodeColorByValue(dataModel, item.node, item.value);
+                },
+                function () {
+                    console.error ("请检查网络连接");
                 });
             });
         }, 3000);

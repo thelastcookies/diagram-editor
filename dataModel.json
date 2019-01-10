@@ -1,4 +1,3 @@
-datamodel_config = 
 {
   "v": "6.2.8",
   "p": {
@@ -12,7 +11,7 @@ datamodel_config =
   "d": [
     {
       "c": "ht.Node",
-      "i": 178,
+      "i": 2,
       "p": {
         "name": "阻波器",
         "layer": 1,
@@ -28,13 +27,13 @@ datamodel_config =
       },
       "a": {
         "threshold": 60,
-        "moreThenThColor": "rgb(0,0,255)",
+        "moreThenThColor": "rgb(0,255,0)",
         "lessThenThColor": "rgb(255,0,0)"
       }
     },
     {
       "c": "ht.Node",
-      "i": 212,
+      "i": 3,
       "p": {
         "name": "开关",
         "layer": 1,
@@ -50,13 +49,13 @@ datamodel_config =
       },
       "a": {
         "threshold": 80,
-        "moreThenThColor": "rgb(255,255,0)",
+        "moreThenThColor": "rgb(0,0,255)",
         "lessThenThColor": "rgb(255,0,0)"
       }
     },
     {
       "c": "ht.Node",
-      "i": 246,
+      "i": 4,
       "p": {
         "name": "电阻",
         "layer": 1,
@@ -72,13 +71,13 @@ datamodel_config =
       },
       "a": {
         "threshold": 100,
-        "moreThenThColor": "rgb(100,100,100)",
+        "moreThenThColor": "rgb(255,255,0)",
         "lessThenThColor": "rgb(255,0,0)"
       }
     },
     {
       "c": "ht.Node",
-      "i": 280,
+      "i": 5,
       "p": {
         "name": "放电间隙",
         "layer": 1,
@@ -94,19 +93,19 @@ datamodel_config =
       },
       "a": {
         "threshold": 30,
-        "moreThenThColor": "rgb(0,255,255)",
+        "moreThenThColor": "rgb(100,100,100)",
         "lessThenThColor": "rgb(255,0,0)"
       }
     },
     {
       "c": "ht.Edge",
-      "i": 4934,
+      "i": 6,
       "p": {
         "source": {
-          "__i": 178
+          "__i": 2
         },
         "target": {
-          "__i": 212
+          "__i": 3
         }
       },
       "s": {
@@ -116,13 +115,13 @@ datamodel_config =
     },
     {
       "c": "ht.Edge",
-      "i": 7075,
+      "i": 7,
       "p": {
         "source": {
-          "__i": 178
+          "__i": 2
         },
         "target": {
-          "__i": 280
+          "__i": 5
         }
       },
       "s": {
@@ -132,13 +131,13 @@ datamodel_config =
     },
     {
       "c": "ht.Edge",
-      "i": 11786,
+      "i": 8,
       "p": {
         "source": {
-          "__i": 246
+          "__i": 4
         },
         "target": {
-          "__i": 212
+          "__i": 3
         }
       },
       "s": {
@@ -148,13 +147,13 @@ datamodel_config =
     },
     {
       "c": "ht.Edge",
-      "i": 13366,
+      "i": 9,
       "p": {
         "source": {
-          "__i": 246
+          "__i": 4
         },
         "target": {
-          "__i": 280
+          "__i": 5
         }
       },
       "s": {

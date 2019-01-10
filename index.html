@@ -5,68 +5,67 @@
     <title>组态图编辑器</title>
     <meta charset="UTF-8">
     <style>
-        html,
-        body {
-            padding: 0;
-            margin: 0;
+    html,
+    body {
+        padding: 0;
+        margin: 0;
+    }
+</style>
+
+<script type="text/javascript">
+    htconfig = {
+        Default: {
+            toolbarBackground: 'rgb(240,239,238)',
+            paletteTitleBackground: 'rgb(240,239,238)',
+            paletteTitleHoverBackground: 'rgb(231,231,231)',
+            paletteTitleLabelColor: 'rgb(138, 138, 138)',
+            paletteItemSelectBackground: '',
+            paletteItemHoverBorderColor: 'rgb(138, 138, 138)',
+            toolTipBackground: 'rgb(255, 255, 255)',
+            propertyPaneHeaderBackground: 'rgb(240,239,238)',
+            propertyViewBackground: 'rgb(240,239,238)',
+            splitViewDividerBackground: 'rgb(228,228,228)'
         }
-    </style>
+    };
+</script>
 
-    <script type="text/javascript">
-        htconfig = {
-            Default: {
-                toolbarBackground: 'rgb(240,239,238)',
-                paletteTitleBackground: 'rgb(240,239,238)',
-                paletteTitleHoverBackground: 'rgb(231,231,231)',
-                paletteTitleLabelColor: 'rgb(138, 138, 138)',
-                paletteItemSelectBackground: '',
-                paletteItemHoverBorderColor: 'rgb(138, 138, 138)',
-                toolTipBackground: 'rgb(255, 255, 255)',
-                propertyPaneHeaderBackground: 'rgb(240,239,238)',
-                propertyViewBackground: 'rgb(240,239,238)',
-                splitViewDividerBackground: 'rgb(228,228,228)'
-            }
-        };
-    </script>
+<script src="../lib/core/ht.js"></script>
+<script src="../lib/plugin/ht-cssanimation.js"></script>
+<script src="../lib/plugin/ht-form.js"></script>
+<script src="../lib/plugin/ht-dialog.js"></script>
+<script src="../lib/plugin/ht-palette.js"></script>
+<script src="../lib/plugin/ht-rulerframe.js"></script>
+<script src="../lib/plugin/ht-propertypane.js"></script>
+<script src="../lib/plugin/ht-edgetype.js"></script>
 
-   <script src="../lib/core/ht.js"></script>
-    <script src="../lib/plugin/ht-cssanimation.js"></script>
-    <script src="../lib/plugin/ht-form.js"></script>
-    <script src="../lib/plugin/ht-dialog.js"></script>
-    <script src="../lib/plugin/ht-palette.js"></script>
-    <script src="../lib/plugin/ht-rulerframe.js"></script>
-    <script src="../lib/plugin/ht-propertypane.js"></script>
-    <script src="../lib/plugin/ht-edgetype.js"></script>
+<!--“连线”交互器-->
+<script src="CreateEdgeInteractor.js"></script>
+<!--“不规则图形”交互器-->
+<script src="CreateShapeInteractor.js"></script>
 
-    <!--“连线”交互器-->
-    <script src="CreateEdgeInteractor.js"></script>
-    <!--“不规则图形”交互器-->
-    <script src="CreateShapeInteractor.js"></script>
+<!--json图片-->
+<script src="predefine.js"></script>
+<script src="dialog.js"></script>
+<!--面板的内容-->
+<script src="palette-config.js"></script>
+<!--导航栏的内容-->
+<script src="toolbar-config.js"></script>
+<!--属性栏的内容-->
+<script src="properties-config.js"></script>
+<!--初始化场景的内容-->
+<!-- <script src="datamodel-config.js"></script> -->
 
-    <!--json图片-->
-    <script src="predefine.js"></script>
-    <script src="dialog.js"></script>
-    <!--面板的内容-->
-    <script src="palette-config.js"></script>
-    <!--导航栏的内容-->
-    <script src="toolbar-config.js"></script>
-    <!--属性栏的内容-->
-    <script src="properties-config.js"></script>
-    <!--初始化场景的内容-->
-    <!-- <script src="datamodel-config.js"></script> -->
+<!-- <script src="dataModel.js"></script> -->
 
-    <script src="dataModel.js"></script>
-
-    <script type="text/javascript">
+<script type="text/javascript">
         // tooltip 文字提示的 div 样式编辑
         var tooltipDiv = ht.Default.getToolTipDiv();
         tooltipDiv.style.borderRadius = '5px';
         tooltipDiv.style.border = '1px solid #eee';
 
-        // 数据容器 承载Data数据的模型
-        dataModel = new ht.DataModel();
-        // 反序列化 datamodel_config 的内容，将 json 内容转为拓扑图场景内容
-        dataModel.deserialize(datamodel_config);
+        // 初始化 dataModel
+        var dataModel = initDataModel();
+
         dataModel.each(function (data) { if (!(data instanceof ht.Edge)) data.setLayer(1); });
 
         // 拓扑组件
@@ -120,6 +119,18 @@
 
         // 场景主面板
         mainSplit = new ht.widget.SplitView(leftSplit, rightSplit, 'h', -260);
+
+
+        // 从服务器获取dataModel并反序列化，将 json 内容转为拓扑图场景内容
+        function initDataModel () {
+            // 数据容器 承载Data数据的模型
+            var dm = new ht.DataModel();
+            ht.Default.xhrLoad("dataModel.json", function (data) {
+                var dataJson = ht.Default.parse(data);
+                dm.deserialize(dataJson);
+            })
+            return dm;
+        }
 
         // 选中导航栏中的“默认编辑模式”
         function resetDefault() {
@@ -282,7 +293,7 @@
             var paletteNode = palette.dm().sm().ld();
             if (paletteNode) {
                 var item = paletteNode.item,
-                    image = item.image;
+                image = item.image;
 
                 // 获取事件下的节点
                 data = g2d.getDataAt(e, null, 5);
