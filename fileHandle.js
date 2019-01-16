@@ -13,7 +13,6 @@ function getFileAsJSON(fileDOMID) {
 
   	// Read file into memory as UTF-16
   	reader.readAsText(file, "UTF-8");
-  	return reader;
 }
 
 function updateProgress(evt) {
@@ -32,9 +31,16 @@ function loaded(evt) {
 	if (evt) {
         try {
             this.result = JSON.parse(evt.target.result);
-        } catch (err) {
-            console.log ("所选文件无法解析：" + err);
             console.log (this.result);
+            var dm = new ht.DataModel();
+            dm.deserialize(this.result);
+            g2d.setDataModel(dm);
+            g2d.redraw();
+            g2d.fitContent(true);
+            openPageDialog.hide();
+            // init();
+        } catch (err) {
+            alert ("所选文件无法解析：" + err);
         }
 	}
 	// Handle UTF-16 file dump
@@ -55,7 +61,7 @@ function errorHandler(evt) {
 
 
 // 下载文件方法
-var saveAsJSON = function (content, filename) {
+var saveFileAsJSON = function (content, filename) {
     var eleLink = document.createElement('a');
     eleLink.download = filename;
     eleLink.style.display = 'none';

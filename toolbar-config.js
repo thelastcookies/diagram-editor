@@ -94,6 +94,28 @@ toolbar_config_left = [
 
 toolbar_config_right = [
     {
+        icon: 'symbols/toolbarIcon/export.json',
+        toolTip: '新建',
+        action: function() {
+            showNewPageDialog();
+
+        }
+    },
+    {
+        icon: 'symbols/toolbarIcon/export.json',
+        toolTip: '打开',
+        action: function() {
+            showOpenPageDialog();
+        }
+    },
+    {
+        icon: 'symbols/toolbarIcon/export.json',
+        toolTip: '保存',
+        action: function() {
+            showSavePageDialog(dataModel.serialize(2));
+        }
+    },
+    {
         id: 'rulerframe',
         icon: {
             width: 16,
@@ -127,13 +149,6 @@ toolbar_config_right = [
         toolTip: '缩小',
         action: function(){
             g2d.zoomOut(true);
-        }
-    },
-    {
-        icon: 'symbols/toolbarIcon/export.json',
-        toolTip: '序列化场景',
-        action: function() {
-            showSerializerDialog(dataModel.serialize(2));
         }
     }
 ];
