@@ -31,16 +31,24 @@ function loaded(evt) {
 	if (evt) {
         try {
             this.result = JSON.parse(evt.target.result);
-            console.log (this.result);
+            // console.log (this.result);
             var dm = new ht.DataModel();
             dm.deserialize(this.result);
+            // palette.validate();
+            // initTreeView();
+            // redraw();
             g2d.setDataModel(dm);
             g2d.redraw();
             g2d.fitContent(true);
+            treeView.setDataModel(dm);
+            treeView.redraw();
+            propertyPane.getPropertyView().setDataModel(dm);
+            propertyPane.getPropertyView().redraw();
             openPageDialog.hide();
             // init();
         } catch (err) {
             alert ("所选文件无法解析：" + err);
+            openPageDialog.hide();
         }
 	}
 	// Handle UTF-16 file dump
