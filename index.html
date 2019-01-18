@@ -55,27 +55,35 @@
     <script src="fileHandle.js"></script>
 
     <!--初始化场景的内容-->
+    <!--<script src="datamodel-config.js"></script>-->
 
 
     <script type="text/javascript">
-        var dataModel = new ht.DataModel();
+        // 用于界面渲染的 dataModel
+        var __dataModel = new ht.DataModel();
+        // 用于保存文件名
+        var __fileName = null;
 
         // tooltip 文字提示的 div 样式编辑
         var tooltipDiv = ht.Default.getToolTipDiv();
         tooltipDiv.style.borderRadius = '5px';
         tooltipDiv.style.border = '1px solid #eee';
 
-        // 初始化 dataModel
-        // var dataModel = initDataModel("dataModel.json");
+        // 初始化 __dataModel
+        // var __dataModel = initMainDataModel("dataModel.json");
+        // dataModel = new ht.DataModel();
+        //
+        // dataModel.deserialize(datamodel_config);
+
 
         // 拓扑组件
-        g2d = new ht.graph.GraphView(dataModel);
+        g2d = new ht.graph.GraphView(__dataModel);
         g2d.setLayers(['0', 1]);
         if (g2d.getEditInteractor()) {
             g2d.getEditInteractor().setStyle('anchorVisible', false);
         }
 
-        dataModel.each(function (data) { if (!(data instanceof ht.Edge)) data.setLayer(1); });
+        __dataModel.each(function (data) { if (!(data instanceof ht.Edge)) data.setLayer(1); });
 
 
         // 创建交互器对象
@@ -113,18 +121,18 @@
         leftSplit = new ht.widget.SplitView(palette, borderPane, 'h', 260);
 
         // 树组件
-        treeView = new ht.widget.TreeView(dataModel);
+        treeView = new ht.widget.TreeView(__dataModel);
 
         // 属性面板
-        propertyPane = new ht.widget.PropertyPane(dataModel);
+        propertyPane = new ht.widget.PropertyPane(__dataModel);
 
         rightSplit = new ht.widget.SplitView(propertyPane, treeView, 'v', 0.4);
 
         // 场景主面板
         mainSplit = new ht.widget.SplitView(leftSplit, rightSplit, 'h', -260);
 
-        // 初始化dataModel
-        function initDataModel (source) {
+        // 初始化mainDataModel
+        function initMainDataModel (source) {
             // 数据容器 承载Data数据的模型
             var dm = new ht.DataModel();
             if(source) {
@@ -263,9 +271,9 @@
         function initPropertyView() {
             propertyPane.setHeaderLabels(['属性', '值']);
             var propertyView = propertyPane.getPropertyView();
-            dataModel.sm().ms(function (e) {// 监听选中变化事件
+            __dataModel.sm().ms(function (e) {// 监听选中变化事件
                 propertyView.setProperties(null);
-                var data = dataModel.sm().ld();
+                var data = __dataModel.sm().ld();
 
                 // 针对不同类型的节点设置不同的属性内容
 

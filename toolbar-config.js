@@ -61,11 +61,11 @@ toolbar_config_left = [
         action: function() {
             g2d.setInteractors([
                 new ht.graph.DefaultInteractor(g2d),
-                                new ht.graph.TouchInteractor(g2d, {
-                                    selectable: false
-                                }),
+                new ht.graph.TouchInteractor(g2d, {
+                    selectable: false
+                }),
                 new CreateEdgeInteractor(g2d, 'h.v')
-                ]);
+            ]);
             g2d.sm().cs();
         }
     },
@@ -112,7 +112,7 @@ toolbar_config_right = [
         icon: 'symbols/toolbarIcon/export.json',
         toolTip: '保存',
         action: function() {
-            showSavePageDialog(dataModel.serialize(2));
+            showSavePageDialog(__dataModel.serialize(2));
         }
     },
     {

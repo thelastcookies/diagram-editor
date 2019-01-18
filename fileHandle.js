@@ -6,6 +6,7 @@ function getFileAsJSON(fileDOMID) {
 	var result = null;
 
 	// Handle progress, success, and errors
+    reader.fileName = file.name.replace(".cfd", "");
     reader.result = result;
 	reader.onprogress = updateProgress;
 	reader.onload = loaded;
@@ -32,17 +33,18 @@ function loaded(evt) {
         try {
             this.result = JSON.parse(evt.target.result);
             // console.log (this.result);
-            var dm = new ht.DataModel();
-            dm.deserialize(this.result);
+            __fileName = this.fileName;
+            __dataModel.clear();
+            __dataModel.deserialize(this.result);
             // palette.validate();
             // initTreeView();
             // redraw();
-            g2d.setDataModel(dm);
+            g2d.setDataModel(__dataModel);
             g2d.redraw();
             g2d.fitContent(true);
-            treeView.setDataModel(dm);
+            treeView.setDataModel(__dataModel);
             treeView.redraw();
-            propertyPane.getPropertyView().setDataModel(dm);
+            propertyPane.getPropertyView().setDataModel(__dataModel);
             propertyPane.getPropertyView().redraw();
             openPageDialog.hide();
             // init();
