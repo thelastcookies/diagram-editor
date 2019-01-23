@@ -5,14 +5,14 @@
 	},
 	{
 		"node": "ZB0001",
-		"value": 120
+		"value": 1
 	},
 	{
 		"node": "R0001",
-		"value": 199
+		"value": 1
 	},
 	{
 		"node": "FD0001",
-		"value": 120
+		"value": 1
 	}
 ]
