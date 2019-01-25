@@ -1,6 +1,8 @@
 var newPageDialog = null,
     savePageDialog = null,
-    openPageDialog = null;
+    openPageDialog = null,
+    nodeTrendDialog = null;
+
 // var serializerInput = document.createElement('textarea');
 // serializerInput.style.resize = 'none';
 
@@ -78,6 +80,26 @@ var initSavePageDialog = function(content) {
     });
 };
 
+//
+var initNodeTrendDialog = function (nodeData){
+
+    console.log(nodeData);
+    nodeTrendDialog = new ht.widget.Dialog();
+    nodeTrendDialog.setConfig({
+        title: '测点趋势',
+        content: '<div id="echarts-container" style="width: 600px;height:400px;"></div>',
+        closable: true,
+        contentPadding: 10,
+        buttons: [{
+            label: '关闭',
+            action: function(button, e) {
+                nodeTrendDialog.hide();
+            }
+        }],
+        buttonsAlign: 'right'//按钮居右排放
+    });
+}
+
 
 // 以下为供 index.html 调用的新建打开保存方法
 var showNewPageDialog = function () {
@@ -97,4 +119,42 @@ var showSavePageDialog = function(content) {
     initSavePageDialog(content);
     savePageDialog.getView().querySelector(".filename").value = __fileName;
     savePageDialog.show();
+};
+
+var showNodeTrendDialog = function (nodeData) {
+    initNodeTrendDialog(nodeData);
+    let nodeName = "",
+        xAxis = [],
+        yData = [],
+        ledendData = [];
+
+    nodeName = nodeData[0].nodeTag;
+    ledendData = nodeName;
+    for (let index in nodeData) {
+        xAxis.push(nodeData[index].timeStamp);
+        yData.push(nodeData[index].nodeValue);
+    }
+
+    nodeTrendDialog.show();
+
+    echarts.init(document.getElementById('echarts-container')).setOption({
+        title: {
+            text: nodeData[0].nodeTag + "变化曲线"
+        },
+        tooltip: {
+            trigger: 'axis'
+        },
+        legend: {
+            data:['指标']
+        },
+        xAxis: {
+            data: xAxis
+        },
+        yAxis: {},
+        series: [{
+            name: '指标',
+            type: 'line',
+            data: yData
+        }]
+    });
 };

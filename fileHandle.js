@@ -32,20 +32,24 @@ function loaded(evt) {
 	if (evt) {
         try {
             this.result = JSON.parse(evt.target.result);
-            // console.log (this.result);
+
             __fileName = this.fileName;
             __dataModel.clear();
             __dataModel.deserialize(this.result);
-            // palette.validate();
-            // initTreeView();
-            // redraw();
-            g2d.setDataModel(__dataModel);
-            g2d.redraw();
-            g2d.fitContent(true);
-            treeView.setDataModel(__dataModel);
-            treeView.redraw();
-            propertyPane.getPropertyView().setDataModel(__dataModel);
-            propertyPane.getPropertyView().redraw();
+
+            if(g2d) {
+                g2d.setDataModel (__dataModel);
+                g2d.redraw ();
+                g2d.fitContent (true);
+            }
+            if(treeView) {
+                treeView.setDataModel (__dataModel);
+                treeView.redraw ();
+            }
+            if (propertyPane) {
+                propertyPane.getPropertyView ().setDataModel (__dataModel);
+                propertyPane.getPropertyView ().redraw ();
+            }
             openPageDialog.hide();
             // init();
         } catch (err) {

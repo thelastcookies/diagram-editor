@@ -5,240 +5,253 @@
     <title>test.html</title>
     <meta charset="UTF-8">
     <style>
-    html,
-    body {
-        padding: 0;
-        margin: 0;
-    }
-    .main {
-        margin: 0px;
-        padding: 0px;
-        position: absolute;
-        top: 0px;
-        bottom: 0px;
-        left: 0px;
-        right: 0px;
-    }
-    .container {
-        width: 100%;
-        height: 400px;
-        font: 18px black ;
-    }
-</style>
+        html,
+        body {
+            padding: 0;
+            margin: 0;
+        }
+        .main {
+            margin: 0px;
+            padding: 0px;
+            position: absolute;
+            top: 0px;
+            bottom: 0px;
+            left: 0px;
+            right: 0px;
+        }
+        .container {
+            width: 100%;
+            height: 400px;
+            font: 18px black ;
+        }
+    </style>
 
-<script type="text/javascript">
-    htconfig = {
-        Default: {
-        toolbarBackground: 'rgb(240,239,238)',  // 中间栏最上方
-        // toolbarBackground: '',
-        // 组件面板相关组件
-        paletteTitleBackground: 'rgb(240,239,238)',
-        paletteTitleHoverBackground: 'rgb(231,231,231)',
-        paletteTitleLabelColor: 'rgb(138, 138, 138)',
-        paletteItemSelectBackground: '',
-        paletteItemHoverBorderColor: 'rgb(138, 138, 138)',
-        toolTipBackground: 'rgb(255, 255, 255)',
-        propertyPaneHeaderBackground: 'rgb(240,239,238)',
-        propertyViewBackground: 'rgb(240,239,238)',
-        splitViewDividerBackground: 'rgb(228,228,228)'
-    }
-};
-</script>
+    <script type="text/javascript">
+        htconfig = {
+            Default: {
+                toolbarBackground: 'rgb(240,239,238)',  // 中间栏最上方
+                // toolbarBackground: '',
+                // 组件面板相关组件
+                paletteTitleBackground: 'rgb(240,239,238)',
+                paletteTitleHoverBackground: 'rgb(231,231,231)',
+                paletteTitleLabelColor: 'rgb(138, 138, 138)',
+                paletteItemSelectBackground: '',
+                paletteItemHoverBorderColor: 'rgb(138, 138, 138)',
+                toolTipBackground: 'rgb(255, 255, 255)',
+                propertyPaneHeaderBackground: 'rgb(240,239,238)',
+                propertyViewBackground: 'rgb(240,239,238)',
+                splitViewDividerBackground: 'rgb(228,228,228)'
+            }
+        };
+    </script>
 
-<script src="lib/core/ht.js"></script>
-<script src="lib/plugin/ht-cssanimation.js"></script>
-<script src="lib/plugin/ht-form.js"></script>
-<script src="lib/plugin/ht-dialog.js"></script>
-<script src="lib/plugin/ht-palette.js"></script>
-<script src="lib/plugin/ht-rulerframe.js"></script>
-<script src="lib/plugin/ht-propertypane.js"></script>
-<script src="lib/plugin/ht-edgetype.js"></script>
-<script src="lib/plugin/ht-contextmenu.js"></script>
+    <script src="lib/core/ht.js"></script>
+    <script src="lib/plugin/ht-cssanimation.js"></script>
+    <script src="lib/plugin/ht-form.js"></script>
+    <script src="lib/plugin/ht-dialog.js"></script>
+    <script src="lib/plugin/ht-palette.js"></script>
+    <script src="lib/plugin/ht-rulerframe.js"></script>
+    <script src="lib/plugin/ht-propertypane.js"></script>
+    <script src="lib/plugin/ht-edgetype.js"></script>
+    <script src="lib/plugin/ht-contextmenu.js"></script>
 
-<!--“连线”交互器-->
-<script src="CreateEdgeInteractor.js"></script>
-<!--“不规则图形”交互器-->
-<script src="CreateShapeInteractor.js"></script>
+    <!--“连线”交互器-->
+    <script src="CreateEdgeInteractor.js"></script>
+    <!--“不规则图形”交互器-->
+    <script src="CreateShapeInteractor.js"></script>
 
-<!--json图片-->
-<script src="predefine.js"></script>
-<script src="dialog.js"></script>
-<!--面板的内容-->
-<script src="palette-config.js"></script>
-<!--导航栏的内容-->
-<script src="toolbar-config.js"></script>
-<!--属性栏的内容-->
-<script src="properties-config.js"></script>
-<!--初始化场景的内容-->
-<script src="datamodel-config.js"></script>
-<!--右键菜单栏的内容-->
-<script src="contextmenu-config.js"></script>
+    <!--json图片-->
+    <script src="predefine.js"></script>
+    <script src="dialog-config.js"></script>
+    <!--面板的内容-->
+    <script src="palette-config.js"></script>
+    <!--导航栏的内容-->
+    <script src="toolbar-config.js"></script>
+    <!--属性栏的内容-->
+    <script src="properties-config.js"></script>
+    <!--初始化场景的内容-->
+    <script src="datamodel-config.js"></script>
+    <!--右键菜单栏的内容-->
+    <script src="contextmenu-config.js"></script>
 
-<!-- <script src="dataModel.js"></script> -->
+    <!-- <script src="dataModel.js"></script> -->
 
-
-<script src = "/Users/xinwentao/Documents/Study/ajax.js"></script>
-
-<script src="/Users/xinwentao/Desktop/Work/code-repo/jquery/jquery-3.1.1.js"></script>
+    <!--图表-->
+    <script src="echarts/echarts.common.min.js"></script>
 
 
-<script type="text/javascript">
-    function init () {
+    <script src="bootstrap-3.3.7-dist/js/jquery-3.1.1.js"></script>
+
+    <script>
+        // $(function(){
+        //     $.ajax({
+        //         type: 'POST',
+        //         url: "http://localhost/server/server.php",
+        //         data: {"nodeTag": "ZB0001"},
+        //         dataType: "json",
+        //         success: function (data) {
+        //             console.log (data);
+        //         }
+        //     });
+        // });
+    </script>
+
+
+    <script type="text/javascript">
         var dm = new ht.DataModel();
         var graphView = new ht.graph.GraphView(dm);
-        ht.Default.xhrLoad("dataModel.json", function (data) {
-            var dataModel = ht.Default.parse(data);
-            dm.deserialize(dataModel);
-            view = graphView.getView();            
+        function init () {
+            ht.Default.xhrLoad("dataModel.json", function (data) {
+                var dataModel = ht.Default.parse(data);
+                dm.deserialize(dataModel);
+                view = graphView.getView();
+                view.className = 'main';
 
-            view.className = 'main';
-            document.body.appendChild(view);  
+                setContextMenu(contextmenu_config, graphView);
+                document.body.appendChild(view);
+                graphView.fitContent(true);
+                var nodeArr = getNode(dm);
+                // console.log (nodeArr);
 
-            graphView.fitContent(true);
-            setContextMenu(contextmenu_config, view);
+                sendNodeAndRefresh(dm, nodeArr);
 
-            var nodeArr = getNode(dm);
-            console.log (nodeArr);
-            sendNodeAndRefresh(dm, nodeArr);
-        });
-
-
-    }
-
-    // 根据传入的 dataModel 
-    function getNode (dataModel) {
-        var nodeArr = [];
-        dataModel.each(function(data) {
-            var tag = data.getTag();
-            if(tag) {
-                nodeArr.push(tag);
-            }
-        })
-        return nodeArr;
-    }
-
-    //
-    function sendNodeAndRefresh (dataModel, nodeArr) {
-        setInterval(function() {
-            ht.Default.xhrLoad("fakeValue.json", function (data) {
-                var dataArr = ht.Default.parse(data);
-                // console.log ("dataArr from fakeValue.json", dataArr);
-                dataArr.forEach(function (item, index) {
-                    if (!item) {
-                        console.error ("请检查服务器状态")
-                        return;
-                    }
-                    setNodeColorByValue(dataModel, item.node, item.value);
-                },
-                function () {
-                    console.error ("请检查网络连接");
-                });
             });
-        }, 3000);
-    }
 
-    function setNodeColorByValue (dataModel, nodeTag, nodeValue) {
-        var node = dataModel.getDataByTag(nodeTag);
-        console.log (nodeTag);
-        var threshold = node.getAttr("threshold");
-        var moreThenThColor = node.getAttr("moreThenThColor");
-        var lessThenThColor = node.getAttr("lessThenThColor");
-        console.log ("组件标签：", nodeTag, "组件数据", nodeValue, "阈值", threshold, "高于阈值", moreThenThColor, "低于阈值", lessThenThColor);
-        if (nodeValue > threshold) {
-            // node.s('border.color', moreThenThColor);
-            node.a('lineColor', moreThenThColor);
-        }
-        else {
-            // node.s('border.color', lessThenThColor);
-            node.a('lineColor', lessThenThColor);
-        }
-    }
 
-    //
-    function setContextMenu (contextmenu_config, graphView) {
-        var contextmenu = new ht.widget.ContextMenu(contextmenu_config);
-        contextmenu.enableGlobalKey();
-        contextmenu.setVisibleFunc(function(item) {
-            var data = graphView.sm().ld();
-            if (data instanceof ht.Node) {
-                if (item.fordata === 1) {
-                    return true;
-                } else {
-                    return false;
+        }
+
+        // 根据传入的 dataModel
+        function getNode (dataModel) {
+            var nodeArr = [];
+            dataModel.each(function(data) {
+                var tag = data.getTag();
+                if(tag) {
+                    nodeArr.push(tag);
                 }
-            } 
-            else {
+            })
+            return nodeArr;
+        }
+
+        //
+        function sendNodeAndRefresh (dataModel, nodeArr) {
+            setInterval(function() {
+                ht.Default.xhrLoad("fake-value.json", function (data) {
+                    var dataArr = ht.Default.parse(data);
+                    // console.log ("dataArr from fake-value.json", dataArr);
+                    dataArr.forEach(function (item, index) {
+                            if (!item) {
+                                console.error ("请检查服务器状态")
+                                return;
+                            }
+                            setNodeColorByValue(dataModel, item.node, item.value);
+                        },
+                        function () {
+                            console.error ("请检查网络连接");
+                        });
+                });
+            }, 3000);
+        }
+
+        function setNodeColorByValue (dataModel, nodeTag, nodeValue) {
+            var node = dataModel.getDataByTag(nodeTag);
+            // console.log (nodeTag);
+            var threshold = node.getAttr("threshold");
+            var moreThenThColor = node.getAttr("moreThenThColor");
+            var lessThenThColor = node.getAttr("lessThenThColor");
+            // console.log ("组件标签：", nodeTag, "组件数据", nodeValue, "阈值", threshold, "高于阈值", moreThenThColor, "低于阈值", lessThenThColor);
+            if (nodeValue > threshold) {
+                // node.s('border.color', moreThenThColor);
+                node.a('lineColor', moreThenThColor);
             }
-            // else if (data === ht.Node) {
-            //     if (item.fordata === 1) {
-            //         return false;
-            //     } else {
-            //         return true;
-            //     }
-            // }
-        });
-        contextmenu.addTo(view);
+            else {
+                // node.s('border.color', lessThenThColor);
+                node.a('lineColor', lessThenThColor);
+            }
+        }
+
+        //
+        function setContextMenu (contextmenu_config, graphView) {
+            var contextmenu = new ht.widget.ContextMenu(contextmenu_config);
+            contextmenu.enableGlobalKey();
+            contextmenu.setVisibleFunc(function(item) {
+                var data = graphView.sm().ld();
+                if (data instanceof ht.Node) {
+                    if (item.fordata === 1) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+                }
+                else {
+                    if (item.fordata === 2) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+                }
+            });
+            contextmenu.addTo(view);
 
 
 
 
 
 
-    //    ht.Default.xhrLoad('displays/电力/大厦.json', function(text) {
-    //     var json = ht.Default.parse(text);
-    //             dm.deserialize(json);//反序列化
+            //    ht.Default.xhrLoad('displays/电力/大厦.json', function(text) {
+            //     var json = ht.Default.parse(text);
+            //             dm.deserialize(json);//反序列化
 
-    //             gv.fitContent(true);
+            //             gv.fitContent(true);
 
-    //             var lights = ['light1', 'light5', 'light6', 'light10', 'light11', 'light12', 'light13', 'light14', 'light15'];
-    //             var stopLights = ['light2', 'light3', 'light4', 'light7', 'light8', 'light9'];
+            //             var lights = ['light1', 'light5', 'light6', 'light10', 'light11', 'light12', 'light13', 'light14', 'light15'];
+            //             var stopLights = ['light2', 'light3', 'light4', 'light7', 'light8', 'light9'];
 
-    //             dm.each(function(data) {
-    //                 var tag = data.getTag();
-    //                 if(!tag) return;
+            //             dm.each(function(data) {
+            //                 var tag = data.getTag();
+            //                 if(!tag) return;
 
-    //                 data.a('shadow', false);
+            //                 data.a('shadow', false);
 
-    //                 var i = lights.indexOf(tag);
-    //                 if (i >= 0) {
-    //                     lights[i] = data;
-    //                     data.a('shadow', true);
-    //                 }
-    //                 var j = stopLights.indexOf(tag);
-    //                 if (j >= 0) {
-    //                     stopLights[j] = data;
-    //                     data.a('shadow', true);
-    //                 }
+            //                 var i = lights.indexOf(tag);
+            //                 if (i >= 0) {
+            //                     lights[i] = data;
+            //                     data.a('shadow', true);
+            //                 }
+            //                 var j = stopLights.indexOf(tag);
+            //                 if (j >= 0) {
+            //                     stopLights[j] = data;
+            //                     data.a('shadow', true);
+            //                 }
 
-    //                 data.a('shadowColor', 'rgba(255,0,0,0.9)');
-    //                 data.a('lightBg', 'rgb(255, 0, 0)');
-    //                 data.a('alarmColor', 'rgb(255, 0, 0)');
-    //             });
+            //                 data.a('shadowColor', 'rgba(255,0,0,0.9)');
+            //                 data.a('lightBg', 'rgb(255, 0, 0)');
+            //                 data.a('alarmColor', 'rgb(255, 0, 0)');
+            //             });
 
-    //             var alarmNode = dm.getDataByTag('alarm');
-    //             setInterval(function() {
-    //                 lights.forEach(blingFunc);
+            //             var alarmNode = dm.getDataByTag('alarm');
+            //             setInterval(function() {
+            //                 lights.forEach(blingFunc);
 
-    //                 var alarmColor = 'rgb(255, 0, 0)';
-    //                 if (alarmNode.a('alarmColor') === alarmColor) {
-    //                     alarmColor = 'rgb(0, 255, 0)';
-    //                 }
-    //                 alarmNode.a('alarmColor', alarmColor);
-    //             }, 1000);
+            //                 var alarmColor = 'rgb(255, 0, 0)';
+            //                 if (alarmNode.a('alarmColor') === alarmColor) {
+            //                     alarmColor = 'rgb(0, 255, 0)';
+            //                 }
+            //                 alarmNode.a('alarmColor', alarmColor);
+            //             }, 1000);
 
-    //             setTimeout(function() {//5 秒之后出现
-    //                 var flag = 0;
-    //                 var timer = setInterval(function() {
-    //                     flag++;
-    //                     stopLights.forEach(blingFunc);
-    //                     if (flag === 5) {//5秒后又停止
-    //                         clearInterval(timer);
-    //                     }
-    //                 }, 1000);
-    //             }, 5000);
-    //         });
-}
-</script>
+            //             setTimeout(function() {//5 秒之后出现
+            //                 var flag = 0;
+            //                 var timer = setInterval(function() {
+            //                     flag++;
+            //                     stopLights.forEach(blingFunc);
+            //                     if (flag === 5) {//5秒后又停止
+            //                         clearInterval(timer);
+            //                     }
+            //                 }, 1000);
+            //             }, 5000);
+            //         });
+        }
+    </script>
 </head>
 
 <body onload="init();">
