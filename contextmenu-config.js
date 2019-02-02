@@ -13,7 +13,7 @@ var contextmenu_config = [
                     let tag = item.getTag ();
                     $.ajax ({
                         type: 'POST',
-                        url: "http://localhost/server/server.php",
+                        url: "http://localhost/server/node-trend.php",
                         data: {"nodeTag": tag},
                         dataType: "json",
                         success: function (nodeData) {
@@ -32,31 +32,16 @@ var contextmenu_config = [
         label: "查看趋势",
         fordata: 2,
         action: function(item, event) {
-            var serializerDialog = null;
-            var serializerInput = document.createElement('textarea');
-            serializerInput.style.resize = 'none';
-            serializerDialog = new ht.widget.Dialog();
-            serializerDialog.setConfig({
-                title: '趋势',
-                content: serializerInput,
-                closable: true,
-                width: 320,
-                height: 340,
-                buttons: [{
-                    label: '关闭',
-                    action: function(button, e) {
-                        serializerDialog.hide();
-                    }
-                }],
-                buttonsAlign: 'right'//按钮居右排放
-
-
-
+            let nodeArr = getNode (dm);
+            $.ajax ({
+                type: 'POST',
+                url: "http://localhost/server/trend.php",
+                data: {"nodeTagArray": nodeArr},
+                dataType: "json",
+                success: function (nodeData) {
+                    console.log (nodeData);
+                }
             });
-
-            serializerInput.innerHTML = "测点趋势";
-
-            serializerDialog.show();
         }
     },
     {
