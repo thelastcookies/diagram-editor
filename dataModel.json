@@ -26,7 +26,7 @@
         "label": ""
       },
       "a": {
-        "threshold": 60,
+        "threshold": 35,
         "moreThenThColor": "rgb(0,255,0)",
         "lessThenThColor": "rgb(255,0,0)"
       }
@@ -48,7 +48,7 @@
         "label": ""
       },
       "a": {
-        "threshold": 80,
+        "threshold": 100,
         "moreThenThColor": "rgb(0,0,255)",
         "lessThenThColor": "rgb(255,0,0)"
       }
@@ -70,7 +70,7 @@
         "label": ""
       },
       "a": {
-        "threshold": 100,
+        "threshold": 50,
         "moreThenThColor": "rgb(255,255,0)",
         "lessThenThColor": "rgb(255,0,0)"
       }
@@ -92,7 +92,7 @@
         "label": ""
       },
       "a": {
-        "threshold": 30,
+        "threshold": 350,
         "moreThenThColor": "rgb(100,100,100)",
         "lessThenThColor": "rgb(255,0,0)"
       }

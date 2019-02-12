@@ -14,7 +14,7 @@
         }
         body{
             width: 1440px;
-            height: 1000px;
+            height: fit-content;
         }
         .main {
             margin: 0px;
@@ -29,6 +29,10 @@
             width: 100%;
             height: 400px;
             font: 18px black ;
+        }
+        #div-container {
+            position: absolute;
+
         }
         #play-btn{
             display: flex;
@@ -46,7 +50,7 @@
         }
         #progress-container{
             display: flex;
-            margin-left: 300px;
+            /*justify-content: center;*/
         }
         #progress {
             height: 20px;
@@ -86,6 +90,15 @@
             background-color: #fff;
             z-index: 1;
 
+        }
+        #progress-detail {
+            width: fit-content;
+            height: fit-content;
+            padding: 5px 8px;
+            color: #5e5e5e;
+            border: 1px solid #9d9d9d;
+            border-radius: 3px;
+            position: relative;
         }
     </style>
 
@@ -141,9 +154,10 @@
 
     <!--图表-->
     <script src="echarts/echarts.common.min.js"></script>
-
+    <!--计算-->
     <script src="calculate.js"></script>
-
+    <!--进度条-->
+    <script src="progress-bar.js"></script>
 
     <script src="bootstrap-3.3.7-dist/js/jquery-3.1.1.js"></script>
 
@@ -154,45 +168,12 @@
 
     <script type="text/javascript">
         var dm = new ht.DataModel();
-        // var graphView = new ht.graph.GraphView(dm);
-        // progressX 为滚动条距离窗口左边的距离，初始化后不再做修改。
-        let progressX = null;
-        //  positionX progress-bar 的横坐标位置
-        let positionX = null;
-        // 进度条长度
-        const progressLen = 478;
-        let timerID = null;
-        // let arr = [1 ,2, 3, 4, 5, 6, 7, 8, 2, 1, 2, 3, 4, 5, 5, 4, 3, 4, 4, 3, 3, 3];
-        let arr = [1 ,2, 3, 4, 3, 3];
-        let len = arr.length - 1;
+        var graphView = new ht.graph.GraphView(dm);
+        let nodeArr = null;
+        // 定时从服务器获取数据
+        let getDataIntervalID = null;
 
         function init () {
-            // progressX 为滚动按钮开始位置距离窗口左边的距离，初始化后不再做修改。
-            progressX = $("#progress").offset().left + 10;
-            // 初始化时 positionX 与 progressX 位置相同
-            positionX = progressX;
-            $("#progress-btn").on("mousedown", function (e) {
-                setPlayStop();
-                mouseMove();
-            });
-            $("#progress-bar").on("mousedown", function (e) {
-                setPlayStop();
-                progressBtnMoveTo(e);
-                mouseMove();
-            });
-            $(document).on("mouseup", function (e) {
-                $(document).off ("mousemove"); //弹起鼠标不做任何操作
-            });
-            $("#play-btn").on("click", function () {
-                if ($("#play-btn-icon").hasClass("glyphicon-play")) {
-                    setPlayStart();
-                }
-                else {
-                    setPlayStop();
-                }
-            });
-
-
             ht.Default.xhrLoad("dataModel.json", function (data) {
                 var dataModel = ht.Default.parse(data);
                 dm.deserialize(dataModel);
@@ -212,7 +193,7 @@
             setContextMenu(contextmenu_config, graphView);
             document.body.appendChild(view);
             graphView.fitContent(true);
-            var nodeArr = getNode(dm);
+            nodeArr = getNode(dm);
             // console.log (nodeArr);
 
             sendNodeAndRefresh(dm, nodeArr);
@@ -224,67 +205,6 @@
 
             });
         }
-
-        function progressBtnMoveTo(data) {
-            if (data instanceof jQuery.Event) {
-                positionX = event.clientX;
-            }
-            else {
-                positionX = data;
-            }
-            if (positionX < progressX) return;
-            if (positionX > cal(progressX + progressLen, 0.1, "+")) {
-                setPlayStop();
-                return;
-            }
-            console.log ("positionX", positionX);
-            $("#progress-btn").css("left", positionX - progressX - 1);
-        }
-
-        function mouseMove() {
-            $(document).on ("mousemove", function (e) {
-                progressBtnMoveTo(e);
-                window.getSelection ? window.getSelection().removeAllRanges() : document.selection.empty();
-            });
-        }
-
-        function setPlayStart() {
-            if (positionX >= progressLen + progressX + 1) {
-                clearInterval(timerID);
-                return;
-            }
-            if (positionX >= progressX + progressLen && positionX <= cal(progressX + progressLen, 0.1, "+"))
-            {
-                positionX = progressX;
-                progressBtnMoveTo(positionX);
-            }
-            timerID = setInterval(function () {
-                let step = cal(progressLen, len, "/");
-                if (positionX + step > cal(progressX + progressLen, 0.1, "+")) {
-                    setPlayStop();
-                    return;
-                }
-                // 如果 progress-bar 位置处于两个跳跃节点之间，那么开始移动时将其置于跳跃节点处。
-                else if (cal(cal(positionX, progressX, "-"), step, "%") !== 0) {
-                    positionX = cal(cal(Math.ceil((positionX - progressX)/step), step, "*"), progressX, "+");
-                }
-                // 如果 progress-bar 位置处于跳跃节点处，则直接跳跃。
-                else {
-                    positionX = cal(positionX, step, "+");
-                }
-                progressBtnMoveTo(positionX);
-            }, 500);
-            $("#play-btn-icon").removeClass("glyphicon-play");
-            $("#play-btn-icon").addClass("glyphicon-pause");
-        }
-
-        function setPlayStop() {
-            if (timerID)
-                clearInterval(timerID);
-            $("#play-btn-icon").removeClass("glyphicon-pause");
-            $("#play-btn-icon").addClass("glyphicon-play");
-        }
-
 
         // 根据传入的 dataModel
         function getNode (dataModel) {
@@ -300,10 +220,10 @@
 
         //
         function sendNodeAndRefresh (dataModel, nodeArr) {
-            setInterval(function() {
+            getDataIntervalID = setInterval(function() {
                 ht.Default.xhrLoad("fake-value.json", function (data) {
-                    var dataArr = ht.Default.parse(data);
-                    // console.log ("dataArr from fake-value.json", dataArr);
+                    let dataArr = ht.Default.parse(data);
+                    console.log ("dataArr from fake-value.json", dataArr);
                     dataArr.forEach(function (item, index) {
                             if (!item) {
                                 console.error ("请检查服务器状态")
@@ -314,24 +234,32 @@
                         function () {
                             console.error ("请检查网络连接");
                         });
+
                 });
             }, 3000);
         }
 
+        /**
+         * setNodeColorByValue()
+         * @param dataModel
+         * @param nodeTag []
+         * @param nodeValue []
+         */
+
         function setNodeColorByValue (dataModel, nodeTag, nodeValue) {
-            var node = dataModel.getDataByTag(nodeTag);
+            let node = dataModel.getDataByTag (nodeTag);
             // console.log (nodeTag);
-            var threshold = node.getAttr("threshold");
-            var moreThenThColor = node.getAttr("moreThenThColor");
-            var lessThenThColor = node.getAttr("lessThenThColor");
+            let threshold = node.getAttr ("threshold");
+            let moreThenThColor = node.getAttr ("moreThenThColor");
+            let lessThenThColor = node.getAttr ("lessThenThColor");
             // console.log ("组件标签：", nodeTag, "组件数据", nodeValue, "阈值", threshold, "高于阈值", moreThenThColor, "低于阈值", lessThenThColor);
-            if (nodeValue > threshold) {
+            if (parseFloat(nodeValue) > threshold) {
                 // node.s('border.color', moreThenThColor);
-                node.a('lineColor', moreThenThColor);
+                node.a ('lineColor', moreThenThColor);
             }
             else {
                 // node.s('border.color', lessThenThColor);
-                node.a('lineColor', lessThenThColor);
+                node.a ('lineColor', lessThenThColor);
             }
         }
 
@@ -357,11 +285,6 @@
                 }
             });
             contextmenu.addTo(view);
-
-
-
-
-
 
             //    ht.Default.xhrLoad('displays/电力/大厦.json', function(text) {
             //     var json = ht.Default.parse(text);
@@ -417,20 +340,23 @@
             //             }, 5000);
             //         });
         }
+
+        function dataPretreat (data) {
+            let dataPretreat = [];
+            let nodeTimeStamp = data[0].nodeTimeStamp;
+            for (let i = 0, leni = nodeTimeStamp.length; i < leni; i++) {
+                dataPretreat[i] = {timeStamp: nodeTimeStamp[i], nodeTagArr: [], nodeValueArr: []};
+                for (let j = 0, lenj = data.length; j < lenj; j++) {
+                    dataPretreat[i]["nodeTagArr"][j] = data[j].nodeTag;
+                    dataPretreat[i]["nodeValueArr"][j] = data[j].nodeValueArray[i];
+                }
+            }
+            return dataPretreat;
+        }
     </script>
 </head>
 
 <body onload="init();">
-<div id="div-container">
-    <button id="play-btn" type="button" class="btn btn-default">
-        <span id="play-btn-icon" class="glyphicon glyphicon-play" aria-hidden="true"></span>
-    </button>
-    <div id="progress-container">
-        <div id="progress">
-            <div id="progress-bar" class=""  style=""></div><div id="progress-btn"></div>
-        </div>
-    </div>
-</div>
 </body>
 </html>
 

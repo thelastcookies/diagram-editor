@@ -3,7 +3,7 @@
  * numB:
  * symbol:
  * decimal: Number, 表示保留几位小数。
- * roundFlag: Boolean, 表示是否将进行四射五福取舍。
+ * roundFlag: Boolean, 表示是否将进行四舍五入取舍。
  */
 const cal = function (numA, numB, symbol, decimal, roundFlag) {
     decimal = decimal === undefined ? 2 : decimal;
