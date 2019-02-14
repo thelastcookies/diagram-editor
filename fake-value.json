@@ -14,5 +14,13 @@
 	{
 		"node": "FD0001",
 		"value": 1
-	}
+	},
+    {
+        "node": "YGYC001",
+        "value": 49.91
+    },
+    {
+        "node": "WGYC001",
+        "value": 101
+    }
 ]

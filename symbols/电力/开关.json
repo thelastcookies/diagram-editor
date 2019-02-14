@@ -30,6 +30,12 @@
       "valueType": "Boolean",
       "defaultValue": true,
       "name": "开关状态"
+    },
+    {
+      "attr": "lineColor",
+      "valueType": "Color",
+      "defaultValue": "rgb(250,0,0)",
+      "name": "上电颜色"
     }
   ],
   "width": 24,
@@ -58,7 +64,6 @@
       "type": "shape",
       "borderWidth": 2,
       "borderColor": {
-        "func": "attr@lineColor",
         "value": "rgb(250,0,0)"
       },
       "shadowColor": "#1ABC9C",
@@ -73,7 +78,6 @@
       "type": "shape",
       "borderWidth": 2,
       "borderColor": {
-        "func": "attr@lineColor",
         "value": "rgb(250,0,0)"
       },
       "shadowColor": "#1ABC9C",
