@@ -41,8 +41,8 @@ var contextmenu_config = [
                 data: {"nodeTagArray": nodeArr},
                 dataType: "json",
                 success: function (nodeData) {
-                    progressData = nodeData
-                    console.log (progressData);
+                    timeStampArr = dataPretreat(nodeData);;
+                    console.log (timeStampArr);
                     if (getDataIntervalID)
                         clearInterval(getDataIntervalID);
                     if (mainView) {
@@ -52,7 +52,7 @@ var contextmenu_config = [
                     else {
                         var div = document.createElement('div');
                         div.id = "div-container";
-                        let progressHTML = '<div id="progress-container"><button id="play-btn" type="button" class="btn btn-default"><span id="play-btn-icon" class="glyphicon glyphicon-play" aria-hidden="true"></span></button><div id="progress"><div id="progress-bar" class=""  style=""></div><div id="progress-btn"></div><div id="progress-detail"></div></div></div>'
+                        let progressHTML = '<div id="progress-container"><button id="play-btn" type="button" class="btn btn-default"><span id="play-btn-icon" class="glyphicon glyphicon-play" aria-hidden="true"></span></button><div id="progress"><div id="progress-bar" class=""  style=""></div><div id="progress-btn"></div></div><div id="progress-time"></div></div>'
                         div.innerHTML = progressHTML;
                         mainView = new ht.widget.SplitView (graphView, div, 'v', -100);
                         mainView.addToDOM();
@@ -62,7 +62,7 @@ var contextmenu_config = [
                         // window.addEventListener ('resize', function (e) {
                         //     mainView.iv ();
                         // }, false);
-                        initProgress();
+                        initProgress(timeStampArr);
                         graphView.fitContent(true);
                     }
                 }
@@ -80,11 +80,3 @@ var contextmenu_config = [
         }
 }
 ];
-
-function createDiv(background){
-    div.style.position = 'absolute';
-    div.style.background = background;
-    div.style.border = '10px solid yellow';
-    div.style.setProperty('box-sizing', 'border-box', null);
-    return div;
-}
