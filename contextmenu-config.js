@@ -10,19 +10,22 @@ var contextmenu_config = [
         fordata: 1,
         action: function(item, event) {
             let slModel = graphView.sm().getSelection();
-            if (slModel.length === 1) {
-                slModel.toArray (function (item) {
-                    let tag = item.getTag ();
-                    $.ajax ({
-                        type: 'POST',
-                        url: "http://localhost/server/node-trend.php",
-                        data: {"nodeTag": tag},
-                        dataType: "json",
-                        success: function (nodeData) {
-                            showNodeTrendDialog(nodeData);
-                        }
-                    });
-                })
+            let nodeTagArr = [];
+            slModel.forEach(function (item, index) {
+                nodeTagArr.push(item.getTag());
+            });
+            // console.log (nodeTagArr);
+            if (slModel.length !== 0) {
+                $.ajax ({
+                    type: 'POST',
+                    url: "http://localhost/server/node-trend.php",
+                    data: {nodeTagArr: nodeTagArr},
+                    dataType: "json",
+                    success: function (nodeDataArr) {
+                        console.log(nodeDataArr);
+                        showNodeTrendDialog(nodeDataArr);
+                    }
+                });
             }
         }
     },

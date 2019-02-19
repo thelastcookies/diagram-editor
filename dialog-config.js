@@ -80,10 +80,8 @@ var initSavePageDialog = function(content) {
     });
 };
 
-//
-var initNodeTrendDialog = function (nodeData){
-
-    console.log(nodeData);
+// 右键查看测点趋势操作
+var initNodeTrendDialog = function (){
     nodeTrendDialog = new ht.widget.Dialog();
     nodeTrendDialog.setConfig({
         title: '测点趋势',
@@ -121,40 +119,55 @@ var showSavePageDialog = function(content) {
     savePageDialog.show();
 };
 
-var showNodeTrendDialog = function (nodeData) {
-    initNodeTrendDialog(nodeData);
-    let nodeName = "",
-        xAxis = [],
-        yData = [],
-        ledendData = [];
+var showNodeTrendDialog = function (nodeDataArr) {
+    console.log(nodeDataArr);
+    initNodeTrendDialog();
 
-    nodeName = nodeData[0].nodeTag;
-    ledendData = nodeName;
-    for (let index in nodeData) {
-        xAxis.push(nodeData[index].timeStamp);
-        yData.push(nodeData[index].nodeValue);
-    }
+    let nodeName = "",
+        timeStamp = [],
+        yData = [],
+        ledendData = [],
+        title = "",
+        series = [];
+    // 取出时间轴
+    nodeDataArr[0].forEach(function (item, index) {
+        timeStamp.push(item.timeStamp);
+    });
+    nodeDataArr.forEach(function (item, index) {
+        title += item[0].nodeTag + " ";
+        ledendData.push(item[0].nodeTag);
+        item.forEach(function (item, index) {
+            yData.push(item.nodeValue);
+        });
+        series.push({
+            name: item[0].nodeTag,
+            type: 'line',
+            data: yData
+        });
+        yData = [];
+    });
+
+    title += "变化曲线";
 
     nodeTrendDialog.show();
 
     echarts.init(document.getElementById('echarts-container')).setOption({
         title: {
-            text: nodeData[0].nodeTag + "变化曲线"
+            text: "趋势曲线",
+            x: 'left',
+            align: 'right'
         },
         tooltip: {
             trigger: 'axis'
         },
         legend: {
-            data:['指标']
+            data: ledendData,
+            x: 'right'
         },
         xAxis: {
-            data: xAxis
+            data: timeStamp
         },
         yAxis: {},
-        series: [{
-            name: '指标',
-            type: 'line',
-            data: yData
-        }]
+        series: series
     });
 };

@@ -10,7 +10,6 @@ let timerID = null;
 let timeStampArr = null;
 let len = null;
 let step = null;
-let progressData = null;
 
 /**
  *
