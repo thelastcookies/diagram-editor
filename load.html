@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>test.html</title>
+    <title>组态图查看器</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
     <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet" />
@@ -33,7 +33,21 @@
         }
         #div-container {
             position: absolute;
-            padding-left: 300px;
+        }
+        #footer-container {
+            width: 150px;
+            height: 30px;
+            position: absolute;
+            bottom: 0;
+            display: flex;
+        }
+        #fileUpLoad {
+            width: 50px;
+            height: 25px;
+            background-color: #fff;
+            border: 1px solid #5e5e5e;
+            align-items: center;
+            justify-content: center;
         }
     </style>
 
@@ -84,6 +98,9 @@
     <script src="datamodel-config.js"></script>
     <!--右键菜单栏的内容-->
     <script src="contextmenu-config.js"></script>
+    <!--文件列表的内容-->
+    <script src="file-handle/fileHandle.js"></script>
+
 
     <!-- <script src="dataModel.js"></script> -->
 
@@ -102,43 +119,135 @@
 
 
     <script type="text/javascript">
-        var dm = new ht.DataModel();
-        var graphView = new ht.graph.GraphView(dm);
+
+        let fileList = [];
+
+        // 此 dataModel 用于组态图显示
+        let diagramDM = new ht.DataModel();
+        let graphView = new ht.graph.GraphView(diagramDM);
+        let diagramView = graphView.getView();
+        diagramView.className = 'diagramView';
         let nodeArr = null;
         // 定时从服务器获取数据
         let getDataIntervalID = null;
 
-        function init () {
-            ht.Default.xhrLoad("dataModel.json", function (data) {
-                var dataModel = ht.Default.parse(data);
-                dm.deserialize(dataModel);
-                view = graphView.getView();
-                view.className = 'main';
 
-                // let divContainer = document.createElement("div");
-                // divContainer.setAttribute('id', 'progress');
-                // divContainer.innerHTML = '<div id = "progress-bar" class=""  style=""></div><div id = "progress-btn" ></div>';
-                // document.getElementsByTagName('body')[0].appendChild(divContainer);
+        let fileListDataModel = new ht.DataModel();
+        let fileListTableView = new ht.widget.TableView(fileListDataModel);
+        fileListTableView.onDataClicked = function (data) {
+            initDiagrambyFileName(data.a("fileList"));
+        }
+        fileListTableView.addColumns([{
+            name: "fileList",
+            displayName: '文件列表',
+            sortOrder: 'desc',
+            width: 200,
+            accessType: 'attr',
+            valueType: 'string',
+        }]);
 
-            // let borderPane = new ht.widget.BorderPane();
-            // borderPane.setBottomView(divContainer);
-            // borderPane.setBottomHeight(100);
-            // borderPane.setCenterView(graphView);
+        let tableHeader = new ht.widget.TableHeader(fileListTableView);
+        let tableFooter = document.createElement('div');
+        tableFooter.id = "footer-container";
+        let tableBottomHTML = '<button id = "fileUpLoad">上传</button>';
+        tableFooter.innerHTML = tableBottomHTML;
+
+        let tableBorderPane = new ht.widget.BorderPane();
+        tableBorderPane.setTopView(tableHeader);
+        tableBorderPane.setCenterView(fileListTableView);
+        tableBorderPane.setBottomView(tableFooter);
+
+        let loadPageLeftView = tableBorderPane.getView();
+        loadPageLeftView.className = 'tableView';
+
+        let progressDiv = document.createElement('div');
+        progressDiv.id = "div-container";
+        let progressHTML = '<div id="progress-container"><button id="play-btn" type="button" class="btn btn-default"><span id="play-btn-icon" class="glyphicon glyphicon-play" aria-hidden="true"></span></button><div id="progress"><div id="progress-bar" class=""  style=""></div><div id="progress-btn"></div></div><div id="progress-time">1997-01-01 00:00:00</div></div>'
+        progressDiv.innerHTML = progressHTML;
+        let loadPageRightView = new ht.widget.SplitView (graphView, progressDiv, 'v', -100);
+        loadPageRightView.setStatus("cr");
+
+        let loadPageMainView = new ht.widget.SplitView (loadPageLeftView, loadPageRightView, 'h', 200);
+
+        // 页面的初始化
+        function init (){
+            loadPageMainView.addToDOM();
+            initFileList();
+            initDiagrambyFileName();
+            $("#fileUpLoad").on("click", function () {
+                showUploadPageDialog();
+            });
+        }
+
+        function initFileList () {
+
+
+            fileListDataModel.clear();
+
+            $.ajax({
+                type: 'POST',
+                url: 'http://localhost/server/file-read.php',
+                dataType: 'json',
+                success: function (data) {
+                    console.log (data);
+                    fileList = data;
+                    data.forEach(function (item, index) {
+                        var data = new ht.Data();
+                        data.setAttr('fileList', item.fileName);
+                        fileListDataModel.add(data);
+                    });
+
+                        // function(e){
+                        // if(e.kind === 'click'){
+                        //     console.log ("111");
+                        //     // var columnModel = tablePane.getColumnModel(),
+                        //     //     width = tablePane.getWidth();
+                        //     // columnModel.getDataByTag('id').setWidth(width * 0.2);
+                        //     // columnModel.getDataByTag('language').setWidth(width * 0.4);
+                        //     // columnModel.getDataByTag('sex').setWidth(width * 0.4);
+                        // }
+                    // });
+                },
+                error: function (err) {
+                    console.log ("err status:", err.statusText);
+                    console.log ("err info:", err.responseText);
+                }
+            });
+
+        }
+
+        // 根据文件名来初始化组态图查看区域
+        /**
+         * init()
+         * @param fileName
+         */
+        function initDiagrambyFileName (fileName) {
+            console.log (fileName);
+            if (!fileName)
+                return;
+            let fileData = null;
+            fileList.forEach(function (item, index) {
+               if (item.fileName == fileName) {
+                   fileData = item.fileData;
+               }
+            });
+            let dataModel = ht.Default.parse(fileData);
+            diagramDM.clear();
+            diagramDM.deserialize(dataModel);
 
             setContextMenu(contextmenu_config, graphView);
-            document.body.appendChild(view);
-            graphView.fitContent(true);
-            nodeArr = getNode(dm);
+            graphView.redraw ();
+            graphView.fitContent (true);
+
+            nodeArr = getNode(diagramDM);
             // console.log (nodeArr);
 
-            sendNodeAndRefresh(dm, nodeArr);
+            // sendNodeAndRefresh(dm, nodeArr);
 
             // let mainSplit = new ht.widget.SplitView(graphView, divContainer, 'v', 0.98);
 
             // mainSplit.addToDOM();
             graphView.fitContent(true);
-
-            });
         }
 
         // 根据传入的 dataModel
@@ -162,7 +271,7 @@
             getDataIntervalID = setInterval(function() {
                 ht.Default.xhrLoad("fake-value.json", function (data) {
                     let dataArr = ht.Default.parse(data);
-                    console.log ("dataArr from fake-value.json", dataArr);
+                    // console.log ("dataArr from fake-value.json", dataArr);
                     dataArr.forEach(function (item, index) {
                             if (!item) {
                                 console.error ("请检查服务器状态")
@@ -222,10 +331,10 @@
          * @param graphView
          */
         function setContextMenu (contextmenu_config, graphView) {
-            var contextmenu = new ht.widget.ContextMenu(contextmenu_config);
+            let contextmenu = new ht.widget.ContextMenu(contextmenu_config);
             contextmenu.enableGlobalKey();
             contextmenu.setVisibleFunc(function(item) {
-                var data = graphView.sm().ld();
+                let data = graphView.sm().ld();
                 if (data instanceof ht.Node) {
                     if (item.fordata === 1) {
                         return true;
@@ -241,7 +350,7 @@
                     }
                 }
             });
-            contextmenu.addTo(view);
+            contextmenu.addTo(diagramView);
 
             //    ht.Default.xhrLoad('displays/电力/大厦.json', function(text) {
             //     var json = ht.Default.parse(text);
@@ -310,11 +419,49 @@
             }
             return dataPretreat;
         }
+
+        function fileLoadedCallback(file) {
+            if (diagramDM !== undefined) {
+                let dataObj = {
+                    "fileName": file.fileName,
+                    "fileData": file.fileData
+                };
+                let jsonData = JSON.stringify(dataObj);
+
+                let fileData = file.fileData.replace(/\s+/g, "");
+
+                $.ajax({
+                    type: 'POST',
+                    url: 'http://localhost/server/file-write.php',
+                    // data: {files: jsonData},
+                    data: {
+                        fileName: file.fileName,
+                        fileData: file.fileData
+                    },
+                    dataType: 'json',
+                    success: function (data) {
+                        if (data) {
+                            initFileList();
+                            alert ("上传成功");
+                        }
+                        else {
+                            alert ("上传失败");
+                        }
+                    },
+                    error: function (err) {
+                        console.log ("err status:", err.statusText);
+                        console.log ("err info:", err.responseText);
+                    }
+                });
+                uploadPageDialog.hide();
+            }
+        }
     </script>
 </head>
 
-<body onload="init();">
+<body>
 </body>
+<script>init();</script>
 </html>
 
 

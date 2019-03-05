@@ -66,8 +66,8 @@ function progressBtnMoveTo(data) {
         return;
     }
     let offsetX = positionX - progressX - 1;
-    console.log ("positionX", positionX);
-    console.log ("offsetX", offsetX);
+    // console.log ("positionX", positionX);
+    // console.log ("offsetX", offsetX);
     // 修改按钮的横坐标
     $("#progress-btn").css("left", offsetX);
     let index = cal(offsetX, step, "/", 0);
@@ -75,7 +75,7 @@ function progressBtnMoveTo(data) {
     $("#progress-time").text(timeStampArr[index].timeStamp);
     // 修改颜色
     for (let i = 0, len = nodeArr.length; i < len; i++) {
-        setNodeColorByValue(dm, timeStampArr[index].nodeTagArr[i], timeStampArr[index].nodeValueArr[i]);
+        setNodeColorByValue(diagramDM, timeStampArr[index].nodeTagArr[i], timeStampArr[index].nodeValueArr[i]);
     }
 }
 

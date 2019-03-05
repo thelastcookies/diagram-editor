@@ -1,13 +1,14 @@
-var newPageDialog = null,
+let newPageDialog = null,
     savePageDialog = null,
     openPageDialog = null,
-    nodeTrendDialog = null;
+    nodeTrendDialog = null,
+    uploadPageDialog = null;
 
 // var serializerInput = document.createElement('textarea');
 // serializerInput.style.resize = 'none';
 
 // 对话框新建图纸操作
-var initNewPageDialog = function () {
+let initNewPageDialog = function () {
     newPageDialog = new ht.widget.Dialog();
     newPageDialog.setConfig({
         title: '关闭',
@@ -22,9 +23,9 @@ var initNewPageDialog = function () {
         },{
             label: '确定',
             action: function(button, e) {
-                __fileName = null;
-                __dataModel.clear();
-                g2d.setDataModel(__dataModel);
+                indexFileName = null;
+                indexDataModel.clear();
+                g2d.setDataModel(indexDataModel);
                 g2d.redraw();
                 newPageDialog.hide();
             }
@@ -34,7 +35,7 @@ var initNewPageDialog = function () {
 };
 
 // 对话框打开图纸操作
-var initOpenPageDialog = function() {
+let initOpenPageDialog = function() {
     openPageDialog = new ht.widget.Dialog();
     openPageDialog.setConfig({
         title: '打开',
@@ -52,11 +53,11 @@ var initOpenPageDialog = function() {
 };
 
 // 对话框保存图纸操作
-var initSavePageDialog = function(content) {
+let initSavePageDialog = function(content) {
     savePageDialog = new ht.widget.Dialog();
     savePageDialog.setConfig({
         title: '保存',
-        content: __fileName !== null ? '文件名: <input class="filename" style="font-size: 14px;" value ="' + __fileName + '"/>' : '文件名: <input class="filename" style="font-size: 14px;" value =""/>',
+        content: indexFileName !== null ? '文件名: <input class="filename" style="font-size: 14px;" value ="' + indexFileName + '"/>' : '文件名: <input class="filename" style="font-size: 14px;" value =""/>',
         closable: true,
         contentPadding: 10,
         buttons: [{
@@ -68,8 +69,8 @@ var initSavePageDialog = function(content) {
             label: '保存',
             action: function(button, e) {
                 if (savePageDialog.getView().querySelector(".filename").value) {
-                    __fileName = savePageDialog.getView().querySelector(".filename").value;
-                    saveFileAsJSON (content, __fileName + ".cfd");
+                    indexFileName = savePageDialog.getView().querySelector(".filename").value;
+                    saveFileAsJSON (content, indexFileName + ".cfd");
                     savePageDialog.hide ();
                 }
                 else
@@ -81,7 +82,7 @@ var initSavePageDialog = function(content) {
 };
 
 // 右键查看测点趋势操作
-var initNodeTrendDialog = function (){
+let initNodeTrendDialog = function (){
     nodeTrendDialog = new ht.widget.Dialog();
     nodeTrendDialog.setConfig({
         title: '测点趋势',
@@ -98,28 +99,46 @@ var initNodeTrendDialog = function (){
     });
 }
 
+// 对话框打开所需上传的文件
+let initUploadPageDialog = function() {
+    uploadPageDialog = new ht.widget.Dialog();
+    uploadPageDialog.setConfig({
+        title: '上传',
+        content: '<input type="file" id = "uploadFile" />',
+        closable: true,
+        contentPadding: 10,
+        buttons: [{
+            label: '上传',
+            action: function(button, e) {
+                getFileAsJSON("uploadFile");
+            }
+        }],
+        buttonsAlign: 'right'//按钮居右排放
+    });
+};
+
 
 // 以下为供 index.html 调用的新建打开保存方法
-var showNewPageDialog = function () {
+let showNewPageDialog = function () {
     if (!newPageDialog) initNewPageDialog();
 
     newPageDialog.show();
 };
 
-var showOpenPageDialog = function () {
+let showOpenPageDialog = function () {
     if (!openPageDialog) initOpenPageDialog();
 
     openPageDialog.show();
 };
 
-var showSavePageDialog = function(content) {
+let showSavePageDialog = function(content) {
     // if (!savePageDialog) initSavePageDialog(content);
     initSavePageDialog(content);
-    savePageDialog.getView().querySelector(".filename").value = __fileName;
+    savePageDialog.getView().querySelector(".filename").value = indexFileName;
     savePageDialog.show();
 };
 
-var showNodeTrendDialog = function (nodeDataArr) {
+let showNodeTrendDialog = function (nodeDataArr) {
     console.log(nodeDataArr);
     initNodeTrendDialog();
 
@@ -129,10 +148,11 @@ var showNodeTrendDialog = function (nodeDataArr) {
         ledendData = [],
         title = "",
         series = [];
-    // 取出时间轴
+    // 设置x轴
     nodeDataArr[0].forEach(function (item, index) {
         timeStamp.push(item.timeStamp);
     });
+    // 设置 title，lendendData，y轴，series。
     nodeDataArr.forEach(function (item, index) {
         title += item[0].nodeTag + " ";
         ledendData.push(item[0].nodeTag);
@@ -170,4 +190,10 @@ var showNodeTrendDialog = function (nodeDataArr) {
         yAxis: {},
         series: series
     });
+};
+
+let showUploadPageDialog = function () {
+    if (!uploadPageDialog) initUploadPageDialog();
+
+    uploadPageDialog.show();
 };

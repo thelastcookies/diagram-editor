@@ -29,6 +29,8 @@
         };
     </script>
 
+    <script src="bootstrap-3.3.7-dist/js/jquery-3.1.1.js"></script>
+
     <script src="lib/core/ht.js"></script>
     <script src="lib/plugin/ht-cssanimation.js"></script>
     <script src="lib/plugin/ht-form.js"></script>
@@ -52,7 +54,7 @@
     <script src="toolbar-config.js"></script>
     <!--属性栏的内容-->
     <script src="properties-config.js"></script>
-    <script src="fileHandle.js"></script>
+    <script src="file-handle/fileHandle.js"></script>
 
     <!--初始化场景的内容-->
     <script src="datamodel-config.js"></script>
@@ -60,30 +62,30 @@
 
     <script type="text/javascript">
         // 用于界面渲染的 dataModel
-        var __dataModel = new ht.DataModel();
+        let indexDataModel = new ht.DataModel();
         // 用于保存文件名
-        var __fileName = null;
+        let indexFileName = null;
 
         // tooltip 文字提示的 div 样式编辑
-        var tooltipDiv = ht.Default.getToolTipDiv();
+        let tooltipDiv = ht.Default.getToolTipDiv();
         tooltipDiv.style.borderRadius = '5px';
         tooltipDiv.style.border = '1px solid #eee';
 
-        // 初始化 __dataModel
-        // var __dataModel = initMainDataModel("dataModel.json");
+        // 初始化 indexDataModel
+        // var indexDataModel = initMainDataModel("dataModel.json");
         // dataModel = new ht.DataModel();
         //
         // dataModel.deserialize(datamodel_config);
 
 
         // 拓扑组件
-        g2d = new ht.graph.GraphView(__dataModel);
+        g2d = new ht.graph.GraphView(indexDataModel);
         g2d.setLayers(['0', 1]);
         if (g2d.getEditInteractor()) {
             g2d.getEditInteractor().setStyle('anchorVisible', false);
         }
 
-        __dataModel.each(function (data) { if (!(data instanceof ht.Edge)) data.setLayer(1); });
+        indexDataModel.each(function (data) { if (!(data instanceof ht.Edge)) data.setLayer(1); });
 
 
         // 创建交互器对象
@@ -121,10 +123,10 @@
         leftSplit = new ht.widget.SplitView(palette, borderPane, 'h', 260);
 
         // 树组件
-        treeView = new ht.widget.TreeView(__dataModel);
+        treeView = new ht.widget.TreeView(indexDataModel);
 
         // 属性面板
-        propertyPane = new ht.widget.PropertyPane(__dataModel);
+        propertyPane = new ht.widget.PropertyPane(indexDataModel);
 
         rightSplit = new ht.widget.SplitView(propertyPane, treeView, 'v', 0.4);
 
@@ -271,9 +273,9 @@
         function initPropertyView() {
             propertyPane.setHeaderLabels(['属性', '值']);
             var propertyView = propertyPane.getPropertyView();
-            __dataModel.sm().ms(function (e) {// 监听选中变化事件
+            indexDataModel.sm().ms(function (e) {// 监听选中变化事件
                 propertyView.setProperties(null);
-                var data = __dataModel.sm().ld();
+                var data = indexDataModel.sm().ld();
 
                 // 针对不同类型的节点设置不同的属性内容
 
@@ -320,6 +322,29 @@
 
                 g2d.dm().add(node);
                 g2d.sm().ss(node);
+            }
+        }
+
+        function fileLoadedCallback(fileData) {
+            if (indexDataModel !== undefined) {
+                indexFileName = fileData.fileName;
+                indexDataModel.clear();
+                indexDataModel.deserialize(fileData.fileData);
+
+                if(g2d) {
+                    g2d.setDataModel (indexDataModel);
+                    g2d.redraw ();
+                    g2d.fitContent (true);
+                }
+                if(treeView) {
+                    treeView.setDataModel (indexDataModel);
+                    treeView.redraw ();
+                }
+                if (propertyPane) {
+                    propertyPane.getPropertyView ().setDataModel (indexDataModel);
+                    propertyPane.getPropertyView ().redraw ();
+                }
+                openPageDialog.hide();
             }
         }
 

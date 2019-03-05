@@ -112,7 +112,7 @@ toolbar_config_right = [
         icon: 'symbols/toolbarIcon/export.json',
         toolTip: '保存',
         action: function() {
-            showSavePageDialog(__dataModel.serialize(2));
+            showSavePageDialog(indexDataModel.serialize(2));
         }
     },
     {

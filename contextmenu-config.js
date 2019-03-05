@@ -1,5 +1,5 @@
+// let progressSplit = null;
 let mainView = null;
-let bottomView = null;
 var contextmenu_config = [
     {
         label: "查看测点信息",
@@ -37,7 +37,8 @@ var contextmenu_config = [
         label: "查看趋势",
         fordata: 2,
         action: function(item, event) {
-            let nodeArr = getNode (dm);
+            let nodeArr = getNode (diagramDM);
+            let mainView = document.getElementsByClassName("main")[0];
             $.ajax ({
                 type: 'POST',
                 url: "http://localhost/server/trend.php",
@@ -46,26 +47,16 @@ var contextmenu_config = [
                 success: function (nodeData) {
                     timeStampArr = dataPretreat(nodeData);;
                     console.log (timeStampArr);
+                    initProgress(timeStampArr);
                     if (getDataIntervalID)
                         clearInterval(getDataIntervalID);
-                    if (mainView) {
-                        mainView.setStatus("normal");
+                    if (loadPageRightView) {
+                        loadPageRightView.setStatus("normal");
                         graphView.fitContent(true);
                     }
                     else {
-                        var div = document.createElement('div');
-                        div.id = "div-container";
-                        let progressHTML = '<div id="progress-container"><button id="play-btn" type="button" class="btn btn-default"><span id="play-btn-icon" class="glyphicon glyphicon-play" aria-hidden="true"></span></button><div id="progress"><div id="progress-bar" class=""  style=""></div><div id="progress-btn"></div></div><div id="progress-time"></div></div>'
-                        div.innerHTML = progressHTML;
-                        mainView = new ht.widget.SplitView (graphView, div, 'v', -100);
-                        mainView.addToDOM();
-                        // progressView = mainView.getView ();
-                        // progressView.className = 'progressView';
-                        // document.body.appendChild (progressView);
-                        // window.addEventListener ('resize', function (e) {
-                        //     mainView.iv ();
-                        // }, false);
-                        initProgress(timeStampArr);
+
+                        // initProgress(timeStampArr);
                         graphView.fitContent(true);
                     }
                 }
@@ -76,10 +67,10 @@ var contextmenu_config = [
         label: "关闭查看趋势",
         fordata: 2,
         action: function(item, event) {
-            mainView.setStatus("cr");
+            loadPageRightView.setStatus("cr");
             graphView.fitContent(true);
-            sendNodeAndRefresh(dm, nodeArr);
-            // mainView.
+            sendNodeAndRefresh(diagramDM, nodeArr);
+            // progressSplit.
         }
 }
 ];

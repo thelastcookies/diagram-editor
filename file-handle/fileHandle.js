@@ -32,29 +32,13 @@ function loaded(evt) {
 	if (evt) {
         try {
             this.result = JSON.parse(evt.target.result);
-
-            __fileName = this.fileName;
-            __dataModel.clear();
-            __dataModel.deserialize(this.result);
-
-            if(g2d) {
-                g2d.setDataModel (__dataModel);
-                g2d.redraw ();
-                g2d.fitContent (true);
+            let file = {
+                fileName: this.fileName,
+                fileData: this.result
             }
-            if(treeView) {
-                treeView.setDataModel (__dataModel);
-                treeView.redraw ();
-            }
-            if (propertyPane) {
-                propertyPane.getPropertyView ().setDataModel (__dataModel);
-                propertyPane.getPropertyView ().redraw ();
-            }
-            openPageDialog.hide();
-            // init();
+            fileLoadedCallback (file);
         } catch (err) {
             alert ("所选文件无法解析：" + err);
-            openPageDialog.hide();
         }
 	}
 	// Handle UTF-16 file dump
