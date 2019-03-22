@@ -3,6 +3,7 @@ var CreateShapeInteractor = function (graphView, type) {
     this._points = new ht.List();
     this._type = type;
 };
+let startPoint = {};
 ht.Default.def(CreateShapeInteractor, ht.graph.Interactor, {
     setUp: function () {
         CreateShapeInteractor.superClass.setUp.call(this);
@@ -68,6 +69,7 @@ ht.Default.def(CreateShapeInteractor, ht.graph.Interactor, {
                     var shape = new this._type();
                     shape.s({
                         'shape.background': null,
+                        // 'shape.border.color': 'rbg(23, 23, 23)',
                         'shape.border.width': 2
                     });
                     shape.setPoints(this._points.toArray());
@@ -82,7 +84,27 @@ ht.Default.def(CreateShapeInteractor, ht.graph.Interactor, {
                 }
             }
             else {
-                this._points.add(this._downPoint);
+                let tempArr = this._points.toArray ();
+                if (tempArr.length != 0) {
+                    let xm = Math.abs (tempArr[tempArr.length - 1].x - this._downPoint.x);
+                    let ym = Math.abs (tempArr[tempArr.length - 1].y - this._downPoint.y);
+                    if (xm < 20 && ym < 20) {
+                        return;
+                    }
+                    else if (xm > ym) {
+                        this._downPoint.y = tempArr[tempArr.length - 1].y;
+                    }
+                    else {
+                        this._downPoint.x = tempArr[tempArr.length - 1].x;
+                    }
+                }
+                else {
+                    startPoint = {
+                        x: this._downPoint.x,
+                        y: this._downPoint.y
+                    }
+                }
+                this._points.add (this._downPoint);
             }
         }
         this.redraw();
