@@ -1,0 +1,23 @@
+{
+  "width": 60,
+  "height": 30,
+  "comps": [
+    {
+      "type": "rect",
+      "background": {
+        "func": "attr@lightBg",
+        "value": "rgb(255,255,255)"
+      },
+      "borderWidth": 0,
+      "border.padding": 0,
+      "borderColor": "rgb(153, 153, 153)",
+      "shadowColor": "#1ABC9C",
+      "rect": [
+        0,
+        0,
+        60,
+        30
+      ]
+    }
+  ]
+}

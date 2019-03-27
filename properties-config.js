@@ -85,42 +85,42 @@ text_properties = [// 文本的属性
 
 data_properties = [// 所有的节点都有的属性
     {
-        name: 'id'                   
+        name: 'id'
     },
     {
         name: 'name',
         displayName: '名称',
-        editable: true                        
-    }, 
+        editable: true
+    },
     {
         name: 'tag',// 设置了 name 属性，如果没有设置 accessType 则默认通过 get/setTag 来获取和设置 tag 值
         displayName: '标签',// 用于存取属性名的显示文本值，若为空则显示name属性值
-        editable: true// 设置该属性是否可编辑                       
-    }, 
+        editable: true// 设置该属性是否可编辑
+    },
     {
         name: 'label',// 设置了 name 属性，如果没有设置 accessType 则默认通过 get/setTag 来获取和设置 tag 值
         displayName: '属性1',// 用于存取属性名的显示文本值，若为空则显示name属性值
         accessType: 'style',
         valueType: 'text',
-        editable: true// 设置该属性是否可编辑                       
-    }, 
+        editable: true// 设置该属性是否可编辑
+    },
     {
         name: 'label2',// 设置了 name 属性，如果没有设置 accessType 则默认通过 get/setTag 来获取和设置 tag 值
         displayName: '属性2',// 用于存取属性名的显示文本值，若为空则显示name属性值
         accessType: 'style',
         valueType: 'text',
-        editable: true// 设置该属性是否可编辑                       
-    }, 
+        editable: true// 设置该属性是否可编辑
+    },
     {
-        name: 'parent', 
+        name: 'parent',
         displayName: '父亲节点',
-    },    
+    },
     {
         name: '2d.editable',// 结合 accessType，则通过 node.s('2d.editable') 获取和设置该属性
         accessType: 'style',// 操作存取属性类型
         displayName: '可编辑',// 用于存取属性名的显示文本值，若为空则显示name属性值
         valueType: 'boolean',// 布尔类型，显示为勾选框
-        editable: true// 设置该属性是否可编辑  
+        editable: true// 设置该属性是否可编辑
     },
     {
         name: '2d.movable',
@@ -136,26 +136,26 @@ data_properties = [// 所有的节点都有的属性
         valueType: 'boolean',
         editable: true
     },
-    {       
+    {
         categoryName: '文本',
         displayName: '内容',
-        name: 'label.color',        
+        name: 'label.color',
         accessType: 'style',
         valueType: 'color',
-        editable: true  
-    },  
+        editable: true
+    },
     {
         categoryName: '文本',
         displayName: '背景',
-        name: 'label.background',        
+        name: 'label.background',
         accessType: 'style',
         valueType: 'color',
-        editable: true  
-    }, 
+        editable: true
+    },
     {
         categoryName: '文本',
         displayName: '字体',
-        name: 'label.font',        
+        name: 'label.font',
         accessType: 'style',
         editable: true,
         formatValue: function(value){
@@ -165,35 +165,35 @@ data_properties = [// 所有的节点都有的属性
     {
         categoryName: '文本',
         displayName: '位置',
-        name: 'label.position',        
+        name: 'label.position',
         accessType: 'style',
         editable: true,
         slider: {
             min: 1,
             max: 55,
             step: 1
-        }        
-    },        
-    {       
+        }
+    },
+    {
         categoryName: '文本',
         displayName: '横偏移',
-        name: 'label.offset.x',        
+        name: 'label.offset.x',
         accessType: 'style',
         valueType: 'number',
-        editable: true  
-    },              
-    {       
+        editable: true
+    },
+    {
         categoryName: '文本',
         displayName: '纵偏移',
-        name: 'label.offset.y',        
+        name: 'label.offset.y',
         accessType: 'style',
         valueType: 'number',
-        editable: true  
-    },    
+        editable: true
+    },
     {
         categoryName: '文本',
         displayName: '角度',
-        name: 'label.rotation',        
+        name: 'label.rotation',
         accessType: 'style',
         editable: true,
         slider: {
@@ -203,43 +203,43 @@ data_properties = [// 所有的节点都有的属性
             getToolTip: function(){
                 return Math.round(this.getValue() / Math.PI * 180) + '°';
             }
-        }        
-    },   
+        }
+    },
     {
         categoryName: '文本',
         displayName: '最大长度',
-        name: 'label.max',        
+        name: 'label.max',
         accessType: 'style',
         valueType: 'number',
-        editable: true        
-    },             
+        editable: true
+    },
     {
         categoryName: '文本',
         displayName: '固定',
-        name: 'label.position.fixed',        
+        name: 'label.position.fixed',
         accessType: 'style',
         valueType: 'boolean',
-        editable: true              
-    }, 
+        editable: true
+    },
     {
         categoryName: '文本',
         displayName: '透明度',
-        name: 'label.opacity',        
+        name: 'label.opacity',
         accessType: 'style',
         editable: true,
         slider: {
             min: 0,
             max: 1,
             step: 0.1
-        }        
-    },             
+        }
+    },
     {
         categoryName: '选中',
         displayName: '颜色',
         name: 'select.color',
         accessType: 'style',
         valueType: 'color',
-        editable: true  
+        editable: true
     },
     {
         categoryName: '选中',
@@ -247,7 +247,7 @@ data_properties = [// 所有的节点都有的属性
         name: 'select.width',
         accessType: 'style',
         valueType: 'number',
-        editable: true  
+        editable: true
     },
     {
         categoryName: '选中',
@@ -255,17 +255,17 @@ data_properties = [// 所有的节点都有的属性
         name: 'select.padding',
         accessType: 'style',
         valueType: 'number',
-        editable: true  
-    },    
+        editable: true
+    },
     {
         categoryName: '选中',
         displayName: '类型',
-        name: 'select.type',                       
+        name: 'select.type',
         editable: true,
-        accessType: 'style',    
+        accessType: 'style',
         enum: {
             values: ['rect', 'circle', 'oval', 'roundRect']
-        }                     
+        }
     }
 ];
 
@@ -276,7 +276,7 @@ threshold_properties = [// 节点的阈值属性设置
         displayName: '阈值1',
         accessType: 'attr',
         valueType: 'number',
-        editable: true                   
+        editable: true
     },
     {
         categoryName: '阈值设置',
@@ -287,7 +287,7 @@ threshold_properties = [// 节点的阈值属性设置
         enum: {
             labels: ["", "绿色", "蓝色", "红色", "黄色", "黑色"],
             values: ['', 'rgb(0,255,0)', 'rgb(0,0,255)', 'rgb(255,0,0)', 'rgb(255,255,0)', 'rgb(100,100,100)']
-        }               
+        }
     },
     {
         categoryName: '阈值设置',
@@ -299,7 +299,7 @@ threshold_properties = [// 节点的阈值属性设置
         enum: {
             labels: ["", "绿色", "蓝色", "红色", "黄色", "黑色"],
             values: ['', 'rgb(0,255,0)', 'rgb(0,0,255)', 'rgb(255,0,0)', 'rgb(255,255,0)', 'rgb(100,100,100)']
-        }                  
+        }
     }
 ];
 
@@ -307,47 +307,55 @@ node_properties = [// node 节点的属性
     {
         categoryName: 'Node 节点',
         displayName: '吸附',
-        name: 'host'        
+        name: 'host'
     },
     {
         categoryName: 'Node 节点',
         displayName: '图片',
         name: 'image',
         editable: true
-    },            
+    },
     {
         categoryName: 'Node 节点',
         displayName: '位置',
         name: 'position',
         getValue: function(data){
             var position = data.getPosition();
-            return 'x: ' + parseInt(position.x) + ', y: ' + parseInt(position.y); 
+            return 'x: ' + parseInt(position.x) + ', y: ' + parseInt(position.y);
         }
-    },            
+    },
     {
         categoryName: 'Node 节点',
         displayName: '宽度',
         name: 'width',
         valueType: 'number',
-        editable: true                        
-    }, 
+        editable: true
+    },
     {
         categoryName: 'Node 节点',
         displayName: '高度',
         name: 'height',
         valueType: 'number',
-        editable: true                        
+        editable: true
+    },
+    {
+        categoryName: 'Node 节点',
+        displayName: '背景颜色',
+        name: 'body.color',
+        accessType: 'style',
+        valueType: 'color',
+        editable: true
     },
     {
         categoryName: 'Node 节点',
         displayName: '拉伸',
         name: 'image.stretch',
         editable: true,
-        accessType: 'style',    
+        accessType: 'style',
         enum: {
             values: ['fill', 'uniform', 'centerUniform']
-        }         
-    },        
+        }
+    },
     {
         categoryName: 'Node 节点',
         displayName: '角度',
@@ -360,96 +368,122 @@ node_properties = [// node 节点的属性
             getToolTip: function(){
                 return Math.round(this.getValue() / Math.PI * 180) + '°';
             }
-        }         
-    }        
+        }
+    },
+    {
+        categoryName: 'Node 节点',
+        displayName: '边框形状',
+        name: 'border.type',
+        editable: true,
+        accessType: 'style',
+        enum: {
+            values: ['rect', 'circle', 'oval', 'roundRect']
+        }
+    },
+    {
+        categoryName: 'Node 节点',
+        displayName: '边框颜色',
+        name: 'border.color',
+        accessType: 'style',
+        valueType: 'color',
+        editable: true
+    },
+    {
+        categoryName: 'Node 节点',
+        displayName: '边框宽度',
+        name: 'border.width',
+        accessType: 'style',
+        valueType: 'number',
+        editable: true
+    }
 ];
 
 group_properties = [// 组的属性
     {
         categoryName: '组',
         displayName: '展开',
-        name: 'expanded',                
-        editable: true  
+        name: 'expanded',
+        editable: true
     },
     {
         categoryName: '组',
         displayName: '类型',
-        name: 'group.type',                       
+        name: 'group.type',
         editable: true,
-        accessType: 'style',        
+        accessType: 'style',
         enum: {
             values: [null, 'oval', 'circle', 'rect', 'roundRect']
-        }                        
+        }
     },
     {
         categoryName: '组',
         displayName: '图片',
-        name: 'group.image', 
-        accessType: 'style', 
-        editable: true  
-    },            
+        name: 'group.image',
+        accessType: 'style',
+        editable: true
+    },
     {
         categoryName: '组',
         displayName: '拉伸',
         name: 'group.image.stretch',
         editable: true,
-        accessType: 'style',    
+        accessType: 'style',
         enum: {
             values: ['fill', 'uniform', 'centerUniform']
-        }         
-    },            
+        }
+    },
     {
         categoryName: '组',
         displayName: '边距',
-        name: 'group.padding',                       
+        name: 'group.padding',
         editable: true,
-        accessType: 'style',    
-        valueType: 'number'                      
-    }, 
+        accessType: 'style',
+        valueType: 'number'
+    },
     {
         categoryName: '组',
         displayName: '顶边距',
-        name: 'group.padding.top',                       
+        name: 'group.padding.top',
         editable: true,
-        accessType: 'style',    
-        valueType: 'number'                      
+        accessType: 'style',
+        valueType: 'number'
     },
     {
         categoryName: '组',
         displayName: '底边距',
-        name: 'group.padding.bottom',                       
+        name: 'group.padding.bottom',
         editable: true,
-        accessType: 'style',    
-        valueType: 'number'                      
-    },            
+        accessType: 'style',
+        valueType: 'number'
+    },
     {
         categoryName: '组',
         displayName: '左边距',
-        name: 'group.padding.left',                       
+        name: 'group.padding.left',
         editable: true,
-        accessType: 'style',    
-        valueType: 'number'                      
-    }, 
+        accessType: 'style',
+        valueType: 'number'
+    },
     {
         categoryName: '组',
         displayName: '右边距',
-        name: 'group.padding.right',                       
+        name: 'group.padding.right',
         editable: true,
-        accessType: 'style',    
-        valueType: 'number'                      
-    },              
+        accessType: 'style',
+        valueType: 'number'
+    },
     {
         categoryName: '组',
         displayName: '深度',
-        name: 'group.depth',                       
+        name: 'group.depth',
         editable: true,
-        accessType: 'style',    
-        valueType: 'number'                      
+        accessType: 'style',
+        valueType: 'number'
     },
     {
         categoryName: '组',
         displayName: '图案',
-        name: 'group.border.pattern',                       
+        name: 'group.border.pattern',
         editable: true,
         accessType: 'style',
         setValue: function(data, property, value, view){
@@ -457,50 +491,50 @@ group_properties = [// 组的属性
         },
         formatValue: function(value){
             return '[' + (value || '') + ']';
-        }        
-    },            
+        }
+    },
     {
         categoryName: '组',
         displayName: '边框宽度',
-        name: 'group.border.width',                       
+        name: 'group.border.width',
         editable: true,
-        accessType: 'style',    
-        valueType: 'number'                      
-    },       
+        accessType: 'style',
+        valueType: 'number'
+    },
     {
         categoryName: '组',
         displayName: '线帽样式',
-        name: 'group.border.cap',                       
+        name: 'group.border.cap',
         editable: true,
-        accessType: 'style',        
+        accessType: 'style',
         enum: {
             values: ['butt', 'round', 'square']
-        }                        
-    },            
+        }
+    },
     {
         categoryName: '组',
         displayName: '交汇样式',
-        name: 'group.border.join',                       
+        name: 'group.border.join',
         editable: true,
-        accessType: 'style',        
+        accessType: 'style',
         enum: {
             values: ['bevel', 'round', 'miter']
-        }                        
-    },              
+        }
+    },
     {
         categoryName: '组',
         displayName: '背景',
-        name: 'group.background',                       
+        name: 'group.background',
         editable: true,
-        accessType: 'style',    
-        valueType: 'color'                      
-    }, 
+        accessType: 'style',
+        valueType: 'color'
+    },
     {
         categoryName: '组',
         displayName: '渐进',
-        name: 'group.gradient',                       
+        name: 'group.gradient',
         editable: true,
-        accessType: 'style',    
+        accessType: 'style',
         enum: {
             values: ['linear.southwest','linear.southeast','linear.northwest','linear.northeast',
                 'linear.north','linear.south','linear.west','linear.east',
@@ -508,46 +542,46 @@ group_properties = [// 组的属性
                 'radial.north','radial.south','radial.west','radial.east',
                 'spread.horizontal','spread.vertical','spread.diagonal','spread.antidiagonal',
                 'spread.north','spread.south','spread.west','spread.east']
-        }                     
-    },            
+        }
+    },
     {
         categoryName: '组',
         displayName: '渐进色   ',
-        name: 'group.gradient.color',                       
+        name: 'group.gradient.color',
         editable: true,
-        accessType: 'style',    
-        valueType: 'color'                      
-    },  
+        accessType: 'style',
+        valueType: 'color'
+    },
     {
         categoryName: '组',
         displayName: '标题对齐',
-        name: 'group.title.align',                       
+        name: 'group.title.align',
         editable: true,
-        accessType: 'style',        
+        accessType: 'style',
         enum: {
             values: ['left', 'center', 'right']
-        }                        
+        }
     },
-    {       
+    {
         categoryName: '组',
         displayName: '标题颜色',
-        name: 'group.title.color',        
+        name: 'group.title.color',
         accessType: 'style',
         valueType: 'color',
-        editable: true  
-    },  
+        editable: true
+    },
     {
         categoryName: '组',
         displayName: '标题背景',
-        name: 'group.title.background',        
+        name: 'group.title.background',
         accessType: 'style',
         valueType: 'color',
-        editable: true  
-    }, 
+        editable: true
+    },
     {
         categoryName: '组',
         displayName: '标题字体',
-        name: 'group.title.font',        
+        name: 'group.title.font',
         accessType: 'style',
         editable: true,
         formatValue: function(value){
@@ -558,17 +592,19 @@ group_properties = [// 组的属性
 
 edge_properties = [// 连线的属性
     {
-        name: 'edge.width', 
+        name: 'edge.width',
         displayName: '宽度',
         accessType: 'style',
-        valueType: 'number',        
-        editable: true  
+        valueType: 'number',
+        editable: true
     },
     {
         name: 'edge.color',
         displayName: '颜色',
         accessType: 'style',
         valueType: 'color',
-        editable: true  
-    }            
+        editable: true
+    }
 ];
+
+// shape_properties = [];

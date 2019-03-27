@@ -3,6 +3,7 @@ palette_config = {
         name: '电力',
         items: [
             { name: '文字', image: '__text__', type: ht.Text },
+            { name: '几何图形', image: 'symbols/电力/rect.json', type: ht.Rect},
             { name: '箭头', image: 'symbols/电力/arrow.json', type: ht.Node},
             { name: '地线', image: 'symbols/电力/earthwire.json', type: ht.Node},
             { name: '闪烁灯', image: 'symbols/电力/light.json', type: ht.Node},
@@ -116,7 +117,7 @@ palette_config = {
             { name: '水箱泵', image: 'symbols/pumps/Sump pump.json'},
             { name: '废水粉碎机', image: 'symbols/pumps/Wastewater grinder.json'},
         ]
-    }     
+    }
 };
 
 
