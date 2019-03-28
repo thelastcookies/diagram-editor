@@ -235,7 +235,7 @@
             diagramDM.clear();
             diagramDM.deserialize(dataModel);
 
-            setContextMenu(contextmenu_config, graphView);
+            setContextMenu(load_contextmenu_config, graphView);
             graphView.redraw ();
             graphView.fitContent (true);
 
@@ -351,60 +351,6 @@
                 }
             });
             contextmenu.addTo(diagramView);
-
-            //    ht.Default.xhrLoad('displays/电力/大厦.json', function(text) {
-            //     var json = ht.Default.parse(text);
-            //             dm.deserialize(json);//反序列化
-
-            //             gv.fitContent(true);
-
-            //             var lights = ['light1', 'light5', 'light6', 'light10', 'light11', 'light12', 'light13', 'light14', 'light15'];
-            //             var stopLights = ['light2', 'light3', 'light4', 'light7', 'light8', 'light9'];
-
-            //             dm.each(function(data) {
-            //                 var tag = data.getTag();
-            //                 if(!tag) return;
-
-            //                 data.a('shadow', false);
-
-            //                 var i = lights.indexOf(tag);
-            //                 if (i >= 0) {
-            //                     lights[i] = data;
-            //                     data.a('shadow', true);
-            //                 }
-            //                 var j = stopLights.indexOf(tag);
-            //                 if (j >= 0) {
-            //                     stopLights[j] = data;
-            //                     data.a('shadow', true);
-            //                 }
-
-            //                 data.a('shadowColor', 'rgba(255,0,0,0.9)');
-            //                 data.a('lightBg', 'rgb(255, 0, 0)');
-            //                 data.a('alarmColor', 'rgb(255, 0, 0)');
-            //             });
-
-            //             var alarmNode = dm.getDataByTag('alarm');
-            //             setInterval(function() {
-            //                 lights.forEach(blingFunc);
-
-            //                 var alarmColor = 'rgb(255, 0, 0)';
-            //                 if (alarmNode.a('alarmColor') === alarmColor) {
-            //                     alarmColor = 'rgb(0, 255, 0)';
-            //                 }
-            //                 alarmNode.a('alarmColor', alarmColor);
-            //             }, 1000);
-
-            //             setTimeout(function() {//5 秒之后出现
-            //                 var flag = 0;
-            //                 var timer = setInterval(function() {
-            //                     flag++;
-            //                     stopLights.forEach(blingFunc);
-            //                     if (flag === 5) {//5秒后又停止
-            //                         clearInterval(timer);
-            //                     }
-            //                 }, 1000);
-            //             }, 5000);
-            //         });
         }
 
         function dataPretreat (data) {

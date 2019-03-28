@@ -1,6 +1,7 @@
 // let progressSplit = null;
 let mainView = null;
-var contextmenu_config = [
+let slModel = null;
+var load_contextmenu_config = [
     {
         label: "查看测点信息",
         fordata: 1
@@ -73,4 +74,53 @@ var contextmenu_config = [
             // progressSplit.
         }
 }
+];
+
+var index_contextmenu_config = [
+    {
+        label: "复制",
+        fordata: 1,
+        disabled: function () {
+            slModel = g2d.sm().getSelection()._as;
+            return slModel.length ? false : true;
+        },
+        action: function () {
+            copyNodeArr = [];
+            slModel.forEach(function (item, index) {
+                let node = null;
+                if (item instanceof ht.Text)
+                    node = new ht.Text();
+                else
+                    node = new ht.Node();
+
+
+                let tempStyle = item.getStyleMap();
+                for (let item in tempStyle) {
+                    node.setStyle(item, tempStyle[item]);
+                }
+                let tempPosition = item.getPosition();
+                node.setHeight(item.getHeight());
+                node.setWidth(item.getWidth());
+                node.setPosition(parseInt(tempPosition.x + 30), parseInt(tempPosition.y + 30));
+                node.setHost(item.getHost());
+                node.setName(item.getName());
+                node.setLayer(item.getLayer());
+                copyNodeArr.push(node);
+                console.log("item", item);
+                console.log("node", node);
+            });
+        }
+    },
+    {
+        label: "粘贴",
+        fordata: 1,
+        disabled: function () {
+            return copyNodeArr.length ? false : true;
+        },
+        action: function(item, event) {
+            copyNodeArr.forEach(function (node, index) {
+                indexDataModel.add(node);
+            });
+        }
+    }
 ];

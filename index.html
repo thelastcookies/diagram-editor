@@ -39,6 +39,7 @@
     <script src="lib/plugin/ht-rulerframe.js"></script>
     <script src="lib/plugin/ht-propertypane.js"></script>
     <script src="lib/plugin/ht-edgetype.js"></script>
+    <script src="lib/plugin/ht-contextmenu.js"></script>
 
     <!--“连线”交互器-->
     <script src="CreateEdgeInteractor.js"></script>
@@ -58,6 +59,8 @@
     <!--属性栏的内容-->
     <script src="properties-config.js"></script>
     <script src="file-handle/fileHandle.js"></script>
+    <!--右键菜单栏的内容-->
+    <script src="contextmenu-config.js"></script>
 
     <!--初始化场景的内容-->
     <script src="datamodel-config.js"></script>
@@ -68,6 +71,8 @@
         let indexDataModel = new ht.DataModel();
         // 用于保存文件名
         let indexFileName = null;
+        //用于保存 复制粘贴 所需节点
+        let copyNodeArr = [];
 
         // tooltip 文字提示的 div 样式编辑
         let tooltipDiv = ht.Default.getToolTipDiv();
@@ -240,6 +245,9 @@
                 g2d.getView().addEventListener("drop", function (e) {
                     handleDrop(e);
                 });
+                // 添加右键菜单
+                setContextMenu(index_contextmenu_config, g2d);
+
             }
         }
 
@@ -301,6 +309,7 @@
                 if (data instanceof ht.Edge) {// 连线类型
                     propertyView.addProperties(edge_properties);
                 }
+
             });
         }
 
@@ -368,6 +377,25 @@
                 }
                 openPageDialog.hide();
             }
+        }
+
+        /**
+         * setContextMenu
+         * @param contextmenu_config
+         * @param graphView
+         */
+        function setContextMenu (contextmenu_config, graphView) {
+            let contextmenu = new ht.widget.ContextMenu(contextmenu_config);
+            contextmenu.enableGlobalKey();
+            contextmenu.setVisibleFunc(function(item) {
+                let data = graphView.sm().ld();
+                if (item.fordata === 1) {
+                    return true;
+                } else {
+                    return false;
+                }
+            });
+            contextmenu.addTo(g2d.getView());
         }
 
         function init() {
