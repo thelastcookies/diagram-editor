@@ -64,7 +64,7 @@ toolbar_config_left = [
                 new ht.graph.TouchInteractor(g2d, {
                     selectable: false
                 }),
-                new CreateEdgeInteractor(g2d, 'h.v')
+                new CreateAttachInteractor(g2d, 'h.v')
             ]);
             g2d.sm().cs();
         }
@@ -87,6 +87,27 @@ toolbar_config_left = [
         },
         action: function() {
             g2d.setInteractors([shapeInteractor]);
+            g2d.sm().cs();
+        }
+    },
+    {
+        id: 'attachment',
+        unfocusable: true,
+        toolTip: '吸附',
+        groupId: 'bar',
+        icon: {
+            width: 16,
+            height: 16,
+            comps: [
+                {
+                    type: 'image',
+                    name: 'symbols/toolbarIcon/polygon.json',
+                    color: colorObject
+                }
+            ]
+        },
+        action: function() {
+            g2d.setInteractors([attachInteractor]);
             g2d.sm().cs();
         }
     }

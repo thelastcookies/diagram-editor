@@ -44,6 +44,9 @@
     <script src="CreateEdgeInteractor.js"></script>
     <!--“不规则图形”交互器-->
     <script src="CreateShapeInteractor.js"></script>
+    <!--"吸附"交互器-->
+    <script src="CreateAttachInteractor.js"></script>
+
 
     <!--json图片-->
     <script src="predefine.js"></script>
@@ -91,6 +94,7 @@
         // 创建交互器对象
         shapeInteractor = new CreateShapeInteractor(g2d, ht.Shape);
         edgeInteractor = new CreateEdgeInteractor(g2d);
+        attachInteractor = new CreateAttachInteractor(g2d);
         rightAngleInteractor = new CreateEdgeInteractor(g2d, 'h.v');
 
         // 组件面板
@@ -279,16 +283,17 @@
 
                 // 针对不同类型的节点设置不同的属性内容
 
-                if (data instanceof ht.Data) {// data 类型，所有的节点都基于这个类型
-                    propertyView.addProperties(threshold_properties);
-                    propertyView.addProperties(data_properties);
-                }
                 if (data instanceof ht.Text) {// 文本类型
                     propertyView.addProperties(text_properties);
                     return;// 设置文本类型不显示其他数据
                 }
+                if (data instanceof ht.Data) {// data 类型，所有的节点都基于这个类型
+                    propertyView.addProperties(threshold_properties);
+                    propertyView.addProperties(data_properties);
+                }
                 if (data instanceof ht.Node) {// node 类型
                     propertyView.addProperties(node_properties);
+                    propertyView.addProperties(shape_properties);
                 }
                 if (data instanceof ht.Group) {// 组类型
                     propertyView.addProperties(group_properties);
@@ -314,12 +319,29 @@
                 data = g2d.getDataAt(e, null, 5);
 
                 var node = new (item.type || ht.Node)();
-                node.setImage(image);
                 node.setName(item.name);
-                node.p(g2d.lp(e));
-                node.s('label', '');
-                node.setLayer(1);
+                if (item.name === "几何图形") {
+                    node.s({
+                        "shape": "rect",
+                        "label.position": 17,
+                        "label.font": "16px arial, sans-serif"
+                    })
+                }
+                else if (item.name === "文字") {
+                    node.s({
+                        "text": "TEXT",
+                        "text.align": "center",
+                        "text.vAlign": "middle",
+                        "text.font": "16px arial, sans-serif"
 
+                    })
+                }
+                else {
+                    node.setImage(image);
+                }
+                node.s('label', '');
+                node.p(g2d.lp(e));
+                node.setLayer(1);
                 g2d.dm().add(node);
                 g2d.sm().ss(node);
             }

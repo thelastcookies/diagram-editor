@@ -12,6 +12,7 @@ text_properties = [// 文本的属性
         displayName: '水平对齐',
         accessType: 'style',
         editable: true,
+        defaultValue: 'center',
         enum: {
             values: ['left', 'center', 'right']
         }
@@ -22,6 +23,7 @@ text_properties = [// 文本的属性
         displayName: '垂直对齐',
         accessType: 'style',
         editable: true,
+        defaultValue: 'middle',
         enum: {
             values: ['top', 'middle', 'bottom']
         }
@@ -30,6 +32,14 @@ text_properties = [// 文本的属性
         categoryName: '文本',
         name: 'text.color',
         displayName: '颜色',
+        accessType: 'style',
+        valueType: 'color',
+        editable: true
+    },
+    {
+        categoryName: '文本',
+        name: 'text.background',
+        displayName: '背景颜色',
         accessType: 'style',
         valueType: 'color',
         editable: true
@@ -307,7 +317,12 @@ node_properties = [// node 节点的属性
     {
         categoryName: 'Node 节点',
         displayName: '吸附',
-        name: 'host'
+        name: 'host',
+        // editable: true,
+        // valueType: 'number',
+        getValue: function(data) {
+            return data.getHost();
+        }
     },
     {
         categoryName: 'Node 节点',
@@ -369,32 +384,6 @@ node_properties = [// node 节点的属性
                 return Math.round(this.getValue() / Math.PI * 180) + '°';
             }
         }
-    },
-    {
-        categoryName: 'Node 节点',
-        displayName: '边框形状',
-        name: 'border.type',
-        editable: true,
-        accessType: 'style',
-        enum: {
-            values: ['rect', 'circle', 'oval', 'roundRect']
-        }
-    },
-    {
-        categoryName: 'Node 节点',
-        displayName: '边框颜色',
-        name: 'border.color',
-        accessType: 'style',
-        valueType: 'color',
-        editable: true
-    },
-    {
-        categoryName: 'Node 节点',
-        displayName: '边框宽度',
-        name: 'border.width',
-        accessType: 'style',
-        valueType: 'number',
-        editable: true
     }
 ];
 
@@ -607,4 +596,47 @@ edge_properties = [// 连线的属性
     }
 ];
 
-// shape_properties = [];
+shape_properties = [
+    {
+        categoryName: '图形',
+        displayName: '图形',
+        name: 'shape',
+        editable: true,
+        accessType: 'style',
+        enum: {
+            values: ["rect", "circle", "oval", "roundRect", "star", "triangle", "hexagon", "pentagon", "diamond", "rightTriangle", "parallelogram", "trapezoid", "polygon", "arc"]
+        }
+    },
+    {
+        categoryName: '图形',
+        displayName: '边框宽度',
+        name: 'shape.border.width',
+        editable: true,
+        accessType: 'style',
+        valueType: 'number'
+    },
+    {
+        categoryName: '图形',
+        displayName: '边框颜色',
+        name: 'shape.border.color',
+        accessType: 'style',
+        valueType: 'color',
+        editable: true
+    },
+    {
+        categoryName: '图形',
+        displayName: '背景颜色',
+        name: 'shape.background',
+        accessType: 'style',
+        valueType: 'color',
+        editable: true
+    },
+    {
+        categoryName: '图形',
+        displayName: '图形深度',
+        name: 'shape.depth',
+        accessType: 'style',
+        valueType: 'number',
+        editable: true
+    }
+];
