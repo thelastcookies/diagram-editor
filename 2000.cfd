@@ -1,0 +1,4263 @@
+{
+  "v": "6.3.0",
+  "p": {
+    "layers": [
+      "0",
+      1
+    ],
+    "autoAdjustIndex": true,
+    "hierarchicalRendering": false
+  },
+  "d": [
+    {
+      "c": "ht.Node",
+      "i": 118,
+      "p": {
+        "name": "Main Panel",
+        "layer": 1,
+        "position": {
+          "x": -83.95912,
+          "y": -166.12757
+        },
+        "width": 1000,
+        "height": 800
+      },
+      "s": {
+        "shape": "rect",
+        "label": "",
+        "shape.background": "rgb(170,170,170)",
+        "shape.depth": 20
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 119,
+      "p": {
+        "name": "Right Panel",
+        "layer": 1,
+        "host": {
+          "__i": 118
+        },
+        "position": {
+          "x": 516.04088,
+          "y": -166.12757
+        },
+        "width": 200,
+        "height": 800
+      },
+      "s": {
+        "shape": "rect",
+        "label": "",
+        "shape.background": "rgb(204,204,204)",
+        "shape.depth": 20
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 120,
+      "p": {
+        "name": "Left Panel",
+        "layer": 1,
+        "host": {
+          "__i": 118
+        },
+        "position": {
+          "x": -683.95912,
+          "y": -166.12757
+        },
+        "width": 200,
+        "height": 800
+      },
+      "s": {
+        "shape": "rect",
+        "label": "",
+        "shape.background": "rgb(204,204,204)",
+        "shape.depth": 20
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 121,
+      "p": {
+        "name": "Left Title",
+        "layer": 1,
+        "host": {
+          "__i": 120
+        },
+        "position": {
+          "x": -683.95912,
+          "y": -504.6642
+        },
+        "width": 160,
+        "height": 80
+      },
+      "s": {
+        "shape": "rect",
+        "label": "锅炉主控",
+        "shape.background": "rgb(255,253,84)",
+        "label.position": 17,
+        "label.font": "24px arial, sans-serif"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 122,
+      "p": {
+        "name": "Right Title",
+        "layer": 1,
+        "host": {
+          "__i": 119
+        },
+        "position": {
+          "x": 516.04088,
+          "y": -504.6642
+        },
+        "width": 160,
+        "height": 80
+      },
+      "s": {
+        "shape": "rect",
+        "label": "汽机主控",
+        "shape.background": "rgb(255,253,84)",
+        "label.font": "24px arial, sans-serif",
+        "label.position": 17
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 123,
+      "p": {
+        "name": "BlackContainer",
+        "layer": 1,
+        "host": {
+          "__i": 120
+        },
+        "position": {
+          "x": -683.95912,
+          "y": -86.12757
+        },
+        "width": 160,
+        "height": 160
+      },
+      "s": {
+        "shape": "rect",
+        "label": "",
+        "shape.depth": -15,
+        "shape.background": "rgb(204,204,204)"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 124,
+      "p": {
+        "name": "RedContainer",
+        "layer": 1,
+        "host": {
+          "__i": 120
+        },
+        "position": {
+          "x": -693.95912,
+          "y": 38.07937
+        },
+        "width": 140,
+        "height": 50
+      },
+      "s": {
+        "shape": "rect",
+        "label": "",
+        "shape.depth": -10,
+        "shape.background": "rgb(204,204,204)"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 125,
+      "p": {
+        "name": "Red Panel",
+        "layer": 1,
+        "host": {
+          "__i": 124
+        },
+        "position": {
+          "x": -693.95912,
+          "y": 38.07937
+        },
+        "width": 120,
+        "height": 30
+      },
+      "s": {
+        "shape": "rect",
+        "label": "MANUAL",
+        "shape.background": "rgb(235,50,35)",
+        "label.font": "20px arial, sans-serif",
+        "label.position": 17,
+        "label.color": "rgb(255,255,255)"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 126,
+      "p": {
+        "name": "Little Red",
+        "layer": 1,
+        "host": {
+          "__i": 120
+        },
+        "position": {
+          "x": -611.45912,
+          "y": 38.07937
+        },
+        "width": 15
+      },
+      "s": {
+        "shape": "rect",
+        "label": "M",
+        "shape.background": "rgb(235,50,35)",
+        "label.position": 17,
+        "label.color": "rgb(255,255,255)"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 127,
+      "p": {
+        "name": "手动 Button",
+        "layer": 1,
+        "host": {
+          "__i": 120
+        },
+        "position": {
+          "x": -656.45912,
+          "y": 97.72071
+        },
+        "width": 50,
+        "height": 35
+      },
+      "s": {
+        "shape": "rect",
+        "label": "手动",
+        "shape.background": "rgb(179,179,179)",
+        "shape.depth": 5,
+        "label.font": "16px arial, sans-serif",
+        "label.position": 17
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 128,
+      "p": {
+        "name": "自动 Button",
+        "layer": 1,
+        "host": {
+          "__i": 120
+        },
+        "position": {
+          "x": -723.95912,
+          "y": 97.72071
+        },
+        "width": 50,
+        "height": 35
+      },
+      "s": {
+        "shape": "rect",
+        "label": "自动",
+        "shape.background": "rgb(179,179,179)",
+        "shape.depth": 5,
+        "label.font": "16px arial, sans-serif",
+        "label.position": 17
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 129,
+      "p": {
+        "name": "Black Panel",
+        "layer": 1,
+        "host": {
+          "__i": 123
+        },
+        "position": {
+          "x": -683.95912,
+          "y": -86.12757
+        },
+        "width": 130,
+        "height": 130
+      },
+      "s": {
+        "shape": "rect",
+        "label": "",
+        "shape.background": "rgb(0,0,0)"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 130,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "host": {
+          "__i": 129
+        },
+        "position": {
+          "x": -683.95912,
+          "y": -124.15784
+        },
+        "width": 52.08432,
+        "height": 42.75758
+      },
+      "s": {
+        "text": "MPa",
+        "text.align": "center",
+        "label": "",
+        "text.color": "rgb(117,249,76)",
+        "text.font": "20px arial, sans-serif"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 131,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "host": {
+          "__i": 129
+        },
+        "position": {
+          "x": -683.95912,
+          "y": -92.41738
+        }
+      },
+      "s": {
+        "text": "P      314.68",
+        "text.align": "center",
+        "label": "",
+        "text.font": "16px arial, sans-serif",
+        "text.color": "rgb(117,249,76)"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 132,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "host": {
+          "__i": 129
+        },
+        "position": {
+          "x": -683.95912,
+          "y": -67.41738
+        }
+      },
+      "s": {
+        "text": "S      315.04",
+        "text.align": "center",
+        "label": "",
+        "text.color": "rgb(255,255,255)",
+        "text.font": "16px arial, sans-serif"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 133,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "host": {
+          "__i": 129
+        },
+        "position": {
+          "x": -683.95912,
+          "y": -42.41738
+        },
+        "height": 30.72296
+      },
+      "s": {
+        "text": "0      301.31",
+        "text.align": "center",
+        "label": "",
+        "text.color": "rgb(115,251,253)",
+        "text.font": "16px arial, sans-serif"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 134,
+      "p": {
+        "name": "LeftPanelUpButton",
+        "layer": 1,
+        "host": {
+          "__i": 120
+        },
+        "position": {
+          "x": -644.44618,
+          "y": 149.62672
+        },
+        "width": 60,
+        "height": 35
+      },
+      "s": {
+        "shape": "rect",
+        "label": "",
+        "shape.background": "rgb(179,179,179)",
+        "shape.depth": 5
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 135,
+      "p": {
+        "name": "LeftPanelDownButton",
+        "layer": 1,
+        "host": {
+          "__i": 120
+        },
+        "position": {
+          "x": -644.44618,
+          "y": 188.49336
+        },
+        "width": 60,
+        "height": 35
+      },
+      "s": {
+        "shape": "rect",
+        "label": "",
+        "shape.background": "rgb(179,179,179)",
+        "shape.depth": 5
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 136,
+      "p": {
+        "name": "leftPanelUpTri",
+        "layer": 1,
+        "host": {
+          "__i": 134
+        },
+        "position": {
+          "x": -644.44618,
+          "y": 149.62672
+        },
+        "width": 30,
+        "height": 20
+      },
+      "s": {
+        "shape": "triangle",
+        "label": "",
+        "shape.background": "rgb(0,0,0)"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 137,
+      "p": {
+        "name": "leftPanelDownTri",
+        "layer": 1,
+        "host": {
+          "__i": 135
+        },
+        "rotation": 3.14159,
+        "position": {
+          "x": -644.44618,
+          "y": 188.49336
+        },
+        "height": 20
+      },
+      "s": {
+        "shape": "triangle",
+        "label": "",
+        "shape.background": "rgb(0,0,0)"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 138,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "position": {
+          "x": -83.95912,
+          "y": -628.60866
+        },
+        "width": 487.61547
+      },
+      "s": {
+        "text": "2000 - 负荷指令控制",
+        "text.align": "center",
+        "label": "",
+        "text.font": "40px arial, sans-serif"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 139,
+      "p": {
+        "name": "几何图形",
+        "layer": 1,
+        "host": {
+          "__i": 120
+        },
+        "position": {
+          "x": -728.95912,
+          "y": -205.41685
+        },
+        "width": 15,
+        "height": 20
+      },
+      "s": {
+        "shape": "rect",
+        "label.position": 17,
+        "label": "P",
+        "shape.background": "rgb(61,136,37)",
+        "label.color": "rgb(255,255,255)",
+        "label.font": "16px arial, sans-serif"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 140,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "host": {
+          "__i": 120
+        },
+        "position": {
+          "x": -728.95912,
+          "y": -183.03617
+        }
+      },
+      "s": {
+        "text": "0.0",
+        "text.align": "center",
+        "label": "",
+        "text.font": "16px arial, sans-serif"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 141,
+      "p": {
+        "name": "White Line",
+        "layer": 1,
+        "host": {
+          "__i": 120
+        },
+        "position": {
+          "x": -688.95912,
+          "y": -325.08624
+        },
+        "width": 10,
+        "height": 200
+      },
+      "s": {
+        "shape": "rect",
+        "label.position": 17,
+        "label": "",
+        "shape.background": "rgb(255,255,255)"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 142,
+      "p": {
+        "name": "Green Line",
+        "layer": 1,
+        "host": {
+          "__i": 120
+        },
+        "position": {
+          "x": -728.95912,
+          "y": -325.08624
+        },
+        "width": 10,
+        "height": 200
+      },
+      "s": {
+        "shape": "rect",
+        "label.position": 17,
+        "label": "",
+        "shape.background": "rgb(61,135,36)"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 143,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "host": {
+          "__i": 120
+        },
+        "position": {
+          "x": -728.95912,
+          "y": -439.66429
+        }
+      },
+      "s": {
+        "text": "0.0",
+        "text.align": "center",
+        "label": "",
+        "text.font": "16px arial, sans-serif"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 144,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "host": {
+          "__i": 120
+        },
+        "rotation": 1.5708,
+        "position": {
+          "x": -753.95912,
+          "y": -378.2727
+        }
+      },
+      "s": {
+        "text": "主蒸汽压力",
+        "text.align": "center",
+        "label": "",
+        "text.font": "16px arial, sans-serif"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 145,
+      "p": {
+        "name": "几何图形",
+        "layer": 1,
+        "host": {
+          "__i": 120
+        },
+        "position": {
+          "x": -688.95912,
+          "y": -205.41685
+        },
+        "width": 15,
+        "height": 20
+      },
+      "s": {
+        "shape": "rect",
+        "label.position": 17,
+        "label.font": "16px arial, sans-serif",
+        "label": "S",
+        "shape.background": "rgb(255,255,255)"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 146,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "host": {
+          "__i": 120
+        },
+        "rotation": 1.5708,
+        "position": {
+          "x": -708.41367,
+          "y": -395.28758
+        },
+        "width": 59.59731,
+        "height": 23.9091
+      },
+      "s": {
+        "text": "设定值",
+        "text.align": "center",
+        "text.font": "16px arial, sans-serif",
+        "label": ""
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 147,
+      "p": {
+        "name": "几何图形",
+        "layer": 1,
+        "host": {
+          "__i": 120
+        },
+        "position": {
+          "x": -644.44618,
+          "y": -325.08624
+        },
+        "width": 10,
+        "height": 200
+      },
+      "s": {
+        "shape": "rect",
+        "label.position": 17,
+        "label.font": "16px arial, sans-serif",
+        "label": "",
+        "shape.background": "rgb(0,32,228)"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 148,
+      "p": {
+        "name": "几何图形",
+        "layer": 1,
+        "host": {
+          "__i": 120
+        },
+        "position": {
+          "x": -644.44618,
+          "y": -205.41685
+        },
+        "width": 15,
+        "height": 20
+      },
+      "s": {
+        "shape": "rect",
+        "label.position": 17,
+        "label.font": "16px arial, sans-serif",
+        "label": "0",
+        "shape.background": "rgb(0,32,228)",
+        "label.color": "rgb(255,255,255)"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 149,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "host": {
+          "__i": 118
+        },
+        "position": {
+          "x": -436.20562,
+          "y": -504.6642
+        }
+      },
+      "s": {
+        "text": "燃料主控指令偏置",
+        "text.align": "center",
+        "text.font": "25px arial, sans-serif",
+        "label": ""
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 150,
+      "p": {
+        "name": "几何图形",
+        "layer": 1,
+        "host": {
+          "__i": 118
+        },
+        "position": {
+          "x": -444.35291,
+          "y": -138.27299
+        },
+        "width": 187.09233,
+        "height": 680
+      },
+      "s": {
+        "shape": "rect",
+        "label.position": 11,
+        "label.font": "20px arial, sans-serif",
+        "label": "手动状态",
+        "shape.background": "rgba(153,153,153,1.00)",
+        "shape.border.color": "rgb(64,64,64)",
+        "shape.border.width": 2
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 151,
+      "p": {
+        "name": "几何图形",
+        "layer": 1,
+        "host": {
+          "__i": 118
+        },
+        "position": {
+          "x": -280.82921,
+          "y": -434.10399
+        },
+        "anchor": {
+          "x": 0.43977,
+          "y": 0.44169
+        },
+        "width": 129.32859,
+        "height": 100
+      },
+      "s": {
+        "shape": "rect",
+        "label.position": 18,
+        "label.font": "24px arial, sans-serif",
+        "label": "MW",
+        "shape.background": "rgb(153,153,153)",
+        "shape.border.color": "rgb(64,64,64)",
+        "shape.border.width": 2
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 152,
+      "p": {
+        "name": "几何图形",
+        "layer": 1,
+        "host": {
+          "__i": 118
+        },
+        "position": {
+          "x": -79.10498,
+          "y": -428.27279
+        },
+        "anchor": {
+          "x": 0.59682,
+          "y": 0.5
+        },
+        "width": 199.5681,
+        "height": 100
+      },
+      "s": {
+        "shape": "rect",
+        "label.position": 18,
+        "label.font": "24px arial, sans-serif",
+        "label": "TP",
+        "shape.background": "rgb(153,153,153)",
+        "shape.border.width": 2,
+        "shape.border.color": "rgb(64,64,64)"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 153,
+      "p": {
+        "name": "几何图形",
+        "layer": 1,
+        "host": {
+          "__i": 118
+        },
+        "position": {
+          "x": -227.10371,
+          "y": -290.45289
+        },
+        "width": 221.20131,
+        "height": 150.07208
+      },
+      "s": {
+        "shape": "rect",
+        "label.position": 17,
+        "label.font": "16px arial, sans-serif",
+        "label": "",
+        "shape.background": "rgb(153,153,153)",
+        "shape.border.width": 2,
+        "shape.border.color": "rgb(64,64,64)"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 154,
+      "p": {
+        "name": "几何图形",
+        "layer": 1,
+        "host": {
+          "__i": 118
+        },
+        "position": {
+          "x": 194.52701,
+          "y": -269.37219
+        },
+        "width": 357.35659,
+        "height": 417.80121
+      },
+      "s": {
+        "shape": "rect",
+        "label.position": 11,
+        "label.font": "20px arial, sans-serif",
+        "label": "CONTINGENT FUNCTION",
+        "shape.background": "rgb(153,153,153)",
+        "shape.border.width": 2,
+        "shape.border.color": "rgb(64,64,64)"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 155,
+      "p": {
+        "name": "几何图形",
+        "layer": 1,
+        "host": {
+          "__i": 118
+        },
+        "position": {
+          "x": -99.24788,
+          "y": -39.81283
+        },
+        "anchor": {
+          "x": 0.40066,
+          "y": 0.58836
+        },
+        "width": 167.86005,
+        "height": 81.83091
+      },
+      "s": {
+        "shape": "rect",
+        "label.position": 44,
+        "label.font": "16px arial, sans-serif",
+        "label": "VP SETPOINT",
+        "shape.background": "rgb(153,153,153)",
+        "shape.border.width": 2,
+        "shape.border.color": "rgb(64,64,64)"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 156,
+      "p": {
+        "name": "几何图形",
+        "layer": 1,
+        "host": {
+          "__i": 118
+        },
+        "position": {
+          "x": -57.57303,
+          "y": -290.45289
+        },
+        "width": 117.86006,
+        "height": 150.07208
+      },
+      "s": {
+        "shape": "rect",
+        "label.position": 17,
+        "label.font": "16px arial, sans-serif",
+        "label": "",
+        "shape.background": "rgb(153,153,153)",
+        "shape.border.width": 2,
+        "shape.border.color": "rgb(64,64,64)"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 157,
+      "p": {
+        "name": "几何图形",
+        "layer": 1,
+        "host": {
+          "__i": 118
+        },
+        "position": {
+          "x": -258.81779,
+          "y": -145.53663
+        },
+        "width": 157.77315,
+        "height": 115.61879
+      },
+      "s": {
+        "shape": "rect",
+        "label.position": 17,
+        "label.font": "16px arial, sans-serif",
+        "label": "",
+        "shape.background": "rgb(153,153,153)",
+        "shape.border.width": 2,
+        "shape.border.color": "rgb(64,64,64)"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 158,
+      "p": {
+        "name": "几何图形",
+        "layer": 1,
+        "host": {
+          "__i": 118
+        },
+        "position": {
+          "x": -258.81779,
+          "y": -13.13284
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 0.44949
+        },
+        "width": 157.77315,
+        "height": 138.68803
+      },
+      "s": {
+        "shape": "rect",
+        "label.position": 17,
+        "label.font": "16px arial, sans-serif",
+        "label": "",
+        "shape.background": "rgb(153,153,153)",
+        "shape.border.width": 2,
+        "shape.border.color": "rgb(64,64,64)"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 159,
+      "p": {
+        "name": "几何图形",
+        "layer": 1,
+        "host": {
+          "__i": 118
+        },
+        "position": {
+          "x": -82.57303,
+          "y": -147.85823
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 0.47394
+        },
+        "width": 167.86005,
+        "height": 117.34521
+      },
+      "s": {
+        "shape": "rect",
+        "label.position": 17,
+        "label.font": "16px arial, sans-serif",
+        "shape.background": "rgb(153,153,153)",
+        "shape.border.width": 2,
+        "shape.border.color": "rgb(64,64,64)",
+        "label": " "
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 160,
+      "p": {
+        "name": "几何图形",
+        "layer": 1,
+        "host": {
+          "__i": 118
+        },
+        "position": {
+          "x": -245.91278,
+          "y": 137.56626
+        },
+        "width": 183.58317,
+        "height": 128.32188
+      },
+      "s": {
+        "shape": "rect",
+        "label.position": 17,
+        "label.font": "16px arial, sans-serif",
+        "shape.background": "rgb(153,153,153)",
+        "shape.border.width": 2,
+        "shape.border.color": "rgb(64,64,64)",
+        "label": " "
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 161,
+      "p": {
+        "name": "几何图形",
+        "layer": 1,
+        "host": {
+          "__i": 118
+        },
+        "position": {
+          "x": 227.5391,
+          "y": 76.89937
+        },
+        "width": 291.33239,
+        "height": 258.18798
+      },
+      "s": {
+        "shape": "rect",
+        "label.position": 17,
+        "label.font": "16px arial, sans-serif",
+        "label": "",
+        "shape.background": "rgb(153,153,153)",
+        "shape.border.width": 2,
+        "shape.border.color": "rgb(64,64,64)"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 162,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "host": {
+          "__i": 118
+        },
+        "position": {
+          "x": -274.05198,
+          "y": -504.6642
+        }
+      },
+      "s": {
+        "text": "228.4%",
+        "text.align": "center",
+        "text.font": "25px arial, sans-serif",
+        "label": "",
+        "text.color": "rgb(255,255,255)"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 163,
+      "p": {
+        "name": "几何图形",
+        "layer": 1,
+        "host": {
+          "__i": 119
+        },
+        "position": {
+          "x": 516.04088,
+          "y": -92.41738
+        },
+        "width": 160,
+        "height": 160
+      },
+      "s": {
+        "shape": "rect",
+        "label.position": 17,
+        "label.font": "16px arial, sans-serif",
+        "label": "",
+        "shape.background": "rgb(204,204,204)",
+        "shape.depth": -15
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 164,
+      "p": {
+        "name": "几何图形",
+        "layer": 1,
+        "host": {
+          "__i": 163
+        },
+        "position": {
+          "x": 516.04088,
+          "y": -92.41738
+        },
+        "width": 130,
+        "height": 130
+      },
+      "s": {
+        "shape": "rect",
+        "label.position": 17,
+        "label.font": "16px arial, sans-serif",
+        "label": "",
+        "shape.background": "rgb(0,0,0)"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 165,
+      "p": {
+        "name": "几何图形",
+        "layer": 1,
+        "host": {
+          "__i": 119
+        },
+        "position": {
+          "x": 511.04088,
+          "y": 38.21644
+        },
+        "width": 140,
+        "height": 50
+      },
+      "s": {
+        "shape": "rect",
+        "label.position": 17,
+        "label.font": "16px arial, sans-serif",
+        "label": "",
+        "shape.depth": -10,
+        "shape.background": "rgb(204,204,204)"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 166,
+      "p": {
+        "name": "几何图形",
+        "layer": 1,
+        "host": {
+          "__i": 165
+        },
+        "position": {
+          "x": 511.04088,
+          "y": 38.21644
+        },
+        "width": 120
+      },
+      "s": {
+        "shape": "rect",
+        "label.position": 17,
+        "label.font": "20px arial, sans-serif",
+        "label": "AUTO",
+        "shape.background": "rgb(0,32,228)",
+        "label.color": "rgb(255,255,255)"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 167,
+      "p": {
+        "name": "几何图形",
+        "layer": 1,
+        "host": {
+          "__i": 119
+        },
+        "position": {
+          "x": 476.04088,
+          "y": 97.72071
+        },
+        "width": 50,
+        "height": 35
+      },
+      "s": {
+        "shape": "rect",
+        "label.position": 17,
+        "label.font": "16px arial, sans-serif",
+        "label": "自动",
+        "shape.background": "rgb(179,179,179)",
+        "shape.depth": 5
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 168,
+      "p": {
+        "name": "几何图形",
+        "layer": 1,
+        "host": {
+          "__i": 119
+        },
+        "position": {
+          "x": 546.04088,
+          "y": 97.72071
+        },
+        "width": 50,
+        "height": 35
+      },
+      "s": {
+        "shape": "rect",
+        "label.position": 17,
+        "label.font": "16px arial, sans-serif",
+        "label": "手动",
+        "shape.background": "rgb(179,179,179)",
+        "shape.depth": 5
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 169,
+      "p": {
+        "name": "几何图形",
+        "layer": 1,
+        "host": {
+          "__i": 119
+        },
+        "position": {
+          "x": 551.04088,
+          "y": 149.62672
+        },
+        "width": 60,
+        "height": 35
+      },
+      "s": {
+        "shape": "rect",
+        "label.position": 17,
+        "label.font": "16px arial, sans-serif",
+        "label": "",
+        "shape.depth": 5,
+        "shape.background": "rgb(179,179,179)"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 170,
+      "p": {
+        "name": "几何图形",
+        "layer": 1,
+        "host": {
+          "__i": 119
+        },
+        "position": {
+          "x": 551.04088,
+          "y": 188.49336
+        },
+        "width": 60,
+        "height": 35
+      },
+      "s": {
+        "shape": "rect",
+        "label.position": 17,
+        "label.font": "16px arial, sans-serif",
+        "label": "",
+        "shape.depth": 5,
+        "shape.background": "rgb(179,179,179)"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 171,
+      "p": {
+        "name": "几何图形",
+        "layer": 1,
+        "host": {
+          "__i": 169
+        },
+        "position": {
+          "x": 551.04088,
+          "y": 149.09513
+        },
+        "height": 20
+      },
+      "s": {
+        "shape": "triangle",
+        "label.position": 17,
+        "label.font": "16px arial, sans-serif",
+        "label": "",
+        "shape.background": "rgb(0,0,0)"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 172,
+      "p": {
+        "name": "几何图形",
+        "layer": 1,
+        "host": {
+          "__i": 170
+        },
+        "rotation": 3.14159,
+        "position": {
+          "x": 551.04088,
+          "y": 188.49336
+        },
+        "height": 20
+      },
+      "s": {
+        "shape": "triangle",
+        "label.position": 17,
+        "label.font": "16px arial, sans-serif",
+        "label": "",
+        "shape.background": "rgb(0,0,0)"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 173,
+      "p": {
+        "name": "几何图形",
+        "layer": 1,
+        "host": {
+          "__i": 119
+        },
+        "position": {
+          "x": 473.54088,
+          "y": -328.27279
+        },
+        "width": 10,
+        "height": 200
+      },
+      "s": {
+        "shape": "rect",
+        "label.position": 17,
+        "label.font": "16px arial, sans-serif",
+        "label": "",
+        "shape.background": "rgb(61,135,36)"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 174,
+      "p": {
+        "name": "几何图形",
+        "layer": 1,
+        "host": {
+          "__i": 119
+        },
+        "position": {
+          "x": 558.54088,
+          "y": -328.27279
+        },
+        "width": 10,
+        "height": 200
+      },
+      "s": {
+        "shape": "rect",
+        "label.position": 17,
+        "label.font": "16px arial, sans-serif",
+        "label": "",
+        "shape.background": "rgb(0,30,227)"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 175,
+      "p": {
+        "name": "几何图形",
+        "layer": 1,
+        "host": {
+          "__i": 119
+        },
+        "position": {
+          "x": 516.04088,
+          "y": -328.27279
+        },
+        "width": 10,
+        "height": 200
+      },
+      "s": {
+        "shape": "rect",
+        "label.position": 17,
+        "label.font": "16px arial, sans-serif",
+        "label": "",
+        "shape.background": "rgb(255,255,255)"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 176,
+      "p": {
+        "name": "几何图形",
+        "layer": 1,
+        "host": {
+          "__i": 119
+        },
+        "position": {
+          "x": 473.54088,
+          "y": -205.41685
+        },
+        "width": 15,
+        "height": 20
+      },
+      "s": {
+        "shape": "rect",
+        "label.position": 17,
+        "label.font": "16px arial, sans-serif",
+        "label": "P",
+        "shape.background": "rgb(61,135,36)",
+        "label.color": "rgb(255,255,255)"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 177,
+      "p": {
+        "name": "几何图形",
+        "layer": 1,
+        "host": {
+          "__i": 119
+        },
+        "position": {
+          "x": 558.54088,
+          "y": -205.41685
+        },
+        "width": 15,
+        "height": 20
+      },
+      "s": {
+        "shape": "rect",
+        "label.position": 17,
+        "label.font": "16px arial, sans-serif",
+        "label": "0",
+        "shape.background": "rgb(0,30,227)",
+        "label.color": "rgb(255,255,255)"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 178,
+      "p": {
+        "name": "几何图形",
+        "layer": 1,
+        "host": {
+          "__i": 119
+        },
+        "position": {
+          "x": 516.04088,
+          "y": -205.41685
+        },
+        "width": 15,
+        "height": 20
+      },
+      "s": {
+        "shape": "rect",
+        "label.position": 17,
+        "label.font": "16px arial, sans-serif",
+        "label": "S",
+        "shape.background": "rgb(255,255,255)"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 179,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "host": {
+          "__i": 119
+        },
+        "rotation": 1.5708,
+        "position": {
+          "x": 442.51031,
+          "y": -392.5621
+        },
+        "anchor": {
+          "x": 0.60809,
+          "y": 0.52061
+        }
+      },
+      "s": {
+        "text": "功率",
+        "text.align": "center",
+        "text.font": "16px arial, sans-serif",
+        "label": ""
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 180,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "host": {
+          "__i": 119
+        },
+        "rotation": 1.5708,
+        "position": {
+          "x": 493.54088,
+          "y": -389.66429
+        }
+      },
+      "s": {
+        "text": "负荷参考",
+        "text.align": "center",
+        "text.font": "16px arial, sans-serif",
+        "label": ""
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 181,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "host": {
+          "__i": 119
+        },
+        "rotation": 1.5708,
+        "position": {
+          "x": 536.04088,
+          "y": -403.37128
+        }
+      },
+      "s": {
+        "text": "输出",
+        "text.align": "center",
+        "text.font": "16px arial, sans-serif",
+        "label": ""
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 182,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "host": {
+          "__i": 120
+        },
+        "rotation": 1.5708,
+        "position": {
+          "x": -664.44618,
+          "y": -403.37128
+        }
+      },
+      "s": {
+        "text": "输出",
+        "text.align": "center",
+        "text.font": "16px arial, sans-serif",
+        "label": ""
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 183,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "host": {
+          "__i": 164
+        },
+        "position": {
+          "x": 516.04088,
+          "y": -127.77905
+        }
+      },
+      "s": {
+        "text": "MW",
+        "text.align": "center",
+        "text.font": "20px arial, sans-serif",
+        "label": "",
+        "text.color": "rgb(117,249,76)"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 184,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "host": {
+          "__i": 164
+        },
+        "position": {
+          "x": 516.04088,
+          "y": -99.15784
+        }
+      },
+      "s": {
+        "text": "P     393.98",
+        "text.align": "center",
+        "text.font": "16px arial, sans-serif",
+        "label": "",
+        "text.color": "rgb(118,250,77)"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 185,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "host": {
+          "__i": 164
+        },
+        "position": {
+          "x": 516.04088,
+          "y": -74.15784
+        }
+      },
+      "s": {
+        "text": "S     367.46",
+        "text.align": "center",
+        "text.font": "16px arial, sans-serif",
+        "label": "",
+        "text.color": "rgb(255,255,255)"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 186,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "host": {
+          "__i": 164
+        },
+        "position": {
+          "x": 516.04088,
+          "y": -50.47158
+        }
+      },
+      "s": {
+        "text": "0     403.02",
+        "text.align": "center",
+        "text.font": "16px arial, sans-serif",
+        "label": "",
+        "text.color": "rgb(114,250,252)"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 187,
+      "p": {
+        "name": "几何图形",
+        "layer": 1,
+        "host": {
+          "__i": 161
+        },
+        "position": {
+          "x": 227.5391,
+          "y": -36.66109
+        },
+        "width": 291.33239,
+        "height": 30
+      },
+      "s": {
+        "shape": "rect",
+        "label.position": 17,
+        "label.font": "16px arial, sans-serif",
+        "label": "PRESSURE MODE",
+        "shape.background": "rgb(0,35,245)",
+        "label.color": "rgb(255,255,255)"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 188,
+      "p": {
+        "name": "几何图形",
+        "layer": 1,
+        "host": {
+          "__i": 160
+        },
+        "position": {
+          "x": -245.91278,
+          "y": 88.40532
+        },
+        "width": 183.58317,
+        "height": 30
+      },
+      "s": {
+        "shape": "rect",
+        "label.position": 17,
+        "label.font": "16px arial, sans-serif",
+        "label": "LDC MODE",
+        "shape.border.color": "rgb(0,35,245)",
+        "shape.background": "rgb(0,35,245)",
+        "label.color": "rgb(255,255,255)"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 189,
+      "p": {
+        "name": "几何图形",
+        "layer": 1,
+        "host": {
+          "__i": 158
+        },
+        "position": {
+          "x": -258.81779,
+          "y": -60.47158
+        },
+        "width": 157.77315,
+        "height": 30
+      },
+      "s": {
+        "shape": "rect",
+        "label.position": 17,
+        "label.font": "16px arial, sans-serif",
+        "label": "FRC MODE",
+        "shape.background": "rgb(0,35,245)",
+        "label.color": "rgb(255,255,255)"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 190,
+      "p": {
+        "name": "几何图形",
+        "layer": 1,
+        "host": {
+          "__i": 157
+        },
+        "position": {
+          "x": -258.81779,
+          "y": -188.47278
+        },
+        "width": 157.77315,
+        "height": 30
+      },
+      "s": {
+        "shape": "rect",
+        "label.position": 17,
+        "label.font": "14px arial, sans-serif",
+        "label": "CONTROL MODEL",
+        "shape.background": "rgb(0,35,219)",
+        "label.color": "rgb(255,255,255)"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 191,
+      "p": {
+        "name": "几何图形",
+        "layer": 1,
+        "host": {
+          "__i": 159
+        },
+        "position": {
+          "x": -82.57303,
+          "y": -188.47278
+        },
+        "width": 167.86005,
+        "height": 30
+      },
+      "s": {
+        "shape": "rect",
+        "label.position": 17,
+        "label.font": "16px arial, sans-serif",
+        "label": "AGC",
+        "shape.background": "rgb(0,35,245)",
+        "label.color": "rgb(255,255,255)"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 192,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "host": {
+          "__i": 151
+        },
+        "position": {
+          "x": -290.25199,
+          "y": -426.51401
+        },
+        "width": 51.52891,
+        "height": 26.30056
+      },
+      "s": {
+        "text": "394.1",
+        "text.align": "center",
+        "text.font": "26px arial, sans-serif",
+        "label": "",
+        "text.color": "rgb(255,255,255)"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 193,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "host": {
+          "__i": 152
+        },
+        "position": {
+          "x": -104.12119,
+          "y": -428.37128
+        }
+      },
+      "s": {
+        "text": "363.3 Mpa",
+        "text.align": "center",
+        "text.font": "26px arial, sans-serif",
+        "label": "",
+        "text.color": "rgb(255,255,255)"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 194,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "host": {
+          "__i": 155
+        },
+        "position": {
+          "x": -82.57303,
+          "y": -31.12757
+        }
+      },
+      "s": {
+        "text": "401.6  MPa",
+        "text.align": "center",
+        "text.font": "16px arial, sans-serif",
+        "label": "",
+        "text.color": "rgb(255,255,255)"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 195,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "host": {
+          "__i": 160
+        },
+        "position": {
+          "x": -287.70436,
+          "y": 153.49332
+        }
+      },
+      "s": {
+        "text": "LDC HOLD",
+        "text.align": "center",
+        "text.font": "16px arial, sans-serif",
+        "label": "",
+        "text.color": "rgb(255,252,84)"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 196,
+      "p": {
+        "name": "几何图形",
+        "layer": 1,
+        "host": {
+          "__i": 160
+        },
+        "position": {
+          "x": -198.2111,
+          "y": 173.49336
+        },
+        "width": 70
+      },
+      "s": {
+        "shape": "rect",
+        "label.position": 17,
+        "label.font": "16px arial, sans-serif",
+        "label": "P2-HOLD",
+        "shape.background": "rgb(204,204,204)"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 197,
+      "p": {
+        "name": "几何图形",
+        "layer": 1,
+        "host": {
+          "__i": 160
+        },
+        "position": {
+          "x": -198.2111,
+          "y": 130.22071
+        },
+        "width": 70
+      },
+      "s": {
+        "shape": "rect",
+        "label.position": 17,
+        "label.font": "16px arial, sans-serif",
+        "label": "P1-GO",
+        "shape.background": "rgb(204,204,204)"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 198,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "host": {
+          "__i": 158
+        },
+        "position": {
+          "x": -295.91278,
+          "y": -12.41738
+        }
+      },
+      "s": {
+        "text": "FRC OFF",
+        "text.align": "center",
+        "text.font": "16px arial, sans-serif",
+        "label": "",
+        "text.color": "rgb(118,250,77)"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 199,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "host": {
+          "__i": 158
+        },
+        "position": {
+          "x": -295.91278,
+          "y": 28.07937
+        }
+      },
+      "s": {
+        "text": "252.6 MW",
+        "text.align": "center",
+        "text.font": "16px arial, sans-serif",
+        "label": "",
+        "text.color": "rgb(255,255,255)"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 200,
+      "p": {
+        "name": "几何图形",
+        "layer": 1,
+        "host": {
+          "__i": 158
+        },
+        "position": {
+          "x": -220.74905,
+          "y": -16.12757
+        },
+        "width": 70
+      },
+      "s": {
+        "shape": "rect",
+        "label.position": 17,
+        "label.font": "16px arial, sans-serif",
+        "label": "P1-ON",
+        "shape.background": "rgb(204,204,204)"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 201,
+      "p": {
+        "name": "几何图形",
+        "layer": 1,
+        "host": {
+          "__i": 158
+        },
+        "position": {
+          "x": -220.74905,
+          "y": 28.07937
+        },
+        "width": 70
+      },
+      "s": {
+        "shape": "rect",
+        "label.position": 17,
+        "label.font": "16px arial, sans-serif",
+        "label": "P2-OFF",
+        "shape.background": "rgb(204,204,204)"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 202,
+      "p": {
+        "name": "几何图形",
+        "layer": 1,
+        "host": {
+          "__i": 159
+        },
+        "position": {
+          "x": -38.28305,
+          "y": -147.4912
+        },
+        "width": 50
+      },
+      "s": {
+        "shape": "rect",
+        "label.position": 17,
+        "label.font": "16px arial, sans-serif",
+        "label": "ON",
+        "label.color": "rgb(255,255,255)",
+        "shape.background": "rgb(103,120,120)",
+        "shape.depth": 3
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 203,
+      "p": {
+        "name": "几何图形",
+        "layer": 1,
+        "host": {
+          "__i": 159
+        },
+        "position": {
+          "x": -38.28305,
+          "y": -112.77905
+        },
+        "width": 50
+      },
+      "s": {
+        "shape": "rect",
+        "label.position": 17,
+        "label.font": "16px arial, sans-serif",
+        "label": "OFF",
+        "label.color": "rgb(255,255,255)",
+        "shape.background": "rgb(103,120,120)",
+        "shape.depth": 3
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 204,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "host": {
+          "__i": 159
+        },
+        "position": {
+          "x": -116.50306,
+          "y": -145.53663
+        }
+      },
+      "s": {
+        "text": "AGC OFF",
+        "text.align": "center",
+        "text.font": "16px arial, sans-serif",
+        "label": "",
+        "text.color": "rgb(118,250,77)"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 205,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "host": {
+          "__i": 159
+        },
+        "position": {
+          "x": -116.50306,
+          "y": -113.27279
+        }
+      },
+      "s": {
+        "text": "322.3 MW",
+        "text.align": "center",
+        "text.font": "16px arial, sans-serif",
+        "label": "",
+        "text.color": "rgb(255,255,255)"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 206,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "host": {
+          "__i": 157
+        },
+        "position": {
+          "x": -258.81779,
+          "y": -157.41738
+        }
+      },
+      "s": {
+        "text": "CBF",
+        "text.align": "center",
+        "text.font": "16px arial, sans-serif",
+        "label": "",
+        "text.color": "rgb(118,250,77)"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 207,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "host": {
+          "__i": 157
+        },
+        "position": {
+          "x": -258.81779,
+          "y": -137.4912
+        }
+      },
+      "s": {
+        "text": "BF",
+        "text.align": "center",
+        "text.font": "16px arial, sans-serif",
+        "label": "",
+        "text.color": "rgb(255,252,84)"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 208,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "host": {
+          "__i": 157
+        },
+        "position": {
+          "x": -258.81779,
+          "y": -119.80018
+        }
+      },
+      "s": {
+        "text": "TF",
+        "text.align": "center",
+        "text.font": "16px arial, sans-serif",
+        "label": "",
+        "text.color": "rgb(255,252,84)"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 209,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "host": {
+          "__i": 157
+        },
+        "position": {
+          "x": -258.81779,
+          "y": -102.77905
+        }
+      },
+      "s": {
+        "text": "BASE",
+        "text.align": "center",
+        "text.font": "16px arial, sans-serif",
+        "label": "",
+        "text.color": "rgb(118,250,77)"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 210,
+      "p": {
+        "name": "BE RESET BP",
+        "layer": 1,
+        "host": {
+          "__i": 118
+        },
+        "position": {
+          "x": -106.21836,
+          "y": 33.37546
+        },
+        "width": 110
+      },
+      "s": {
+        "shape": "rect",
+        "label.position": 17,
+        "label.font": "16px arial, sans-serif",
+        "label": "BE RESET BP",
+        "shape.background": "rgb(103,120,120)",
+        "shape.depth": 3
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 211,
+      "p": {
+        "name": "几何图形",
+        "layer": 1,
+        "host": {
+          "__i": 118
+        },
+        "position": {
+          "x": 15.84871,
+          "y": 33.37546
+        },
+        "width": 90
+      },
+      "s": {
+        "shape": "rect",
+        "label.position": 17,
+        "label.font": "16px arial, sans-serif",
+        "label": "INFIT CSS",
+        "shape.background": "rgb(103,120,120)",
+        "label.color": "rgb(255,0,0)",
+        "shape.depth": 3
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 212,
+      "p": {
+        "name": "几何图形",
+        "layer": 1,
+        "host": {
+          "__i": 118
+        },
+        "position": {
+          "x": -73.79373,
+          "y": 118.49332
+        },
+        "width": 60,
+        "height": 20
+      },
+      "s": {
+        "shape": "triangle",
+        "label.position": 17,
+        "label.font": "16px arial, sans-serif",
+        "label": "",
+        "shape.background": "rgb(0,0,0)"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 213,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "host": {
+          "__i": 118
+        },
+        "position": {
+          "x": 26.71695,
+          "y": 68.07937
+        }
+      },
+      "s": {
+        "text": "INFIT OFF",
+        "text.align": "center",
+        "text.font": "16px arial, sans-serif",
+        "label": "",
+        "text.color": "rgb(0,37,245)"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 214,
+      "p": {
+        "name": "几何图形",
+        "layer": 1,
+        "host": {
+          "__i": 118
+        },
+        "rotation": 3.14159,
+        "position": {
+          "x": -74.12119,
+          "y": 159.09513
+        },
+        "width": 60,
+        "height": 20
+      },
+      "s": {
+        "shape": "triangle",
+        "label.position": 17,
+        "label.font": "16px arial, sans-serif",
+        "label": "",
+        "shape.background": "rgb(0,0,0)"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 215,
+      "p": {
+        "name": "几何图形",
+        "layer": 1,
+        "host": {
+          "__i": 118
+        },
+        "rotation": 3.14159,
+        "position": {
+          "x": 16.71695,
+          "y": 158.49336
+        },
+        "width": 60,
+        "height": 20
+      },
+      "s": {
+        "shape": "triangle",
+        "label.position": 17,
+        "label.font": "16px arial, sans-serif",
+        "label": "",
+        "shape.background": "rgb(0,0,0)"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 216,
+      "p": {
+        "name": "几何图形",
+        "layer": 1,
+        "host": {
+          "__i": 118
+        },
+        "position": {
+          "x": 16.71695,
+          "y": 115.22071
+        },
+        "width": 60,
+        "height": 20
+      },
+      "s": {
+        "shape": "triangle",
+        "label.position": 17,
+        "label.font": "16px arial, sans-serif",
+        "label": "",
+        "shape.background": "rgb(0,0,0)"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 217,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "host": {
+          "__i": 118
+        },
+        "position": {
+          "x": -73.28305,
+          "y": 188.49336
+        }
+      },
+      "s": {
+        "text": "LDC",
+        "text.align": "center",
+        "text.font": "16px arial, sans-serif",
+        "label": "",
+        "text.color": "rgb(255,255,255)"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 218,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "host": {
+          "__i": 118
+        },
+        "position": {
+          "x": 20.84871,
+          "y": 188.49336
+        }
+      },
+      "s": {
+        "text": "TP",
+        "text.align": "center",
+        "text.font": "16px arial, sans-serif",
+        "label": "",
+        "text.color": "rgb(255,255,255)"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 219,
+      "p": {
+        "name": "几何图形",
+        "layer": 1,
+        "host": {
+          "__i": 161
+        },
+        "position": {
+          "x": 159.52701,
+          "y": 117.12672
+        },
+        "width": 70
+      },
+      "s": {
+        "shape": "rect",
+        "label.position": 17,
+        "label.font": "16px arial, sans-serif",
+        "label": "P1-VP",
+        "shape.background": "rgb(204,204,204)"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 220,
+      "p": {
+        "name": "几何图形",
+        "layer": 1,
+        "host": {
+          "__i": 161
+        },
+        "position": {
+          "x": 159.52701,
+          "y": 169.09521
+        },
+        "width": 70
+      },
+      "s": {
+        "shape": "rect",
+        "label.position": 17,
+        "label.font": "16px arial, sans-serif",
+        "label": "P2-CP",
+        "shape.background": "rgb(204,204,204)"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 221,
+      "p": {
+        "name": "几何图形",
+        "layer": 1,
+        "host": {
+          "__i": 161
+        },
+        "position": {
+          "x": 297.58607,
+          "y": 118.40532
+        },
+        "width": 70
+      },
+      "s": {
+        "shape": "rect",
+        "label.position": 17,
+        "label.font": "16px arial, sans-serif",
+        "label": "P3-GO",
+        "shape.background": "rgb(204,204,204)"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 222,
+      "p": {
+        "name": "几何图形",
+        "layer": 1,
+        "host": {
+          "__i": 161
+        },
+        "position": {
+          "x": 297.58607,
+          "y": 167.12672
+        },
+        "width": 70
+      },
+      "s": {
+        "shape": "rect",
+        "label.position": 17,
+        "label.font": "16px arial, sans-serif",
+        "label": "P4-HOLD",
+        "shape.background": "rgb(204,204,204)"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 223,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "host": {
+          "__i": 161
+        },
+        "position": {
+          "x": 297.58607,
+          "y": 12.58262
+        }
+      },
+      "s": {
+        "text": "TP HOLD",
+        "text.align": "center",
+        "text.font": "16px arial, sans-serif",
+        "label": "",
+        "text.color": "rgb(255,252,84)"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 224,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "host": {
+          "__i": 161
+        },
+        "position": {
+          "x": 159.52701,
+          "y": 13.21644
+        }
+      },
+      "s": {
+        "text": "VARIABLE P",
+        "text.align": "center",
+        "text.font": "16px arial, sans-serif",
+        "label": "",
+        "text.color": "rgb(255,252,84)"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 225,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "host": {
+          "__i": 161
+        },
+        "position": {
+          "x": 159.52701,
+          "y": 58.37546
+        }
+      },
+      "s": {
+        "text": "370.0 MPa",
+        "text.align": "center",
+        "text.font": "16px arial, sans-serif",
+        "label": "",
+        "text.color": "rgb(255,255,255)"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 226,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "host": {
+          "__i": 161
+        },
+        "position": {
+          "x": 297.58607,
+          "y": 59.59418
+        }
+      },
+      "s": {
+        "text": "366.5 MPa/min",
+        "text.align": "center",
+        "text.font": "16px arial, sans-serif",
+        "label": "",
+        "text.color": "rgb(255,255,255)"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 227,
+      "p": {
+        "name": "几何图形",
+        "layer": 1,
+        "host": {
+          "__i": 229
+        },
+        "position": {
+          "x": -83.95912,
+          "y": -248.45289
+        },
+        "width": 40,
+        "height": 25
+      },
+      "s": {
+        "shape": "rect",
+        "label.position": 17,
+        "label.font": "14px arial, sans-serif",
+        "label": "ENTR",
+        "shape.background": "rgb(103,120,120)",
+        "shape.depth": 2
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 228,
+      "p": {
+        "name": "几何图形",
+        "layer": 1,
+        "host": {
+          "__i": 229
+        },
+        "position": {
+          "x": -83.95912,
+          "y": -334.45289
+        },
+        "width": 40,
+        "height": 25
+      },
+      "s": {
+        "shape": "rect",
+        "label.position": 17,
+        "label.font": "16px arial, sans-serif",
+        "label": "362",
+        "shape.background": "rgb(164,164,164)",
+        "shape.depth": 2
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 229,
+      "p": {
+        "name": "几何图形",
+        "layer": 1,
+        "host": {
+          "__i": 156
+        },
+        "position": {
+          "x": -83.95912,
+          "y": -290.45289
+        },
+        "width": 50,
+        "height": 130
+      },
+      "s": {
+        "shape": "rect",
+        "label.position": 17,
+        "label.font": "16px arial, sans-serif",
+        "label": "",
+        "shape.background": "rgb(153,153,153)",
+        "shape.border.color": "rgb(109,109,109)",
+        "shape.border.width": 1
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 230,
+      "p": {
+        "name": "几何图形",
+        "layer": 1,
+        "host": {
+          "__i": 232
+        },
+        "position": {
+          "x": -148.28305,
+          "y": -248.45289
+        },
+        "width": 40,
+        "height": 25
+      },
+      "s": {
+        "shape": "rect",
+        "label.position": 17,
+        "label.font": "14px arial, sans-serif",
+        "label": "ENTR",
+        "shape.background": "rgb(103,120,120)",
+        "shape.depth": 2
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 231,
+      "p": {
+        "name": "几何图形",
+        "layer": 1,
+        "host": {
+          "__i": 232
+        },
+        "position": {
+          "x": -148.28305,
+          "y": -334.45289
+        },
+        "width": 40,
+        "height": 25
+      },
+      "s": {
+        "shape": "rect",
+        "label.position": 17,
+        "label.font": "16px arial, sans-serif",
+        "label": "362",
+        "shape.background": "rgb(164,164,164)",
+        "shape.depth": 2
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 232,
+      "p": {
+        "name": "几何图形",
+        "layer": 1,
+        "host": {
+          "__i": 153
+        },
+        "position": {
+          "x": -148.28305,
+          "y": -290.45289
+        },
+        "width": 50,
+        "height": 130
+      },
+      "s": {
+        "shape": "rect",
+        "label.position": 17,
+        "label.font": "16px arial, sans-serif",
+        "label": "",
+        "shape.background": "rgb(153,153,153)",
+        "shape.border.color": "rgb(109,109,109)",
+        "shape.border.width": 1
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 233,
+      "p": {
+        "name": "几何图形",
+        "layer": 1,
+        "host": {
+          "__i": 235
+        },
+        "position": {
+          "x": -255.74905,
+          "y": -248.45289
+        },
+        "width": 40,
+        "height": 25
+      },
+      "s": {
+        "shape": "rect",
+        "label.position": 17,
+        "label.font": "14px arial, sans-serif",
+        "label": "ENTR",
+        "shape.background": "rgb(103,120,120)",
+        "shape.depth": 2
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 234,
+      "p": {
+        "name": "几何图形",
+        "layer": 1,
+        "host": {
+          "__i": 235
+        },
+        "position": {
+          "x": -255.74905,
+          "y": -334.45289
+        },
+        "width": 40,
+        "height": 25
+      },
+      "s": {
+        "shape": "rect",
+        "label.position": 17,
+        "label.font": "16px arial, sans-serif",
+        "label": "362",
+        "shape.background": "rgb(164,164,164)",
+        "shape.depth": 2
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 235,
+      "p": {
+        "name": "几何图形",
+        "layer": 1,
+        "host": {
+          "__i": 153
+        },
+        "position": {
+          "x": -255.74905,
+          "y": -290.45289
+        },
+        "width": 50,
+        "height": 130
+      },
+      "s": {
+        "shape": "rect",
+        "label.position": 17,
+        "label.font": "16px arial, sans-serif",
+        "label": "",
+        "shape.background": "rgb(153,153,153)",
+        "shape.border.color": "rgb(109,109,109)",
+        "shape.border.width": 1
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 236,
+      "p": {
+        "name": "几何图形",
+        "layer": 1,
+        "host": {
+          "__i": 238
+        },
+        "position": {
+          "x": -29.15129,
+          "y": -248.45289
+        },
+        "width": 40,
+        "height": 25
+      },
+      "s": {
+        "shape": "rect",
+        "label.position": 17,
+        "label.font": "14px arial, sans-serif",
+        "label": "ENTR",
+        "shape.background": "rgb(103,120,120)",
+        "shape.depth": 2
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 237,
+      "p": {
+        "name": "几何图形",
+        "layer": 1,
+        "host": {
+          "__i": 238
+        },
+        "position": {
+          "x": -29.15129,
+          "y": -334.45289
+        },
+        "width": 40,
+        "height": 25
+      },
+      "s": {
+        "shape": "rect",
+        "label.position": 17,
+        "label.font": "16px arial, sans-serif",
+        "label": "362",
+        "shape.background": "rgb(164,164,164)",
+        "shape.depth": 2
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 238,
+      "p": {
+        "name": "几何图形",
+        "layer": 1,
+        "host": {
+          "__i": 156
+        },
+        "position": {
+          "x": -29.15129,
+          "y": -290.45289
+        },
+        "width": 50,
+        "height": 130
+      },
+      "s": {
+        "shape": "rect",
+        "label.position": 17,
+        "label.font": "16px arial, sans-serif",
+        "label": "",
+        "shape.background": "rgb(153,153,153)",
+        "shape.border.color": "rgb(109,109,109)",
+        "shape.border.width": 1
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 239,
+      "p": {
+        "name": "几何图形",
+        "layer": 1,
+        "host": {
+          "__i": 241
+        },
+        "position": {
+          "x": -202.52673,
+          "y": -248.45289
+        },
+        "width": 40,
+        "height": 25
+      },
+      "s": {
+        "shape": "rect",
+        "label.position": 17,
+        "label.font": "14px arial, sans-serif",
+        "label": "ENTR",
+        "shape.background": "rgb(103,120,120)",
+        "shape.depth": 2
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 240,
+      "p": {
+        "name": "几何图形",
+        "layer": 1,
+        "host": {
+          "__i": 241
+        },
+        "position": {
+          "x": -202.52673,
+          "y": -334.45289
+        },
+        "width": 40,
+        "height": 25
+      },
+      "s": {
+        "shape": "rect",
+        "label.position": 17,
+        "label.font": "16px arial, sans-serif",
+        "label": "362",
+        "shape.background": "rgb(164,164,164)",
+        "shape.depth": 2
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 241,
+      "p": {
+        "name": "几何图形",
+        "layer": 1,
+        "host": {
+          "__i": 153
+        },
+        "position": {
+          "x": -202.52673,
+          "y": -290.45289
+        },
+        "width": 50,
+        "height": 130
+      },
+      "s": {
+        "shape": "rect",
+        "label.position": 17,
+        "label.font": "16px arial, sans-serif",
+        "label": "",
+        "shape.background": "rgb(153,153,153)",
+        "shape.border.color": "rgb(109,109,109)",
+        "shape.border.width": 1
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 242,
+      "p": {
+        "name": "几何图形",
+        "layer": 1,
+        "host": {
+          "__i": 244
+        },
+        "position": {
+          "x": -308.81779,
+          "y": -248.45289
+        },
+        "width": 40,
+        "height": 25
+      },
+      "s": {
+        "shape": "rect",
+        "label.position": 17,
+        "label.font": "14px arial, sans-serif",
+        "label": "ENTR",
+        "shape.background": "rgb(103,120,120)",
+        "shape.depth": 2
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 243,
+      "p": {
+        "name": "几何图形",
+        "layer": 1,
+        "host": {
+          "__i": 244
+        },
+        "position": {
+          "x": -308.81779,
+          "y": -334.45289
+        },
+        "width": 40,
+        "height": 25
+      },
+      "s": {
+        "shape": "rect",
+        "label.position": 17,
+        "label.font": "16px arial, sans-serif",
+        "label": "362",
+        "shape.background": "rgb(164,164,164)",
+        "shape.depth": 2
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 244,
+      "p": {
+        "name": "几何图形",
+        "layer": 1,
+        "host": {
+          "__i": 153
+        },
+        "position": {
+          "x": -308.81779,
+          "y": -290.45289
+        },
+        "width": 50,
+        "height": 130
+      },
+      "s": {
+        "shape": "rect",
+        "label.position": 17,
+        "label.font": "16px arial, sans-serif",
+        "label": "",
+        "shape.background": "rgb(153,153,153)",
+        "shape.border.color": "rgb(109,109,109)",
+        "shape.border.width": 1
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 248,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "host": {
+          "__i": 244
+        },
+        "position": {
+          "x": -222.23746,
+          "y": -272.38962
+        },
+        "anchor": {
+          "x": 0.83512,
+          "y": 0.56779
+        }
+      },
+      "s": {
+        "text": "HL",
+        "text.align": "center",
+        "text.font": "16px arial, sans-serif",
+        "label": ""
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 2349,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "host": {
+          "__i": 244
+        },
+        "position": {
+          "x": -148.42716,
+          "y": -275.77924
+        }
+      },
+      "s": {
+        "text": "RATE",
+        "text.align": "center",
+        "text.font": "16px arial, sans-serif",
+        "label": ""
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 2461,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "host": {
+          "__i": 238
+        },
+        "position": {
+          "x": -29.15129,
+          "y": -275.77924
+        }
+      },
+      "s": {
+        "text": "TP",
+        "text.align": "center",
+        "text.font": "16px arial, sans-serif",
+        "label": ""
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 2462,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "host": {
+          "__i": 244
+        },
+        "position": {
+          "x": -308.81779,
+          "y": -275.77924
+        }
+      },
+      "s": {
+        "text": "LL",
+        "text.align": "center",
+        "text.font": "16px arial, sans-serif",
+        "label": ""
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 2529,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "host": {
+          "__i": 244
+        },
+        "position": {
+          "x": -204.12119,
+          "y": -275.77924
+        }
+      },
+      "s": {
+        "text": "SET",
+        "text.align": "center",
+        "text.font": "16px arial, sans-serif",
+        "label": ""
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 2530,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "host": {
+          "__i": 229
+        },
+        "position": {
+          "x": -83.95912,
+          "y": -275.77924
+        }
+      },
+      "s": {
+        "text": "TP",
+        "text.align": "center",
+        "text.font": "16px arial, sans-serif",
+        "label": ""
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 7636,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "host": {
+          "__i": 150
+        },
+        "position": {
+          "x": -475.44436,
+          "y": 177.12672
+        }
+      },
+      "s": {
+        "text": "一次风机",
+        "text.font": "16px arial, sans-serif",
+        "label": "",
+        "text.color": "rgb(0,37,219)"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 9176,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "host": {
+          "__i": 150
+        },
+        "position": {
+          "x": -475.44436,
+          "y": -32.77886
+        }
+      },
+      "s": {
+        "text": "给水泵C调节",
+        "text.font": "16px arial, sans-serif",
+        "label": "",
+        "text.color": "rgb(0,37,219)"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 9177,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "host": {
+          "__i": 150
+        },
+        "position": {
+          "x": -475.44436,
+          "y": 158.40532
+        }
+      },
+      "s": {
+        "text": "再热汽喷水（右）",
+        "text.font": "16px arial, sans-serif",
+        "label": "",
+        "text.color": "rgb(115,115,115)"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 9178,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "host": {
+          "__i": 150
+        },
+        "position": {
+          "x": -475.44436,
+          "y": -319.8529
+        }
+      },
+      "s": {
+        "text": "A B C D E",
+        "text.font": "16px arial, sans-serif",
+        "label": "",
+        "text.color": "rgb(0,37,219)"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 9179,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "host": {
+          "__i": 150
+        },
+        "position": {
+          "x": -475.44436,
+          "y": 138.49336
+        }
+      },
+      "s": {
+        "text": "再热汽喷水（左）",
+        "text.font": "16px arial, sans-serif",
+        "label": "",
+        "text.color": "rgb(115,115,115)"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 9191,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "host": {
+          "__i": 150
+        },
+        "position": {
+          "x": -475.44436,
+          "y": -56.12757
+        }
+      },
+      "s": {
+        "text": "给水泵B调节",
+        "text.font": "16px arial, sans-serif",
+        "label": "",
+        "text.color": "rgb(0,37,219)"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 9192,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "host": {
+          "__i": 150
+        },
+        "position": {
+          "x": -475.44436,
+          "y": 118.40532
+        }
+      },
+      "s": {
+        "text": "燃烧器摆角（下）",
+        "text.font": "16px arial, sans-serif",
+        "label": "",
+        "text.color": "rgb(0,37,219)"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 9193,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "host": {
+          "__i": 150
+        },
+        "position": {
+          "x": -475.44436,
+          "y": -77.77905
+        }
+      },
+      "s": {
+        "text": "给水泵A调节",
+        "text.font": "16px arial, sans-serif",
+        "label": "",
+        "text.color": "rgb(0,37,219)"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 9194,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "host": {
+          "__i": 150
+        },
+        "position": {
+          "x": -475.44436,
+          "y": -273.45289
+        }
+      },
+      "s": {
+        "text": "氧量控制切除",
+        "text.font": "16px arial, sans-serif",
+        "label": "",
+        "text.color": "rgb(0,37,219)"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 9195,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "host": {
+          "__i": 150
+        },
+        "position": {
+          "x": -475.44436,
+          "y": -99.15784
+        }
+      },
+      "s": {
+        "text": "总给水调节",
+        "text.font": "16px arial, sans-serif",
+        "label": "",
+        "text.color": "rgb(115,115,115)"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 9196,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "host": {
+          "__i": 150
+        },
+        "position": {
+          "x": -475.44436,
+          "y": 98.40532
+        }
+      },
+      "s": {
+        "text": "燃烧器摆角（上）",
+        "text.font": "16px arial, sans-serif",
+        "label": "",
+        "text.color": "rgb(115,115,115)"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 9197,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "host": {
+          "__i": 150
+        },
+        "position": {
+          "x": -475.44436,
+          "y": -359.45289
+        }
+      },
+      "s": {
+        "text": "A B C D E",
+        "text.font": "16px arial, sans-serif",
+        "label": "",
+        "text.color": "rgb(0,37,219)"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 9198,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "host": {
+          "__i": 150
+        },
+        "position": {
+          "x": -475.44436,
+          "y": 76.89937
+        }
+      },
+      "s": {
+        "text": "过热三级喷水（右）",
+        "text.font": "16px arial, sans-serif",
+        "label": "",
+        "text.color": "rgb(115,115,115)"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 9210,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "host": {
+          "__i": 150
+        },
+        "position": {
+          "x": -475.44436,
+          "y": -120.53663
+        }
+      },
+      "s": {
+        "text": "给水调节阀",
+        "text.font": "16px arial, sans-serif",
+        "label": "",
+        "text.color": "rgb(115,115,115)"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 9211,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "host": {
+          "__i": 150
+        },
+        "position": {
+          "x": -475.44436,
+          "y": 55.22071
+        }
+      },
+      "s": {
+        "text": "过热三级喷水（左）",
+        "text.font": "16px arial, sans-serif",
+        "label": "",
+        "text.color": "rgb(115,115,115)"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 9212,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "host": {
+          "__i": 150
+        },
+        "position": {
+          "x": -475.44436,
+          "y": -144.80018
+        }
+      },
+      "s": {
+        "text": "燃油风挡板",
+        "text.font": "16px arial, sans-serif",
+        "label": "",
+        "text.color": "rgb(0,37,219)"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 9213,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "host": {
+          "__i": 150
+        },
+        "position": {
+          "x": -475.44436,
+          "y": -296.95289
+        }
+      },
+      "s": {
+        "text": "引风机 A B",
+        "text.font": "16px arial, sans-serif",
+        "label": "",
+        "text.color": "rgb(0,37,219)"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 9214,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "host": {
+          "__i": 150
+        },
+        "position": {
+          "x": -475.44436,
+          "y": -380.45289
+        }
+      },
+      "s": {
+        "text": "热风挡板",
+        "text.font": "16px arial, sans-serif",
+        "label": "",
+        "text.color": "rgb(0,37,219)"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 9215,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "host": {
+          "__i": 150
+        },
+        "position": {
+          "x": -475.44436,
+          "y": -339.6642
+        }
+      },
+      "s": {
+        "text": "冷风挡板",
+        "text.font": "16px arial, sans-serif",
+        "label": "",
+        "text.color": "rgb(115,115,115)"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 9216,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "host": {
+          "__i": 150
+        },
+        "position": {
+          "x": -475.44436,
+          "y": -169.80018
+        }
+      },
+      "s": {
+        "text": "燃料风挡板",
+        "text.font": "16px arial, sans-serif",
+        "label": "",
+        "text.color": "rgb(0,37,219)"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 9217,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "host": {
+          "__i": 150
+        },
+        "position": {
+          "x": -475.44436,
+          "y": -440.48893
+        }
+      },
+      "s": {
+        "text": "燃料主控",
+        "text.font": "16px arial, sans-serif",
+        "label": "",
+        "text.color": "rgb(0,37,219)"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 9218,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "host": {
+          "__i": 150
+        },
+        "position": {
+          "x": -475.44436,
+          "y": -195.41685
+        }
+      },
+      "s": {
+        "text": "二次风挡板",
+        "text.font": "16px arial, sans-serif",
+        "label": "",
+        "text.color": "rgb(0,37,219)"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 9219,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "host": {
+          "__i": 150
+        },
+        "position": {
+          "x": -475.44436,
+          "y": 33.37546
+        }
+      },
+      "s": {
+        "text": "过热二级喷水（右）",
+        "text.font": "16px arial, sans-serif",
+        "label": "",
+        "text.color": "rgb(115,115,115)"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 9220,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "host": {
+          "__i": 150
+        },
+        "position": {
+          "x": -475.44436,
+          "y": -220.41685
+        }
+      },
+      "s": {
+        "text": "辅助风",
+        "text.font": "16px arial, sans-serif",
+        "label": "",
+        "text.color": "rgb(0,37,219)"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 9221,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "host": {
+          "__i": 150
+        },
+        "position": {
+          "x": -475.44436,
+          "y": -420.28758
+        }
+      },
+      "s": {
+        "text": "给煤机",
+        "text.font": "16px arial, sans-serif",
+        "label": "",
+        "text.color": "rgb(115,115,115)"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 9222,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "host": {
+          "__i": 150
+        },
+        "position": {
+          "x": -475.44436,
+          "y": -246.95289
+        }
+      },
+      "s": {
+        "text": "送风机 A B",
+        "text.font": "16px arial, sans-serif",
+        "label": "",
+        "text.color": "rgb(115,115,115)"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 9223,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "host": {
+          "__i": 150
+        },
+        "position": {
+          "x": -475.44436,
+          "y": 9.59418
+        }
+      },
+      "s": {
+        "text": "过热二级喷水（左）",
+        "text.font": "16px arial, sans-serif",
+        "label": "",
+        "text.color": "rgb(115,115,115)",
+        "text.shadow.color": "rgb(115,115,115)"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 9224,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "host": {
+          "__i": 150
+        },
+        "position": {
+          "x": -475.44436,
+          "y": -401.51401
+        }
+      },
+      "s": {
+        "text": "A B C D E",
+        "text.font": "16px arial, sans-serif",
+        "label": "",
+        "text.color": "rgb(0,37,219)"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 9225,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "host": {
+          "__i": 150
+        },
+        "position": {
+          "x": -475.44436,
+          "y": -11.66109
+        }
+      },
+      "s": {
+        "text": "过热一级喷水",
+        "text.font": "16px arial, sans-serif",
+        "label": "",
+        "text.color": "rgb(0,37,219)"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 10517,
+      "p": {
+        "name": "几何图形",
+        "layer": 1,
+        "host": {
+          "__i": 154
+        },
+        "position": {
+          "x": 109.52701,
+          "y": -352.16429
+        },
+        "width": 150,
+        "height": 175
+      },
+      "s": {
+        "shape": "rect",
+        "label.position": 11,
+        "label.font": "16px arial, sans-serif",
+        "label": "BLOCK INC",
+        "shape.border.color": "rgb(255,255,255)",
+        "shape.border.width": 2,
+        "shape.background": "rgb(153,153,153)",
+        "shape.depth": -3
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 11728,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "host": {
+          "__i": 10517
+        },
+        "position": {
+          "x": 122.58607,
+          "y": -382.39763
+        }
+      },
+      "s": {
+        "text": "PA FAN",
+        "text.font": "16px arial, sans-serif",
+        "label": "",
+        "text.color": "rgb(115,115,115)"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 12784,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "host": {
+          "__i": 10517
+        },
+        "position": {
+          "x": 122.58607,
+          "y": -352.16429
+        }
+      },
+      "s": {
+        "text": "ID FAN",
+        "text.font": "16px arial, sans-serif",
+        "label": "",
+        "text.color": "rgb(115,115,115)"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 12835,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "host": {
+          "__i": 10517
+        },
+        "position": {
+          "x": 139.16127,
+          "y": -326.01338
+        },
+        "anchor": {
+          "x": 0.66575,
+          "y": 0.43502
+        }
+      },
+      "s": {
+        "text": "FD FAN",
+        "text.font": "16px arial, sans-serif",
+        "label": "",
+        "text.color": "rgb(115,115,115)"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 12886,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "host": {
+          "__i": 10517
+        },
+        "position": {
+          "x": 122.58607,
+          "y": -293.26428
+        }
+      },
+      "s": {
+        "text": "PA BFP",
+        "text.font": "16px arial, sans-serif",
+        "label": "",
+        "text.color": "rgb(115,115,115)"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 13795,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "host": {
+          "__i": 13799
+        },
+        "position": {
+          "x": 291.37473,
+          "y": -298.97117
+        }
+      },
+      "s": {
+        "text": "PA BFP",
+        "text.font": "16px arial, sans-serif",
+        "label": "",
+        "text.color": "rgb(115,115,115)"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 13796,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "host": {
+          "__i": 13799
+        },
+        "position": {
+          "x": 291.37473,
+          "y": -328.37119
+        }
+      },
+      "s": {
+        "text": "FD FAN",
+        "text.font": "16px arial, sans-serif",
+        "label": "",
+        "text.color": "rgb(115,115,115)"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 13797,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "host": {
+          "__i": 13799
+        },
+        "position": {
+          "x": 291.37473,
+          "y": -358.37119
+        }
+      },
+      "s": {
+        "text": "ID FAN",
+        "text.font": "16px arial, sans-serif",
+        "label": "",
+        "text.color": "rgb(115,115,115)"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 13798,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "host": {
+          "__i": 13799
+        },
+        "position": {
+          "x": 291.37473,
+          "y": -383.37119
+        }
+      },
+      "s": {
+        "text": "PA FAN",
+        "text.font": "16px arial, sans-serif",
+        "label": "",
+        "text.color": "rgb(115,115,115)"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 13799,
+      "p": {
+        "name": "几何图形",
+        "layer": 1,
+        "host": {
+          "__i": 154
+        },
+        "position": {
+          "x": 278.37473,
+          "y": -353.37119
+        },
+        "width": 150,
+        "height": 175
+      },
+      "s": {
+        "shape": "rect",
+        "label.position": 11,
+        "label.font": "16px arial, sans-serif",
+        "label": "BLOCK DEC",
+        "shape.border.color": "rgb(255,255,255)",
+        "shape.border.width": 2,
+        "shape.background": "rgb(153,153,153)",
+        "shape.depth": -3
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 15639,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "host": {
+          "__i": 15643
+        },
+        "position": {
+          "x": 291.37473,
+          "y": -122.64383
+        }
+      },
+      "s": {
+        "text": "PA BFP",
+        "text.font": "16px arial, sans-serif",
+        "label": "",
+        "text.color": "rgb(115,115,115)"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 15640,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "host": {
+          "__i": 15643
+        },
+        "position": {
+          "x": 291.37473,
+          "y": -145.59672
+        }
+      },
+      "s": {
+        "text": "FD FAN",
+        "text.font": "16px arial, sans-serif",
+        "label": "",
+        "text.color": "rgb(115,115,115)"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 15641,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "host": {
+          "__i": 15643
+        },
+        "position": {
+          "x": 291.37473,
+          "y": -170.59672
+        }
+      },
+      "s": {
+        "text": "ID FAN",
+        "text.font": "16px arial, sans-serif",
+        "label": "",
+        "text.color": "rgb(115,115,115)"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 15642,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "host": {
+          "__i": 15643
+        },
+        "position": {
+          "x": 291.37473,
+          "y": -191.65784
+        }
+      },
+      "s": {
+        "text": "BFP",
+        "text.font": "16px arial, sans-serif",
+        "label": "",
+        "text.color": "rgb(115,115,115)"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 15643,
+      "p": {
+        "name": "几何图形",
+        "layer": 1,
+        "host": {
+          "__i": 154
+        },
+        "position": {
+          "x": 278.37473,
+          "y": -161.65784
+        },
+        "width": 150,
+        "height": 175
+      },
+      "s": {
+        "shape": "rect",
+        "label.position": 11,
+        "label.font": "16px arial, sans-serif",
+        "label": "RUN BACK",
+        "shape.border.color": "rgb(255,255,255)",
+        "shape.border.width": 2,
+        "shape.background": "rgb(153,153,153)",
+        "shape.depth": -3
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 15644,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "host": {
+          "__i": 15648
+        },
+        "position": {
+          "x": 122.52701,
+          "y": -102.65784
+        }
+      },
+      "s": {
+        "text": "PA BFP",
+        "text.font": "16px arial, sans-serif",
+        "label": "",
+        "text.color": "rgb(115,115,115)"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 15645,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "host": {
+          "__i": 15648
+        },
+        "position": {
+          "x": 122.52701,
+          "y": -127.65784
+        }
+      },
+      "s": {
+        "text": "FD FAN",
+        "text.font": "16px arial, sans-serif",
+        "label": "",
+        "text.color": "rgb(115,115,115)"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 15646,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "host": {
+          "__i": 15648
+        },
+        "position": {
+          "x": 122.52701,
+          "y": -155.81019
+        }
+      },
+      "s": {
+        "text": "ID FAN",
+        "text.font": "16px arial, sans-serif",
+        "label": "",
+        "text.color": "rgb(115,115,115)"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 15647,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "host": {
+          "__i": 15648
+        },
+        "position": {
+          "x": 122.52701,
+          "y": -183.13002
+        }
+      },
+      "s": {
+        "text": "PA FAN",
+        "text.font": "16px arial, sans-serif",
+        "label": "",
+        "text.color": "rgb(115,115,115)"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 15648,
+      "p": {
+        "name": "几何图形",
+        "layer": 1,
+        "host": {
+          "__i": 154
+        },
+        "position": {
+          "x": 109.52701,
+          "y": -161.65784
+        },
+        "width": 150,
+        "height": 175
+      },
+      "s": {
+        "shape": "rect",
+        "label.position": 11,
+        "label.font": "16px arial, sans-serif",
+        "label": "RUN DOWN",
+        "shape.border.color": "rgb(255,255,255)",
+        "shape.border.width": 2,
+        "shape.background": "rgb(153,153,153)",
+        "shape.depth": -3
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 20642,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "host": {
+          "__i": 15643
+        },
+        "position": {
+          "x": 291.37473,
+          "y": -101.0152
+        }
+      },
+      "s": {
+        "text": "AIR HTR",
+        "text.font": "16px arial, sans-serif",
+        "label": "",
+        "text.color": "rgb(115,115,115)"
+      }
+    }
+  ]
+}
