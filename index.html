@@ -73,13 +73,16 @@
         let indexFileName = null;
         //用于保存 复制粘贴 所需节点
         let copyNodeArr = [];
+        //
+        let dataModelStorage = window.localStorage;
 
         // tooltip 文字提示的 div 样式编辑
         let tooltipDiv = ht.Default.getToolTipDiv();
         tooltipDiv.style.borderRadius = '5px';
         tooltipDiv.style.border = '1px solid #eee';
 
-        // 初始化 indexDataModel
+        // 从 localStorage 中提取 dataModel 并初始化
+        indexDataModel.deserialize(dataModelStorage['dataModel']);
         // var indexDataModel = initMainDataModel("dataModel.json");
         // dataModel = new ht.DataModel();
         //
@@ -398,12 +401,28 @@
             contextmenu.addTo(g2d.getView());
         }
 
+
+
+        /***
+         * localDataModelStorage
+         */
+        function localDataModelStorage (dataModel) {
+            dataModelStorage['dataModel'] = dataModel.serialize(2);
+            // console.log (dataModel)
+        }
+
         function init() {
             initPalette();
             initGraphView();
             initTreeView();
             initPropertyView();
             resetDefault();
+            indexDataModel.mm(function (e){
+                localDataModelStorage (indexDataModel);
+            });
+            indexDataModel.md(function (e){
+                localDataModelStorage (indexDataModel);
+            })
 
             mainSplit.addToDOM();
 
