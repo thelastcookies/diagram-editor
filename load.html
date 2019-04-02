@@ -242,7 +242,7 @@
             nodeArr = getNode(diagramDM);
             // console.log (nodeArr);
 
-            // sendNodeAndRefresh(dm, nodeArr);
+            sendNodeAndRefresh(diagramDM, nodeArr);
 
             // let mainSplit = new ht.widget.SplitView(graphView, divContainer, 'v', 0.98);
 
@@ -269,21 +269,22 @@
          */
         function sendNodeAndRefresh (dataModel, nodeArr) {
             getDataIntervalID = setInterval(function() {
-                ht.Default.xhrLoad("fake-value.json", function (data) {
-                    let dataArr = ht.Default.parse(data);
-                    // console.log ("dataArr from fake-value.json", dataArr);
-                    dataArr.forEach(function (item, index) {
-                            if (!item) {
-                                console.error ("请检查服务器状态")
-                                return;
-                            }
-                            setNodeColorByValue(dataModel, item.node, item.value);
-                        },
-                        function () {
-                            console.error ("请检查网络连接");
-                        });
-
-                });
+                let nodeValue = cal(380, Math.random() * 40, "+", 2);
+                setNodeColorByValue(dataModel, 'power', nodeValue);
+                // ht.Default.xhrLoad("fake-value.json", function (data) {
+                //     let dataArr = ht.Default.parse(data);
+                //     // console.log ("dataArr from fake-value.json", dataArr);
+                //     dataArr.forEach(function (item, index) {
+                //             if (!item) {
+                //                 console.error ("请检查服务器状态")
+                //                 return;
+                //             }
+                //             setNodeColorByValue(dataModel, item.node, item.value);
+                //         },
+                //         function () {
+                //             console.error ("请检查网络连接");
+                //         });
+                // });
             }, 3000);
         }
 
@@ -305,23 +306,41 @@
             // console.log ("组件标签：", nodeTag, "组件数据", nodeValue, "阈值", threshold, "高于阈值", moreThenThColor, "低于阈值", lessThenThColor);
 
             // 各种赋值操作
-            // 数值赋值
-            if (node.a('value') !== undefined) {node.a ('value', nodeValue);};
+            // 文字节点赋值
+            if (node instanceof ht.Text) {
+                node.s( "text", nodeValue);
+            }
+            // 其他节点赋值
+            else if (node.a('value') !== undefined)
+            {
+                node.a ('value', nodeValue);
+            }
+            else {
+                alert("节点信息错误");
+            }
             // 颜色赋值
             if (parseFloat(nodeValue) > threshold) {
                 // node.s('border.color', moreThenThColor);
                 // if (node.a('enabled')) node.a ('enabled', true);
+                // 文字节点颜色
+                if (node instanceof ht.Text) node.s("text.color", moreThenThColor);
                 if (node.a('numberColor')) node.a ('numberColor', moreThenThColor);
                 // if (node.a('lineColor'))
-                    node.a ('lineColor', moreThenThColor);
+                if (node.a('lineColor')) node.a ('lineColor', moreThenThColor);
             }
             else {
+                // 文字节点颜色
+                if (node instanceof ht.Text) node.s("text.color", lessThenThColor);
                 // node.s('border.color', lessThenThColor);
                 // if (node.a('enabled')) node.a ('enabled', false);
                 if (node.a('numberColor')) node.a ('numberColor', lessThenThColor);
                 // if (node.a('lineColor'))
-                    node.a ('lineColor', lessThenThColor);
+                if (node.a('lineColor')) node.a ('lineColor', lessThenThColor);
             }
+
+
+
+
         }
 
 

@@ -293,14 +293,13 @@
                 var data = indexDataModel.sm().ld();
 
                 // 针对不同类型的节点设置不同的属性内容
-
-                if (data instanceof ht.Text) {// 文本类型
-                    propertyView.addProperties(text_properties);
-                    return;// 设置文本类型不显示其他数据
-                }
                 if (data instanceof ht.Data) {// data 类型，所有的节点都基于这个类型
                     propertyView.addProperties(threshold_properties);
                     propertyView.addProperties(data_properties);
+                }
+                if (data instanceof ht.Text) {// 文本类型
+                    propertyView.addProperties(text_properties);
+                    return;// 设置文本类型不显示其他数据
                 }
                 if (data instanceof ht.Node) {// node 类型
                     propertyView.addProperties(node_properties);
@@ -344,8 +343,8 @@
                         "text": "TEXT",
                         "text.align": "center",
                         "text.vAlign": "middle",
-                        "text.font": "16px arial, sans-serif"
-
+                        "text.font": "16px arial, sans-serif",
+                        "text.font.color": "#ff4500"
                     })
                 }
                 else {
