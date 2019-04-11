@@ -51,24 +51,8 @@
         }
     </style>
 
-    <script type="text/javascript">
-        htconfig = {
-            Default: {
-                toolbarBackground: 'rgb(240,239,238)',  // 中间栏最上方
-                // toolbarBackground: '',
-                // 组件面板相关组件
-                paletteTitleBackground: 'rgb(240,239,238)',
-                paletteTitleHoverBackground: 'rgb(231,231,231)',
-                paletteTitleLabelColor: 'rgb(138, 138, 138)',
-                paletteItemSelectBackground: '',
-                paletteItemHoverBorderColor: 'rgb(138, 138, 138)',
-                toolTipBackground: 'rgb(255, 255, 255)',
-                propertyPaneHeaderBackground: 'rgb(240,239,238)',
-                propertyViewBackground: 'rgb(240,239,238)',
-                splitViewDividerBackground: 'rgb(228,228,228)'
-            }
-        };
-    </script>
+    <script src="config/htconfig.js"></script>
+
 
     <script src="lib/core/ht.js"></script>
     <script src="lib/plugin/ht-cssanimation.js"></script>
@@ -87,17 +71,17 @@
 
     <!--json图片-->
     <script src="predefine.js"></script>
-    <script src="dialog-config.js"></script>
+    <script src="config/dialog-config.js"></script>
     <!--面板的内容-->
-    <script src="palette-config.js"></script>
+    <script src="config/palette-config.js"></script>
     <!--导航栏的内容-->
-    <script src="toolbar-config.js"></script>
+    <script src="config/toolbar-config.js"></script>
     <!--属性栏的内容-->
-    <script src="properties-config.js"></script>
+    <script src="config/properties-config.js"></script>
     <!--初始化场景的内容-->
-    <script src="datamodel-config.js"></script>
+    <script src="config/datamodel-config.js"></script>
     <!--右键菜单栏的内容-->
-    <script src="contextmenu-config.js"></script>
+    <script src="config/contextmenu-config.js"></script>
     <!--文件列表的内容-->
     <script src="file-handle/fileHandle.js"></script>
 
@@ -112,6 +96,9 @@
     <script src="progress-bar/progress-bar.js"></script>
 
     <script src="bootstrap-3.3.7-dist/js/jquery-3.1.1.js"></script>
+
+    <script src="lib/jquery.printarea.js"></script>
+
 
     <script>
 
@@ -130,18 +117,24 @@
         let nodeArr = null;
         // 定时从服务器获取数据
         let getDataIntervalID = null;
+        // 当前选择的图名
+        let fileName = null;
+
+        let mainPowerValue = null;
 
 
         let fileListDataModel = new ht.DataModel();
         let fileListTableView = new ht.widget.TableView(fileListDataModel);
         fileListTableView.onDataClicked = function (data) {
-            initDiagrambyFileName(data.a("fileList"));
+            fileName = data.a("fileList");
+            initDiagrambyFileName(fileName);
+            initProgress([]);
+            loadPageRightView.setStatus("cr");
         }
         fileListTableView.addColumns([{
             name: "fileList",
             displayName: '文件列表',
             sortOrder: 'desc',
-            width: 200,
             accessType: 'attr',
             valueType: 'string',
         }]);
@@ -160,14 +153,25 @@
         let loadPageLeftView = tableBorderPane.getView();
         loadPageLeftView.className = 'tableView';
 
+        // 工具条
+        let load_toolbar = new ht.widget.Toolbar(load_toolbar_config);
+        load_toolbar.getSelectBackground = function () { return 'rgb(240,239,238)'; }
+        load_toolbar.enableToolTip();
+
         let progressDiv = document.createElement('div');
         progressDiv.id = "div-container";
         let progressHTML = '<div id="progress-container"><button id="play-btn" type="button" class="btn btn-default"><span id="play-btn-icon" class="glyphicon glyphicon-play" aria-hidden="true"></span></button><div id="progress"><div id="progress-bar" class=""  style=""></div><div id="progress-btn"></div></div><div id="progress-time">1997-01-01 00:00:00</div></div>'
         progressDiv.innerHTML = progressHTML;
         let loadPageRightView = new ht.widget.SplitView (graphView, progressDiv, 'v', -100);
         loadPageRightView.setStatus("cr");
+        loadPageRightView.setDividerSize(1);
 
-        let loadPageMainView = new ht.widget.SplitView (loadPageLeftView, loadPageRightView, 'h', 200);
+        let loadPageRight = new ht.widget.SplitView (load_toolbar, loadPageRightView, 'v', 25);
+        loadPageRight.setDividerSize(0);
+
+        let loadPageMainView = new ht.widget.SplitView (loadPageLeftView, loadPageRight, 'h', 200);
+        loadPageMainView.setDividerSize(1);
+
 
         // 页面的初始化
         function init (){
@@ -269,8 +273,8 @@
          */
         function sendNodeAndRefresh (dataModel, nodeArr) {
             getDataIntervalID = setInterval(function() {
-                let nodeValue = cal(380, Math.random() * 40, "+", 2);
-                setNodeColorByValue(dataModel, 'power', nodeValue);
+                mainPowerValue = cal(380, Math.random() * 40, "+", 2);
+                setNodeColorByValue(dataModel, 'power', mainPowerValue);
                 // ht.Default.xhrLoad("fake-value.json", function (data) {
                 //     let dataArr = ht.Default.parse(data);
                 //     // console.log ("dataArr from fake-value.json", dataArr);
@@ -316,7 +320,7 @@
                 node.a ('value', nodeValue);
             }
             else {
-                alert("节点信息错误");
+                // console.log("节点信息错误");
             }
             // 颜色赋值
             if (parseFloat(nodeValue) > threshold) {
@@ -326,7 +330,8 @@
                 if (node instanceof ht.Text) node.s("text.color", moreThenThColor);
                 if (node.a('numberColor')) node.a ('numberColor', moreThenThColor);
                 // if (node.a('lineColor'))
-                if (node.a('lineColor')) node.a ('lineColor', moreThenThColor);
+                // if (node.a('lineColor')) node.a ('lineColor', moreThenThColor);
+                node.a ('lineColor', moreThenThColor);
             }
             else {
                 // 文字节点颜色
@@ -335,7 +340,8 @@
                 // if (node.a('enabled')) node.a ('enabled', false);
                 if (node.a('numberColor')) node.a ('numberColor', lessThenThColor);
                 // if (node.a('lineColor'))
-                if (node.a('lineColor')) node.a ('lineColor', lessThenThColor);
+                // if (node.a('lineColor')) node.a ('lineColor', lessThenThColor);
+                node.a ('lineColor', lessThenThColor);
             }
 
 

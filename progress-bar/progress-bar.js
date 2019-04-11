@@ -16,7 +16,9 @@ let step = null;
  * @param timeStampArr
  */
 function initProgress (timeStampArr) {
+    if (!timeStampArr.length) return;
     len = timeStampArr.length - 1;
+
     step = cal(progressLen, len, "/");
 
     // progress-detail 内容的初始化
@@ -121,8 +123,12 @@ function setPlayStart() {
 }
 
 function setPlayStop() {
-    if (timerID)
-        clearInterval(timerID);
+    if (timerID) clearInterval(timerID);
     $("#play-btn-icon").removeClass("glyphicon-pause");
     $("#play-btn-icon").addClass("glyphicon-play");
+}
+
+function progressReset () {
+    $("#progress-time").text('2000-01-01 00:00:00');
+
 }
