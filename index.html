@@ -25,6 +25,8 @@
     <script src="lib/plugin/ht-propertypane.js"></script>
     <script src="lib/plugin/ht-edgetype.js"></script>
     <script src="lib/plugin/ht-contextmenu.js"></script>
+    <script src="lib/plugin/ht-historymanager.js"></script>
+    <script src="lib/plugin/ht-xeditinteractor.js"></script>
 
     <!--“连线”交互器-->
     <script src="CreateEdgeInteractor.js"></script>
@@ -41,6 +43,7 @@
     <script src="config/palette-config.js"></script>
     <!--导航栏的内容-->
     <script src="config/toolbar-config.js"></script>
+
     <!--属性栏的内容-->
     <script src="config/properties-config.js"></script>
     <script src="file-handle/fileHandle.js"></script>
@@ -58,7 +61,7 @@
         let indexFileName = null;
         //用于保存 复制粘贴 所需节点
         let copyNodeArr = [];
-        //
+        // 将编辑的内容保存在浏览器中
         let dataModelStorage = window.localStorage;
 
         // tooltip 文字提示的 div 样式编辑
@@ -67,7 +70,9 @@
         tooltipDiv.style.border = '1px solid #eee';
 
         // 从 localStorage 中提取 dataModel 并初始化
-        indexDataModel.deserialize(dataModelStorage['dataModel']);
+        if(dataModelStorage['dataModel']) {
+            indexDataModel.deserialize(dataModelStorage['dataModel']);
+        }
         // var indexDataModel = initMainDataModel("dataModel.json");
         // dataModel = new ht.DataModel();
         //
@@ -81,12 +86,19 @@
             g2d.getEditInteractor().setStyle('anchorVisible', false);
         }
 
+        // 设置组件的编辑框
+        g2d.setEditable(true);
+        // 设置组件编辑大小时保持宽高比
+        g2d.setResizeMode('keepRatio');
+        // g2d.getBodyColor();
+
         indexDataModel.each(function (data) { if (!(data instanceof ht.Edge)) data.setLayer(1); });
 
 
         // 创建交互器对象
         shapeInteractor = new CreateShapeInteractor(g2d, ht.Shape);
-        edgeInteractor = new CreateEdgeInteractor(g2d);
+        edgeInteractor = new CreateEdgeInteractor(g2d, 'points');
+        edgeBdyInteractor = new CreateEdgeInteractor(g2d, 'boundary');
         attachInteractor = new CreateAttachInteractor(g2d);
         rightAngleInteractor = new CreateEdgeInteractor(g2d, 'h.v');
 
@@ -111,21 +123,23 @@
         // 刻度尺
         rulerFrame = new ht.widget.RulerFrame(g2d);
 
-        // 编辑区域
+        // 绘图编辑区域
         borderPane = new ht.widget.BorderPane();
         borderPane.setTopView(topSplit);
         borderPane.setTopHeight(25);
         borderPane.setCenterView(rulerFrame);
 
+        // 左侧面板整合 包括组件面板和绘图编辑面板
         leftSplit = new ht.widget.SplitView(palette, borderPane, 'h', 260);
-
-        // 树组件
-        treeView = new ht.widget.TreeView(indexDataModel);
 
         // 属性面板
         propertyPane = new ht.widget.PropertyPane(indexDataModel);
 
-        rightSplit = new ht.widget.SplitView(propertyPane, treeView, 'v', 0.4);
+        // 包含所有组件的树面板
+        compTreeView = new ht.widget.TreeView(indexDataModel);
+
+        // 右侧面板整合
+        rightSplit = new ht.widget.SplitView(propertyPane, compTreeView, 'v', 0.4);
 
         // 场景主面板
         mainSplit = new ht.widget.SplitView(leftSplit, rightSplit, 'h', -260);
@@ -148,7 +162,7 @@
             toolbar_left.handleClick(toolbar_left.getItemById('edit'));
         }
 
-        // 初始化组件面板中的内容
+        // 初始化左侧组件面板中的内容
         function initPalette() {
             var dm = palette.dm();
 
@@ -205,7 +219,7 @@
                         if (state === 'between') {
                             e.preventDefault();
                         }
-                        // 当 state 为 end 时，判断e是否在 graphView 的范围内，如果是，则创建 Node
+                        // 当 state 为 end 时，判断e是否在 graphView 的范围graph内，如果是，则创建 Node
                         else if (state === 'end') {
                             handleDrop(e);
                         }
@@ -242,7 +256,7 @@
         // 初始化树组件
         function initTreeView() {
             // 重载树组件上的文本显示
-            treeView.getLabel = function (data) {
+            compTreeView.getLabel = function (data) {
                 if (data instanceof ht.Text) {
                     return data.s('text');
                 }
@@ -256,8 +270,8 @@
             };
 
             // 重载树组件上的图标显示
-            var oldGetIconFunc = treeView.getIcon;
-            treeView.getIcon = function (data) {
+            var oldGetIconFunc = compTreeView.getIcon;
+            compTreeView.getIcon = function (data) {
                 if (data instanceof ht.Text) {
                     return 'symbols/text.json';
                 }
@@ -296,10 +310,39 @@
                 if (data instanceof ht.Edge) {// 连线类型
                     propertyView.addProperties(edge_properties);
                 }
-
             });
         }
 
+        // 初始化历史管理事件（用于撤销和重做）
+        function initHistoryManager () {
+            historyManager = new ht.HistoryManager(indexDataModel);
+            // 绑定触发撤销和重做的按键
+            window.addEventListener('keydown', function(e) {
+                // 判断是否为 Mac
+                let isMac = (navigator.platform === "Mac68K") || (navigator.platform === "MacPPC") || (navigator.platform === "Macintosh") || (navigator.platform === "MacIntel");
+                if (isMac) {
+                    if (e.metaKey) {
+                        if (e.key === 'z' || e.key === 'Z') {//ctrl + z
+                            e.preventDefault();
+                            historyManager.undo();
+                        } else if (e.key === 'y' || e.key === 'Y') {//ctrl + y
+                            e.preventDefault();
+                            historyManager.redo();
+                        }
+                    }
+                } else {
+                    if (e.ctrlKey) {
+                        if (e.key === 'z' || e.key === 'Z') {//ctrl + z
+                            e.preventDefault();
+                            historyManager.undo();
+                        } else if (e.key === 'y' || e.key === 'Y') {//ctrl + y
+                            e.preventDefault();
+                            historyManager.redo();
+                        }
+                    }
+                }
+            })
+        }
 
         // 被拖拽的元素在目标元素上同时鼠标放开触发的事件
         function handleDrop(e) {
@@ -353,9 +396,9 @@
                     g2d.redraw ();
                     g2d.fitContent (true);
                 }
-                if(treeView) {
-                    treeView.setDataModel (indexDataModel);
-                    treeView.redraw ();
+                if(compTreeView) {
+                    compTreeView.setDataModel (indexDataModel);
+                    compTreeView.redraw ();
                 }
                 if (propertyPane) {
                     propertyPane.getPropertyView ().setDataModel (indexDataModel);
@@ -399,13 +442,14 @@
             initGraphView();
             initTreeView();
             initPropertyView();
+            initHistoryManager();
             resetDefault();
             indexDataModel.mm(function (e){
                 localDataModelStorage (indexDataModel);
             });
             indexDataModel.md(function (e){
                 localDataModelStorage (indexDataModel);
-            })
+            });
 
             mainSplit.addToDOM();
 

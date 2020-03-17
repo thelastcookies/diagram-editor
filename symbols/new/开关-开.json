@@ -1,0 +1,46 @@
+{
+  "modified": "Sun Mar 01 2020 17:59:38 GMT+0800 (CST)",
+  "width": 35,
+  "height": 46.5,
+  "comps": [
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "points": [
+        8.02045,
+        1,
+        28.02045,
+        1,
+        28.02045,
+        1,
+        28.02045,
+        1
+      ],
+      "segments": [
+        1,
+        4
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "rotation": 0.31428,
+      "points": [
+        25.75644,
+        5.19113,
+        24.75644,
+        48.92954,
+        24.75644,
+        48.92954,
+        24.75644,
+        48.92954
+      ],
+      "segments": [
+        1,
+        4
+      ]
+    }
+  ]
+}

@@ -1,0 +1,127 @@
+{
+  "modified": "Sun Mar 01 2020 16:43:44 GMT+0800 (CST)",
+  "width": 36.5,
+  "height": 36.5,
+  "comps": [
+    {
+      "type": "oval",
+      "background": "rgba(217,217,217,0)",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "rect": [
+        1,
+        1,
+        35,
+        35
+      ]
+    },
+    {
+      "type": "shape",
+      "background": {
+        "func": "attr@arrow.color",
+        "value": "rgb(255,0,0)"
+      },
+      "borderColor": "#40ACFF",
+      "rotation": 3.73999,
+      "points": [
+        -7.75,
+        0.25,
+        -7.75,
+        5.75,
+        -0.25,
+        3,
+        -7.75,
+        0.25
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "anchorY": 1,
+      "points": [
+        18.49998,
+        18.09538,
+        18.49998,
+        3.09538,
+        18.49998,
+        3.09538,
+        18.49998,
+        3.09538
+      ],
+      "segments": [
+        1,
+        4
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "anchorY": 1,
+      "rotation": 3.83972,
+      "points": [
+        17.73393,
+        18.73817,
+        17.73393,
+        6.73817,
+        17.73393,
+        6.73817,
+        17.73393,
+        6.73817
+      ],
+      "segments": [
+        1,
+        4
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "anchorY": 1,
+      "rotation": 2.44346,
+      "points": [
+        19.26602,
+        18.73817,
+        19.26602,
+        6.73817,
+        19.26602,
+        6.73817,
+        19.26602,
+        6.73817
+      ],
+      "segments": [
+        1,
+        4
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "rotation": 0.59509,
+      "points": [
+        -6.117,
+        18.51497,
+        4.71826,
+        18.51497,
+        13.20546,
+        18.51497,
+        19.85344,
+        18.51497,
+        43.883,
+        18.51497,
+        43.883,
+        18.51497,
+        43.883,
+        18.51497
+      ],
+      "segments": [
+        1,
+        4,
+        4
+      ]
+    }
+  ]
+}

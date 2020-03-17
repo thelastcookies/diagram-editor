@@ -1,0 +1,84 @@
+{
+  "modified": "Sun Mar 01 2020 15:59:13 GMT+0800 (CST)",
+  "width": 30,
+  "height": 32,
+  "comps": [
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(173,173,173)",
+      "gradientColor": "rgb(255,255,255)",
+      "points": [
+        1,
+        9.8815,
+        1,
+        21.8815,
+        1,
+        21.8815,
+        1,
+        21.8815
+      ],
+      "segments": [
+        1,
+        4
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(176,176,176)",
+      "points": [
+        8,
+        4.3815,
+        8,
+        27.3815,
+        8,
+        27.3815,
+        8,
+        27.3815
+      ],
+      "segments": [
+        1,
+        4
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(176,176,176)",
+      "points": [
+        15.66763,
+        0,
+        15.66763,
+        32,
+        15.66763,
+        32,
+        15.66763,
+        32
+      ],
+      "segments": [
+        1,
+        4
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(176,176,176)",
+      "points": [
+        16.16763,
+        15.59538,
+        30,
+        15.59538,
+        30,
+        15.59538,
+        30,
+        15.59538
+      ],
+      "segments": [
+        1,
+        4
+      ]
+    }
+  ]
+}

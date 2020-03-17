@@ -122,5 +122,8 @@ var index_contextmenu_config = [
                 indexDataModel.add(node);
             });
         }
+    },
+    {
+
     }
 ];

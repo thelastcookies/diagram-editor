@@ -108,8 +108,8 @@ data_properties = [// 所有的节点都有的属性
         editable: true// 设置该属性是否可编辑
     },
     {
-        name: 'label',// 设置了 name 属性，如果没有设置 accessType 则默认通过 get/setTag 来获取和设置 tag 值
-        displayName: '属性1',// 用于存取属性名的显示文本值，若为空则显示name属性值
+        name: 'label',
+        displayName: '属性1',
         accessType: 'style',
         valueType: 'text',
         editable: true// 设置该属性是否可编辑
@@ -377,13 +377,13 @@ node_properties = [// node 节点的属性
         name: 'rotation',
         valueType: 'number',
         editable: true,
-        slider: {
-            min: 0,
-            max: Math.PI*2,
-            getToolTip: function(){
-                return Math.round(this.getValue() / Math.PI * 180) + '°';
-            }
-        }
+        // slider: {
+        //     min: 0,
+        //     max: Math.PI*2,
+        //     getToolTip: function(){
+        //         return Math.round(this.getValue() / Math.PI * 180) + '°';
+        //     }
+        // }
     }
 ];
 

@@ -43,6 +43,27 @@ toolbar_config_left = [
         }
     },
     {
+        id: 'edge',
+        unfocusable: true,
+        toolTip: '连线(到边缘)',
+        groupId: 'bar',
+        icon: {
+            width: 16,
+            height: 16,
+            comps: [
+                {
+                    type: 'image',
+                    name: 'symbols/toolbarIcon/edge.json',
+                    color: colorObject
+                }
+            ]
+        },
+        action: function() {
+            g2d.setInteractors([edgeBdyInteractor]);
+            g2d.sm().cs();
+        }
+    },
+    {
         id: 'rightAngle',
         unfocusable: true,
         toolTip: '直角连线',
@@ -64,7 +85,8 @@ toolbar_config_left = [
                 new ht.graph.TouchInteractor(g2d, {
                     selectable: false
                 }),
-                new CreateAttachInteractor(g2d, 'h.v')
+                // new CreateAttachInteractor(g2d, 'h.v')
+                rightAngleInteractor
             ]);
             g2d.sm().cs();
         }

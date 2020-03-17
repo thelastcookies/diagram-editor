@@ -1,0 +1,45 @@
+{
+  "modified": "Sun Mar 01 2020 16:49:23 GMT+0800 (CST)",
+  "width": 11,
+  "height": 64,
+  "comps": [
+    {
+      "type": "shape",
+      "background": {
+        "func": "attr@arrow.color",
+        "value": "rgb(255,0,0)"
+      },
+      "borderColor": "#40ACFF",
+      "rotation": 4.71239,
+      "points": [
+        -2,
+        2,
+        -2,
+        13,
+        13,
+        7.5,
+        -2,
+        2
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "points": [
+        5.5,
+        15,
+        5.5,
+        64,
+        5.5,
+        64,
+        5.5,
+        64
+      ],
+      "segments": [
+        1,
+        4
+      ]
+    }
+  ]
+}
