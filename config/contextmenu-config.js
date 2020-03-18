@@ -81,33 +81,40 @@ var index_contextmenu_config = [
         label: "复制",
         fordata: 1,
         disabled: function () {
-            slModel = g2d.sm().getSelection()._as;
-            return slModel.length ? false : true;
+            slCount = g2d.sm().getSelection();
+            return !slCount.length;
         },
         action: function () {
             copyNodeArr = [];
-            slModel.forEach(function (item, index) {
+            let newCopy = g2d.sm().getDataModel();
+            let copyDataModel = new ht.DataModel();
+            let slModelList = copyDataModel.deserialize(newCopy.serialize());
+            slModelList.each(function (item, index) {
                 let node = null;
                 if (item instanceof ht.Text)
                     node = new ht.Text();
                 else
                     node = new ht.Node();
 
-
-                let tempStyle = item.getStyleMap();
-                for (let item in tempStyle) {
-                    node.setStyle(item, tempStyle[item]);
-                }
+                // let tempStyle = item.getStyleMap();
+                // for (let item in tempStyle) {
+                //     node.setStyle(item, tempStyle[item]);
+                // }
                 let tempPosition = item.getPosition();
-                node.setHeight(item.getHeight());
-                node.setWidth(item.getWidth());
-                node.setPosition(parseInt(tempPosition.x + 30), parseInt(tempPosition.y + 30));
-                node.setHost(item.getHost());
-                node.setName(item.getName());
-                node.setLayer(item.getLayer());
+                // node.setHeight(item.getHeight());
+                // node.setWidth(item.getWidth());
+                item.setPosition(parseInt(tempPosition.x + 30), parseInt(tempPosition.y + 30));
+                // node.setHost(item.getHost());
+                // node.setName(item.getName());
+                // node.setLayer(item.getLayer());
+                // let itemId = item.getId();
+                // while(indexDataModel.getDataById(itemId))
+                //     itemId++;
+                //     item.setId(itemId);
+                copyNodeArr.push(item);
                 copyNodeArr.push(node);
-                console.log("item", item);
-                console.log("node", node);
+                // console.log("item", item);
+                // console.log("node", node);
             });
         }
     },

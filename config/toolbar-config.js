@@ -12,13 +12,14 @@ toolbar_config_left = [
             comps: [
                 {
                     type: 'image',
-                    name: 'symbols/toolbarIcon/select.json',
+                    name: 'symbols/toolbar-icon/select.json',
                     color: colorObject
                 }
             ]
         },
         action: function() {
-            g2d.setEditable(true);
+            g2d.setInteractors(overviewInteractor);
+            g2d.sm().cs();
         }
     },
     {
@@ -32,7 +33,7 @@ toolbar_config_left = [
             comps: [
                 {
                     type: 'image',
-                    name: 'symbols/toolbarIcon/edge.json',
+                    name: 'symbols/toolbar-icon/edge.json',
                     color: colorObject
                 }
             ]
@@ -53,7 +54,7 @@ toolbar_config_left = [
             comps: [
                 {
                     type: 'image',
-                    name: 'symbols/toolbarIcon/edge.json',
+                    name: 'symbols/toolbar-icon/edge.json',
                     color: colorObject
                 }
             ]
@@ -74,7 +75,7 @@ toolbar_config_left = [
             comps: [
                 {
                     type: 'image',
-                    name: 'symbols/toolbarIcon/right-angle.json',
+                    name: 'symbols/toolbar-icon/right-angle.json',
                     color: colorObject
                 }
             ]
@@ -102,7 +103,7 @@ toolbar_config_left = [
             comps: [
                 {
                     type: 'image',
-                    name: 'symbols/toolbarIcon/polygon.json',
+                    name: 'symbols/toolbar-icon/polygon.json',
                     color: colorObject
                 }
             ]
@@ -112,48 +113,48 @@ toolbar_config_left = [
             g2d.sm().cs();
         }
     },
-    {
-        id: 'attachment',
-        unfocusable: true,
-        toolTip: '关联',
-        groupId: 'bar',
-        icon: {
-            width: 16,
-            height: 16,
-            comps: [
-                {
-                    type: 'image',
-                    name: 'symbols/toolbarIcon/attach.svg',
-                    color: colorObject
-                }
-            ]
-        },
-        action: function() {
-            g2d.setInteractors([attachInteractor]);
-            g2d.sm().cs();
-        }
-    },
-    {
-        id: 'attachCancel',
-        unfocusable: true,
-        toolTip: '取消关联',
-        groupId: 'bar',
-        icon: {
-            width: 16,
-            height: 16,
-            comps: [
-                {
-                    type: 'image',
-                    name: 'symbols/toolbarIcon/attach-cancel.svg',
-                    color: colorObject
-                }
-            ]
-        },
-        action: function() {
-            g2d.setInteractors([attachInteractor]);
-            g2d.sm().cs();
-        }
-    }
+    // {
+    //     id: 'attachment',
+    //     unfocusable: true,
+    //     toolTip: '关联',
+    //     groupId: 'bar',
+    //     icon: {
+    //         width: 16,
+    //         height: 16,
+    //         comps: [
+    //             {
+    //                 type: 'image',
+    //                 name: 'symbols/toolbar-icon/attach.svg',
+    //                 color: colorObject
+    //             }
+    //         ]
+    //     },
+    //     action: function() {
+    //         g2d.setInteractors([attachInteractor]);
+    //         g2d.sm().cs();
+    //     }
+    // },
+    // {
+    //     id: 'attachCancel',
+    //     unfocusable: true,
+    //     toolTip: '取消关联',
+    //     groupId: 'bar',
+    //     icon: {
+    //         width: 16,
+    //         height: 16,
+    //         comps: [
+    //             {
+    //                 type: 'image',
+    //                 name: 'symbols/toolbar-icon/attach-cancel.svg',
+    //                 color: colorObject
+    //             }
+    //         ]
+    //     },
+    //     action: function() {
+    //         g2d.setInteractors([attachInteractor]);
+    //         g2d.sm().cs();
+    //     }
+    // }
 ];
 
 toolbar_config_right = [
@@ -163,7 +164,7 @@ toolbar_config_right = [
             height: 16,
             comps: [{
                 type: 'image',
-                name: 'symbols/toolbarIcon/new.svg'
+                name: 'symbols/toolbar-icon/new.svg'
             }]
         },
         toolTip: '新建',
@@ -178,7 +179,7 @@ toolbar_config_right = [
             height: 16,
             comps: [{
                 type: 'image',
-                name: 'symbols/toolbarIcon/open.svg'
+                name: 'symbols/toolbar-icon/open.svg'
             }]
         },
         toolTip: '打开',
@@ -192,7 +193,7 @@ toolbar_config_right = [
             height: 16,
             comps: [{
                     type: 'image',
-                    name: 'symbols/toolbarIcon/save.svg'
+                    name: 'symbols/toolbar-icon/save.svg'
                 }]
         },
         toolTip: '保存',
@@ -208,7 +209,7 @@ toolbar_config_right = [
             comps: [
                 {
                     type: 'image',
-                    name: 'symbols/toolbarIcon/rulerframe.json',
+                    name: 'symbols/toolbar-icon/rulerframe.json',
                     color: colorObject
                 }
             ]
@@ -228,7 +229,7 @@ toolbar_config_right = [
             height: 16,
             comps: [{
                 type: 'image',
-                name: 'symbols/toolbarIcon/zoom.svg'
+                name: 'symbols/toolbar-icon/zoom.svg'
             }]
         },
         toolTip: '放大',
@@ -242,7 +243,7 @@ toolbar_config_right = [
             height: 16,
             comps: [{
                 type: 'image',
-                name: 'symbols/toolbarIcon/zip.svg'
+                name: 'symbols/toolbar-icon/zip.svg'
             }]
         },
         toolTip: '缩小',
@@ -259,7 +260,7 @@ load_toolbar_config = [
             height: 16,
             comps: [{
                 type: 'image',
-                name: 'symbols/toolbarIcon/refresh.svg'
+                name: 'symbols/toolbar-icon/refresh.svg'
             }]
         },
         toolTip: '刷新',
@@ -273,7 +274,7 @@ load_toolbar_config = [
             height: 16,
             comps: [{
                 type: 'image',
-                name: 'symbols/toolbarIcon/realtime.svg'
+                name: 'symbols/toolbar-icon/realtime.svg'
             }]
         },
         toolTip: '实时数据',
@@ -287,7 +288,7 @@ load_toolbar_config = [
             height: 16,
             comps: [{
                 type: 'image',
-                name: 'symbols/toolbarIcon/history.svg'
+                name: 'symbols/toolbar-icon/history.svg'
             }]
         },
         toolTip: '历史数据',
@@ -301,7 +302,7 @@ load_toolbar_config = [
             height: 16,
             comps: [{
                 type: 'image',
-                name: 'symbols/toolbarIcon/trend.svg'
+                name: 'symbols/toolbar-icon/trend.svg'
             }]
         },
         toolTip: '历史趋势',
@@ -334,7 +335,7 @@ load_toolbar_config = [
         }
     },
     {
-        icon: 'symbols/toolbarIcon/export.json',
+        icon: 'symbols/toolbar-icon/export.json',
         toolTip: '打印',
         action: function() {
             var image = new Image();
@@ -350,7 +351,7 @@ load_toolbar_config = [
             height: 16,
             comps: [{
                 type: 'image',
-                name: 'symbols/toolbarIcon/screenshot.svg'
+                name: 'symbols/toolbar-icon/screenshot.svg'
             }]
         },
         toolTip: '截图',
@@ -370,7 +371,7 @@ load_toolbar_config = [
             height: 16,
             comps: [{
                 type: 'image',
-                name: 'symbols/toolbarIcon/zoom.svg'
+                name: 'symbols/toolbar-icon/zoom.svg'
             }]
         },
         toolTip: '放大',
@@ -384,7 +385,7 @@ load_toolbar_config = [
             height: 16,
             comps: [{
                 type: 'image',
-                name: 'symbols/toolbarIcon/zip.svg'
+                name: 'symbols/toolbar-icon/zip.svg'
             }]
         },
         toolTip: '缩小',
@@ -398,7 +399,7 @@ load_toolbar_config = [
             height: 16,
             comps: [{
                 type: 'image',
-                name: 'symbols/toolbarIcon/fit.svg'
+                name: 'symbols/toolbar-icon/fit.svg'
             }]
         },
         toolTip: '恢复原始大小',
