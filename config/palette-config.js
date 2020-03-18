@@ -14,6 +14,7 @@ palette_config = {
             { name: '红块', image: 'symbols/new/红块.json', type: ht.Node},
             { name: '接地', image: 'symbols/new/接地.json', type: ht.Node},
             { name: '三角', image: 'symbols/new/三角.json', type: ht.Node},
+            { name: '箭头方块', image: 'symbols/new/箭头方块.json', type: ht.Node},
             { name: '侧长方形图标', image: 'symbols/new/侧长方形图标.json', type: ht.Node},
             { name: '柱状体图标', image: 'symbols/new/柱状体图标.json', type: ht.Node},
             { name: '附件01', image: 'symbols/new/附件01.json', type: ht.Node},
