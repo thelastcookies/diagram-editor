@@ -1,0 +1,141 @@
+{
+  "modified": "Tue Mar 17 2020 17:08:47 GMT+0800 (中国标准时间)",
+  "xAlignmentGuides": [
+    -12.5
+  ],
+  "width": 17,
+  "height": 55,
+  "comps": [
+    {
+      "type": "oval",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "rect": [
+        2.78421,
+        4.41436,
+        8.19349,
+        8.19349
+      ]
+    },
+    {
+      "type": "oval",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "rect": [
+        2.78421,
+        35.26029,
+        8.19349,
+        8.19349
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "points": [
+        16,
+        10.94285,
+        6.88096,
+        35.26029
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "points": [
+        6.88096,
+        0,
+        6.88096,
+        0.60794,
+        6.88096,
+        4.25555,
+        6.88096,
+        4.25555
+      ],
+      "segments": [
+        1,
+        4
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "points": [
+        6.88096,
+        43.46743,
+        6.88096,
+        44.07536,
+        6.88096,
+        47.72298,
+        6.88096,
+        47.72298
+      ],
+      "segments": [
+        1,
+        4
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "rotation": 1.5708,
+      "points": [
+        6.88096,
+        41.29561,
+        6.88096,
+        43.26227,
+        6.88096,
+        55.06225,
+        6.88096,
+        55.06225
+      ],
+      "segments": [
+        1,
+        4
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "rotation": 1.5708,
+      "points": [
+        6.88096,
+        45.13694,
+        6.88096,
+        46.83727,
+        6.88096,
+        57.03926,
+        6.88096,
+        57.03926
+      ],
+      "segments": [
+        1,
+        4
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "rotation": 1.5708,
+      "points": [
+        6.62723,
+        49.21405,
+        6.62723,
+        50.58146,
+        6.62723,
+        58.78595,
+        6.62723,
+        58.78595
+      ],
+      "segments": [
+        1,
+        4
+      ]
+    }
+  ]
+}

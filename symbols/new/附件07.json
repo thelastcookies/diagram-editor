@@ -1,0 +1,117 @@
+{
+  "modified": "Tue Mar 17 2020 16:58:49 GMT+0800 (中国标准时间)",
+  "width": 35,
+  "height": 54,
+  "comps": [
+    {
+      "type": "oval",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "rect": [
+        1.12435,
+        8.85054,
+        32.7513,
+        32.7513
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "points": [
+        1.12435,
+        0.99023,
+        33.87565,
+        0.99023
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "points": [
+        1.12435,
+        4.92038,
+        33.87565,
+        4.92038
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "points": [
+        1.12435,
+        46.51454,
+        33.87565,
+        46.51454
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "points": [
+        4.93566,
+        49.76301,
+        30.06434,
+        49.76301
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "points": [
+        8.49709,
+        53,
+        26.50291,
+        53
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "points": [
+        5.98998,
+        13.71617,
+        29.01002,
+        36.73621
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "points": [
+        29.01002,
+        13.71617,
+        5.98998,
+        36.73621
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "points": [
+        17.5,
+        4.8399,
+        17.5,
+        8.70228
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "points": [
+        17.5,
+        41.66961,
+        17.5,
+        46.30857
+      ]
+    }
+  ]
+}

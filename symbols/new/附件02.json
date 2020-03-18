@@ -1,0 +1,56 @@
+{
+  "modified": "Tue Mar 17 2020 17:15:14 GMT+0800 (中国标准时间)",
+  "width": 40,
+  "height": 100,
+  "comps": [
+    {
+      "type": "rect",
+      "background": "rgb(255,0,0)",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "rect": [
+        10.38777,
+        31,
+        19.27119,
+        40
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "points": [
+        20.02336,
+        0.01439,
+        20.02336,
+        100.23388
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "points": [
+        39.54672,
+        20.02297,
+        20.02336,
+        9,
+        0.5,
+        20.02297
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "points": [
+        39.54672,
+        81,
+        19.99332,
+        92.02297,
+        0.5,
+        81
+      ]
+    }
+  ]
+}

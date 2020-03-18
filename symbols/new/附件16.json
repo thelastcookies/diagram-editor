@@ -1,0 +1,35 @@
+{
+  "modified": "Tue Mar 17 2020 14:43:09 GMT+0800 (中国标准时间)",
+  "width": 35,
+  "height": 35,
+  "comps": [
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "rotation": 1.5708,
+      "points": [
+        16.62723,
+        10.03611,
+        10.6495,
+        25.03432,
+        26.63594,
+        25.03432,
+        20.65821,
+        11.45758
+      ]
+    },
+    {
+      "type": "oval",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "rotation": 4.71239,
+      "rect": [
+        1.00002,
+        1.00002,
+        32.92601,
+        32.92601
+      ]
+    }
+  ]
+}

@@ -1,0 +1,219 @@
+{
+  "modified": "Tue Mar 17 2020 14:42:04 GMT+0800 (中国标准时间)",
+  "width": 65,
+  "height": 87,
+  "comps": [
+    {
+      "type": "oval",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "rotation": 4.71239,
+      "rect": [
+        15.06055,
+        1.00002,
+        33.20634,
+        33.20634
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "rotation": -1.10969,
+      "points": [
+        31.54457,
+        24.12692,
+        20.14043,
+        16.53586
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "rotation": -1.10969,
+      "points": [
+        35.76105,
+        27.50712,
+        38.37396,
+        14.11733
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "points": [
+        31.75149,
+        17.69097,
+        31.75149,
+        3.47613
+      ]
+    },
+    {
+      "type": "oval",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "rotation": 4.71239,
+      "rect": [
+        15.06055,
+        52.79364,
+        33.20634,
+        33.20634
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "rotation": -1.10969,
+      "points": [
+        31.54457,
+        76.5162,
+        20.14043,
+        68.92513
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "rotation": -1.10969,
+      "points": [
+        36.11657,
+        80.024,
+        38.72948,
+        66.63422
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "points": [
+        31.75149,
+        69.867,
+        31.75149,
+        55.65217
+      ]
+    },
+    {
+      "type": "oval",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "rotation": 4.71239,
+      "rect": [
+        1.00002,
+        26.79221,
+        33.20634,
+        33.20634
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "rotation": -1.10969,
+      "points": [
+        17.48404,
+        50.82445,
+        6.0799,
+        43.23339
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "rotation": -1.10969,
+      "points": [
+        21.81144,
+        54.23636,
+        24.42435,
+        40.84657
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "points": [
+        17.69096,
+        43.48315,
+        17.69096,
+        29.26832
+      ]
+    },
+    {
+      "type": "oval",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "rect": [
+        30.15009,
+        26.5582,
+        33.84991,
+        33.84991
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "rotation": 1.5708,
+      "points": [
+        47.18739,
+        34.77508,
+        40.30754,
+        52.03673,
+        58.70654,
+        52.03673,
+        51.8267,
+        36.41107
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "points": [
+        31.77871,
+        16.66339,
+        51.83372,
+        16.66339
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "points": [
+        52.07172,
+        10.88803,
+        52.07172,
+        22.43876
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "points": [
+        54.68464,
+        13.5677,
+        54.68464,
+        19.75909
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "points": [
+        57.30646,
+        14.51399,
+        57.30646,
+        18.74952
+      ]
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "modified": "Tue Mar 17 2020 17:03:49 GMT+0800 (中国标准时间)",
+  "width": 40,
+  "height": 63,
+  "comps": [
+    {
+      "type": "arc",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "arcFrom": 0,
+      "arcTo": 4.1888,
+      "arcClose": false,
+      "rotation": 4.71239,
+      "rect": [
+        0.75908,
+        16.10597,
+        38.48185,
+        32.85355
+      ]
+    },
+    {
+      "type": "arc",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "arcFrom": 0,
+      "arcTo": 4.1888,
+      "arcClose": false,
+      "rotation": 5.23599,
+      "rect": [
+        0.75908,
+        16.10597,
+        38.48185,
+        32.85355
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "points": [
+        2.96864,
+        33.52131,
+        19.69755,
+        33.52131
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "points": [
+        19.99875,
+        32.53275,
+        19.99875,
+        62.61467
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "points": [
+        20.04036,
+        0,
+        20.04036,
+        17.12131
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "points": [
+        1,
+        53.93444,
+        1,
+        63
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "points": [
+        38.91244,
+        62.01363,
+        1.08505,
+        62.01363
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "points": [
+        39,
+        53.93444,
+        39,
+        63
+      ]
+    }
+  ]
+}
