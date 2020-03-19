@@ -1,6 +1,6 @@
 // let progressSplit = null;
 let mainView = null;
-let slModel = null;
+let slModelList = new ht.List();
 var load_contextmenu_config = [
     {
         label: "查看测点信息",
@@ -81,12 +81,20 @@ var index_contextmenu_config = [
         label: "复制",
         fordata: 1,
         disabled: function () {
-            slCount = g2d.sm().getSelection();
+            let slCount = g2d.sm().getSelection();
             return !slCount.length;
         },
         action: function () {
-            copyNodeArr = [];
-            let slModelList = g2d.sm().toSelection();
+            slModelList = g2d.sm().toSelection();
+        }
+    },
+    {
+        label: "粘贴",
+        fordata: 1,
+        disabled: function () {
+            return !slModelList.length;
+        },
+        action: function(item, event) {
             slModelList.each(function (item, index) {
                 let node = null;
                 if (item instanceof ht.Text)
@@ -103,30 +111,33 @@ var index_contextmenu_config = [
                 // 复制 Attr
                 node.setAttrObject(item.getAttrObject());
                 // 复制其他属性
-
+                // 名称
                 node.setName(item.getName());
+                // Tag
                 node.setTag(item.getTag());
+                // 宿主
                 node.setHost(item.getHost());
+                // 父元素
                 node.setParent(item.getParent());
-                node.setHost(item.getHost());
+                // 图片
                 node.setImage(item.getImage());
+                // 图层
                 node.setLayer(item.getLayer());
+                // 旋转角度
+                node.setRotation(item.getRotation());
+                // 位置与大小
+                node.setRect(item.getRect());
+                // 修改位置
+                // node.setPosition(event.clientX + 30 - 260, event.clientY + 30 - 25);
                 let tempPosition = item.getPosition();
                 node.setPosition(parseInt(tempPosition.x + 30), parseInt(tempPosition.y + 30));
-                copyNodeArr.push(node);
-            });
-        }
-    },
-    {
-        label: "粘贴",
-        fordata: 1,
-        disabled: function () {
-            return !copyNodeArr.length;
-        },
-        action: function(item, event) {
-            copyNodeArr.forEach(function (node, index) {
+
                 indexDataModel.add(node);
             });
+
+            // copyNodeArr.forEach(function (node, index) {
+                // node.setPosition(event.screenX + 30, event.screenY + 30);
+            // });
         }
     },
     {

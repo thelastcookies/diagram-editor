@@ -287,6 +287,9 @@
 
         // 初始化树组件
         function initTreeView() {
+            // compTreeView.addTopPainter(true);
+            compTreeView.setRowLineVisible(true);
+            compTreeView.setRowLineColor('white');
             // 重载树组件上的文本显示
             compTreeView.getLabel = function (data) {
                 if (data instanceof ht.Text) {
@@ -348,6 +351,8 @@
         // 初始化历史管理事件（用于撤销和重做）
         function initHistoryManager () {
             historyManager = new ht.HistoryManager(indexDataModel);
+            historyManager.setMaxHistoryCount(200);
+            // historyManager.isPropertyUndoable('rect');
             // 绑定触发撤销和重做的按键
             window.addEventListener('keydown', function(e) {
                 // 判断是否为 Mac
