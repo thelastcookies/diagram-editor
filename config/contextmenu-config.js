@@ -103,14 +103,16 @@ var index_contextmenu_config = [
                 // 复制 Attr
                 node.setAttrObject(item.getAttrObject());
                 // 复制其他属性
-                let tempPosition = item.getPosition();
-                node.setPosition(parseInt(tempPosition.x + 30), parseInt(tempPosition.y + 30));
-                node.setHost(item.getHost());
+
                 node.setName(item.getName());
-                node.setImage(item.getImage());
-                node.setLayer(item.getLayer());
+                node.setTag(item.getTag());
+                node.setHost(item.getHost());
                 node.setParent(item.getParent());
                 node.setHost(item.getHost());
+                node.setImage(item.getImage());
+                node.setLayer(item.getLayer());
+                let tempPosition = item.getPosition();
+                node.setPosition(parseInt(tempPosition.x + 30), parseInt(tempPosition.y + 30));
                 copyNodeArr.push(node);
             });
         }
