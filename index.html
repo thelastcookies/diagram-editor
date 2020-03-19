@@ -34,29 +34,29 @@
     <script src="js/CreateShapeInteractor.js"></script>
     <!--"吸附"交互器-->
     <script src="js/CreateAttachInteractor.js"></script>
-
+    <!--移动吸附-->
     <script src="js/SnapMoveInteractor.js"></script>
     <script src="js/SnapTouchInteractor.js"></script>
+    <!--编辑区网格-->
     <script src="js/GridPainter.js"></script>
-
-
-    <!--json图片-->
-<!--    <script src="js/predefine.js"></script>-->
+    <!--对话框内容-->
     <script src="config/dialog-config.js"></script>
     <!--面板的内容-->
     <script src="config/palette-config.js"></script>
     <!--导航栏的内容-->
     <script src="config/toolbar-config.js"></script>
-
     <!--属性栏的内容-->
     <script src="config/properties-config.js"></script>
     <script src="file-handle/fileHandle.js"></script>
     <!--右键菜单栏的内容-->
     <script src="config/contextmenu-config.js"></script>
-
     <!--初始化场景的内容-->
     <script src="config/datamodel-config.js"></script>
+    <!--数字计算-->
+    <script src="js/calculate.js"></script>
 
+    <!--json图片-->
+    <!--    <script src="js/predefine.js"></script>-->
 
     <script type="text/javascript">
         // 用于界面渲染的 dataModel
@@ -327,21 +327,22 @@
                 var data = indexDataModel.sm().ld();
 
                 // 针对不同类型的节点设置不同的属性内容
+                if (data instanceof ht.Text) {// 文本类型
+                    propertyView.addProperties(text_properties);
+                    propertyView.addProperties(data_properties);
+                    propertyView.addProperties(threshold_properties);
+                    return;// 设置文本类型不显示其他数据
+                }
                 if (data instanceof ht.Data) {// data 类型，所有的节点都基于这个类型
                     propertyView.addProperties(threshold_properties);
                     propertyView.addProperties(data_properties);
                 }
-                if (data instanceof ht.Text) {// 文本类型
-                    propertyView.addProperties(text_properties);
-                    return;// 设置文本类型不显示其他数据
-                }
                 if (data instanceof ht.Node) {// node 类型
                     propertyView.addProperties(node_properties);
-                    propertyView.addProperties(shape_properties);
                 }
-                if (data instanceof ht.Group) {// 组类型
-                    propertyView.addProperties(group_properties);
-                }
+                // if (data instanceof ht.Group) {// 组类型
+                //     propertyView.addProperties(group_properties);
+                // }
                 if (data instanceof ht.Edge) {// 连线类型
                     propertyView.addProperties(edge_properties);
                 }

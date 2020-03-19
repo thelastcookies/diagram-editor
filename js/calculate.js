@@ -8,11 +8,15 @@
 const cal = function (numA, numB, symbol, decimal, roundFlag) {
     decimal = decimal === undefined ? 2 : decimal;
     roundFlag = roundFlag === undefined ? true : roundFlag;
-    let result = null;
-    let tempResult = eval(numA + symbol + numB);
-    if (roundFlag)
-        result = parseFloat(tempResult.toFixed(decimal));
-    // else
-    //     const result = parseFloat(tempResult.)
-    return result;
+    let result = null, tempResult = null;
+    if (numA && !numB)
+        result = numA.toFixed(decimal);
+    else if (numA && numB && symbol) {
+        tempResult = eval(numA + symbol + numB);
+        if (roundFlag)
+            result = tempResult.toFixed(decimal);
+    }
+    else
+        result = 0;
+    return Number(result);
 }
