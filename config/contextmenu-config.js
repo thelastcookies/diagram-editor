@@ -86,35 +86,32 @@ var index_contextmenu_config = [
         },
         action: function () {
             copyNodeArr = [];
-            let newCopy = g2d.sm().getDataModel();
-            let copyDataModel = new ht.DataModel();
-            let slModelList = copyDataModel.deserialize(newCopy.serialize());
+            let slModelList = g2d.sm().toSelection();
             slModelList.each(function (item, index) {
                 let node = null;
                 if (item instanceof ht.Text)
                     node = new ht.Text();
-                else
+                else if (item instanceof ht.Node)
                     node = new ht.Node();
-
-                // let tempStyle = item.getStyleMap();
-                // for (let item in tempStyle) {
-                //     node.setStyle(item, tempStyle[item]);
-                // }
+                else
+                    return;
+                // 复制 Style
+                let tempStyle = item.getStyleMap();
+                for (let item in tempStyle) {
+                    node.setStyle(item, tempStyle[item]);
+                }
+                // 复制 Attr
+                node.setAttrObject(item.getAttrObject());
+                // 复制其他属性
                 let tempPosition = item.getPosition();
-                // node.setHeight(item.getHeight());
-                // node.setWidth(item.getWidth());
-                item.setPosition(parseInt(tempPosition.x + 30), parseInt(tempPosition.y + 30));
-                // node.setHost(item.getHost());
-                // node.setName(item.getName());
-                // node.setLayer(item.getLayer());
-                // let itemId = item.getId();
-                // while(indexDataModel.getDataById(itemId))
-                //     itemId++;
-                //     item.setId(itemId);
-                copyNodeArr.push(item);
+                node.setPosition(parseInt(tempPosition.x + 30), parseInt(tempPosition.y + 30));
+                node.setHost(item.getHost());
+                node.setName(item.getName());
+                node.setImage(item.getImage());
+                node.setLayer(item.getLayer());
+                node.setParent(item.getParent());
+                node.setHost(item.getHost());
                 copyNodeArr.push(node);
-                // console.log("item", item);
-                // console.log("node", node);
             });
         }
     },
@@ -122,7 +119,7 @@ var index_contextmenu_config = [
         label: "粘贴",
         fordata: 1,
         disabled: function () {
-            return copyNodeArr.length ? false : true;
+            return !copyNodeArr.length;
         },
         action: function(item, event) {
             copyNodeArr.forEach(function (node, index) {
