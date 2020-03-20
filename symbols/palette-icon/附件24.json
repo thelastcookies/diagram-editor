@@ -1,0 +1,220 @@
+{
+  "modified": "Thu Mar 19 2020 15:25:18 GMT+0800 (中国标准时间)",
+  "width": 87,
+  "height": 66,
+  "comps": [
+    {
+      "type": "oval",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "rect": [
+        14.99962,
+        11.00151,
+        30.72328,
+        30.72328
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "rotation": -2.15689,
+      "points": [
+        20.59131,
+        25.59054,
+        30.51508,
+        20.64536
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "rotation": -2.15689,
+      "points": [
+        34.57869,
+        28.71398,
+        35.71304,
+        17.87706
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "rotation": -2.15689,
+      "points": [
+        34.84636,
+        34.49982,
+        25.6165,
+        28.35606
+      ]
+    },
+    {
+      "type": "oval",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "rect": [
+        41.06786,
+        11.4034,
+        30.72328,
+        30.72328
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "rotation": -2.15689,
+      "points": [
+        46.65954,
+        25.99243,
+        56.58332,
+        21.04726
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "rotation": -2.15689,
+      "points": [
+        60.64692,
+        29.11588,
+        61.78127,
+        18.27895
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "rotation": -2.15689,
+      "points": [
+        60.91459,
+        34.90172,
+        51.68474,
+        28.75795
+      ]
+    },
+    {
+      "type": "oval",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "rect": [
+        28.03374,
+        34.27672,
+        30.72328,
+        30.72328
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "rotation": -2.15689,
+      "points": [
+        33.62542,
+        48.86575,
+        43.5492,
+        43.92057
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "rotation": -2.15689,
+      "points": [
+        47.6128,
+        51.98919,
+        48.74715,
+        41.15227
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "rotation": -2.15689,
+      "points": [
+        47.88047,
+        57.77504,
+        38.65062,
+        51.63127
+      ]
+    },
+    {
+      "type": "oval",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "rect": [
+        1.5,
+        34.27672,
+        30.72328,
+        30.72328
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "points": [
+        15.18373,
+        57.5177,
+        6.74432,
+        45.44882,
+        27.10273,
+        45.44882,
+        18.63938,
+        57.55193
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "points": [
+        44,
+        50,
+        74.76265,
+        50,
+        74.76265,
+        11.4034
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "points": [
+        68.60275,
+        11.4034,
+        80.92256,
+        11.4034
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "points": [
+        70.02975,
+        8.5,
+        79.49556,
+        8.5
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "points": [
+        71.44543,
+        6,
+        78.07987,
+        6
+      ]
+    }
+  ]
+}

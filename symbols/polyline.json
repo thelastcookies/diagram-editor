@@ -1,0 +1,40 @@
+{
+  "modified": "Fri Mar 20 2020 10:35:48 GMT+0800 (CST)",
+  "width": 60,
+  "height": 20,
+  "comps": [
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "points": [
+        0,
+        19,
+        30,
+        19
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "points": [
+        30,
+        20,
+        30,
+        0
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "points": [
+        30,
+        1,
+        60,
+        1
+      ]
+    }
+  ]
+}

@@ -296,7 +296,7 @@
                     return data.s('text');
                 }
                 else if (data instanceof ht.Shape) {
-                    return data.getName() || '不规则图形';
+                    return '折线';
                 }
                 else if (data instanceof ht.Edge) {
                     return '连线';
@@ -309,9 +309,10 @@
             compTreeView.getIcon = function (data) {
                 if (data instanceof ht.Text) {
                     return 'symbols/text.json';
-                }
-                else if (data instanceof ht.Edge) {
+                } else if (data instanceof ht.Edge) {
                     return 'symbols/line.json';
+                } else if (data instanceof ht.Shape) {
+                    return 'symbols/polyline.json';
                 }
                 var img = data.getImage();
                 return img ? img : oldGetIconFunc.apply(this, arguments);
@@ -345,6 +346,9 @@
                 // }
                 if (data instanceof ht.Edge) {// 连线类型
                     propertyView.addProperties(edge_properties);
+                }
+                if (data instanceof ht.Shape) {// 连线类型
+                    propertyView.addProperties(shape_properties);
                 }
             });
         }

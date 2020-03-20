@@ -95,7 +95,7 @@ toolbar_config_left = [
     {
         id: 'polyline',
         unfocusable: true,
-        toolTip: '多边形',
+        toolTip: '多折线',
         groupId: 'bar',
         icon: {
             width: 16,

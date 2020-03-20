@@ -94,25 +94,25 @@ data_properties = [// 所有的节点都有的属性
     },
     {
         name: 'label',
-        displayName: '属性1',
+        displayName: '标签值',
         accessType: 'style',
         valueType: 'text',
         editable: true// 设置该属性是否可编辑
     },
-    {
-        name: 'label2',// 设置了 name 属性，如果没有设置 accessType 则默认通过 get/setTag 来获取和设置 tag 值
-        displayName: '属性2',// 用于存取属性名的显示文本值，若为空则显示name属性值
-        accessType: 'style',
-        valueType: 'text',
-        editable: true// 设置该属性是否可编辑
-    },
+    // {
+    //     name: 'label2',// 设置了 name 属性，如果没有设置 accessType 则默认通过 get/setTag 来获取和设置 tag 值
+    //     displayName: '属性2',// 用于存取属性名的显示文本值，若为空则显示name属性值
+    //     accessType: 'style',
+    //     valueType: 'text',
+    //     editable: true// 设置该属性是否可编辑
+    // },
     {
         name: 'parent',
         displayName: '父亲节点',
     },
     {
-        displayName: '宿主节点',
         name: 'host',
+        displayName: '宿主节点',
     },
     // {
     //     name: '2d.editable',// 结合 accessType，则通过 node.s('2d.editable') 获取和设置该属性
@@ -161,26 +161,42 @@ threshold_properties = [// 节点的阈值属性设置
             labels: ["", "绿色", "蓝色", "红色", "黄色", "黑色"],
             values: ['', 'rgb(0,255,0)', 'rgb(0,0,255)', 'rgb(255,0,0)', 'rgb(255,255,0)', 'rgb(100,100,100)']
         }
-    }
+    },
+    // {
+    //     categoryName: '阈值设置',
+    //     name: 'lessThenThColor',
+    //     displayName: '低于阈值1颜色',
+    //     accessType: 'attr',
+    //     editable: true,
+    //     defaultValue: '',
+    //     enum: {
+    //         labels: ["", "绿色", "蓝色", "红色", "黄色", "黑色"],
+    //         values: ['', 'rgb(0,255,0)', 'rgb(0,0,255)', 'rgb(255,0,0)', 'rgb(255,255,0)', 'rgb(100,100,100)']
+    //     }
+    // }
 ];
 
 node_properties = [// node 节点的属性
     {
-        categoryName: 'Node 节点',
+        categoryName: '节点属性',
         displayName: '宽度',
         name: 'width',
         valueType: 'number',
-        editable: true
+        getValue: function(data){
+            return parseInt(data.getWidth());
+        }
     },
     {
-        categoryName: 'Node 节点',
+        categoryName: '节点属性',
         displayName: '高度',
         name: 'height',
         valueType: 'number',
-        editable: true
+        getValue: function(data){
+            return parseInt(data.getHeight());
+        }
     },
     {
-        categoryName: 'Node 节点',
+        categoryName: '节点属性',
         displayName: '位置坐标X',
         name: 'position',
         getValue: function(data){
@@ -188,7 +204,7 @@ node_properties = [// node 节点的属性
         }
     },
     {
-        categoryName: 'Node 节点',
+        categoryName: '节点属性',
         displayName: '位置坐标Y',
         name: 'position',
         getValue: function(data){
@@ -196,17 +212,12 @@ node_properties = [// node 节点的属性
         }
     },
     {
-        categoryName: 'Node 节点',
+        categoryName: '节点属性',
         displayName: '角度',
         name: 'rotation',
         valueType: 'number',
-        editable: true,
-        slider: {
-            min: 0,
-            max: Math.PI*2,
-            getToolTip: function(){
-                return Math.round(this.getValue() / Math.PI * 180) + '°';
-            }
+        getValue: function(data) {
+            return Math.round(data.getRotation() / Math.PI * 180) + '°';
         }
     }
 ];
@@ -414,6 +425,23 @@ edge_properties = [// 连线的属性
     {
         name: 'edge.width',
         displayName: '连线宽度',
+        accessType: 'style',
+        valueType: 'number',
+        editable: true
+    }
+];
+
+shape_properties = [// 折线的属性
+    {
+        name: 'shape.border.color',
+        displayName: '折线颜色',
+        accessType: 'style',
+        valueType: 'color',
+        editable: true
+    },
+    {
+        name: 'shape.border.width',
+        displayName: '折线宽度',
         accessType: 'style',
         valueType: 'number',
         editable: true

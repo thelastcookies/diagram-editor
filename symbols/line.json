@@ -4,10 +4,10 @@
   "comps": [
     {
       "type": "shape",
-      "borderWidth": 1,
+      "borderWidth": 4,
       "borderColor": "rgb(255,0,0)",
       "points": [
-        5.88905,
+        5,
         5,
         96,
         5

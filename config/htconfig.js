@@ -15,6 +15,14 @@ htconfig = {
         dialogHeaderBackground: 'rgb(240,239,238)',
         dialogButtonBackground: '#ddd',
         dialogButtonSelectBackground: '#313131',
-        dialogButtonLabelColor: '#515151'
+        dialogButtonLabelColor: '#515151',
+
+    },
+    Color: {
+
+    },
+    Style: {
+        'edge.color': 'rgb(255, 0, 0)',
+        'shape.border.color': 'rgb(255, 0, 0)',
     }
 };
