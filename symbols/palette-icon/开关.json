@@ -5,13 +5,13 @@
       "attr": "switch.powerOff",
       "valueType": "Boolean",
       "name": "开关-开",
-      "defaultValue": false
+      "defaultValue": true
     },
     {
       "attr": "switch.powerOn",
       "valueType": "Boolean",
       "name": "开关-闭",
-      "defaultValue": true
+      "defaultValue": false
     }
   ],
   "width": 30,
