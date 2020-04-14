@@ -1,0 +1,56 @@
+{
+  "modified": "Thu Apr 02 2020 11:54:13 GMT+0800 (CST)",
+  "dataBindings": [
+    {
+      "attr": "rotatySwitch.bar",
+      "valueType": "Angle",
+      "defaultValue": 1.57
+    }
+  ],
+  "width": 100,
+  "height": 100,
+  "comps": [
+    {
+      "type": "rect",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 1,
+      "borderColor": "rgb(232,232,232)",
+      "gradientColor": "rgb(255,255,255)",
+      "rect": [
+        0.51473,
+        0.5,
+        99,
+        99
+      ]
+    },
+    {
+      "type": "oval",
+      "background": "rgb(65,135,0)",
+      "borderWidth": 1,
+      "borderColor": "rgb(0,78,0)",
+      "displayName": "椭圆形",
+      "rect": [
+        18.17941,
+        18.57935,
+        63.67065,
+        63.67065
+      ]
+    },
+    {
+      "type": "image",
+      "color": null,
+      "name": "symbols/palette-icon/旋钮开关-旋钮.json",
+      "displayName": "旋钮开关-旋钮",
+      "rotation": {
+        "func": "attr@rotatySwitch.bar",
+        "value": 0
+      },
+      "rect": [
+        39.81473,
+        5.67752,
+        20.4,
+        83.4
+      ]
+    }
+  ]
+}
