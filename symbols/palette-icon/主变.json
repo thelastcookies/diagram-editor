@@ -1,0 +1,384 @@
+{
+  "modified": "Mon Apr 20 2020 11:14:41 GMT+0800 (CST)",
+  "yAlignmentGuides": [
+    -26
+  ],
+  "width": 152,
+  "height": 167,
+  "comps": [
+    {
+      "type": "rect",
+      "background": "rgba(217,217,217,0)",
+      "borderWidth": 2,
+      "borderColor": "rgb(48,242,120)",
+      "rect": [
+        1.00295,
+        1.00288,
+        150,
+        80
+      ]
+    },
+    {
+      "type": "text",
+      "text": "档位",
+      "color": "rgb(240,225,19)",
+      "rect": [
+        26.00295,
+        -8.99712,
+        50,
+        50
+      ]
+    },
+    {
+      "type": "text",
+      "text": "档",
+      "color": "rgb(240,225,19)",
+      "rect": [
+        101.00295,
+        -8.99712,
+        50,
+        50
+      ]
+    },
+    {
+      "type": "text",
+      "text": "10",
+      "align": "center",
+      "color": "rgb(247,247,247)",
+      "font": "20px arial, sans-serif",
+      "rect": [
+        51.00295,
+        -8.99712,
+        50,
+        50
+      ]
+    },
+    {
+      "type": "text",
+      "text": "降",
+      "align": "center",
+      "color": "rgb(240,225,19)",
+      "rect": [
+        93.02951,
+        41.00288,
+        50,
+        50
+      ]
+    },
+    {
+      "type": "text",
+      "text": "停",
+      "align": "center",
+      "color": "rgb(240,225,19)",
+      "rect": [
+        51.00295,
+        41.00288,
+        50,
+        50
+      ]
+    },
+    {
+      "type": "text",
+      "text": "升",
+      "align": "center",
+      "color": "rgb(240,225,19)",
+      "rect": [
+        8.19232,
+        41.00288,
+        50,
+        50
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgba(217,217,217,0)",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "rect": [
+        105.2484,
+        29.80541,
+        25.56223,
+        22.36695
+      ]
+    },
+    {
+      "type": "shape",
+      "background": {
+        "func": "attr@arrow.color",
+        "value": "rgb(255,0,0)"
+      },
+      "borderColor": "#40ACFF",
+      "rotation": 1.5708,
+      "points": [
+        113.02951,
+        33.48888,
+        113.02951,
+        53.48888,
+        123.02951,
+        43.48888,
+        113.02951,
+        33.48888
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 10,
+      "borderColor": "rgb(255,0,0)",
+      "rotation": 3.14159,
+      "points": [
+        118.02951,
+        33.48887,
+        118.02951,
+        38.48887,
+        118.02951,
+        38.48887,
+        118.02951,
+        38.48887
+      ],
+      "segments": [
+        1,
+        4
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgba(217,217,217,0)",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "rect": [
+        20.41121,
+        29.8194,
+        25.56223,
+        22.36695
+      ]
+    },
+    {
+      "type": "shape",
+      "background": {
+        "func": "attr@arrow.color",
+        "value": "rgb(255,0,0)"
+      },
+      "borderColor": "#40ACFF",
+      "rotation": 4.71239,
+      "points": [
+        28.19232,
+        28.50287,
+        28.19232,
+        48.50287,
+        38.19232,
+        38.50287,
+        28.19232,
+        28.50287
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 10,
+      "borderColor": "rgb(255,0,0)",
+      "points": [
+        33.19232,
+        43.50288,
+        33.19232,
+        48.50288,
+        33.19232,
+        48.50288,
+        33.19232,
+        48.50288
+      ],
+      "segments": [
+        1,
+        4
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgba(217,217,217,0)",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "rect": [
+        63.22183,
+        29.8194,
+        25.56223,
+        22.36695
+      ]
+    },
+    {
+      "type": "oval",
+      "background": "rgba(217,217,217,0)",
+      "borderWidth": 0.8,
+      "borderColor": "rgb(255,0,0)",
+      "rect": [
+        65.35434,
+        32.15839,
+        21.29721,
+        17.661
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 5,
+      "borderColor": "rgb(255,0,0)",
+      "points": [
+        67.00295,
+        41.00288,
+        85.00295,
+        41.00288,
+        85.00295,
+        41.00288,
+        85.00295,
+        41.00288
+      ],
+      "segments": [
+        1,
+        4
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgba(217,217,217,0)",
+      "borderWidth": 2,
+      "borderColor": "rgb(48,242,120)",
+      "rect": [
+        1.00295,
+        86.61527,
+        150,
+        80
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(48,242,120)",
+      "rotation": 1.5708,
+      "points": [
+        17.69218,
+        126.61527,
+        97.69218,
+        126.61527,
+        97.3252,
+        126.61527,
+        97.3252,
+        126.61527
+      ],
+      "segments": [
+        1,
+        4
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(48,242,120)",
+      "rotation": 3.14159,
+      "points": [
+        1.00295,
+        114,
+        151.00295,
+        114,
+        150.31486,
+        114,
+        150.31486,
+        114
+      ],
+      "segments": [
+        1,
+        4
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(48,242,120)",
+      "rotation": 3.14159,
+      "points": [
+        1.00295,
+        140.26467,
+        151.00295,
+        140.26467,
+        150.31486,
+        140.26467,
+        150.31486,
+        140.26467
+      ],
+      "segments": [
+        1,
+        4
+      ]
+    },
+    {
+      "type": "text",
+      "text": "油温1",
+      "align": "center",
+      "color": "rgb(240,225,19)",
+      "rect": [
+        5.0983,
+        75.52614,
+        50,
+        50
+      ]
+    },
+    {
+      "type": "text",
+      "text": "油温2",
+      "align": "center",
+      "color": "rgb(240,225,19)",
+      "rect": [
+        5.0983,
+        101.61527,
+        50,
+        50
+      ]
+    },
+    {
+      "type": "text",
+      "text": "绕温",
+      "align": "center",
+      "color": "rgb(240,225,19)",
+      "rect": [
+        5.0983,
+        129.03181,
+        50,
+        50
+      ]
+    },
+    {
+      "type": "text",
+      "text": "20.93",
+      "align": "center",
+      "color": "rgb(247,247,247)",
+      "font": "16px arial, sans-serif",
+      "rect": [
+        80.81062,
+        75.52614,
+        50,
+        50
+      ]
+    },
+    {
+      "type": "text",
+      "text": "20.93",
+      "align": "center",
+      "color": "rgb(247,247,247)",
+      "font": "16px arial, sans-serif",
+      "rect": [
+        80.81062,
+        101.61527,
+        50,
+        50
+      ]
+    },
+    {
+      "type": "text",
+      "text": "20.93",
+      "align": "center",
+      "color": "rgb(247,247,247)",
+      "font": "16px arial, sans-serif",
+      "rect": [
+        80.81062,
+        129.03181,
+        50,
+        50
+      ]
+    }
+  ]
+}
