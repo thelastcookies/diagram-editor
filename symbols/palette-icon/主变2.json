@@ -1,0 +1,266 @@
+{
+  "modified": "Fri Apr 24 2020 16:09:07 GMT+0800 (CST)",
+  "width": 222,
+  "height": 152,
+  "comps": [
+    {
+      "type": "rect",
+      "background": "rgb(19,95,158)",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,255,255)",
+      "rect": [
+        1,
+        0.50465,
+        220,
+        150
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 1.5708,
+      "points": [
+        96,
+        75.50465,
+        246,
+        75.50465,
+        245.31191,
+        75.50465,
+        245.31191,
+        75.50465
+      ],
+      "segments": [
+        1,
+        4
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 3.14159,
+      "points": [
+        1,
+        38.5,
+        221,
+        38.5,
+        219.9908,
+        38.5,
+        219.9908,
+        38.5
+      ],
+      "segments": [
+        1,
+        4
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 3.14159,
+      "points": [
+        1,
+        114.5,
+        221,
+        114.5,
+        219.9908,
+        114.5,
+        219.9908,
+        114.5
+      ],
+      "segments": [
+        1,
+        4
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 3.14159,
+      "points": [
+        1,
+        77,
+        221,
+        77,
+        219.9908,
+        77,
+        219.9908,
+        77
+      ],
+      "segments": [
+        1,
+        4
+      ]
+    },
+    {
+      "type": "text",
+      "text": "档位",
+      "align": "center",
+      "color": "rgb(255,255,255)",
+      "font": "18px arial, sans-serif",
+      "rect": [
+        171,
+        -4.30991,
+        50,
+        50
+      ]
+    },
+    {
+      "type": "text",
+      "text": "主变油温1",
+      "align": "center",
+      "color": "rgb(255,255,255)",
+      "font": "18px arial, sans-serif",
+      "rect": [
+        36.3979,
+        -5.25,
+        50,
+        50
+      ]
+    },
+    {
+      "type": "text",
+      "text": "主变油温2",
+      "align": "center",
+      "color": "rgb(255,255,255)",
+      "font": "18px arial, sans-serif",
+      "rect": [
+        36.3979,
+        32.25,
+        50,
+        50
+      ]
+    },
+    {
+      "type": "text",
+      "text": "档位",
+      "align": "center",
+      "color": "rgb(255,255,255)",
+      "font": "18px arial, sans-serif",
+      "rect": [
+        36.3979,
+        107.25,
+        50,
+        50
+      ]
+    },
+    {
+      "type": "text",
+      "text": "绕组油温",
+      "align": "center",
+      "color": "rgb(255,255,255)",
+      "font": "18px arial, sans-serif",
+      "rect": [
+        36.3979,
+        69.75,
+        50,
+        50
+      ]
+    },
+    {
+      "type": "text",
+      "text": "9.68",
+      "align": "center",
+      "color": "rgb(48,242,120)",
+      "font": "18px arial, sans-serif",
+      "rect": [
+        111,
+        -5.25,
+        50,
+        50
+      ]
+    },
+    {
+      "type": "text",
+      "text": "14.00",
+      "align": "center",
+      "color": "rgb(48,242,120)",
+      "font": "18px arial, sans-serif",
+      "rect": [
+        111,
+        107.25,
+        50,
+        50
+      ]
+    },
+    {
+      "type": "text",
+      "text": "7.80",
+      "align": "center",
+      "color": "rgb(48,242,120)",
+      "font": "18px arial, sans-serif",
+      "rect": [
+        111,
+        69.75,
+        50,
+        50
+      ]
+    },
+    {
+      "type": "text",
+      "text": "10.35",
+      "align": "center",
+      "color": "rgb(48,242,120)",
+      "font": "18px arial, sans-serif",
+      "rect": [
+        111,
+        32.25,
+        50,
+        50
+      ]
+    },
+    {
+      "type": "shape",
+      "background": {
+        "func": "attr@arrow.color",
+        "value": "rgb(48,242,120)"
+      },
+      "borderColor": "#40ACFF",
+      "rotation": 4.71239,
+      "points": [
+        181,
+        39.75,
+        181,
+        74.75,
+        211,
+        57.25,
+        181,
+        39.75
+      ]
+    },
+    {
+      "type": "oval",
+      "background": "rgb(255,0,0)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,0,0)",
+      "rect": [
+        181,
+        80.75,
+        30,
+        30
+      ]
+    },
+    {
+      "type": "shape",
+      "background": {
+        "func": "attr@arrow.color",
+        "value": "rgb(48,242,120)"
+      },
+      "borderColor": "#40ACFF",
+      "rotation": 1.5708,
+      "points": [
+        181.5,
+        114.75,
+        181.5,
+        149.75,
+        210.5,
+        132.25,
+        181.5,
+        114.75
+      ]
+    }
+  ]
+}

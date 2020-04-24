@@ -45,6 +45,7 @@ palette_config = {
             { name: '附件28', image: 'symbols/palette-icon/附件28.json', type: ht.Node},
             { name: '双箭头', image: 'symbols/palette-icon/双箭头.json', type: ht.Node},
             { name: '主变', image: 'symbols/palette-icon/主变.json', type: ht.Node},
+            { name: '主变2', image: 'symbols/palette-icon/主变2.json', type: ht.Node},
             // { name: '几何图形', image: 'symbols/电力/rect.json', type: ht.Node},
             // { name: '箭头', image: 'symbols/电力/arrow.json', type: ht.Node},
             // { name: '地线', image: 'symbols/电力/earthwire.json', type: ht.Node},
