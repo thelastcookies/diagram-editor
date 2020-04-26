@@ -3,6 +3,15 @@
 <head>
     <title>Demo</title>
     <style>
+        /*body {*/
+        /*    height: 100%;*/
+        /*}*/
+        /*#container {*/
+        /*    width: 200px;*/
+        /*    height: 200px;*/
+        /*    margin-top: 500px;*/
+        /*    position: relative;*/
+        /*}*/
     </style>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <script type="text/javascript" src="lib/core/ht.js"></script>
@@ -10,34 +19,23 @@
         function init() {
             let dataModel = new ht.DataModel(),
                 graphView = window.graph = new ht.graph.GraphView(dataModel),
-                json = {
-                    "v": "7.0.7",
-                    "p": {
-                        "autoAdjustIndex": true,
-                        "hierarchicalRendering": false
-                    },
-                    "d": [
-                        {
-                            "c": "ht.Node",
-                            "i": 2,
-                            "p": {
-                                "position": {
-                                    "x": 150,
-                                    "y": 80
-                                },
-                                "width": 70,
-                                "height": 70
-                            },
-                            "s": {
-                                "shape": "rect",
-                                "shape.background": "rgb(255, 85, 85)"
-                            }
-                        }
-                    ]
-                };
+                json = {};
             dataModel.deserialize(json);
+            graphView.mi(function(e) {
+                if (e.kind === 'clickData') {
+                    if (e.data.getTag() === 'DJX') {
+                        window.location.href = 'index.html';
+                        // console.log ("click", e);
+                    }
+                }
+            });
+            graphView.setMovableFunc(function() {});
+            // graphView.setSelectableFunc(function() {});
+            graphView.setPannable(false);
+            graphView.handleScroll = function() {};
             let container = document.getElementById('container');
             graphView.addToDOM(container);
+            graphView.fitContent(true);
         }
     </script>
 </head>
