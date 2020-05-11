@@ -15,11 +15,214 @@
     </style>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <script type="text/javascript" src="lib/core/ht.js"></script>
+    <script type="text/javascript" src="js/ht-value.js"></script>
+    <script src="bootstrap-3.3.7-dist/js/jquery-3.1.1.js"></script>
     <script>
         function init() {
             let dataModel = new ht.DataModel(),
                 graphView = window.graph = new ht.graph.GraphView(dataModel),
-                json = {};
+                json = {
+                    "v": "7.0.7",
+                    "p": {
+                        "layers": [
+                            "0",
+                            1
+                        ],
+                        "autoAdjustIndex": true,
+                        "hierarchicalRendering": false
+                    },
+                    "d": [
+                        {
+                            "c": "ht.Node",
+                            "i": 967,
+                            "p": {
+                                "name": "开关",
+                                "layer": 1,
+                                "tag": "251.5XD",
+                                "image": "symbols/palette-icon/开关.json",
+                                "position": {
+                                    "x": 7.04791,
+                                    "y": 2.41113
+                                }
+                            },
+                            "s": {
+                                "label": ""
+                            }
+                        },
+                        {
+                            "c": "ht.Node",
+                            "i": 968,
+                            "p": {
+                                "name": "开关",
+                                "layer": 1,
+                                "tag": "251.5KD",
+                                "image": "symbols/palette-icon/开关.json",
+                                "position": {
+                                    "x": 143.48238,
+                                    "y": 2.91631
+                                }
+                            },
+                            "s": {
+                                "label": ""
+                            }
+                        },
+                        {
+                            "c": "ht.Node",
+                            "i": 969,
+                            "p": {
+                                "name": "开关",
+                                "layer": 1,
+                                "tag": "251MD",
+                                "image": "symbols/palette-icon/开关.json",
+                                "position": {
+                                    "x": 289.88107,
+                                    "y": -2.33305
+                                }
+                            },
+                            "s": {
+                                "label": ""
+                            }
+                        },
+                        {
+                            "c": "ht.Node",
+                            "i": 970,
+                            "p": {
+                                "name": "红块",
+                                "layer": 1,
+                                "tag": "251",
+                                "image": "symbols/palette-icon/红块.json",
+                                "position": {
+                                    "x": 31,
+                                    "y": 94
+                                }
+                            },
+                            "s": {
+                                "label": ""
+                            }
+                        },
+                        {
+                            "c": "ht.Node",
+                            "i": 971,
+                            "p": {
+                                "name": "附件19",
+                                "layer": 1,
+                                "tag": "UXB",
+                                "image": "symbols/palette-icon/附件19.json",
+                                "position": {
+                                    "x": -164,
+                                    "y": 214
+                                }
+                            },
+                            "s": {
+                                "label": ""
+                            }
+                        },
+                        {
+                            "c": "ht.Node",
+                            "i": 972,
+                            "p": {
+                                "name": "箭头方块",
+                                "layer": 1,
+                                "tag": "UA",
+                                "image": "symbols/palette-icon/箭头方块.json",
+                                "position": {
+                                    "x": -37.9167,
+                                    "y": 219.74451
+                                }
+                            },
+                            "s": {
+                                "label": ""
+                            }
+                        },
+                        {
+                            "c": "ht.Node",
+                            "i": 973,
+                            "p": {
+                                "name": "主变2",
+                                "layer": 1,
+                                "tag": "zb-1",
+                                "image": "symbols/palette-icon/主变2.json",
+                                "position": {
+                                    "x": 150.80506,
+                                    "y": 274.03433
+                                }
+                            },
+                            "s": {
+                                "label": ""
+                            }
+                        },
+                        {
+                            "c": "ht.Node",
+                            "i": 974,
+                            "p": {
+                                "name": "旋钮开关",
+                                "layer": 1,
+                                "tag": "SWITCH",
+                                "image": "symbols/palette-icon/旋钮开关.json",
+                                "position": {
+                                    "x": 251.5,
+                                    "y": 111
+                                }
+                            },
+                            "s": {
+                                "label": ""
+                            }
+                        },
+                        {
+                            "c": "ht.Text",
+                            "i": 1011,
+                            "p": {
+                                "name": "文字",
+                                "layer": 1,
+                                "tag": "text2",
+                                "position": {
+                                    "x": 112,
+                                    "y": 112
+                                }
+                            },
+                            "s": {
+                                "text.align": "center",
+                                "text.font": "16px arial, sans-serif",
+                                "label": ""
+                            }
+                        },
+                        {
+                            "c": "ht.Text",
+                            "i": 1041,
+                            "p": {
+                                "name": "文字",
+                                "layer": 1,
+                                "tag": "text1",
+                                "position": {
+                                    "x": -58.5198,
+                                    "y": 111.31484
+                                }
+                            },
+                            "s": {
+                                "text.align": "center",
+                                "text.font": "16px arial, sans-serif",
+                                "label": ""
+                            }
+                        },
+                        {
+                            "c": "ht.Node",
+                            "i": 1174,
+                            "p": {
+                                "name": "附件18",
+                                "layer": 1,
+                                "tag": "asd",
+                                "image": "symbols/palette-icon/附件18.json",
+                                "position": {
+                                    "x": -78,
+                                    "y": 41.5
+                                }
+                            },
+                            "s": {
+                                "label": ""
+                            }
+                        }
+                    ]
+                };
             dataModel.deserialize(json);
             graphView.mi(function(e) {
                 if (e.kind === 'clickData') {
@@ -29,13 +232,19 @@
                     }
                 }
             });
-            graphView.setMovableFunc(function() {});
+            // graphView.setMovableFunc(function() {});
             // graphView.setSelectableFunc(function() {});
-            graphView.setPannable(false);
-            graphView.handleScroll = function() {};
+            // graphView.setPannable(false);
+            // graphView.handleScroll = function() {};
             let container = document.getElementById('container');
             graphView.addToDOM(container);
             graphView.fitContent(true);
+            $.getJSON({
+                url: 'WebServer/server/fake-value.json',
+                success: res => {
+                    dataModel.setNodeStatusByValue(res.data.ztData);
+                }
+            });
         }
     </script>
 </head>

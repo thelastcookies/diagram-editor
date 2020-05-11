@@ -1,10 +1,21 @@
 {
-  "modified": "Tue Mar 17 2020 14:34:00 GMT+0800 (中国标准时间)",
+  "modified": "Fri May 08 2020 15:16:00 GMT+0800 (CST)",
+  "dataBindings": [
+    {
+      "attr": "node.bg",
+      "valueType": "Color",
+      "defaultValue": "rgb(255,0,0)"
+    }
+  ],
   "width": 35,
   "height": 35,
   "comps": [
     {
       "type": "rect",
+      "background": {
+        "func": "attr@node.bg",
+        "value": "rgb(255,0,0)"
+      },
       "borderWidth": 2,
       "borderColor": "rgb(255,0,0)",
       "rect": [

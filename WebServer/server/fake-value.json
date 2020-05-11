@@ -1,0 +1,57 @@
+{
+  "code": 200,
+  "data": {
+    "timestamp": "2020-05-07 00:00:00",
+    "ztData": [
+      {
+        "nodeTag": "251.5XD",
+        "value": true
+      },
+      {
+        "nodeTag": "251.5KD",
+        "value": true
+      },
+      {
+        "nodeTag": "251MD",
+        "value": false
+      },
+      {
+        "nodeTag": "251",
+        "value": "160"
+      },
+      {
+        "nodeTag": "UXB",
+        "value": "9.5"
+      },
+      {
+        "nodeTag": "UA",
+        "value": ""
+      },
+      {
+        "nodeTag": "SWITCH",
+        "value": ""
+      },
+      {
+        "nodeTag": "text1",
+        "value": "12345"
+      },
+      {
+        "nodeTag": "text2",
+        "value": "文档文档文档"
+      },
+      {
+        "nodeTag": "asd",
+        "value": false
+      },
+      {
+        "nodeTag": "zb-1",
+        "value": {
+          "zbyw1": "9.68",
+          "zbyw2": "10.35",
+          "rzyw": "7.80",
+          "dw": "14.00"
+        }
+      }
+    ]
+  }
+}

@@ -1,7 +1,61 @@
 {
-  "modified": "Fri Apr 24 2020 16:09:07 GMT+0800 (CST)",
+  "modified": "Sat May 09 2020 10:44:06 GMT+0800 (CST)",
+  "dataBindings": [
+    {
+      "attr": "zb2.zbyw1",
+      "valueType": "String",
+      "defaultValue": "0.00"
+    },
+    {
+      "attr": "btn3.scale",
+      "valueType": "Number"
+    },
+    {
+      "attr": "btn3.shadow",
+      "valueType": "Boolean",
+      "defaultValue": false
+    },
+    {
+      "attr": "btn2.scale",
+      "valueType": "Number"
+    },
+    {
+      "attr": "btn2.shadow",
+      "valueType": "Boolean"
+    },
+    {
+      "attr": "btn1.scale",
+      "valueType": "Number"
+    },
+    {
+      "attr": "btn1.shadow",
+      "valueType": "Boolean"
+    },
+    {
+      "attr": "zb2.zbyw2",
+      "valueType": "String",
+      "defaultValue": "0.00"
+    },
+    {
+      "attr": "zb2.rzyw",
+      "valueType": "String",
+      "defaultValue": "0.00"
+    },
+    {
+      "attr": "zb2.dw",
+      "valueType": "String",
+      "defaultValue": "0.00"
+    },
+    {
+      "attr": "node.type",
+      "valueType": "String",
+      "defaultValue": "zb2"
+    }
+  ],
   "width": 222,
   "height": 152,
+  "interactive": true,
+  "disableSelectedBorder": true,
   "comps": [
     {
       "type": "rect",
@@ -155,14 +209,17 @@
       "font": "18px arial, sans-serif",
       "rect": [
         36.3979,
-        69.75,
+        70.89256,
         50,
         50
       ]
     },
     {
       "type": "text",
-      "text": "9.68",
+      "text": {
+        "func": "attr@zb2.zbyw1",
+        "value": "9.68"
+      },
       "align": "center",
       "color": "rgb(48,242,120)",
       "font": "18px arial, sans-serif",
@@ -175,7 +232,10 @@
     },
     {
       "type": "text",
-      "text": "14.00",
+      "text": {
+        "func": "attr@zb2.dw",
+        "value": "14.00"
+      },
       "align": "center",
       "color": "rgb(48,242,120)",
       "font": "18px arial, sans-serif",
@@ -188,20 +248,26 @@
     },
     {
       "type": "text",
-      "text": "7.80",
+      "text": {
+        "func": "attr@zb2.rzyw",
+        "value": "7.80"
+      },
       "align": "center",
       "color": "rgb(48,242,120)",
       "font": "18px arial, sans-serif",
       "rect": [
         111,
-        69.75,
+        72.25,
         50,
         50
       ]
     },
     {
       "type": "text",
-      "text": "10.35",
+      "text": {
+        "func": "attr@zb2.zbyw2",
+        "value": "10.35"
+      },
       "align": "center",
       "color": "rgb(48,242,120)",
       "font": "18px arial, sans-serif",
@@ -213,54 +279,92 @@
       ]
     },
     {
-      "type": "shape",
-      "background": {
-        "func": "attr@arrow.color",
-        "value": "rgb(48,242,120)"
+      "type": "triangle",
+      "background": "rgb(48,242,120)",
+      "borderColor": "#979797",
+      "shadow": {
+        "func": "attr@btn1.shadow",
+        "value": false
       },
-      "borderColor": "#40ACFF",
-      "rotation": 4.71239,
-      "points": [
-        181,
-        39.75,
-        181,
-        74.75,
-        211,
-        57.25,
-        181,
-        39.75
-      ]
-    },
-    {
-      "type": "oval",
-      "background": "rgb(255,0,0)",
-      "borderWidth": 1,
-      "borderColor": "rgb(255,0,0)",
+      "shadowColor": "rgb(48,242,120)",
+      "shadowBlur": 10,
+      "shadowOffsetX": 0,
+      "shadowOffsetY": 0,
+      "scaleX": {
+        "func": "attr@btn1.scale",
+        "value": 1
+      },
+      "scaleY": {
+        "func": "attr@btn1.scale",
+        "value": 1
+      },
       "rect": [
-        181,
-        80.75,
-        30,
+        179.99995,
+        42.25,
+        32,
         30
-      ]
+      ],
+      "onEnter": "__ht__function(event, data, view, point, width, height) {\ndata.a('btn1.scale', 1.05);\ndata.a('btn1.shadow', true);\n}",
+      "onLeave": "__ht__function(event, data, view, point, width, height) {\ndata.a('btn1.scale', undefined);\ndata.a('btn1.shadow', undefined);\n}"
     },
     {
-      "type": "shape",
-      "background": {
-        "func": "attr@arrow.color",
-        "value": "rgb(48,242,120)"
+      "type": "circle",
+      "background": "rgb(255,0,0)",
+      "borderColor": "#979797",
+      "shadow": {
+        "func": "attr@btn2.shadow",
+        "value": false
       },
-      "borderColor": "#40ACFF",
-      "rotation": 1.5708,
-      "points": [
-        181.5,
-        114.75,
-        181.5,
-        149.75,
-        210.5,
-        132.25,
-        181.5,
-        114.75
-      ]
+      "shadowColor": "rgb(255,0,0)",
+      "shadowBlur": 10,
+      "shadowOffsetX": 0,
+      "shadowOffsetY": 0,
+      "scaleX": {
+        "func": "attr@btn2.scale",
+        "value": 1
+      },
+      "scaleY": {
+        "func": "attr@btn2.scale",
+        "value": 1
+      },
+      "rect": [
+        180,
+        80.89256,
+        32,
+        30
+      ],
+      "onEnter": "__ht__function(event, data, view, point, width, height) {\ndata.a('btn2.scale', 1.05);\ndata.a('btn2.shadow', true);\n}",
+      "onLeave": "__ht__function(event, data, view, point, width, height) {\ndata.a('btn2.scale', undefined);\ndata.a('btn2.shadow', undefined);\n}"
+    },
+    {
+      "type": "triangle",
+      "background": "rgb(48,242,120)",
+      "borderColor": "#979797",
+      "shadow": {
+        "func": "attr@btn3.shadow",
+        "value": false
+      },
+      "shadowColor": "rgb(48,242,120)",
+      "shadowBlur": 10,
+      "shadowOffsetX": 0,
+      "shadowOffsetY": 0,
+      "scaleX": {
+        "func": "attr@btn3.scale",
+        "value": 1
+      },
+      "scaleY": {
+        "func": "attr@btn3.scale",
+        "value": 1
+      },
+      "rotation": 3.14159,
+      "rect": [
+        179.99995,
+        117.25,
+        32,
+        30
+      ],
+      "onEnter": "__ht__function(event, data, view, point, width, height) {\ndata.a('btn3.scale', 1.05);\ndata.a('btn3.shadow', true);\n}",
+      "onLeave": "__ht__function(event, data, view, point, width, height) {\ndata.a('btn3.scale', undefined);\ndata.a('btn3.shadow', undefined);\n}"
     }
   ]
 }
