@@ -1,22 +1,25 @@
 {
-  "modified": "Sat May 09 2020 10:44:51 GMT+0800 (CST)",
+  "modified": "Mon May 25 2020 10:44:47 GMT+0800 (CST)",
   "dataBindings": [
     {
       "attr": "zb1.dw",
-      "valueType": "String"
+      "valueType": "String",
+      "defaultValue": 0
     },
     {
       "attr": "zb1.yw1",
-      "valueType": "String"
+      "valueType": "String",
+      "defaultValue": 0
     },
     {
       "attr": "zb1.yw2",
-      "valueType": "String"
+      "valueType": "String",
+      "defaultValue": 0
     },
     {
       "attr": "zb1.rw",
       "valueType": "String",
-      "defaultValue": "-"
+      "defaultValue": 0
     },
     {
       "attr": "btn1.shadow",
@@ -25,6 +28,11 @@
     {
       "attr": "btn1.scale",
       "valueType": "Number"
+    },
+    {
+      "attr": "node.type",
+      "valueType": "String",
+      "defaultValue": "zb1"
     }
   ],
   "yAlignmentGuides": [

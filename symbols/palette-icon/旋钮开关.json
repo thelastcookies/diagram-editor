@@ -1,10 +1,15 @@
 {
-  "modified": "Thu Apr 02 2020 11:54:13 GMT+0800 (CST)",
+  "modified": "Mon May 25 2020 11:07:10 GMT+0800 (CST)",
   "dataBindings": [
     {
       "attr": "rotatySwitch.bar",
       "valueType": "Angle",
-      "defaultValue": 1.57
+      "defaultValue": 0
+    },
+    {
+      "attr": "node.type",
+      "valueType": "String",
+      "defaultValue": "switch-ro"
     }
   ],
   "width": 100,
@@ -39,7 +44,7 @@
     {
       "type": "image",
       "color": null,
-      "name": "symbols/palette-icon/旋钮开关-旋钮.json",
+      "name": "./symbols/palette-icon/旋钮开关-旋钮.json",
       "displayName": "旋钮开关-旋钮",
       "rotation": {
         "func": "attr@rotatySwitch.bar",

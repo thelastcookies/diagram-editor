@@ -12,6 +12,11 @@
       "valueType": "Boolean",
       "name": "开关-闭",
       "defaultValue": false
+    },
+    {
+      "attr": "node.type",
+      "valueType": "String",
+      "defaultValue": "switch"
     }
   ],
   "width": 30,
