@@ -1,73 +1,109 @@
 {
-  "modified": "Tue Jun 16 2020 15:34:53 GMT+0800 (CST)",
+  "modified": "Wed Jun 17 2020 16:43:14 GMT+0800 (CST)",
   "dataBindings": [
     {
-      "attr": "node.bg",
-      "valueType": "Color",
-      "defaultValue": "rgb(255,0,0)"
+      "attr": "node.stateToggle",
+      "valueType": "Boolean",
+      "defaultValue": false
+    },
+    {
+      "attr": "node.type",
+      "valueType": "String",
+      "defaultValue": "duanluqi"
     }
   ],
-  "width": 46,
-  "height": 100,
+  "width": 20,
+  "height": 65,
   "comps": [
     {
       "type": "shape",
       "borderWidth": 2,
-      "borderColor": {
-        "func": "attr@node.bg",
-        "value": "rgb(255,0,0)"
-      },
+      "borderColor": "rgb(255,0,0)",
       "points": [
-        23,
-        0.01439,
-        23,
-        100.23388
+        10,
+        0.98242,
+        10,
+        62.98242
       ]
     },
     {
       "type": "shape",
-      "borderWidth": 3,
-      "borderColor": {
-        "func": "attr@node.bg",
-        "value": "rgb(255,0,0)"
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "visible": {
+        "func": "attr@state",
+        "value": true
       },
+      "displayName": "22222",
+      "rotation": 3.14159,
       "points": [
-        23,
-        34.19898,
-        23,
-        65.26133
+        0.00002,
+        58.0175,
+        9.97794,
+        52.0175,
+        20.00002,
+        58.0175
       ]
     },
     {
       "type": "shape",
       "borderWidth": 2,
       "borderColor": {
-        "func": "attr@node.bg",
+        "func": "attr@node.stateToggle",
         "value": "rgb(255,0,0)"
       },
+      "visible": {
+        "func": "attr@state",
+        "value": true
+      },
+      "displayName": "22222",
+      "rotation": 3.14159,
       "points": [
-        46,
-        20.06422,
-        23,
-        5,
-        0,
-        20.06422
+        0.00001,
+        64.01755,
+        9.97793,
+        58.01755,
+        20.00001,
+        64.01755
       ]
     },
     {
       "type": "shape",
       "borderWidth": 2,
       "borderColor": {
-        "func": "attr@node.bg",
+        "func": "attr@node.stateToggle",
         "value": "rgb(255,0,0)"
       },
+      "visible": {
+        "func": "attr@state",
+        "value": true
+      },
+      "displayName": "22222",
       "points": [
-        46,
-        78.93578,
-        22.96462,
-        94,
-        0,
-        78.93578
+        0.00002,
+        6.98242,
+        9.97794,
+        0.98242,
+        20.00002,
+        6.98242
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "visible": {
+        "func": "attr@state",
+        "value": true
+      },
+      "displayName": "22222",
+      "points": [
+        0.00002,
+        12.98242,
+        9.97794,
+        6.98242,
+        20.00002,
+        12.98242
       ]
     }
   ]

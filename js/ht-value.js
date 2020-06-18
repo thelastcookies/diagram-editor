@@ -12,6 +12,10 @@ ht.DataModel.prototype.setNodeStatusByValue = function(json) {
         if (node instanceof ht.Node && node.a('node.type') === 'switch-ro') {
             node.a('rotatySwitch.bar', Boolean(value) ? 0 : 1.57);
         }
+        // 如果是 断路器
+        if (node instanceof ht.Node && node.a('node.type') === 'duanluqi') {
+            node.a('node.stateToggle', Boolean(value));
+        }
         // 如果是 Text
         if (node instanceof ht.Text) {
             node.s("text", value);
