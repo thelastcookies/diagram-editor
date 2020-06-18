@@ -1,5 +1,12 @@
 {
-  "modified": "Tue Apr 14 2020 13:54:46 GMT+0800 (CST)",
+  "modified": "Tue Jun 16 2020 15:35:43 GMT+0800 (CST)",
+  "dataBindings": [
+    {
+      "attr": "node.bg",
+      "valueType": "Color",
+      "defaultValue": "rgb(255,0,0)"
+    }
+  ],
   "width": 19,
   "height": 15,
   "comps": [
@@ -7,8 +14,8 @@
       "type": "shape",
       "borderWidth": 2,
       "borderColor": {
-        "func": "attr@lineColor",
-        "value": "rgb(250,0,0)"
+        "func": "attr@node.bg",
+        "value": "rgb(255,0,0)"
       },
       "visible": {
         "func": "attr@state",
@@ -29,8 +36,8 @@
       "type": "shape",
       "borderWidth": 2,
       "borderColor": {
-        "func": "attr@lineColor",
-        "value": "rgb(250,0,0)"
+        "func": "attr@node.bg",
+        "value": "rgb(255,0,0)"
       },
       "visible": {
         "func": "attr@state",

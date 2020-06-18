@@ -1,11 +1,21 @@
 {
-  "modified": "Sun Mar 01 2020 18:02:16 GMT+0800 (CST)",
+  "modified": "Tue Jun 16 2020 15:20:04 GMT+0800 (CST)",
+  "dataBindings": [
+    {
+      "attr": "node.bg",
+      "valueType": "Color",
+      "defaultValue": "rgb(255,0,0)"
+    }
+  ],
   "width": 20,
   "height": 30,
   "comps": [
     {
       "type": "rect",
-      "background": "rgb(255,0,0)",
+      "background": {
+        "func": "attr@node.bg",
+        "value": "rgb(255,0,0)"
+      },
       "borderColor": "#979797",
       "rect": [
         0,

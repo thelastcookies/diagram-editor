@@ -5,18 +5,23 @@
       "attr": "switch.powerOff",
       "valueType": "Boolean",
       "name": "开关-开",
-      "defaultValue": true
+      "defaultValue": false
     },
     {
       "attr": "switch.powerOn",
       "valueType": "Boolean",
       "name": "开关-闭",
-      "defaultValue": false
+      "defaultValue": true
     },
     {
       "attr": "node.type",
       "valueType": "String",
       "defaultValue": "switch"
+    },
+    {
+      "attr": "node.bg",
+      "valueType": "Color",
+      "defaultValue": "rgb(255,0,0)"
     }
   ],
   "width": 30,
@@ -25,7 +30,10 @@
     {
       "type": "oval",
       "borderWidth": 2,
-      "borderColor": "rgb(255,0,0)",
+      "borderColor": {
+        "func": "attr@node.bg",
+        "value": "rgb(255,0,0)"
+      },
       "rect": [
         10.4281,
         0.95634,
@@ -36,7 +44,10 @@
     {
       "type": "oval",
       "borderWidth": 2,
-      "borderColor": "rgb(255,0,0)",
+      "borderColor": {
+        "func": "attr@node.bg",
+        "value": "rgb(255,0,0)"
+      },
       "rect": [
         10.4281,
         51.84611,
@@ -49,7 +60,7 @@
       "borderWidth": 2,
       "borderColor": {
         "func": "attr@switch.powerOff",
-        "value": "rgb(255,0,0)"
+        "value": "rgb(0,255,0)"
       },
       "points": [
         29.12622,

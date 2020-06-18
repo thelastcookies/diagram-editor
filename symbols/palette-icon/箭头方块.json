@@ -1,11 +1,21 @@
 {
-  "modified": "Sun Mar 01 2020 17:51:13 GMT+0800 (CST)",
+  "modified": "Tue Jun 16 2020 15:34:34 GMT+0800 (CST)",
+  "dataBindings": [
+    {
+      "attr": "node.bg",
+      "valueType": "Color",
+      "defaultValue": "rgb(255,0,0)"
+    }
+  ],
   "width": 18,
   "height": 54,
   "comps": [
     {
       "type": "rect",
-      "background": "rgb(255,0,0)",
+      "background": {
+        "func": "attr@node.bg",
+        "value": "rgb(255,0,0)"
+      },
       "borderColor": "#979797",
       "rect": [
         1.50001,
@@ -17,7 +27,10 @@
     {
       "type": "shape",
       "borderWidth": 2,
-      "borderColor": "rgb(255,0,0)",
+      "borderColor": {
+        "func": "attr@node.bg",
+        "value": "rgb(255,0,0)"
+      },
       "points": [
         9.00001,
         6.99998,
@@ -37,7 +50,7 @@
       "type": "shape",
       "borderWidth": 2,
       "borderColor": {
-        "func": "attr@lineColor",
+        "func": "attr@node.bg",
         "value": "rgb(250,0,0)"
       },
       "visible": {
@@ -57,7 +70,10 @@
     {
       "type": "shape",
       "borderWidth": 2,
-      "borderColor": "rgb(255,0,0)",
+      "borderColor": {
+        "func": "attr@node.bg",
+        "value": "rgb(255,0,0)"
+      },
       "points": [
         9.00001,
         39.99998,
@@ -77,8 +93,8 @@
       "type": "shape",
       "borderWidth": 2,
       "borderColor": {
-        "func": "attr@lineColor",
-        "value": "rgb(250,0,0)"
+        "func": "attr@node.bg",
+        "value": "rgb(255,0,0)"
       },
       "visible": {
         "func": "attr@state",
@@ -98,8 +114,8 @@
       "type": "shape",
       "borderWidth": 2,
       "borderColor": {
-        "func": "attr@lineColor",
-        "value": "rgb(250,0,0)"
+        "func": "attr@node.bg",
+        "value": "rgb(255,0,0)"
       },
       "visible": {
         "func": "attr@state",
@@ -120,8 +136,8 @@
       "type": "shape",
       "borderWidth": 2,
       "borderColor": {
-        "func": "attr@lineColor",
-        "value": "rgb(250,0,0)"
+        "func": "attr@node.bg",
+        "value": "rgb(255,0,0)"
       },
       "visible": {
         "func": "attr@state",

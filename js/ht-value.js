@@ -18,7 +18,7 @@ ht.DataModel.prototype.setNodeStatusByValue = function(json) {
         }
         // 如果是 变色器件
         if (node instanceof ht.Node && node.a('node.bg')) {
-            node.a('node.bg', value ? '#FF0000' : undefined);
+            node.a('node.bg', value ? '#FF0000' : '#00FF00');
         }
         // 如果是 主变1
         if (node instanceof ht.Node && node.a('node.type') === 'zb1') {
