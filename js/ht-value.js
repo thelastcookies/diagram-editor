@@ -16,6 +16,10 @@ ht.DataModel.prototype.setNodeStatusByValue = function(json) {
         if (node instanceof ht.Node && node.a('node.type') === 'duanluqi') {
             node.a('node.stateToggle', Boolean(value));
         }
+        // 如果是 柱状图元
+        if (node instanceof ht.Node && node.a('node.type') === 'zt') {
+            node.a('zt.height', value);
+        }
         // 如果是 Text
         if (node instanceof ht.Text) {
             node.s("text", value);

@@ -1,0 +1,46 @@
+{
+  "modified": "Mon Jun 29 2020 13:29:32 GMT+0800 (CST)",
+  "dataBindings": [
+    {
+      "attr": "zt.height",
+      "valueType": "Percentage"
+    },
+    {
+      "attr": "node.type",
+      "valueType": "String",
+      "defaultValue": "zt"
+    }
+  ],
+  "width": 35,
+  "height": 140,
+  "comps": [
+    {
+      "type": "rect",
+      "background": "rgba(217,217,217,0)",
+      "borderWidth": 1,
+      "borderColor": "rgba(255,0,0,0.5)",
+      "rect": [
+        0,
+        0,
+        35,
+        140
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(255,0,0)",
+      "borderColor": "#979797",
+      "fillClipPercentage": {
+        "func": "attr@zt.height",
+        "value": 0.4
+      },
+      "anchorY": 1,
+      "rect": [
+        1,
+        1,
+        33,
+        138
+      ]
+    }
+  ]
+}
