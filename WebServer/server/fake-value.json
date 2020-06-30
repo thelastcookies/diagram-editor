@@ -4,35 +4,34 @@
     "timestamp": "2020-05-07 00:00:00",
     "ztData": [
       {
-        "nodeTag": "321_CL_PF",
-        "value": "33.33"
+        "nodeTag": "HS:fd_01_01",
+        "nodeDesc": "红块1",
+        "value": 0
       },
       {
-        "nodeTag": "kg-1",
-        "value": false
+        "nodeTag": "HS:fd_01_02",
+        "nodeDesc": "红块2",
+        "value": 1
       },
       {
-        "nodeTag": "kg-2",
-        "value": false
+        "nodeTag": "HS:fd_01_03",
+        "nodeDesc": "红块3",
+        "value": 1
       },
       {
-        "nodeTag": "zb-1",
-        "value": {
-          "yw1": "10.00",
-          "yw2": "11.00",
-          "rw": "12.00",
-          "dw": "13"
-        }
+        "nodeTag": "HS:fd:dlq_01",
+        "nodeDesc": "断路器1",
+        "value": 1
       },
       {
-        "nodeTag": "zb-2",
-        "value": {
-          "zbyw1": "22.00",
-          "zbyw2": "21.00",
-          "rzyw": "22.00",
-          "dw": "14.00"
-        }
+        "nodeTag": "HS:fd_zt_01",
+        "nodeDesc": "柱形图",
+        "value": 0.8
       }
     ]
   }
 }
+
+
+
+

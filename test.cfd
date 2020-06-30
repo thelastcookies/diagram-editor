@@ -1,0 +1,98 @@
+{
+  "v": "7.0.8",
+  "p": {
+    "layers": [
+      "0",
+      1
+    ],
+    "autoAdjustIndex": true,
+    "hierarchicalRendering": false
+  },
+  "d": [
+    {
+      "c": "ht.Node",
+      "i": 2,
+      "p": {
+        "name": "附件15",
+        "layer": 1,
+        "tag": "HS:fd:dlq_01",
+        "image": "symbols/palette-icon/附件15.json",
+        "position": {
+          "x": 31.5,
+          "y": 5.5
+        }
+      },
+      "s": {
+        "label": ""
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 3,
+      "p": {
+        "name": "红块",
+        "layer": 1,
+        "tag": "HS:fd_01_03",
+        "image": "symbols/palette-icon/红块.json",
+        "position": {
+          "x": 31.5,
+          "y": 5.5
+        }
+      },
+      "s": {
+        "label": ""
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 4,
+      "p": {
+        "name": "柱状图元",
+        "layer": 1,
+        "tag": "HS:fd_zt_01",
+        "image": "symbols/palette-icon/柱状图元.json",
+        "position": {
+          "x": 113.5,
+          "y": 30
+        }
+      },
+      "s": {
+        "label": ""
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 5,
+      "p": {
+        "name": "红块",
+        "layer": 1,
+        "tag": "HS:fd_01_01",
+        "image": "symbols/palette-icon/红块.json",
+        "position": {
+          "x": -18.5,
+          "y": 79
+        }
+      },
+      "s": {
+        "label": ""
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 6,
+      "p": {
+        "name": "红块",
+        "layer": 1,
+        "tag": "HS:fd_01_02",
+        "image": "symbols/palette-icon/红块.json",
+        "position": {
+          "x": 36.5,
+          "y": 75.5
+        }
+      },
+      "s": {
+        "label": ""
+      }
+    }
+  ]
+}
