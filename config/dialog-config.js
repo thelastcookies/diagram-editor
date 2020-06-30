@@ -1,4 +1,5 @@
-let newPageDialog = null,
+let tagChangeDialog = null,
+    newPageDialog = null,
     savePageDialog = null,
     openPageDialog = null,
     nodeTrendDialog = null,
@@ -9,6 +10,90 @@ let newPageDialog = null,
 
 // var serializerInput = document.createElement('textarea');
 // serializerInput.style.resize = 'none';
+
+// 替换预览方法，待开发
+function initTagTreeView() {
+    let tagTreeView = new ht.widget.TreeView(indexDataModel);
+    // compTreeView.addTopPainter(true);
+    compTreeView.setRowLineVisible(true);
+    compTreeView.setRowLineColor('white');
+    // 重载树组件上的文本显示
+    compTreeView.getLabel = function (data) {
+        if (data instanceof ht.Text) {
+            return data.s('text');
+        }
+        else if (data instanceof ht.Shape) {
+            return '折线';
+        }
+        else if (data instanceof ht.Edge) {
+            return '连线';
+        }
+        return data.getName() || '节点'
+    };
+
+    // 重载树组件上的图标显示
+    var oldGetIconFunc = compTreeView.getIcon;
+    compTreeView.getIcon = function (data) {
+        if (data instanceof ht.Text) {
+            return 'symbols/text.json';
+        } else if (data instanceof ht.Edge) {
+            return 'symbols/line.json';
+        } else if (data instanceof ht.Shape) {
+            return 'symbols/polyline.json';
+        }
+        var img = data.getImage();
+        return img ? img : oldGetIconFunc.apply(this, arguments);
+    }
+}
+
+let initTagChangeDialog = function (content) {
+    tagChangeDialog = new ht.widget.Dialog();
+    tagChangeDialog.setConfig({
+        title: '图元测点批量替换',
+        content: content,
+        closable: true,
+        contentPadding: 10,
+        buttons: [{
+            label: '关闭',
+            action: function(button, e) {
+                tagChangeDialog.hide();
+            }
+        },{
+            label: '替换',
+            action: function(button, e) {
+                let sourceStr = document.getElementById("source-str").value;
+                let targetStr = document.getElementById("target-str").value;
+                let sourceReg = new RegExp(sourceStr, 'g');
+                let nodeArr = indexDataModel.getDatas();
+                nodeArr.forEach(function (item) {
+                    let tagSource = item.getTag();
+                    item.setTag(tagSource.replace(sourceReg, targetStr));
+                });
+                tagChangeDialog.hide();
+            }
+        }],
+        buttonsAlign: 'right'//按钮居右排放
+    });
+};
+
+let showTagChangeDialog = function() {
+    let content = `
+        <div class="tag-exchange-container">
+        <div class="tag-exchange-title">
+            <span>请输入替换规则：将</span>
+            <input type="text" id="source-str" />
+            <span>替换为</span>
+            <input type="text" id="target-str" />
+        </div>
+<!--        <div id="tag-exchange-result">-->
+<!--            <div id="tag-exchange-source"></div>-->
+<!--            <div id="tag-exchange-target"></div>-->
+<!--        </div>-->
+    `;
+    if (!tagChangeDialog) initTagChangeDialog(content);
+
+    tagChangeDialog.show();
+};
 
 // 对话框新建图纸操作
 let initNewPageDialog = function () {

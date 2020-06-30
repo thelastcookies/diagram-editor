@@ -164,6 +164,21 @@ toolbar_config_right = [
             height: 16,
             comps: [{
                 type: 'image',
+                name: 'symbols/toolbar-icon/exchangerate.svg'
+            }]
+        },
+        toolTip: '图元测点批量替换',
+        action: function() {
+            showTagChangeDialog();
+
+        }
+    },
+    {
+        icon: {
+            width: 16,
+            height: 16,
+            comps: [{
+                type: 'image',
                 name: 'symbols/toolbar-icon/new.svg'
             }]
         },
