@@ -5,6 +5,11 @@
       "attr": "node.stateToggle",
       "valueType": "Boolean",
       "defaultValue": false
+    },
+    {
+      "attr": "node.type",
+      "valueType": "String",
+      "defaultValue": "duanluqi"
     }
   ],
   "width": 20,

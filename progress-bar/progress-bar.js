@@ -5,24 +5,24 @@ let positionX = null;
 // 进度条长度
 const progressLen = 478;
 let timerID = null;
-// let timeStampArr = [1 ,2, 3, 4, 5, 6, 7, 8, 2, 1, 2, 3, 4, 5, 5, 4, 3, 4, 4, 3, 3, 3];
-// let timeStampArr = ["2019-01-23 00:00:00", "2019-01-23 00:00:05", "2019-01-23 00:00:10", "2019-01-23 00:00:15", "2019-01-23 00:00:20", "2019-01-23 00:00:25", "2019-01-23 00:00:30", "2019-01-23 00:00:35", "2019-01-23 00:00:40", "2019-01-23 00:00:45", "2019-01-23 00:00:50", "2019-01-23 00:00:55", "2019-01-23 00:01:00"];
-let timeStampArr = null;
+// let timestampArr = [1 ,2, 3, 4, 5, 6, 7, 8, 2, 1, 2, 3, 4, 5, 5, 4, 3, 4, 4, 3, 3, 3];
+// let timestampArr = ["2019-01-23 00:00:00", "2019-01-23 00:00:05", "2019-01-23 00:00:10", "2019-01-23 00:00:15", "2019-01-23 00:00:20", "2019-01-23 00:00:25", "2019-01-23 00:00:30", "2019-01-23 00:00:35", "2019-01-23 00:00:40", "2019-01-23 00:00:45", "2019-01-23 00:00:50", "2019-01-23 00:00:55", "2019-01-23 00:01:00"];
+let timestampArr = null;
 let len = null;
 let step = null;
 
 /**
  *
- * @param timeStampArr
+ * @param timestampArr
  */
-function initProgress (timeStampArr) {
-    if (!timeStampArr.length) return;
-    len = timeStampArr.length - 1;
+function initProgress (timestampArr) {
+    if (!timestampArr.length) return;
+    len = timestampArr.length - 1;
 
     step = cal(progressLen, len, "/");
 
     // progress-detail 内容的初始化
-    $("#progress-time").text(timeStampArr[0].timeStamp);
+    $("#progress-time").text(timestampArr[0].timestamp);
 
     // progressX 为滚动按钮开始位置距离窗口左边的距离，初始化后不再做修改。
     progressX = $("#progress").offset().left + 10;
@@ -42,7 +42,7 @@ function initProgress (timeStampArr) {
         $(document).off ("mousemove"); //弹起鼠标不做任何操作
     });
     $("#play-btn").on("click", function () {
-        if ($("#play-btn-icon").hasClass("glyphicon-play")) {
+        if ($("#play-btn-icon").hasClass("play-btn-play")) {
             setPlayStart();
         }
         else {
@@ -74,10 +74,10 @@ function progressBtnMoveTo(data) {
     $("#progress-btn").css("left", offsetX);
     let index = cal(offsetX, step, "/", 0);
     // 修改时间标签
-    $("#progress-time").text(timeStampArr[index].timeStamp);
+    $("#progress-time").text(timestampArr[index].timestamp);
     // 修改颜色
     for (let i = 0, len = nodeArr.length; i < len; i++) {
-        setNodeColorByValue(diagramDM, timeStampArr[index].nodeTagArr[i], timeStampArr[index].nodeValueArr[i]);
+        dataModel.setNodeStatusByValue(timestampArr[index].ztData);
     }
 }
 
@@ -118,14 +118,14 @@ function setPlayStart() {
         progressBtnMoveTo(positionX);
 
     }, 500);
-    $("#play-btn-icon").removeClass("glyphicon-play");
-    $("#play-btn-icon").addClass("glyphicon-pause");
+    $("#play-btn-icon").removeClass("play-btn-play");
+    $("#play-btn-icon").addClass("play-btn-pause");
 }
 
 function setPlayStop() {
     if (timerID) clearInterval(timerID);
-    $("#play-btn-icon").removeClass("glyphicon-pause");
-    $("#play-btn-icon").addClass("glyphicon-play");
+    $("#play-btn-icon").removeClass("play-btn-pause");
+    $("#play-btn-icon").addClass("play-btn-play");
 }
 
 function progressReset () {

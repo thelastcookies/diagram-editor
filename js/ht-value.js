@@ -2,7 +2,7 @@ ht.DataModel.prototype.setNodeStatusByValue = function(json) {
     let dm = this;
     json.forEach(item => {
         let node = dm.getDataByTag(item.nodeTag);
-        let value = item.value;
+        let value = Number(item.value);
         // 如果是 普通开关
         if (node instanceof ht.Node && node.a('node.type') === 'switch') {
             node.a('switch.powerOn', Boolean(value));
@@ -43,4 +43,16 @@ ht.DataModel.prototype.setNodeStatusByValue = function(json) {
             node.a('zb2.dw', value.dw);
         }
     });
+};
+
+ht.DataModel.prototype.getNodeTags = function (){
+    let dm = this,
+    nodeArr = [];
+    dm.each(data => {
+        let tag = data.getTag();
+        if(tag) {
+            nodeArr.push(tag);
+        }
+    });
+    return nodeArr;
 };

@@ -2,69 +2,98 @@
 <html>
 <head>
     <title>Demo</title>
+    <link href="progress-bar/progress-bar.css" rel="stylesheet"/>
+
     <style>
     </style>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <script type="text/javascript" src="lib/core/ht.js"></script>
     <script type="text/javascript" src="js/ht-value.js"></script>
     <script src="bootstrap-3.3.7-dist/js/jquery-3.1.1.js"></script>
+    <script src="lib/plugin/ht-contextmenu.js"></script>
+    <script src="lib/plugin/ht-dialog.js"></script>
+    <script src="lib/plugin/ht-form.js"></script>
+
+    <script src="lib/plugin/ht-cssanimation.js"></script>
+    <script src="lib/plugin/ht-palette.js"></script>
+    <script src="lib/plugin/ht-rulerframe.js"></script>
+    <script src="lib/plugin/ht-propertypane.js"></script>
+    <script src="lib/plugin/ht-edgetype.js"></script>
+
+    <!--右键菜单栏的内容-->
+    <script src="config/dialog-config.js"></script>
+    <script src="config/contextmenu-config.js"></script>
+    <script src="echarts/echarts.common.min.js"></script>
+
+    <!--图表-->
+    <script src="echarts/echarts.common.min.js"></script>
+    <!--计算-->
+    <script src="js/calculate.js"></script>
+    <!--进度条-->
+    <script src="progress-bar/progress-bar.js"></script>
+
+    <script src="bootstrap-3.3.7-dist/js/jquery-3.1.1.js"></script>
+
+<!--    <script src="lib/jquery.printarea.js"></script>-->
+
+
     <script>
+        let dataModel = new ht.DataModel(),
+            graphView = window.graph = new ht.graph.GraphView(dataModel),
+            realtimeData = null,
+            json = null,
+            nodeArr = [];
+        let getDataIntervalID = null;
+        let progressDiv = document.createElement('div');
+        progressDiv.id = "div-container";
+        progressDiv.innerHTML = `
+            <div id="progress-container">
+                <button id="play-btn" type="button" class="btn btn-default">
+                    <span id="play-btn-icon" class="play-btn-play" aria-hidden="true"></span>
+                </button>
+                <div id="progress">
+                    <div id="progress-bar" class=""  style=""></div>
+                    <div id="progress-btn"></div></div>
+                    <div id="progress-time">1970-01-01 00:00:00</div>
+                </div>`;
+        let pageMainView = new ht.widget.SplitView (graphView, progressDiv, 'v', -100);
+        pageMainView.setStatus("cr");
+        pageMainView.setDividerSize(1);
+
+
         function init() {
-            let dataModel = new ht.DataModel(),
-                graphView = window.graph = new ht.graph.GraphView(dataModel),
-                realtimeData = null,
-                json = null;
             graphView.mi(function(e) {
                 if (e.kind === 'clickData') {
                     if (e.data.getTag() === 'DJX') {
                         window.location.href = 'index.html';
                     }
                 } else if (e.kind === 'doubleClickData') {
-                    let tag = e.data.getTag();
-                    let htmlStr = "";
-                    if (realtimeData)
-                        realtimeData.ztData.forEach(function (item){
-                            if (item.nodeTag === tag) {
-                                htmlStr += `
-                                            <div id = "data-display-div" style="position: absolute;top: ${e.event.y + 10 + "px"};left: ${e.event.x + 10 + "px"};height: 214px;box-sizing: border-box;opacity: 0.8;line-height: 30px;width: 280px;background-color: #fff; border: 1px solid #111;padding: 2px 5px;color: #444;border-radius: 5px;">
-                                                <div style="height: 30px; ">标签名：${tag}</div>
-                                                <div style="height: 30px; ">中文描述：${item.nodeDesc}</div>
-                                                <div style="height: 30px; ">值：${item.value}</div>
-                                                <div style="height: 30px; ">时标：${realtimeData.timestamp}</div>
-                                                <div style="height: 30px; ">质量：</div>
-                                                <div style="height: 30px; ">单位：</div>
-                                                <div style="height: 30px; ">数据库：</div>
-                                            </div>
-                                        `;
-                                let div = document.getElementById("data-display-div");
-                                if (div) {
-                                    div.outerHTML = htmlStr;
-                                } else {
-                                    div = document.createElement('div');
-                                    div.innerHTML = htmlStr;
-                                    document.getElementsByTagName('body')[0].appendChild(div);
-                                }
-                            }
-                        });
+                    showNodeDetails (e.data.getTag(), realtimeData, {x: e.event.x, y: e.event.y});
                 } else if (e.kind === 'clickBackground') {
                     let div = document.getElementById("data-display-div");
-                    div.style.display = 'none';
+                    if (div)
+                        div.style.display = 'none';
                 }
             });
+            // 配置右键菜单
+            setContextMenu(load_contextmenu_config, graphView);
+
             $.getJSON({
                 url: './test.cfd',
                 success: res => {
                     json = res;
                     dataModel.deserialize(json);
+                    nodeArr = dataModel.getNodeTags();
                     let node = new ht.Node();
                     graphView.setMovableFunc(function() {});
                     // graphView.setSelectableFunc(function() {});
                     graphView.setPannable(false);
                     graphView.handleScroll = function() {};
                     let container = document.getElementById('container');
-                    graphView.addToDOM(container);
+                    pageMainView.addToDOM(container);
+                    // graphView.addToDOM(container);
                     graphView.fitContent(true);
-                    setInterval(() => {
+                    getDataIntervalID = setInterval(() => {
                         $.getJSON({
                             url: 'WebServer/server/fake-value.json',
                             success: res => {
@@ -75,6 +104,83 @@
                     }, 3000);
                 }
             });
+        }
+
+        /**
+         * setContextMenu
+         * @param contextmenu_config
+         * @param graphView
+         */
+        function setContextMenu (contextmenu_config, graphView) {
+            let contextmenu = new ht.widget.ContextMenu(contextmenu_config);
+            contextmenu.enableGlobalKey();
+            contextmenu.setVisibleFunc(function(item) {
+                let data = graphView.sm().ld();
+                if (data instanceof ht.Node) {
+                    return item.fordata === 1;
+                }
+                else {
+                    return item.fordata === 2;
+                }
+            });
+            contextmenu.addTo(graphView.getView());
+        }
+
+        /**
+         * showNodeDetails
+         * @param tag
+         * @param realtimeData
+         * @param position
+         */
+        function showNodeDetails (tag, realtimeData, position) {
+            let htmlStr = "";
+            if (realtimeData)
+                realtimeData.ztData.forEach(function (item){
+                    if (item.nodeTag === tag) {
+                        htmlStr += `
+                                            <div id = "data-display-div" style="position: absolute;top: ${position.y + 10 + "px"};left: ${position.x + 10 + "px"};height: 214px;box-sizing: border-box;opacity: 0.8;line-height: 30px;width: 280px;background-color: #fff; border: 1px solid #111;padding: 2px 5px;color: #444;border-radius: 5px;">
+                                                <div style="height: 30px; ">标签名：${tag}</div>
+                                                <div style="height: 30px; ">中文描述：${item.nodeDesc}</div>
+                                                <div style="height: 30px; ">值：${item.value}</div>
+                                                <div style="height: 30px; ">时标：${realtimeData.timestamp}</div>
+                                                <div style="height: 30px; ">质量：</div>
+                                                <div style="height: 30px; ">单位：</div>
+                                                <div style="height: 30px; ">数据库：</div>
+                                             </div>
+                                        `;
+                        let div = document.getElementById("data-display-div");
+                        if (div) {
+                            div.outerHTML = htmlStr;
+                        } else {
+                            div = document.createElement('div');
+                            div.innerHTML = htmlStr;
+                            document.getElementsByTagName('body')[0].appendChild(div);
+                        }
+                    }
+                });
+        }
+
+        function dataPretreat (data) {
+            let dataPretreat = [];
+            let timestampArr = data[0].nodeTimestamp;
+            let dataItem = {};
+            timestampArr.forEach((item, index) => {
+                let temp = {};
+                let ztData = [];
+                data.forEach(item => {
+                    ztData.push({
+                        nodeTag: item.nodeTag,
+                        nodeDesc: item.nodeDesc[0],
+                        value: item.nodeValueArray[index]
+                    });
+                });
+                dataPretreat.push({
+                    timestamp: item,
+                    ztData: ztData
+                });
+            });
+
+            return dataPretreat;
         }
     </script>
 </head>

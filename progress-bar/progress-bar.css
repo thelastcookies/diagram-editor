@@ -1,3 +1,9 @@
+#div-container {
+    position: absolute;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
 #progress-container {
     margin-top: 30px;
     width: 800px;
@@ -14,10 +20,21 @@
     box-sizing: content-box;
     border: 1px solid #9d9d9d;
     border-radius: 15px;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 #play-btn span {
-    margin-left: 9px;
-    margin-top: -3px;
+    margin-left: 7px;
+    width: 16px;
+    height: 16px;
+}
+#play-btn-icon {
+}
+.play-btn-play {
+    background-image: url('../symbols/toolbar-icon/bofang.png');
+}
+.play-btn-pause {
+    background-image: url('../symbols/toolbar-icon/zanting.png');
 }
 #progress {
     height: 20px;
