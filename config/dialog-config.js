@@ -210,35 +210,35 @@ let initNodeTrendDialog = function (){
 };
 
 let showNodeTrendDialog = function (nodeDataArr) {
-    // console.log(nodeDataArr);
+    console.log(nodeDataArr);
     initNodeTrendDialog();
 
     let nodeName = "",
-        timeStamp = [],
+        timestamp = [],
         yData = [],
         ledendData = [],
         title = "",
         series = [];
     // 设置x轴
     nodeDataArr[0].forEach(function (item, index) {
-        timeStamp.push(item.timeStamp);
+        timestamp.push(item.timestamp);
     });
     // 设置 title，lendendData，y轴，series。
     nodeDataArr.forEach(function (item, index) {
-        title += item[0].nodeTag + " ";
-        ledendData.push(item[0].nodeTag);
+        title += item[0].nodeDesc + " ";
+        ledendData.push(item[0].nodeDesc);
         item.forEach(function (item, index) {
             yData.push(item.nodeValue);
         });
         series.push({
-            name: item[0].nodeTag,
+            name: item[0].nodeDesc,
             type: 'line',
             data: yData
         });
         yData = [];
     });
 
-    title += "变化曲线";
+    title += "趋势曲线";
 
     nodeTrendDialog.show();
 
@@ -256,7 +256,7 @@ let showNodeTrendDialog = function (nodeDataArr) {
             x: 'right'
         },
         xAxis: {
-            data: timeStamp
+            data: timestamp
         },
         yAxis: {},
         series: series
@@ -265,28 +265,28 @@ let showNodeTrendDialog = function (nodeDataArr) {
 
 
 // 对话框打开所需上传的文件
-let initUploadPageDialog = function() {
-    uploadPageDialog = new ht.widget.Dialog();
-    uploadPageDialog.setConfig({
-        title: '上传',
-        content: '<input type="file" id = "uploadFile" />',
-        closable: true,
-        contentPadding: 10,
-        buttons: [{
-            label: '上传',
-            action: function(button, e) {
-                getFileAsJSON("uploadFile");
-            }
-        }],
-        buttonsAlign: 'right'//按钮居右排放
-    });
-};
-
-let showUploadPageDialog = function () {
-    if (!uploadPageDialog) initUploadPageDialog();
-
-    uploadPageDialog.show();
-};
+// let initUploadPageDialog = function() {
+//     uploadPageDialog = new ht.widget.Dialog();
+//     uploadPageDialog.setConfig({
+//         title: '上传',
+//         content: '<input type="file" id = "uploadFile" />',
+//         closable: true,
+//         contentPadding: 10,
+//         buttons: [{
+//             label: '上传',
+//             action: function(button, e) {
+//                 getFileAsJSON("uploadFile");
+//             }
+//         }],
+//         buttonsAlign: 'right'//按钮居右排放
+//     });
+// };
+//
+// let showUploadPageDialog = function () {
+//     if (!uploadPageDialog) initUploadPageDialog();
+//
+//     uploadPageDialog.show();
+// };
 
 
 // 实时数据
@@ -390,7 +390,7 @@ let showHistoryDialog = function () {
 
                 content = '<table class = "table table-hover" id = "historyTable"><thead><tr><th>#</th><th>时间</th><th>值</th></tr></thead><tbody>';
                 nodeData.forEach(function (item, index) {
-                    content += '<tr><th>' + index + '</th><td>' + item.timeStamp + '</td><td>' + item.nodeValue + '</td></tr>';
+                    content += '<tr><th>' + index + '</th><td>' + item.timestamp + '</td><td>' + item.nodeValue + '</td></tr>';
                 });
                 content += '</tbody></table>';
                 title = nodeDataArr[0][0].nodeTag + " 历史数据";

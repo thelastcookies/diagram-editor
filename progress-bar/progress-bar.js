@@ -76,9 +76,17 @@ function progressBtnMoveTo(data) {
     // 修改时间标签
     $("#progress-time").text(timestampArr[index].timestamp);
     // 修改颜色
-    for (let i = 0, len = nodeArr.length; i < len; i++) {
-        dataModel.setNodeStatusByValue(timestampArr[index].ztData);
+    dataModel.setNodeStatusByValue(timestampArr[index].ztData);
+    realtimeData = timestampArr[index];
+    let isDisplay = document.getElementById("data-display-div") ? document.getElementById("data-display-div").style.display: null;
+    if (isDisplay !== null && isDisplay !== "none") {
+        let nodeArr = timestampArr[index].ztData.filter(item => item.nodeTag === nodeSelected);
+        updateNodeDetails(nodeArr[0].value, timestampArr[index].timestamp);
     }
+
+    // for (let i = 0, len = nodeArr.length; i < len; i++) {
+    //     dataModel.setNodeStatusByValue(timestampArr[index].ztData);
+    // }
 }
 
 function mouseMove() {

@@ -90,24 +90,24 @@ let load_contextmenu_config = [
                 slModel.forEach(function (item, index) {
                     nodeTagArr.push(item.getTag());
                 });
-                $.getJSON({
-                    url: './fake-value-trend.json',
-                    success: res => {
-                        let data = res.data.ztData;
-                        showOpenPageDialog();
-                        // showNodeTrendDialog(data);
-                    }
-                });
-                // $.ajax ({
-                //     type: 'POST',
-                //     url: "http://localhost/server/node-trend.php",
-                //     data: {nodeTagArr: nodeTagArr},
-                //     dataType: "json",
-                //     success: function (nodeDataArr) {
-                //         console.log(nodeDataArr);
-                //         showNodeTrendDialog(nodeDataArr);
+                // $.getJSON({
+                //     url: './fake-value-trend.json',
+                //     success: res => {
+                //         let data = res.data.ztData;
+                //         showOpenPageDialog();
+                //         showNodeTrendDialog(data);
                 //     }
                 // });
+                $.ajax ({
+                    type: 'POST',
+                    url: "http://localhost/node-trend.php",
+                    data: {nodeTagArr: nodeTagArr},
+                    dataType: "json",
+                    success: function (nodeDataArr) {
+                        console.log(nodeDataArr);
+                        showNodeTrendDialog(nodeDataArr);
+                    }
+                });
             }
         }
     },

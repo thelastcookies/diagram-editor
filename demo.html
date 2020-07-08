@@ -11,10 +11,9 @@
     <script type="text/javascript" src="js/ht-value.js"></script>
     <script src="bootstrap-3.3.7-dist/js/jquery-3.1.1.js"></script>
     <script src="lib/plugin/ht-contextmenu.js"></script>
-    <script src="lib/plugin/ht-dialog.js"></script>
-    <script src="lib/plugin/ht-form.js"></script>
-
     <script src="lib/plugin/ht-cssanimation.js"></script>
+    <script src="lib/plugin/ht-form.js"></script>
+    <script src="lib/plugin/ht-dialog.js"></script>
     <script src="lib/plugin/ht-palette.js"></script>
     <script src="lib/plugin/ht-rulerframe.js"></script>
     <script src="lib/plugin/ht-propertypane.js"></script>
@@ -42,7 +41,8 @@
             graphView = window.graph = new ht.graph.GraphView(dataModel),
             realtimeData = null,
             json = null,
-            nodeArr = [];
+            nodeArr = [],
+            nodeSelected = null;
         let getDataIntervalID = null;
         let progressDiv = document.createElement('div');
         progressDiv.id = "div-container";
@@ -137,12 +137,13 @@
             if (realtimeData)
                 realtimeData.ztData.forEach(function (item){
                     if (item.nodeTag === tag) {
+                        nodeSelected = tag;
                         htmlStr += `
                                             <div id = "data-display-div" style="position: absolute;top: ${position.y + 10 + "px"};left: ${position.x + 10 + "px"};height: 214px;box-sizing: border-box;opacity: 0.8;line-height: 30px;width: 280px;background-color: #fff; border: 1px solid #111;padding: 2px 5px;color: #444;border-radius: 5px;">
                                                 <div style="height: 30px; ">标签名：${tag}</div>
                                                 <div style="height: 30px; ">中文描述：${item.nodeDesc}</div>
-                                                <div style="height: 30px; ">值：${item.value}</div>
-                                                <div style="height: 30px; ">时标：${realtimeData.timestamp}</div>
+                                                <div style="height: 30px; ">值：<span id="node-value-by-time">${item.value}</span></div>
+                                                <div style="height: 30px; ">时标：<span id="node-timestamp-by-time">${realtimeData.timestamp}</span></div>
                                                 <div style="height: 30px; ">质量：</div>
                                                 <div style="height: 30px; ">单位：</div>
                                                 <div style="height: 30px; ">数据库：</div>
@@ -158,6 +159,13 @@
                         }
                     }
                 });
+        }
+
+        function updateNodeDetails (value, timestamp) {
+            let nodeValueSpan = document.getElementById("node-value-by-time");
+            let nodeTimeSpan = document.getElementById("node-timestamp-by-time");
+            nodeValueSpan.innerText = value;
+            nodeTimeSpan.innerText = timestamp;
         }
 
         function dataPretreat (data) {
