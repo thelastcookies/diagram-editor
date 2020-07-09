@@ -93,6 +93,25 @@
       "s": {
         "label": ""
       }
+    },
+    {
+      "c": "ht.Text",
+      "i": 73,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "tag": "HS:fd_zt_01",
+        "position": {
+          "x": -41.81766,
+          "y": 3.86268
+        }
+      },
+      "s": {
+        "text": "0",
+        "text.align": "center",
+        "text.font": "16px arial, sans-serif",
+        "label": ""
+      }
     }
   ]
 }

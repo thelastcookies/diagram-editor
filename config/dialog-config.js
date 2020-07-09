@@ -111,10 +111,11 @@ let initNewPageDialog = function () {
         },{
             label: '确定',
             action: function(button, e) {
-                indexFileName = null;
                 indexDataModel.clear();
                 g2d.setDataModel(indexDataModel);
                 g2d.redraw();
+                if (dataModelStorage['fileName'])
+                    dataModelStorage['fileName'] = '';
                 newPageDialog.hide();
             }
         }],
@@ -140,7 +141,7 @@ let initOpenPageDialog = function() {
         buttons: [{
             label: '打开',
             action: function(button, e) {
-                getFileAsJSON("openFile");
+                dataModelStorage['fileName'] = getFileAsJSON("openFile");
             }
         }],
         buttonsAlign: 'right'//按钮居右排放
@@ -149,17 +150,38 @@ let initOpenPageDialog = function() {
 
 let showOpenPageDialog = function () {
     if (!openPageDialog) initOpenPageDialog();
-
     openPageDialog.show();
 };
 
+function fileLoadedCallback(fileData) {
+    if (indexDataModel !== undefined) {
+        dataModelStorage['fileName'] = fileData.fileName;
+        indexDataModel.clear();
+        indexDataModel.deserialize(fileData.fileData);
+
+        if(g2d) {
+            g2d.setDataModel (indexDataModel);
+            g2d.redraw ();
+            g2d.fitContent (true);
+        }
+        if(compTreeView) {
+            compTreeView.setDataModel (indexDataModel);
+            compTreeView.redraw ();
+        }
+        if (propertyPane) {
+            propertyPane.getPropertyView ().setDataModel (indexDataModel);
+            propertyPane.getPropertyView ().redraw ();
+        }
+        openPageDialog.hide();
+    }
+}
 
 // 对话框保存图纸操作
 let initSavePageDialog = function(content) {
     savePageDialog = new ht.widget.Dialog();
     savePageDialog.setConfig({
         title: '保存',
-        content: indexFileName !== null ? '文件名: <input class="filename" style="font-size: 14px;" value ="' + indexFileName + '"/>' : '文件名: <input class="filename" style="font-size: 14px;" value =""/>',
+        content: dataModelStorage['fileName'] !== '' ? '文件名: <input class="filename" style="font-size: 14px;" value ="' + dataModelStorage['fileName'] + '"/>' : '文件名: <input class="filename" style="font-size: 14px;" value =""/>',
         closable: true,
         contentPadding: 10,
         buttons: [{
@@ -171,8 +193,8 @@ let initSavePageDialog = function(content) {
             label: '保存',
             action: function(button, e) {
                 if (savePageDialog.getView().querySelector(".filename").value) {
-                    indexFileName = savePageDialog.getView().querySelector(".filename").value;
-                    saveFileAsJSON (content, indexFileName + ".cfd");
+                    dataModelStorage['fileName'] = savePageDialog.getView().querySelector(".filename").value;
+                    saveFileAsJSON (content, dataModelStorage['fileName'] + ".cfd");
                     savePageDialog.hide ();
                 }
                 else
@@ -186,7 +208,7 @@ let initSavePageDialog = function(content) {
 let showSavePageDialog = function(content) {
     // if (!savePageDialog) initSavePageDialog(content);
     initSavePageDialog(content);
-    savePageDialog.getView().querySelector(".filename").value = indexFileName;
+    // savePageDialog.getView().querySelector(".filename").value = dataModelStorage['fileName'];
     savePageDialog.show();
 };
 

@@ -61,8 +61,6 @@
     <script type="text/javascript">
         // 用于界面渲染的 dataModel
         let indexDataModel = new ht.DataModel();
-        // 用于保存文件名
-        let indexFileName = null;
         //用于保存 复制粘贴 所需节点
         let copyNodeArr = [];
         // 将编辑的内容保存在浏览器中
@@ -427,28 +425,7 @@
             }
         }
 
-        function fileLoadedCallback(fileData) {
-            if (indexDataModel !== undefined) {
-                indexFileName = fileData.fileName;
-                indexDataModel.clear();
-                indexDataModel.deserialize(fileData.fileData);
 
-                if(g2d) {
-                    g2d.setDataModel (indexDataModel);
-                    g2d.redraw ();
-                    g2d.fitContent (true);
-                }
-                if(compTreeView) {
-                    compTreeView.setDataModel (indexDataModel);
-                    compTreeView.redraw ();
-                }
-                if (propertyPane) {
-                    propertyPane.getPropertyView ().setDataModel (indexDataModel);
-                    propertyPane.getPropertyView ().redraw ();
-                }
-                openPageDialog.hide();
-            }
-        }
 
         /**
          * setContextMenu

@@ -14,6 +14,8 @@ function getFileAsJSON(fileDOMID) {
 
   	// Read file into memory as UTF-16
   	reader.readAsText(file, "UTF-8");
+
+  	return file.name;
 }
 
 function updateProgress(evt) {
