@@ -181,7 +181,7 @@ let initSavePageDialog = function(content) {
     savePageDialog = new ht.widget.Dialog();
     savePageDialog.setConfig({
         title: '保存',
-        content: dataModelStorage['fileName'] !== '' ? '文件名: <input class="filename" style="font-size: 14px;" value ="' + dataModelStorage['fileName'] + '"/>' : '文件名: <input class="filename" style="font-size: 14px;" value =""/>',
+        content: dataModelStorage['fileName'] ? '文件名: <input class="filename" style="font-size: 14px;" value ="' + dataModelStorage['fileName'] + '"/>' : '文件名: <input class="filename" style="font-size: 14px;" value =""/>',
         closable: true,
         contentPadding: 10,
         buttons: [{

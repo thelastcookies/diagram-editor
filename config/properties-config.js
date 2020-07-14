@@ -87,18 +87,19 @@ data_properties = [// 所有的节点都有的属性
         displayName: '名称',
         editable: true
     },
+    // {
+    //     name: 'tag',// 设置了 name 属性，如果没有设置 accessType 则默认通过 get/setTag 来获取和设置 tag 值
+    //     displayName: '标签',// 用于存取属性名的显示文本值，若为空则显示name属性值
+    //     editable: true// 设置该属性是否可编辑
+    // },
     {
-        name: 'tag',// 设置了 name 属性，如果没有设置 accessType 则默认通过 get/setTag 来获取和设置 tag 值
-        displayName: '标签',// 用于存取属性名的显示文本值，若为空则显示name属性值
-        editable: true// 设置该属性是否可编辑
-    },
-    {
-        name: 'label',
-        displayName: '标签值',
-        accessType: 'style',
+        name: 'node.tag',
+        displayName: '标签',
+        accessType: 'attr',
         valueType: 'text',
         editable: true// 设置该属性是否可编辑
     },
+
     // {
     //     name: 'label2',// 设置了 name 属性，如果没有设置 accessType 则默认通过 get/setTag 来获取和设置 tag 值
     //     displayName: '属性2',// 用于存取属性名的显示文本值，若为空则显示name属性值
@@ -129,6 +130,61 @@ data_properties = [// 所有的节点都有的属性
     //     editable: true
     // },
 ];
+
+zt_properties = [
+    {
+        name: 'label.opacity',
+        displayName: '柱形图标签',
+        accessType: 'style',
+        valueType: 'boolean',
+        editable: true,
+        defaultValue: false
+    },
+    {
+        name: 'label',
+        displayName: '柱形图标签',
+        accessType: 'style',
+        valueType: 'text',
+        editable: true,
+        defaultValue: 0
+    },
+    {
+        name: 'label.position',
+        displayName: '柱形图标签位置',
+        accessType: 'style',
+        editable: true,
+        defaultValue: "上",
+        enum: {
+            labels: ["上", "下", "左", "右"],
+            values: [3, 31, 14, 20]
+        }
+    },
+    {
+        name: 'zt.min',
+        displayName: '柱形图最小值',
+        accessType: 'attr',
+        editable: true,
+        valueType: 'number',
+    },
+    {
+        name: 'zt.max',
+        displayName: '柱形图最大值',
+        accessType: 'attr',
+        editable: true,
+        valueType: 'number',
+    },
+    {
+        name: 'zt.dirt',
+        displayName: '柱状图朝向',
+        accessType: 'attr',
+        editable: true,
+        defaultValue: "从下到上",
+        enum: {
+            labels: ["从下到上", "从上到下"],
+            values: ["top", "bottom"]
+        }
+    }
+]
 
 threshold_properties = [// 节点的阈值属性设置
      {

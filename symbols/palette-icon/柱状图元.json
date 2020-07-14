@@ -1,14 +1,24 @@
 {
-  "modified": "Mon Jun 29 2020 13:29:32 GMT+0800 (CST)",
+  "modified": "Mon Jul 13 2020 17:22:29 GMT+0800 (CST)",
   "dataBindings": [
     {
-      "attr": "zt.height",
-      "valueType": "Percentage"
+      "attr": "zt.value",
+      "valueType": "String"
     },
     {
       "attr": "node.type",
       "valueType": "String",
       "defaultValue": "zt"
+    },
+    {
+      "attr": "zt.max",
+      "valueType": "Number",
+      "defaultValue": 100
+    },
+    {
+      "attr": "zt.dirt",
+      "valueType": "ClipDirection",
+      "defaultValue": "top"
     }
   ],
   "width": 35,
@@ -28,8 +38,15 @@
     },
     {
       "type": "rect",
-      "background": "rgb(255,0,0)",
+      "background": {
+        "func": "__ht__function(data, view) {\nreturn data.a('zt.dirt') === 'top' ? 'rgb(255, 0, 0)': 'rgb(0, 255, 0)';\n}",
+        "value": "rgb(255,0,0)"
+      },
       "borderColor": "#979797",
+      "fillClipDirection": {
+        "func": "attr@zt.dirt",
+        "value": "top"
+      },
       "fillClipPercentage": {
         "func": "attr@zt.height",
         "value": 0.4

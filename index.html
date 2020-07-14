@@ -338,6 +338,9 @@
                 }
                 if (data instanceof ht.Node) {// node 类型
                     propertyView.addProperties(node_properties);
+                    if (data.a('node.type') === 'zt') {
+                        propertyView.addProperties(zt_properties);
+                    }
                 }
                 // if (data instanceof ht.Group) {// 组类型
                 //     propertyView.addProperties(group_properties);

@@ -24,6 +24,9 @@
       },
       "s": {
         "label": ""
+      },
+      "a": {
+        "node.tag": "HS:fd:dlq_01"
       }
     },
     {
@@ -41,6 +44,9 @@
       },
       "s": {
         "label": ""
+      },
+      "a": {
+        "node.tag": "HS:fd_01_03"
       }
     },
     {
@@ -52,12 +58,18 @@
         "tag": "HS:fd_zt_01",
         "image": "symbols/palette-icon/柱状图元.json",
         "position": {
-          "x": 113.5,
-          "y": 30
+          "x": 170.5,
+          "y": 55.5
         }
       },
       "s": {
         "label": ""
+      },
+      "a": {
+        "zt.dirt": "bottom",
+        "zt.min": -100,
+        "zt.max": 0,
+        "node.tag": "HS:fd_zt_01"
       }
     },
     {
@@ -75,6 +87,9 @@
       },
       "s": {
         "label": ""
+      },
+      "a": {
+        "node.tag": "HS:fd_01_01"
       }
     },
     {
@@ -87,30 +102,37 @@
         "image": "symbols/palette-icon/红块.json",
         "position": {
           "x": 36.5,
-          "y": 75.5
+          "y": 75
         }
       },
       "s": {
         "label": ""
+      },
+      "a": {
+        "node.tag": "HS:fd_01_02"
       }
     },
     {
-      "c": "ht.Text",
-      "i": 73,
+      "c": "ht.Node",
+      "i": 7,
       "p": {
-        "name": "文字",
+        "name": "柱状图元",
         "layer": 1,
         "tag": "HS:fd_zt_01",
+        "image": "symbols/palette-icon/柱状图元.json",
         "position": {
-          "x": -41.81766,
-          "y": 3.86268
+          "x": 170.5,
+          "y": -84.5
         }
       },
       "s": {
-        "text": "0",
-        "text.align": "center",
-        "text.font": "16px arial, sans-serif",
-        "label": ""
+        "label.opacity": true,
+        "label": "80",
+        "label.position": 3
+      },
+      "a": {
+        "zt.min": 0,
+        "node.tag": "HS:fd_zt_01"
       }
     }
   ]
