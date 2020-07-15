@@ -125,7 +125,8 @@ let load_contextmenu_config = [
                 success: function (nodeData) {
                     timestampArr = dataPretreat(nodeData);
                     console.log (timestampArr);
-                    initProgress(timestampArr);
+                    progressBar.init(timestampArr);
+                    // initProgress(timestampArr);
                     if (getDataIntervalID)
                         clearInterval(getDataIntervalID);
 

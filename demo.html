@@ -29,12 +29,12 @@
     <!--计算-->
     <script src="js/calculate.js"></script>
     <!--进度条-->
+<!--    <script src="progress-bar/progress-bar-backup.js"></script>-->
     <script src="progress-bar/progress-bar.js"></script>
 
     <script src="bootstrap-3.3.7-dist/js/jquery-3.1.1.js"></script>
 
 <!--    <script src="lib/jquery.printarea.js"></script>-->
-
 
     <script>
         let dataModel = new ht.DataModel(),
@@ -44,19 +44,21 @@
             nodeArr = [],
             nodeSelected = null;
         let getDataIntervalID = null;
-        let progressDiv = document.createElement('div');
-        progressDiv.id = "div-container";
-        progressDiv.innerHTML = `
-            <div id="progress-container">
-                <button id="play-btn" type="button" class="btn btn-default">
-                    <span id="play-btn-icon" class="play-btn-play" aria-hidden="true"></span>
-                </button>
-                <div id="progress">
-                    <div id="progress-bar" class=""  style=""></div>
-                    <div id="progress-btn"></div></div>
-                    <div id="progress-time">1970-01-01 00:00:00</div>
-                </div>`;
-        let pageMainView = new ht.widget.SplitView (graphView, progressDiv, 'v', -100);
+        let progressBar = new ProgressBar();
+        // let progressDiv = document.createElement('div');
+        // progressDiv.id = "div-container";
+        // progressDiv.innerHTML = `
+        //     <div id="progress-container">
+        //         <button id="play-btn" type="button" class="btn btn-default">
+        //             <span id="play-btn-icon" class="play-btn-play" aria-hidden="true"></span>
+        //         </button>
+        //         <div id="progress">
+        //             <div id="progress-bar" class=""  style=""></div>
+        //             <div id="progress-btn"></div></div>
+        //             <div id="progress-time">1970-01-01 00:00:00</div>
+        //         </div>`;
+        let pageMainView = new ht.widget.SplitView (graphView, progressBar.progressDiv, 'v', -100);
+        // let pageMainView = new ht.widget.SplitView (graphView, progressDiv, 'v', -100);
         pageMainView.setStatus("cr");
         pageMainView.setDividerSize(1);
 
