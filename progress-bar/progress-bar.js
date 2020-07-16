@@ -11,10 +11,18 @@ class ProgressBar {
         this.positionX = null;
         // 进度条长度
         this.progressLen = 478;
+        // 存储定时器 ID
         this.timerID = null;
+        // 主要的数据
         this.timestampArr = null;
+        // 主要的数据间隔
         this.len = null;
+        // 数据步长
         this.step = null;
+        // 默认的时间间隔
+        this.defaultTimeout = 500;
+        // 最小的时间间隔（8倍速）
+        this.minTimeout = 62.5;
         // 进度条播放时间间隔
         this.timeout = 500;
         // 进度条的 HTML 结构
@@ -23,7 +31,10 @@ class ProgressBar {
         this.progressDiv.innerHTML = `
             <div id="progress-container">
                 <button id="play-btn" type="button" class="btn">
-                    <span id="play-btn-icon" class="play-btn-play" aria-hidden="true"></span>
+                    <span id="play-btn-icon" class="play-btn-play"></span>
+                </button>
+                <button id="fast-forward-btn" type="button" class="btn" title="${this.defaultTimeout / this.timeout}倍速">
+                    <span id="fast-forward-btn-icon" class="fast-forward-btn-play"></span>
                 </button>
                 <div id="progress">
                     <div id="progress-bar" class=""  style=""></div>
@@ -31,15 +42,15 @@ class ProgressBar {
                     <div id="progress-time">1970-01-01 00:00:00</div>
                 </div>`;
     }
-    setProgressLen(len) {
-        this.progressLen = len;
-    }
-    setTimestampArr(arr) {
-        this.timestampArr = arr;
-    }
-    setTimeout(timeout) {
-        this.timeout = timeout;
-    }
+    // setProgressLen(len) {
+    //     this.progressLen = len;
+    // }
+    // setTimestampArr(arr) {
+    //     this.timestampArr = arr;
+    // }
+    // setTimeout(timeout) {
+    //     this.timeout = timeout;
+    // }
 
     /**
      * init()
@@ -75,11 +86,16 @@ class ProgressBar {
         });
         $("#play-btn").on("click", () => {
             if ($("#play-btn-icon").hasClass("play-btn-play")) {
-                this.setPlayStart();
+                this.setPlayStart(this.timeout);
             }
             else {
                 this.setPlayStop();
             }
+        });
+        $("#fast-forward-btn").on("click", () => {
+            Number(this.timeout) === this.minTimeout ? this.timeout = this.defaultTimeout: this.timeout /= 2;
+            $("#fast-forward-btn")[0].title = `${this.defaultTimeout / this.timeout}倍速`;
+            this.setPlayStart(this.timeout);
         });
     }
 
@@ -131,16 +147,19 @@ class ProgressBar {
     /**
      *
      */
-    setPlayStart() {
+    setPlayStart(timeout) {
+        clearInterval(this.timerID);
+        // 如果预计下一次播放会跳出进度条范围，则停止播放。
         if (this.positionX >= this.progressLen + this.progressX + 1) {
-            clearInterval(this.timerID);
             return;
         }
+        // 如果播放到头了，下一次播放从头开始。
         if (this.positionX <= cal(this.progressX + this.progressLen, 0.1, "+") && this.positionX >= cal(this.progressX + this.progressLen, 0.1, "-"))
         {
             this.positionX = this.progressX;
             this.progressBtnMoveTo(this.positionX);
         }
+        // 主要的播放操作
         this.timerID = setInterval(e =>{
             // let this.step = cal(this.progressLen, this.len, "/");
             if (this.positionX + this.step > cal(this.progressX + this.progressLen, 0.1, "+")) {
@@ -155,9 +174,10 @@ class ProgressBar {
             else {
                 this.positionX = cal(this.positionX, this.step, "+");
             }
+            // 进度条 btn 移动到指定位置
             this.progressBtnMoveTo(this.positionX);
 
-        }, this.timeout);
+        }, timeout);
         $("#play-btn-icon").removeClass("play-btn-play");
         $("#play-btn-icon").addClass("play-btn-pause");
     }
