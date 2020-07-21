@@ -122,7 +122,7 @@
         "image": "symbols/palette-icon/柱状图元.json",
         "position": {
           "x": 170.5,
-          "y": -84.5
+          "y": -84
         }
       },
       "s": {
@@ -133,6 +133,65 @@
       "a": {
         "zt.min": 0,
         "node.tag": "HS:fd_zt_01"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 8,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "position": {
+          "x": 24,
+          "y": -117.5
+        }
+      },
+      "s": {
+        "text.align": "center",
+        "text.font": "16px arial, sans-serif",
+        "label": ""
+      },
+      "a": {
+        "node.formula": "‘HS:text_01’ + ‘HS:fd_zt_01’"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 9,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "tag": "HS:text_01",
+        "position": {
+          "x": 23.5,
+          "y": -65
+        }
+      },
+      "s": {
+        "text.align": "center",
+        "text.font": "16px arial, sans-serif",
+        "label": ""
+      },
+      "a": {
+        "node.tag": "HS:text_01"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 10,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "position": {
+          "x": -41.5,
+          "y": -66
+        }
+      },
+      "s": {
+        "text": "被加数",
+        "text.align": "center",
+        "text.font": "16px arial, sans-serif",
+        "label": ""
       }
     }
   ]

@@ -99,6 +99,13 @@ data_properties = [// 所有的节点都有的属性
         valueType: 'text',
         editable: true// 设置该属性是否可编辑
     },
+    {
+        name: 'node.formula',
+        displayName: '公式',
+        accessType: 'attr',
+        valueType: 'text',
+        editable: true
+    },
 
     // {
     //     name: 'label2',// 设置了 name 属性，如果没有设置 accessType 则默认通过 get/setTag 来获取和设置 tag 值

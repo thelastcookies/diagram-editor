@@ -232,33 +232,37 @@ let initNodeTrendDialog = function (){
 };
 
 let showNodeTrendDialog = function (nodeDataArr) {
-    console.log(nodeDataArr);
+    // console.log(nodeDataArr);
     initNodeTrendDialog();
-
     let nodeName = "",
         timestamp = [],
         yData = [],
         ledendData = [],
         title = "",
         series = [];
-    // 设置x轴
-    nodeDataArr[0].forEach(function (item, index) {
-        timestamp.push(item.timestamp);
-    });
-    // 设置 title，lendendData，y轴，series。
-    nodeDataArr.forEach(function (item, index) {
-        title += item[0].nodeDesc + " ";
-        ledendData.push(item[0].nodeDesc);
-        item.forEach(function (item, index) {
-            yData.push(item.nodeValue);
+
+    let slCount = dataModel.sm().getSelection().length;
+    let nodeCount = nodeDataArr.length;
+    // 设置 title，lendendData，x轴，y轴，series。
+    for (let i = 0; i < slCount; i++) {
+        let nodeDesc = "";
+        nodeDataArr.slice(i * (nodeCount / slCount), (i + 1) * (nodeCount / slCount)).forEach((item, index) => {
+            if (i === 0) timestamp.push(item.timestamp);
+            if (index === 0) {
+                nodeDesc = item.nodeDesc;
+                title += item.nodeDesc + " ";
+                ledendData.push(item.nodeDesc);
+            }
+            yData.push(item.value);
+
         });
         series.push({
-            name: item[0].nodeDesc,
+            name: nodeDesc,
             type: 'line',
             data: yData
         });
         yData = [];
-    });
+    }
 
     title += "趋势曲线";
 

@@ -213,6 +213,10 @@ toolbar_config_right = [
         },
         toolTip: '保存',
         action: function() {
+            indexDataModel.each(item => {
+                if (item.a('node.tag'))
+                    item.setTag(item.a('node.tag'));
+            });
             showSavePageDialog(indexDataModel.serialize(2));
         }
     },

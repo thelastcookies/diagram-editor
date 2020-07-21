@@ -124,6 +124,7 @@ class ProgressBar {
         // 修改时间标签
         $("#progress-time").text(this.timestampArr[index].timestamp);
         // 修改颜色
+        this.timestampArr[index].ztData = dataModel.formulaPreprocess(this.timestampArr[index].ztData);
         dataModel.setNodeStatusByValue(this.timestampArr[index].ztData);
         realtimeData = this.timestampArr[index];
         let isDisplay = document.getElementById("data-display-div") ? document.getElementById("data-display-div").style.display: null;

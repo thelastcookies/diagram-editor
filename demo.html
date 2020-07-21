@@ -7,6 +7,8 @@
     <style>
     </style>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script type="text/javascript" src="js/identifier.js"></script>
+    <script type="text/javascript" src="js/math.js"></script>
     <script type="text/javascript" src="lib/core/ht.js"></script>
     <script type="text/javascript" src="js/ht-value.js"></script>
     <script src="bootstrap-3.3.7-dist/js/jquery-3.1.1.js"></script>
@@ -39,7 +41,7 @@
     <script>
         let dataModel = new ht.DataModel(),
             graphView = window.graph = new ht.graph.GraphView(dataModel),
-            realtimeData = null,
+            realtimeData = [],
             json = null,
             nodeArr = [],
             nodeSelected = null;
@@ -96,13 +98,27 @@
                     // graphView.addToDOM(container);
                     graphView.fitContent(true);
                     getDataIntervalID = setInterval(() => {
-                        $.getJSON({
-                            url: 'WebServer/server/fake-value.json',
-                            success: res => {
-                                realtimeData = res.data;
-                                dataModel.setNodeStatusByValue(realtimeData.ztData);
+                        $.ajax ({
+                            type: 'POST',
+                            url: "http://localhost/node-trend.php",
+                            data: {nodeTagArr: nodeArr, timestamp: '2020-07-01 00:00:00'},
+                            dataType: "json",
+                            success: function (res) {
+                                // realtimeData = [];
+                                // nodeDataArr.forEach((item) => {
+                                //     realtimeData.push(item[0]);
+                                // });
+                                realtimeData = dataModel.formulaPreprocess(res);
+                                dataModel.setNodeStatusByValue(realtimeData);
                             }
                         });
+                        // $.getJSON({
+                        //     url: 'WebServer/server/fake-value.json',
+                        //     success: res => {
+                        //         realtimeData = res.data;
+                        //         dataModel.setNodeStatusByValue(realtimeData.ztData);
+                        //     }
+                        // });
                     }, 3000);
                 }
             });
@@ -137,15 +153,15 @@
         function showNodeDetails (tag, realtimeData, position) {
             let htmlStr = "";
             if (realtimeData)
-                realtimeData.ztData.forEach(function (item){
-                    if (item.nodeTag === tag) {
+                for (let i = 0, len = realtimeData.length; i < len; i++) {
+                    if (realtimeData[i].nodeTag === tag) {
                         nodeSelected = tag;
                         htmlStr += `
                                             <div id = "data-display-div" style="position: absolute;top: ${position.y + 10 + "px"};left: ${position.x + 10 + "px"};height: 214px;box-sizing: border-box;opacity: 0.8;line-height: 30px;width: 280px;background-color: #fff; border: 1px solid #111;padding: 2px 5px;color: #444;border-radius: 5px;">
                                                 <div style="height: 30px; ">标签名：${tag}</div>
-                                                <div style="height: 30px; ">中文描述：${item.nodeDesc}</div>
-                                                <div style="height: 30px; ">值：<span id="node-value-by-time">${item.value}</span></div>
-                                                <div style="height: 30px; ">时标：<span id="node-timestamp-by-time">${realtimeData.timestamp}</span></div>
+                                                <div style="height: 30px; ">中文描述：${realtimeData[i].nodeDesc}</div>
+                                                <div style="height: 30px; ">值：<span id="node-value-by-time">${realtimeData[i].value}</span></div>
+                                                <div style="height: 30px; ">时标：<span id="node-timestamp-by-time">${realtimeData[i].timestamp}</span></div>
                                                 <div style="height: 30px; ">质量：</div>
                                                 <div style="height: 30px; ">单位：</div>
                                                 <div style="height: 30px; ">数据库：</div>
@@ -159,8 +175,9 @@
                             div.innerHTML = htmlStr;
                             document.getElementsByTagName('body')[0].appendChild(div);
                         }
+                        return ;
                     }
-                });
+                }
         }
 
         function updateNodeDetails (value, timestamp) {
