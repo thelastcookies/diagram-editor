@@ -3,7 +3,7 @@ header("Access-Control-Allow-Origin: *");
 header("content-type:text/html;charset=utf-8"); 
 class NodeData{
 	public $nodeTag = null;
-	public $nodeValue = null;
+	public $value = null;
 	public $timestamp = null;
 }
 
@@ -20,24 +20,25 @@ mysqli_set_charset($con, 'utf8');
 if(isset($_POST['nodeTagArr'])) {
 	$nodeTagArr = $_POST['nodeTagArr'];
 	// $nodeTagArr = ["ZB0001", "KG0001"];
+	$timestamp = $_POST['timestamp'];
 	$nodeDataArr = array();
 	foreach ($nodeTagArr as &$value) {
 		if(strlen($value) > 0) {
-	
+			if ($timestamp)
+			$sql = "SELECT NODE_VALUE, TIME_STAMP, NODE_DESC FROM FAKE_NODE_VALUE WHERE NODE_TAG = '$value' AND TIME_STAMP = '$timestamp'";
+		else
 			$sql = "SELECT NODE_VALUE, TIME_STAMP, NODE_DESC FROM FAKE_NODE_VALUE WHERE NODE_TAG = '$value'";
 			$result = mysqli_query($con, $sql);
-			$dataArr = array();
 			while($row = mysqli_fetch_array($result, MYSQLI_ASSOC))
 			{
 				$temp = new NodeData;
 				$temp -> nodeTag = $value;
-				$temp -> nodeValue = $row['NODE_VALUE'];
+				$temp -> value = $row['NODE_VALUE'];
 				$temp -> timestamp = $row['TIME_STAMP'];
 				$temp -> nodeDesc = $row['NODE_DESC'];
-				array_push($dataArr, $temp);
+				array_push($nodeDataArr, $temp);
 			}
 		}
-		array_push($nodeDataArr, $dataArr);
 	}
 	echo json_encode($nodeDataArr);
 }
