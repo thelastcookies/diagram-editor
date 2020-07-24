@@ -115,41 +115,24 @@ let load_contextmenu_config = [
         label: "查看历史回放",
         fordata: 2,
         action: function(item, event) {
-            let nodeArr = dataModel.getNodeTags();
-            // let mainView = document.getElementsByClassName("main")[0];
-            $.ajax ({
-                type: 'POST',
-                url: "http://localhost/trend.php",
-                data: {"nodeTagArray": nodeArr},
-                dataType: "json",
-                success: function (nodeData) {
-                    timestampArr = dataPretreat(nodeData);
-                    console.log (timestampArr);
-                    progressBar.init(timestampArr);
-                    // initProgress(timestampArr);
-                    if (getDataIntervalID)
-                        clearInterval(getDataIntervalID);
-
-                    if (pageMainView) {
-                        pageMainView.setStatus("normal");
-                        graphView.fitContent(true);
-                    }
-                    else {
-                        // initProgress(timestampArr);
-                        graphView.fitContent(true);
-                    }
-                }
-            });
+            getHistoryData();
+        },
+        disabled: function (item) {
+            return progressBar.flag;
         }
     },
     {
         label: "关闭历史回放",
         fordata: 2,
         action: function(item, event) {
+            progressBar.destroy();
             pageMainView.setStatus("cr");
             graphView.fitContent(true);
-            sendNodeAndRefresh(diagramDM, nodeArr);
+            getRealTimeData();
             // progressSplit.
+        },
+        disabled: function (item) {
+            return !progressBar.flag;
         }
     }
 ];

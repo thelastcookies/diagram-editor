@@ -41,12 +41,17 @@
     <script>
         let dataModel = new ht.DataModel(),
             graphView = window.graph = new ht.graph.GraphView(dataModel),
-            realtimeData = [],
+            // 用于当前展示使用的数据
+            dataToUse = [],
+            historyData = [],
             json = null,
             nodeArr = [],
             nodeSelected = null;
         let getDataIntervalID = null;
         let progressBar = new ProgressBar();
+        let startTime = '2020-07-01 00:00:00',
+            endTime = '2020-07-01 00:11:00',
+            interval = 60;
         // let progressDiv = document.createElement('div');
         // progressDiv.id = "div-container";
         // progressDiv.innerHTML = `
@@ -72,7 +77,7 @@
                         window.location.href = 'index.html';
                     }
                 } else if (e.kind === 'doubleClickData') {
-                    showNodeDetails (e.data.getTag(), realtimeData, {x: e.event.x, y: e.event.y});
+                    showNodeDetails (e.data.getTag(), dataToUse, {x: e.event.x, y: e.event.y});
                 } else if (e.kind === 'clickBackground') {
                     let div = document.getElementById("data-display-div");
                     if (div)
@@ -81,12 +86,12 @@
             });
             // 配置右键菜单
             setContextMenu(load_contextmenu_config, graphView);
-
             $.getJSON({
                 url: './test.cfd',
                 success: res => {
                     json = res;
                     dataModel.deserialize(json);
+
                     nodeArr = dataModel.getNodeTags();
                     let node = new ht.Node();
                     graphView.setMovableFunc(function() {});
@@ -97,29 +102,67 @@
                     pageMainView.addToDOM(container);
                     // graphView.addToDOM(container);
                     graphView.fitContent(true);
-                    getDataIntervalID = setInterval(() => {
-                        $.ajax ({
-                            type: 'POST',
-                            url: "http://localhost/node-trend.php",
-                            data: {nodeTagArr: nodeArr, timestamp: '2020-07-01 00:00:00'},
-                            dataType: "json",
-                            success: function (res) {
-                                // realtimeData = [];
-                                // nodeDataArr.forEach((item) => {
-                                //     realtimeData.push(item[0]);
-                                // });
-                                realtimeData = dataModel.formulaPreprocess(res);
-                                dataModel.setNodeStatusByValue(realtimeData);
-                            }
-                        });
-                        // $.getJSON({
-                        //     url: 'WebServer/server/fake-value.json',
-                        //     success: res => {
-                        //         realtimeData = res.data;
-                        //         dataModel.setNodeStatusByValue(realtimeData.ztData);
-                        //     }
+                    getRealTimeData();
+                }
+            });
+        }
+
+        function getRealTimeData() {
+            getDataIntervalID = setInterval(() => {
+                $.ajax ({
+                    type: 'POST',
+                    url: "http://localhost/node-trend.php",
+                    data: {nodeTagArr: nodeArr, timestamp: '2020-07-01 00:00:00'},
+                    dataType: "json",
+                    success: function (res) {
+                        // dataToUse = [];
+                        // nodeDataArr.forEach((item) => {
+                        //     dataToUse.push(item[0]);
                         // });
-                    }, 3000);
+                        dataToUse = dataModel.formulaPreprocess(res);
+                        dataModel.setNodeStatusByValue(dataToUse);
+                    }
+                });
+                // $.getJSON({
+                //     url: 'WebServer/server/fake-value.json',
+                //     success: res => {
+                //         dataToUse = res.data;
+                //         dataModel.setNodeStatusByValue(dataToUse.ztData);
+                //     }
+                // });
+            }, 3000);
+        }
+
+        function getHistoryData() {
+            let nodeArr = dataModel.getNodeTags();
+            // let mainView = document.getElementsByClassName("main")[0];
+            $.ajax ({
+                type: 'POST',
+                url: "http://localhost/node-trend.php",
+                data: {
+                    "nodeTagArr": nodeArr,
+                    "startTime": startTime,
+                    "endTime": endTime,
+                    "interval": interval
+                },
+                dataType: "json",
+                success: function (nodeData) {
+                    let dateResult = dataPretreat(nodeData, startTime, endTime, interval);
+                    historyData = dateResult.data;
+                    progressBar.init(dateResult.timestampArr, progressCallback);
+
+                    // initProgress(timestampArr);
+                    if (getDataIntervalID)
+                        clearInterval(getDataIntervalID);
+
+                    if (pageMainView) {
+                        pageMainView.setStatus("normal");
+                        graphView.fitContent(true);
+                    }
+                    else {
+                        // initProgress(timestampArr);
+                        graphView.fitContent(true);
+                    }
                 }
             });
         }
@@ -147,21 +190,21 @@
         /**
          * showNodeDetails
          * @param tag
-         * @param realtimeData
+         * @param dataToUse
          * @param position
          */
-        function showNodeDetails (tag, realtimeData, position) {
+        function showNodeDetails (tag, data, position) {
             let htmlStr = "";
-            if (realtimeData)
-                for (let i = 0, len = realtimeData.length; i < len; i++) {
-                    if (realtimeData[i].nodeTag === tag) {
+            if (data)
+                for (let i = 0, len = data.length; i < len; i++) {
+                    if (data[i].nodeTag === tag) {
                         nodeSelected = tag;
                         htmlStr += `
                                             <div id = "data-display-div" style="position: absolute;top: ${position.y + 10 + "px"};left: ${position.x + 10 + "px"};height: 214px;box-sizing: border-box;opacity: 0.8;line-height: 30px;width: 280px;background-color: #fff; border: 1px solid #111;padding: 2px 5px;color: #444;border-radius: 5px;">
                                                 <div style="height: 30px; ">标签名：${tag}</div>
-                                                <div style="height: 30px; ">中文描述：${realtimeData[i].nodeDesc}</div>
-                                                <div style="height: 30px; ">值：<span id="node-value-by-time">${realtimeData[i].value}</span></div>
-                                                <div style="height: 30px; ">时标：<span id="node-timestamp-by-time">${realtimeData[i].timestamp}</span></div>
+                                                <div style="height: 30px; ">中文描述：${data[i].nodeDesc}</div>
+                                                <div style="height: 30px; ">值：<span id="node-value-by-time">${data[i].value}</span></div>
+                                                <div style="height: 30px; ">时标：<span id="node-timestamp-by-time">${data[i].timestamp}</span></div>
                                                 <div style="height: 30px; ">质量：</div>
                                                 <div style="height: 30px; ">单位：</div>
                                                 <div style="height: 30px; ">数据库：</div>
@@ -187,28 +230,41 @@
             nodeTimeSpan.innerText = timestamp;
         }
 
-        function dataPretreat (data) {
-            let dataPretreat = [];
-            let timestampArr = data[0].nodeTimestamp;
-            let dataItem = {};
-            timestampArr.forEach((item, index) => {
-                let temp = {};
-                let ztData = [];
-                data.forEach(item => {
-                    ztData.push({
-                        nodeTag: item.nodeTag,
-                        nodeDesc: item.nodeDesc[0],
-                        value: item.nodeValueArray[index]
-                    });
-                });
-                dataPretreat.push({
-                    timestamp: item,
-                    ztData: ztData
-                });
-            });
+        function dataPretreat (data, stTime, edTime, interval) {
+            let timeStepCount = (Date.parse(edTime) - Date.parse(stTime)) / 1000 / interval;
+            let dmCount = dataModel.getOriginNode().length;
 
-            return dataPretreat;
+            let timestampArr = [],
+                dataPretreat = [];
+
+            for (let i = 0; i < timeStepCount; i++) {
+                dataPretreat.push(data.filter((item, index) => {
+                    return (index - i) % timeStepCount === 0
+                }));
+                timestampArr.push(dataPretreat[i][0].timestamp);
+            }
+
+            return {
+                data: dataPretreat,
+                timestampArr: timestampArr
+            };
         }
+
+        function progressCallback(index) {
+            dataToUse = dataModel.formulaPreprocess(historyData[index]);
+            dataModel.setNodeStatusByValue(dataToUse);
+            let isDisplay = document.getElementById("data-display-div") ? document.getElementById("data-display-div").style.display: null;
+            if (isDisplay !== null && isDisplay !== "none") {
+                let nodeArr = dataToUse.filter(item => item.nodeTag === nodeSelected);
+                updateNodeDetails(nodeArr[0].value, dataToUse[0].timestamp);
+            }
+
+            // for (let i = 0, this.len = nodeArr.this.length; i < this.len; i++) {
+            //     dataModel.setNodeStatusByValue(this.timestampArr[index].ztData);
+            // }
+        }
+
+
     </script>
 </head>
 <body onload="init();">

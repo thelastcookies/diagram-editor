@@ -71,11 +71,26 @@ ht.DataModel.prototype.setNodeStatusByValue = function(json) {
 ht.DataModel.prototype.getDataByNodeTag = function(tag) {
     let dm = this,
         res = [];
-    dm.each(function (item) {
+    dm.each(item => {
         if (item.a('node.tag') === tag) res.push(item);
     });
     return res;
 };
+
+/**
+ * ht.DataModel 的扩展方法
+ * 获取 DataModel 中所有含有 node.tag 属性的组件。
+ * @returns {[]} - 返回所有含有 node.tag 属性的组件数组
+ */
+ht.DataModel.prototype.getOriginNode = function () {
+    let dm = this,
+        res = [];
+    dm.each(item => {
+        if (item.a('node.tag')) res.push(item);
+    });
+    return res;
+};
+
 
 /**
  * (Old)
