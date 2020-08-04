@@ -54,6 +54,7 @@
     <script src="config/datamodel-config.js"></script>
     <!--数字计算-->
     <script src="js/calculate.js"></script>
+    <script src="components/tableHandle.js"></script>
 
     <!--json图片-->
     <!--    <script src="js/predefine.js"></script>-->
@@ -311,6 +312,8 @@
                     return 'symbols/line.json';
                 } else if (data instanceof ht.Shape) {
                     return 'symbols/polyline.json';
+                } else if (data.getName() === '表格') {
+                    return 'symbols/palette-icon/table-icon.json';
                 }
                 var img = data.getImage();
                 return img ? img : oldGetIconFunc.apply(this, arguments);
@@ -333,15 +336,19 @@
                     return;// 设置文本类型不显示其他数据
                 }
                 if (data instanceof ht.Data) {// data 类型，所有的节点都基于这个类型
-                    propertyView.addProperties(threshold_properties);
+                    // propertyView.addProperties(threshold_properties);
                     propertyView.addProperties(data_properties);
                 }
                 if (data instanceof ht.Node) {// node 类型
-                    propertyView.addProperties(node_properties);
                     if (data.a('node.type') === 'zt') {
                         propertyView.addProperties(zt_properties);
                     }
+                    if (data.a('node.type') === 'table') {
+                        propertyView.addProperties(table_properties);
+                    }
+                    propertyView.addProperties(node_properties);
                 }
+
                 // if (data instanceof ht.Group) {// 组类型
                 //     propertyView.addProperties(group_properties);
                 // }
@@ -416,6 +423,9 @@
                         "text.vAlign": "middle",
                         "text.font": "16px arial, sans-serif",
                     })
+                }
+                else if (item.name === "表格") {
+                    node.setImage('symbols/palette-icon/table.json');
                 }
                 else {
                     node.setImage(image);

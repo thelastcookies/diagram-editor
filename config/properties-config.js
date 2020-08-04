@@ -1,4 +1,8 @@
-text_properties = [// 文本的属性
+/**
+ * 文本的属性
+ * @type {*[]}
+ */
+text_properties = [
     {
         categoryName: '文本',
         name: 'text',
@@ -78,7 +82,11 @@ text_properties = [// 文本的属性
     },
 ];
 
-data_properties = [// 所有的节点都有的属性
+/**
+ * 所有的节点都有的属性
+ * @type {*[]}
+ */
+data_properties = [
     {
         name: 'id'
     },
@@ -138,8 +146,13 @@ data_properties = [// 所有的节点都有的属性
     // },
 ];
 
+/**
+ * 柱状图的特殊属性
+ * @type {*[]}
+ */
 zt_properties = [
     {
+        categoryName: '柱状图',
         name: 'label.opacity',
         displayName: '柱形图标签',
         accessType: 'style',
@@ -148,6 +161,7 @@ zt_properties = [
         defaultValue: false
     },
     {
+        categoryName: '柱状图',
         name: 'label',
         displayName: '柱形图标签',
         accessType: 'style',
@@ -156,6 +170,7 @@ zt_properties = [
         defaultValue: 0
     },
     {
+        categoryName: '柱状图',
         name: 'label.position',
         displayName: '柱形图标签位置',
         accessType: 'style',
@@ -167,6 +182,7 @@ zt_properties = [
         }
     },
     {
+        categoryName: '柱状图',
         name: 'zt.min',
         displayName: '柱形图最小值',
         accessType: 'attr',
@@ -174,6 +190,7 @@ zt_properties = [
         valueType: 'number',
     },
     {
+        categoryName: '柱状图',
         name: 'zt.max',
         displayName: '柱形图最大值',
         accessType: 'attr',
@@ -181,6 +198,7 @@ zt_properties = [
         valueType: 'number',
     },
     {
+        categoryName: '柱状图',
         name: 'zt.dirt',
         displayName: '柱状图朝向',
         accessType: 'attr',
@@ -193,7 +211,124 @@ zt_properties = [
     }
 ]
 
-threshold_properties = [// 节点的阈值属性设置
+/**
+ * 表格的特殊属性
+ * @type {*[]}
+ */
+table_properties = [
+    {
+        categoryName: '表格',
+        displayName: '表格行数',
+        valueType: 'number',
+        editable: true,
+        getValue: function (data) {
+            return JSON.parse(data.a("table.dataSource")).length;
+        },
+        setValue: function(data, property, value, view){
+            let oldData = JSON.parse(data.a("table.dataSource"));
+            let oldLen = oldData.length;
+            if (Number(value) === 0) value = 1;
+            if (Number(value) === Number(oldLen))
+                return;
+            data.a("table.dataSource", JSON.stringify(new Array(value).fill({})));
+        },
+    },
+    {
+        categoryName: '表格',
+        displayName: '表格列数',
+        valueType: 'number',
+        editable: true,
+        getValue: function (data) {
+            return JSON.parse(data.a("table.columns")).length;
+        },
+        setValue: function(data, property, value, view){
+            let oldData = JSON.parse(data.a("table.columns"));
+            let oldLen = oldData.length;
+            if (Number(value) === 0) value = 1;
+            if (Number(value) === Number(oldLen))
+                return;
+            for (let i = 1, len = Math.abs(value - oldLen); i <= len; i++) {
+                value > oldLen ? oldData.push({"key": `column${oldLen + i}`}): oldData.pop();
+            }
+            data.a("table.columns", JSON.stringify(oldData));
+        }
+    },
+    {
+        categoryName: '表格',
+        name: "table.head.height",
+        displayName: '表头行高',
+        accessType: 'attr',
+        valueType: 'number',
+        editable: true,
+    },{
+        categoryName: '表格',
+        name: "table.body.height",
+        displayName: '表格行高',
+        accessType: 'attr',
+        valueType: 'number',
+        editable: true,
+    },
+    {
+        categoryName: '表格',
+        name: "table.head.background",
+        displayName: '表头背景色',
+        accessType: 'attr',
+        valueType: 'color',
+        editable: true,
+        // defaultValue: 'rgba(212,212,212, 1)'
+    },
+    {
+        categoryName: '表格',
+        name: "table.body.background",
+        displayName: '表格背景色',
+        accessType: 'attr',
+        valueType: 'color',
+        editable: true,
+    },
+    {
+        categoryName: '表格',
+        name: "table.border.width",
+        displayName: '表格边框宽度',
+        accessType: 'attr',
+        valueType: 'number',
+        editable: true,
+    },
+    {
+        categoryName: '表格',
+        name: "table.border.color",
+        displayName: '表格边框颜色',
+        accessType: 'attr',
+        valueType: 'color',
+        editable: true,
+    },
+    {
+        categoryName: '表格',
+        name: "table.columns",
+        displayName: '表格列设置(JSON)',
+        accessType: 'attr',
+        valueType: 'Object',
+        editable: true,
+        defaultValue: [],
+        setValue: function(data) {
+            console.log(data);
+        }
+    },
+    {
+        categoryName: '表格',
+        name: "table.dataSource",
+        displayName: '表格数据设置(JSON)',
+        accessType: 'attr',
+        valueType: 'Object',
+        editable: true,
+        defaultValue: [],
+    }
+];
+
+/**
+ * 节点的阈值属性设置
+ * @type {*[]}
+ */
+threshold_properties = [
      {
         categoryName: '阈值设置',
         name: 'threshold',
@@ -239,7 +374,11 @@ threshold_properties = [// 节点的阈值属性设置
     // }
 ];
 
-node_properties = [// node 节点的属性
+/**
+ * node 节点的属性
+ * @type {*[]}
+ */
+node_properties = [
     {
         categoryName: '节点属性',
         displayName: '宽度',
@@ -260,7 +399,7 @@ node_properties = [// node 节点的属性
     },
     {
         categoryName: '节点属性',
-        displayName: '位置坐标X',
+        displayName: '中心位置坐标X',
         name: 'position',
         getValue: function(data){
             return parseInt(data.getPosition().x);
@@ -268,7 +407,7 @@ node_properties = [// node 节点的属性
     },
     {
         categoryName: '节点属性',
-        displayName: '位置坐标Y',
+        displayName: '中心位置坐标Y',
         name: 'position',
         getValue: function(data){
             return parseInt(data.getPosition().y);
@@ -285,7 +424,11 @@ node_properties = [// node 节点的属性
     }
 ];
 
-group_properties = [// 组的属性
+/**
+ * 组的属性
+ * @type {*[]}
+ */
+group_properties = [
     {
         categoryName: '组',
         displayName: '展开',
@@ -477,7 +620,11 @@ group_properties = [// 组的属性
     }
 ];
 
-edge_properties = [// 连线的属性
+/**
+ * 连线的属性
+ * @type {*[]}
+ */
+edge_properties = [
     {
         name: 'edge.color',
         displayName: '连线颜色',
@@ -494,7 +641,11 @@ edge_properties = [// 连线的属性
     }
 ];
 
-shape_properties = [// 折线的属性
+/**
+ * 折线的属性
+ * @type {*[]}
+ */
+shape_properties = [
     {
         name: 'shape.border.color',
         displayName: '折线颜色',
