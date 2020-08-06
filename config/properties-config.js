@@ -255,6 +255,55 @@ table_properties = [
     },
     {
         categoryName: '表格',
+        displayName: '表格列宽设定',
+        valueType: 'text',
+        editable: true,
+        getValue: function (data) {
+            let columns = JSON.parse(data.a("table.columns"));
+            let arrTemp = [];
+            columns.forEach(item => {
+               arrTemp.push(item.width? item.width: 120);
+            });
+            let count = 1;
+            let res = arrTemp.flatMap((item, index, arr) => {
+                // if (index === 0) return [];
+                // if (index === arr.length - 1){
+                //     return count === 1 ? [item]: [`${item} * ${count}`];
+                // }
+                if (item === arr[index + 1]) {
+                    count++;
+                } else if (item !== arr[index + 1]) {
+                    let res = count === 1 ? [item]: [`${item} * ${count}`];
+                    count = 1;
+                    return res;
+                }
+                return [];
+            }).join(', ');
+            return res;
+        },
+        setValue: function(data, property, value, view){
+            let arrTemp = [], count = 0;
+            let oldData = JSON.parse(data.a("table.columns"));
+            try {
+                arrTemp = value.split(',');
+            } catch (e) {
+                alert("列宽设置格式出错");
+                return;
+            }
+            arrTemp.forEach((item, index) => {
+                let arr = item.replace(/ /g, '').split('*');
+                for (let i = 0; i < (Number(arr[1]) ? Number(arr[1]): 1); i++) {
+                    if (count >= oldData.length)
+                        return;
+                    oldData[count]['width'] = Number(arr[0]);
+                    count++;
+                }
+            });
+            data.a("table.columns", JSON.stringify(oldData));
+        }
+    },
+    {
+        categoryName: '表格',
         name: "table.head.height",
         displayName: '表头行高',
         accessType: 'attr',
