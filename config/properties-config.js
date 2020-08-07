@@ -433,6 +433,7 @@ node_properties = [
         displayName: '宽度',
         name: 'width',
         valueType: 'number',
+        editable: true,
         getValue: function(data){
             return parseInt(data.getWidth());
         }
@@ -442,6 +443,7 @@ node_properties = [
         displayName: '高度',
         name: 'height',
         valueType: 'number',
+        editable: true,
         getValue: function(data){
             return parseInt(data.getHeight());
         }
@@ -711,3 +713,45 @@ shape_properties = [
     }
 ];
 
+/**
+ *
+ */
+chart_properties = [
+    {
+        categoryName: '图表',
+        displayName: '表格行数',
+        valueType: 'number',
+        editable: true,
+        getValue: function (data) {
+            return JSON.parse(data.a("table.dataSource")).length;
+        },
+        setValue: function(data, property, value, view){
+            let oldData = JSON.parse(data.a("table.dataSource"));
+            let oldLen = oldData.length;
+            if (Number(value) === 0) value = 1;
+            if (Number(value) === Number(oldLen))
+                return;
+            data.a("table.dataSource", JSON.stringify(new Array(value).fill({})));
+        },
+    },
+    {
+        categoryName: '表格',
+        displayName: '表格列数',
+        valueType: 'number',
+        editable: true,
+        getValue: function (data) {
+            return JSON.parse(data.a("table.columns")).length;
+        },
+        setValue: function(data, property, value, view){
+            let oldData = JSON.parse(data.a("table.columns"));
+            let oldLen = oldData.length;
+            if (Number(value) === 0) value = 1;
+            if (Number(value) === Number(oldLen))
+                return;
+            for (let i = 1, len = Math.abs(value - oldLen); i <= len; i++) {
+                value > oldLen ? oldData.push({"key": `column${oldLen + i}`}): oldData.pop();
+            }
+            data.a("table.columns", JSON.stringify(oldData));
+        }
+    },
+];

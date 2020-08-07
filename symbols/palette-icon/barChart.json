@@ -1,0 +1,80 @@
+{
+  "modified": "Thu Aug 06 2020 15:57:59 GMT+0800 (CST)",
+  "dataBindings": [
+    {
+      "attr": "node.type",
+      "valueType": "String",
+      "defaultValue": "barChart"
+    }
+  ],
+  "width": 650,
+  "height": 380,
+  "comps": [
+    {
+      "type": "columnChart",
+      "rect": [10, 60, 630, 260],
+      "label": true,
+      "labelColor": "#20284C",
+      "labelFont": "10px Arial",
+      "series": [
+        {
+          "color": "#20284C",
+          "values": [471, 482, 567, 525, 590, 637, 780, 679, 848]
+        }
+      ]
+    },
+    {
+      "type": "rect",
+      "rect": [0, 0, 650, 40],
+      "background": "#566CB0"
+    },
+    {
+      "type": "text",
+      "rect": [16, 0, 600, 40],
+      "align": "left",
+      "font": "20px Arial",
+      "color": "white",
+      "text": "BarChart Sample"
+    },
+    {
+      "type": "rect",
+      "rect": [40, 70, 16, 16],
+      "background": "#20284C"
+    },
+    {
+      "type": "text",
+      "rect": [60, 70, 0, 16],
+      "align": "left",
+      "text": "Legend"
+    },
+    {
+      "type": "text",
+      "rect": [55, 322, 0, 16],
+      "align": "center",
+      "text": "Data1"
+    },
+    {
+      "type": "text",
+      "rect": [124, 322, 0, 16],
+      "align": "center",
+      "text": "Data2"
+    },
+    {
+      "type": "rect",
+      "rect": [15, 320, 620, 1],
+      "background": "#566CB0"
+    },
+    {
+      "type": "rect",
+      "rect": [0, 340, 650, 40],
+      "background": "566CB0"
+    },
+    {
+      "type": "text",
+      "rect": [0, 340, 640, 40],
+      "align": "right",
+      "font": "20px Arial",
+      "color": "white"
+    }
+  ]
+}

@@ -5,6 +5,8 @@ palette_config = {
             { name: '文字', image: '__text__', type: ht.Text },
             { name: '坐标点', image: 'symbols/palette-icon/坐标点.json', type: ht.Node},
             { name: '表格', image: 'symbols/palette-icon/table-icon.json', type: ht.Node},
+            { name: '柱形图', image: 'symbols/palette-icon/barChart-icon.json', type: ht.Node},
+            { name: '折线图', image: 'symbols/palette-icon/lineChart-icon.json', type: ht.Node},
             { name: '开关', image: 'symbols/palette-icon/开关.json', type: ht.Node},
             { name: '旋钮开关', image: 'symbols/palette-icon/旋钮开关.json', type: ht.Node},
             { name: '圆上半', image: 'symbols/palette-icon/圆上半.json', type: ht.Node},

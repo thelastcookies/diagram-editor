@@ -427,6 +427,12 @@
                 else if (item.name === "表格") {
                     node.setImage('symbols/palette-icon/table.json');
                 }
+                else if (item.name === "柱形图") {
+                    node.setImage('symbols/palette-icon/barChart.json');
+                }
+                else if (item.name === "折线图") {
+                    node.setImage('symbols/palette-icon/lineChart-icon.json');
+                }
                 else {
                     node.setImage(image);
                 }
@@ -438,7 +444,9 @@
             }
         }
 
-
+        // function setChart(node, type) {
+        //     node.setImage('chart', );
+        // }
 
         /**
          * setContextMenu
