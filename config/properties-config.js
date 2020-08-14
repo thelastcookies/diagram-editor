@@ -725,7 +725,7 @@ chart_properties = [
         editable: true,
         defaultValue: 'center',
         enum: {
-            values: ['10s', '30s', '1min', '5min']
+            values: ['10s', '30s', '1min', '5min', '10min', '30min', '1h']
         }
     },
     {

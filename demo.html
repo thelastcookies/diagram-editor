@@ -24,7 +24,6 @@
     <!--右键菜单栏的内容-->
     <script src="config/dialog-config.js"></script>
     <script src="config/contextmenu-config.js"></script>
-    <script src="echarts/echarts.common.min.js"></script>
 
     <!--图表-->
     <script src="echarts/echarts.common.min.js"></script>
@@ -85,9 +84,9 @@
                 }
             });
             // 配置右键菜单
-            setContextMenu(load_contextmenu_config, graphView);
+            setContextMenu(demo_contextmenu_config, graphView);
             $.getJSON({
-                url: './test.cfd',
+                url: './test-1.cfd',
                 success: res => {
                     json = res;
                     dataModel.deserialize(json);

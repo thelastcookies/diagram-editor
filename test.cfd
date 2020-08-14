@@ -193,6 +193,22 @@
         "text.font": "16px arial, sans-serif",
         "label": ""
       }
+    },
+    {
+      "c": "ht.Node",
+      "i": 11,
+      "p": {
+        "name": "表格",
+        "layer": 1,
+        "image": "symbols/palette-icon/table.json",
+        "position": {
+          "x": 500,
+          "y": 32.5
+        }
+      },
+      "s": {
+        "label": ""
+      }
     }
   ]
 }

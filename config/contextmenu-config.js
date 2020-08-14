@@ -72,7 +72,7 @@ var index_contextmenu_config = [
 ];
 
 
-let load_contextmenu_config = [
+let demo_contextmenu_config = [
     {
         label: "查看测点信息",
         fordata: 1,

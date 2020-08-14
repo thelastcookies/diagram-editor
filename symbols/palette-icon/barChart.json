@@ -14,7 +14,7 @@
     {
       "attr": "chart.data.interval",
       "valueType": "String",
-      "defaultValue": "10s"
+      "defaultValue": "1min"
     },
     {
       "attr": "chart.title.font",

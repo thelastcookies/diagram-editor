@@ -1,0 +1,54 @@
+{
+  "v": "7.0.8",
+  "p": {
+    "layers": [
+      "0",
+      1
+    ],
+    "autoAdjustIndex": true,
+    "hierarchicalRendering": false
+  },
+  "d": [
+    {
+      "c": "ht.Node",
+      "i": 131,
+      "p": {
+        "name": "柱形图",
+        "layer": 1,
+        "tag": "HS:fd_zt_01",
+        "image": "symbols/palette-icon/barChart-demo.json",
+        "position": {
+          "x": -477.5,
+          "y": -188.5
+        }
+      },
+      "s": {
+        "label": ""
+      },
+      "a": {
+        "node.tag": "HS:fd_zt_01"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 369,
+      "p": {
+        "name": "表格",
+        "layer": 1,
+        "image": "symbols/palette-icon/table.json",
+        "position": {
+          "x": -488,
+          "y": -590.5
+        },
+        "width": 510,
+        "height": 162
+      },
+      "s": {
+        "label": ""
+      },
+      "a": {
+        "table.columns": "[{\"key\":\"column1\",\"width\":110},{\"key\":\"column2\",\"width\":110},{\"key\":\"column3\",\"width\":130},{\"key\":\"column4\",\"width\":150}]"
+      }
+    }
+  ]
+}

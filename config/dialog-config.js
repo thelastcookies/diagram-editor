@@ -46,11 +46,25 @@ function initTagTreeView() {
     }
 }
 
-let initTagChangeDialog = function (content) {
+/**
+ * initTagChangeDialog 点名批量替换弹出框初始化方法
+ */
+let initTagChangeDialog = function () {
     tagChangeDialog = new ht.widget.Dialog();
     tagChangeDialog.setConfig({
         title: '图元测点批量替换',
-        content: content,
+        content: `
+        <div class="tag-exchange-container">
+        <div class="tag-exchange-title">
+            <span>请输入替换规则：将</span>
+            <input type="text" id="source-str" />
+            <span>替换为</span>
+            <input type="text" id="target-str" />
+        </div>
+        <!--<div id="tag-exchange-result">-->
+        <!--<div id="tag-exchange-source"></div>-->
+        <!--<div id="tag-exchange-target"></div>-->
+        <!--</div>-->`,
         closable: true,
         contentPadding: 10,
         buttons: [{
@@ -76,26 +90,18 @@ let initTagChangeDialog = function (content) {
     });
 };
 
+/**
+ * showTagChangeDialog 点名批量替换弹出框调用方法
+ */
 let showTagChangeDialog = function() {
-    let content = `
-        <div class="tag-exchange-container">
-        <div class="tag-exchange-title">
-            <span>请输入替换规则：将</span>
-            <input type="text" id="source-str" />
-            <span>替换为</span>
-            <input type="text" id="target-str" />
-        </div>
-<!--        <div id="tag-exchange-result">-->
-<!--            <div id="tag-exchange-source"></div>-->
-<!--            <div id="tag-exchange-target"></div>-->
-<!--        </div>-->
-    `;
-    if (!tagChangeDialog) initTagChangeDialog(content);
+    if (!tagChangeDialog) initTagChangeDialog();
 
     tagChangeDialog.show();
 };
 
-// 对话框新建图纸操作
+/**
+ * initNewPageDialog 新建空白图纸初始化方法
+ */
 let initNewPageDialog = function () {
     newPageDialog = new ht.widget.Dialog();
     newPageDialog.setConfig({
@@ -122,15 +128,18 @@ let initNewPageDialog = function () {
         buttonsAlign: 'right'//按钮居右排放
     });
 };
-
+/**
+ * showNewPageDialog 新建空白图纸调用方法
+ */
 let showNewPageDialog = function () {
     if (!newPageDialog) initNewPageDialog();
 
     newPageDialog.show();
 };
 
-
-// 对话框打开图纸操作
+/**
+ * initOpenPageDialog 从文件打开图纸初始化方法
+ */
 let initOpenPageDialog = function() {
     openPageDialog = new ht.widget.Dialog();
     openPageDialog.setConfig({
@@ -147,12 +156,18 @@ let initOpenPageDialog = function() {
         buttonsAlign: 'right'//按钮居右排放
     });
 };
-
+/**
+ * showOpenPageDialog 从文件打开图纸调用方法
+ */
 let showOpenPageDialog = function () {
     if (!openPageDialog) initOpenPageDialog();
     openPageDialog.show();
 };
 
+/**
+ * fileLoadedCallback 文件读取后的回调函数
+ * @param fileData 文件内容
+ */
 function fileLoadedCallback(fileData) {
     if (indexDataModel !== undefined) {
         dataModelStorage['fileName'] = fileData.fileName;
@@ -176,7 +191,10 @@ function fileLoadedCallback(fileData) {
     }
 }
 
-// 对话框保存图纸操作
+/**
+ * initSavePageDialog 保存图纸初始化方法
+ * @param content
+ */
 let initSavePageDialog = function(content) {
     savePageDialog = new ht.widget.Dialog();
     savePageDialog.setConfig({
@@ -205,6 +223,10 @@ let initSavePageDialog = function(content) {
     });
 };
 
+/**
+ * showSavePageDialog 保存图纸调用方法
+ * @param content
+ */
 let showSavePageDialog = function(content) {
     // if (!savePageDialog) initSavePageDialog(content);
     initSavePageDialog(content);
@@ -213,7 +235,9 @@ let showSavePageDialog = function(content) {
 };
 
 
-// 查看测点趋势操作
+/**
+ * initNodeTrendDialog 历史回放中历史趋势的初始化方法
+ */
 let initNodeTrendDialog = function (){
     nodeTrendDialog = new ht.widget.Dialog();
     nodeTrendDialog.setConfig({
@@ -231,6 +255,10 @@ let initNodeTrendDialog = function (){
     });
 };
 
+/**
+ * showNodeTrendDialog 历史回放中历史趋势的调用方法
+ * @param nodeDataArr 用以生成历史曲线的数据
+ */
 let showNodeTrendDialog = function (nodeDataArr) {
     // console.log(nodeDataArr);
     initNodeTrendDialog();
@@ -315,7 +343,11 @@ let showNodeTrendDialog = function (nodeDataArr) {
 // };
 
 
-// 实时数据
+/**
+ * 暂废弃
+ * initRealTimeDialog 查看实时数据的初始化方法
+ * @param content
+ */
 let initRealTimeDialog = function(content) {
     realTimeDialog = new ht.widget.Dialog();
     realTimeDialog.setConfig({
@@ -336,6 +368,10 @@ let initRealTimeDialog = function(content) {
     });
 };
 
+/**
+ * 暂废弃
+ * showRealTimeDialog 查看实时数据的调用方法
+ */
 let showRealTimeDialog = function () {
         let content = '<table class = "table table-hover" id = "realTimeTable"><thead><tr><th>测点</th><th>值</th><th>时间标签</th></tr></thead><tbody>';
         // content += '<tr><th>power</th><td id = "realTimeValue">' + mainPowerValue + '</td><td id = "realTimeTime"></td></tr>';
@@ -364,7 +400,12 @@ let showRealTimeDialog = function () {
 };
 
 
-// 历史数据
+/**
+ * 暂废弃
+ * initHistoryDialog 查看历史数据的初始化方法
+ * @param title
+ * @param content
+ */
 let initHistoryDialog = function(title, content) {
     historyDialog = new ht.widget.Dialog();
     historyDialog.setConfig({
@@ -377,9 +418,6 @@ let initHistoryDialog = function(title, content) {
         buttons: [{
             label: '关闭',
             action: function(button, e) {
-
-
-
                 historyDialog.hide();
 
             }
@@ -387,7 +425,10 @@ let initHistoryDialog = function(title, content) {
         buttonsAlign: 'right'//按钮居右排放
     });
 };
-
+/**
+ * 暂废弃
+ * showHistoryDialog 查看历史数据的调用方法
+ */
 let showHistoryDialog = function () {
     let slModel = graphView.sm().getSelection();
     if (slModel.size() === 0) {
@@ -426,7 +467,4 @@ let showHistoryDialog = function () {
             }
         });
     }
-
-
-
 };

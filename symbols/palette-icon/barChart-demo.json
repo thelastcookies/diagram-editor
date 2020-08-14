@@ -9,12 +9,12 @@
     {
       "attr": "chart.data",
       "valueType": "Array",
-      "defaultValue": [471, 482, 567, 525, 590, 637, 780, 679, 848, 525, 578]
+      "defaultValue": [23, 10, 77, 81, 35, 25, 30, 88, 90, 64, 60]
     },
     {
       "attr": "chart.data.interval",
       "valueType": "String",
-      "defaultValue": "10s"
+      "defaultValue": "10min"
     },
     {
       "attr": "chart.title.font",
@@ -29,7 +29,7 @@
     {
       "attr": "chart.title.text",
       "valueType": "String",
-      "defaultValue": "Chart Sample"
+      "defaultValue": "柱形图指标"
     },
     {
       "attr": "chart.background",
@@ -39,7 +39,7 @@
     {
       "attr": "chart.legend.text",
       "valueType": "String",
-      "defaultValue": "Legend"
+      "defaultValue": "值"
     },
     {
       "attr": "chart.legend.color",
@@ -127,61 +127,61 @@
       "type": "text",
       "rect": [124, 322, 0, 16],
       "align": "center",
-      "text": "00:00:10"
+      "text": "00:01:00"
     },
     {
       "type": "text",
       "rect": [191, 322, 0, 16],
       "align": "center",
-      "text": "00:00:20"
+      "text": "00:02:00"
     },
     {
       "type": "text",
       "rect": [259, 322, 0, 16],
       "align": "center",
-      "text": "00:00:30"
+      "text": "00:03:00"
     },
     {
       "type": "text",
       "rect": [327, 322, 0, 16],
       "align": "center",
-      "text": "00:00:40"
+      "text": "00:04:00"
     },
     {
       "type": "text",
       "rect": [394, 322, 0, 16],
       "align": "center",
-      "text": "00:00:50"
+      "text": "00:05:00"
     },
     {
       "type": "text",
       "rect": [462, 322, 0, 16],
       "align": "center",
-      "text": "00:01:00"
+      "text": "00:06:00"
     },
     {
       "type": "text",
       "rect": [529, 322, 0, 16],
       "align": "center",
-      "text": "00:01:10"
+      "text": "00:07:00"
     },
     {
       "type": "text",
       "rect": [596, 322, 0, 16],
       "align": "center",
-      "text": "00:01:20"
+      "text": "00:08:00"
     },
     {
       "type": "text",
       "rect": [664, 322, 0, 16],
       "align": "center",
-      "text": "00:01:30"
+      "text": "00:09:00"
     },
     {
       "type": "text",
       "rect": [732, 322, 0, 16],
       "align": "center",
-      "text": "00:01:40"
+      "text": "00:10:00"
     },
     {
       "type": "rect",

@@ -113,51 +113,25 @@ toolbar_config_left = [
             g2d.sm().cs();
         }
     },
-    // {
-    //     id: 'attachment',
-    //     unfocusable: true,
-    //     toolTip: '关联',
-    //     groupId: 'bar',
-    //     icon: {
-    //         width: 16,
-    //         height: 16,
-    //         comps: [
-    //             {
-    //                 type: 'image',
-    //                 name: 'symbols/toolbar-icon/attach.svg',
-    //                 color: colorObject
-    //             }
-    //         ]
-    //     },
-    //     action: function() {
-    //         g2d.setInteractors([attachInteractor]);
-    //         g2d.sm().cs();
-    //     }
-    // },
-    // {
-    //     id: 'attachCancel',
-    //     unfocusable: true,
-    //     toolTip: '取消关联',
-    //     groupId: 'bar',
-    //     icon: {
-    //         width: 16,
-    //         height: 16,
-    //         comps: [
-    //             {
-    //                 type: 'image',
-    //                 name: 'symbols/toolbar-icon/attach-cancel.svg',
-    //                 color: colorObject
-    //             }
-    //         ]
-    //     },
-    //     action: function() {
-    //         g2d.setInteractors([attachInteractor]);
-    //         g2d.sm().cs();
-    //     }
-    // }
 ];
 
 toolbar_config_right = [
+    {
+        id: 'panel',
+        toolTip: '嵌板',
+        icon: {
+            width: 16,
+            height: 16,
+            comps: [{
+                type: 'image',
+                name: 'symbols/toolbar-icon/panel.svg',
+                color: colorObject
+            }]
+        },
+        action: function() {
+            panel ? removePanel() : initPanel();
+        }
+    },
     {
         icon: {
             width: 16,
@@ -173,6 +147,7 @@ toolbar_config_right = [
 
         }
     },
+    'separator',
     {
         icon: {
             width: 16,
