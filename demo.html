@@ -20,6 +20,8 @@
     <script src="lib/plugin/ht-rulerframe.js"></script>
     <script src="lib/plugin/ht-propertypane.js"></script>
     <script src="lib/plugin/ht-edgetype.js"></script>
+    <script src="lib/plugin/ht-panel.js"></script>
+
 
     <!--右键菜单栏的内容-->
     <script src="config/dialog-config.js"></script>
@@ -86,13 +88,12 @@
             // 配置右键菜单
             setContextMenu(demo_contextmenu_config, graphView);
             $.getJSON({
-                url: './test-1.cfd',
+                url: './test-chart.cfd',
                 success: res => {
                     json = res;
                     dataModel.deserialize(json);
 
                     nodeArr = dataModel.getNodeTags();
-                    let node = new ht.Node();
                     graphView.setMovableFunc(function() {});
                     // graphView.setSelectableFunc(function() {});
                     graphView.setPannable(false);
@@ -101,12 +102,111 @@
                     pageMainView.addToDOM(container);
                     // graphView.addToDOM(container);
                     graphView.fitContent(true);
-                    getRealTimeData();
+                    initPanel(graphView);
+
+                    if (dataModel.getDataByNodeTag('barChart')) {
+                        addPanel('bar-chart');
+                        let node = dataModel.getDataByNodeType('barChart')[0];
+                        let arrTemp = node.a('chart.data.series').split(',');
+                        nodeArr = nodeArr.concat(arrTemp);
+                        getRealTimeData(nodeArr);
+                    }
+                    if (dataModel.getDataByNodeTag('lineChart')) {
+                        addPanel('line-chart');
+                        let node = dataModel.getDataByNodeType('lineChart')[0];
+                        let arrTemp = node.a('chart.data.series').split(',');
+                        nodeArr = nodeArr.concat(arrTemp);
+                        getHistory(nodeArr);
+                    }
+
                 }
             });
         }
 
-        function getRealTimeData() {
+        function initPanel (graphView) {
+
+            panel = window.panel = new ht.widget.Panel({
+                title: "嵌板",
+                exclusive: true,
+                titleColor: "white",
+                content: '',
+                width: 320,
+                resizeMode: "wh",
+                narrowWhenCollapse: true,
+                titleIconSize: 16,
+                restoreToolTip: "Restore"
+            });
+            graphView.getView().appendChild(panel.getView());
+        }
+
+        function addPanel(type) {
+            let content = null,
+                title = null,
+                option = null;
+            if (type === 'bar-chart') {
+                if (document.getElementById("panel-barchart-container"))
+                    return;
+                title = '柱状图';
+                content = `<div id="panel-barchart-container" style="width: 300px;height:200px;padding: 10px;"></div>`;
+
+            } else if (type === 'line-chart') {
+                if (document.getElementById("panel-linechart-container"))
+                    return;
+                title = '折线图';
+                content = `<div id="panel-linechart-container" style="width: 300px;height:200px;padding: 10px;"></div>`;
+
+            } else if (type === 'dropdown-list') {
+                title = '下拉列表';
+                content = `<div id="panel-dropdown" style="padding: 10px"><select id="slt-type">
+                               <option value="bar-chart">选项1</option>
+                               <option value="line-chart">选项2</option>
+                               <option value="dropdown-list">选项3</option>
+                           </select></div>`;
+            } else {
+                return;
+            }
+            panel.setInnerPanel({
+                title: title,
+                content: content
+            });
+
+        }
+
+        function setPanelValue(type, xAxisData, seriesData) {
+            let option = {
+                tooltip: {
+                    trigger: 'axis'
+                },
+                xAxis: {
+                    type: 'category',
+                    data: xAxisData
+                },
+                yAxis: {
+                    type: 'value'
+                },
+                series: [{
+                    data: seriesData,
+                    type: 'bar'
+                }],
+                grid: {
+                    top: 20,
+                    right: 10,
+                    bottom: 20,
+                    left: 30
+                }
+            };
+            if (type === 'bar-chart') {
+                barChart = echarts.getInstanceByDom('bar-chart') ? echarts.getInstanceByDom('bar-chart') : echarts.init(document.getElementById('panel-barchart-container'));
+                barChart.setOption(option);
+            }
+            else if (type === 'line-chart') {
+                lineChart = echarts.getInstanceByDom('line-chart') ? echarts.getInstanceByDom('line-chart') : echarts.init(document.getElementById('panel-linechart-container'));
+                lineChart.setOption(option);
+            }
+
+        }
+
+        function getRealTimeData(nodeArr) {
             getDataIntervalID = setInterval(() => {
                 $.ajax ({
                     type: 'POST',
@@ -131,10 +231,59 @@
                 // });
             }, 3000);
         }
+        ////// temp
+        function getHistory(nodeArr) {
+            $.ajax ({
+                type: 'POST',
+                url: "http://localhost/node-trend.php",
+                data: {
+                    "nodeTagArr": nodeArr,
+                    "startTime": startTime,
+                    "endTime": endTime,
+                    "interval": interval
+                },
+                dataType: "json",
+                success: function (nodeData) {
+                    let xAxis = [], series = [];
+                    for (let c = 0; c < 3; c++) {
+                        let temp = [];
+                        for (let i = c * 11; i < (c + 1) * 11; i++) {
+                            if (c === 0) {
+                                xAxis.push(nodeData[i].timestamp)
+                            }
+                            temp.push(nodeData[i].value);
+                        }
+                        series.push({
+                            data: temp,
+                            type: 'line'
+                        });
+                    }
+                    let option = {
+                        tooltip: {
+                            trigger: 'axis'
+                        },
+                        xAxis: {
+                            type: 'category',
+                            data: xAxis
+                        },
+                        yAxis: {
+                            type: 'value'
+                        },
+                        series: series,
+                        grid: {
+                            top: 20,
+                            right: 10,
+                            bottom: 20,
+                            left: 30
+                        }
+                    };
+                    lineChart = echarts.getInstanceByDom('line-chart') ? echarts.getInstanceByDom('line-chart') : echarts.init(document.getElementById('panel-linechart-container'));
+                    lineChart.setOption(option);
+                }
+            });
+        }
 
-        function getHistoryData() {
-            let nodeArr = dataModel.getNodeTags();
-            // let mainView = document.getElementsByClassName("main")[0];
+        function getHistoryData(nodeArr) {
             $.ajax ({
                 type: 'POST',
                 url: "http://localhost/node-trend.php",

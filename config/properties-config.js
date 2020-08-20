@@ -794,3 +794,36 @@ chart_properties = [
     },
 
 ];
+
+panel_bar_chart_properties = [
+    {
+        categoryName: '图表',
+        name:'chart.data.series',
+        displayName: '图表测点配置',
+        accessType: 'attr',
+        valueType: 'text',
+        editable: true,
+    },
+];
+panel_line_chart_properties = [
+    {
+        categoryName: '图表',
+        name:'chart.data.series',
+        displayName: '图表测点配置',
+        accessType: 'attr',
+        valueType: 'text',
+        editable: true,
+    },
+    {
+        categoryName: '图表',
+        name:'chart.data.interval',
+        displayName: '图表数据间隔',
+        accessType: 'attr',
+        valueType: 'enum',
+        editable: true,
+        defaultValue: 'center',
+        enum: {
+            values: ['10s', '30s', '1min', '5min', '10min', '30min', '1h']
+        }
+    },
+];

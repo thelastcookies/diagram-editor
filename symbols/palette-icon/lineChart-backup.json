@@ -5,16 +5,6 @@
       "attr": "node.type",
       "valueType": "String",
       "defaultValue": "lineChart"
-    },
-    {
-      "attr": "chart.data.series",
-      "valueType": "String",
-      "defaultValue": ""
-    },
-    {
-      "attr": "chart.data.interval",
-      "valueType": "String",
-      "defaultValue": "1min"
     }
   ],
   "width": 100,

@@ -58,8 +58,27 @@ ht.DataModel.prototype.setNodeStatusByValue = function(json) {
                 node.a('zb2.rzyw', value.rzyw);
                 node.a('zb2.dw', value.dw);
             }
+            if (node instanceof ht.Node && node.a('node.type') === 'barChart') {
+
+            }
+
         });
     });
+
+    let barChartNode = dm.getDataByNodeTag('barChart')[0];
+    if (barChartNode) {
+        let tagArr = barChartNode.a('chart.data.series').split(',');
+        let xAxisData = [], seriesData = [];
+        tagArr.forEach(item => {
+            json.forEach(subItem => {
+               if (subItem.nodeTag === item) {
+                   xAxisData.push(subItem.nodeDesc);
+                   seriesData.push(subItem.value);
+               }
+            });
+        });
+        setPanelValue('bar-chart', xAxisData, seriesData);
+    }
 };
 
 /**
@@ -74,6 +93,29 @@ ht.DataModel.prototype.getDataByNodeTag = function(tag) {
     dm.each(item => {
         if (item.a('node.tag') === tag) res.push(item);
     });
+    return res;
+};
+
+ht.DataModel.prototype.getDataByNodeType = function(type) {
+    let dm = this,
+        res = [];
+    dm.each(item => {
+        if (item.a('node.type') === type) res.push(item);
+    });
+    return res;
+};
+
+ht.DataModel.prototype.removeDataByNodeTag = function (tag) {
+}
+
+ht.DataModel.prototype.removeDataByNodeType = function (type) {
+    let dm = this,
+        res = [];
+    res = dm.getDataByNodeType(type);
+    if (res.length)
+        res.forEach(item => {
+            this.remove(item);
+        });
     return res;
 };
 

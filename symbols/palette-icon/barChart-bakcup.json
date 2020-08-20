@@ -17,11 +17,6 @@
       "defaultValue": "1min"
     },
     {
-      "attr": "chart.data.series",
-      "valueType": "String",
-      "defaultValue": ""
-    },
-    {
       "attr": "chart.title.font",
       "valueType": "String",
       "defaultValue": "20px Arial"

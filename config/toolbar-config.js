@@ -129,7 +129,7 @@ toolbar_config_right = [
             }]
         },
         action: function() {
-            panel ? removePanel() : initPanel();
+            panel ? removePanel(g2d) : initPanel(g2d);
         }
     },
     {

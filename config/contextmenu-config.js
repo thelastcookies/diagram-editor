@@ -115,7 +115,9 @@ let demo_contextmenu_config = [
         label: "查看历史回放",
         fordata: 2,
         action: function(item, event) {
-            getHistoryData();
+            let node = dataModel.getDataByNodeType('barChart')[0];
+            let arrTemp = node.a('chart.data.series').split(',');
+            getHistoryData(arrTemp);
         },
         disabled: function (item) {
             return progressBar.flag;
