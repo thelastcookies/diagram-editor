@@ -36,24 +36,24 @@
 
 }
 .play-btn-play {
-    background-image: url('../symbols/toolbar-icon/bofang.png');
+    background-image: url('images/bofang.png');
 }
 .play-btn-pause {
-    background-image: url('../symbols/toolbar-icon/zanting.png');
+    background-image: url('images/zanting.png');
 }
 
 #fast-forward-btn {
 
 }
 #fast-forward-btn-icon {
-    background-image: url('../symbols/toolbar-icon/fast-forward.png');
+    background-image: url('images/fast-forward.png');
 }
 
 #fast-backward-btn {
 
 }
 #fast-backward-btn-icon {
-    background-image: url('../symbols/toolbar-icon/fast-backward.png');
+    background-image: url('images/fast-backward.png');
 }
 
 #progress {
