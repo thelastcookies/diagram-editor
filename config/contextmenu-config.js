@@ -90,14 +90,6 @@ let load_contextmenu_config = [
                 slModel.forEach(function (item, index) {
                     nodeTagArr.push(item.getTag());
                 });
-                // $.getJSON({
-                //     url: './fake-value-trend.json',
-                //     success: res => {
-                //         let data = res.data.ztData;
-                //         showOpenPageDialog();
-                //         showNodeTrendDialog(data);
-                //     }
-                // });
                 $.ajax ({
                     type: 'POST',
                     url: "http://localhost/node-trend.php",
@@ -115,7 +107,8 @@ let load_contextmenu_config = [
         label: "查看历史回放",
         fordata: 2,
         action: function(item, event) {
-            getHistoryData();
+            showHistoryDataDialog();
+            // getHistoryData();
         },
         disabled: function (item) {
             return progressBar.flag;
@@ -128,8 +121,7 @@ let load_contextmenu_config = [
             progressBar.destroy();
             pageMainView.setStatus("cr");
             graphView.fitContent(true);
-            getRealTimeData();
-            // progressSplit.
+            getRealTimeData(nodeArr);
         },
         disabled: function (item) {
             return !progressBar.flag;

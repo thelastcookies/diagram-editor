@@ -6,7 +6,8 @@ let tagChangeDialog = null,
     uploadPageDialog = null,
     emptyDialog = null,
     realTimeDialog = null,
-    historyDialog = null;
+    historyDialog = null,
+    historyDataDialog = null;
 
 // var serializerInput = document.createElement('textarea');
 // serializerInput.style.resize = 'none';
@@ -426,7 +427,58 @@ let showHistoryDialog = function () {
             }
         });
     }
+};
 
 
+// 历史数据
+let initHistoryDataDialog = function() {
+    historyDataDialog = new ht.widget.Dialog();
+    historyDataDialog.setConfig({
+        title: ``,
+        content: `<div id="timepicker-container">
+                      <input type="text" class="date start" />
+                      <input type="text" class="time start" /> to
+                      <input type="text" class="time end" />
+                      <input type="text" class="date end" />
+                  </div>
+        `,
+        width: 500,
+        // height: 300,
+        closable: true,
+        contentPadding: 10,
+        buttons: [{
+            label: '关闭',
+            action: function (button, e) {
+                historyDataDialog.hide();
+            }
+        },{
+            label: '确定',
+            action: function(button, e) {
+                indexDataModel.clear();
+                g2d.setDataModel(indexDataModel);
+                g2d.redraw();
+                if (dataModelStorage['fileName'])
+                    dataModelStorage['fileName'] = '';
+                newPageDialog.hide();
+            }
+        }],
+        buttonsAlign: 'right'//按钮居右排放
+    });
+};
 
+
+let showHistoryDataDialog = function () {
+    initHistoryDataDialog();
+    $('#timepicker-container .time').timepicker({
+        'showDuration': true,
+        'timeFormat': 'g:ia'
+    });
+
+    $('#timepicker-container .date').datepicker({
+        'format': 'yyyy-m-d',
+        'autoclose': true
+    });
+
+    $('##timepicker-container').datepair();
+    historyDataDialog.show();
 };

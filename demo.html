@@ -3,6 +3,8 @@
 <head>
     <title>Demo</title>
     <link href="progress-bar/progress-bar.css" rel="stylesheet"/>
+    <link href="lib/timepicker/jquery.timepicker.min.css" rel="stylesheet"/>
+    <link href="lib/timepicker/bootstrap-datepicker.css" rel="stylesheet"/>
 
     <style>
     </style>
@@ -11,7 +13,7 @@
     <script type="text/javascript" src="js/math.js"></script>
     <script type="text/javascript" src="lib/core/ht.js"></script>
     <script type="text/javascript" src="js/ht-value.js"></script>
-    <script src="bootstrap-3.3.7-dist/js/jquery-3.1.1.js"></script>
+    <script src="lib/jquery/jquery-3.5.1.js"></script>
     <script src="lib/plugin/ht-contextmenu.js"></script>
     <script src="lib/plugin/ht-cssanimation.js"></script>
     <script src="lib/plugin/ht-form.js"></script>
@@ -20,6 +22,9 @@
     <script src="lib/plugin/ht-rulerframe.js"></script>
     <script src="lib/plugin/ht-propertypane.js"></script>
     <script src="lib/plugin/ht-edgetype.js"></script>
+
+    <script src="lib/timepicker/jquery.timepicker.min.js"></script>
+    <script src="lib/timepicker/bootstrap-datepicker.js"></script>
 
     <!--右键菜单栏的内容-->
     <script src="config/dialog-config.js"></script>
@@ -31,12 +36,10 @@
     <!--计算-->
     <script src="js/calculate.js"></script>
     <!--进度条-->
-<!--    <script src="progress-bar/progress-bar-backup.js"></script>-->
     <script src="progress-bar/progress-bar.js"></script>
+    <script src="config/project-config.js"></script>
 
-    <script src="bootstrap-3.3.7-dist/js/jquery-3.1.1.js"></script>
 
-<!--    <script src="lib/jquery.printarea.js"></script>-->
 
     <script>
         let dataModel = new ht.DataModel(),
@@ -51,26 +54,14 @@
         let progressBar = new ProgressBar();
         let startTime = '2020-07-01 00:00:00',
             endTime = '2020-07-01 00:11:00',
-            interval = 60;
-        // let progressDiv = document.createElement('div');
-        // progressDiv.id = "div-container";
-        // progressDiv.innerHTML = `
-        //     <div id="progress-container">
-        //         <button id="play-btn" type="button" class="btn btn-default">
-        //             <span id="play-btn-icon" class="play-btn-play" aria-hidden="true"></span>
-        //         </button>
-        //         <div id="progress">
-        //             <div id="progress-bar" class=""  style=""></div>
-        //             <div id="progress-btn"></div></div>
-        //             <div id="progress-time">1970-01-01 00:00:00</div>
-        //         </div>`;
+            interval = project_config.interval;
         let pageMainView = new ht.widget.SplitView (graphView, progressBar.progressDiv, 'v', -100);
-        // let pageMainView = new ht.widget.SplitView (graphView, progressDiv, 'v', -100);
         pageMainView.setStatus("cr");
         pageMainView.setDividerSize(1);
 
 
         function init() {
+            // 给显示区域绑定事件
             graphView.mi(function(e) {
                 if (e.kind === 'clickData') {
                     if (e.data.getTag() === 'DJX') {
@@ -86,14 +77,13 @@
             });
             // 配置右键菜单
             setContextMenu(load_contextmenu_config, graphView);
+            // 请求组态图数据以及初始化
             $.getJSON({
                 url: './test.cfd',
                 success: res => {
                     json = res;
                     dataModel.deserialize(json);
-
                     nodeArr = dataModel.getNodeTags();
-                    let node = new ht.Node();
                     graphView.setMovableFunc(function() {});
                     // graphView.setSelectableFunc(function() {});
                     graphView.setPannable(false);
@@ -102,12 +92,16 @@
                     pageMainView.addToDOM(container);
                     // graphView.addToDOM(container);
                     graphView.fitContent(true);
-                    getRealTimeData();
+                    getRealTimeData(nodeArr);
                 }
             });
         }
-
-        function getRealTimeData() {
+        /**
+         * getRealTimeData 获取实时数据
+         * @param nodeArr - 需要请求参数的测点数组
+         * @param timestamp - 请求时间
+         */
+        function getRealTimeData(nodeArr, timestamp) {
             getDataIntervalID = setInterval(() => {
                 $.ajax ({
                     type: 'POST',
@@ -115,27 +109,21 @@
                     data: {nodeTagArr: nodeArr, timestamp: '2020-07-01 00:00:00'},
                     dataType: "json",
                     success: function (res) {
-                        // dataToUse = [];
-                        // nodeDataArr.forEach((item) => {
-                        //     dataToUse.push(item[0]);
-                        // });
                         dataToUse = dataModel.formulaPreprocess(res);
                         dataModel.setNodeStatusByValue(dataToUse);
                     }
                 });
-                // $.getJSON({
-                //     url: 'WebServer/server/fake-value.json',
-                //     success: res => {
-                //         dataToUse = res.data;
-                //         dataModel.setNodeStatusByValue(dataToUse.ztData);
-                //     }
-                // });
             }, 3000);
         }
 
-        function getHistoryData() {
-            let nodeArr = dataModel.getNodeTags();
-            // let mainView = document.getElementsByClassName("main")[0];
+        /**
+         * getHistoryData 获取历史数据
+         * @param nodeArr - 需要请求参数的测点数组
+         * @param startTime - 开始时间
+         * @param endTime - 结束时间
+         * @param interval - 数据间隔
+         */
+        function getHistoryData(nodeArr, startTime, endTime, interval) {
             $.ajax ({
                 type: 'POST',
                 url: "http://localhost/node-trend.php",
@@ -160,7 +148,6 @@
                         graphView.fitContent(true);
                     }
                     else {
-                        // initProgress(timestampArr);
                         graphView.fitContent(true);
                     }
                 }
@@ -168,9 +155,9 @@
         }
 
         /**
-         * setContextMenu
-         * @param contextmenu_config
-         * @param graphView
+         * setContextMenu 设置右键点击事件
+         * @param contextmenu_config - 右键点击配置
+         * @param graphView - graphView
          */
         function setContextMenu (contextmenu_config, graphView) {
             let contextmenu = new ht.widget.ContextMenu(contextmenu_config);
@@ -188,10 +175,10 @@
         }
 
         /**
-         * showNodeDetails
-         * @param tag
-         * @param dataToUse
-         * @param position
+         * showNodeDetails 用于双击测点时显示测点的详细信息
+         * @param tag - 测点tag
+         * @param data - 用于显示的测点信息
+         * @param position - 点击事件的位置，用以确认弹出框的位置
          */
         function showNodeDetails (tag, data, position) {
             let htmlStr = "";
@@ -223,6 +210,11 @@
                 }
         }
 
+        /**
+         * updateNodeDetails 用于在查看测点详细信息时测点数据改变的更新方法
+         * @param value - 测点value
+         * @param timestamp - 测点时间戳
+         */
         function updateNodeDetails (value, timestamp) {
             let nodeValueSpan = document.getElementById("node-value-by-time");
             let nodeTimeSpan = document.getElementById("node-timestamp-by-time");
@@ -230,26 +222,34 @@
             nodeTimeSpan.innerText = timestamp;
         }
 
+        /**
+         * dataPretreat 用于处理从接口返回的数据
+         * @param data - 返回数据
+         * @param stTime - 开始时间
+         * @param edTime - 结束时间
+         * @param interval - 数据间隔
+         */
         function dataPretreat (data, stTime, edTime, interval) {
-            let timeStepCount = (Date.parse(edTime) - Date.parse(stTime)) / 1000 / interval;
+            let timeStepCount = (Date.parse(edTime) - Date.parse(stTime)) / interval;
             let dmCount = dataModel.getOriginNode().length;
-
             let timestampArr = [],
                 dataPretreat = [];
-
             for (let i = 0; i < timeStepCount; i++) {
                 dataPretreat.push(data.filter((item, index) => {
                     return (index - i) % timeStepCount === 0
                 }));
                 timestampArr.push(dataPretreat[i][0].timestamp);
             }
-
             return {
                 data: dataPretreat,
                 timestampArr: timestampArr
             };
         }
 
+        /**
+         * progressCallback 用于响应进度条移动事件的回调函数
+         * @param index - 进度条的移动位置
+         */
         function progressCallback(index) {
             dataToUse = dataModel.formulaPreprocess(historyData[index]);
             dataModel.setNodeStatusByValue(dataToUse);
@@ -258,12 +258,7 @@
                 let nodeArr = dataToUse.filter(item => item.nodeTag === nodeSelected);
                 updateNodeDetails(nodeArr[0].value, dataToUse[0].timestamp);
             }
-
-            // for (let i = 0, this.len = nodeArr.this.length; i < this.len; i++) {
-            //     dataModel.setNodeStatusByValue(this.timestampArr[index].ztData);
-            // }
         }
-
 
     </script>
 </head>
