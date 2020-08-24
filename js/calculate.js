@@ -19,4 +19,4 @@ const cal = function (numA, numB, symbol, decimal, roundFlag) {
     else
         result = 0;
     return Number(result);
-}
+};

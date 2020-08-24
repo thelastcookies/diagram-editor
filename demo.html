@@ -3,8 +3,6 @@
 <head>
     <title>Demo</title>
     <link href="progress-bar/progress-bar.css" rel="stylesheet"/>
-    <link href="lib/timepicker/jquery.timepicker.min.css" rel="stylesheet"/>
-    <link href="lib/timepicker/bootstrap-datepicker.css" rel="stylesheet"/>
 
     <style>
     </style>
@@ -23,13 +21,9 @@
     <script src="lib/plugin/ht-propertypane.js"></script>
     <script src="lib/plugin/ht-edgetype.js"></script>
 
-    <script src="lib/timepicker/jquery.timepicker.min.js"></script>
-    <script src="lib/timepicker/bootstrap-datepicker.js"></script>
-
     <!--右键菜单栏的内容-->
     <script src="config/dialog-config.js"></script>
     <script src="config/contextmenu-config.js"></script>
-    <script src="echarts/echarts.common.min.js"></script>
 
     <!--图表-->
     <script src="echarts/echarts.common.min.js"></script>
@@ -38,8 +32,6 @@
     <!--进度条-->
     <script src="progress-bar/progress-bar.js"></script>
     <script src="config/project-config.js"></script>
-
-
 
     <script>
         let dataModel = new ht.DataModel(),
@@ -52,9 +44,9 @@
             nodeSelected = null;
         let getDataIntervalID = null;
         let progressBar = new ProgressBar();
-        let startTime = '2020-07-01 00:00:00',
-            endTime = '2020-07-01 00:11:00',
-            interval = project_config.interval;
+        // let startTime = '2020-07-01 00:00:00',
+        //     endTime = '2020-07-01 00:11:00',
+        let interval = project_config.interval;
         let pageMainView = new ht.widget.SplitView (graphView, progressBar.progressDiv, 'v', -100);
         pageMainView.setStatus("cr");
         pageMainView.setDividerSize(1);
@@ -136,10 +128,10 @@
                 dataType: "json",
                 success: function (nodeData) {
                     let dateResult = dataPretreat(nodeData, startTime, endTime, interval);
+
                     historyData = dateResult.data;
                     progressBar.init(dateResult.timestampArr, progressCallback);
 
-                    // initProgress(timestampArr);
                     if (getDataIntervalID)
                         clearInterval(getDataIntervalID);
 
@@ -230,18 +222,17 @@
          * @param interval - 数据间隔
          */
         function dataPretreat (data, stTime, edTime, interval) {
-            let timeStepCount = (Date.parse(edTime) - Date.parse(stTime)) / interval;
-            let dmCount = dataModel.getOriginNode().length;
+            let timeStepCount = Math.floor((Date.parse(edTime) - Date.parse(stTime)) / interval) + 1;
             let timestampArr = [],
-                dataPretreat = [];
+                res = [];
             for (let i = 0; i < timeStepCount; i++) {
-                dataPretreat.push(data.filter((item, index) => {
+                res.push(data.filter((item, index) => {
                     return (index - i) % timeStepCount === 0
                 }));
-                timestampArr.push(dataPretreat[i][0].timestamp);
+                timestampArr.push(res[i][0].timestamp);
             }
             return {
-                data: dataPretreat,
+                data: res,
                 timestampArr: timestampArr
             };
         }

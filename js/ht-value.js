@@ -80,13 +80,23 @@ ht.DataModel.prototype.getDataByNodeTag = function(tag) {
 /**
  * ht.DataModel 的扩展方法
  * 获取 DataModel 中所有含有 node.tag 属性的组件。
+ * @param flag - 判断是否去重，flag 为 true 则去重。
  * @returns {[]} - 返回所有含有 node.tag 属性的组件数组
  */
-ht.DataModel.prototype.getOriginNode = function () {
+ht.DataModel.prototype.getOriginNode = function (flag) {
     let dm = this,
-        res = [];
+        res = [],
+        tagArr = []
+    flag = flag ? flag: false;
     dm.each(item => {
-        if (item.a('node.tag')) res.push(item);
+        if (flag) {
+            if (item.a('node.tag') && tagArr.indexOf(item.a('node.tag')) === -1) {
+                res.push(item);
+                tagArr.push(item.a('node.tag'));
+            }
+        }
+        else
+            if (item.a('node.tag')) res.push(item);
     });
     return res;
 };

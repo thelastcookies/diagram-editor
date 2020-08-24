@@ -108,7 +108,6 @@ let load_contextmenu_config = [
         fordata: 2,
         action: function(item, event) {
             showHistoryDataDialog();
-            // getHistoryData();
         },
         disabled: function (item) {
             return progressBar.flag;

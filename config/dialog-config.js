@@ -434,15 +434,15 @@ let showHistoryDialog = function () {
 let initHistoryDataDialog = function() {
     historyDataDialog = new ht.widget.Dialog();
     historyDataDialog.setConfig({
-        title: ``,
+        title: `选择时间`,
         content: `<div id="timepicker-container">
-                      <input type="text" class="date start" />
-                      <input type="text" class="time start" /> to
-                      <input type="text" class="time end" />
-                      <input type="text" class="date end" />
+                      <span>开始时间</span>
+                      <input type="text" id="start-time" value="2020-07-01 00:00:00"/>
+                      <span>结束时间</span>
+                      <input type="text" id="end-time" value="2020-07-01 00:10:00"/>
                   </div>
         `,
-        width: 500,
+        width: 700,
         // height: 300,
         closable: true,
         contentPadding: 10,
@@ -454,12 +454,10 @@ let initHistoryDataDialog = function() {
         },{
             label: '确定',
             action: function(button, e) {
-                indexDataModel.clear();
-                g2d.setDataModel(indexDataModel);
-                g2d.redraw();
-                if (dataModelStorage['fileName'])
-                    dataModelStorage['fileName'] = '';
-                newPageDialog.hide();
+                let startTime = $("#start-time").val();
+                let endTime = $("#end-time").val();
+                getHistoryData(nodeArr, startTime, endTime, interval);
+                historyDataDialog.hide();
             }
         }],
         buttonsAlign: 'right'//按钮居右排放
@@ -469,16 +467,5 @@ let initHistoryDataDialog = function() {
 
 let showHistoryDataDialog = function () {
     initHistoryDataDialog();
-    $('#timepicker-container .time').timepicker({
-        'showDuration': true,
-        'timeFormat': 'g:ia'
-    });
-
-    $('#timepicker-container .date').datepicker({
-        'format': 'yyyy-m-d',
-        'autoclose': true
-    });
-
-    $('##timepicker-container').datepair();
     historyDataDialog.show();
 };

@@ -1,6 +1,6 @@
 /**
  * ProgressBar
- * 依赖于 jQuery
+ * 依赖于 jQuery 与 calculate.js
  */
 // export default class ProgressBar {
 class ProgressBar {
