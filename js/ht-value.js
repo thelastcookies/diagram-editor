@@ -8,29 +8,33 @@
  * 根据数据对图元/组件进行颜色、状态改变
  * @param json - 传入的数据 json，要求与 DataModel 中的 'node.tag' 存在对应关系。
  */
-ht.DataModel.prototype.setNodeStatusByValue = function(json) {
+ht.DataModel.prototype.setNodeStatusByValue = function (json) {
     let dm = this;
     json.forEach(item => {
         let node = dm.getDataByNodeTag(item.nodeTag);
-        let value = Number(item.value);
-        node.forEach(function(node) {
+        let value = item.value;
+        node.forEach(function (node) {
             // 如果是 普通开关
             if (node instanceof ht.Node && node.a('node.type') === 'switch') {
+                value = Number(item.value)
                 node.a('switch.powerOn', Boolean(value));
                 node.a('switch.powerOff', !Boolean(value));
             }
             // 如果是 旋钮开关
             if (node instanceof ht.Node && node.a('node.type') === 'switch-ro') {
+                value = Number(item.value)
                 node.a('rotatySwitch.bar', Boolean(value) ? 0 : 1.57);
             }
             // 如果是 断路器
             if (node instanceof ht.Node && node.a('node.type') === 'duanluqi') {
+                value = Number(item.value)
                 node.a('node.stateToggle', Boolean(value));
             }
             // 如果是 柱状图元
             if (node instanceof ht.Node && node.a('node.type') === 'zt') {
-                node.s('label') ? node.s('label', String(value)): '';
-                if ((value > 0 && node.a('zt.dirt') === 'top') || value < 0 && node.a('zt.dirt') === 'bottom'){
+                value = Number(item.value)
+                node.s('label') ? node.s('label', String(value)) : '';
+                if ((value > 0 && node.a('zt.dirt') === 'top') || value < 0 && node.a('zt.dirt') === 'bottom') {
                     node.a('zt.height', Math.abs(value) / (Number(node.a('zt.max')) - Number(node.a('zt.min'))));
                 } else {
                     node.a('zt.height', 0);
@@ -38,14 +42,17 @@ ht.DataModel.prototype.setNodeStatusByValue = function(json) {
             }
             // 如果是 Text
             if (node instanceof ht.Text) {
-                node.s("text", value);
+                value = Number(item.value)
+                node.s("text", value.toFixed(2));
             }
             // 如果是 变色器件
             if (node instanceof ht.Node && node.a('node.bg')) {
+                value = Number(item.value)
                 node.a('node.bg', value ? '#FF0000' : '#00FF00');
             }
             // 如果是 主变1
             if (node instanceof ht.Node && node.a('node.type') === 'zb1') {
+                console.log(value,'这是油温-----')
                 node.a('zb1.yw1', value.yw1);
                 node.a('zb1.yw2', value.yw2);
                 node.a('zb1.rw', value.rw);
@@ -64,7 +71,7 @@ ht.DataModel.prototype.setNodeStatusByValue = function(json) {
 
 /**
  * ht.DataModel 的扩展方法
- * 重写的 getNodeByTag 方法，使用 'node.tag' 属性来查找组件。
+ * 重写的 getNodeByTag 方法，使用 'node.tag' 属性以及自带 tag 来查找组件。
  * @param tag - 进行匹配的 tag
  * @returns {[]} - 返回所有匹配到的 node
  */
@@ -73,6 +80,8 @@ ht.DataModel.prototype.getDataByNodeTag = function(tag) {
         res = [];
     dm.each(item => {
         if (item.a('node.tag') === tag) res.push(item);
+        else if (item.getTag() === tag) res.push(item);
+        else {}
     });
     return res;
 };
@@ -86,7 +95,7 @@ ht.DataModel.prototype.getDataByNodeTag = function(tag) {
 ht.DataModel.prototype.getOriginNode = function (flag) {
     let dm = this,
         res = [],
-        tagArr = []
+        tagArr = [];
     flag = flag ? flag: false;
     dm.each(item => {
         if (flag) {

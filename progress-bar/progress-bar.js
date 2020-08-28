@@ -107,7 +107,9 @@ class ProgressBar {
         });
         $("#fast-forward-btn").on("click", () => {
             Number(this.#interval) === this.#minInterval ? this.#interval = this.#defaultInterval: this.#interval /= 2;
-            $("#fast-forward-btn")[0].title = `${this.#defaultInterval / this.#interval}倍速`;
+            let bs = this.#defaultInterval / this.#interval;
+            $("#fast-forward-btn")[0].title = `${bs}倍速`;
+            $("#fast-forward-btn-icon")[0].style.backgroundImage = bs === 1 ? `url('progress-bar/images/fast-forward.png')`: `url('progress-bar/images/@${bs}.png')`;
             this.setPlayStart(this.#interval);
         });
         this.progressBarMoveCallback = callback;
@@ -168,7 +170,7 @@ class ProgressBar {
             return;
         }
         // 如果播放到头了，下一次播放从头开始。
-        if (this.#positionX <= cal(this.#progressX + this.#progressLen, 0.1, "+") && this.#positionX >= cal(this.#progressX + this.#progressLen, 0.1, "-"))
+        if (this.#positionX <= cal(this.#progressX + this.#progressLen, this.#step, "+") && this.#positionX >= cal(this.#progressX + this.#progressLen, this.#step, "-"))
         {
             this.#positionX = this.#progressX;
             this.progressBtnMoveTo(this.#positionX);
@@ -181,7 +183,7 @@ class ProgressBar {
                 return;
             }
             // 如果 progress-bar 位置处于两个跳跃节点之间，那么开始移动时将其置于下一个跳跃节点处。
-            else if (cal(cal(this.#positionX, this.#progressX, "-"), this.#step, "%") !== 0) {
+            else if (cal(cal(this.#positionX, this.#progressX, "-"), this.#step, "%") !== 0 && cal(cal(this.#positionX, this.#progressX, "-"), this.#step, "%") !== this.#step) {
                 this.#positionX = cal(cal(Math.ceil((this.#positionX - this.#progressX)/this.#step), this.#step, "*"), this.#progressX, "+");
             }
             // 如果 progress-bar 位置处于跳跃节点处，则直接跳跃。

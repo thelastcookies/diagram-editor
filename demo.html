@@ -52,6 +52,7 @@
         pageMainView.setDividerSize(1);
 
 
+
         function init() {
             // 给显示区域绑定事件
             graphView.mi(function(e) {
@@ -60,7 +61,7 @@
                         window.location.href = 'index.html';
                     }
                 } else if (e.kind === 'doubleClickData') {
-                    showNodeDetails (e.data.getTag(), dataToUse, {x: e.event.x, y: e.event.y});
+                    showNodeDetails (e.data.getTag(), dataToUse, {x: e.event.x, y: e.event.y}, e.data.a('node.type'));
                 } else if (e.kind === 'clickBackground') {
                     let div = document.getElementById("data-display-div");
                     if (div)
@@ -115,35 +116,68 @@
          * @param endTime - 结束时间
          * @param interval - 数据间隔
          */
+        // function getHistoryData(nodeArr, startTime, endTime, interval) {
+        //     $.ajax ({
+        //         type: 'POST',
+        //         url: "http://localhost/node-trend.php",
+        //         data: {
+        //             "nodeTagArr": nodeArr,
+        //             "startTime": startTime,
+        //             "endTime": endTime,
+        //             "interval": interval
+        //         },
+        //         dataType: "json",
+        //         success: function (nodeData) {
+        //             let dateResult = dataPretreat(nodeData, startTime, endTime, interval);
+        //
+        //             historyData = dateResult.data;
+        //             progressBar.init(dateResult.timestampArr, progressCallback);
+        //
+        //             if (getDataIntervalID)
+        //                 clearInterval(getDataIntervalID);
+        //
+        //             if (pageMainView) {
+        //                 pageMainView.setStatus("normal");
+        //                 graphView.fitContent(true);
+        //             }
+        //             else {
+        //                 graphView.fitContent(true);
+        //             }
+        //         }
+        //     });
+        // }
+
         function getHistoryData(nodeArr, startTime, endTime, interval) {
-            $.ajax ({
-                type: 'POST',
-                url: "http://localhost/node-trend.php",
-                data: {
-                    "nodeTagArr": nodeArr,
-                    "startTime": startTime,
-                    "endTime": endTime,
-                    "interval": interval
-                },
-                dataType: "json",
-                success: function (nodeData) {
-                    let dateResult = dataPretreat(nodeData, startTime, endTime, interval);
-
-                    historyData = dateResult.data;
-                    progressBar.init(dateResult.timestampArr, progressCallback);
-
-                    if (getDataIntervalID)
-                        clearInterval(getDataIntervalID);
-
-                    if (pageMainView) {
-                        pageMainView.setStatus("normal");
-                        graphView.fitContent(true);
-                    }
-                    else {
-                        graphView.fitContent(true);
-                    }
+            let timestampArr = [], data = [];
+            let min = 0, hour = 0, timestamp = '', temp = [];
+            for (let i = 0, len = 1200; i < len; i++) {
+                if (i !== 0 && i % 60 === 0) {
+                    min = 0;
+                    hour ++;
                 }
-            });
+                timestamp = `2020-07-01 ${hour}:${min}:00`;
+                timestampArr.push(timestamp);
+                temp = [
+                    {nodeTag: "HS:fd_zt_01", value: i, timestamp: timestamp, nodeDesc: "柱形图"}
+                ];
+                data.push(temp);
+                min++;
+
+            }
+            console.log(timestampArr);
+            historyData = data;
+            progressBar.init(timestampArr, progressCallback);
+
+            if (getDataIntervalID)
+                clearInterval(getDataIntervalID);
+
+            if (pageMainView) {
+                pageMainView.setStatus("normal");
+                graphView.fitContent(true);
+            }
+            else {
+                graphView.fitContent(true);
+            }
         }
 
         /**
@@ -172,17 +206,26 @@
          * @param data - 用于显示的测点信息
          * @param position - 点击事件的位置，用以确认弹出框的位置
          */
-        function showNodeDetails (tag, data, position) {
+        function showNodeDetails (tag, data, position, type) {
             let htmlStr = "";
             if (data)
                 for (let i = 0, len = data.length; i < len; i++) {
                     if (data[i].nodeTag === tag) {
                         nodeSelected = tag;
+                        let value = '', height = 120;
+                        if (type === 'zb1') {
+                            value = `<br/>油温1：${data[i].value.yw1}<br/>油温2：${data[i].value.yw2}<br/>绕温：${data[i].value.rw}<br/>档位：${data[i].value.dw}`;
+                        } else if (type === 'zb2') {
+                            value = `<br/>主变油温1：${data[i].value.zbyw1}<br/>主变油温2：${data[i].value.zbyw2}<br/>绕组油温：${data[i].value.rzyw}<br/>档位：${data[i].value.dw}`;
+                        } else {
+                            value = data[i].value;
+                            height = 30;
+                        }
                         htmlStr += `
-                                            <div id = "data-display-div" style="position: absolute;top: ${position.y + 10 + "px"};left: ${position.x + 10 + "px"};height: 214px;box-sizing: border-box;opacity: 0.8;line-height: 30px;width: 280px;background-color: #fff; border: 1px solid #111;padding: 2px 5px;color: #444;border-radius: 5px;">
+                                            <div id = "data-display-div" style="position: absolute;top: ${position.y + 10 + "px"};left: ${position.x + 10 + "px"};height: ${184 + height}px;box-sizing: border-box;opacity: 0.8;line-height: 30px;width: 280px;background-color: #fff; border: 1px solid #111;padding: 2px 5px;color: #444;border-radius: 5px;">
                                                 <div style="height: 30px; ">标签名：${tag}</div>
                                                 <div style="height: 30px; ">中文描述：${data[i].nodeDesc}</div>
-                                                <div style="height: 30px; ">值：<span id="node-value-by-time">${data[i].value}</span></div>
+                                                <div style="height: ${height}; ">值：<span id="node-value-by-time">${value}</span></div>
                                                 <div style="height: 30px; ">时标：<span id="node-timestamp-by-time">${data[i].timestamp}</span></div>
                                                 <div style="height: 30px; ">质量：</div>
                                                 <div style="height: 30px; ">单位：</div>
@@ -197,7 +240,7 @@
                             div.innerHTML = htmlStr;
                             document.getElementsByTagName('body')[0].appendChild(div);
                         }
-                        return ;
+                        return;
                     }
                 }
         }
@@ -207,11 +250,19 @@
          * @param value - 测点value
          * @param timestamp - 测点时间戳
          */
-        function updateNodeDetails (value, timestamp) {
-            let nodeValueSpan = document.getElementById("node-value-by-time");
-            let nodeTimeSpan = document.getElementById("node-timestamp-by-time");
-            nodeValueSpan.innerText = value;
-            nodeTimeSpan.innerText = timestamp;
+        function updateNodeDetails (value, timestamp, type) {
+            let valueTemp = '';
+            if (type === 'zb1') {
+                valueTemp = `<br/>油温1：${value.yw1}<br/>油温2：${value.yw2}<br/>绕温：${value.rw}<br/>档位：${value.dw}`;
+            } else if (type === 'zb2') {
+                valueTemp = `<br/>主变油温1：${value.zbyw1}<br/>主变油温2：${value.zbyw2}<br/>绕组油温：${value.rzyw}<br/>档位：${value.dw}`;
+            } else {
+                valueTemp = value;
+            }
+            let nodeValueSpan = document.getElementById('node-value-by-time')
+            let nodeTimeSpan = document.getElementById('node-timestamp-by-time')
+            nodeValueSpan.innerHTML = valueTemp
+            nodeTimeSpan.innerText = timestamp
         }
 
         /**
@@ -242,12 +293,13 @@
          * @param index - 进度条的移动位置
          */
         function progressCallback(index) {
-            dataToUse = dataModel.formulaPreprocess(historyData[index]);
+            // dataToUse = dataModel.formulaPreprocess(historyData[index]);
             dataModel.setNodeStatusByValue(dataToUse);
             let isDisplay = document.getElementById("data-display-div") ? document.getElementById("data-display-div").style.display: null;
             if (isDisplay !== null && isDisplay !== "none") {
                 let nodeArr = dataToUse.filter(item => item.nodeTag === nodeSelected);
-                updateNodeDetails(nodeArr[0].value, dataToUse[0].timestamp);
+                let type = dataModel.getDataByNodeTag(nodeArr[0].nodeTag)[0].a('node.type');
+                updateNodeDetails(nodeArr[0].value, dataToUse[0].timestamp, type);
             }
         }
 

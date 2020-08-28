@@ -6,7 +6,7 @@
  * roundFlag: Boolean, 表示是否将进行四舍五入取舍。
  */
 const cal = function (numA, numB, symbol, decimal, roundFlag) {
-    decimal = decimal === undefined ? 2 : decimal;
+    decimal = decimal === undefined ? 10 : decimal;
     roundFlag = roundFlag === undefined ? true : roundFlag;
     let result = null, tempResult = null;
     if (numA && !numB)
