@@ -76,6 +76,10 @@ class ProgressBar {
         this.#len = this.#dataArr.length - 1;
 
         this.#step = cal(this.#progressLen, this.#len, "/");
+        while (cal(this.#step, this.#len, '*') > this.#progressLen) {
+            this.#len++;
+            this.#step = cal(this.#progressLen, this.#len, "/");
+        }
 
         // progress-detail 内容的初始化
         $("#progress-time").text(this.#dataArr[0]);
@@ -183,7 +187,8 @@ class ProgressBar {
                 return;
             }
             // 如果 progress-bar 位置处于两个跳跃节点之间，那么开始移动时将其置于下一个跳跃节点处。
-            else if (cal(cal(this.#positionX, this.#progressX, "-"), this.#step, "%") !== 0 && cal(cal(this.#positionX, this.#progressX, "-"), this.#step, "%") !== this.#step) {
+            else if (cal(cal(this.#positionX, this.#progressX, "-"), this.#step, "%") !== 0 ) {
+            // else if (cal(cal(this.#positionX, this.#progressX, "-"), this.#step, "%") !== 0 && cal(cal(this.#positionX, this.#progressX, "-"), this.#step, "%") !== this.#step) {
                 this.#positionX = cal(cal(Math.ceil((this.#positionX - this.#progressX)/this.#step), this.#step, "*"), this.#progressX, "+");
             }
             // 如果 progress-bar 位置处于跳跃节点处，则直接跳跃。
@@ -220,6 +225,9 @@ class ProgressBar {
     destroy() {
         this.#flag = false;
         this.setPlayStop();
+        this.#interval = 500;
+        $("#fast-forward-btn")[0].title = `1倍速`;
+        $("#fast-forward-btn-icon")[0].style.backgroundImage = `url('progress-bar/images/fast-forward.png')`;
         $("#progress-btn").off("mousedown");
         $("#progress-bar").off("mousedown");
         $(document).off("mouseup");
