@@ -164,6 +164,24 @@ toolbar_config_right = [
             height: 16,
             comps: [{
                 type: 'image',
+                name: 'symbols/toolbar-icon/background.svg'
+            }]
+        },
+        toolTip: '背景转换',
+        action: function() {
+            let gridColorStatus = gridPainter.getColorStatus();
+            g2d.removeBottomPainter(gridPainter);
+            gridPainter = new ht.graph.GridPainter(g2d, gridColorStatus === 'light' ? 'dark' : 'light');
+            g2d.addBottomPainter(gridPainter);
+            document.getElementsByClassName('editCanvas')[0].parentNode.style.backgroundColor = gridColorStatus === 'light' ? '#aaa' : '#FFF';
+        }
+    },
+    {
+        icon: {
+            width: 16,
+            height: 16,
+            comps: [{
+                type: 'image',
                 name: 'symbols/toolbar-icon/exchangerate.svg'
             }]
         },

@@ -21,6 +21,7 @@ var index_contextmenu_config = [
             return !slModelList.length;
         },
         action: function(item, event) {
+            let copyNodeArr = [];
             slModelList.each(function (item, index) {
                 let node = null;
                 if (item instanceof ht.Text)
@@ -52,18 +53,17 @@ var index_contextmenu_config = [
                 // 旋转角度
                 node.setRotation(item.getRotation());
                 // 位置与大小
-                node.setRect(item.getRect());
+                // node.setRect(item.getRect());
+                node.setHeight(item.getHeight());
+                node.setWidth(item.getWidth());
                 // 修改位置
                 // node.setPosition(event.clientX + 30 - 260, event.clientY + 30 - 25);
                 let tempPosition = item.getPosition();
                 node.setPosition(parseInt(tempPosition.x + 30), parseInt(tempPosition.y + 30));
-
                 indexDataModel.add(node);
+                copyNodeArr.push(node);
             });
-
-            // copyNodeArr.forEach(function (node, index) {
-                // node.setPosition(event.screenX + 30, event.screenY + 30);
-            // });
+            g2d.sm().ss(copyNodeArr);
         }
     },
     {
