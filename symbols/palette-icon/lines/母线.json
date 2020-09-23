@@ -1,0 +1,49 @@
+{
+  "modified": "Mon Sep 21 2020 16:41:28 GMT+0800 (CST)",
+  "dataBindings": [
+    {
+      "attr": "node.name",
+      "valueType": "String",
+      "defaultValue": "bus"
+    },
+    {
+      "attr": "line.color",
+      "valueType": "Color",
+      "defaultValue": "rgb(255,0,0)"
+    },
+    {
+      "attr": "node.width",
+      "valueType": "Number",
+      "defaultValue": 8
+    }
+  ],
+  "width": 200,
+  "height": 8,
+  "comps": [
+    {
+      "type": "shape",
+      "borderWidth": {
+        "func": "attr@node.width",
+        "value": "8"
+      },
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(255,0,0)"
+      },
+      "points": [
+        0,
+        4,
+        200,
+        4,
+        200,
+        4,
+        200,
+        4
+      ],
+      "segments": [
+        1,
+        4
+      ]
+    }
+  ]
+}

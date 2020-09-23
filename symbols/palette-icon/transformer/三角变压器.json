@@ -1,0 +1,44 @@
+{
+  "modified": "Tue Mar 17 2020 14:53:44 GMT+0800 (中国标准时间)",
+  "dataBindings": [
+    {
+      "attr": "line.color",
+      "valueType": "Color",
+      "defaultValue": "rgb(255,0,0)"
+    }
+  ],
+  "width": 35,
+  "height": 35,
+  "comps": [
+    {
+      "type": "polygon",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(255,0,0)"
+      },
+      "polygonSide": 3,
+      "rect": [
+        8.01841,
+        8.10554,
+        18.92711,
+        18.92711
+      ]
+    },
+    {
+      "type": "oval",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(255,0,0)"
+      },
+      "rotation": 4.71239,
+      "rect": [
+        1.00002,
+        1.00002,
+        32.96389,
+        32.96389
+      ]
+    }
+  ]
+}

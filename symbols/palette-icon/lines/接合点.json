@@ -1,0 +1,32 @@
+{
+  "modified": "Mon Sep 21 2020 16:41:22 GMT+0800 (CST)",
+  "dataBindings": [
+    {
+      "attr": "line.color",
+      "valueType": "Color",
+      "defaultValue": "rgb(255,0,0)"
+    }
+  ],
+  "width": 12,
+  "height": 12,
+  "comps": [
+    {
+      "type": "oval",
+      "background": {
+        "func": "attr@line.color",
+        "value": "rgb(255,0,0)"
+      },
+      "borderWidth": 1,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(255,0,0)"
+      },
+      "rect": [
+        0,
+        0,
+        12,
+        12
+      ]
+    }
+  ]
+}

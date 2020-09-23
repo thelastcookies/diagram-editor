@@ -14,8 +14,6 @@
 
     <script src="config/htconfig.js"></script>
 
-    <script src="bootstrap-3.3.7-dist/js/jquery-3.1.1.js"></script>
-
     <script src="lib/core/ht.js"></script>
     <script src="lib/plugin/ht-cssanimation.js"></script>
     <script src="lib/plugin/ht-form.js"></script>
@@ -206,7 +204,9 @@
                 group.setName(info.name);
                 dm.add(group);// 将节点添加到 palette 的数据容器中
 
-                if (name === 'scene') group.setExpanded(true);
+                if (name === 'lines') group.setExpanded(true);
+                if (name === 'variable') group.setExpanded(true);
+                // if (name === 'empty') group.setExpanded(true);
 
                 info.items.forEach(function (item) {
                     // 新建 ht.Node 类型节点
@@ -331,17 +331,28 @@
                     propertyView.addProperties(text_properties);
                     propertyView.addProperties(data_properties);
                     propertyView.addProperties(threshold_properties);
+                    propertyView.addProperties(m_point_properties);
                     return;// 设置文本类型不显示其他数据
                 }
                 if (data instanceof ht.Data) {// data 类型，所有的节点都基于这个类型
-                    propertyView.addProperties(threshold_properties);
                     propertyView.addProperties(data_properties);
                 }
                 if (data instanceof ht.Node) {// node 类型
-                    propertyView.addProperties(node_properties);
-                    if (data.a('node.type') === 'zt') {
+                    if (data.a('node.type') === 'm-point') {
+                        propertyView.addProperties(m_point_properties);
+                        propertyView.addProperties(threshold_properties);
+                    }
+                    if (data.a('node.name') === 'bar') {
                         propertyView.addProperties(zt_properties);
                     }
+                    if (data.a('node.name') === 'bus') {
+                        propertyView.addProperties(bus_properties);
+                    }
+                    if (data.a('line.color')) {
+                        propertyView.addProperties(node_color_properties);
+                    }
+                    propertyView.addProperties(node_properties);
+
                 }
                 // if (data instanceof ht.Group) {// 组类型
                 //     propertyView.addProperties(group_properties);

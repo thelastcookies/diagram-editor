@@ -1,0 +1,94 @@
+{
+  "modified": "Mon Sep 21 2020 15:08:12 GMT+0800 (CST)",
+  "dataBindings": [
+    {
+      "attr": "powerLevel",
+      "valueType": "PowerLevel",
+      "defaultValue": "red",
+      "name": "电压等级"
+    },
+    {
+      "attr": "powerOffColor",
+      "valueType": "Color",
+      "defaultValue": "rgb(128,128,128)",
+      "name": "失电颜色"
+    },
+    {
+      "attr": "powerOn",
+      "valueType": "Boolean",
+      "defaultValue": true,
+      "name": "是否带电"
+    },
+    {
+      "attr": "line.color",
+      "valueType": "Color",
+      "defaultValue": "rgb(255,0,0)"
+    }
+  ],
+  "gridBlockSize": 6,
+  "width": 36,
+  "height": 35,
+  "comps": [
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(255,0,0)"
+      },
+      "points": [
+        18.29682,
+        35,
+        18.29682,
+        29
+      ]
+    },
+    {
+      "type": "circle",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(255,0,0)"
+      },
+      "displayName": "2",
+      "rotation": 1.5708,
+      "rect": [
+        14.95246,
+        0.00004,
+        19.83089,
+        19.83089
+      ]
+    },
+    {
+      "type": "circle",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(255,0,0)"
+      },
+      "displayName": "2",
+      "rotation": 1.5708,
+      "rect": [
+        1.21664,
+        0.00004,
+        19.83089,
+        19.83089
+      ]
+    },
+    {
+      "type": "circle",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(255,0,0)"
+      },
+      "displayName": "2",
+      "rect": [
+        8.38137,
+        9.91548,
+        19.83089,
+        19.83089
+      ]
+    }
+  ]
+}

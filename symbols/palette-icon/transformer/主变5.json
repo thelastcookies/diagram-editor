@@ -1,0 +1,349 @@
+{
+  "modified": "Tue Sep 22 2020 09:37:36 GMT+0800 (CST)",
+  "width": 200,
+  "height": 90,
+  "comps": [
+    {
+      "type": "text",
+      "text": "档位",
+      "align": "center",
+      "color": "rgb(255,255,255)",
+      "font": "14px arial, sans-serif",
+      "rect": [
+        0,
+        50,
+        50,
+        50
+      ]
+    },
+    {
+      "type": "text",
+      "text": "降",
+      "align": "center",
+      "color": "rgb(0,255,0)",
+      "rect": [
+        113,
+        50,
+        50,
+        50
+      ]
+    },
+    {
+      "type": "text",
+      "text": "停",
+      "align": "center",
+      "color": "rgb(255,0,0)",
+      "rect": [
+        113,
+        20,
+        50,
+        50
+      ]
+    },
+    {
+      "type": "text",
+      "text": "升",
+      "align": "center",
+      "color": "rgb(0,0,255)",
+      "rect": [
+        113,
+        -10,
+        50,
+        50
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 1.5708,
+      "points": [
+        5.50015,
+        45,
+        95.50015,
+        45,
+        95.08729,
+        45,
+        95.08729,
+        45
+      ],
+      "segments": [
+        1,
+        4
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 3.14159,
+      "points": [
+        0,
+        30,
+        120,
+        30,
+        119.44953,
+        30,
+        119.44953,
+        30
+      ],
+      "segments": [
+        1,
+        4
+      ]
+    },
+    {
+      "type": "text",
+      "text": "油温1",
+      "align": "center",
+      "color": "rgb(255,255,255)",
+      "font": "14px arial, sans-serif",
+      "rect": [
+        0,
+        -10,
+        50,
+        50
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgba(217,217,217,0)",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,255,255)",
+      "rect": [
+        0,
+        0,
+        200,
+        90
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 3.14159,
+      "points": [
+        0,
+        60,
+        120,
+        60,
+        119.44953,
+        60,
+        119.44953,
+        60
+      ],
+      "segments": [
+        1,
+        4
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 1.5708,
+      "points": [
+        75,
+        45,
+        165,
+        45,
+        164.58715,
+        45,
+        164.58715,
+        45
+      ],
+      "segments": [
+        1,
+        4
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 1.5708,
+      "points": [
+        111,
+        45,
+        201,
+        45,
+        200.58715,
+        45,
+        200.58715,
+        45
+      ],
+      "segments": [
+        1,
+        4
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgb(48,242,120)",
+      "borderColor": "#979797",
+      "shadow": {
+        "func": "attr@btn1.shadow",
+        "value": false
+      },
+      "shadowColor": "rgb(48,242,120)",
+      "shadowBlur": 10,
+      "shadowOffsetX": 0,
+      "shadowOffsetY": 0,
+      "scaleX": {
+        "func": "attr@btn1.scale",
+        "value": 1
+      },
+      "scaleY": {
+        "func": "attr@btn1.scale",
+        "value": 1
+      },
+      "rect": [
+        163,
+        3.5,
+        30,
+        26
+      ],
+      "onEnter": "__ht__function(event, data, view, point, width, height) {\ndata.a('btn1.scale', 1.05);\ndata.a('btn1.shadow', true);\n}",
+      "onLeave": "__ht__function(event, data, view, point, width, height) {\ndata.a('btn1.scale', undefined);\ndata.a('btn1.shadow', undefined);\n}"
+    },
+    {
+      "type": "circle",
+      "background": "rgb(255,0,0)",
+      "borderColor": "#979797",
+      "shadow": {
+        "func": "attr@btn2.shadow",
+        "value": false
+      },
+      "shadowColor": "rgb(255,0,0)",
+      "shadowBlur": 10,
+      "shadowOffsetX": 0,
+      "shadowOffsetY": 0,
+      "scaleX": {
+        "func": "attr@btn2.scale",
+        "value": 1
+      },
+      "scaleY": {
+        "func": "attr@btn2.scale",
+        "value": 1
+      },
+      "rect": [
+        165,
+        32,
+        26,
+        26
+      ],
+      "onEnter": "__ht__function(event, data, view, point, width, height) {\ndata.a('btn2.scale', 1.05);\ndata.a('btn2.shadow', true);\n}",
+      "onLeave": "__ht__function(event, data, view, point, width, height) {\ndata.a('btn2.scale', undefined);\ndata.a('btn2.shadow', undefined);\n}"
+    },
+    {
+      "type": "triangle",
+      "background": "rgb(48,242,120)",
+      "borderColor": "#979797",
+      "shadow": {
+        "func": "attr@btn3.shadow",
+        "value": false
+      },
+      "shadowColor": "rgb(48,242,120)",
+      "shadowBlur": 10,
+      "shadowOffsetX": 0,
+      "shadowOffsetY": 0,
+      "scaleX": {
+        "func": "attr@btn3.scale",
+        "value": 1
+      },
+      "scaleY": {
+        "func": "attr@btn3.scale",
+        "value": 1
+      },
+      "rotation": 3.14159,
+      "rect": [
+        163,
+        61,
+        30,
+        26
+      ],
+      "onEnter": "__ht__function(event, data, view, point, width, height) {\ndata.a('btn3.scale', 1.05);\ndata.a('btn3.shadow', true);\n}",
+      "onLeave": "__ht__function(event, data, view, point, width, height) {\ndata.a('btn3.scale', undefined);\ndata.a('btn3.shadow', undefined);\n}"
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 3.14159,
+      "points": [
+        120.5,
+        28,
+        155.5,
+        28,
+        155.33945,
+        28,
+        155.33945,
+        28
+      ],
+      "segments": [
+        1,
+        4
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 3.14159,
+      "points": [
+        120.5,
+        58,
+        155.5,
+        58,
+        155.33945,
+        58,
+        155.33945,
+        58
+      ],
+      "segments": [
+        1,
+        4
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 3.14159,
+      "points": [
+        120.5,
+        32,
+        155.5,
+        32,
+        155.33945,
+        32,
+        155.33945,
+        32
+      ],
+      "segments": [
+        1,
+        4
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 3.14159,
+      "points": [
+        120.5,
+        62,
+        155.5,
+        62,
+        155.33945,
+        62,
+        155.33945,
+        62
+      ],
+      "segments": [
+        1,
+        4
+      ]
+    }
+  ]
+}

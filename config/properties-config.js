@@ -31,51 +31,59 @@ text_properties = [// 文本的属性
     {
         categoryName: '文本',
         name: 'text.color',
-        displayName: '颜色',
+        displayName: '文本颜色',
         accessType: 'style',
         valueType: 'color',
         editable: true
     },
     {
         categoryName: '文本',
-        name: 'text.shadow',
-        displayName: '阴影',
+        name: 'text.font',
+        displayName: '字体大小',
         accessType: 'style',
-        valueType: 'boolean',
+        valueType: 'text',
         editable: true
     },
-    {
-        categoryName: '文本',
-        name: 'text.shadow.color',
-        displayName: '阴影颜色',
-        accessType: 'style',
-        valueType: 'color',
-        editable: true
-    },
-    {
-        categoryName: '文本',
-        name: 'text.shadow.blur',
-        displayName: '阴影模糊',
-        accessType: 'style',
-        valueType: 'number',
-        editable: true
-    },
-    {
-        categoryName: '文本',
-        name: 'text.shadow.offset.x',
-        displayName: '阴影横偏移',
-        accessType: 'style',
-        valueType: 'number',
-        editable: true
-    },
-    {
-        categoryName: '文本',
-        name: 'text.shadow.offset.y',
-        displayName: '阴影纵偏移',
-        accessType: 'style',
-        valueType: 'number',
-        editable: true
-    },
+    // {
+    //     categoryName: '文本',
+    //     name: 'text.shadow',
+    //     displayName: '阴影',
+    //     accessType: 'style',
+    //     valueType: 'boolean',
+    //     editable: true
+    // },
+    // {
+    //     categoryName: '文本',
+    //     name: 'text.shadow.color',
+    //     displayName: '阴影颜色',
+    //     accessType: 'style',
+    //     valueType: 'color',
+    //     editable: true
+    // },
+    // {
+    //     categoryName: '文本',
+    //     name: 'text.shadow.blur',
+    //     displayName: '阴影模糊',
+    //     accessType: 'style',
+    //     valueType: 'number',
+    //     editable: true
+    // },
+    // {
+    //     categoryName: '文本',
+    //     name: 'text.shadow.offset.x',
+    //     displayName: '阴影横偏移',
+    //     accessType: 'style',
+    //     valueType: 'number',
+    //     editable: true
+    // },
+    // {
+    //     categoryName: '文本',
+    //     name: 'text.shadow.offset.y',
+    //     displayName: '阴影纵偏移',
+    //     accessType: 'style',
+    //     valueType: 'number',
+    //     editable: true
+    // },
 ];
 
 data_properties = [// 所有的节点都有的属性
@@ -92,20 +100,7 @@ data_properties = [// 所有的节点都有的属性
     //     displayName: '标签',// 用于存取属性名的显示文本值，若为空则显示name属性值
     //     editable: true// 设置该属性是否可编辑
     // },
-    {
-        name: 'node.tag',
-        displayName: '标签',
-        accessType: 'attr',
-        valueType: 'text',
-        editable: true// 设置该属性是否可编辑
-    },
-    {
-        name: 'node.formula',
-        displayName: '公式',
-        accessType: 'attr',
-        valueType: 'text',
-        editable: true
-    },
+
 
     // {
     //     name: 'label2',// 设置了 name 属性，如果没有设置 accessType 则默认通过 get/setTag 来获取和设置 tag 值
@@ -122,6 +117,7 @@ data_properties = [// 所有的节点都有的属性
         name: 'host',
         displayName: '宿主节点',
     },
+
     // {
     //     name: '2d.editable',// 结合 accessType，则通过 node.s('2d.editable') 获取和设置该属性
     //     accessType: 'style',// 操作存取属性类型
@@ -191,7 +187,7 @@ zt_properties = [
             values: ["top", "bottom"]
         }
     }
-]
+];
 
 threshold_properties = [// 节点的阈值属性设置
      {
@@ -479,11 +475,12 @@ group_properties = [// 组的属性
 
 edge_properties = [// 连线的属性
     {
-        name: 'edge.color',
+        name: 'body.color',
         displayName: '连线颜色',
         accessType: 'style',
         valueType: 'color',
-        editable: true
+        editable: true,
+        defaultValue: 'rgb(255, 0, 0)',
     },
     {
         name: 'edge.width',
@@ -511,3 +508,40 @@ shape_properties = [// 折线的属性
     }
 ];
 
+bus_properties = [// 母线的属性
+    {
+        name: 'node.width',
+        displayName: '母线颜色宽度',
+        accessType: 'attr',
+        valueType: 'number',
+        editable: true,
+        defaultValue: 8
+    }
+];
+
+node_color_properties = [//普通图元的初始颜色配置
+    {
+        name: 'line.color',
+        displayName: '初始颜色',
+        accessType: 'attr',
+        valueType: 'color',
+        editable: true,
+        defaultValue: 'rgb(255, 0, 0)'
+    }
+];
+m_point_properties = [//测点图元的配置项
+    {
+        name: 'node.tag',
+        displayName: '标签',
+        accessType: 'attr',
+        valueType: 'text',
+        editable: true// 设置该属性是否可编辑
+    },
+    {
+        name: 'node.formula',
+        displayName: '公式',
+        accessType: 'attr',
+        valueType: 'text',
+        editable: true
+    }
+];

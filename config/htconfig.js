@@ -22,7 +22,7 @@ htconfig = {
 
     },
     Style: {
-        'edge.color': 'rgb(255, 0, 0)',
+        // 'edge.color': 'rgb(255, 0, 0)',
         'shape.border.color': 'rgb(255, 0, 0)',
     }
 };

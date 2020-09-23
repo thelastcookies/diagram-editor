@@ -1,0 +1,38 @@
+{
+  "modified": "Mon Sep 21 2020 17:14:46 GMT+0800 (CST)",
+  "dataBindings": [
+    {
+      "attr": "node.type",
+      "valueType": "String",
+      "defaultValue": "m-point"
+    },
+    {
+      "attr": "node.name",
+      "valueType": "String",
+      "defaultValue": "red-rect"
+    },
+    {
+      "attr": "node.color",
+      "valueType": "Color",
+      "defaultValue": "rgb(255,0,0)"
+    }
+  ],
+  "width": 18,
+  "height": 30,
+  "comps": [
+    {
+      "type": "rect",
+      "background": {
+        "func": "attr@node.color",
+        "value": "rgb(255,0,0)"
+      },
+      "borderColor": "#979797",
+      "rect": [
+        0,
+        0,
+        18,
+        30
+      ]
+    }
+  ]
+}

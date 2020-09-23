@@ -1,0 +1,103 @@
+{
+  "modified": "Mon Sep 21 2020 16:14:33 GMT+0800 (CST)",
+  "dataBindings": [
+    {
+      "attr": "line.color",
+      "valueType": "Color",
+      "defaultValue": "rgb(255,0,0)"
+    }
+  ],
+  "width": 20,
+  "height": 20,
+  "comps": [
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(255,0,0)"
+      },
+      "gradientColor": "rgb(255,255,255)",
+      "points": [
+        1,
+        5.3815,
+        1,
+        14.3815,
+        1,
+        14.3815,
+        1,
+        14.3815
+      ],
+      "segments": [
+        1,
+        4
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(255,0,0)"
+      },
+      "points": [
+        4.93026,
+        1.8815,
+        4.93026,
+        17.8815,
+        4.93026,
+        17.8815,
+        4.93026,
+        17.8815
+      ],
+      "segments": [
+        1,
+        4
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(255,0,0)"
+      },
+      "points": [
+        9.29486,
+        0,
+        9.29486,
+        20,
+        9.29486,
+        20,
+        9.29486,
+        20
+      ],
+      "segments": [
+        1,
+        4
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(255,0,0)"
+      },
+      "points": [
+        10.269,
+        10,
+        20,
+        10,
+        20,
+        10,
+        20,
+        10
+      ],
+      "segments": [
+        1,
+        4
+      ]
+    }
+  ]
+}

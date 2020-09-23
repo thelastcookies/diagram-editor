@@ -1,0 +1,47 @@
+{
+  "modified": "Mon Sep 21 2020 16:48:44 GMT+0800 (CST)",
+  "dataBindings": [
+    {
+      "attr": "line.color",
+      "valueType": "Color",
+      "defaultValue": "rgb(255,0,0)"
+    }
+  ],
+  "width": 35,
+  "height": 35,
+  "comps": [
+    {
+      "type": "oval",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(255,0,0)"
+      },
+      "rotation": 4.71239,
+      "rect": [
+        1.00002,
+        1.00002,
+        32.92601,
+        32.92601
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(255,0,0)"
+      },
+      "points": [
+        24.15584,
+        15.11905,
+        10.84416,
+        9.81602,
+        10.84416,
+        25.18398,
+        24.15584,
+        19.88095
+      ]
+    }
+  ]
+}

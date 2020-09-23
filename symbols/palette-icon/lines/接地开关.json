@@ -1,0 +1,136 @@
+{
+  "modified": "Mon Sep 21 2020 17:21:30 GMT+0800 (CST)",
+  "dataBindings": [
+    {
+      "attr": "node.type",
+      "valueType": "String",
+      "defaultValue": "m-point"
+    },
+    {
+      "attr": "node.name",
+      "valueType": "String",
+      "defaultValue": "G-switch"
+    },
+    {
+      "attr": "node.color",
+      "valueType": "Color",
+      "defaultValue": "rgb(255,0,0)"
+    },
+    {
+      "attr": "switch.powerOff",
+      "valueType": "Boolean",
+      "name": "开关-开",
+      "defaultValue": true
+    },
+    {
+      "attr": "switch.powerOn",
+      "valueType": "Boolean",
+      "name": "开关-闭",
+      "defaultValue": false
+    }
+  ],
+  "width": 30,
+  "height": 76,
+  "comps": [
+    {
+      "type": "oval",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@node.color",
+        "value": "rgb(255,0,0)"
+      },
+      "rect": [
+        10.4281,
+        0.95634,
+        9.1438,
+        9.1438
+      ]
+    },
+    {
+      "type": "oval",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@node.color",
+        "value": "rgb(255,0,0)"
+      },
+      "rect": [
+        10.4281,
+        51.84611,
+        9.1438,
+        9.1438
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@switch.powerOff",
+        "value": "rgb(0,255,0)"
+      },
+      "points": [
+        29.12622,
+        11.16744,
+        15,
+        51.68611
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@switch.powerOn",
+        "value": "rgb(255,0,0)"
+      },
+      "points": [
+        15,
+        10.10014,
+        15,
+        51.57737
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "points": [
+        1,
+        66.84493,
+        29,
+        66.84493
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "points": [
+        5,
+        70.96978,
+        25,
+        70.96978
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "points": [
+        10,
+        75.09039,
+        20,
+        75.09039
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "points": [
+        15,
+        61.81948,
+        15,
+        66.81948
+      ]
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "modified": "Tue Sep 22 2020 11:42:10 GMT+0800 (CST)",
+  "dataBindings": [
+    {
+      "attr": "node.type",
+      "valueType": "String",
+      "defaultValue": "m-point"
+    },
+    {
+      "attr": "node.name",
+      "valueType": "String",
+      "defaultValue": "circuit-breaker"
+    },
+    {
+      "attr": "node.color",
+      "valueType": "Color",
+      "defaultValue": "rgb(255,0,0)"
+    },
+    {
+      "attr": "node.stateSingle",
+      "valueType": "Boolean",
+      "defaultValue": true
+    },
+    {
+      "attr": "node.stateDouble",
+      "valueType": "Boolean",
+      "defaultValue": false
+    }
+  ],
+  "width": 19,
+  "height": 20,
+  "comps": [
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(0,255,0)",
+      "visible": {
+        "func": "attr@node.stateDouble",
+        "value": false
+      },
+      "displayName": "箭头",
+      "rotation": 3.14159,
+      "points": [
+        0.46922,
+        7.82856,
+        9.44935,
+        1.82856,
+        18.46922,
+        7.82856
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@node.color",
+        "value": "rgb(255,0,0)"
+      },
+      "displayName": "箭头",
+      "rotation": 3.14159,
+      "points": [
+        0.53078,
+        16.60777,
+        9.51091,
+        10.60777,
+        18.53078,
+        16.60777
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@node.color",
+        "value": "rgb(255,0,0)"
+      },
+      "points": [
+        9.5,
+        6.93108,
+        9.5,
+        0
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@node.color",
+        "value": "rgb(255,0,0)"
+      },
+      "points": [
+        9.5,
+        20,
+        9.5,
+        17
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "visible": {
+        "func": "attr@node.stateSingle",
+        "value": true
+      },
+      "points": [
+        9.5,
+        16.60779,
+        9.5,
+        6.60779
+      ]
+    }
+  ]
+}

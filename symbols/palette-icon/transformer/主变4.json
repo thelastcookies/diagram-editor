@@ -1,0 +1,395 @@
+{
+  "modified": "Tue Sep 22 2020 09:37:58 GMT+0800 (CST)",
+  "width": 200,
+  "height": 120,
+  "comps": [
+    {
+      "type": "text",
+      "text": "档位",
+      "align": "center",
+      "color": "rgb(255,255,255)",
+      "font": "14px arial, sans-serif",
+      "rect": [
+        5,
+        80,
+        50,
+        50
+      ]
+    },
+    {
+      "type": "text",
+      "text": "降",
+      "align": "center",
+      "color": "rgb(0,255,0)",
+      "rect": [
+        113,
+        75,
+        50,
+        50
+      ]
+    },
+    {
+      "type": "text",
+      "text": "停",
+      "align": "center",
+      "color": "rgb(255,0,0)",
+      "rect": [
+        113,
+        35,
+        50,
+        50
+      ]
+    },
+    {
+      "type": "text",
+      "text": "升",
+      "align": "center",
+      "color": "rgb(0,0,255)",
+      "rect": [
+        113,
+        -5,
+        50,
+        50
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 1.5708,
+      "points": [
+        0,
+        60,
+        120,
+        60,
+        119.44953,
+        60,
+        119.44953,
+        60
+      ],
+      "segments": [
+        1,
+        4
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 3.14159,
+      "points": [
+        0,
+        30,
+        120,
+        30,
+        119.44953,
+        30,
+        119.44953,
+        30
+      ],
+      "segments": [
+        1,
+        4
+      ]
+    },
+    {
+      "type": "text",
+      "text": "本体油温",
+      "align": "center",
+      "color": "rgb(255,255,255)",
+      "font": "14px arial, sans-serif",
+      "rect": [
+        5,
+        -10,
+        50,
+        50
+      ]
+    },
+    {
+      "type": "text",
+      "text": "油面温度",
+      "align": "center",
+      "color": "rgb(255,255,255)",
+      "font": "14px arial, sans-serif",
+      "rect": [
+        5,
+        20,
+        50,
+        50
+      ]
+    },
+    {
+      "type": "text",
+      "text": "绕阻温度",
+      "align": "center",
+      "color": "rgb(255,255,255)",
+      "font": "14px arial, sans-serif",
+      "rect": [
+        5,
+        50,
+        50,
+        50
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgba(0,0,0,0.00)",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,255,255)",
+      "rect": [
+        0,
+        0,
+        200,
+        120
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 3.14159,
+      "points": [
+        0,
+        60,
+        120,
+        60,
+        119.44953,
+        60,
+        119.44953,
+        60
+      ],
+      "segments": [
+        1,
+        4
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 3.14159,
+      "points": [
+        0,
+        90,
+        120,
+        90,
+        119.44953,
+        90,
+        119.44953,
+        90
+      ],
+      "segments": [
+        1,
+        4
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 1.5708,
+      "points": [
+        59.5,
+        60,
+        180.5,
+        60,
+        179.94494,
+        60,
+        179.94494,
+        60
+      ],
+      "segments": [
+        1,
+        4
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 1.5708,
+      "points": [
+        96,
+        60,
+        216,
+        60,
+        215.44953,
+        60,
+        215.44953,
+        60
+      ],
+      "segments": [
+        1,
+        4
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgb(48,242,120)",
+      "borderColor": "#979797",
+      "shadow": {
+        "func": "attr@btn1.shadow",
+        "value": false
+      },
+      "shadowColor": "rgb(48,242,120)",
+      "shadowBlur": 10,
+      "shadowOffsetX": 0,
+      "shadowOffsetY": 0,
+      "scaleX": {
+        "func": "attr@btn1.scale",
+        "value": 1
+      },
+      "scaleY": {
+        "func": "attr@btn1.scale",
+        "value": 1
+      },
+      "rect": [
+        162,
+        7.49998,
+        32,
+        30
+      ],
+      "onEnter": "__ht__function(event, data, view, point, width, height) {\ndata.a('btn1.scale', 1.05);\ndata.a('btn1.shadow', true);\n}",
+      "onLeave": "__ht__function(event, data, view, point, width, height) {\ndata.a('btn1.scale', undefined);\ndata.a('btn1.shadow', undefined);\n}"
+    },
+    {
+      "type": "circle",
+      "background": "rgb(255,0,0)",
+      "borderColor": "#979797",
+      "shadow": {
+        "func": "attr@btn2.shadow",
+        "value": false
+      },
+      "shadowColor": "rgb(255,0,0)",
+      "shadowBlur": 10,
+      "shadowOffsetX": 0,
+      "shadowOffsetY": 0,
+      "scaleX": {
+        "func": "attr@btn2.scale",
+        "value": 1
+      },
+      "scaleY": {
+        "func": "attr@btn2.scale",
+        "value": 1
+      },
+      "rect": [
+        162,
+        46.14254,
+        32,
+        30
+      ],
+      "onEnter": "__ht__function(event, data, view, point, width, height) {\ndata.a('btn2.scale', 1.05);\ndata.a('btn2.shadow', true);\n}",
+      "onLeave": "__ht__function(event, data, view, point, width, height) {\ndata.a('btn2.scale', undefined);\ndata.a('btn2.shadow', undefined);\n}"
+    },
+    {
+      "type": "triangle",
+      "background": "rgb(48,242,120)",
+      "borderColor": "#979797",
+      "shadow": {
+        "func": "attr@btn3.shadow",
+        "value": false
+      },
+      "shadowColor": "rgb(48,242,120)",
+      "shadowBlur": 10,
+      "shadowOffsetX": 0,
+      "shadowOffsetY": 0,
+      "scaleX": {
+        "func": "attr@btn3.scale",
+        "value": 1
+      },
+      "scaleY": {
+        "func": "attr@btn3.scale",
+        "value": 1
+      },
+      "rotation": 3.14159,
+      "rect": [
+        162,
+        82.49998,
+        32,
+        30
+      ],
+      "onEnter": "__ht__function(event, data, view, point, width, height) {\ndata.a('btn3.scale', 1.05);\ndata.a('btn3.shadow', true);\n}",
+      "onLeave": "__ht__function(event, data, view, point, width, height) {\ndata.a('btn3.scale', undefined);\ndata.a('btn3.shadow', undefined);\n}"
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 3.14159,
+      "points": [
+        120.5,
+        38,
+        155.5,
+        38,
+        155.33945,
+        38,
+        155.33945,
+        38
+      ],
+      "segments": [
+        1,
+        4
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 3.14159,
+      "points": [
+        120.5,
+        78,
+        155.5,
+        78,
+        155.33945,
+        78,
+        155.33945,
+        78
+      ],
+      "segments": [
+        1,
+        4
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 3.14159,
+      "points": [
+        120.5,
+        42,
+        155.5,
+        42,
+        155.33945,
+        42,
+        155.33945,
+        42
+      ],
+      "segments": [
+        1,
+        4
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 3.14159,
+      "points": [
+        120.5,
+        82,
+        155.5,
+        82,
+        155.33945,
+        82,
+        155.33945,
+        82
+      ],
+      "segments": [
+        1,
+        4
+      ]
+    }
+  ]
+}

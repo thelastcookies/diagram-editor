@@ -43,27 +43,27 @@ toolbar_config_left = [
             g2d.sm().cs();
         }
     },
-    {
-        id: 'edge',
-        unfocusable: true,
-        toolTip: '连线(到边缘)',
-        groupId: 'bar',
-        icon: {
-            width: 16,
-            height: 16,
-            comps: [
-                {
-                    type: 'image',
-                    name: 'symbols/toolbar-icon/edge.json',
-                    color: colorObject
-                }
-            ]
-        },
-        action: function() {
-            g2d.setInteractors([edgeBdyInteractor]);
-            g2d.sm().cs();
-        }
-    },
+    // {
+    //     id: 'edge',
+    //     unfocusable: true,
+    //     toolTip: '连线(到边缘)',
+    //     groupId: 'bar',
+    //     icon: {
+    //         width: 16,
+    //         height: 16,
+    //         comps: [
+    //             {
+    //                 type: 'image',
+    //                 name: 'symbols/toolbar-icon/edge.json',
+    //                 color: colorObject
+    //             }
+    //         ]
+    //     },
+    //     action: function() {
+    //         g2d.setInteractors([edgeBdyInteractor]);
+    //         g2d.sm().cs();
+    //     }
+    // },
     {
         id: 'rightAngle',
         unfocusable: true,

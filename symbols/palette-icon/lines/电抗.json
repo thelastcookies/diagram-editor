@@ -1,0 +1,92 @@
+{
+  "modified": "Mon Sep 21 2020 17:12:44 GMT+0800 (CST)",
+  "dataBindings": [
+    {
+      "attr": "line.color",
+      "valueType": "Color",
+      "defaultValue": "rgb(255,0,0)"
+    }
+  ],
+  "width": 22,
+  "height": 38,
+  "comps": [
+    {
+      "type": "arc",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(255,0,0)"
+      },
+      "arcFrom": 0,
+      "arcTo": 4.1888,
+      "arcClose": false,
+      "rotation": 4.71239,
+      "rect": [
+        0.10441,
+        9.00927,
+        21.79117,
+        19.70636
+      ]
+    },
+    {
+      "type": "arc",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(255,0,0)"
+      },
+      "arcFrom": 0,
+      "arcTo": 4.1888,
+      "arcClose": false,
+      "rotation": 5.23599,
+      "rect": [
+        0.10441,
+        9.00927,
+        21.79117,
+        19.70636
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(255,0,0)"
+      },
+      "points": [
+        0.20102,
+        19.36245,
+        12.00634,
+        19.36245
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(255,0,0)"
+      },
+      "points": [
+        11.0191,
+        0,
+        11.0191,
+        10
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(255,0,0)"
+      },
+      "points": [
+        11,
+        19.86245,
+        11,
+        38
+      ]
+    }
+  ]
+}

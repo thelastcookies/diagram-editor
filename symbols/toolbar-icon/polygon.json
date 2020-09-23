@@ -1,64 +1,17 @@
 {
+  "modified": "Wed Sep 23 2020 10:12:51 GMT+0800 (CST)",
   "background": "rgb(156,156,156)",
   "width": 16,
   "height": 16,
   "blendMode": "override",
   "comps": [
     {
-      "type": "shape",
-      "borderWidth": 1,
-      "borderColor": "rgb(0,0,0)",
-      "gradientColor": "rgb(255,255,255)",
-      "shadowColor": "#1ABC9C",
-      "displayName": "不规则图形",
-      "points": [
-        11.92,
-        2.48468,
-        5.63908,
-        2.48468,
-        2.72645,
-        11.75532
-      ]
-    },
-    {
-      "type": "shape",
-      "borderWidth": 1,
-      "borderColor": "rgb(0,0,0)",
-      "gradientColor": "rgb(255,255,255)",
-      "shadowColor": "#1ABC9C",
-      "displayName": "不规则图形",
-      "points": [
-        13,
-        4,
-        11,
-        8,
-        13,
-        12
-      ]
-    },
-    {
-      "type": "shape",
-      "borderWidth": 1,
-      "borderColor": "rgb(0,0,0)",
-      "gradientColor": "rgb(255,255,255)",
-      "shadowColor": "#1ABC9C",
-      "displayName": "不规则图形",
-      "points": [
-        11.86042,
-        13.5,
-        4,
-        13.5
-      ]
-    },
-    {
       "type": "circle",
       "borderWidth": 1,
       "borderColor": "rgb(0,0,0)",
-      "gradientColor": "rgb(255,255,255)",
-      "shadowColor": "#1ABC9C",
       "rect": [
-        12,
-        12,
+        0.96775,
+        1.4389,
         3.1445,
         3.1222
       ]
@@ -67,26 +20,38 @@
       "type": "circle",
       "borderWidth": 1,
       "borderColor": "rgb(0,0,0)",
-      "gradientColor": "rgb(255,255,255)",
-      "shadowColor": "#1ABC9C",
       "rect": [
-        11.86042,
-        0.92358,
-        3.1445,
-        3.1222
-      ]
-    },
-    {
-      "type": "circle",
-      "borderWidth": 1,
-      "borderColor": "rgb(0,0,0)",
-      "gradientColor": "rgb(255,255,255)",
-      "shadowColor": "#1ABC9C",
-      "rect": [
-        0.8555,
+        11.5,
         11.8778,
         3.1445,
         3.1222
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 1,
+      "borderColor": "rgb(0,0,0)",
+      "displayName": "不规则图形",
+      "points": [
+        2.54,
+        4.5611,
+        2.54,
+        8,
+        13.05149,
+        8
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 1,
+      "borderColor": "rgb(0,0,0)",
+      "borderCap": "round",
+      "displayName": "不规则图形",
+      "points": [
+        13.05149,
+        8,
+        13.05149,
+        11.8778
       ]
     }
   ]
