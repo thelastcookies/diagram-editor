@@ -1,5 +1,5 @@
 {
-  "modified": "Mon Sep 21 2020 16:14:33 GMT+0800 (CST)",
+  "modified": "Wed Sep 23 2020 15:30:00 GMT+0800 (CST)",
   "dataBindings": [
     {
       "attr": "line.color",
@@ -7,7 +7,7 @@
       "defaultValue": "rgb(255,0,0)"
     }
   ],
-  "width": 20,
+  "width": 24,
   "height": 20,
   "comps": [
     {
@@ -17,16 +17,16 @@
         "func": "attr@line.color",
         "value": "rgb(255,0,0)"
       },
-      "gradientColor": "rgb(255,255,255)",
+      "rotation": -1.5708,
       "points": [
-        1,
-        5.3815,
-        1,
-        14.3815,
-        1,
-        14.3815,
-        1,
-        14.3815
+        7.1345,
+        4.8655,
+        16.8655,
+        4.8655,
+        16.8655,
+        4.8655,
+        16.8655,
+        4.8655
       ],
       "segments": [
         1,
@@ -41,40 +41,10 @@
         "value": "rgb(255,0,0)"
       },
       "points": [
-        4.93026,
-        1.8815,
-        4.93026,
-        17.8815,
-        4.93026,
-        17.8815,
-        4.93026,
-        17.8815
-      ],
-      "segments": [
-        1,
-        4
-      ]
-    },
-    {
-      "type": "shape",
-      "borderWidth": 2,
-      "borderColor": {
-        "func": "attr@line.color",
-        "value": "rgb(255,0,0)"
-      },
-      "points": [
-        9.29486,
         0,
-        9.29486,
-        20,
-        9.29486,
-        20,
-        9.29486,
-        20
-      ],
-      "segments": [
-        1,
-        4
+        10.5,
+        24,
+        10.5
       ]
     },
     {
@@ -85,18 +55,24 @@
         "value": "rgb(255,0,0)"
       },
       "points": [
-        10.269,
-        10,
-        20,
-        10,
-        20,
-        10,
-        20,
-        10
-      ],
-      "segments": [
-        1,
-        4
+        2,
+        14.62484,
+        22,
+        14.62484
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(255,0,0)"
+      },
+      "points": [
+        7,
+        18.74546,
+        17,
+        18.74546
       ]
     }
   ]

@@ -1,5 +1,5 @@
 {
-  "modified": "Mon Sep 21 2020 17:21:30 GMT+0800 (CST)",
+  "modified": "Wed Sep 23 2020 15:29:05 GMT+0800 (CST)",
   "dataBindings": [
     {
       "attr": "node.type",
@@ -29,7 +29,7 @@
       "defaultValue": false
     }
   ],
-  "width": 30,
+  "width": 24,
   "height": 76,
   "comps": [
     {
@@ -40,8 +40,8 @@
         "value": "rgb(255,0,0)"
       },
       "rect": [
-        10.4281,
-        0.95634,
+        7.4281,
+        0.69258,
         9.1438,
         9.1438
       ]
@@ -54,8 +54,8 @@
         "value": "rgb(255,0,0)"
       },
       "rect": [
-        10.4281,
-        51.84611,
+        7.4281,
+        51.58235,
         9.1438,
         9.1438
       ]
@@ -68,10 +68,10 @@
         "value": "rgb(0,255,0)"
       },
       "points": [
-        29.12622,
-        11.16744,
-        15,
-        51.68611
+        26.12622,
+        10.79494,
+        12,
+        51.31361
       ]
     },
     {
@@ -82,54 +82,66 @@
         "value": "rgb(255,0,0)"
       },
       "points": [
-        15,
-        10.10014,
-        15,
-        51.57737
+        12,
+        9.83638,
+        12,
+        51.31361
       ]
     },
     {
       "type": "shape",
       "borderWidth": 2,
-      "borderColor": "rgb(255,0,0)",
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(255,0,0)"
+      },
       "points": [
-        1,
-        66.84493,
-        29,
-        66.84493
+        0,
+        66.57806,
+        24,
+        66.57806
       ]
     },
     {
       "type": "shape",
       "borderWidth": 2,
-      "borderColor": "rgb(255,0,0)",
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(255,0,0)"
+      },
       "points": [
-        5,
-        70.96978,
-        25,
-        70.96978
+        2,
+        70.7029,
+        22,
+        70.7029
       ]
     },
     {
       "type": "shape",
       "borderWidth": 2,
-      "borderColor": "rgb(255,0,0)",
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(255,0,0)"
+      },
       "points": [
-        10,
-        75.09039,
-        20,
-        75.09039
+        7,
+        74.82352,
+        17,
+        74.82352
       ]
     },
     {
       "type": "shape",
       "borderWidth": 2,
-      "borderColor": "rgb(255,0,0)",
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(255,0,0)"
+      },
       "points": [
-        15,
-        61.81948,
-        15,
-        66.81948
+        12,
+        61.55261,
+        12,
+        66.55261
       ]
     }
   ]

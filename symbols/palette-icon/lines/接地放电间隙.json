@@ -1,32 +1,14 @@
 {
-  "modified": "Wed Sep 23 2020 15:12:43 GMT+0800 (CST)",
+  "modified": "Wed Sep 23 2020 15:28:38 GMT+0800 (CST)",
   "dataBindings": [
     {
       "attr": "line.color",
       "valueType": "Color",
       "defaultValue": "rgb(255,0,0)"
-    },
-    {
-      "attr": "powerLevel",
-      "valueType": "PowerLevel",
-      "defaultValue": "red",
-      "name": "电压等级"
-    },
-    {
-      "attr": "powerOffColor",
-      "valueType": "Color",
-      "defaultValue": "rgb(128,128,128)",
-      "name": "失电颜色"
-    },
-    {
-      "attr": "powerOn",
-      "valueType": "Boolean",
-      "defaultValue": true,
-      "name": "是否带电"
     }
   ],
   "width": 24,
-  "height": 64,
+  "height": 74,
   "comps": [
     {
       "type": "shape",
@@ -36,9 +18,9 @@
         "value": "rgb(255,0,0)"
       },
       "points": [
-        11.99998,
+        12,
         19.73358,
-        11.99998,
+        12,
         0
       ]
     },
@@ -50,9 +32,9 @@
         "value": "rgb(255,0,0)"
       },
       "points": [
-        11.99999,
+        12,
         64,
-        11.99999,
+        12,
         44.26642
       ]
     },
@@ -86,6 +68,48 @@
         41.65759,
         3,
         4
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(255,0,0)"
+      },
+      "points": [
+        0,
+        64.5,
+        24,
+        64.5
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(255,0,0)"
+      },
+      "points": [
+        2,
+        68.62484,
+        22,
+        68.62484
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(255,0,0)"
+      },
+      "points": [
+        7,
+        72.74546,
+        17,
+        72.74546
       ]
     }
   ]

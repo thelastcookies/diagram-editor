@@ -1,6 +1,11 @@
 {
   "dataBindings": [
     {
+      "attr": "line.color",
+      "valueType": "Color",
+      "defaultValue": "rgb(255,0,0)"
+    },
+    {
       "attr": "powerLevel",
       "valueType": "PowerLevel",
       "defaultValue": "red",

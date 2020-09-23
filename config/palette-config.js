@@ -17,6 +17,7 @@ palette_config = {
             { name: '电阻', image: 'symbols/palette-icon/lines/电阻.json', type: ht.Node},
             { name: '接地负载', image: 'symbols/palette-icon/lines/接地负载.json', type: ht.Node},
             { name: '接地避雷器', image: 'symbols/palette-icon/lines/接地避雷器.json', type: ht.Node},
+            { name: '接地放电间隙', image: 'symbols/palette-icon/lines/接地放电间隙.json', type: ht.Node},
         ]
     },
     transformer: {
