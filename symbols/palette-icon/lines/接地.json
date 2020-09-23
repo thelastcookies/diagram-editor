@@ -1,5 +1,5 @@
 {
-  "modified": "Wed Sep 23 2020 15:30:00 GMT+0800 (CST)",
+  "modified": "Wed Sep 23 2020 15:47:39 GMT+0800 (CST)",
   "dataBindings": [
     {
       "attr": "line.color",
@@ -55,9 +55,9 @@
         "value": "rgb(255,0,0)"
       },
       "points": [
-        2,
+        3,
         14.62484,
-        22,
+        21,
         14.62484
       ]
     },
