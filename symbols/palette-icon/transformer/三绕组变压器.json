@@ -1,5 +1,5 @@
 {
-  "modified": "Mon Sep 21 2020 15:08:12 GMT+0800 (CST)",
+  "modified": "Wed Sep 23 2020 16:31:49 GMT+0800 (CST)",
   "dataBindings": [
     {
       "attr": "powerLevel",
@@ -37,9 +37,9 @@
         "value": "rgb(255,0,0)"
       },
       "points": [
-        18.29682,
+        18,
         35,
-        18.29682,
+        18,
         29
       ]
     },
@@ -84,7 +84,7 @@
       },
       "displayName": "2",
       "rect": [
-        8.38137,
+        8.08455,
         9.91548,
         19.83089,
         19.83089

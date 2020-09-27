@@ -12,19 +12,10 @@
       "defaultValue": "circuit-breaker"
     },
     {
-      "attr": "node.color",
-      "valueType": "Color",
-      "defaultValue": "rgb(255,0,0)"
-    },
-    {
-      "attr": "node.stateSingle",
+      "attr": "node.state",
       "valueType": "Boolean",
-      "defaultValue": true
-    },
-    {
-      "attr": "node.stateDouble",
-      "valueType": "Boolean",
-      "defaultValue": false
+      "defaultValue": true,
+      "name": "断路器状态"
     }
   ],
   "width": 19,
@@ -35,8 +26,8 @@
       "borderWidth": 2,
       "borderColor": "rgb(0,255,0)",
       "visible": {
-        "func": "attr@node.stateDouble",
-        "value": false
+        "func": "__ht__function(data, view) {\n return !data.a('node.state') \n}",
+        "value": true
       },
       "displayName": "箭头",
       "rotation": 3.14159,
@@ -53,7 +44,7 @@
       "type": "shape",
       "borderWidth": 2,
       "borderColor": {
-        "func": "attr@node.color",
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : 'rgb(0,255,0)';\n}",
         "value": "rgb(255,0,0)"
       },
       "displayName": "箭头",
@@ -71,7 +62,7 @@
       "type": "shape",
       "borderWidth": 2,
       "borderColor": {
-        "func": "attr@node.color",
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : 'rgb(0,255,0)';\n}",
         "value": "rgb(255,0,0)"
       },
       "points": [
@@ -85,7 +76,7 @@
       "type": "shape",
       "borderWidth": 2,
       "borderColor": {
-        "func": "attr@node.color",
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : 'rgb(0,255,0)';\n}",
         "value": "rgb(255,0,0)"
       },
       "points": [
@@ -100,7 +91,7 @@
       "borderWidth": 2,
       "borderColor": "rgb(255,0,0)",
       "visible": {
-        "func": "attr@node.stateSingle",
+        "func": "__ht__function(data, view) {\n return data.a('node.state') \n}",
         "value": true
       },
       "points": [

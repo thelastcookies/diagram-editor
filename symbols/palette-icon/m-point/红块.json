@@ -12,9 +12,10 @@
       "defaultValue": "red-rect"
     },
     {
-      "attr": "node.color",
-      "valueType": "Color",
-      "defaultValue": "rgb(255,0,0)"
+      "attr": "node.state",
+      "valueType": "Boolean",
+      "defaultValue": true,
+      "name": "断路器状态"
     }
   ],
   "width": 18,
@@ -23,10 +24,14 @@
     {
       "type": "rect",
       "background": {
-        "func": "attr@node.color",
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : 'rgba(0,0,0,0)';\n}",
         "value": "rgb(255,0,0)"
       },
-      "borderColor": "#979797",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : 'rgb(0,255,0)';\n}",
+        "value": "rgb(255,0,0)"
+      },
       "rect": [
         0,
         0,

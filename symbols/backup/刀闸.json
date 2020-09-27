@@ -1,21 +1,5 @@
 {
-  "modified": "Wed Sep 23 2020 15:33:44 GMT+0800 (CST)",
   "dataBindings": [
-    {
-      "attr": "node.type",
-      "valueType": "String",
-      "defaultValue": "m-point"
-    },
-    {
-      "attr": "node.name",
-      "valueType": "String",
-      "defaultValue": "knife-switch"
-    },
-    {
-      "attr": "node.color",
-      "valueType": "Color",
-      "defaultValue": "rgb(255,0,0)"
-    },
     {
       "attr": "powerLevel",
       "valueType": "PowerLevel",
@@ -47,14 +31,74 @@
       "name": "开关状态"
     }
   ],
-  "width": 30,
-  "height": 62,
+  "width": 48,
+  "height": 58,
   "comps": [
+    {
+      "type": "circle",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@lineColor",
+        "value": "rgb(250,0,0)"
+      },
+      "shadowColor": "#1ABC9C",
+      "rect": [
+        21.5,
+        6.93108,
+        5,
+        5
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@lineColor",
+        "value": "rgb(250,0,0)"
+      },
+      "shadowColor": "#1ABC9C",
+      "points": [
+        24,
+        6.93108,
+        24,
+        0
+      ]
+    },
+    {
+      "type": "circle",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@lineColor",
+        "value": "rgb(250,0,0)"
+      },
+      "shadowColor": "#1ABC9C",
+      "rect": [
+        21.5,
+        46.06892,
+        5,
+        5
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@lineColor",
+        "value": "rgb(250,0,0)"
+      },
+      "shadowColor": "#1ABC9C",
+      "points": [
+        24,
+        58,
+        24,
+        51.06892
+      ]
+    },
     {
       "type": "roundRect",
       "background": "rgb(250,0,0)",
       "borderColor": {
-        "func": "attr@node.bg",
+        "func": "attr@lineColor",
         "value": "#979797"
       },
       "cornerRadius": 1,
@@ -77,7 +121,7 @@
       "type": "roundRect",
       "background": "rgb(250,0,0)",
       "borderColor": {
-        "func": "attr@node.bg",
+        "func": "attr@lineColor",
         "value": "#979797"
       },
       "cornerRadius": 1,
@@ -100,7 +144,7 @@
       "type": "shape",
       "borderWidth": 2,
       "borderColor": {
-        "func": "attr@node.bg",
+        "func": "attr@lineColor",
         "value": "rgb(250,0,0)"
       },
       "borderCap": "round",
@@ -108,6 +152,7 @@
         "func": "attr@enabled",
         "value": true
       },
+      "shadowColor": "#1ABC9C",
       "anchorX": 0,
       "anchorY": 1,
       "rotation": {
@@ -115,38 +160,10 @@
         "value": 0.5236
       },
       "points": [
-        22.98089,
-        43.69551,
-        -2.46405,
-        -0.37629
-      ]
-    },
-    {
-      "type": "oval",
-      "borderWidth": 2,
-      "borderColor": {
-        "func": "attr@node.color",
-        "value": "rgb(255,0,0)"
-      },
-      "rect": [
-        10.4281,
-        0.95634,
-        9.1438,
-        9.1438
-      ]
-    },
-    {
-      "type": "oval",
-      "borderWidth": 2,
-      "borderColor": {
-        "func": "attr@node.color",
-        "value": "rgb(255,0,0)"
-      },
-      "rect": [
-        10.4281,
-        51.84611,
-        9.1438,
-        9.1438
+        26.75,
+        48.56892,
+        26.75,
+        9.43108
       ]
     }
   ]

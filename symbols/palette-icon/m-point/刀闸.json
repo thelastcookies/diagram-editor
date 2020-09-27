@@ -1,5 +1,5 @@
 {
-  "modified": "Wed Sep 23 2020 15:40:39 GMT+0800 (CST)",
+  "modified": "Sun Sep 27 2020 13:28:31 GMT+0800 (CST)",
   "dataBindings": [
     {
       "attr": "node.type",
@@ -15,6 +15,12 @@
       "attr": "node.color",
       "valueType": "Color",
       "defaultValue": "rgb(255,0,0)"
+    },
+    {
+      "attr": "node.state",
+      "valueType": "Boolean",
+      "defaultValue": true,
+      "name": "开关状态"
     }
   ],
   "width": 30,
@@ -24,7 +30,7 @@
       "type": "oval",
       "borderWidth": 2,
       "borderColor": {
-        "func": "attr@node.color",
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : 'rgb(0,255,0)';\n}",
         "value": "rgb(255,0,0)"
       },
       "rect": [
@@ -38,7 +44,7 @@
       "type": "oval",
       "borderWidth": 2,
       "borderColor": {
-        "func": "attr@node.color",
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : 'rgb(0,255,0)';\n}",
         "value": "rgb(255,0,0)"
       },
       "rect": [
@@ -51,7 +57,16 @@
     {
       "type": "shape",
       "borderWidth": 2,
-      "borderColor": "rgb(255,0,0)",
+      "borderColor": {
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : 'rgb(0,255,0)';\n}",
+        "value": "rgb(255,0,0)"
+      },
+      "anchorX": 0,
+      "anchorY": 1,
+      "rotation": {
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 0 : Math.PI/180*30;\n}",
+        "value": 0
+      },
       "points": [
         19.5719,
         5.52824,
