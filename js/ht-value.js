@@ -14,21 +14,9 @@ ht.DataModel.prototype.setNodeStatusByValue = function (json) {
         let node = dm.getDataByNodeTag(item.nodeTag);
         let value = item.value;
         node.forEach(function (node) {
-            // 如果是 普通开关
-            if (node instanceof ht.Node && node.a('node.type') === 'switch') {
-                value = Number(item.value)
-                node.a('switch.powerOn', Boolean(value));
-                node.a('switch.powerOff', !Boolean(value));
-            }
-            // 如果是 旋钮开关
-            if (node instanceof ht.Node && node.a('node.type') === 'switch-ro') {
-                value = Number(item.value)
-                node.a('rotatySwitch.bar', Boolean(value) ? 0 : 1.57);
-            }
-            // 如果是 断路器
-            if (node instanceof ht.Node && node.a('node.type') === 'duanluqi') {
-                value = Number(item.value)
-                node.a('node.stateToggle', Boolean(value));
+            if (node.a('node.type') === 'm-point') {
+                value = Number(item.value);
+                node.a('node.state', Boolean(value));
             }
             // 如果是 柱状图元
             if (node instanceof ht.Node && node.a('node.type') === 'zt') {
@@ -45,26 +33,7 @@ ht.DataModel.prototype.setNodeStatusByValue = function (json) {
                 value = Number(item.value)
                 node.s("text", value.toFixed(2));
             }
-            // 如果是 变色器件
-            if (node instanceof ht.Node && node.a('node.bg')) {
-                value = Number(item.value)
-                node.a('node.bg', value ? '#FF0000' : '#00FF00');
-            }
-            // 如果是 主变1
-            if (node instanceof ht.Node && node.a('node.type') === 'zb1') {
-                console.log(value,'这是油温-----')
-                node.a('zb1.yw1', value.yw1);
-                node.a('zb1.yw2', value.yw2);
-                node.a('zb1.rw', value.rw);
-                node.a('zb1.dw', value.dw);
-            }
-            // 如果是 主变2
-            if (node instanceof ht.Node && node.a('node.type') === 'zb2') {
-                node.a('zb2.zbyw1', value.zbyw1);
-                node.a('zb2.zbyw2', value.zbyw2);
-                node.a('zb2.rzyw', value.rzyw);
-                node.a('zb2.dw', value.dw);
-            }
+
         });
     });
 };
@@ -99,7 +68,7 @@ ht.DataModel.prototype.getOriginNode = function (flag) {
     flag = flag ? flag: false;
     dm.each(item => {
         if (flag) {
-            if (item.a('node.tag') && tagArr.indexOf(item.a('node.tag')) === -1) {
+            if (item.a('node.tag') && tagArr.indexOf(item.a('node.tag')) < 0) {
                 res.push(item);
                 tagArr.push(item.a('node.tag'));
             }
@@ -114,7 +83,7 @@ ht.DataModel.prototype.getOriginNode = function (flag) {
 /**
  * (Old)
  * ht.DataModel 的扩展方法
- * 获取 DataModel 中所有 tag
+ * 获取 DataModel 中所有 tag(不重复)
  * @returns {[]}
  */
 ht.DataModel.prototype.getNodeTags = function (){
@@ -122,7 +91,7 @@ ht.DataModel.prototype.getNodeTags = function (){
     nodeArr = [];
     dm.each(data => {
         let tag = data.getTag();
-        if(tag) {
+        if(tag && nodeArr.indexOf(tag) < 0) {
             nodeArr.push(tag);
         }
     });
