@@ -44,8 +44,8 @@ palette_config = {
         name: '测点配置图元',
         items: [
             { name: '开关', image: 'symbols/palette-icon/m-point/开关.json', type: ht.Node},
-            { name: '红块', image: 'symbols/palette-icon/m-point/红块.json', type: ht.Node},
             { name: '断路器', image: 'symbols/palette-icon/m-point/断路器.json', type: ht.Node},
+            { name: '手车', image: 'symbols/palette-icon/m-point/手车.json', type: ht.Node},
             { name: '刀闸', image: 'symbols/palette-icon/m-point/刀闸.json', type: ht.Node},
             { name: '接地开关', image: 'symbols/palette-icon/m-point/接地开关.json', type: ht.Node},
         ]
