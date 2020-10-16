@@ -1,0 +1,135 @@
+{
+  "modified": "Wed Aug 12 2020 15:29:38 GMT+0800 (中国标准时间)",
+  "width": 62,
+  "height": 40,
+  "comps": [
+    {
+      "type": "rect",
+      "background": "#13C7FF",
+      "borderColor": "#979797",
+      "rect": [
+        0.0066,
+        0,
+        16,
+        3
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#13C7FF",
+      "borderColor": "#979797",
+      "rotation": 1.5708,
+      "rect": [
+        -6.5,
+        6.5,
+        16,
+        3
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgba(18,97,255,0.1)",
+      "borderColor": "#979797",
+      "rect": [
+        5,
+        6,
+        52,
+        28
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#13C7FF",
+      "borderColor": "#979797",
+      "rect": [
+        5,
+        4.9967,
+        52,
+        1.0033
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#13C7FF",
+      "borderColor": "#979797",
+      "rect": [
+        5,
+        34,
+        52,
+        1.0033
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#13C7FF",
+      "borderColor": "#979797",
+      "rotation": 1.5708,
+      "rect": [
+        52.49999,
+        6.50331,
+        16,
+        3
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#13C7FF",
+      "borderColor": "#979797",
+      "rotation": -3.14159,
+      "rect": [
+        45.99999,
+        -0.00329,
+        16,
+        3
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#13C7FF",
+      "borderColor": "#979797",
+      "rotation": -3.14159,
+      "rect": [
+        45.99668,
+        37.00331,
+        16,
+        3
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#13C7FF",
+      "borderColor": "#979797",
+      "rotation": -1.57079,
+      "rect": [
+        52.50328,
+        30.50331,
+        16,
+        3
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#13C7FF",
+      "borderColor": "#979797",
+      "rotation": -1.5708,
+      "rect": [
+        -6.49009,
+        30.5,
+        16,
+        3
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#13C7FF",
+      "borderColor": "#979797",
+      "rotation": 0,
+      "rect": [
+        0.00991,
+        37.0066,
+        16,
+        3
+      ]
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "modified": "Tue Oct 13 2020 17:28:22 GMT+0800 (CST)",
+  "width": 30,
+  "height": 30,
+  "comps": [
+    {
+      "type": "oval",
+      "background": "rgba(0,153,61,0.1)",
+      "borderWidth": 1.5,
+      "borderColor": "#009A3D",
+      "rect": [
+        0.5,
+        0.5,
+        29,
+        29
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 1.5,
+      "borderColor": "#009A3D",
+      "points": [
+        4.50415,
+        5.51732,
+        15,
+        29.5,
+        25.49585,
+        5.51732
+      ]
+    }
+  ]
+}

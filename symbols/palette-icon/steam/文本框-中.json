@@ -1,0 +1,233 @@
+{
+  "modified": "Wed Aug 12 2020 15:52:04 GMT+0800 (中国标准时间)",
+  "width": 120,
+  "height": 52,
+  "comps": [
+    {
+      "type": "rect",
+      "background": "rgba(18,97,255,0.1)",
+      "borderColor": "#979797",
+      "rect": [
+        5.0033,
+        6,
+        110,
+        40
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#13C7FF",
+      "borderColor": "#979797",
+      "rect": [
+        0.0066,
+        0,
+        16,
+        3
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#13C7FF",
+      "borderColor": "#979797",
+      "rotation": 1.5708,
+      "rect": [
+        -6.5,
+        6.5,
+        16,
+        3
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#13C7FF",
+      "borderColor": "#979797",
+      "rotation": 1.5708,
+      "rect": [
+        110.5,
+        6.5033,
+        16,
+        3
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#13C7FF",
+      "borderColor": "#979797",
+      "rotation": -3.14159,
+      "rect": [
+        104,
+        -0.0033,
+        16,
+        3
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#13C7FF",
+      "borderColor": "#979797",
+      "rotation": 3.14159,
+      "rect": [
+        103.9934,
+        49,
+        16,
+        3
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#13C7FF",
+      "borderColor": "#979797",
+      "rotation": -1.5708,
+      "rect": [
+        110.5,
+        42.5,
+        16,
+        3
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#13C7FF",
+      "borderColor": "#979797",
+      "rotation": -1.5708,
+      "rect": [
+        -6.4967,
+        42.4934,
+        16,
+        3
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#13C7FF",
+      "borderColor": "#979797",
+      "rect": [
+        0.0033,
+        49,
+        16,
+        3
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#13C7FF",
+      "borderColor": "#979797",
+      "rect": [
+        5,
+        5.49835,
+        110,
+        1.0033
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#13C7FF",
+      "borderColor": "#979797",
+      "rect": [
+        5.0033,
+        45.49835,
+        110,
+        1.0033
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#193E70",
+      "borderColor": "#979797",
+      "rect": [
+        55.9934,
+        9,
+        2,
+        16
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#193E70",
+      "borderColor": "#979797",
+      "rect": [
+        61.9934,
+        9,
+        2,
+        16
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#193E70",
+      "borderColor": "#979797",
+      "rect": [
+        109.9934,
+        8.9967,
+        2,
+        16
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#193E70",
+      "borderColor": "#979797",
+      "rect": [
+        8.0066,
+        27,
+        2,
+        16
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#193E70",
+      "borderColor": "#979797",
+      "rect": [
+        8,
+        9,
+        2,
+        16
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgba(94,201,255,0.1)",
+      "borderColor": "#979797",
+      "rect": [
+        9.9934,
+        9,
+        46,
+        16
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgba(94,201,255,0.1)",
+      "borderColor": "#979797",
+      "rect": [
+        63.9934,
+        9,
+        46,
+        16
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#193E70",
+      "borderColor": "#979797",
+      "rect": [
+        110,
+        27,
+        2,
+        16
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgba(94,201,255,0.1)",
+      "borderColor": "#979797",
+      "rect": [
+        10.0066,
+        27,
+        99.9934,
+        16
+      ]
+    }
+  ]
+}

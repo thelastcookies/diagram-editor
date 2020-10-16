@@ -1,0 +1,105 @@
+{
+  "modified": "Wed Oct 14 2020 17:10:13 GMT+0800 (CST)",
+  "width": 64,
+  "height": 112,
+  "comps": [
+    {
+      "type": "shape",
+      "background": "rgba(0,204,255,0.15)",
+      "borderWidth": 1,
+      "borderColor": "rgb(0,200,255)",
+      "rotation": 3.14159,
+      "closePath": true,
+      "points": [
+        32.00005,
+        7.50988,
+        0.00005,
+        0.50988,
+        0.00005,
+        37.50988,
+        32.00005,
+        30.50988,
+        64.00005,
+        37.50988,
+        64.00005,
+        0.50988
+      ]
+    },
+    {
+      "type": "text",
+      "text": "低压缸",
+      "align": "center",
+      "color": "rgb(255,255,255)",
+      "font": "10px arial, sans-serif",
+      "rect": [
+        13.25005,
+        9.50988,
+        37.5,
+        19
+      ]
+    },
+    {
+      "type": "shape",
+      "background": "rgba(0,204,255,0.15)",
+      "borderWidth": 1,
+      "borderColor": "rgb(0,200,255)",
+      "rotation": 3.14159,
+      "closePath": true,
+      "points": [
+        10.00005,
+        30.49014,
+        10.00005,
+        87.69095,
+        32.00005,
+        92.49014,
+        54.00005,
+        87.69095,
+        54.00005,
+        30.49014
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgba(0,204,255,0.15)",
+      "borderWidth": 1,
+      "borderColor": "rgb(0,200,255)",
+      "rect": [
+        8.00005,
+        92.49014,
+        48,
+        4
+      ]
+    },
+    {
+      "type": "shape",
+      "background": "rgba(0,204,255,0.15)",
+      "borderWidth": 1,
+      "borderColor": "rgb(0,200,255)",
+      "rotation": 3.14159,
+      "closePath": true,
+      "points": [
+        18.00005,
+        96.49014,
+        10.00005,
+        111.49014,
+        54.00005,
+        111.49014,
+        46.00005,
+        96.49014
+      ]
+    },
+    {
+      "type": "text",
+      "text": "凝汽器",
+      "align": "center",
+      "color": "rgb(255,255,255)",
+      "font": "10px arial, sans-serif",
+      "rect": [
+        13.00005,
+        40.49014,
+        37.5,
+        19
+      ]
+    }
+  ]
+}

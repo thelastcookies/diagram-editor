@@ -1,0 +1,415 @@
+{
+  "modified": "Wed Aug 12 2020 15:25:51 GMT+0800 (中国标准时间)",
+  "width": 136,
+  "height": 106,
+  "comps": [
+    {
+      "type": "rect",
+      "background": "rgba(18,97,255,0.1)",
+      "borderColor": "#979797",
+      "rect": [
+        5,
+        6,
+        126,
+        94
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#13C7FF",
+      "borderColor": "#979797",
+      "rect": [
+        0.0066,
+        0,
+        16,
+        3
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#13C7FF",
+      "borderColor": "#979797",
+      "rotation": 1.5708,
+      "rect": [
+        -6.5,
+        6.5,
+        16,
+        3
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#13C7FF",
+      "borderColor": "#979797",
+      "rotation": 1.5708,
+      "rect": [
+        126.49341,
+        6.5033,
+        16,
+        3
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#13C7FF",
+      "borderColor": "#979797",
+      "rotation": -3.14159,
+      "rect": [
+        119.99341,
+        -0.0033,
+        16,
+        3
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#13C7FF",
+      "borderColor": "#979797",
+      "rotation": 3.14159,
+      "rect": [
+        119.98678,
+        102.99998,
+        16,
+        3
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#13C7FF",
+      "borderColor": "#979797",
+      "rotation": -1.5708,
+      "rect": [
+        126.49338,
+        96.49998,
+        16,
+        3
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#13C7FF",
+      "borderColor": "#979797",
+      "rotation": -1.5708,
+      "rect": [
+        -6.4967,
+        96.49338,
+        16,
+        3
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#13C7FF",
+      "borderColor": "#979797",
+      "rect": [
+        0.0033,
+        102.99998,
+        16,
+        3
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#13C7FF",
+      "borderColor": "#979797",
+      "rect": [
+        5,
+        4.9967,
+        126,
+        1.0033
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#193E70",
+      "borderColor": "#979797",
+      "rect": [
+        57,
+        36,
+        2,
+        16
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#193E70",
+      "borderColor": "#979797",
+      "rect": [
+        77,
+        36,
+        2,
+        16
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#193E70",
+      "borderColor": "#979797",
+      "rect": [
+        125,
+        35.9967,
+        2,
+        16
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#193E70",
+      "borderColor": "#979797",
+      "rect": [
+        9.0066,
+        36,
+        2,
+        16
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgba(94,201,255,0.1)",
+      "borderColor": "#979797",
+      "rect": [
+        11,
+        36,
+        46,
+        16
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgba(94,201,255,0.1)",
+      "borderColor": "#979797",
+      "rect": [
+        79,
+        36,
+        46,
+        16
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#13C7FF",
+      "borderColor": "#979797",
+      "rect": [
+        5,
+        99.9967,
+        126,
+        1.0033
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#13C7FF",
+      "borderColor": "#979797",
+      "rotation": 6.28319,
+      "rect": [
+        133.99341,
+        16.00331,
+        1,
+        22
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#13C7FF",
+      "borderColor": "#979797",
+      "rotation": 6.28319,
+      "rect": [
+        133.99341,
+        68,
+        1,
+        22
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#13C7FF",
+      "borderColor": "#979797",
+      "rotation": 6.28319,
+      "rect": [
+        1.0033,
+        16.00331,
+        1,
+        22
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#13C7FF",
+      "borderColor": "#979797",
+      "rotation": 6.28319,
+      "rect": [
+        1.0033,
+        68,
+        1,
+        22
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgba(18,97,255,0.1)",
+      "borderWidth": 1,
+      "borderColor": "#175EBB",
+      "rect": [
+        106.5,
+        12,
+        17,
+        17
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgba(18,97,255,0.1)",
+      "borderWidth": 1,
+      "borderColor": "#175EBB",
+      "rect": [
+        12.5,
+        12,
+        17,
+        17
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#175EBB",
+      "borderColor": "#175EBB",
+      "rect": [
+        36.5,
+        26,
+        63,
+        3
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#193E70",
+      "borderColor": "#979797",
+      "rect": [
+        57,
+        57,
+        2,
+        16
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#193E70",
+      "borderColor": "#979797",
+      "rect": [
+        77,
+        57,
+        2,
+        16
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#193E70",
+      "borderColor": "#979797",
+      "rect": [
+        125,
+        56.9967,
+        2,
+        16
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#193E70",
+      "borderColor": "#979797",
+      "rect": [
+        9.0066,
+        57,
+        2,
+        16
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgba(94,201,255,0.1)",
+      "borderColor": "#979797",
+      "rect": [
+        11,
+        57,
+        46,
+        16
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgba(94,201,255,0.1)",
+      "borderColor": "#979797",
+      "rect": [
+        79,
+        57,
+        46,
+        16
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#193E70",
+      "borderColor": "#979797",
+      "rect": [
+        57,
+        78.0033,
+        2,
+        16
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#193E70",
+      "borderColor": "#979797",
+      "rect": [
+        77,
+        78.0033,
+        2,
+        16
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#193E70",
+      "borderColor": "#979797",
+      "rect": [
+        125,
+        78,
+        2,
+        16
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#193E70",
+      "borderColor": "#979797",
+      "rect": [
+        9.0066,
+        78.0033,
+        2,
+        16
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgba(94,201,255,0.1)",
+      "borderColor": "#979797",
+      "rect": [
+        11,
+        78.0033,
+        46,
+        16
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgba(94,201,255,0.1)",
+      "borderColor": "#979797",
+      "rect": [
+        79,
+        78.0033,
+        46,
+        16
+      ]
+    }
+  ]
+}

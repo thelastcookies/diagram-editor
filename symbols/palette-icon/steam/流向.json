@@ -1,0 +1,22 @@
+{
+  "modified": "Tue Oct 13 2020 17:35:59 GMT+0800 (CST)",
+  "width": 18,
+  "height": 15,
+  "comps": [
+    {
+      "type": "shape",
+      "background": "#009A3D",
+      "borderWidth": 1,
+      "borderColor": "#009A3D",
+      "closePath": true,
+      "points": [
+        1.5,
+        14.5,
+        9,
+        0.5,
+        16.5,
+        14.5
+      ]
+    }
+  ]
+}

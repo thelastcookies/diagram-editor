@@ -1,0 +1,45 @@
+{
+  "modified": "Wed Aug 12 2020 16:13:06 GMT+0800 (中国标准时间)",
+  "width": 229,
+  "height": 59,
+  "comps": [
+    {
+      "type": "shape",
+      "background": "rgba(0,204,255,0.15)",
+      "borderWidth": 1,
+      "borderColor": "rgb(0,200,255)",
+      "closePath": true,
+      "points": [
+        9,
+        58,
+        1,
+        50,
+        1,
+        9,
+        9,
+        1,
+        220,
+        1,
+        228,
+        9,
+        228,
+        50,
+        220,
+        58
+      ]
+    },
+    {
+      "type": "text",
+      "text": "除氧器",
+      "align": "center",
+      "color": "rgb(255,255,255)",
+      "font": "10px arial, sans-serif",
+      "rect": [
+        96.77524,
+        20.5497,
+        35.22476,
+        12.9006
+      ]
+    }
+  ]
+}

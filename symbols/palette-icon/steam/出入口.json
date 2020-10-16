@@ -1,0 +1,31 @@
+{
+  "modified": "Tue Aug 11 2020 10:32:34 GMT+0800 (中国标准时间)",
+  "width": 14,
+  "height": 8,
+  "comps": [
+    {
+      "type": "rect",
+      "background": "rgba(0,43,130,0.1)",
+      "borderWidth": 1,
+      "borderColor": "#9ADCFF",
+      "rect": [
+        5,
+        1,
+        4,
+        4
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgba(0,43,130,0.1)",
+      "borderWidth": 1,
+      "borderColor": "#9ADCFF",
+      "rect": [
+        1,
+        6.81373,
+        12,
+        0.18627
+      ]
+    }
+  ]
+}

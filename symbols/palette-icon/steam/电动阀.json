@@ -1,0 +1,99 @@
+{
+  "modified": "Wed Oct 14 2020 16:22:52 GMT+0800 (CST)",
+  "width": 30,
+  "height": 34,
+  "comps": [
+    {
+      "type": "oval",
+      "background": "#B92710",
+      "borderWidth": 1,
+      "borderColor": "#B92710",
+      "rect": [
+        6.75,
+        1.81216,
+        16.5,
+        16.5
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#B92710",
+      "borderWidth": 1,
+      "borderColor": "#B92710",
+      "rect": [
+        14.625,
+        18.31216,
+        0.75,
+        8.45
+      ]
+    },
+    {
+      "type": "text",
+      "text": "M",
+      "align": "center",
+      "color": "rgb(255,255,255)",
+      "rect": [
+        11.08333,
+        5.85472,
+        7.83335,
+        8.41487
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "#B92710",
+      "borderWidth": 1,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "#B92710"
+      },
+      "rotation": 4.71239,
+      "rect": [
+        16.75,
+        19.76216,
+        11.5,
+        14
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "#B92710",
+      "borderWidth": 1,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "#B92710"
+      },
+      "rotation": 1.5708,
+      "rect": [
+        1.75,
+        19.76216,
+        11.5,
+        14
+      ]
+    },
+    {
+      "type": "oval",
+      "background": "rgba(255,255,255,0.00)",
+      "borderWidth": 2,
+      "borderColor": "#940F0F",
+      "rect": [
+        1,
+        3,
+        28,
+        28
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#940F0F",
+      "borderColor": "#979797",
+      "rotation": 0.7854,
+      "rect": [
+        13.75,
+        2.53144,
+        2.5,
+        28.93712
+      ]
+    }
+  ]
+}

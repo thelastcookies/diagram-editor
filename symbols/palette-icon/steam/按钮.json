@@ -1,0 +1,43 @@
+{
+  "modified": "Wed Oct 14 2020 16:28:59 GMT+0800 (CST)",
+  "width": 49,
+  "height": 25,
+  "comps": [
+    {
+      "type": "roundRect",
+      "background": "rgba(99,182,255,0.2)",
+      "borderWidth": 1,
+      "borderColor": "#13C7FF",
+      "rect": [
+        1,
+        1,
+        47,
+        23
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#13C7FF",
+      "borderColor": "#979797",
+      "rect": [
+        4.74597,
+        4.49804,
+        2,
+        16
+      ]
+    },
+    {
+      "type": "text",
+      "text": "按钮",
+      "align": "center",
+      "color": "rgb(255,255,255)",
+      "font": "10px arial, sans-serif",
+      "rect": [
+        6.67616,
+        6.17362,
+        40.32384,
+        12.65276
+      ]
+    }
+  ]
+}

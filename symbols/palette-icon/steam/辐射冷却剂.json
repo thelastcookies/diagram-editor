@@ -1,0 +1,105 @@
+{
+  "modified": "Tue Oct 13 2020 17:01:05 GMT+0800 (CST)",
+  "width": 60,
+  "height": 55,
+  "comps": [
+    {
+      "type": "rect",
+      "background": "rgba(0,204,255,0.15)",
+      "borderWidth": 1,
+      "borderColor": "#9ADCFF",
+      "rect": [
+        0,
+        0,
+        4,
+        55
+      ]
+    },
+    {
+      "type": "shape",
+      "background": "rgba(0,204,255,0.15)",
+      "borderWidth": 1,
+      "borderColor": "#9ADCFF",
+      "closePath": true,
+      "points": [
+        4,
+        15.85489,
+        11.23555,
+        7.8,
+        51.82609,
+        7.86861,
+        59,
+        15.85489,
+        59,
+        39.81372,
+        51.82609,
+        47.8,
+        11.17391,
+        47.8,
+        4,
+        39.81372
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgba(153,219,255,0.1)",
+      "borderWidth": 1,
+      "borderColor": "#9ADCFF",
+      "rect": [
+        13.5,
+        0.46665,
+        3.5,
+        3.6
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#9ADCFF",
+      "borderColor": "#9ADCFF",
+      "rect": [
+        10.75,
+        4.96665,
+        9,
+        1
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgba(153,219,255,0.1)",
+      "borderWidth": 1,
+      "borderColor": "#9ADCFF",
+      "rotation": 3.14159,
+      "rect": [
+        13.5,
+        51.4,
+        3.5,
+        3.6
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#9ADCFF",
+      "borderColor": "#9ADCFF",
+      "rotation": 3.14159,
+      "rect": [
+        10.75,
+        49.5,
+        9,
+        1
+      ]
+    },
+    {
+      "type": "text",
+      "text": "辐射冷却剂",
+      "align": "center",
+      "color": "rgb(255,255,255)",
+      "font": "10px arial, sans-serif",
+      "rect": [
+        16.5,
+        17.8,
+        30,
+        20
+      ]
+    }
+  ]
+}

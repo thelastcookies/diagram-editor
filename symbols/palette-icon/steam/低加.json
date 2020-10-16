@@ -1,0 +1,57 @@
+{
+  "modified": "Tue Oct 13 2020 16:56:24 GMT+0800 (CST)",
+  "width": 46,
+  "height": 46,
+  "comps": [
+    {
+      "type": "rect",
+      "background": "rgba(0,204,255,0.15)",
+      "borderWidth": 1,
+      "borderColor": "#9ADCFF",
+      "rect": [
+        1,
+        1,
+        4,
+        44
+      ]
+    },
+    {
+      "type": "shape",
+      "background": "rgba(0,204,255,0.15)",
+      "borderWidth": 1,
+      "borderColor": "#9ADCFF",
+      "closePath": true,
+      "points": [
+        5,
+        14.04117,
+        10.26222,
+        8,
+        39.78261,
+        8.05146,
+        45,
+        14.04117,
+        45,
+        32.01029,
+        39.78261,
+        38,
+        10.21739,
+        38,
+        5,
+        32.01029
+      ]
+    },
+    {
+      "type": "text",
+      "text": "低加",
+      "align": "center",
+      "color": "rgb(255,255,255)",
+      "font": "10px arial, sans-serif",
+      "rect": [
+        10,
+        13,
+        30,
+        20
+      ]
+    }
+  ]
+}

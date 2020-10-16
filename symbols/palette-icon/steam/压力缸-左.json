@@ -1,0 +1,37 @@
+{
+  "modified": "Wed Oct 14 2020 10:46:16 GMT+0800 (CST)",
+  "width": 43,
+  "height": 53,
+  "comps": [
+    {
+      "type": "shape",
+      "background": "rgba(0,204,255,0.15)",
+      "borderWidth": 1,
+      "borderColor": "rgb(0,200,255)",
+      "closePath": true,
+      "points": [
+        0,
+        0,
+        0,
+        53,
+        43,
+        39,
+        43,
+        14
+      ]
+    },
+    {
+      "type": "text",
+      "text": "压力缸",
+      "align": "center",
+      "color": "rgb(255,255,255)",
+      "font": "10px arial, sans-serif",
+      "rect": [
+        2.75,
+        17,
+        37.5,
+        19
+      ]
+    }
+  ]
+}

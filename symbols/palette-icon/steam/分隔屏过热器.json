@@ -1,0 +1,110 @@
+{
+  "modified": "Wed Aug 12 2020 16:08:05 GMT+0800 (中国标准时间)",
+  "width": 20,
+  "height": 112,
+  "comps": [
+    {
+      "type": "shape",
+      "background": "rgba(15,75,166,0.23)",
+      "borderWidth": 1,
+      "borderColor": "#9ADCFF",
+      "closePath": true,
+      "points": [
+        5,
+        1,
+        1,
+        5,
+        1,
+        107,
+        5,
+        111,
+        15,
+        111,
+        19,
+        107,
+        19,
+        5,
+        15,
+        1
+      ]
+    },
+    {
+      "type": "text",
+      "text": "离",
+      "align": "center",
+      "color": "rgb(255,255,255)",
+      "font": "10px arial, sans-serif",
+      "rect": [
+        1.38762,
+        30,
+        17.22476,
+        12.9006
+      ]
+    },
+    {
+      "type": "text",
+      "text": "屏",
+      "align": "center",
+      "color": "rgb(255,255,255)",
+      "font": "10px arial, sans-serif",
+      "rect": [
+        1.38762,
+        42.02485,
+        17.22476,
+        12.9006
+      ]
+    },
+    {
+      "type": "text",
+      "text": "过",
+      "align": "center",
+      "color": "rgb(255,255,255)",
+      "font": "10px arial, sans-serif",
+      "rect": [
+        1.38762,
+        54.0497,
+        17.22476,
+        12.9006
+      ]
+    },
+    {
+      "type": "text",
+      "text": "热",
+      "align": "center",
+      "color": "rgb(255,255,255)",
+      "font": "10px arial, sans-serif",
+      "rect": [
+        1.38762,
+        66.07455,
+        17.22476,
+        12.9006
+      ]
+    },
+    {
+      "type": "text",
+      "text": "器",
+      "align": "center",
+      "color": "rgb(255,255,255)",
+      "font": "10px arial, sans-serif",
+      "rect": [
+        1.38762,
+        78.0994,
+        17.22476,
+        12.9006
+      ]
+    },
+    {
+      "type": "text",
+      "text": "分",
+      "align": "center",
+      "color": "rgb(255,255,255)",
+      "font": "10px arial, sans-serif",
+      "rect": [
+        1.38762,
+        18,
+        17.22476,
+        12.9006
+      ]
+    }
+  ]
+}
