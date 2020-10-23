@@ -1,0 +1,37 @@
+{
+  "modified": "Thu Oct 22 2020 11:44:07 GMT+0800 (CST)",
+  "width": 14,
+  "height": 14,
+  "comps": [
+    {
+      "type": "triangle",
+      "background": "#009A3D",
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "#D8D8D8"
+      },
+      "rotation": 1.5708,
+      "rect": [
+        2.5,
+        2.5,
+        14,
+        9
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 6,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "#009A3D"
+      },
+      "rotation": 1.5708,
+      "points": [
+        2.5,
+        9.5,
+        2.5,
+        4.5
+      ]
+    }
+  ]
+}

@@ -26,28 +26,35 @@ var index_contextmenu_config = [
                 let node = null;
                 if (item instanceof ht.Text)
                     node = new ht.Text();
+                else if (item instanceof ht.Shape)
+                    node = new ht.Shape();
                 else if (item instanceof ht.Node)
                     node = new ht.Node();
                 else
                     return;
                 // 复制 Style
-                let tempStyle = item.getStyleMap();
-                for (let item in tempStyle) {
-                    node.setStyle(item, tempStyle[item]);
-                }
+                node.setStyleMap(item.getStyleMap());
                 // 复制 Attr
                 node.setAttrObject(item.getAttrObject());
                 // 复制其他属性
                 // 名称
                 node.setName(item.getName());
                 // Tag
-                node.setTag(item.getTag());
+                // node.setTag(item.getTag());
                 // 宿主
                 node.setHost(item.getHost());
                 // 父元素
                 node.setParent(item.getParent());
-                // 图片
-                node.setImage(item.getImage());
+                // 图片或者连线设置
+                if (item instanceof ht.Edge) {
+
+                }
+                else if (item instanceof ht.Shape) {
+                    node.setPoints(item.getPoints());
+                }
+                else {
+                    node.setImage(item.getImage());
+                }
                 // 图层
                 node.setLayer(item.getLayer());
                 // 旋转角度

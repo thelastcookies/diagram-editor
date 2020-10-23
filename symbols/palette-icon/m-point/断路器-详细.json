@@ -1,0 +1,108 @@
+{
+  "modified": "Thu Oct 22 2020 10:28:07 GMT+0800 (CST)",
+  "dataBindings": [
+    {
+      "attr": "node.type",
+      "valueType": "String",
+      "defaultValue": "m-point"
+    },
+    {
+      "attr": "node.name",
+      "valueType": "String",
+      "defaultValue": "switch"
+    },
+    {
+      "attr": "node.color",
+      "valueType": "Color",
+      "defaultValue": "rgb(255,0,0)"
+    },
+    {
+      "attr": "node.state",
+      "valueType": "Boolean",
+      "defaultValue": true,
+      "name": "开关状态"
+    }
+  ],
+  "width": 10,
+  "height": 35,
+  "comps": [
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(255,0,0)"
+      },
+      "points": [
+        5,
+        10,
+        5,
+        0
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(255,0,0)"
+      },
+      "rotation": 0.7854,
+      "points": [
+        5,
+        14,
+        5,
+        6
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(255,0,0)"
+      },
+      "rotation": 2.35619,
+      "points": [
+        5,
+        14,
+        5,
+        6
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(255,0,0)"
+      },
+      "points": [
+        5,
+        35,
+        5,
+        25
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : 'rgb(0,255,0)';\n}",
+        "value": "rgb(255,0,0)"
+      },
+      "anchorX": 0,
+      "anchorY": 1,
+      "rotation": {
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 0 : Math.PI/180*30;\n}",
+        "value": 0
+      },
+      "points": [
+        5,
+        25,
+        5,
+        10
+      ]
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "modified": "Fri Oct 23 2020 17:18:08 GMT+0800 (CST)",
+  "dataBindings": [
+    {
+      "attr": "node.type",
+      "valueType": "String",
+      "defaultValue": "m-point"
+    },
+    {
+      "attr": "node.name",
+      "valueType": "String",
+      "defaultValue": "switch"
+    },
+    {
+      "attr": "node.label",
+      "valueType": "String",
+      "defaultValue": "告警变色"
+    },
+    {
+      "attr": "node.state",
+      "valueType": "Boolean",
+      "defaultValue": false,
+      "name": "告警状态"
+    }
+  ],
+  "width": 75,
+  "height": 24,
+  "comps": [
+    {
+      "type": "text",
+      "text": {
+        "func": "__ht__function(data, view) {\n return data.a('node.label');\n}",
+        "value": "告警变色"
+      },
+      "align": "center",
+      "color": {
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? '#FF0000' : '#D8D8D8';\n}",
+        "value": "#D8D8D8"
+      },
+      "font": "10px arial, sans-serif",
+      "rect": [
+        0,
+        0,
+        75,
+        24
+      ]
+    }
+  ]
+}

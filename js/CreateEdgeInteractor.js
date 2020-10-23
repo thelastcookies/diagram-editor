@@ -117,7 +117,7 @@ ht.Default.def(CreateEdgeInteractor, ht.graph.Interactor, {
             g.save();
 
             g.lineWidth = 1;
-            g.strokeStyle = '#1ABC9C';
+            g.strokeStyle = '#FF0000';
             g.beginPath();
             g.moveTo(p1.x, p1.y);
             g.lineTo(p2.x, p2.y);

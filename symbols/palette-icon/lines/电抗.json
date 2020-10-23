@@ -1,5 +1,5 @@
 {
-  "modified": "Mon Sep 21 2020 17:12:44 GMT+0800 (CST)",
+  "modified": "Wed Oct 21 2020 17:28:02 GMT+0800 (CST)",
   "dataBindings": [
     {
       "attr": "line.color",
@@ -18,27 +18,9 @@
         "value": "rgb(255,0,0)"
       },
       "arcFrom": 0,
-      "arcTo": 4.1888,
+      "arcTo": 4.71239,
       "arcClose": false,
-      "rotation": 4.71239,
-      "rect": [
-        0.10441,
-        9.00927,
-        21.79117,
-        19.70636
-      ]
-    },
-    {
-      "type": "arc",
-      "borderWidth": 2,
-      "borderColor": {
-        "func": "attr@line.color",
-        "value": "rgb(255,0,0)"
-      },
-      "arcFrom": 0,
-      "arcTo": 4.1888,
-      "arcClose": false,
-      "rotation": 5.23599,
+      "rotation": 6.28319,
       "rect": [
         0.10441,
         9.00927,
@@ -54,10 +36,10 @@
         "value": "rgb(255,0,0)"
       },
       "points": [
-        0.20102,
-        19.36245,
-        12.00634,
-        19.36245
+        9.99849,
+        19,
+        21.80381,
+        19
       ]
     },
     {

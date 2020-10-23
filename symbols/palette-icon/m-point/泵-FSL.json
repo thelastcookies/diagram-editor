@@ -1,0 +1,241 @@
+{
+  "modified": "Fri Oct 23 2020 17:09:52 GMT+0800 (CST)",
+  "dataBindings": [
+    {
+      "attr": "node.type",
+      "valueType": "String",
+      "defaultValue": "m-point"
+    },
+    {
+      "attr": "node.name",
+      "valueType": "String",
+      "defaultValue": "pump"
+    },
+    {
+      "attr": "node.color",
+      "valueType": "Color",
+      "defaultValue": "rgb(255,0,0)"
+    },
+    {
+      "attr": "node.state",
+      "valueType": "Boolean",
+      "defaultValue": true,
+      "name": "启用状态"
+    }
+  ],
+  "width": 32,
+  "height": 32,
+  "comps": [
+    {
+      "type": "oval",
+      "background": "rgba(0,153,61,0.1)",
+      "borderWidth": 2,
+      "borderColor": "#009A3D",
+      "rect": [
+        1,
+        1,
+        30,
+        30
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgba(255,255,255,0.60)",
+      "borderColor": "rgba(255,255,255,0.6)",
+      "rect": [
+        14.42891,
+        2.84716,
+        3.14219,
+        13.94572
+      ]
+    },
+    {
+      "type": "polygon",
+      "background": "rgba(255,255,255,0.60)",
+      "borderColor": "rgba(255,255,255,0.6)",
+      "polygonSide": 3,
+      "rotation": 1.5708,
+      "rect": [
+        7.25,
+        12.25003,
+        17.5,
+        18
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(255,255,0)",
+      "borderColor": "#979797",
+      "rect": [
+        33.91932,
+        19,
+        12,
+        12
+      ]
+    },
+    {
+      "type": "circle",
+      "background": "rgb(255,0,0)",
+      "borderColor": "#979797",
+      "rect": [
+        33.91932,
+        19,
+        12,
+        12
+      ]
+    },
+    {
+      "type": "text",
+      "text": "F",
+      "align": "center",
+      "color": "rgb(255,0,0)",
+      "font": "9px arial, sans-serif",
+      "rect": [
+        -9,
+        0,
+        8,
+        8
+      ]
+    },
+    {
+      "type": "text",
+      "text": "L",
+      "align": "center",
+      "color": "rgb(255,255,0)",
+      "font": "9px arial, sans-serif",
+      "rect": [
+        -9,
+        24,
+        8,
+        8
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(0,0,0)",
+      "borderWidth": 1,
+      "borderColor": "rgb(0,0,0)",
+      "rect": [
+        39.16932,
+        21.11157,
+        1.5,
+        5
+      ]
+    },
+    {
+      "type": "circle",
+      "background": "rgb(0,0,0)",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "rect": [
+        38.91932,
+        27.70712,
+        2,
+        2
+      ]
+    },
+    {
+      "type": "circle",
+      "background": "rgb(0,0,0)",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "rect": [
+        38.55585,
+        19.89474,
+        2.34664,
+        2.33202
+      ]
+    },
+    {
+      "type": "shape",
+      "background": "rgb(0,0,0)",
+      "borderWidth": 0.2,
+      "borderColor": "rgb(0,0,0)",
+      "closePath": true,
+      "points": [
+        39.29461,
+        22.4537,
+        39.29461,
+        22.96643,
+        37.3102,
+        24.14966,
+        37.15145,
+        24.49302,
+        37.15145,
+        24.97792,
+        37.90553,
+        25.37233,
+        39.29461,
+        25.37233,
+        39.09617,
+        26.94997,
+        38.6596,
+        28.52762,
+        37.90553,
+        29.4742,
+        37.70709,
+        30.10526,
+        38.58023,
+        30.10526,
+        39.73118,
+        30.10526,
+        39.61212,
+        29.67141,
+        38.58023,
+        29.63196,
+        39.29461,
+        28.6065,
+        39.85025,
+        26.94997,
+        41.00121,
+        28.21209,
+        40.48526,
+        29.11923,
+        40.32651,
+        29.67141,
+        42.31092,
+        29.67141,
+        41.95372,
+        29.04035,
+        41.08058,
+        29.07979,
+        41.71559,
+        27.77824,
+        40.48526,
+        26.51612,
+        40.64401,
+        24.74128,
+        40.56464,
+        23.59749,
+        41.67591,
+        23.87357,
+        43.62063,
+        23.91301,
+        43.62063,
+        23.47916,
+        41.63622,
+        23.36084,
+        39.85025,
+        22.84811,
+        39.81056,
+        22.4537
+      ]
+    },
+    {
+      "type": "shape",
+      "background": "rgb(255,255,0)",
+      "borderColor": "#979797",
+      "closePath": true,
+      "points": [
+        39.18156,
+        23.82426,
+        39.18156,
+        24.86129,
+        38.54877,
+        24.86129,
+        37.96211,
+        24.49302
+      ]
+    }
+  ]
+}

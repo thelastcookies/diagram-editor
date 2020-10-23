@@ -69,7 +69,7 @@ ht.Default.def(CreateShapeInteractor, ht.graph.Interactor, {
                     var shape = new this._type();
                     shape.s({
                         'shape.background': null,
-                        // 'shape.border.color': 'rbg(23, 23, 23)',
+                        // 'shape.border.color': 'rbg(255, 0, 0)',
                         'shape.border.width': 2
                     });
                     shape.setPoints(this._points.toArray());
@@ -140,7 +140,7 @@ ht.Default.def(CreateShapeInteractor, ht.graph.Interactor, {
         // 画线
         var point = this._points.get(0);
         g.lineWidth = 1;
-        g.strokeStyle = '#1ABC9C';
+        g.strokeStyle = '#FF0000';
         g.beginPath();
         g.moveTo(point.x, point.y);
         for (var i = 1; i < size; i++) {
@@ -154,7 +154,7 @@ ht.Default.def(CreateShapeInteractor, ht.graph.Interactor, {
         for (i = 0; i < size; i++) {
             point = this._points.get(i);
             g.fillStyle = 'white';
-            g.strokeStyle = '#34495E';
+            g.strokeStyle = '#FF0000';
             g.lineWidth = 1;
             g.beginPath();
             g.arc(point.x, point.y, 4, 0, Math.PI * 2, true);

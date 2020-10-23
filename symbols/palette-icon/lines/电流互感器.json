@@ -1,0 +1,54 @@
+{
+  "modified": "Thu Oct 22 2020 10:43:05 GMT+0800 (CST)",
+  "width": 30,
+  "height": 60,
+  "comps": [
+    {
+      "type": "oval",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(255,0,0)"
+      },
+      "rect": [
+        2.5,
+        4.14033,
+        25,
+        25
+      ]
+    },
+    {
+      "type": "oval",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(255,0,0)"
+      },
+      "rect": [
+        2.5,
+        30,
+        25,
+        25
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(255,0,0)"
+      },
+      "visible": {
+        "func": "attr@state",
+        "value": true
+      },
+      "displayName": "",
+      "points": [
+        15,
+        60,
+        15,
+        0
+      ]
+    }
+  ]
+}

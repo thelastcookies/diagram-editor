@@ -1,0 +1,119 @@
+{
+  "modified": "Thu Oct 22 2020 10:43:57 GMT+0800 (CST)",
+  "width": 30,
+  "height": 78,
+  "comps": [
+    {
+      "type": "oval",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(255,0,0)"
+      },
+      "rect": [
+        2.5,
+        4.14033,
+        25,
+        25
+      ]
+    },
+    {
+      "type": "oval",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(255,0,0)"
+      },
+      "rect": [
+        2.5,
+        30,
+        25,
+        25
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(255,0,0)"
+      },
+      "visible": {
+        "func": "attr@state",
+        "value": true
+      },
+      "displayName": "",
+      "points": [
+        15,
+        60,
+        15,
+        0
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(255,0,0)"
+      },
+      "rotation": -1.5708,
+      "points": [
+        10.1345,
+        61.11575,
+        19.8655,
+        61.11575,
+        19.8655,
+        61.11575,
+        19.8655,
+        61.11575
+      ],
+      "segments": [
+        1,
+        4
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(255,0,0)"
+      },
+      "points": [
+        3,
+        66.75025,
+        27,
+        66.75025
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(255,0,0)"
+      },
+      "points": [
+        6,
+        70.87509,
+        24,
+        70.87509
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(255,0,0)"
+      },
+      "points": [
+        10,
+        74.99571,
+        20,
+        74.99571
+      ]
+    }
+  ]
+}

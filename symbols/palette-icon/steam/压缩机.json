@@ -1,5 +1,5 @@
 {
-  "modified": "Tue Oct 13 2020 17:28:22 GMT+0800 (CST)",
+  "modified": "Thu Oct 22 2020 11:18:45 GMT+0800 (CST)",
   "width": 30,
   "height": 30,
   "comps": [
@@ -19,13 +19,14 @@
       "type": "shape",
       "borderWidth": 1.5,
       "borderColor": "#009A3D",
+      "rotation": 3.14159,
       "points": [
         4.50415,
-        5.51732,
+        1.47692,
         15,
-        29.5,
+        25.4596,
         25.49585,
-        5.51732
+        1.47692
       ]
     }
   ]

@@ -1,0 +1,76 @@
+{
+  "modified": "Thu Oct 22 2020 11:10:22 GMT+0800 (CST)",
+  "width": 37,
+  "height": 37,
+  "comps": [
+    {
+      "type": "oval",
+      "background": "rgba(217,217,217,0)",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "rect": [
+        1,
+        1,
+        35,
+        35
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "borderCap": "round",
+      "borderJoin": "bevel",
+      "points": [
+        6.60242,
+        18.68423,
+        6.60242,
+        18.68423,
+        8.66692,
+        25.37951,
+        13.13148,
+        25.37951,
+        16.40551,
+        25.37951,
+        18.50795,
+        18.68423,
+        18.50795,
+        18.68423
+      ],
+      "segments": [
+        1,
+        4,
+        4
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "borderCap": "round",
+      "borderJoin": "bevel",
+      "rotation": 3.14159,
+      "points": [
+        18.5,
+        11.98895,
+        18.5,
+        11.98895,
+        20.5645,
+        18.68423,
+        25.02906,
+        18.68423,
+        28.30309,
+        18.68423,
+        30.40553,
+        11.98895,
+        30.40553,
+        11.98895
+      ],
+      "segments": [
+        1,
+        4,
+        4
+      ]
+    }
+  ]
+}

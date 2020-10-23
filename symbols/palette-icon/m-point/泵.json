@@ -1,0 +1,140 @@
+{
+  "modified": "Fri Oct 23 2020 15:53:55 GMT+0800 (CST)",
+  "dataBindings": [
+    {
+      "attr": "node.type",
+      "valueType": "String",
+      "defaultValue": "m-point"
+    },
+    {
+      "attr": "node.name",
+      "valueType": "String",
+      "defaultValue": "pump"
+    },
+    {
+      "attr": "node.color",
+      "valueType": "Color",
+      "defaultValue": "rgb(255,0,0)"
+    },
+    {
+      "attr": "node.state",
+      "valueType": "Boolean",
+      "defaultValue": true,
+      "name": "启用状态"
+    }
+  ],
+  "width": 32,
+  "height": 32,
+  "comps": [
+    {
+      "type": "oval",
+      "background": "rgba(0,153,61,0.1)",
+      "borderWidth": 2,
+      "borderColor": "#009A3D",
+      "rect": [
+        1,
+        1,
+        30,
+        30
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgba(255,255,255,0.60)",
+      "borderColor": "rgba(255,255,255,0.6)",
+      "rect": [
+        14.42891,
+        2.84716,
+        3.14219,
+        13.94572
+      ]
+    },
+    {
+      "type": "polygon",
+      "background": "rgba(255,255,255,0.60)",
+      "borderColor": "rgba(255,255,255,0.6)",
+      "polygonSide": 3,
+      "rotation": 1.5708,
+      "rect": [
+        7.25,
+        12.25003,
+        17.5,
+        18
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(255,255,0)",
+      "borderWidth": 0.5,
+      "borderColor": "#979797",
+      "rect": [
+        34.38604,
+        3.34716,
+        12,
+        12
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(255,0,0)",
+      "borderWidth": 0.5,
+      "borderColor": "#979797",
+      "rect": [
+        34.38604,
+        17.29288,
+        12,
+        12
+      ]
+    },
+    {
+      "type": "text",
+      "text": "M",
+      "align": "center",
+      "font": "9px arial, sans-serif",
+      "rect": [
+        34.38604,
+        3.34716,
+        12,
+        12
+      ]
+    },
+    {
+      "type": "text",
+      "text": "E",
+      "align": "center",
+      "font": "9px arial, sans-serif",
+      "rect": [
+        34.38604,
+        17.29288,
+        12,
+        12
+      ]
+    },
+    {
+      "type": "text",
+      "text": "F",
+      "align": "center",
+      "color": "rgb(255,0,0)",
+      "font": "9px arial, sans-serif",
+      "rect": [
+        -9,
+        0,
+        8,
+        8
+      ]
+    },
+    {
+      "type": "text",
+      "text": "L",
+      "align": "center",
+      "color": "rgb(255,255,0)",
+      "font": "9px arial, sans-serif",
+      "rect": [
+        -9,
+        24,
+        8,
+        8
+      ]
+    }
+  ]
+}

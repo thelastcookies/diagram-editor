@@ -1,0 +1,92 @@
+{
+  "modified": "Thu Oct 22 2020 15:10:50 GMT+0800 (CST)",
+  "width": 15,
+  "height": 30,
+  "comps": [
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(0,0,0)"
+      },
+      "rect": [
+        0,
+        0,
+        15,
+        30
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 0.5,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(0,0,0)"
+      },
+      "points": [
+        0,
+        12.15316,
+        7.5,
+        0.04491
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 0.5,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(0,0,0)"
+      },
+      "points": [
+        15,
+        12.17562,
+        7.5,
+        0.04491
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 0.5,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(0,0,0)"
+      },
+      "points": [
+        10.15,
+        28.48716,
+        4.85,
+        28.50962
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 0.5,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(0,0,0)"
+      },
+      "points": [
+        5,
+        28.53207,
+        15,
+        12.15316
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 0.5,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(0,0,0)"
+      },
+      "points": [
+        10,
+        28.50962,
+        0,
+        12.17562
+      ]
+    }
+  ]
+}

@@ -2,6 +2,23 @@
   "modified": "Wed Aug 12 2020 16:10:28 GMT+0800 (中国标准时间)",
   "width": 20,
   "height": 112,
+  "dataBindings": [
+    {
+      "attr": "node.type",
+      "valueType": "String",
+      "defaultValue": "m-point"
+    },
+    {
+      "attr": "node.name",
+      "valueType": "String",
+      "defaultValue": "heater"
+    },
+    {
+      "attr": "node.text",
+      "valueType": "String",
+      "defaultValue": "低温再热器"
+    }
+  ],
   "comps": [
     {
       "type": "shape",

@@ -128,7 +128,7 @@
         // ]));
         gridPainter = new ht.graph.GridPainter(g2d, 'light');
         g2d.addBottomPainter(gridPainter);
-        g2d.setSnapSpacing(0.5);
+        g2d.setSnapSpacing(1);
 
 
         // 组件面板
@@ -206,6 +206,7 @@
 
                 if (name === 'lines') group.setExpanded(true);
                 if (name === 'variable') group.setExpanded(true);
+                if (name === 'power') group.setExpanded(true);
                 if (name === 'steam') group.setExpanded(true);
 
                 info.items.forEach(function (item) {
@@ -347,6 +348,9 @@
                     }
                     if (data.a('node.name') === 'bus') {
                         propertyView.addProperties(bus_properties);
+                    }
+                    if (data.a('node.name') === 'heater') {
+                        propertyView.addProperties(heater_properties);
                     }
                     if (data.a('line.color')) {
                         propertyView.addProperties(node_color_properties);

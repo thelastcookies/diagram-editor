@@ -1,0 +1,70 @@
+{
+  "modified": "Fri Oct 23 2020 15:26:30 GMT+0800 (CST)",
+  "width": 30,
+  "height": 30,
+  "comps": [
+    {
+      "type": "oval",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(0,0,0)"
+      },
+      "rotation": 4.71239,
+      "rect": [
+        -0.00002,
+        0.00002,
+        30,
+        30
+      ]
+    },
+    {
+      "type": "text",
+      "text": "M",
+      "align": "center",
+      "rect": [
+        9.99998,
+        3.38384,
+        10,
+        10
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": {
+        "func": "attr@node.width",
+        "value": 1
+      },
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(0,0,0)"
+      },
+      "points": [
+        0,
+        15.00002,
+        30,
+        15.00002,
+        30,
+        15.00002,
+        30,
+        15.00002
+      ],
+      "segments": [
+        1,
+        4
+      ]
+    },
+    {
+      "type": "text",
+      "text": "1",
+      "align": "center",
+      "rect": [
+        9.99998,
+        17.4469,
+        10,
+        10
+      ]
+    }
+  ]
+}

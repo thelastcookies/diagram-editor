@@ -1,0 +1,107 @@
+{
+  "modified": "Thu Oct 22 2020 10:50:20 GMT+0800 (CST)",
+  "width": 30,
+  "height": 55,
+  "comps": [
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(255,0,0)"
+      },
+      "rotation": -1.5708,
+      "points": [
+        10.1345,
+        37.8655,
+        19.8655,
+        37.8655,
+        19.8655,
+        37.8655,
+        19.8655,
+        37.8655
+      ],
+      "segments": [
+        1,
+        4
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(255,0,0)"
+      },
+      "points": [
+        3,
+        43.5,
+        27,
+        43.5
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(255,0,0)"
+      },
+      "points": [
+        6,
+        47.62484,
+        24,
+        47.62484
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(255,0,0)"
+      },
+      "points": [
+        10,
+        51.74546,
+        20,
+        51.74546
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgba(217,217,217,0)",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "rect": [
+        2.5,
+        8,
+        25,
+        25
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(255,0,0)"
+      },
+      "rotation": -1.5708,
+      "points": [
+        11.00002,
+        4,
+        19.00002,
+        4,
+        19.00002,
+        4,
+        19.00002,
+        4
+      ],
+      "segments": [
+        1,
+        4
+      ]
+    }
+  ]
+}

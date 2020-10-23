@@ -1,5 +1,5 @@
 {
-  "modified": "Wed Oct 14 2020 14:45:10 GMT+0800 (CST)",
+  "modified": "Thu Oct 22 2020 11:48:04 GMT+0800 (CST)",
   "dataBindings": [
     {
       "attr": "node.type",
@@ -9,7 +9,7 @@
     {
       "attr": "node.name",
       "valueType": "String",
-      "defaultValue": "c-value"
+      "defaultValue": "switch"
     },
     {
       "attr": "node.color",
@@ -20,40 +20,56 @@
       "attr": "node.state",
       "valueType": "Boolean",
       "defaultValue": true,
-      "name": "启用状态"
+      "name": "开关状态"
     }
   ],
   "width": 30,
-  "height": 14,
+  "height": 22,
   "comps": [
     {
       "type": "triangle",
-      "background": "#13C7FF",
+      "background": "#D8D8D8",
       "borderWidth": 1,
       "borderColor": {
         "func": "attr@line.color",
-        "value": "#13C7FF"
+        "value": "#D8D8D8"
       },
       "rotation": 4.71239,
       "rect": [
-        16.75,
-        0,
+        16.75001,
+        8.11813,
         11.5,
         14
       ]
     },
     {
       "type": "triangle",
-      "background": "rgb(255,255,255)",
+      "background": "#D8D8D8",
       "borderWidth": 1,
       "borderColor": {
         "func": "attr@line.color",
-        "value": "rgb(255,255,255)"
+        "value": "#D8D8D8"
       },
       "rotation": 1.5708,
       "rect": [
-        1.75,
-        0,
+        1.75001,
+        8.11813,
+        11.5,
+        14
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "#D8D8D8",
+      "borderWidth": 1,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "#D8D8D8"
+      },
+      "rotation": 3.14159,
+      "rect": [
+        9.25001,
+        0.50715,
         11.5,
         14
       ]

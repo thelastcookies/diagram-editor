@@ -1,0 +1,152 @@
+{
+  "modified": "Thu Oct 22 2020 14:53:21 GMT+0800 (CST)",
+  "width": 40,
+  "height": 40,
+  "comps": [
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(0,0,0)"
+      },
+      "rect": [
+        0,
+        0,
+        40,
+        40
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": {
+        "func": "attr@node.width",
+        "value": 0.5
+      },
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(0,0,0)"
+      },
+      "rotation": 1.5708,
+      "points": [
+        2.5,
+        12.74,
+        17.5,
+        12.74,
+        17.5,
+        12.74,
+        17.5,
+        12.74
+      ],
+      "segments": [
+        1,
+        4
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": {
+        "func": "attr@node.width",
+        "value": 0.5
+      },
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(0,0,0)"
+      },
+      "rotation": 1.5708,
+      "points": [
+        22.5,
+        12.74,
+        37.5,
+        12.74,
+        37.5,
+        12.74,
+        37.5,
+        12.74
+      ],
+      "segments": [
+        1,
+        4
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": {
+        "func": "attr@node.width",
+        "value": 0.5
+      },
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(0,0,0)"
+      },
+      "points": [
+        30,
+        20,
+        40,
+        20,
+        40,
+        20,
+        40,
+        20
+      ],
+      "segments": [
+        1,
+        4
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 0.5,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(0,0,0)"
+      },
+      "points": [
+        10,
+        5.5,
+        20,
+        20
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 0.5,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(0,0,0)"
+      },
+      "points": [
+        20,
+        20,
+        30,
+        5.5
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": {
+        "func": "attr@node.width",
+        "value": 0.5
+      },
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(0,0,0)"
+      },
+      "points": [
+        0,
+        20,
+        10,
+        20,
+        10,
+        20,
+        10,
+        20
+      ],
+      "segments": [
+        1,
+        4
+      ]
+    }
+  ]
+}

@@ -33,7 +33,6 @@ ht.DataModel.prototype.setNodeStatusByValue = function (json) {
                 value = Number(item.value)
                 node.s("text", value.toFixed(2));
             }
-
         });
     });
 };

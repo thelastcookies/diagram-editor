@@ -2,6 +2,23 @@
   "modified": "Wed Aug 12 2020 16:08:05 GMT+0800 (中国标准时间)",
   "width": 20,
   "height": 112,
+  "dataBindings": [
+    {
+      "attr": "node.type",
+      "valueType": "String",
+      "defaultValue": "m-point"
+    },
+    {
+      "attr": "node.name",
+      "valueType": "String",
+      "defaultValue": "heater"
+    },
+    {
+      "attr": "node.label",
+      "valueType": "String",
+      "defaultValue": "分隔屏过热器"
+    }
+  ],
   "comps": [
     {
       "type": "shape",
@@ -30,7 +47,26 @@
     },
     {
       "type": "text",
-      "text": "离",
+      "text": {
+        "func": "__ht__function(data, view) {\n return data.a('node.label').substr(0, 1) \n}",
+        "value": true
+      },
+      "align": "center",
+      "color": "rgb(255,255,255)",
+      "font": "10px arial, sans-serif",
+      "rect": [
+        1.38762,
+        18,
+        17.22476,
+        12.9006
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "__ht__function(data, view) {\n return data.a('node.label').substr(1, 1) \n}",
+        "value": true
+      },
       "align": "center",
       "color": "rgb(255,255,255)",
       "font": "10px arial, sans-serif",
@@ -43,7 +79,10 @@
     },
     {
       "type": "text",
-      "text": "屏",
+      "text": {
+        "func": "__ht__function(data, view) {\n return data.a('node.label').substr(2, 1) \n}",
+        "value": true
+      },
       "align": "center",
       "color": "rgb(255,255,255)",
       "font": "10px arial, sans-serif",
@@ -56,7 +95,10 @@
     },
     {
       "type": "text",
-      "text": "过",
+      "text": {
+        "func": "__ht__function(data, view) {\n return data.a('node.label').substr(3, 1) \n}",
+        "value": true
+      },
       "align": "center",
       "color": "rgb(255,255,255)",
       "font": "10px arial, sans-serif",
@@ -69,7 +111,10 @@
     },
     {
       "type": "text",
-      "text": "热",
+      "text": {
+        "func": "__ht__function(data, view) {\n return data.a('node.label').substr(4, 1) \n}",
+        "value": true
+      },
       "align": "center",
       "color": "rgb(255,255,255)",
       "font": "10px arial, sans-serif",
@@ -82,26 +127,16 @@
     },
     {
       "type": "text",
-      "text": "器",
+      "text": {
+        "func": "__ht__function(data, view) {\n return data.a('node.label').substr(5, 1) \n}",
+        "value": true
+      },
       "align": "center",
       "color": "rgb(255,255,255)",
       "font": "10px arial, sans-serif",
       "rect": [
         1.38762,
         78.0994,
-        17.22476,
-        12.9006
-      ]
-    },
-    {
-      "type": "text",
-      "text": "分",
-      "align": "center",
-      "color": "rgb(255,255,255)",
-      "font": "10px arial, sans-serif",
-      "rect": [
-        1.38762,
-        18,
         17.22476,
         12.9006
       ]

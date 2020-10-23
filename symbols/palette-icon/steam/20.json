@@ -1,0 +1,91 @@
+{
+  "modified": "Thu Oct 22 2020 15:04:21 GMT+0800 (CST)",
+  "width": 15,
+  "height": 31,
+  "comps": [
+    {
+      "type": "rect",
+      "background": "rgba(255,255,255,0.60)",
+      "borderWidth": 1,
+      "borderColor": "#D8D8D8",
+      "rect": [
+        0.5,
+        0.5,
+        14,
+        30
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderColor": "#D8D8D8",
+      "rotation": 1.309,
+      "rect": [
+        6.4826,
+        -3.55772,
+        1.90729,
+        14.5
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderColor": "#D8D8D8",
+      "rotation": 1.309,
+      "rect": [
+        6.4826,
+        0.97136,
+        1.90729,
+        14.5
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderColor": "#D8D8D8",
+      "rotation": 1.309,
+      "rect": [
+        6.4826,
+        5.52864,
+        1.90729,
+        14.5
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderColor": "#D8D8D8",
+      "rotation": 1.309,
+      "rect": [
+        6.28139,
+        10.25,
+        1.90729,
+        14.5
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderColor": "#D8D8D8",
+      "rotation": 1.309,
+      "rect": [
+        6.28139,
+        14.97136,
+        1.90729,
+        14.5
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderColor": "#D8D8D8",
+      "rotation": 1.309,
+      "rect": [
+        6.28139,
+        19.52864,
+        1.90729,
+        14.5
+      ]
+    }
+  ]
+}

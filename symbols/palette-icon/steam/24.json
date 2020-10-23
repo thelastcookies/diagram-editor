@@ -1,0 +1,119 @@
+{
+  "modified": "Fri Oct 23 2020 09:58:20 GMT+0800 (CST)",
+  "width": 47,
+  "height": 28,
+  "comps": [
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "#D8D8D8"
+      },
+      "points": [
+        1.43669,
+        26.36,
+        1.49657,
+        0
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "#D8D8D8"
+      },
+      "points": [
+        45.5,
+        26.36,
+        45.5138,
+        0
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "#D8D8D8"
+      },
+      "points": [
+        46,
+        25.34923,
+        1,
+        25.34923
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "#009A3D"
+      },
+      "points": [
+        31.20031,
+        4.67586,
+        2.57798,
+        4.67587
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "#009A3D"
+      },
+      "points": [
+        43.43587,
+        4.67586,
+        33.43587,
+        4.67586
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "#009A3D"
+      },
+      "points": [
+        14.23834,
+        12.92929,
+        4.23834,
+        12.92929
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "#009A3D"
+      },
+      "points": [
+        40,
+        20,
+        7,
+        20
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "#009A3D"
+      },
+      "points": [
+        42.57798,
+        12.92929,
+        17.57798,
+        12.92929
+      ]
+    }
+  ]
+}

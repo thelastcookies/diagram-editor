@@ -1,0 +1,222 @@
+{
+  "modified": "Fri Oct 23 2020 10:55:44 GMT+0800 (CST)",
+  "width": 10,
+  "height": 140,
+  "comps": [
+    {
+      "type": "shape",
+      "borderWidth": {
+        "func": "attr@node.width",
+        "value": 1
+      },
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(0,0,0)"
+      },
+      "rotation": 1.5708,
+      "points": [
+        -70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70,
+        70
+      ],
+      "segments": [
+        1,
+        4
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": {
+        "func": "attr@node.width",
+        "value": 1
+      },
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(0,0,0)"
+      },
+      "anchorY": 0,
+      "rotation": -3.14159,
+      "points": [
+        0,
+        139.50628,
+        10,
+        139.50628,
+        10,
+        139.50628,
+        10,
+        139.50628
+      ],
+      "segments": [
+        1,
+        4
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": {
+        "func": "attr@node.width",
+        "value": 1
+      },
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(0,0,0)"
+      },
+      "anchorY": 0,
+      "rotation": -3.14159,
+      "points": [
+        0,
+        23.81961,
+        10,
+        23.81961,
+        10,
+        23.81961,
+        10,
+        23.81961
+      ],
+      "segments": [
+        1,
+        4
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": {
+        "func": "attr@node.width",
+        "value": 1
+      },
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(0,0,0)"
+      },
+      "anchorY": 0,
+      "rotation": -3.14159,
+      "points": [
+        0,
+        117.15294,
+        10,
+        117.15294,
+        10,
+        117.15294,
+        10,
+        117.15294
+      ],
+      "segments": [
+        1,
+        4
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": {
+        "func": "attr@node.width",
+        "value": 1
+      },
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(0,0,0)"
+      },
+      "anchorY": 0,
+      "rotation": -3.14159,
+      "points": [
+        0,
+        47.15294,
+        10,
+        47.15294,
+        10,
+        47.15294,
+        10,
+        47.15294
+      ],
+      "segments": [
+        1,
+        4
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": {
+        "func": "attr@node.width",
+        "value": 1
+      },
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(0,0,0)"
+      },
+      "anchorY": 0,
+      "rotation": -3.14159,
+      "points": [
+        0,
+        70.48628,
+        10,
+        70.48628,
+        10,
+        70.48628,
+        10,
+        70.48628
+      ],
+      "segments": [
+        1,
+        4
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": {
+        "func": "attr@node.width",
+        "value": 1
+      },
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(0,0,0)"
+      },
+      "anchorY": 0,
+      "rotation": -3.14159,
+      "points": [
+        0,
+        93.81961,
+        10,
+        93.81961,
+        10,
+        93.81961,
+        10,
+        93.81961
+      ],
+      "segments": [
+        1,
+        4
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": {
+        "func": "attr@node.width",
+        "value": 1
+      },
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(0,0,0)"
+      },
+      "anchorY": 0,
+      "rotation": -3.14159,
+      "points": [
+        0,
+        0.48628,
+        10,
+        0.48628,
+        10,
+        0.48628,
+        10,
+        0.48628
+      ],
+      "segments": [
+        1,
+        4
+      ]
+    }
+  ]
+}

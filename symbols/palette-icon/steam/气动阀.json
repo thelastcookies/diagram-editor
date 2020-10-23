@@ -1,7 +1,30 @@
 {
   "modified": "Wed Oct 14 2020 16:22:55 GMT+0800 (CST)",
+  "dataBindings": [
+    {
+      "attr": "node.type",
+      "valueType": "String",
+      "defaultValue": "m-point"
+    },
+    {
+      "attr": "node.name",
+      "valueType": "String",
+      "defaultValue": "p-value"
+    },
+    {
+      "attr": "node.color",
+      "valueType": "Color",
+      "defaultValue": "rgb(255,0,0)"
+    },
+    {
+      "attr": "node.state",
+      "valueType": "Boolean",
+      "defaultValue": true,
+      "name": "启用状态"
+    }
+  ],
   "width": 30,
-  "height": 30,
+  "height": 45.6,
   "comps": [
     {
       "type": "rect",
@@ -80,6 +103,10 @@
       "background": "rgba(255,255,255,0.00)",
       "borderWidth": 2,
       "borderColor": "#940F0F",
+      "visible": {
+        "func": "__ht__function(data, view) {\n return !data.a('node.state') \n}",
+        "value": true
+      },
       "rect": [
         1,
         1,
@@ -91,6 +118,10 @@
       "type": "rect",
       "background": "#940F0F",
       "borderColor": "#979797",
+      "visible": {
+        "func": "__ht__function(data, view) {\n return !data.a('node.state') \n}",
+        "value": true
+      },
       "rotation": 0.7854,
       "rect": [
         13.75,

@@ -543,5 +543,41 @@ m_point_properties = [//测点图元的配置项
         accessType: 'attr',
         valueType: 'text',
         editable: true
+    },
+    // {
+    //     name: 'label',// 设置了 name 属性，如果没有设置 accessType 则默认通过 get/setTag 来获取和设置 tag 值
+    //     displayName: '标签显示',// 用于存取属性名的显示文本值，若为空则显示name属性值
+    //     accessType: 'style',
+    //     valueType: 'text',
+    //     editable: true// 设置该属性是否可编辑
+    // },
+    // {
+    //     name: 'label',
+    //     displayName: '柱形图标签',
+    //     accessType: 'style',
+    //     valueType: 'text',
+    //     editable: true,
+    //     defaultValue: 0
+    // },
+    // {
+    //     name: 'label.position',
+    //     displayName: '柱形图标签位置',
+    //     accessType: 'style',
+    //     editable: true,
+    //     defaultValue: "上",
+    //     enum: {
+    //         labels: ["上", "下", "左", "右"],
+    //         values: [3, 31, 14, 20]
+    //     }
+    // },
+];
+heater_properties = [//普通图元的初始颜色配置
+    {
+        name: 'node.label',
+        displayName: '模板Label',
+        accessType: 'attr',
+        valueType: 'text',
+        editable: true,
+        defaultValue: '过热器'
     }
 ];
