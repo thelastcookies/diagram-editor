@@ -1,0 +1,309 @@
+{
+  "modified": "Fri Oct 30 2020 14:42:08 GMT+0800 (CST)",
+  "width": 86,
+  "height": 54,
+  "comps": [
+    {
+      "type": "trapezoid",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderJoin": "miter",
+      "gradient": "spread.horizontal",
+      "borderWidthAbsolute": true,
+      "rotation": 4.71239,
+      "rect": [
+        -14.06,
+        14.95,
+        36,
+        7
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderJoin": "miter",
+      "gradient": "spread.vertical",
+      "borderWidthAbsolute": true,
+      "rect": [
+        7.44002,
+        0.45,
+        9,
+        36
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(160,160,160)",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderJoin": "miter",
+      "borderWidthAbsolute": true,
+      "rect": [
+        16.44002,
+        0.45,
+        25.2,
+        36
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderJoin": "miter",
+      "gradient": "spread.vertical",
+      "borderWidthAbsolute": true,
+      "rect": [
+        67.56002,
+        17.55,
+        18,
+        36
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderJoin": "miter",
+      "gradient": "spread.vertical",
+      "borderWidthAbsolute": true,
+      "rect": [
+        53.16002,
+        17.55,
+        14.4,
+        1.8
+      ]
+    },
+    {
+      "type": "shape",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "gradient": "spread.horizontal",
+      "borderWidthAbsolute": true,
+      "anchorY": 1,
+      "rotation": 1.5708,
+      "closePath": true,
+      "points": [
+        23.64002,
+        18.45,
+        23.64002,
+        18.45,
+        24.57602,
+        6.93,
+        41.64002,
+        6.93,
+        58.70402,
+        6.93,
+        59.64002,
+        18.45,
+        59.64002,
+        18.45
+      ],
+      "segments": [
+        1,
+        4,
+        4
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(61,61,61)",
+      "borderWidth": 0.2,
+      "borderColor": "rgb(0,0,0)",
+      "borderJoin": "miter",
+      "rect": [
+        16.44002,
+        0.45,
+        25.2,
+        1
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(217,217,217)",
+      "borderWidth": 0.2,
+      "borderColor": "rgb(0,0,0)",
+      "borderJoin": "miter",
+      "rect": [
+        16.44002,
+        2.95785,
+        25.2,
+        1
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(61,61,61)",
+      "borderWidth": 0.2,
+      "borderColor": "rgb(0,0,0)",
+      "borderJoin": "miter",
+      "rect": [
+        16.44002,
+        5.46569,
+        25.2,
+        1
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(217,217,217)",
+      "borderWidth": 0.2,
+      "borderColor": "rgb(0,0,0)",
+      "borderJoin": "miter",
+      "rect": [
+        16.44002,
+        7.97354,
+        25.2,
+        1
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(61,61,61)",
+      "borderWidth": 0.2,
+      "borderColor": "rgb(0,0,0)",
+      "borderJoin": "miter",
+      "rect": [
+        16.44002,
+        10.48138,
+        25.2,
+        1
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(217,217,217)",
+      "borderWidth": 0.2,
+      "borderColor": "rgb(0,0,0)",
+      "borderJoin": "miter",
+      "rect": [
+        16.44002,
+        12.98923,
+        25.2,
+        1
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(61,61,61)",
+      "borderWidth": 0.2,
+      "borderColor": "rgb(0,0,0)",
+      "borderJoin": "miter",
+      "rect": [
+        16.44002,
+        15.49708,
+        25.2,
+        1
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(217,217,217)",
+      "borderWidth": 0.2,
+      "borderColor": "rgb(0,0,0)",
+      "borderJoin": "miter",
+      "rect": [
+        16.44002,
+        18.00492,
+        25.2,
+        1
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(61,61,61)",
+      "borderWidth": 0.2,
+      "borderColor": "rgb(0,0,0)",
+      "borderJoin": "miter",
+      "rect": [
+        16.44002,
+        20.51277,
+        25.2,
+        1
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(217,217,217)",
+      "borderWidth": 0.2,
+      "borderColor": "rgb(0,0,0)",
+      "borderJoin": "miter",
+      "rect": [
+        16.44002,
+        23.02061,
+        25.2,
+        1
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(61,61,61)",
+      "borderWidth": 0.2,
+      "borderColor": "rgb(0,0,0)",
+      "borderJoin": "miter",
+      "rect": [
+        16.44002,
+        25.52846,
+        25.2,
+        1
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(217,217,217)",
+      "borderWidth": 0.2,
+      "borderColor": "rgb(0,0,0)",
+      "borderJoin": "miter",
+      "rect": [
+        16.44002,
+        28.03631,
+        25.2,
+        1
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(61,61,61)",
+      "borderWidth": 0.2,
+      "borderColor": "rgb(0,0,0)",
+      "borderJoin": "miter",
+      "rect": [
+        16.44002,
+        30.54415,
+        25.2,
+        1
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(217,217,217)",
+      "borderWidth": 0.2,
+      "borderColor": "rgb(0,0,0)",
+      "borderJoin": "miter",
+      "rect": [
+        16.44002,
+        33.052,
+        25.2,
+        1
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(61,61,61)",
+      "borderWidth": 0.2,
+      "borderColor": "rgb(0,0,0)",
+      "borderJoin": "miter",
+      "rect": [
+        16.44002,
+        35.55984,
+        25.2,
+        1
+      ]
+    }
+  ]
+}

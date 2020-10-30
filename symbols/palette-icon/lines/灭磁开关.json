@@ -1,5 +1,12 @@
 {
   "modified": "Thu Oct 22 2020 11:03:52 GMT+0800 (CST)",
+  "dataBindings": [
+    {
+      "attr": "line.color",
+      "valueType": "Color",
+      "defaultValue": "rgb(255,0,0)"
+    }
+  ],
   "width": 67,
   "height": 55,
   "comps": [
@@ -7,7 +14,10 @@
       "type": "rect",
       "background": "rgba(217,217,217,0)",
       "borderWidth": 2,
-      "borderColor": "rgb(255,0,0)",
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(255,0,0)"
+      },
       "rect": [
         1.01243,
         16.51862,
@@ -37,10 +47,6 @@
         "func": "attr@line.color",
         "value": "rgb(255,0,0)"
       },
-      "visible": {
-        "func": "attr@state",
-        "value": true
-      },
       "displayName": "",
       "points": [
         33.51243,
@@ -57,10 +63,6 @@
         "value": "rgb(255,0,0)"
       },
       "borderCap": "round",
-      "visible": {
-        "func": "attr@state",
-        "value": true
-      },
       "displayName": "",
       "rotation": 1.5708,
       "points": [
@@ -78,10 +80,6 @@
         "value": "rgb(255,0,0)"
       },
       "borderCap": "round",
-      "visible": {
-        "func": "attr@state",
-        "value": true
-      },
       "displayName": "",
       "rotation": 1.5708,
       "points": [
@@ -99,10 +97,6 @@
         "value": "rgb(255,0,0)"
       },
       "borderCap": "round",
-      "visible": {
-        "func": "attr@state",
-        "value": true
-      },
       "displayName": "",
       "rotation": 0.7854,
       "points": [

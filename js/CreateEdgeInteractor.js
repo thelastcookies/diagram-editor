@@ -81,6 +81,7 @@ ht.Default.def(CreateEdgeInteractor, ht.graph.Interactor, {
 
             edge.s('edge.type', this._type);
             edge.s('body.color', "rgb(255, 0, 0)");
+            edge.s('edge.dash.pattern', [8, 8]);
 
             edge.setParent(graphView.getCurrentSubGraph());
 

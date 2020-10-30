@@ -1,0 +1,131 @@
+{
+  "modified": "Thu Oct 29 2020 16:44:42 GMT+0800 (CST)",
+  "dataBindings": [
+    {
+      "attr": "node.type",
+      "valueType": "String",
+      "defaultValue": "m-point"
+    },
+    {
+      "attr": "node.name",
+      "valueType": "String",
+      "defaultValue": "switch"
+    },
+    {
+      "attr": "node.color",
+      "valueType": "Color",
+      "defaultValue": "rgb(255,0,0)"
+    },
+    {
+      "attr": "node.state",
+      "valueType": "Boolean",
+      "defaultValue": false,
+      "name": "开关状态"
+    }
+  ],
+  "width": 22,
+  "height": 22,
+  "comps": [
+    {
+      "type": "circle",
+      "background": {
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : 'rgb(74,74,74)';\n}",
+        "value": "rgb(255,0,0)"
+      },
+      "borderWidth": 1,
+      "borderColor": {
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : 'rgb(74,74,74)';\n}",
+        "value": "rgb(255,0,0)"
+      },
+      "rect": [
+        2,
+        2,
+        18,
+        18
+      ]
+    },
+    {
+      "type": "rect",
+      "background": {
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : 'rgb(74,74,74)';\n}",
+        "value": "rgb(255,0,0)"
+      },
+      "borderWidth": 1,
+      "borderColor": {
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : 'rgb(74,74,74)';\n}",
+        "value": "rgb(255,0,0)"
+      },
+      "rect": [
+        20,
+        10,
+        2,
+        2
+      ]
+    },
+    {
+      "type": "rect",
+      "background": {
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : 'rgb(74,74,74)';\n}",
+        "value": "rgb(255,0,0)"
+      },
+      "borderWidth": 1,
+      "borderColor": {
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : 'rgb(74,74,74)';\n}",
+        "value": "rgb(255,0,0)"
+      },
+      "rect": [
+        0,
+        10,
+        2,
+        2
+      ]
+    },
+    {
+      "type": "rect",
+      "background": {
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : 'rgb(74,74,74)';\n}",
+        "value": "rgb(255,0,0)"
+      },
+      "borderWidth": 1,
+      "borderColor": {
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : 'rgb(74,74,74)';\n}",
+        "value": "rgb(255,0,0)"
+      },
+      "rect": [
+        10,
+        0,
+        2,
+        2
+      ]
+    },
+    {
+      "type": "rect",
+      "background": {
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : 'rgb(74,74,74)';\n}",
+        "value": "rgb(255,0,0)"
+      },
+      "borderWidth": 1,
+      "borderColor": {
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : 'rgb(74,74,74)';\n}",
+        "value": "rgb(255,0,0)"
+      },
+      "rect": [
+        10,
+        20,
+        2,
+        2
+      ]
+    },
+    {
+      "type": "oval",
+      "background": "rgb(255,255,255)",
+      "borderColor": "#979797",
+      "rect": [
+        6,
+        5,
+        5,
+        4
+      ]
+    }
+  ]
+}

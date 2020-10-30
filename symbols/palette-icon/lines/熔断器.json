@@ -1,0 +1,36 @@
+{
+  "modified": "Mon Oct 26 2020 13:54:41 GMT+0800 (CST)",
+  "width": 24,
+  "height": 60,
+  "comps": [
+    {
+      "type": "rect",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(255,0,0)"
+      },
+      "rect": [
+        2,
+        11,
+        20,
+        38
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(255,0,0)"
+      },
+      "anchorY": 0,
+      "points": [
+        12,
+        60,
+        12,
+        0
+      ]
+    }
+  ]
+}

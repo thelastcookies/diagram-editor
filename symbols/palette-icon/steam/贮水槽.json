@@ -1,5 +1,5 @@
 {
-  "modified": "Tue Oct 13 2020 17:41:08 GMT+0800 (CST)",
+  "modified": "Thu Oct 29 2020 09:36:37 GMT+0800 (CST)",
   "width": 40,
   "height": 82,
   "comps": [
@@ -176,20 +176,6 @@
         12,
         12.65276
       ]
-    },
-    {
-      "type": "components/progressBar/progressBar.json",
-      "rect": [
-        23.63153,
-        11,
-        8,
-        60
-      ],
-      "direction": "v",
-      "value": 1,
-      "valueVisible": false,
-      "foreColor": "#13C7FF",
-      "background": "#265DAB"
     }
   ]
 }

@@ -9,7 +9,7 @@
     {
       "attr": "node.name",
       "valueType": "String",
-      "defaultValue": "switch"
+      "defaultValue": "warn"
     },
     {
       "attr": "node.label",
@@ -37,7 +37,7 @@
         "func": "__ht__function(data, view) {\n return data.a('node.state') ? '#FF0000' : '#D8D8D8';\n}",
         "value": "#D8D8D8"
       },
-      "font": "10px arial, sans-serif",
+      "font": "16px arial, sans-serif",
       "rect": [
         0,
         0,

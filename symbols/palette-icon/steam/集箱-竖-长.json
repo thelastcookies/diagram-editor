@@ -1,0 +1,177 @@
+{
+  "modified": "Thu Oct 29 2020 09:34:27 GMT+0800 (CST)",
+  "width": 45,
+  "height": 384,
+  "dataBindings": [
+    {
+      "attr": "node.label",
+      "valueType": "String",
+      "defaultValue": "三级过热器进口集箱"
+    }
+  ],
+  "comps": [
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "gradient": "spread.horizontal",
+      "rect": [
+        0,
+        0,
+        45,
+        384
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "__ht__function(data, view) {\n return data.a('node.label').substr(0, 1) \n}",
+        "value": "三"
+      },
+      "align": "center",
+      "font": "26px arial, sans-serif",
+      "rect": [
+        7.5,
+        42,
+        30,
+        30
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "__ht__function(data, view) {\n return data.a('node.label').substr(1, 1) \n}",
+        "value": "级"
+      },
+      "align": "center",
+      "font": "26px arial, sans-serif",
+      "rect": [
+        7.5,
+        72,
+        30,
+        30
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "__ht__function(data, view) {\n return data.a('node.label').substr(2, 1) \n}",
+        "value": "过"
+      },
+      "align": "center",
+      "font": "26px arial, sans-serif",
+      "rect": [
+        7.5,
+        102,
+        30,
+        30
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "__ht__function(data, view) {\n return data.a('node.label').substr(3, 1) \n}",
+        "value": "热"
+      },
+      "align": "center",
+      "font": "26px arial, sans-serif",
+      "rect": [
+        7.5,
+        132,
+        30,
+        30
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "__ht__function(data, view) {\n return data.a('node.label').substr(4, 1) \n}",
+        "value": "器"
+      },
+      "align": "center",
+      "font": "26px arial, sans-serif",
+      "rect": [
+        7.5,
+        162,
+        30,
+        30
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "__ht__function(data, view) {\n return data.a('node.label').substr(5, 1) \n}",
+        "value": "进"
+      },
+      "align": "center",
+      "font": "26px arial, sans-serif",
+      "rect": [
+        7.5,
+        192,
+        30,
+        30
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "__ht__function(data, view) {\n return data.a('node.label').substr(6, 1) \n}",
+        "value": "口"
+      },
+      "align": "center",
+      "font": "26px arial, sans-serif",
+      "rect": [
+        7.5,
+        222,
+        30,
+        30
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "__ht__function(data, view) {\n return data.a('node.label').substr(7, 1) \n}",
+        "value": "集"
+      },
+      "align": "center",
+      "font": "26px arial, sans-serif",
+      "rect": [
+        7.5,
+        252,
+        30,
+        30
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "__ht__function(data, view) {\n return data.a('node.label').substr(8, 1) \n}",
+        "value": "箱"
+      },
+      "align": "center",
+      "font": "26px arial, sans-serif",
+      "rect": [
+        7.5,
+        282,
+        30,
+        30
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "__ht__function(data, view) {\n return data.a('node.label').substr(9, 1) \n}",
+        "value": ""
+      },
+      "align": "center",
+      "font": "26px arial, sans-serif",
+      "rect": [
+        7.5,
+        312,
+        30,
+        30
+      ]
+    }
+  ]
+}

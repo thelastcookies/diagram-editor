@@ -1,0 +1,141 @@
+{
+  "modified": "Wed Oct 28 2020 16:45:28 GMT+0800 (CST)",
+  "dataBindings": [
+    {
+      "attr": "node.label",
+      "valueType": "String",
+      "defaultValue": "#1",
+      "name": "数据值"
+    }
+  ],
+  "width": 156,
+  "height": 238,
+  "comps": [
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "rect": [
+        0,
+        0,
+        156,
+        238
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 1,
+      "borderColor": "rgb(51,153,255)",
+      "anchorX": 0,
+      "anchorY": 1,
+      "rotation": 1.5708,
+      "points": [
+        0,
+        36,
+        0,
+        -120
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 1,
+      "borderColor": "rgb(51,153,255)",
+      "anchorX": 0,
+      "anchorY": 1,
+      "rotation": 1.5708,
+      "points": [
+        0,
+        202,
+        0,
+        46
+      ]
+    },
+    {
+      "type": "text",
+      "text": "锅炉燃烧器火检",
+      "color": "rgb(119,7,184)",
+      "rect": [
+        41.34873,
+        0,
+        114.65127,
+        36
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "__ht__function(data, view) {\n return data.a('node.label');\n}",
+        "value": "#1"
+      },
+      "align": "right",
+      "color": "rgb(119,7,184)",
+      "rect": [
+        0,
+        0,
+        44.79446,
+        36
+      ]
+    },
+    {
+      "type": "text",
+      "text": "#1燃烧器",
+      "align": "center",
+      "color": "rgb(119,7,184)",
+      "rect": [
+        36,
+        36,
+        60,
+        36
+      ]
+    },
+    {
+      "type": "text",
+      "text": "#2燃烧器",
+      "align": "center",
+      "color": "rgb(119,7,184)",
+      "rect": [
+        96,
+        36,
+        60,
+        36
+      ]
+    },
+    {
+      "type": "text",
+      "text": "火焰",
+      "align": "center",
+      "color": "rgb(119,7,184)",
+      "rect": [
+        7.39723,
+        92,
+        30,
+        36
+      ]
+    },
+    {
+      "type": "text",
+      "text": "强度",
+      "align": "center",
+      "color": "rgb(119,7,184)",
+      "rect": [
+        7.39723,
+        110,
+        30,
+        36
+      ]
+    },
+    {
+      "type": "text",
+      "text": "有火",
+      "align": "center",
+      "color": "rgb(119,7,184)",
+      "rect": [
+        7.39723,
+        202,
+        30,
+        36
+      ]
+    }
+  ]
+}

@@ -70,7 +70,8 @@ ht.Default.def(CreateShapeInteractor, ht.graph.Interactor, {
                     shape.s({
                         'shape.background': null,
                         // 'shape.border.color': 'rbg(255, 0, 0)',
-                        'shape.border.width': 2
+                        'shape.border.width': 2,
+                        'shape.dash.pattern': [8, 8]
                     });
                     shape.setPoints(this._points.toArray());
 

@@ -1,0 +1,73 @@
+{
+  "modified": "Thu Oct 29 2020 17:43:41 GMT+0800 (CST)",
+  "dataBindings": [
+    {
+      "attr": "node.type",
+      "valueType": "String",
+      "defaultValue": "m-point"
+    },
+    {
+      "attr": "node.name",
+      "valueType": "String",
+      "defaultValue": "data"
+    },
+    {
+      "attr": "node.label",
+      "valueType": "String",
+      "defaultValue": "#.###",
+      "name": "数据值"
+    },
+    {
+      "attr": "node.unit",
+      "valueType": "String",
+      "defaultValue": "unit",
+      "name": "单位"
+    },
+    {
+      "attr": "line.color",
+      "valueType": "Color",
+      "defaultValue": "#00FF00"
+    }
+  ],
+  "width": 80,
+  "height": 24,
+  "comps": [
+    {
+      "type": "text",
+      "text": {
+        "func": "__ht__function(data, view) {\n return data.a('node.label');\n}",
+        "value": "#.###"
+      },
+      "align": "right",
+      "color": {
+        "func": "attr@line.color",
+        "value": "#00FF00"
+      },
+      "font": "16px arial, sans-serif",
+      "rect": [
+        14.48422,
+        0,
+        35.13236,
+        24
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "__ht__function(data, view) {\n return data.a('node.unit');\n}",
+        "value": "unit"
+      },
+      "color": {
+        "func": "attr@line.color",
+        "value": "#00FF00"
+      },
+      "font": "16px arial, sans-serif",
+      "rect": [
+        47.24911,
+        0,
+        23.23511,
+        24
+      ]
+    }
+  ]
+}

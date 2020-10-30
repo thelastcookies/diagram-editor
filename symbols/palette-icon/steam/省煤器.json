@@ -1,0 +1,229 @@
+{
+  "modified": "Thu Oct 29 2020 10:36:39 GMT+0800 (CST)",
+  "width": 214,
+  "height": 132,
+  "comps": [
+    {
+      "type": "rect",
+      "background": "rgb(0,0,0)",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,255,255)",
+      "rect": [
+        0,
+        0.75,
+        214,
+        22.5
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(0,0,0)",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,255,255)",
+      "rect": [
+        9,
+        23.25,
+        196,
+        22.5
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(0,0,0)",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,255,255)",
+      "rect": [
+        0,
+        45.75,
+        214,
+        9
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(0,0,0)",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,255,255)",
+      "rect": [
+        9,
+        54.75,
+        196,
+        22.5
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(0,0,0)",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,255,255)",
+      "rect": [
+        0,
+        77.25,
+        214,
+        9
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(0,0,0)",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,255,255)",
+      "rect": [
+        9,
+        86.25,
+        196,
+        22.5
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(0,0,0)",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,255,255)",
+      "rect": [
+        0,
+        108.75,
+        214,
+        22.5
+      ]
+    },
+    {
+      "type": "text",
+      "text": "省煤器出口",
+      "align": "center",
+      "color": "rgb(255,255,255)",
+      "rect": [
+        0,
+        -3,
+        214,
+        30
+      ]
+    },
+    {
+      "type": "text",
+      "text": "省煤器进口",
+      "align": "center",
+      "color": "rgb(255,255,255)",
+      "rect": [
+        0,
+        105,
+        214,
+        30
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,255,255)",
+      "dash": true,
+      "dashPattern": [
+        2,
+        2
+      ],
+      "dashColor": "rgb(0,0,0)",
+      "anchorX": 0,
+      "anchorY": 1,
+      "points": [
+        203.95578,
+        75.19766,
+        9.89811,
+        56.80234
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,255,255)",
+      "dash": true,
+      "dashPattern": [
+        2,
+        2
+      ],
+      "dashColor": "rgb(0,0,0)",
+      "anchorX": 0,
+      "anchorY": 1,
+      "points": [
+        203.36325,
+        56.80234,
+        10.49064,
+        75.19766
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,255,255)",
+      "dash": true,
+      "dashPattern": [
+        2,
+        2
+      ],
+      "dashColor": "rgb(0,0,0)",
+      "anchorX": 0,
+      "anchorY": 1,
+      "points": [
+        204.02884,
+        106.69766,
+        9.97117,
+        88.30234
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,255,255)",
+      "dash": true,
+      "dashPattern": [
+        2,
+        2
+      ],
+      "dashColor": "rgb(0,0,0)",
+      "anchorX": 0,
+      "anchorY": 1,
+      "points": [
+        203.95578,
+        43.69766,
+        9.89811,
+        25.30234
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,255,255)",
+      "dash": true,
+      "dashPattern": [
+        2,
+        2
+      ],
+      "dashColor": "rgb(0,0,0)",
+      "anchorX": 0,
+      "anchorY": 1,
+      "points": [
+        203.36325,
+        25.30234,
+        10.49064,
+        43.69766
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,255,255)",
+      "dash": true,
+      "dashPattern": [
+        2,
+        2
+      ],
+      "dashColor": "rgb(0,0,0)",
+      "anchorX": 0,
+      "anchorY": 1,
+      "points": [
+        203.36325,
+        88.30234,
+        10.49064,
+        106.69766
+      ]
+    }
+  ]
+}

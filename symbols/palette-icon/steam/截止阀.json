@@ -2,33 +2,21 @@
   "modified": "Thu Oct 22 2020 11:28:33 GMT+0800 (CST)",
   "dataBindings": [
     {
-      "attr": "node.type",
-      "valueType": "String",
-      "defaultValue": "m-point"
-    },
-    {
-      "attr": "node.name",
-      "valueType": "String",
-      "defaultValue": "switch"
-    },
-    {
-      "attr": "node.color",
+      "attr": "line.color",
       "valueType": "Color",
-      "defaultValue": "rgb(255,0,0)"
-    },
-    {
-      "attr": "node.state",
-      "valueType": "Boolean",
-      "defaultValue": true,
-      "name": "开关状态"
+      "defaultValue": "rgb(255, 0, 0)"
     }
   ],
   "width": 30,
   "height": 14,
+
   "comps": [
     {
       "type": "triangle",
-      "background": "#D8D8D8",
+      "background": {
+        "func": "attr@line.color",
+        "value": "#D8D8D8"
+      },
       "borderWidth": 1,
       "borderColor": {
         "func": "attr@line.color",
@@ -44,7 +32,10 @@
     },
     {
       "type": "triangle",
-      "background": "#D8D8D8",
+      "background": {
+        "func": "attr@line.color",
+        "value": "#D8D8D8"
+      },
       "borderWidth": 1,
       "borderColor": {
         "func": "attr@line.color",

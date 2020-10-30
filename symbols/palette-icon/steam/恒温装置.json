@@ -1,0 +1,46 @@
+{
+  "modified": "Mon Oct 26 2020 14:48:35 GMT+0800 (CST)",
+  "width": 48,
+  "height": 70,
+  "comps": [
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(0,0,0)"
+      },
+      "rect": [
+        0,
+        0,
+        48,
+        70
+      ]
+    },
+    {
+      "type": "text",
+      "text": "恒温",
+      "align": "center",
+      "vAlign": "bottom",
+      "rect": [
+        0,
+        0,
+        48,
+        35
+      ]
+    },
+    {
+      "type": "text",
+      "text": "装置",
+      "align": "center",
+      "vAlign": "top",
+      "rect": [
+        0,
+        35,
+        48,
+        35
+      ]
+    }
+  ]
+}

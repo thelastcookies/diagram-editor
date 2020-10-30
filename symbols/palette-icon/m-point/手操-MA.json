@@ -1,0 +1,94 @@
+{
+  "modified": "Thu Oct 29 2020 10:38:08 GMT+0800 (CST)",
+  "width": 76,
+  "height": 24,
+  "comps": [
+    {
+      "type": "triangle",
+      "background": "#D8D8D8",
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "#D8D8D8"
+      },
+      "borderCap": "square",
+      "borderJoin": "miter",
+      "rotation": 1.5708,
+      "rect": [
+        31.84193,
+        -0.99995,
+        24,
+        26
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderColor": "#D8D8D8",
+      "borderJoin": "miter",
+      "rect": [
+        0.84189,
+        0.00011,
+        30,
+        24
+      ]
+    },
+    {
+      "type": "rightTriangle",
+      "background": "#D8D8D8",
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "#D8D8D8"
+      },
+      "borderCap": "square",
+      "borderJoin": "miter",
+      "rotation": 3.14159,
+      "rect": [
+        34.84189,
+        0.00011,
+        26,
+        12
+      ]
+    },
+    {
+      "type": "rightTriangle",
+      "background": "#D8D8D8",
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "#D8D8D8"
+      },
+      "borderCap": "square",
+      "borderJoin": "miter",
+      "rotation": 4.71239,
+      "rect": [
+        41.84189,
+        5.00011,
+        12,
+        26
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(255,255,0)",
+      "borderWidth": 0.5,
+      "borderColor": "#979797",
+      "rect": [
+        63.15811,
+        0.00014,
+        12,
+        12
+      ]
+    },
+    {
+      "type": "text",
+      "text": "M",
+      "align": "center",
+      "font": "9px arial, sans-serif",
+      "rect": [
+        64.15811,
+        1.273,
+        10,
+        10
+      ]
+    }
+  ]
+}

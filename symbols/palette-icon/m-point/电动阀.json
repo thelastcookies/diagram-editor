@@ -1,5 +1,5 @@
 {
-  "modified": "Wed Oct 14 2020 16:22:52 GMT+0800 (CST)",
+  "modified": "Wed Oct 28 2020 18:37:53 GMT+0800 (CST)",
   "dataBindings": [
     {
       "attr": "node.type",
@@ -17,37 +17,35 @@
       "defaultValue": "rgb(255,0,0)"
     },
     {
+      "attr": "node.direction",
+      "valueType": "String",
+      "defaultValue": "up"
+    },
+    {
       "attr": "node.state",
       "valueType": "Boolean",
       "defaultValue": true,
       "name": "启用状态"
     }
   ],
-  "width": 30,
-  "height": 53.4,
+  "width": 46,
+  "height": 32,
   "comps": [
     {
       "type": "oval",
-      "background": "#B92710",
-      "borderWidth": 1,
-      "borderColor": "#B92710",
+      "background": "#D8D8D8",
+      "borderWidth": 0.1,
+      "borderColor": "rgb(0,0,0)",
+      "anchorY": 1,
+      "rotation": {
+        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'up')res=0;\nif(dir === 'right')res=90;\nif(dir === 'down')res=180;\nif(dir === 'left')res=270;\nreturn res/180*Math.PI;\n}",
+        "value": 0
+      },
       "rect": [
-        6.75,
-        1.81216,
-        16.5,
-        16.5
-      ]
-    },
-    {
-      "type": "rect",
-      "background": "#B92710",
-      "borderWidth": 1,
-      "borderColor": "#B92710",
-      "rect": [
-        14.625,
-        18.31216,
-        0.75,
-        8.45
+        8,
+        0,
+        16,
+        16
       ]
     },
     {
@@ -55,79 +53,123 @@
       "text": "M",
       "align": "center",
       "color": "rgb(255,255,255)",
+      "anchorY": 1,
       "rotation": {
-        "func": "__ht__function(data, view) {\n return 0 - data.getRotation() \n}",
-        "value": true
+        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'up')res=0;\nif(dir === 'right')res=90;\nif(dir === 'down')res=180;\nif(dir === 'left')res=270;\nreturn res/180*Math.PI;\n}",
+        "value": 0
       },
       "rect": [
-        11.08333,
-        5.85472,
-        7.83335,
-        8.41487
-      ]
-    },
-    {
-      "type": "triangle",
-      "background": "#B92710",
-      "borderWidth": 1,
-      "borderColor": {
-        "func": "attr@line.color",
-        "value": "#B92710"
-      },
-      "rotation": 4.71239,
-      "rect": [
-        16.75,
-        19.76216,
-        11.5,
-        14
-      ]
-    },
-    {
-      "type": "triangle",
-      "background": "#B92710",
-      "borderWidth": 1,
-      "borderColor": {
-        "func": "attr@line.color",
-        "value": "#B92710"
-      },
-      "rotation": 1.5708,
-      "rect": [
-        1.75,
-        19.76216,
-        11.5,
-        14
-      ]
-    },
-    {
-      "type": "oval",
-      "background": "rgba(255,255,255,0.00)",
-      "borderWidth": 2,
-      "borderColor": "#940F0F",
-      "visible": {
-        "func": "__ht__function(data, view) {\n return !data.a('node.state') \n}",
-        "value": true
-      },
-      "rect": [
-        1,
-        3,
-        28,
-        28
+        8,
+        0,
+        16,
+        16
       ]
     },
     {
       "type": "rect",
-      "background": "#940F0F",
+      "background": "rgb(255,255,0)",
+      "borderWidth": 0.5,
       "borderColor": "#979797",
-      "visible": {
-        "func": "__ht__function(data, view) {\n return !data.a('node.state') \n}",
-        "value": true
-      },
-      "rotation": 0.7854,
       "rect": [
-        13.75,
-        2.53144,
-        2.5,
-        28.93712
+        32.80275,
+        3.02714,
+        12,
+        12
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(255,0,0)",
+      "borderWidth": 0.5,
+      "borderColor": "#979797",
+      "rect": [
+        32.80275,
+        16.97286,
+        12,
+        12
+      ]
+    },
+    {
+      "type": "text",
+      "text": "M",
+      "align": "center",
+      "font": "9px arial, sans-serif",
+      "rect": [
+        33.80275,
+        4.3,
+        10,
+        10
+      ]
+    },
+    {
+      "type": "text",
+      "text": "E",
+      "align": "center",
+      "font": "9px arial, sans-serif",
+      "rect": [
+        33.80275,
+        18.39233,
+        10,
+        10
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 0.1,
+      "borderColor": "rgb(0,0,0)",
+      "anchorY": 0,
+      "rotation": {
+        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'up')res=0;\nif(dir === 'right')res=90;\nif(dir === 'down')res=180;\nif(dir === 'left')res=270;\nreturn res/180*Math.PI;\n}",
+        "value": 0
+      },
+      "rect": [
+        15.625,
+        16,
+        0.75,
+        6.95
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "#D8D8D8",
+      "borderWidth": 0.1,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(0,0,0)"
+      },
+      "anchorX": 1.10435,
+      "anchorY": 0,
+      "rotation": {
+        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'up')res=270;\nif(dir === 'right')res=0;\nif(dir === 'down')res=90;\nif(dir === 'left')res=180;\nreturn res/180*Math.PI;\n}",
+        "value": 4.71239
+      },
+      "rect": [
+        3.30003,
+        16,
+        11.5,
+        15
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "#D8D8D8",
+      "borderWidth": 0.1,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(0,0,0)"
+      },
+      "anchorX": -0.10435,
+      "anchorY": 0,
+      "rotation": {
+        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'up')res=90;\nif(dir === 'right')res=180;\nif(dir === 'down')res=270;\nif(dir === 'left')res=0;\nreturn res/180*Math.PI;\n}",
+        "value": 1.5708
+      },
+      "rect": [
+        17.20003,
+        16,
+        11.5,
+        15
       ]
     }
   ]

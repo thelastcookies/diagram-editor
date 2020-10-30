@@ -1,5 +1,5 @@
 {
-  "modified": "Thu Oct 22 2020 10:28:07 GMT+0800 (CST)",
+  "modified": "Mon Oct 26 2020 11:26:29 GMT+0800 (CST)",
   "dataBindings": [
     {
       "attr": "node.type",
@@ -19,12 +19,12 @@
     {
       "attr": "node.state",
       "valueType": "Boolean",
-      "defaultValue": true,
+      "defaultValue": false,
       "name": "开关状态"
     }
   ],
   "width": 10,
-  "height": 35,
+  "height": 40,
   "comps": [
     {
       "type": "shape",
@@ -35,7 +35,7 @@
       },
       "points": [
         5,
-        10,
+        12.5,
         5,
         0
       ]
@@ -50,9 +50,9 @@
       "rotation": 0.7854,
       "points": [
         5,
-        14,
+        18.5,
         5,
-        6
+        6.5
       ]
     },
     {
@@ -65,9 +65,9 @@
       "rotation": 2.35619,
       "points": [
         5,
-        14,
+        18.5,
         5,
-        6
+        6.5
       ]
     },
     {
@@ -79,9 +79,9 @@
       },
       "points": [
         5,
-        35,
+        40,
         5,
-        25
+        30
       ]
     },
     {
@@ -99,9 +99,9 @@
       },
       "points": [
         5,
-        25,
+        30,
         5,
-        10
+        12.5
       ]
     }
   ]

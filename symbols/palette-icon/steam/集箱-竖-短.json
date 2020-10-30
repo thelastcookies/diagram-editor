@@ -1,0 +1,147 @@
+{
+  "modified": "Thu Oct 29 2020 09:35:08 GMT+0800 (CST)",
+  "width": 45,
+  "height": 260,
+  "dataBindings": [
+    {
+      "attr": "node.label",
+      "valueType": "String",
+      "defaultValue": "一级喷水器减温器"
+    }
+  ],
+  "comps": [
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "gradient": "spread.horizontal",
+      "rect": [
+        0,
+        0,
+        45,
+        260
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "__ht__function(data, view) {\n return data.a('node.label').substr(0, 1) \n}",
+        "value": "一"
+      },
+      "align": "center",
+      "font": "26px arial, sans-serif",
+      "rect": [
+        7.5,
+        10,
+        30,
+        30
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "__ht__function(data, view) {\n return data.a('node.label').substr(1, 1) \n}",
+        "value": "级"
+      },
+      "align": "center",
+      "font": "26px arial, sans-serif",
+      "rect": [
+        7.5,
+        40,
+        30,
+        30
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "__ht__function(data, view) {\n return data.a('node.label').substr(2, 1) \n}",
+        "value": "喷"
+      },
+      "align": "center",
+      "font": "26px arial, sans-serif",
+      "rect": [
+        7.5,
+        70,
+        30,
+        30
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "__ht__function(data, view) {\n return data.a('node.label').substr(3, 1) \n}",
+        "value": "水"
+      },
+      "align": "center",
+      "font": "26px arial, sans-serif",
+      "rect": [
+        7.5,
+        100,
+        30,
+        30
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "__ht__function(data, view) {\n return data.a('node.label').substr(4, 1) \n}",
+        "value": "减"
+      },
+      "align": "center",
+      "font": "26px arial, sans-serif",
+      "rect": [
+        7.5,
+        130,
+        30,
+        30
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "__ht__function(data, view) {\n return data.a('node.label').substr(5, 1) \n}",
+        "value": "温"
+      },
+      "align": "center",
+      "font": "26px arial, sans-serif",
+      "rect": [
+        7.5,
+        160,
+        30,
+        30
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "__ht__function(data, view) {\n return data.a('node.label').substr(6, 1) \n}",
+        "value": "器"
+      },
+      "align": "center",
+      "font": "26px arial, sans-serif",
+      "rect": [
+        7.5,
+        190,
+        30,
+        30
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "__ht__function(data, view) {\n return data.a('node.label').substr(7, 1) \n}",
+        "value": ""
+      },
+      "align": "center",
+      "font": "26px arial, sans-serif",
+      "rect": [
+        7.5,
+        220,
+        30,
+        30
+      ]
+    }
+  ]
+}

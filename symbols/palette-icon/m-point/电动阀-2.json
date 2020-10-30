@@ -1,0 +1,216 @@
+{
+  "modified": "Wed Oct 28 2020 18:40:13 GMT+0800 (CST)",
+  "dataBindings": [
+    {
+      "attr": "node.type",
+      "valueType": "String",
+      "defaultValue": "m-point"
+    },
+    {
+      "attr": "node.name",
+      "valueType": "String",
+      "defaultValue": "m-value"
+    },
+    {
+      "attr": "node.color",
+      "valueType": "Color",
+      "defaultValue": "rgb(255,0,0)"
+    },
+    {
+      "attr": "node.direction",
+      "valueType": "String",
+      "defaultValue": "up"
+    },
+    {
+      "attr": "node.state",
+      "valueType": "Boolean",
+      "defaultValue": true,
+      "name": "启用状态"
+    }
+  ],
+  "width": 46,
+  "height": 32,
+  "comps": [
+    {
+      "type": "rect",
+      "background": "rgb(255,255,0)",
+      "borderWidth": 0.5,
+      "borderColor": "#979797",
+      "rect": [
+        32.80275,
+        3.02714,
+        12,
+        12
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(255,0,0)",
+      "borderWidth": 0.5,
+      "borderColor": "#979797",
+      "rect": [
+        32.80275,
+        16.97286,
+        12,
+        12
+      ]
+    },
+    {
+      "type": "text",
+      "text": "M",
+      "align": "center",
+      "font": "9px arial, sans-serif",
+      "rect": [
+        33.80275,
+        4.3,
+        10,
+        10
+      ]
+    },
+    {
+      "type": "text",
+      "text": "E",
+      "align": "center",
+      "font": "9px arial, sans-serif",
+      "rect": [
+        33.80275,
+        18.39233,
+        10,
+        10
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "#D8D8D8",
+      "borderWidth": 0.1,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(0,0,0)"
+      },
+      "anchorX": 1.10435,
+      "anchorY": 0,
+      "rotation": {
+        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'up')res=270;\nif(dir === 'right')res=0;\nif(dir === 'down')res=90;\nif(dir === 'left')res=180;\nreturn res/180*Math.PI;\n}",
+        "value": 4.71239
+      },
+      "rect": [
+        3.30004,
+        16,
+        11.5,
+        15
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "#D8D8D8",
+      "borderWidth": 0.1,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(0,0,0)"
+      },
+      "anchorX": -0.10402,
+      "anchorY": 0,
+      "rotation": {
+        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'up')res=90;\nif(dir === 'right')res=180;\nif(dir === 'down')res=270;\nif(dir === 'left')res=0;\nreturn res/180*Math.PI;\n}",
+        "value": 1.5708
+      },
+      "rect": [
+        17.19623,
+        16,
+        11.5,
+        15
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "#D8D8D8",
+      "borderWidth": 0.1,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(0,0,0)"
+      },
+      "anchorY": 1.20919,
+      "rotation": {
+        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'up')res=180;\nif(dir === 'right')res=270;\nif(dir === 'down')res=0;\nif(dir === 'left')res=90;\nreturn res/180*Math.PI;\n}",
+        "value": 3.14159
+      },
+      "rect": [
+        0.99996,
+        9.06714,
+        30,
+        5.75
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "#D8D8D8",
+      "borderWidth": 0.1,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(0,0,0)"
+      },
+      "anchorY": -1.20919,
+      "rotation": {
+        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'up')res=0;\nif(dir === 'right')res=90;\nif(dir === 'down')res=180;\nif(dir === 'left')res=270;\nreturn res/180*Math.PI;\n}",
+        "value": 0
+      },
+      "rect": [
+        0.99996,
+        22.97286,
+        30,
+        5.75
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 0.1,
+      "borderColor": "rgb(0,0,0)",
+      "anchorY": 0,
+      "rotation": {
+        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'up')res=0;\nif(dir === 'right')res=90;\nif(dir === 'down')res=180;\nif(dir === 'left')res=270;\nreturn res/180*Math.PI;\n}",
+        "value": 0
+      },
+      "rect": [
+        15.625,
+        16,
+        0.75,
+        1.19617
+      ]
+    },
+    {
+      "type": "oval",
+      "background": "#D8D8D8",
+      "borderWidth": 0.1,
+      "borderColor": "rgb(0,0,0)",
+      "anchorY": 1,
+      "rotation": {
+        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'up')res=0;\nif(dir === 'right')res=90;\nif(dir === 'down')res=180;\nif(dir === 'left')res=270;\nreturn res/180*Math.PI;\n}",
+        "value": 0
+      },
+      "rect": [
+        8,
+        0,
+        16,
+        16
+      ]
+    },
+    {
+      "type": "text",
+      "text": "M",
+      "align": "center",
+      "color": "rgb(255,255,255)",
+      "anchorY": 1,
+      "rotation": {
+        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'up')res=0;\nif(dir === 'right')res=90;\nif(dir === 'down')res=180;\nif(dir === 'left')res=270;\nreturn res/180*Math.PI;\n}",
+        "value": 0
+      },
+      "rect": [
+        8,
+        0,
+        16,
+        16
+      ]
+    }
+  ]
+}

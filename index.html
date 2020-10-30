@@ -26,6 +26,23 @@
     <script src="lib/plugin/ht-historymanager.js"></script>
     <script src="lib/plugin/ht-xeditinteractor.js"></script>
 
+    <script src="lib/plugin/ht-animation.js"></script>
+    <script src="lib/plugin/ht-astar.js"></script>
+    <script src="lib/plugin/ht-autolayout.js"></script>
+    <script src="lib/plugin/ht-dashflow.js"></script>
+    <script src="lib/plugin/ht-flow.js"></script>
+    <script src="lib/plugin/ht-forcelayout.js"></script>
+    <script src="lib/plugin/ht-htmlnode.js"></script>
+    <script src="lib/plugin/ht-live.js"></script>
+    <script src="lib/plugin/ht-menu.js"></script>
+    <script src="lib/plugin/ht-modeling.js"></script>
+    <script src="lib/plugin/ht-obj.js"></script>
+    <script src="lib/plugin/ht-overview.js"></script>
+    <script src="lib/plugin/ht-panel.js"></script>
+    <script src="lib/plugin/ht-quickfinder.js"></script>
+    <script src="lib/plugin/ht-telecom.js"></script>
+    <script src="lib/plugin/ht-webview3d.js"></script>
+
     <!--“连线”交互器-->
     <script src="js/CreateEdgeInteractor.js"></script>
     <!--“不规则图形”交互器-->
@@ -341,7 +358,7 @@
                 if (data instanceof ht.Node) {// node 类型
                     if (data.a('node.type') === 'm-point') {
                         propertyView.addProperties(m_point_properties);
-                        propertyView.addProperties(threshold_properties);
+                        // propertyView.addProperties(threshold_properties);
                     }
                     if (data.a('node.name') === 'bar') {
                         propertyView.addProperties(zt_properties);
@@ -349,11 +366,20 @@
                     if (data.a('node.name') === 'bus') {
                         propertyView.addProperties(bus_properties);
                     }
-                    if (data.a('node.name') === 'heater') {
-                        propertyView.addProperties(heater_properties);
-                    }
+                    // if (data.a('node.name') === 'heater') {
+                    //     propertyView.addProperties(heater_properties);
+                    // }
                     if (data.a('line.color')) {
                         propertyView.addProperties(node_color_properties);
+                    }
+                    if (data.a('node.label')) {
+                        propertyView.addProperties(label_properties);
+                    }
+                    if (data.a('node.unit')) {
+                        propertyView.addProperties(unit_properties);
+                    }
+                    if (data.a('node.direction')) {
+                        propertyView.addProperties(direction_properties);
                     }
                     propertyView.addProperties(node_properties);
 

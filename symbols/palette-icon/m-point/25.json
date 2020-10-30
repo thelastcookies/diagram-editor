@@ -1,0 +1,105 @@
+{
+  "modified": "Fri Oct 30 2020 14:12:04 GMT+0800 (CST)",
+  "dataBindings": [
+    {
+      "attr": "node.type",
+      "valueType": "String",
+      "defaultValue": "m-point"
+    },
+    {
+      "attr": "node.name",
+      "valueType": "String",
+      "defaultValue": "25"
+    },
+    {
+      "attr": "node.color",
+      "valueType": "Color",
+      "defaultValue": "rgb(255,0,0)"
+    },
+    {
+      "attr": "node.state",
+      "valueType": "Boolean",
+      "defaultValue": false,
+      "name": "告警状态"
+    }
+  ],
+  "width": 40,
+  "height": 74,
+  "comps": [
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderJoin": "miter",
+      "gradient": "spread.horizontal",
+      "borderWidthAbsolute": true,
+      "rect": [
+        0.75,
+        21.4,
+        38.5,
+        51.2
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderJoin": "miter",
+      "gradient": "spread.horizontal",
+      "borderWidthAbsolute": true,
+      "rect": [
+        16,
+        9.4,
+        8,
+        12
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderJoin": "miter",
+      "gradient": "spread.horizontal",
+      "borderWidthAbsolute": true,
+      "rect": [
+        8,
+        5.4,
+        24,
+        4
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderJoin": "miter",
+      "gradient": "spread.horizontal",
+      "borderWidthAbsolute": true,
+      "rect": [
+        4,
+        1.4,
+        32,
+        4
+      ]
+    },
+    {
+      "type": "oval",
+      "background": {
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : 'rgb(0,255,0)';\n}",
+        "value": "rgb(0,255,0)"
+      },
+      "borderWidth": 0.2,
+      "borderColor": "rgb(0,0,0)",
+      "rect": [
+        4,
+        31,
+        32,
+        32
+      ]
+    }
+  ]
+}

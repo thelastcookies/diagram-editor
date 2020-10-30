@@ -1,14 +1,24 @@
 {
   "modified": "Thu Oct 22 2020 11:44:07 GMT+0800 (CST)",
+  "dataBindings": [
+    {
+      "attr": "line.color",
+      "valueType": "Color",
+      "defaultValue": "#009A3D"
+    }
+  ],
   "width": 14,
   "height": 14,
   "comps": [
     {
       "type": "triangle",
-      "background": "#009A3D",
+      "background":  {
+        "func": "attr@line.color",
+        "value": "#009A3D"
+      },
       "borderColor": {
         "func": "attr@line.color",
-        "value": "#D8D8D8"
+        "value": "#009A3D"
       },
       "rotation": 1.5708,
       "rect": [

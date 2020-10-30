@@ -1,0 +1,140 @@
+{
+  "modified": "Thu Oct 29 2020 10:58:28 GMT+0800 (CST)",
+  "width": 890,
+  "height": 258,
+  "comps": [
+    {
+      "type": "trapezoid",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderJoin": "miter",
+      "gradient": "spread.horizontal",
+      "borderWidthAbsolute": true,
+      "rotation": 4.71239,
+      "rect": [
+        93,
+        0,
+        258,
+        258
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderJoin": "miter",
+      "gradient": "spread.vertical",
+      "borderWidthAbsolute": true,
+      "rect": [
+        0,
+        118,
+        93,
+        22
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderJoin": "miter",
+      "borderWidthAbsolute": true,
+      "rect": [
+        24.5,
+        107,
+        44,
+        44
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderJoin": "miter",
+      "gradient": "spread.vertical",
+      "borderWidthAbsolute": true,
+      "rect": [
+        351,
+        118,
+        93,
+        22
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderJoin": "miter",
+      "borderWidthAbsolute": true,
+      "rect": [
+        375.5,
+        107,
+        44,
+        44
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderJoin": "miter",
+      "borderWidthAbsolute": true,
+      "rect": [
+        444.5073,
+        123.5,
+        92.4927,
+        11
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderJoin": "miter",
+      "gradient": "spread.vertical",
+      "borderWidthAbsolute": true,
+      "rect": [
+        537,
+        118,
+        76,
+        22
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderJoin": "miter",
+      "gradient": "spread.vertical",
+      "borderWidthAbsolute": true,
+      "rect": [
+        809,
+        118,
+        81,
+        22
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderJoin": "miter",
+      "gradient": "spread.vertical",
+      "borderWidthAbsolute": true,
+      "rect": [
+        613,
+        58,
+        196,
+        142
+      ]
+    }
+  ]
+}

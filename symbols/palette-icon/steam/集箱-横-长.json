@@ -1,0 +1,42 @@
+{
+  "modified": "Tue Oct 27 2020 17:10:00 GMT+0800 (CST)",
+  "width": 585,
+  "height": 45,
+  "dataBindings": [
+    {
+      "attr": "node.label",
+      "valueType": "String",
+      "defaultValue": "集箱"
+    }
+  ],
+  "comps": [
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "gradient": "spread.vertical",
+      "rect": [
+        0,
+        0,
+        585,
+        45
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "__ht__function(data, view) {\n return data.a('node.label') \n}",
+        "value": true
+      },
+      "align": "center",
+      "font": "26px arial, sans-serif",
+      "rect": [
+        277.5,
+        7.5,
+        30,
+        30
+      ]
+    }
+  ]
+}

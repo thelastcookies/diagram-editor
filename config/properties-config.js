@@ -109,14 +109,7 @@ data_properties = [// 所有的节点都有的属性
     //     valueType: 'text',
     //     editable: true// 设置该属性是否可编辑
     // },
-    {
-        name: 'parent',
-        displayName: '父亲节点',
-    },
-    {
-        name: 'host',
-        displayName: '宿主节点',
-    },
+
 
     // {
     //     name: '2d.editable',// 结合 accessType，则通过 node.s('2d.editable') 获取和设置该属性
@@ -134,60 +127,7 @@ data_properties = [// 所有的节点都有的属性
     // },
 ];
 
-zt_properties = [
-    {
-        name: 'label.opacity',
-        displayName: '柱形图标签',
-        accessType: 'style',
-        valueType: 'boolean',
-        editable: true,
-        defaultValue: false
-    },
-    {
-        name: 'label',
-        displayName: '柱形图标签',
-        accessType: 'style',
-        valueType: 'text',
-        editable: true,
-        defaultValue: 0
-    },
-    {
-        name: 'label.position',
-        displayName: '柱形图标签位置',
-        accessType: 'style',
-        editable: true,
-        defaultValue: "上",
-        enum: {
-            labels: ["上", "下", "左", "右"],
-            values: [3, 31, 14, 20]
-        }
-    },
-    {
-        name: 'zt.min',
-        displayName: '柱形图最小值',
-        accessType: 'attr',
-        editable: true,
-        valueType: 'number',
-    },
-    {
-        name: 'zt.max',
-        displayName: '柱形图最大值',
-        accessType: 'attr',
-        editable: true,
-        valueType: 'number',
-    },
-    {
-        name: 'zt.dirt',
-        displayName: '柱状图朝向',
-        accessType: 'attr',
-        editable: true,
-        defaultValue: "从下到上",
-        enum: {
-            labels: ["从下到上", "从上到下"],
-            values: ["top", "bottom"]
-        }
-    }
-];
+
 
 threshold_properties = [// 节点的阈值属性设置
      {
@@ -236,6 +176,16 @@ threshold_properties = [// 节点的阈值属性设置
 ];
 
 node_properties = [// node 节点的属性
+    {
+        categoryName: '节点属性',
+        name: 'parent',
+        displayName: '父亲节点',
+    },
+    {
+        categoryName: '节点属性',
+        name: 'host',
+        displayName: '宿主节点',
+    },
     {
         categoryName: '节点属性',
         displayName: '宽度',
@@ -488,6 +438,34 @@ edge_properties = [// 连线的属性
         accessType: 'style',
         valueType: 'number',
         editable: true
+    },
+    {
+        name: 'edge.dash',
+        displayName: '虚线',
+        accessType: 'style',
+        valueType: 'boolean',
+        defaultValue: true,
+        editable: true
+    },
+    {
+        // name: 'edge.dash.pattern',
+        displayName: '虚线间隔',
+        accessType: 'style',
+        editable: true,
+        getValue: function(data){
+            return data.s('edge.dash.pattern');
+        },
+        setValue: function(data, property, value, view){
+            data.s('edge.dash.pattern', value.split(","));
+        },
+    },
+    {
+        name: 'edge.dash.color',
+        displayName: '虚线间隔颜色',
+        accessType: 'style',
+        valueType: 'color',
+        defaultValue: 'rgb(0, 0, 0)',
+        editable: true
     }
 ];
 
@@ -504,6 +482,34 @@ shape_properties = [// 折线的属性
         displayName: '折线宽度',
         accessType: 'style',
         valueType: 'number',
+        editable: true
+    },
+    {
+        name: 'shape.dash',
+        displayName: '虚线',
+        accessType: 'style',
+        valueType: 'boolean',
+        defaultValue: true,
+        editable: true
+    },
+    {
+        name: 'shape.dash.pattern',
+        displayName: '虚线间隔',
+        accessType: 'style',
+        editable: true,
+        getValue: function(data){
+            return data.s('shape.dash.pattern');
+        },
+        setValue: function(data, property, value, view){
+            data.s('shape.dash.pattern', value.split(","));
+        },
+    },
+    {
+        name: 'shape.dash.color',
+        displayName: '虚线间隔颜色',
+        accessType: 'style',
+        valueType: 'color',
+        defaultValue: 'rgb(0, 0, 0)',
         editable: true
     }
 ];
@@ -553,7 +559,7 @@ m_point_properties = [//测点图元的配置项
     // },
     // {
     //     name: 'label',
-    //     displayName: '柱形图标签',
+    //     displayName: '进度条标签',
     //     accessType: 'style',
     //     valueType: 'text',
     //     editable: true,
@@ -561,7 +567,7 @@ m_point_properties = [//测点图元的配置项
     // },
     // {
     //     name: 'label.position',
-    //     displayName: '柱形图标签位置',
+    //     displayName: '进度条标签位置',
     //     accessType: 'style',
     //     editable: true,
     //     defaultValue: "上",
@@ -571,13 +577,95 @@ m_point_properties = [//测点图元的配置项
     //     }
     // },
 ];
-heater_properties = [//普通图元的初始颜色配置
+// 进度条的设置
+zt_properties = [
+    // {
+    //     name: 'label.opacity',
+    //     displayName: '进度条标签',
+    //     accessType: 'style',
+    //     valueType: 'boolean',
+    //     editable: true,
+    //     defaultValue: false
+    // },
+    // {
+    //     name: 'label',
+    //     displayName: '进度条标签',
+    //     accessType: 'style',
+    //     valueType: 'text',
+    //     editable: true,
+    //     defaultValue: 0
+    // },
+    // {
+    //     name: 'label.position',
+    //     displayName: '进度条标签位置',
+    //     accessType: 'style',
+    //     editable: true,
+    //     defaultValue: "上",
+    //     enum: {
+    //         labels: ["上", "下", "左", "右"],
+    //         values: [3, 31, 14, 20]
+    //     }
+    // },
+    {
+        name: 'zt.min',
+        displayName: '进度条最小值',
+        accessType: 'attr',
+        editable: true,
+        valueType: 'number',
+    },
+    {
+        name: 'zt.max',
+        displayName: '进度条最大值',
+        accessType: 'attr',
+        editable: true,
+        valueType: 'number',
+    },
+    {
+        name: 'zt.dirt',
+        displayName: '进度条朝向',
+        accessType: 'attr',
+        editable: true,
+        defaultValue: "top",
+        enum: {
+            labels: ["从下到上", "从上到下"],
+            values: ["top", "bottom"]
+        }
+    }
+];
+// 图元中含有 label 的设置
+label_properties = [
     {
         name: 'node.label',
         displayName: '模板Label',
         accessType: 'attr',
         valueType: 'text',
         editable: true,
-        defaultValue: '过热器'
+        defaultValue: ''
+    }
+];
+// 部分图元中含有 单位 的设置
+unit_properties = [
+    {
+        name: 'node.unit',
+        displayName: '单位',
+        accessType: 'attr',
+        valueType: 'text',
+        editable: true,
+        defaultValue: 'unit'
+    }
+];
+// 部分图元的朝向设置
+direction_properties = [
+    {
+        name: 'node.direction',
+        displayName: '组件朝向',
+        accessType: 'attr',
+        valueType: 'text',
+        editable: true,
+        enum: {
+            labels: ["向上", "向右", "向下", "向左"],
+            values: ["up", "right", "down", "left"]
+        },
+        defaultValue: 'up'
     }
 ];

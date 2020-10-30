@@ -1,5 +1,13 @@
 {
   "modified": "Fri Oct 23 2020 15:26:30 GMT+0800 (CST)",
+  "dataBindings": [
+    {
+      "attr": "node.label",
+      "valueType": "String",
+      "defaultValue": "1",
+      "name": "数据值"
+    }
+  ],
   "width": 30,
   "height": 30,
   "comps": [
@@ -32,10 +40,7 @@
     },
     {
       "type": "shape",
-      "borderWidth": {
-        "func": "attr@node.width",
-        "value": 1
-      },
+      "borderWidth": 1,
       "borderColor": {
         "func": "attr@line.color",
         "value": "rgb(0,0,0)"
@@ -57,7 +62,10 @@
     },
     {
       "type": "text",
-      "text": "1",
+      "text": {
+        "func": "__ht__function(data, view) {\n return data.a('node.label');\n}",
+        "value": "unit"
+      },
       "align": "center",
       "rect": [
         9.99998,

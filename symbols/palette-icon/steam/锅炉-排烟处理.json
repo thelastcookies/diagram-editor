@@ -1,0 +1,27 @@
+{
+  "modified": "Fri Oct 30 2020 16:41:16 GMT+0800 (CST)",
+  "width": 738,
+  "height": 876,
+  "comps": [
+    {
+      "type": "shape",
+      "borderWidth": 20,
+      "borderColor": "#FEB64D",
+      "closePath": true,
+      "points": [
+        0,
+        0,
+        738,
+        0,
+        738,
+        876,
+        416.44286,
+        876,
+        416.44286,
+        84.32048,
+        0,
+        84.32048
+      ]
+    }
+  ]
+}

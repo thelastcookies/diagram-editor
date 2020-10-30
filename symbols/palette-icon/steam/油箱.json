@@ -1,0 +1,22 @@
+{
+  "modified": "Fri Oct 30 2020 14:33:06 GMT+0800 (CST)",
+  "width": 162,
+  "height": 126,
+  "comps": [
+    {
+      "type": "rect",
+      "background": "rgb(90,90,90)",
+      "borderWidth": 2,
+      "borderColor": "#979797",
+      "border3d": true,
+      "border3dColor": "#D8D8D8",
+      "borderWidthAbsolute": true,
+      "rect": [
+        0,
+        0,
+        162,
+        126
+      ]
+    }
+  ]
+}

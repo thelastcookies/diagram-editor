@@ -1,0 +1,103 @@
+{
+  "modified": "Wed Oct 28 2020 16:47:43 GMT+0800 (CST)",
+  "dataBindings": [
+    {
+      "attr": "node.type",
+      "valueType": "String",
+      "defaultValue": "m-point"
+    },
+    {
+      "attr": "node.name",
+      "valueType": "String",
+      "defaultValue": "m-value"
+    },
+    {
+      "attr": "node.color",
+      "valueType": "Color",
+      "defaultValue": "rgb(255,0,0)"
+    },
+    {
+      "attr": "node.state",
+      "valueType": "Boolean",
+      "defaultValue": true,
+      "name": "启用状态"
+    }
+  ],
+  "width": 48,
+  "height": 32,
+  "comps": [
+    {
+      "type": "oval",
+      "background": "rgba(0,158,61,0.8)",
+      "borderWidth": 2,
+      "borderColor": "#009A3D",
+      "rect": [
+        1.51208,
+        1,
+        30,
+        30
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(255,255,0)",
+      "borderWidth": 0.5,
+      "borderColor": "#979797",
+      "rect": [
+        34.48792,
+        3.02714,
+        12,
+        12
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(255,0,0)",
+      "borderWidth": 0.5,
+      "borderColor": "#979797",
+      "rect": [
+        34.48792,
+        16.97286,
+        12,
+        12
+      ]
+    },
+    {
+      "type": "text",
+      "text": "M",
+      "align": "center",
+      "font": "9px arial, sans-serif",
+      "rect": [
+        35.48792,
+        4.3,
+        10,
+        10
+      ]
+    },
+    {
+      "type": "text",
+      "text": "E",
+      "align": "center",
+      "font": "9px arial, sans-serif",
+      "rect": [
+        35.48792,
+        18.39233,
+        10,
+        10
+      ]
+    },
+    {
+      "type": "text",
+      "text": "M",
+      "align": "center",
+      "color": "rgb(255,255,255)",
+      "font": "18px arial, sans-serif",
+      "rect": [
+        11.51208,
+        11,
+        10,
+        10
+      ]
+    }
+  ]
+}

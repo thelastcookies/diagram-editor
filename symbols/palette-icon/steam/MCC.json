@@ -1,0 +1,222 @@
+{
+  "modified": "Mon Oct 26 2020 16:23:21 GMT+0800 (CST)",
+  "width": 72,
+  "height": 42,
+  "comps": [
+    {
+      "type": "shape",
+      "borderWidth": 3,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(49,210,235)"
+      },
+      "borderCap": "round",
+      "visible": {
+        "func": "attr@state",
+        "value": true
+      },
+      "displayName": "",
+      "rotation": 1.5708,
+      "points": [
+        36,
+        77,
+        36,
+        5
+      ]
+    },
+    {
+      "type": "triangle",
+      "borderWidth": 3,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "#32D3EB"
+      },
+      "rect": [
+        12,
+        1.17066,
+        18,
+        12
+      ]
+    },
+    {
+      "type": "triangle",
+      "borderWidth": 3,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "#32D3EB"
+      },
+      "rect": [
+        42,
+        1.17066,
+        18,
+        12
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(49,210,235)"
+      },
+      "borderCap": "round",
+      "visible": {
+        "func": "attr@state",
+        "value": true
+      },
+      "displayName": "",
+      "anchorX": 0,
+      "anchorY": 0,
+      "points": [
+        21,
+        23.17066,
+        21,
+        13.17066
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(49,210,235)"
+      },
+      "borderCap": "round",
+      "visible": {
+        "func": "attr@state",
+        "value": true
+      },
+      "displayName": "",
+      "anchorX": 0,
+      "anchorY": 0,
+      "points": [
+        51,
+        23.17066,
+        51,
+        13.17066
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 3,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(49,210,235)"
+      },
+      "borderCap": "round",
+      "visible": {
+        "func": "attr@state",
+        "value": true
+      },
+      "displayName": "",
+      "anchorX": 0,
+      "anchorY": 0,
+      "points": [
+        8,
+        41,
+        8,
+        27
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 3,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(49,210,235)"
+      },
+      "borderCap": "round",
+      "visible": {
+        "func": "attr@state",
+        "value": true
+      },
+      "displayName": "",
+      "anchorX": 0,
+      "anchorY": 0,
+      "points": [
+        64,
+        41,
+        64,
+        27
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 3,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(49,210,235)"
+      },
+      "borderCap": "round",
+      "visible": {
+        "func": "attr@state",
+        "value": true
+      },
+      "displayName": "",
+      "anchorX": 0,
+      "anchorY": 0,
+      "points": [
+        8,
+        27,
+        21,
+        13.17066
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 3,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(49,210,235)"
+      },
+      "borderCap": "round",
+      "visible": {
+        "func": "attr@state",
+        "value": true
+      },
+      "displayName": "",
+      "anchorX": 0,
+      "anchorY": 0,
+      "points": [
+        64,
+        27,
+        51,
+        13.17066
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(49,210,235)"
+      },
+      "borderCap": "round",
+      "visible": {
+        "func": "attr@state",
+        "value": true
+      },
+      "displayName": "",
+      "anchorX": 0,
+      "anchorY": 0,
+      "points": [
+        36,
+        41,
+        36,
+        21
+      ]
+    },
+    {
+      "type": "oval",
+      "background": "#32D3EB",
+      "borderWidth": 3,
+      "borderColor": "#32D3EB",
+      "rect": [
+        30,
+        25.87645,
+        12,
+        8
+      ]
+    }
+  ]
+}

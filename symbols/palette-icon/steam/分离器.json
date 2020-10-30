@@ -1,0 +1,122 @@
+{
+  "modified": "Fri Oct 30 2020 17:26:46 GMT+0800 (CST)",
+  "width": 84,
+  "height": 240,
+  "comps": [
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderJoin": "miter",
+      "gradient": "spread.horizontal",
+      "borderWidthAbsolute": true,
+      "rect": [
+        0,
+        54,
+        84,
+        120
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderJoin": "miter",
+      "gradient": "spread.horizontal",
+      "borderWidthAbsolute": true,
+      "rect": [
+        15,
+        39,
+        54,
+        15
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderJoin": "miter",
+      "gradient": "spread.horizontal",
+      "borderWidthAbsolute": true,
+      "rect": [
+        33,
+        0,
+        18,
+        39
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderJoin": "miter",
+      "gradient": "spread.horizontal",
+      "borderWidthAbsolute": true,
+      "rect": [
+        33,
+        204,
+        18,
+        36
+      ]
+    },
+    {
+      "type": "shape",
+      "background": "rgb(217,217,217)",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "gradient": "spread.horizontal",
+      "borderWidthAbsolute": true,
+      "closePath": true,
+      "points": [
+        15,
+        174,
+        69,
+        174,
+        50.96144,
+        204,
+        32.98503,
+        204
+      ]
+    },
+    {
+      "type": "text",
+      "text": "分",
+      "align": "center",
+      "font": "16px arial, sans-serif",
+      "rect": [
+        32,
+        91.86206,
+        20,
+        20
+      ]
+    },
+    {
+      "type": "text",
+      "text": "离",
+      "align": "center",
+      "font": "16px arial, sans-serif",
+      "rect": [
+        32,
+        109.43103,
+        20,
+        20
+      ]
+    },
+    {
+      "type": "text",
+      "text": "器",
+      "align": "center",
+      "font": "16px arial, sans-serif",
+      "rect": [
+        32,
+        127,
+        20,
+        20
+      ]
+    }
+  ]
+}
