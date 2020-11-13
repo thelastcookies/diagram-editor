@@ -1,0 +1,67 @@
+{
+  "modified": "Tue Nov 03 2020 18:27:32 GMT+0800 (CST)",
+  "width": 220,
+  "height": 156,
+  "comps": [
+    {
+      "type": "rect",
+      "background": "rgb(0,0,0)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rect": [
+        64,
+        0,
+        9,
+        155
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(0,0,0)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rect": [
+        32,
+        138.05051,
+        64,
+        9
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(0,0,0)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rect": [
+        0,
+        27.4,
+        64,
+        9
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(0,0,0)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rect": [
+        73,
+        50,
+        137,
+        9
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(0,0,0)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rect": [
+        210,
+        0,
+        9,
+        155
+      ]
+    }
+  ]
+}

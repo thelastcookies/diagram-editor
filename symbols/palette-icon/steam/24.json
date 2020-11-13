@@ -1,15 +1,19 @@
 {
   "modified": "Fri Oct 23 2020 09:58:20 GMT+0800 (CST)",
+  "dataBindings": [
+    {
+      "attr": "line.color",
+      "valueType": "Color",
+      "defaultValue": "#009A3D"
+    }
+  ],
   "width": 47,
   "height": 28,
   "comps": [
     {
       "type": "shape",
       "borderWidth": 2,
-      "borderColor": {
-        "func": "attr@line.color",
-        "value": "#D8D8D8"
-      },
+      "borderColor": "#D8D8D8",
       "points": [
         1.43669,
         26.36,
@@ -20,10 +24,7 @@
     {
       "type": "shape",
       "borderWidth": 2,
-      "borderColor": {
-        "func": "attr@line.color",
-        "value": "#D8D8D8"
-      },
+      "borderColor": "#D8D8D8",
       "points": [
         45.5,
         26.36,
@@ -34,10 +35,7 @@
     {
       "type": "shape",
       "borderWidth": 2,
-      "borderColor": {
-        "func": "attr@line.color",
-        "value": "#D8D8D8"
-      },
+      "borderColor": "#D8D8D8",
       "points": [
         46,
         25.34923,

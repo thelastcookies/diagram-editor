@@ -1,0 +1,367 @@
+{
+  "modified": "Thu Nov 05 2020 16:16:19 GMT+0800 (CST)",
+  "width": 416,
+  "height": 54,
+  "comps": [
+    {
+      "type": "shape",
+      "borderWidth": 5,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "#D8D8D8"
+      },
+      "borderWidthAbsolute": true,
+      "points": [
+        1.00528,
+        53,
+        1.06516,
+        0
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 5,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "#D8D8D8"
+      },
+      "borderWidthAbsolute": true,
+      "points": [
+        416,
+        53,
+        0,
+        53
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 5,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "#009A3D"
+      },
+      "borderWidthAbsolute": true,
+      "points": [
+        65.02352,
+        13.49995,
+        33.02352,
+        13.49996
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 5,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "#D8D8D8"
+      },
+      "borderWidthAbsolute": true,
+      "points": [
+        414.99194,
+        54,
+        415.05182,
+        1
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 5,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "#009A3D"
+      },
+      "borderWidthAbsolute": true,
+      "points": [
+        118.01568,
+        13.49996,
+        86.01568,
+        13.49997
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 5,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "#009A3D"
+      },
+      "borderWidthAbsolute": true,
+      "points": [
+        171.00784,
+        13.49994,
+        139.00784,
+        13.49995
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 5,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "#009A3D"
+      },
+      "borderWidthAbsolute": true,
+      "points": [
+        224,
+        13.49993,
+        192,
+        13.49994
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 5,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "#009A3D"
+      },
+      "borderWidthAbsolute": true,
+      "points": [
+        276.99216,
+        13.49997,
+        244.99216,
+        13.49998
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 5,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "#009A3D"
+      },
+      "borderWidthAbsolute": true,
+      "points": [
+        329.98432,
+        13.49998,
+        297.98432,
+        13.49999
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 5,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "#009A3D"
+      },
+      "borderWidthAbsolute": true,
+      "points": [
+        382.97648,
+        13.49999,
+        350.97648,
+        13.5
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 5,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "#009A3D"
+      },
+      "borderWidthAbsolute": true,
+      "points": [
+        49.02352,
+        26.67995,
+        17.02352,
+        26.67996
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 5,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "#009A3D"
+      },
+      "borderWidthAbsolute": true,
+      "points": [
+        102.01568,
+        26.67996,
+        70.01568,
+        26.67997
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 5,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "#009A3D"
+      },
+      "borderWidthAbsolute": true,
+      "points": [
+        155.00784,
+        26.67994,
+        123.00784,
+        26.67995
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 5,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "#009A3D"
+      },
+      "borderWidthAbsolute": true,
+      "points": [
+        208,
+        26.67993,
+        176,
+        26.67994
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 5,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "#009A3D"
+      },
+      "borderWidthAbsolute": true,
+      "points": [
+        260.99216,
+        26.67997,
+        228.99216,
+        26.67998
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 5,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "#009A3D"
+      },
+      "borderWidthAbsolute": true,
+      "points": [
+        313.98432,
+        26.67998,
+        281.98432,
+        26.67999
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 5,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "#009A3D"
+      },
+      "borderWidthAbsolute": true,
+      "points": [
+        366.97648,
+        26.67999,
+        334.97648,
+        26.68
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 5,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "#009A3D"
+      },
+      "borderWidthAbsolute": true,
+      "points": [
+        79,
+        41.50002,
+        47,
+        41.50003
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 5,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "#009A3D"
+      },
+      "borderWidthAbsolute": true,
+      "points": [
+        131.99216,
+        41.50003,
+        99.99216,
+        41.50004
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 5,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "#009A3D"
+      },
+      "borderWidthAbsolute": true,
+      "points": [
+        184.98432,
+        41.50001,
+        152.98432,
+        41.50002
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 5,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "#009A3D"
+      },
+      "borderWidthAbsolute": true,
+      "points": [
+        237.97648,
+        41.5,
+        205.97648,
+        41.50001
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 5,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "#009A3D"
+      },
+      "borderWidthAbsolute": true,
+      "points": [
+        290.96864,
+        41.50004,
+        258.96864,
+        41.50005
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 5,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "#009A3D"
+      },
+      "borderWidthAbsolute": true,
+      "points": [
+        343.9608,
+        41.50005,
+        311.9608,
+        41.50006
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 5,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "#009A3D"
+      },
+      "borderWidthAbsolute": true,
+      "points": [
+        396.95296,
+        41.50006,
+        364.95296,
+        41.50007
+      ]
+    }
+  ]
+}

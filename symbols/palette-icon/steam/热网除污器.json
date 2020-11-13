@@ -1,0 +1,101 @@
+{
+  "modified": "Tue Nov 03 2020 17:12:49 GMT+0800 (CST)",
+  "width": 82,
+  "height": 58,
+  "comps": [
+    {
+      "type": "rect",
+      "background": "rgb(150,150,150)",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderWidthAbsolute": true,
+      "rect": [
+        18,
+        0.66665,
+        46,
+        46
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(150,150,150)",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderWidthAbsolute": true,
+      "rect": [
+        71.111,
+        14.77775,
+        10.6667,
+        17.7778
+      ]
+    },
+    {
+      "type": "trapezoid",
+      "background": "rgb(150,150,150)",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderWidthAbsolute": true,
+      "rotation": 1.5708,
+      "rect": [
+        44.5555,
+        20.11115,
+        46,
+        7.111
+      ]
+    },
+    {
+      "type": "trapezoid",
+      "background": "rgb(150,150,150)",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderWidthAbsolute": true,
+      "rotation": 4.71239,
+      "rect": [
+        -8.5555,
+        20.11115,
+        46,
+        7.111
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(150,150,150)",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderWidthAbsolute": true,
+      "rect": [
+        0.2223,
+        14.77775,
+        10.6667,
+        17.7778
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(150,150,150)",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderWidthAbsolute": true,
+      "rect": [
+        30.3335,
+        46.66665,
+        21.333,
+        10.6667
+      ]
+    },
+    {
+      "type": "trapezoid",
+      "background": "rgb(150,150,150)",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderWidthAbsolute": true,
+      "rotation": 3.14159,
+      "rect": [
+        32.111,
+        46.66665,
+        17.778,
+        7.111
+      ]
+    }
+  ]
+}

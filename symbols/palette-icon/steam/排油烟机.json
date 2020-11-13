@@ -1,5 +1,5 @@
 {
-  "modified": "Fri Oct 30 2020 14:43:02 GMT+0800 (CST)",
+  "modified": "Fri Nov 13 2020 11:12:12 GMT+0800 (CST)",
   "width": 38,
   "height": 50,
   "comps": [
@@ -42,8 +42,8 @@
       "gradient": "spread.horizontal",
       "borderWidthAbsolute": true,
       "rect": [
-        21.6,
-        3.6,
+        21.4,
+        3.59999,
         10.8,
         18
       ]
@@ -55,10 +55,10 @@
       "borderColor": "rgb(0,0,0)",
       "borderWidthAbsolute": true,
       "rect": [
-        0,
-        6.98349,
-        32.4,
-        32.4
+        0.2,
+        7.18349,
+        32,
+        32
       ]
     },
     {
@@ -268,8 +268,8 @@
       "gradient": "spread.horizontal",
       "borderWidthAbsolute": true,
       "rect": [
-        16.2,
-        0,
+        15.95,
+        -0.00001,
         21.6,
         3.6
       ]

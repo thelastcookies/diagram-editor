@@ -1,0 +1,122 @@
+{
+  "modified": "Tue Nov 03 2020 15:34:08 GMT+0800 (CST)",
+  "width": 220,
+  "height": 136,
+  "comps": [
+    {
+      "type": "rect",
+      "background": "rgba(0,0,0,0)",
+      "borderWidth": 2,
+      "borderColor": "rgb(217,217,217)",
+      "borderJoin": "miter",
+      "rect": [
+        0,
+        0,
+        220,
+        136
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 1,
+      "borderColor": "rgb(217,217,217)",
+      "points": [
+        0,
+        123.5,
+        220,
+        123.5
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 1,
+      "borderColor": "rgb(217,217,217)",
+      "points": [
+        0,
+        12.5,
+        220,
+        12.5
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 1,
+      "borderColor": "rgb(217,217,217)",
+      "rotation": 1.5708,
+      "points": [
+        54.5,
+        68,
+        165.5,
+        68
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 1,
+      "borderColor": "rgb(217,217,217)",
+      "points": [
+        0,
+        12.5,
+        110,
+        123.5
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 1,
+      "borderColor": "rgb(217,217,217)",
+      "points": [
+        0,
+        123.5,
+        110,
+        12.5
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 1,
+      "borderColor": "rgb(217,217,217)",
+      "points": [
+        110,
+        12.5,
+        220,
+        123.5
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 1,
+      "borderColor": "rgb(217,217,217)",
+      "points": [
+        110,
+        123.5,
+        220,
+        12.5
+      ]
+    },
+    {
+      "type": "oval",
+      "background": "rgba(0,0,0,0)",
+      "borderWidth": 1,
+      "borderColor": "rgb(217,217,217)",
+      "rect": [
+        3.5,
+        16.5,
+        103,
+        103
+      ]
+    },
+    {
+      "type": "oval",
+      "background": "rgba(0,0,0,0)",
+      "borderWidth": 1,
+      "borderColor": "rgb(217,217,217)",
+      "rect": [
+        113.5,
+        16.5,
+        103,
+        103
+      ]
+    }
+  ]
+}

@@ -1,0 +1,223 @@
+{
+  "modified": "Wed Nov 04 2020 17:42:02 GMT+0800 (CST)",
+  "width": 60,
+  "height": 20,
+  "comps": [
+    {
+      "type": "rect",
+      "background": "rgb(0,255,0)",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderJoin": "miter",
+      "borderWidthAbsolute": true,
+      "visible": {
+        "func": "__ht__function(data, view) {\nreturn data.a('node.state')\n}",
+        "value": true
+      },
+      "rect": [
+        0.00138,
+        18.64879,
+        40,
+        1
+      ]
+    },
+    {
+      "type": "shape",
+      "background": "rgb(0,255,0)",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderWidthAbsolute": true,
+      "closePath": true,
+      "points": [
+        0.00138,
+        18.64879,
+        19.99128,
+        12.5304,
+        59.92277,
+        12.5304,
+        39.96894,
+        18.64879
+      ]
+    },
+    {
+      "type": "shape",
+      "background": "rgb(0,255,0)",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderWidthAbsolute": true,
+      "closePath": true,
+      "points": [
+        40.00138,
+        19.62879,
+        40.00138,
+        18.66879,
+        59.92138,
+        12.52879,
+        59.92138,
+        13.54794
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(0,255,0)",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderJoin": "miter",
+      "borderWidthAbsolute": true,
+      "visible": {
+        "func": "__ht__function(data, view) {\nreturn data.a('node.state')\n}",
+        "value": true
+      },
+      "rect": [
+        0.00138,
+        14.5896,
+        40,
+        1
+      ]
+    },
+    {
+      "type": "shape",
+      "background": "rgb(0,255,0)",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderWidthAbsolute": true,
+      "closePath": true,
+      "points": [
+        0.00138,
+        14.5896,
+        19.99128,
+        8.47121,
+        59.92277,
+        8.47121,
+        39.96894,
+        14.5896
+      ]
+    },
+    {
+      "type": "shape",
+      "background": "rgb(0,255,0)",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderWidthAbsolute": true,
+      "closePath": true,
+      "points": [
+        40.00138,
+        15.5696,
+        40.00138,
+        14.6096,
+        59.92138,
+        8.4696,
+        59.92138,
+        9.48875
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(0,255,0)",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderJoin": "miter",
+      "borderWidthAbsolute": true,
+      "visible": {
+        "func": "__ht__function(data, view) {\nreturn data.a('node.state')\n}",
+        "value": true
+      },
+      "rect": [
+        0.00138,
+        10.5304,
+        40,
+        1
+      ]
+    },
+    {
+      "type": "shape",
+      "background": "rgb(0,255,0)",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderWidthAbsolute": true,
+      "closePath": true,
+      "points": [
+        0.00138,
+        10.5304,
+        19.99128,
+        4.41202,
+        59.92277,
+        4.41202,
+        39.96894,
+        10.5304
+      ]
+    },
+    {
+      "type": "shape",
+      "background": "rgb(0,255,0)",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderWidthAbsolute": true,
+      "closePath": true,
+      "points": [
+        40.00138,
+        11.5104,
+        40.00138,
+        10.5504,
+        59.92138,
+        4.4104,
+        59.92138,
+        5.42956
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(0,255,0)",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderJoin": "miter",
+      "borderWidthAbsolute": true,
+      "visible": {
+        "func": "__ht__function(data, view) {\nreturn data.a('node.state')\n}",
+        "value": true
+      },
+      "rect": [
+        0,
+        6.47121,
+        40,
+        1
+      ]
+    },
+    {
+      "type": "shape",
+      "background": "rgb(0,255,0)",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderWidthAbsolute": true,
+      "closePath": true,
+      "points": [
+        0,
+        6.47121,
+        19.9899,
+        0.35283,
+        59.92138,
+        0.35283,
+        39.96756,
+        6.47121
+      ]
+    },
+    {
+      "type": "shape",
+      "background": "rgb(0,255,0)",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderWidthAbsolute": true,
+      "closePath": true,
+      "points": [
+        40,
+        7.45121,
+        40,
+        6.49121,
+        59.92,
+        0.35121,
+        59.92,
+        1.37037
+      ]
+    }
+  ]
+}

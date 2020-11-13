@@ -1,0 +1,309 @@
+{
+  "modified": "Tue Nov 03 2020 19:14:50 GMT+0800 (CST)",
+  "width": 212,
+  "height": 64,
+  "comps": [
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "gradient": "spread.vertical",
+      "borderWidthAbsolute": true,
+      "rect": [
+        0,
+        18,
+        4,
+        16
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "gradient": "spread.vertical",
+      "borderWidthAbsolute": true,
+      "rect": [
+        4,
+        22,
+        132,
+        8
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "gradient": "spread.vertical",
+      "borderWidthAbsolute": true,
+      "rect": [
+        136,
+        14,
+        8,
+        24
+      ]
+    },
+    {
+      "type": "roundRect",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "gradient": "spread.vertical",
+      "borderWidthAbsolute": true,
+      "cornerRadius": 2,
+      "rect": [
+        146,
+        12,
+        32,
+        28
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "gradient": "spread.vertical",
+      "borderWidthAbsolute": true,
+      "rect": [
+        144,
+        19,
+        4,
+        14
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "gradient": "spread.vertical",
+      "borderWidthAbsolute": true,
+      "rect": [
+        178,
+        18,
+        2,
+        16
+      ]
+    },
+    {
+      "type": "trapezoid",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "gradient": "spread.vertical",
+      "borderWidthAbsolute": true,
+      "rotation": 4.71239,
+      "rect": [
+        178,
+        24,
+        12,
+        4
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "gradient": "spread.vertical",
+      "borderWidthAbsolute": true,
+      "rect": [
+        186,
+        17,
+        4,
+        18
+      ]
+    },
+    {
+      "type": "roundRect",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "gradient": "spread.vertical",
+      "borderWidthAbsolute": true,
+      "cornerRadius": 1,
+      "rect": [
+        190,
+        13,
+        20,
+        26
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderWidthAbsolute": true,
+      "rect": [
+        150,
+        40,
+        24,
+        4
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderWidthAbsolute": true,
+      "rect": [
+        154,
+        44,
+        20,
+        4
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderWidthAbsolute": true,
+      "rect": [
+        146,
+        48,
+        32,
+        4
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderWidthAbsolute": true,
+      "rect": [
+        190,
+        44,
+        20,
+        4
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderWidthAbsolute": true,
+      "rect": [
+        184,
+        48,
+        28,
+        4
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "gradient": "spread.vertical",
+      "borderWidthAbsolute": true,
+      "rect": [
+        192.25553,
+        30,
+        6,
+        16
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "gradient": "spread.vertical",
+      "borderWidthAbsolute": true,
+      "rect": [
+        201.74447,
+        30,
+        6,
+        16
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(0,0,0)",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderWidthAbsolute": true,
+      "rect": [
+        193.25553,
+        31,
+        4,
+        6
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(0,0,0)",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderWidthAbsolute": true,
+      "rect": [
+        202.74447,
+        31,
+        4,
+        6
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(190,190,190)",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderWidthAbsolute": true,
+      "rect": [
+        18.21212,
+        30,
+        14,
+        34
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(160,160,160)",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderWidthAbsolute": true,
+      "rect": [
+        11.88212,
+        36,
+        26.66,
+        4
+      ]
+    },
+    {
+      "type": "arc",
+      "background": "rgb(217,217,217)",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderWidthAbsolute": true,
+      "rotation": 1.5708,
+      "rect": [
+        26.21212,
+        46,
+        12,
+        12
+      ]
+    },
+    {
+      "type": "arc",
+      "background": "rgb(217,217,217)",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderWidthAbsolute": true,
+      "rotation": 4.71239,
+      "rect": [
+        12.21212,
+        46,
+        12,
+        12
+      ]
+    }
+  ]
+}

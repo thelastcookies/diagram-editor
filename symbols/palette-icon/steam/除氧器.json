@@ -1,44 +1,99 @@
 {
-  "modified": "Wed Aug 12 2020 16:13:06 GMT+0800 (中国标准时间)",
-  "width": 229,
-  "height": 59,
+  "modified": "Wed Nov 04 2020 10:17:56 GMT+0800 (CST)",
+  "width": 338,
+  "height": 98,
   "comps": [
     {
-      "type": "shape",
-      "background": "rgba(0,204,255,0.15)",
-      "borderWidth": 1,
-      "borderColor": "rgb(0,200,255)",
-      "closePath": true,
-      "points": [
-        9,
-        58,
-        1,
-        50,
-        1,
-        9,
-        9,
-        1,
-        220,
-        1,
-        228,
-        9,
-        228,
-        50,
-        220,
-        58
+      "type": "roundRect",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "gradient": "spread.vertical",
+      "borderWidthAbsolute": true,
+      "cornerRadius": 18,
+      "rect": [
+        148.00006,
+        0.00003,
+        42,
+        84
       ]
     },
     {
-      "type": "text",
-      "text": "除氧器",
-      "align": "center",
-      "color": "rgb(255,255,255)",
-      "font": "10px arial, sans-serif",
+      "type": "shape",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "gradient": "spread.horizontal",
+      "borderWidthAbsolute": true,
+      "anchorY": 1.44143,
+      "rotation": 4.71239,
+      "closePath": true,
+      "points": [
+        12.36007,
+        57.64,
+        12.36007,
+        57.64,
+        13.81607,
+        29.64,
+        40.36007,
+        29.64,
+        66.90407,
+        29.64,
+        68.36007,
+        57.64,
+        68.36007,
+        57.64
+      ],
+      "segments": [
+        1,
+        4,
+        4
+      ]
+    },
+    {
+      "type": "shape",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "gradient": "spread.horizontal",
+      "borderWidthAbsolute": true,
+      "anchorY": 1.44143,
+      "rotation": 1.5708,
+      "closePath": true,
+      "points": [
+        269.64012,
+        57.63981,
+        269.64012,
+        57.63981,
+        271.09612,
+        29.63981,
+        297.64012,
+        29.63981,
+        324.18412,
+        29.63981,
+        325.64012,
+        57.63981,
+        325.64012,
+        57.63981
+      ],
+      "segments": [
+        1,
+        4,
+        4
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "gradient": "spread.vertical",
+      "borderWidthAbsolute": true,
       "rect": [
-        96.77524,
-        20.5497,
-        35.22476,
-        12.9006
+        28.00006,
+        42.00003,
+        282,
+        56
       ]
     }
   ]

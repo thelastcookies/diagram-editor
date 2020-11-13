@@ -1,5 +1,28 @@
 {
   "modified": "Fri Oct 30 2020 15:16:28 GMT+0800 (CST)",
+  "dataBindings": [
+    {
+      "attr": "node.type",
+      "valueType": "String",
+      "defaultValue": "m-point"
+    },
+    {
+      "attr": "node.name",
+      "valueType": "String",
+      "defaultValue": "m-value"
+    },
+    {
+      "attr": "node.color",
+      "valueType": "Color",
+      "defaultValue": "rgb(255,0,0)"
+    },
+    {
+      "attr": "node.state",
+      "valueType": "Boolean",
+      "defaultValue": true,
+      "name": "启用状态"
+    }
+  ],
   "width": 48,
   "height": 44,
   "comps": [

@@ -1,0 +1,38 @@
+{
+  "modified": "Thu Nov 05 2020 15:22:15 GMT+0800 (CST)",
+  "width": 175,
+  "height": 150,
+  "comps": [
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderJoin": "miter",
+      "gradient": "spread.horizontal",
+      "borderWidthAbsolute": true,
+      "rect": [
+        0,
+        0,
+        175,
+        104
+      ]
+    },
+    {
+      "type": "trapezoid",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderJoin": "miter",
+      "gradient": "spread.horizontal",
+      "borderWidthAbsolute": true,
+      "rotation": 3.14159,
+      "rect": [
+        0,
+        104,
+        175,
+        46
+      ]
+    }
+  ]
+}

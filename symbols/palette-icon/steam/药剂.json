@@ -1,0 +1,42 @@
+{
+  "modified": "Thu Nov 05 2020 17:23:45 GMT+0800 (CST)",
+  "width": 32,
+  "height": 16,
+  "comps": [
+    {
+      "type": "shape",
+      "borderWidth": 1,
+      "borderColor": "rgb(0,255,0)",
+      "points": [
+        0,
+        0,
+        32,
+        0
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 1,
+      "borderColor": "rgb(0,255,0)",
+      "rotation": 1.5708,
+      "points": [
+        -0.01982,
+        8,
+        15.98018,
+        8
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 1,
+      "borderColor": "rgb(0,255,0)",
+      "rotation": 1.5708,
+      "points": [
+        17.39089,
+        8,
+        33.39089,
+        8
+      ]
+    }
+  ]
+}

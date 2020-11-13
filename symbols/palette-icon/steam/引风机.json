@@ -1,5 +1,5 @@
 {
-  "modified": "Fri Oct 30 2020 17:10:47 GMT+0800 (CST)",
+  "modified": "Fri Nov 13 2020 11:17:17 GMT+0800 (CST)",
   "dataBindings": [
     {
       "attr": "node.direction",
@@ -77,10 +77,10 @@
       "borderColor": "rgb(0,0,0)",
       "borderWidthAbsolute": true,
       "rect": [
-        13.4,
+        13.6,
         2.6,
-        32.4,
-        32.4
+        32,
+        32
       ]
     },
     {

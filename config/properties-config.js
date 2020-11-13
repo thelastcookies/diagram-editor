@@ -577,7 +577,45 @@ m_point_properties = [//测点图元的配置项
     //     }
     // },
 ];
-// 进度条的设置
+
+// 图元中含有 label 的设置
+label_properties = [
+    {
+        name: 'node.label',
+        displayName: '模板Label',
+        accessType: 'attr',
+        valueType: 'text',
+        editable: true,
+        defaultValue: ''
+    }
+];
+// 部分图元中含有 单位 的设置
+unit_properties = [
+    {
+        name: 'node.unit',
+        displayName: '单位',
+        accessType: 'attr',
+        valueType: 'text',
+        editable: true,
+        defaultValue: 'unit'
+    }
+];
+// 带有转向功能的图元的朝向设置
+direction_properties = [
+    {
+        name: 'node.direction',
+        displayName: '组件朝向',
+        accessType: 'attr',
+        valueType: 'text',
+        editable: true,
+        enum: {
+            labels: ["向上", "向右", "向下", "向左"],
+            values: ["up", "right", "down", "left"]
+        },
+        defaultValue: 'up'
+    }
+];
+// 计量条的设置
 zt_properties = [
     // {
     //     name: 'label.opacity',
@@ -607,65 +645,17 @@ zt_properties = [
     //     }
     // },
     {
-        name: 'zt.min',
+        name: 'bar.min',
         displayName: '进度条最小值',
         accessType: 'attr',
         editable: true,
         valueType: 'number',
     },
     {
-        name: 'zt.max',
+        name: 'bar.max',
         displayName: '进度条最大值',
         accessType: 'attr',
         editable: true,
         valueType: 'number',
-    },
-    {
-        name: 'zt.dirt',
-        displayName: '进度条朝向',
-        accessType: 'attr',
-        editable: true,
-        defaultValue: "top",
-        enum: {
-            labels: ["从下到上", "从上到下"],
-            values: ["top", "bottom"]
-        }
-    }
-];
-// 图元中含有 label 的设置
-label_properties = [
-    {
-        name: 'node.label',
-        displayName: '模板Label',
-        accessType: 'attr',
-        valueType: 'text',
-        editable: true,
-        defaultValue: ''
-    }
-];
-// 部分图元中含有 单位 的设置
-unit_properties = [
-    {
-        name: 'node.unit',
-        displayName: '单位',
-        accessType: 'attr',
-        valueType: 'text',
-        editable: true,
-        defaultValue: 'unit'
-    }
-];
-// 部分图元的朝向设置
-direction_properties = [
-    {
-        name: 'node.direction',
-        displayName: '组件朝向',
-        accessType: 'attr',
-        valueType: 'text',
-        editable: true,
-        enum: {
-            labels: ["向上", "向右", "向下", "向左"],
-            values: ["up", "right", "down", "left"]
-        },
-        defaultValue: 'up'
     }
 ];

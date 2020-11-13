@@ -1,0 +1,38 @@
+{
+  "modified": "Fri Nov 13 2020 09:47:47 GMT+0800 (CST)",
+  "width": 22,
+  "height": 22,
+  "comps": [
+    {
+      "type": "triangle",
+      "background": "#D8D8D8",
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "#D8D8D8"
+      },
+      "borderJoin": "miter",
+      "rect": [
+        7.99998,
+        6.99997,
+        14,
+        15
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "#D8D8D8",
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "#D8D8D8"
+      },
+      "borderJoin": "miter",
+      "rotation": 1.5708,
+      "rect": [
+        0.49996,
+        -0.50003,
+        14,
+        15
+      ]
+    }
+  ]
+}

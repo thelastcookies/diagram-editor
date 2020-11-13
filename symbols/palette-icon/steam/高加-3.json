@@ -1,0 +1,192 @@
+{
+  "modified": "Wed Nov 04 2020 09:45:34 GMT+0800 (CST)",
+  "dataBindings": [
+    {
+      "attr": "node.direction",
+      "valueType": "String",
+      "defaultValue": "up"
+    }
+  ],
+  "width": 100,
+  "height": 122,
+  "comps": [
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderJoin": "miter",
+      "gradient": "spread.horizontal",
+      "borderWidthAbsolute": true,
+      "rect": [
+        18.25003,
+        11.3,
+        64,
+        88.75
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderJoin": "miter",
+      "gradient": "spread.vertical",
+      "borderWidthAbsolute": true,
+      "anchorX": -3.02817,
+      "rotation": {
+        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'right')res=0;\nif(dir === 'left')res=180;\nreturn res/180*Math.PI;\n}",
+        "value": 0
+      },
+      "rect": [
+        82.25,
+        16.92508,
+        10.65,
+        7.1
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderJoin": "miter",
+      "gradient": "spread.horizontal",
+      "borderWidthAbsolute": true,
+      "rect": [
+        10.95,
+        9.3,
+        78.1,
+        2
+      ]
+    },
+    {
+      "type": "shape",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "gradient": "spread.horizontal",
+      "borderWidthAbsolute": true,
+      "anchorY": 1.44143,
+      "closePath": true,
+      "points": [
+        18,
+        9.3,
+        18,
+        9.3,
+        19.664,
+        0.3,
+        50,
+        0.3,
+        80.336,
+        0.3,
+        82,
+        9.3,
+        82,
+        9.3
+      ],
+      "segments": [
+        1,
+        4,
+        4
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderJoin": "miter",
+      "gradient": "spread.horizontal",
+      "borderWidthAbsolute": true,
+      "rect": [
+        18.25,
+        100.05,
+        64,
+        2
+      ]
+    },
+    {
+      "type": "shape",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "gradient": "spread.horizontal",
+      "borderWidthAbsolute": true,
+      "anchorY": 1.44143,
+      "rotation": 3.14159,
+      "closePath": true,
+      "points": [
+        18.25,
+        94.10426,
+        18.25,
+        94.10426,
+        19.914,
+        85.10426,
+        50.25,
+        85.10426,
+        80.586,
+        85.10426,
+        82.25,
+        94.10426,
+        82.25,
+        94.10426
+      ],
+      "segments": [
+        1,
+        4,
+        4
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderJoin": "miter",
+      "gradient": "spread.vertical",
+      "borderWidthAbsolute": true,
+      "anchorX": -6.04272,
+      "rotation": {
+        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'right')res=0;\nif(dir === 'left')res=180;\nreturn res/180*Math.PI;\n}",
+        "value": 0
+      },
+      "rect": [
+        92.9,
+        15.15008,
+        7.1,
+        10.65
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderJoin": "miter",
+      "gradient": "spread.horizontal",
+      "borderWidthAbsolute": true,
+      "rect": [
+        44.49899,
+        111.05,
+        10.65,
+        7.1
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderJoin": "miter",
+      "gradient": "spread.horizontal",
+      "borderWidthAbsolute": true,
+      "rect": [
+        33.84899,
+        118.15,
+        31.95,
+        3.55
+      ]
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "modified": "Thu Nov 05 2020 17:33:00 GMT+0800 (CST)",
+  "width": 30,
+  "height": 14,
+  "comps": [
+    {
+      "type": "rightTriangle",
+      "background": "rgb(217,217,217)",
+      "borderColor": "rgb(255,255,255)",
+      "rect": [
+        0,
+        0,
+        30,
+        14
+      ]
+    },
+    {
+      "type": "rightTriangle",
+      "background": "rgba(0,0,0,0)",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(255,255,255)",
+      "borderJoin": "miter",
+      "rotation": 3.14159,
+      "rect": [
+        1.08,
+        0.22,
+        28.66,
+        13.38
+      ]
+    }
+  ]
+}

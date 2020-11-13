@@ -1,0 +1,90 @@
+{
+  "modified": "Tue Nov 03 2020 11:49:38 GMT+0800 (CST)",
+  "width": 420,
+  "height": 160,
+  "comps": [
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderJoin": "miter",
+      "gradient": "spread.horizontal",
+      "borderWidthAbsolute": true,
+      "rect": [
+        0,
+        0,
+        420,
+        88.75
+      ]
+    },
+    {
+      "type": "shape",
+      "background": "rgb(217,217,217)",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "gradient": "spread.horizontal",
+      "borderWidthAbsolute": true,
+      "closePath": true,
+      "points": [
+        0,
+        88.75,
+        114,
+        88.75,
+        68.975,
+        160.75,
+        45.05533,
+        160.75
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 1,
+      "borderColor": "#979797",
+      "points": [
+        0,
+        88.75,
+        114,
+        88.75
+      ]
+    },
+    {
+      "type": "shape",
+      "background": "rgb(217,217,217)",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "gradient": "spread.horizontal",
+      "borderWidthAbsolute": true,
+      "closePath": true,
+      "points": [
+        153,
+        88.75,
+        267,
+        88.75,
+        221.975,
+        160.75,
+        198.05533,
+        160.75
+      ]
+    },
+    {
+      "type": "shape",
+      "background": "rgb(217,217,217)",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "gradient": "spread.horizontal",
+      "borderWidthAbsolute": true,
+      "closePath": true,
+      "points": [
+        306,
+        88.75,
+        420,
+        88.75,
+        374.975,
+        160.75,
+        351.05533,
+        160.75
+      ]
+    }
+  ]
+}

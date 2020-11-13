@@ -1,60 +1,30 @@
 {
-  "modified": "Wed Oct 14 2020 14:45:10 GMT+0800 (CST)",
-  "dataBindings": [
-    {
-      "attr": "node.type",
-      "valueType": "String",
-      "defaultValue": "m-point"
-    },
-    {
-      "attr": "node.name",
-      "valueType": "String",
-      "defaultValue": "c-value"
-    },
-    {
-      "attr": "node.color",
-      "valueType": "Color",
-      "defaultValue": "rgb(255,0,0)"
-    },
-    {
-      "attr": "node.state",
-      "valueType": "Boolean",
-      "defaultValue": true,
-      "name": "启用状态"
-    }
-  ],
+  "modified": "Wed Nov 04 2020 18:23:11 GMT+0800 (CST)",
   "width": 30,
   "height": 14,
   "comps": [
     {
-      "type": "triangle",
-      "background": "#13C7FF",
+      "type": "rightTriangle",
+      "background": "rgb(0,0,255)",
       "borderWidth": 1,
-      "borderColor": {
-        "func": "attr@line.color",
-        "value": "#13C7FF"
-      },
-      "rotation": 4.71239,
+      "borderColor": "rgb(255,255,255)",
       "rect": [
-        16.75,
-        0,
-        11.5,
+        -0.00002,
+        0.00004,
+        30,
         14
       ]
     },
     {
-      "type": "triangle",
+      "type": "rightTriangle",
       "background": "rgb(255,255,255)",
       "borderWidth": 1,
-      "borderColor": {
-        "func": "attr@line.color",
-        "value": "rgb(255,255,255)"
-      },
-      "rotation": 1.5708,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 3.14159,
       "rect": [
-        1.75,
-        0,
-        11.5,
+        -0.00002,
+        0.00004,
+        30,
         14
       ]
     }

@@ -1,0 +1,21 @@
+{
+  "modified": "Fri Nov 13 2020 10:28:33 GMT+0800 (CST)",
+  "width": 18,
+  "height": 32,
+  "comps": [
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "gradient": "spread.horizontal",
+      "borderWidthAbsolute": true,
+      "rect": [
+        0,
+        0,
+        18,
+        32
+      ]
+    }
+  ]
+}

@@ -1,5 +1,23 @@
 {
-  "modified": "Fri Oct 30 2020 18:01:01 GMT+0800 (CST)",
+  "modified": "Mon Nov 02 2020 15:33:42 GMT+0800 (CST)",
+  "dataBindings": [
+    {
+      "attr": "node.type",
+      "valueType": "String",
+      "defaultValue": "m-point"
+    },
+    {
+      "attr": "node.name",
+      "valueType": "String",
+      "defaultValue": "switch"
+    },
+    {
+      "attr": "node.state",
+      "valueType": "Boolean",
+      "defaultValue": true,
+      "name": "开关状态"
+    }
+  ],
   "width": 40,
   "height": 40,
   "comps": [
@@ -38,6 +56,10 @@
       "borderColor": "rgb(0,0,0)",
       "borderJoin": "miter",
       "borderWidthAbsolute": true,
+      "visible": {
+        "func": "__ht__function(data, view) {\nreturn data.a('node.state')\n}",
+        "value": true
+      },
       "rect": [
         15.56451,
         4.32679,
@@ -52,6 +74,10 @@
       "borderColor": "rgb(0,0,0)",
       "borderWidthAbsolute": true,
       "closePath": true,
+      "visible": {
+        "func": "__ht__function(data, view) {\nreturn data.a('node.state')\n}",
+        "value": true
+      },
       "points": [
         15.55744,
         4.32679,
@@ -69,7 +95,12 @@
       "borderWidth": 0.5,
       "borderColor": "rgb(0,0,0)",
       "borderWidthAbsolute": true,
+      "rotation": 3.14159,
       "closePath": true,
+      "visible": {
+        "func": "__ht__function(data, view) {\nreturn data.a('node.state')\n}",
+        "value": true
+      },
       "points": [
         12.65744,
         2.804,
@@ -87,7 +118,13 @@
       "borderWidth": 0.5,
       "borderColor": "rgb(0,0,0)",
       "borderWidthAbsolute": true,
+      "anchorX": 1,
+      "anchorY": 1,
       "closePath": true,
+      "visible": {
+        "func": "__ht__function(data, view) {\nreturn data.a('node.state')\n}",
+        "value": true
+      },
       "points": [
         18.60451,
         10.344,
@@ -105,7 +142,12 @@
       "borderWidth": 0.5,
       "borderColor": "rgb(0,0,0)",
       "borderWidthAbsolute": true,
+      "rotation": 6.28319,
       "closePath": true,
+      "visible": {
+        "func": "__ht__function(data, view) {\nreturn data.a('node.state')\n}",
+        "value": true
+      },
       "points": [
         24.60451,
         10.344,
@@ -115,6 +157,116 @@
         22.5,
         12.60159,
         22.5
+      ]
+    },
+    {
+      "type": "shape",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderWidthAbsolute": true,
+      "anchorX": 1,
+      "anchorY": 1,
+      "rotation": 4.71239,
+      "closePath": true,
+      "visible": {
+        "func": "__ht__function(data, view) {\nreturn !data.a('node.state')\n}",
+        "value": false
+      },
+      "points": [
+        18.76916,
+        4.34833,
+        24.72916,
+        4.34833,
+        12.73781,
+        16.50433,
+        12.73781,
+        10.48833
+      ]
+    },
+    {
+      "type": "shape",
+      "background": "rgb(0,255,0)",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderWidthAbsolute": true,
+      "closePath": true,
+      "visible": {
+        "func": "__ht__function(data, view) {\nreturn !data.a('node.state')\n}",
+        "value": false
+      },
+      "points": [
+        12.57316,
+        16.50433,
+        18.66636,
+        16.50433,
+        30.77827,
+        28.47471,
+        24.74784,
+        28.47471
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(0,255,0)",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderJoin": "miter",
+      "borderWidthAbsolute": true,
+      "visible": {
+        "func": "__ht__function(data, view) {\nreturn !data.a('node.state')\n}",
+        "value": false
+      },
+      "rect": [
+        15.56451,
+        28.49568,
+        24,
+        6
+      ]
+    },
+    {
+      "type": "shape",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderWidthAbsolute": true,
+      "rotation": 3.14159,
+      "closePath": true,
+      "visible": {
+        "func": "__ht__function(data, view) {\nreturn !data.a('node.state')\n}",
+        "value": false
+      },
+      "points": [
+        15.57946,
+        28.47471,
+        15.57946,
+        34.47471,
+        12.66196,
+        36.03486,
+        12.66196,
+        29.99486
+      ]
+    },
+    {
+      "type": "shape",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderWidthAbsolute": true,
+      "closePath": true,
+      "visible": {
+        "func": "__ht__function(data, view) {\nreturn !data.a('node.state')\n}",
+        "value": false
+      },
+      "points": [
+        15.58196,
+        34.49485,
+        12.66196,
+        36.03486,
+        36.68196,
+        36.03486,
+        39.58196,
+        34.49485
       ]
     }
   ]

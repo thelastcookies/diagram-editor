@@ -1,0 +1,244 @@
+{
+  "modified": "Thu Nov 05 2020 16:31:49 GMT+0800 (CST)",
+  "width": 140,
+  "height": 104,
+  "comps": [
+    {
+      "type": "rect",
+      "background": "rgba(217,217,217,0)",
+      "borderWidth": 1,
+      "borderColor": "rgb(217,217,217)",
+      "borderJoin": "miter",
+      "rect": [
+        0,
+        0.03981,
+        140,
+        104
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "#009A3D"
+      },
+      "points": [
+        32.03902,
+        52.03983,
+        12.67414,
+        52.13983
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "#009A3D"
+      },
+      "points": [
+        64.10736,
+        52.03984,
+        44.74248,
+        52.13984
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "#009A3D"
+      },
+      "points": [
+        96.1757,
+        52.03982,
+        76.81082,
+        52.13982
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "#009A3D"
+      },
+      "points": [
+        128.24404,
+        52.03981,
+        108.87916,
+        52.13981
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "#009A3D"
+      },
+      "points": [
+        22.35658,
+        65.21983,
+        2.9917,
+        65.31983
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "#009A3D"
+      },
+      "points": [
+        54.42492,
+        65.21984,
+        35.06004,
+        65.31984
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "#009A3D"
+      },
+      "points": [
+        86.49326,
+        65.21982,
+        67.12838,
+        65.31982
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "#009A3D"
+      },
+      "points": [
+        118.5616,
+        65.21981,
+        99.19672,
+        65.31981
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "#009A3D"
+      },
+      "points": [
+        40.49692,
+        80.0399,
+        21.13204,
+        80.1399
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "#009A3D"
+      },
+      "points": [
+        72.56526,
+        80.03991,
+        53.20038,
+        80.13991
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "#009A3D"
+      },
+      "points": [
+        104.6336,
+        80.03989,
+        85.26872,
+        80.13989
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "#009A3D"
+      },
+      "points": [
+        136.70194,
+        80.03988,
+        117.33706,
+        80.13988
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "#009A3D"
+      },
+      "points": [
+        34.14519,
+        94.29265,
+        14.78031,
+        94.39265
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "#009A3D"
+      },
+      "points": [
+        66.21353,
+        94.29266,
+        46.84865,
+        94.39266
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "#009A3D"
+      },
+      "points": [
+        98.28187,
+        94.29264,
+        78.91699,
+        94.39264
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "#009A3D"
+      },
+      "points": [
+        130.35021,
+        94.29263,
+        110.98533,
+        94.39263
+      ]
+    }
+  ]
+}

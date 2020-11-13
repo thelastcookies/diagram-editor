@@ -1,0 +1,145 @@
+{
+  "modified": "Fri Nov 13 2020 16:19:06 GMT+0800 (CST)",
+  "dataBindings": [
+    {
+      "attr": "node.direction",
+      "valueType": "String",
+      "defaultValue": "left"
+    }
+  ],
+  "width": 80,
+  "height": 484,
+  "comps": [
+    {
+      "type": "shape",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "visible": {
+        "func": "__ht__function(data, view) {\nreturn data.a('node.direction') === 'left' || data.a('node.direction') === 'up' \n}",
+        "value": true
+      },
+      "points": [
+        55.44594,
+        461.91323,
+        55.44594,
+        461.91323,
+        79.34047,
+        461.91323,
+        79.34047,
+        471.86743,
+        65.22801,
+        482.99669,
+        23.54721,
+        482.99669,
+        23.54721,
+        461.91323
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "visible": {
+        "func": "__ht__function(data, view) {\nreturn data.a('node.direction') === 'left' || data.a('node.direction') === 'up' \n}",
+        "value": true
+      },
+      "points": [
+        24.02015,
+        22.01879,
+        0.07887,
+        22.01879,
+        0.07887,
+        11.97292,
+        14.06525,
+        1.00331,
+        56.02987,
+        1.00331,
+        56.02987,
+        22.01879,
+        56.02987,
+        22.01879
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "points": [
+        55.951,
+        22.01879,
+        55.951,
+        462.01879
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "points": [
+        23.54721,
+        21.91323,
+        23.54721,
+        461.91323
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 3.14159,
+      "visible": {
+        "func": "__ht__function(data, view) {\nreturn data.a('node.direction') === 'right' || data.a('node.direction') === 'down'\n}",
+        "value": true
+      },
+      "points": [
+        0,
+        482.92871,
+        0,
+        482.92871,
+        0,
+        472.88284,
+        0,
+        461.91323,
+        42.0586,
+        461.91323,
+        55.951,
+        472.88284,
+        55.951,
+        482.92871,
+        55.951,
+        482.92871,
+        32.01985,
+        482.92871
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "visible": {
+        "func": "__ht__function(data, view) {\nreturn data.a('node.direction') === 'right' || data.a('node.direction') === 'down'\n}",
+        "value": true
+      },
+      "points": [
+        23.54721,
+        22.01879,
+        23.54721,
+        22.01879,
+        23.54721,
+        11.97292,
+        23.54721,
+        1.00331,
+        65.60581,
+        1.00331,
+        79.49821,
+        11.97292,
+        79.49821,
+        22.01879,
+        79.49821,
+        22.01879,
+        55.56706,
+        22.01879
+      ]
+    }
+  ]
+}

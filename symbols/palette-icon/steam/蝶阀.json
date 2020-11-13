@@ -1,0 +1,58 @@
+{
+  "modified": "Wed Nov 04 2020 18:21:05 GMT+0800 (CST)",
+  "dataBindings": [
+    {
+      "attr": "line.color",
+      "valueType": "Color",
+      "defaultValue": "#D8D8D8"
+    }
+  ],
+  "width": 30,
+  "height": 14,
+  "comps": [
+    {
+      "type": "rect",
+      "background": "rgba(217,217,217,0)",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderWidthAbsolute": true,
+      "rect": [
+        0,
+        0,
+        30,
+        14
+      ]
+    },
+    {
+      "type": "rightTriangle",
+      "background": {
+        "func": "attr@line.color",
+        "value": "#D8D8D8"
+      },
+      "borderColor": "rgb(255,255,255)",
+      "rect": [
+        0.5,
+        0.5,
+        29,
+        13
+      ]
+    },
+    {
+      "type": "oval",
+      "background": {
+        "func": "attr@line.color",
+        "value": "#D8D8D8"
+      },
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderWidthAbsolute": true,
+      "rotation": 4.71239,
+      "rect": [
+        11,
+        3,
+        8,
+        8
+      ]
+    }
+  ]
+}

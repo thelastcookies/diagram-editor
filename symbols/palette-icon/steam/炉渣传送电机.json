@@ -1,0 +1,46 @@
+{
+  "modified": "Wed Nov 04 2020 17:17:49 GMT+0800 (CST)",
+  "width": 25,
+  "height": 25,
+  "comps": [
+    {
+      "type": "oval",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderWidthAbsolute": true,
+      "rect": [
+        0,
+        0,
+        25,
+        25
+      ]
+    },
+    {
+      "type": "oval",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderWidthAbsolute": true,
+      "rect": [
+        5,
+        5,
+        15,
+        15
+      ]
+    },
+    {
+      "type": "oval",
+      "background": "#979797",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderWidthAbsolute": true,
+      "rect": [
+        10,
+        10,
+        5,
+        5
+      ]
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "modified": "Fri Nov 13 2020 17:24:48 GMT+0800 (CST)",
+  "dataBindings": [
+    {
+      "attr": "line.color",
+      "valueType": "Color",
+      "defaultValue": "rgb(255,0,0)"
+    }
+  ],
+  "width": 30,
+  "height": 35,
+  "comps": [
+    {
+      "type": "shape",
+      "background": {
+        "func": "attr@line.color",
+        "value": "rgb(255,0,0)"
+      },
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderWidthAbsolute": true,
+      "rotation": 3.14159,
+      "closePath": true,
+      "points": [
+        30.00005,
+        0.00004,
+        30.00005,
+        27.77727,
+        0.00005,
+        35.00004,
+        0.00005,
+        7.03763
+      ]
+    }
+  ]
+}

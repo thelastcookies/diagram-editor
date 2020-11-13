@@ -1,0 +1,123 @@
+{
+  "modified": "Fri Nov 13 2020 11:56:47 GMT+0800 (CST)",
+  "width": 44,
+  "height": 18,
+  "comps": [
+    {
+      "type": "rect",
+      "background": "rgba(217,217,217,0)",
+      "borderWidth": 0.8,
+      "borderColor": "#FEB64D",
+      "rect": [
+        0,
+        0,
+        44,
+        18
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 0.8,
+      "borderColor": "#FEB64D",
+      "points": [
+        36.97353,
+        -0.02,
+        43.39353,
+        8.98,
+        36.97353,
+        18
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 0.8,
+      "borderColor": "#FEB64D",
+      "points": [
+        31.6916,
+        0,
+        38.1116,
+        9,
+        31.6916,
+        18.02
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 0.8,
+      "borderColor": "#FEB64D",
+      "points": [
+        26.40967,
+        0,
+        32.82967,
+        9,
+        26.40967,
+        18.02
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 0.8,
+      "borderColor": "#FEB64D",
+      "points": [
+        21.12773,
+        -0.04,
+        27.54773,
+        8.96,
+        21.12773,
+        17.98
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 0.8,
+      "borderColor": "#FEB64D",
+      "points": [
+        15.8458,
+        -0.02,
+        22.2658,
+        8.98,
+        15.8458,
+        18
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 0.8,
+      "borderColor": "#FEB64D",
+      "points": [
+        10.56387,
+        -0.02,
+        16.98387,
+        8.98,
+        10.56387,
+        18
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 0.8,
+      "borderColor": "#FEB64D",
+      "points": [
+        5.28193,
+        0,
+        11.70193,
+        9,
+        5.28193,
+        18.02
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 0.8,
+      "borderColor": "#FEB64D",
+      "points": [
+        0,
+        0.02,
+        6.42,
+        9.02,
+        0,
+        18.04
+      ]
+    }
+  ]
+}

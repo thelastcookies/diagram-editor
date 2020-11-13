@@ -1,47 +1,84 @@
 {
-  "modified": "Tue Oct 27 2020 17:48:17 GMT+0800 (CST)",
+  "modified": "Tue Nov 03 2020 17:20:20 GMT+0800 (CST)",
   "width": 975,
   "height": 112,
   "comps": [
-    {
-      "type": "roundRect",
-      "background": "#D8D8D8",
-      "borderWidth": 0.5,
-      "borderColor": "rgb(0,0,0)",
-      "gradient": "spread.vertical",
-      "cornerRadius": 30,
-      "rect": [
-        0,
-        0,
-        120,
-        112
-      ]
-    },
-    {
-      "type": "roundRect",
-      "background": "#D8D8D8",
-      "borderWidth": 0.5,
-      "borderColor": "rgb(0,0,0)",
-      "gradient": "spread.vertical",
-      "cornerRadius": 30,
-      "rect": [
-        855,
-        0,
-        120,
-        112
-      ]
-    },
     {
       "type": "rect",
       "background": "#D8D8D8",
       "borderWidth": 0.5,
       "borderColor": "rgb(0,0,0)",
       "gradient": "spread.vertical",
+      "borderWidthAbsolute": true,
       "rect": [
-        90,
+        56,
         0,
-        795,
+        863,
         112
+      ]
+    },
+    {
+      "type": "shape",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "gradient": "spread.horizontal",
+      "borderWidthAbsolute": true,
+      "anchorY": 1.44143,
+      "rotation": 4.71239,
+      "closePath": true,
+      "points": [
+        24.72008,
+        31.27992,
+        24.72008,
+        31.27992,
+        27.63208,
+        -24.72008,
+        80.72008,
+        -24.72008,
+        133.80808,
+        -24.72008,
+        136.72008,
+        31.27992,
+        136.72008,
+        31.27992
+      ],
+      "segments": [
+        1,
+        4,
+        4
+      ]
+    },
+    {
+      "type": "shape",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "gradient": "spread.horizontal",
+      "borderWidthAbsolute": true,
+      "anchorY": 1.44143,
+      "rotation": 1.5708,
+      "closePath": true,
+      "points": [
+        838.27992,
+        31.27992,
+        838.27992,
+        31.27992,
+        841.19192,
+        -24.72008,
+        894.27992,
+        -24.72008,
+        947.36792,
+        -24.72008,
+        950.27992,
+        31.27992,
+        950.27992,
+        31.27992
+      ],
+      "segments": [
+        1,
+        4,
+        4
       ]
     }
   ]

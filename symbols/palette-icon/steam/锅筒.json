@@ -1,14 +1,7 @@
 {
-  "modified": "Tue Oct 27 2020 16:56:57 GMT+0800 (CST)",
+  "modified": "Thu Nov 05 2020 15:28:38 GMT+0800 (CST)",
   "width": 106,
   "height": 256,
-  "dataBindings": [
-    {
-      "attr": "node.label",
-      "valueType": "String",
-      "defaultValue": "锅筒"
-    }
-  ],
   "comps": [
     {
       "type": "oval",
@@ -50,36 +43,6 @@
         16,
         106,
         224
-      ]
-    },
-    {
-      "type": "text",
-      "text": {
-        "func": "__ht__function(data, view) {\n return data.a('node.label').substr(0, 1) \n}",
-        "value": "锅"
-      },
-      "align": "center",
-      "font": "20px arial, sans-serif",
-      "rect": [
-        28,
-        87.94753,
-        50,
-        50
-      ]
-    },
-    {
-      "type": "text",
-      "text": {
-        "func": "__ht__function(data, view) {\n return data.a('node.label').substr(1, 1) \n}",
-        "value": "筒"
-      },
-      "align": "center",
-      "font": "20px arial, sans-serif",
-      "rect": [
-        28,
-        118.05247,
-        50,
-        50
       ]
     }
   ]

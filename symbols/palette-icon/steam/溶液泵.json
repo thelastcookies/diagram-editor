@@ -1,0 +1,198 @@
+{
+  "modified": "Fri Nov 13 2020 11:39:42 GMT+0800 (CST)",
+  "dataBindings": [
+    {
+      "attr": "node.direction",
+      "valueType": "String",
+      "defaultValue": "right"
+    }
+  ],
+  "width": 40,
+  "height": 46,
+  "comps": [
+    {
+      "type": "rect",
+      "background": "rgb(150,150,150)",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderJoin": "miter",
+      "borderWidthAbsolute": true,
+      "rect": [
+        0,
+        42,
+        15,
+        4
+      ]
+    },
+    {
+      "type": "shape",
+      "background": "rgb(150,150,150)",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderWidthAbsolute": true,
+      "closePath": true,
+      "points": [
+        20.03694,
+        12,
+        28.00001,
+        12,
+        11.97854,
+        42,
+        4.00001,
+        42
+      ]
+    },
+    {
+      "type": "shape",
+      "background": "rgb(150,150,150)",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderWidthAbsolute": true,
+      "closePath": true,
+      "points": [
+        12.00001,
+        12,
+        20.03274,
+        12,
+        36.00001,
+        42,
+        28.05002,
+        42
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(150,150,150)",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderJoin": "miter",
+      "borderWidthAbsolute": true,
+      "rect": [
+        25,
+        42,
+        15,
+        4
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderJoin": "miter",
+      "gradient": "spread.horizontal",
+      "borderWidthAbsolute": true,
+      "anchorX": -0.5,
+      "rotation": {
+        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'left')res=180;\nif(dir === 'right')res=0;\nreturn res/180*Math.PI;\n}",
+        "value": 0
+      },
+      "rect": [
+        25,
+        3.4915,
+        10,
+        18
+      ]
+    },
+    {
+      "type": "arc",
+      "background": "rgb(230,230,230)",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderWidthAbsolute": true,
+      "arcFrom": 2.35619,
+      "arcTo": 5.49779,
+      "rect": [
+        3.99999,
+        7.075,
+        32,
+        32
+      ]
+    },
+    {
+      "type": "arc",
+      "background": "rgb(200,200,200)",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderWidthAbsolute": true,
+      "arcFrom": -0.7854,
+      "arcTo": 2.35619,
+      "rect": [
+        4.00001,
+        7.075,
+        32,
+        32
+      ]
+    },
+    {
+      "type": "circle",
+      "background": "rgb(215,215,215)",
+      "borderColor": "rgb(0,0,0)",
+      "rect": [
+        10.50001,
+        13.575,
+        19,
+        19
+      ]
+    },
+    {
+      "type": "circle",
+      "background": "rgb(180,180,180)",
+      "borderColor": "rgb(0,0,0)",
+      "rect": [
+        15.99999,
+        19.075,
+        8,
+        8
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderJoin": "miter",
+      "gradient": "spread.horizontal",
+      "borderWidthAbsolute": true,
+      "anchorX": 0,
+      "rotation": {
+        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'left')res=180;\nif(dir === 'right')res=0;\nreturn res/180*Math.PI;\n}",
+        "value": 0
+      },
+      "rect": [
+        20,
+        -0.1085,
+        20,
+        3.6
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(217,217,217)",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "gradient": "spread.vertical",
+      "borderWidthAbsolute": true,
+      "rect": [
+        16.99999,
+        22.575,
+        6,
+        1
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(217,217,217)",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "gradient": "spread.vertical",
+      "borderWidthAbsolute": true,
+      "rect": [
+        18.99999,
+        20.075,
+        2,
+        6
+      ]
+    }
+  ]
+}

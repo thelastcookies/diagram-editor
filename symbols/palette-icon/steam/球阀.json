@@ -1,26 +1,10 @@
 {
-  "modified": "Thu Oct 22 2020 11:33:51 GMT+0800 (CST)",
+  "modified": "Wed Nov 04 2020 18:15:27 GMT+0800 (CST)",
   "dataBindings": [
     {
-      "attr": "node.type",
-      "valueType": "String",
-      "defaultValue": "m-point"
-    },
-    {
-      "attr": "node.name",
-      "valueType": "String",
-      "defaultValue": "switch"
-    },
-    {
-      "attr": "node.color",
+      "attr": "line.color",
       "valueType": "Color",
-      "defaultValue": "rgb(255,0,0)"
-    },
-    {
-      "attr": "node.state",
-      "valueType": "Boolean",
-      "defaultValue": true,
-      "name": "开关状态"
+      "defaultValue": "#D8D8D8"
     }
   ],
   "width": 30,
@@ -28,31 +12,33 @@
   "comps": [
     {
       "type": "triangle",
-      "background": "#D8D8D8",
-      "borderWidth": 1,
-      "borderColor": {
+      "background": {
         "func": "attr@line.color",
         "value": "#D8D8D8"
       },
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderWidthAbsolute": true,
       "rotation": 4.71239,
       "rect": [
-        16.75,
-        0,
+        17.24999,
+        -0.00002,
         11.5,
         14
       ]
     },
     {
       "type": "triangle",
-      "background": "#D8D8D8",
-      "borderWidth": 1,
-      "borderColor": {
+      "background": {
         "func": "attr@line.color",
         "value": "#D8D8D8"
       },
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderWidthAbsolute": true,
       "rotation": 1.5708,
       "rect": [
-        1.75,
+        1.25002,
         0,
         11.5,
         14
@@ -60,15 +46,17 @@
     },
     {
       "type": "oval",
-      "background": "#D8D8D8",
-      "borderColor": {
+      "background": {
         "func": "attr@line.color",
-        "value": "rgba(255,0,0,0)"
+        "value": "#D8D8D8"
       },
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderWidthAbsolute": true,
       "rotation": 4.71239,
       "rect": [
         11,
-        3,
+        2.99998,
         8,
         8
       ]
