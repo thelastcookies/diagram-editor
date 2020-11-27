@@ -14,7 +14,7 @@
     {
       "attr": "node.label",
       "valueType": "String",
-      "defaultValue": "#.###",
+      "defaultValue": "###.#",
       "name": "数据值"
     },
     {

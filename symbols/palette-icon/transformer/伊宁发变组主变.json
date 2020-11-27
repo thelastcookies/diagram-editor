@@ -1,7 +1,11 @@
 {
   "modified": "Thu Oct 22 2020 10:11:26 GMT+0800 (CST)",
-  "yAlignmentGuides": [
-    83
+  "dataBindings": [
+    {
+      "attr": "node.label",
+      "valueType": "String",
+      "defaultValue": "1"
+    }
   ],
   "width": 250,
   "height": 150,
@@ -1115,7 +1119,10 @@
     },
     {
       "type": "text",
-      "text": "1",
+      "text": {
+        "func": "__ht__function(data, view) {\n return data.a('node.label');\n}",
+        "value": "1"
+      },
       "align": "center",
       "color": "rgb(0,0,255)",
       "font": "16px arial, sans-serif",
@@ -1128,7 +1135,10 @@
     },
     {
       "type": "text",
-      "text": "1",
+      "text": {
+        "func": "__ht__function(data, view) {\n return data.a('node.label');\n}",
+        "value": "1"
+      },
       "align": "center",
       "color": "rgb(0,0,0)",
       "rect": [
@@ -1140,7 +1150,10 @@
     },
     {
       "type": "text",
-      "text": "1",
+      "text": {
+        "func": "__ht__function(data, view) {\n return data.a('node.label');\n}",
+        "value": "1"
+      },
       "align": "center",
       "color": "rgb(0,0,0)",
       "rect": [

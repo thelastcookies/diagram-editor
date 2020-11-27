@@ -139,6 +139,8 @@ palette_config = {
             { name: '33', image: 'symbols/palette-icon/steam/33.json', type: ht.Node},
             { name: '34', image: 'symbols/palette-icon/steam/34.json', type: ht.Node},
             { name: '35', image: 'symbols/palette-icon/steam/35.json', type: ht.Node},
+            { name: '36', image: 'symbols/palette-icon/steam/36.json', type: ht.Node},
+            { name: '37', image: 'symbols/palette-icon/steam/37.json', type: ht.Node},
             { name: '保护动作信号', image: 'symbols/palette-icon/m-point/保护动作信号.json', type: ht.Node},
             { name: '电动机-带序号', image: 'symbols/palette-icon/steam/电动机-带序号.json', type: ht.Node},
             { name: '恒温装置', image: 'symbols/palette-icon/steam/恒温装置.json', type: ht.Node},
@@ -147,6 +149,7 @@ palette_config = {
             { name: '手操-MA', image: 'symbols/palette-icon/m-point/手操-MA.json', type: ht.Node},
             { name: '风机与电机-简易', image: 'symbols/palette-icon/steam/风机与电机-简易.json', type: ht.Node},
             { name: '汽机与电机-详细', image: 'symbols/palette-icon/steam/风机与电机-详细.json', type: ht.Node},
+            { name: '汽机与电机-系统总图', image: 'symbols/palette-icon/steam/风机与电机-系统总图.json', type: ht.Node},
             { name: '汽机与电机', image: 'symbols/palette-icon/steam/汽机与电机.json', type: ht.Node},
             { name: '集箱-横-短', image: 'symbols/palette-icon/steam/集箱-横-短.json', type: ht.Node},
             { name: '集箱-横-长', image: 'symbols/palette-icon/steam/集箱-横-长.json', type: ht.Node},
@@ -222,6 +225,7 @@ palette_config = {
             { name: '粉剂仓', image: 'symbols/palette-icon/steam/粉剂仓.json', type: ht.Node},
             { name: '溶液泵', image: 'symbols/palette-icon/steam/溶液泵.json', type: ht.Node},
             { name: '风机', image: 'symbols/palette-icon/steam/风机.json', type: ht.Node},
+            { name: '超滤水箱', image: 'symbols/palette-icon/steam/超滤水箱.json', type: ht.Node},
         ]
     },
     // others: {
