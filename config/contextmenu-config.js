@@ -3,8 +3,15 @@ let mainView = null;
 let slModelList = new ht.List();
 var load_contextmenu_config = [
     {
-        label: "查看测点信息",
-        fordata: 1
+        label: "数据修正",
+        fordata: 1,
+        disabled: function () {
+            let node = graphView.sm().getSelection().get(0);
+            return !(node instanceof ht.Text);
+        },
+        action: function (item, event) {
+            showModifyDialog();
+        }
     },
     {
         label: "查看测点趋势",
@@ -31,10 +38,6 @@ var load_contextmenu_config = [
         }
     },
     {
-        label: "查看XX",
-        fordata: 1
-    },
-    {
         label: "查看趋势",
         fordata: 2,
         action: function(item, event) {
@@ -46,7 +49,7 @@ var load_contextmenu_config = [
                 data: {"nodeTagArray": nodeArr},
                 dataType: "json",
                 success: function (nodeData) {
-                    timeStampArr = dataPretreat(nodeData);;
+                    timeStampArr = dataPretreat(nodeData);
                     console.log (timeStampArr);
                     initProgress(timeStampArr);
                     if (getDataIntervalID)

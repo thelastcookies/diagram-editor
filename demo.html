@@ -3,117 +3,33 @@
 <head>
     <title>Demo</title>
     <style>
+        body {
+            background-color: #000;
+            opacity: 0.8;
+        }
     </style>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <script type="text/javascript" src="lib/core/ht.js"></script>
     <script type="text/javascript" src="js/ht-value.js"></script>
     <script src="bootstrap-3.3.7-dist/js/jquery-3.1.1.js"></script>
+    <script src="lib/plugin/ht-contextmenu.js"></script>
+    <script src="lib/plugin/ht-cssanimation.js"></script>
+    <script src="lib/plugin/ht-form.js"></script>
+    <script src="lib/plugin/ht-dialog.js"></script>
+    <script src="lib/plugin/ht-palette.js"></script>
+    <script src="lib/plugin/ht-rulerframe.js"></script>
+    <script src="lib/plugin/ht-propertypane.js"></script>
+    <script src="lib/plugin/ht-edgetype.js"></script>
+
+    <script src="config/contextmenu-config.js"></script>
+    <script src="config/dialog-config.js"></script>
     <script>
         function init() {
-            let dataModel = new ht.DataModel(),
-                graphView = window.graph = new ht.graph.GraphView(dataModel),
-                json = {
-                    "v": "7.0.7",
-                    "p": {
-                        "layers": [
-                            "0",
-                            1
-                        ],
-                        "autoAdjustIndex": true,
-                        "hierarchicalRendering": false
-                    },
-                    "d": [
-                        {
-                            "c": "ht.Text",
-                            "i": 2,
-                            "p": {
-                                "name": "文字",
-                                "layer": 1,
-                                "tag": "321_CL_PF",
-                                "position": {
-                                    "x": 625,
-                                    "y": -221
-                                }
-                            },
-                            "s": {
-                                "text": "0.00",
-                                "text.align": "center",
-                                "text.font": "16px arial, sans-serif",
-                                "label": "",
-                                "text.color": "rgb(0,255,0)"
-                            }
-                        },
-                        {
-                            "c": "ht.Node",
-                            "i": 4,
-                            "p": {
-                                "name": "旋钮开关",
-                                "layer": 1,
-                                "tag": "kg-2",
-                                "image": "symbols/palette-icon/旋钮开关.json",
-                                "position": {
-                                    "x": 693,
-                                    "y": -141.5
-                                }
-                            },
-                            "s": {
-                                "label": ""
-                            }
-                        },
-                        {
-                            "c": "ht.Node",
-                            "i": 5,
-                            "p": {
-                                "name": "主变",
-                                "layer": 1,
-                                "tag": "zb-1",
-                                "image": "symbols/palette-icon/主变.json",
-                                "position": {
-                                    "x": 566.62255,
-                                    "y": 35.75118
-                                }
-                            },
-                            "s": {
-                                "label": ""
-                            }
-                        },
-                        {
-                            "c": "ht.Node",
-                            "i": 6,
-                            "p": {
-                                "name": "主变2",
-                                "layer": 1,
-                                "tag": "zb-2",
-                                "image": "symbols/palette-icon/主变2.json",
-                                "position": {
-                                    "x": 796.5,
-                                    "y": 33.5
-                                }
-                            },
-                            "s": {
-                                "label": ""
-                            }
-                        },
-                        {
-                            "c": "ht.Node",
-                            "i": 80,
-                            "p": {
-                                "name": "开关",
-                                "layer": 1,
-                                "tag": "kg-1",
-                                "image": "symbols/palette-icon/开关.json",
-                                "position": {
-                                    "x": 560.5,
-                                    "y": -141
-                                }
-                            },
-                            "s": {
-                                "label": ""
-                            }
-                        }
-                    ]
-                };
-            dataModel.deserialize(json);
+            dataModel = new ht.DataModel();
+            graphView = window.graph = new ht.graph.GraphView(dataModel);
+            graphView.getSelectionModel().setSelectionMode('single');
+
+            // dataModel.deserialize(json);
             graphView.mi(function(e) {
                 if (e.kind === 'clickData') {
                     if (e.data.getTag() === 'DJX') {
@@ -121,27 +37,70 @@
                     }
                 }
             });
+            // 配置右键菜单
+            setContextMenu(load_contextmenu_config, graphView);
+            // 请求组态图数据以及初始化
+            $.getJSON({
+                url: './test.cfd',
+                success: res => {
+                    json = res;
+                    dataModel.deserialize(json);
+                    nodeArr = dataModel.getNodeTags();
+                    graphView.setMovableFunc(function() {});
+                    // graphView.setSelectableFunc(function() {});
+                    graphView.setPannable(false);
+                    graphView.handleScroll = function() {};
+                    let container = document.getElementById('container');
+                    // pageMainView.addToDOM(container);
+                    graphView.addToDOM(container);
+                    graphView.fitContent(true);
+                    getRealTimeData(nodeArr);
+                }
+            });
 
-            let node = new ht.Node();
-            graphView.setMovableFunc(function() {});
-            graphView.setSelectableFunc(function() {});
-            graphView.setPannable(false);
-            graphView.handleScroll = function() {};
-            let container = document.getElementById('container');
-            graphView.addToDOM(container);
-            graphView.fitContent(true);
-            setInterval(() => {
-                $.getJSON({
-                    url: 'WebServer/server/fake-value.json',
-                    success: res => {
-                        dataModel.setNodeStatusByValue(res.data.ztData);
+
+        }
+        /**
+         * getRealTimeData 获取实时数据
+         * @param nodeArr - 需要请求参数的测点数组
+         * @param timestamp - 请求时间
+         */
+        function getRealTimeData(nodeArr, timestamp) {
+            getDataIntervalID = setInterval(() => {
+                $.ajax ({
+                    type: 'POST',
+                    url: "http://localhost/node-trend.php",
+                    data: {nodeTagArr: nodeArr, timestamp: '2020-07-01 00:00:00'},
+                    dataType: "json",
+                    success: function (res) {
+                        dataToUse = dataModel.formulaPreprocess(res);
+                        dataModel.setNodeStatusByValue(dataToUse);
                     }
                 });
-            }, 1000);
+            }, 3000);
+        }
+        /**
+         * setContextMenu 设置右键点击事件
+         * @param contextmenu_config - 右键点击配置
+         * @param graphView - graphView
+         */
+        function setContextMenu (contextmenu_config, graphView) {
+            let contextmenu = new ht.widget.ContextMenu(contextmenu_config);
+            contextmenu.enableGlobalKey();
+            contextmenu.setVisibleFunc(function(item) {
+                let data = graphView.sm().ld();
+                if (data instanceof ht.Node) {
+                    return item.fordata === 1;
+                }
+                else {
+                    return item.fordata === 2;
+                }
+            });
+            contextmenu.addTo(graphView.getView());
         }
     </script>
 </head>
 <body onload="init();">
-    <div id="container"></div>
+<div id="container"></div>
 </body>
 </html>

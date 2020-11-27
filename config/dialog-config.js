@@ -266,11 +266,7 @@ let initHistoryDialog = function(title, content) {
         buttons: [{
             label: '关闭',
             action: function(button, e) {
-
-
-
                 historyDialog.hide();
-
             }
         }],
         buttonsAlign: 'right'//按钮居右排放
@@ -315,7 +311,53 @@ let showHistoryDialog = function () {
             }
         });
     }
+};
 
+let initModifyDialog = function(title, content) {
+    modifyDialog = new ht.widget.Dialog();
+    modifyDialog.setConfig({
+        title: title,
+        content: content,
+        width: 500,
+        // height: 300,
+        closable: true,
+        contentPadding: 10,
+        buttons: [{
+            label: '取消',
+            action: function(button, e) {
+                modifyDialog.hide();
+            }
+        },{
+            label: '确定',
+            action: function(button, e) {
+                let node = graphView.sm().getSelection().get(0);
+                if (!node.getTag()) {
+                    alert("当前节点没有配置测点名");
+                    return;
+                }
+                let modify = $("input[name='modify']:checked").val();
+                if (modify === 'realtime') {
+                    node.a('dataType', 'realtime');
+                } else {
+                    node.a('dataType', 'setting');
+                    node.a('dataSetting', $("#setting-value").val());
+                }
+                console.log(modify);
+                modifyDialog.hide();
+            }
+        }],
+        buttonsAlign: 'right'//按钮居右排放
+    });
+};
 
+let showModifyDialog = function () {
 
+    let title = "数据修正";
+    let content = `<div id="node-modify">
+                      <input name="modify" type="radio" value="realtime" checked>使用实时值
+                      <input name="modify" type="radio" value="setting">使用设定值
+                      <input type="text" id="setting-value">
+                  </div>`;
+    initModifyDialog(title, content);
+    modifyDialog.show();
 };
