@@ -5,6 +5,10 @@
     <link href="progress-bar/progress-bar.css" rel="stylesheet"/>
 
     <style>
+        body {
+            background-color: #000;
+            opacity: 0.8;
+        }
     </style>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <script type="text/javascript" src="js/identifier.js"></script>
@@ -44,8 +48,8 @@
             nodeSelected = null;
         let getDataIntervalID = null;
         let progressBar = new ProgressBar();
-        // let startTime = '2020-07-01 00:00:00',
-        //     endTime = '2020-07-01 00:11:00',
+        let startTime = '2020-07-01 00:00:00',
+            endTime = '2020-07-01 00:11:00';
         let interval = project_config.interval;
         let pageMainView = new ht.widget.SplitView (graphView, progressBar.progressDiv, 'v', -100);
         pageMainView.setStatus("cr");
@@ -57,8 +61,8 @@
             // 给显示区域绑定事件
             graphView.mi(function(e) {
                 if (e.kind === 'clickData') {
-                    if (e.data.getTag() === 'DJX') {
-                        window.location.href = 'index.html';
+                    if (e.data.getTag() === 'HS:fd_01_01') {
+                        window.location.href = 'demo2.html';
                     }
                 } else if (e.kind === 'doubleClickData') {
                     showNodeDetails (e.data.getTag(), dataToUse, {x: e.event.x, y: e.event.y}, e.data.a('node.type'));
@@ -72,7 +76,7 @@
             setContextMenu(load_contextmenu_config, graphView);
             // 请求组态图数据以及初始化
             $.getJSON({
-                url: './test.cfd',
+                url: './和田1.cfd',
                 success: res => {
                     json = res;
                     dataModel.deserialize(json);
@@ -116,69 +120,69 @@
          * @param endTime - 结束时间
          * @param interval - 数据间隔
          */
-        // function getHistoryData(nodeArr, startTime, endTime, interval) {
-        //     $.ajax ({
-        //         type: 'POST',
-        //         url: "http://localhost/node-trend.php",
-        //         data: {
-        //             "nodeTagArr": nodeArr,
-        //             "startTime": startTime,
-        //             "endTime": endTime,
-        //             "interval": interval
-        //         },
-        //         dataType: "json",
-        //         success: function (nodeData) {
-        //             let dateResult = dataPretreat(nodeData, startTime, endTime, interval);
-        //
-        //             historyData = dateResult.data;
-        //             progressBar.init(dateResult.timestampArr, progressCallback);
-        //
-        //             if (getDataIntervalID)
-        //                 clearInterval(getDataIntervalID);
-        //
-        //             if (pageMainView) {
-        //                 pageMainView.setStatus("normal");
-        //                 graphView.fitContent(true);
-        //             }
-        //             else {
-        //                 graphView.fitContent(true);
-        //             }
-        //         }
-        //     });
-        // }
-
         function getHistoryData(nodeArr, startTime, endTime, interval) {
-            let timestampArr = [], data = [];
-            let min = 0, hour = 0, timestamp = '', temp = [];
-            for (let i = 0, len = 1200; i < len; i++) {
-                if (i !== 0 && i % 60 === 0) {
-                    min = 0;
-                    hour ++;
+            $.ajax ({
+                type: 'POST',
+                url: "http://localhost/node-trend.php",
+                data: {
+                    "nodeTagArr": nodeArr,
+                    "startTime": startTime,
+                    "endTime": endTime,
+                    "interval": interval
+                },
+                dataType: "json",
+                success: function (nodeData) {
+                    let dateResult = dataPretreat(nodeData, startTime, endTime, interval);
+
+                    historyData = dateResult.data;
+                    progressBar.init(dateResult.timestampArr, progressCallback);
+
+                    if (getDataIntervalID)
+                        clearInterval(getDataIntervalID);
+
+                    if (pageMainView) {
+                        pageMainView.setStatus("normal");
+                        graphView.fitContent(true);
+                    }
+                    else {
+                        graphView.fitContent(true);
+                    }
                 }
-                timestamp = `2020-07-01 ${hour}:${min}:00`;
-                timestampArr.push(timestamp);
-                temp = [
-                    {nodeTag: "HS:fd_zt_01", value: i, timestamp: timestamp, nodeDesc: "柱形图"}
-                ];
-                data.push(temp);
-                min++;
-
-            }
-            console.log(timestampArr);
-            historyData = data;
-            progressBar.init(timestampArr, progressCallback);
-
-            if (getDataIntervalID)
-                clearInterval(getDataIntervalID);
-
-            if (pageMainView) {
-                pageMainView.setStatus("normal");
-                graphView.fitContent(true);
-            }
-            else {
-                graphView.fitContent(true);
-            }
+            });
         }
+
+        // function getHistoryData(nodeArr, startTime, endTime, interval) {
+        //     let timestampArr = [], data = [];
+        //     let min = 0, hour = 0, timestamp = '', temp = [];
+        //     for (let i = 0, len = 482; i < len; i++) {
+        //         if (i !== 0 && i % 60 === 0) {
+        //             min = 0;
+        //             hour ++;
+        //         }
+        //         timestamp = `2020-07-01 ${hour}:${min}:00`;
+        //         timestampArr.push(timestamp);
+        //         temp = [
+        //             {nodeTag: "HS:fd_zt_01", value: i, timestamp: timestamp, nodeDesc: "柱形图"}
+        //         ];
+        //         data.push(temp);
+        //         min++;
+        //
+        //     }
+        //     console.log(timestampArr);
+        //     historyData = data;
+        //     progressBar.init(timestampArr, progressCallback);
+        //
+        //     if (getDataIntervalID)
+        //         clearInterval(getDataIntervalID);
+        //
+        //     if (pageMainView) {
+        //         pageMainView.setStatus("normal");
+        //         graphView.fitContent(true);
+        //     }
+        //     else {
+        //         graphView.fitContent(true);
+        //     }
+        // }
 
         /**
          * setContextMenu 设置右键点击事件
