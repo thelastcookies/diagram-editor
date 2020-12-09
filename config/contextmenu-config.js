@@ -41,7 +41,7 @@ var load_contextmenu_config = [
         label: "查看趋势",
         fordata: 2,
         action: function(item, event) {
-            let nodeArr = getNode (diagramDM);
+            let nodeArr = dataModel.getNodeTags();
             let mainView = document.getElementsByClassName("main")[0];
             $.ajax ({
                 type: 'POST',
