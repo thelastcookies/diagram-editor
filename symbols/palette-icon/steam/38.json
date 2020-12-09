@@ -1,0 +1,52 @@
+{
+  "modified": "Wed Dec 02 2020 14:23:28 GMT+0800 (CST)",
+  "dataBindings": [
+    {
+      "attr": "line.color",
+      "valueType": "Color",
+      "defaultValue": "rgb(0,199,7)"
+    }
+  ],
+  "width": 24,
+  "height": 24,
+  "comps": [
+    {
+      "type": "oval",
+      "background": {
+        "func": "attr@line.color",
+        "value": "rgb(0,199,7)"
+      },
+      "borderWidth": 3,
+      "borderColor": "rgb(0,0,0)",
+      "borderWidthAbsolute": true,
+      "rect": [
+        0,
+        0,
+        24,
+        24
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 1,
+      "borderColor": "rgb(61,61,61)",
+      "points": [
+        4.96705,
+        8.07292,
+        4.96705,
+        21.63532
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 1,
+      "borderColor": "rgb(61,61,61)",
+      "points": [
+        19.03295,
+        2.36468,
+        19.03295,
+        15.96369
+      ]
+    }
+  ]
+}

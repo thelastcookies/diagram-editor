@@ -1,0 +1,329 @@
+{
+  "modified": "Wed Dec 02 2020 14:33:01 GMT+0800 (CST)",
+  "dataBindings": [
+    {
+      "attr": "node.direction",
+      "valueType": "String",
+      "defaultValue": "left"
+    }
+  ],
+  "width": 80,
+  "height": 48,
+  "comps": [
+    {
+      "type": "roundRect",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "gradient": "spread.vertical",
+      "borderWidthAbsolute": true,
+      "cornerRadius": 2,
+      "anchorX": 1.03098,
+      "rotation": {
+        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'right')res=180;\nif(dir === 'left')res=0;\nreturn res/180*Math.PI;\n}",
+        "value": 0
+      },
+      "rect": [
+        7,
+        0,
+        32,
+        28
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "gradient": "spread.vertical",
+      "borderWidthAbsolute": true,
+      "anchorX": 8.75,
+      "rotation": {
+        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'right')res=180;\nif(dir === 'left')res=0;\nreturn res/180*Math.PI;\n}",
+        "value": 0
+      },
+      "rect": [
+        5,
+        7,
+        4,
+        14
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "gradient": "spread.vertical",
+      "borderWidthAbsolute": true,
+      "rotation": {
+        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'right')res=180;\nif(dir === 'left')res=0;\nreturn res/180*Math.PI;\n}",
+        "value": 0
+      },
+      "rect": [
+        39,
+        6,
+        2,
+        16
+      ]
+    },
+    {
+      "type": "trapezoid",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "gradient": "spread.vertical",
+      "borderWidthAbsolute": true,
+      "anchorY": -0.75,
+      "rotation": {
+        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=270;\nif(dir === 'right')res=90;\nif(dir === 'left')res=270;\nreturn res/180*Math.PI;\n}",
+        "value": 0
+      },
+      "rect": [
+        34,
+        16.99999,
+        12,
+        4
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "gradient": "spread.vertical",
+      "borderWidthAbsolute": true,
+      "anchorX": -1.75,
+      "rotation": {
+        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'right')res=180;\nif(dir === 'left')res=0;\nreturn res/180*Math.PI;\n}",
+        "value": 0
+      },
+      "rect": [
+        47,
+        5,
+        4,
+        18
+      ]
+    },
+    {
+      "type": "roundRect",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "gradient": "spread.vertical",
+      "borderWidthAbsolute": true,
+      "cornerRadius": 1,
+      "anchorX": -0.55044,
+      "rotation": {
+        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'right')res=180;\nif(dir === 'left')res=0;\nreturn res/180*Math.PI;\n}",
+        "value": 0
+      },
+      "rect": [
+        51,
+        1,
+        20,
+        26
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderWidthAbsolute": true,
+      "anchorX": 1.2087,
+      "rotation": {
+        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'right')res=180;\nif(dir === 'left')res=0;\nreturn res/180*Math.PI;\n}",
+        "value": 0
+      },
+      "rect": [
+        11,
+        28,
+        24,
+        4
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderWidthAbsolute": true,
+      "anchorX": 1.25,
+      "rotation": {
+        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'right')res=180;\nif(dir === 'left')res=0;\nreturn res/180*Math.PI;\n}",
+        "value": 0
+      },
+      "rect": [
+        15,
+        32,
+        20,
+        4
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderWidthAbsolute": true,
+      "anchorX": 1.03121,
+      "rotation": {
+        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'right')res=180;\nif(dir === 'left')res=0;\nreturn res/180*Math.PI;\n}",
+        "value": 0
+      },
+      "rect": [
+        7,
+        36,
+        32,
+        4
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderWidthAbsolute": true,
+      "anchorX": -0.54912,
+      "rotation": {
+        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'right')res=180;\nif(dir === 'left')res=0;\nreturn res/180*Math.PI;\n}",
+        "value": 0
+      },
+      "rect": [
+        51,
+        32,
+        20,
+        4
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderWidthAbsolute": true,
+      "anchorX": -0.17862,
+      "rotation": {
+        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'right')res=180;\nif(dir === 'left')res=0;\nreturn res/180*Math.PI;\n}",
+        "value": 0
+      },
+      "rect": [
+        45,
+        36,
+        28,
+        4
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "gradient": "spread.vertical",
+      "borderWidthAbsolute": true,
+      "anchorX": -2.205,
+      "rotation": {
+        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'right')res=180;\nif(dir === 'left')res=0;\nreturn res/180*Math.PI;\n}",
+        "value": 0
+      },
+      "rect": [
+        53.25553,
+        18,
+        6,
+        16
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "gradient": "spread.vertical",
+      "borderWidthAbsolute": true,
+      "anchorX": -3.792,
+      "rotation": {
+        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'right')res=180;\nif(dir === 'left')res=0;\nreturn res/180*Math.PI;\n}",
+        "value": 0
+      },
+      "rect": [
+        62.74447,
+        18,
+        6,
+        16
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(0,0,0)",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderWidthAbsolute": true,
+      "anchorX": -3.56388,
+      "rotation": {
+        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'right')res=180;\nif(dir === 'left')res=0;\nreturn res/180*Math.PI;\n}",
+        "value": 0
+      },
+      "rect": [
+        54.25553,
+        19,
+        4,
+        6
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(0,0,0)",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderWidthAbsolute": true,
+      "anchorX": -5.935,
+      "rotation": {
+        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'right')res=180;\nif(dir === 'left')res=0;\nreturn res/180*Math.PI;\n}",
+        "value": 0
+      },
+      "rect": [
+        63.74447,
+        19,
+        4,
+        6
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "gradient": "spread.vertical",
+      "borderWidthAbsolute": true,
+      "anchorX": 9.75,
+      "rotation": {
+        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'right')res=180;\nif(dir === 'left')res=0;\nreturn res/180*Math.PI;\n}",
+        "value": 0
+      },
+      "rect": [
+        1,
+        5,
+        4,
+        18
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(61,61,61)",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderWidthAbsolute": true,
+      "rotation": {
+        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'right')res=180;\nif(dir === 'left')res=0;\nreturn res/180*Math.PI;\n}",
+        "value": 0
+      },
+      "rect": [
+        0,
+        40,
+        80,
+        8
+      ]
+    }
+  ]
+}

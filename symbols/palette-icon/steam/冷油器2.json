@@ -1,0 +1,47 @@
+{
+  "modified": "Wed Dec 02 2020 14:41:13 GMT+0800 (CST)",
+  "width": 54,
+  "height": 76,
+  "comps": [
+    {
+      "type": "rect",
+      "background": "rgba(0,153,61,0.1)",
+      "borderWidth": 1.5,
+      "borderColor": "#009A3D",
+      "rect": [
+        0.00007,
+        0,
+        54,
+        76
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 1.5,
+      "borderColor": "#009A3D",
+      "rotation": 3.14159,
+      "points": [
+        41.53786,
+        37.58537,
+        0.00003,
+        37.58526,
+        29.54108,
+        61.71953
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 1.5,
+      "borderColor": "#009A3D",
+      "rotation": 3.14159,
+      "points": [
+        29.54128,
+        14.00001,
+        0.0001,
+        38.28118,
+        41.53793,
+        38.28129
+      ]
+    }
+  ]
+}

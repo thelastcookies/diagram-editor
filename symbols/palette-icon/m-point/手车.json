@@ -14,8 +14,13 @@
     {
       "attr": "node.state",
       "valueType": "Boolean",
-      "defaultValue": true,
+      "defaultValue": false,
       "name": "手车状态"
+    },
+    {
+      "attr": "line.color",
+      "valueType": "Color",
+      "defaultValue": "rgb(255, 0, 0)"
     }
   ],
   "width": 19,
@@ -24,7 +29,10 @@
     {
       "type": "shape",
       "borderWidth": 2,
-      "borderColor": "rgb(0,255,0)",
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "#D8D8D8"
+      },
       "visible": {
         "func": "__ht__function(data, view) {\n return !data.a('node.state') \n}",
         "value": true
@@ -44,7 +52,7 @@
       "type": "shape",
       "borderWidth": 2,
       "borderColor": {
-        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : 'rgb(0,255,0)';\n}",
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : data.a('line.color');\n}",
         "value": "rgb(255,0,0)"
       },
       "displayName": "箭头",
@@ -62,7 +70,7 @@
       "type": "shape",
       "borderWidth": 2,
       "borderColor": {
-        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : 'rgb(0,255,0)';\n}",
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : data.a('line.color');\n}",
         "value": "rgb(255,0,0)"
       },
       "points": [
@@ -76,7 +84,7 @@
       "type": "shape",
       "borderWidth": 2,
       "borderColor": {
-        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : 'rgb(0,255,0)';\n}",
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : data.a('line.color');\n}",
         "value": "rgb(255,0,0)"
       },
       "points": [
@@ -89,7 +97,7 @@
     {
       "type": "shape",
       "borderWidth": 2,
-      "borderColor": "rgb(255,0,0)",
+      "borderColor": "#FF0000",
       "visible": {
         "func": "__ht__function(data, view) {\n return data.a('node.state') \n}",
         "value": true

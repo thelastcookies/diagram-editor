@@ -1,0 +1,221 @@
+{
+  "modified": "Wed Dec 02 2020 14:50:03 GMT+0800 (CST)",
+  "width": 96,
+  "height": 68,
+  "comps": [
+    {
+      "type": "shape",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "gradient": "spread.horizontal",
+      "borderWidthAbsolute": true,
+      "anchorY": 1.44143,
+      "rotation": 4.71239,
+      "closePath": true,
+      "points": [
+        3.96358,
+        5.03,
+        3.96358,
+        5.03,
+        4.43158,
+        -3.96354,
+        12.96358,
+        -3.96354,
+        21.49558,
+        -3.96354,
+        21.96358,
+        5.03,
+        21.96358,
+        5.03
+      ],
+      "segments": [
+        1,
+        4,
+        4
+      ]
+    },
+    {
+      "type": "shape",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "gradient": "spread.horizontal",
+      "borderWidthAbsolute": true,
+      "anchorY": 1.44143,
+      "rotation": 1.5708,
+      "closePath": true,
+      "points": [
+        74.0364,
+        5.02996,
+        74.0364,
+        5.02996,
+        74.5044,
+        -3.96358,
+        83.0364,
+        -3.96358,
+        91.5684,
+        -3.96358,
+        92.0364,
+        5.02996,
+        92.0364,
+        5.02996
+      ],
+      "segments": [
+        1,
+        4,
+        4
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "gradient": "spread.vertical",
+      "borderWidthAbsolute": true,
+      "rect": [
+        8.99357,
+        0,
+        78.01282,
+        18
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "gradient": "spread.horizontal",
+      "borderWidthAbsolute": true,
+      "rect": [
+        25.09732,
+        18.00003,
+        27.4739,
+        18
+      ]
+    },
+    {
+      "type": "shape",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "gradient": "spread.horizontal",
+      "borderWidthAbsolute": true,
+      "anchorY": 1.44143,
+      "rotation": 4.71239,
+      "closePath": true,
+      "points": [
+        3.96356,
+        41.03001,
+        3.96356,
+        41.03001,
+        4.43156,
+        32.03646,
+        12.96356,
+        32.03646,
+        21.49556,
+        32.03646,
+        21.96356,
+        41.03001,
+        21.96356,
+        41.03001
+      ],
+      "segments": [
+        1,
+        4,
+        4
+      ]
+    },
+    {
+      "type": "shape",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "gradient": "spread.horizontal",
+      "borderWidthAbsolute": true,
+      "anchorY": 1.44143,
+      "rotation": 1.5708,
+      "closePath": true,
+      "points": [
+        74.03637,
+        41.02997,
+        74.03637,
+        41.02997,
+        74.50437,
+        32.03642,
+        83.03637,
+        32.03642,
+        91.56837,
+        32.03642,
+        92.03637,
+        41.02997,
+        92.03637,
+        41.02997
+      ],
+      "segments": [
+        1,
+        4,
+        4
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "gradient": "spread.vertical",
+      "borderWidthAbsolute": true,
+      "rect": [
+        8.99354,
+        36.00001,
+        78.01282,
+        18
+      ]
+    },
+    {
+      "type": "shape",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderWidthAbsolute": true,
+      "closePath": true,
+      "points": [
+        13.63819,
+        53.9598,
+        9.14472,
+        68.01724,
+        86.99492,
+        68.01724,
+        82.46007,
+        53.9598
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(163,163,163)",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderWidthAbsolute": true,
+      "rect": [
+        66.34824,
+        18.00003,
+        12.04414,
+        18
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(163,163,163)",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderWidthAbsolute": true,
+      "rect": [
+        19.05912,
+        18,
+        6.0382,
+        18
+      ]
+    }
+  ]
+}

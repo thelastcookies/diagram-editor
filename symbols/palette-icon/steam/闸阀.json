@@ -12,9 +12,9 @@
       "defaultValue": "switch"
     },
     {
-      "attr": "node.color",
+      "attr": "line.color",
       "valueType": "Color",
-      "defaultValue": "rgb(255,0,0)"
+      "defaultValue": "#D8D8D8"
     },
     {
       "attr": "node.state",
@@ -28,7 +28,10 @@
   "comps": [
     {
       "type": "triangle",
-      "background": "#D8D8D8",
+      "background": {
+        "func": "attr@line.color",
+        "value": "#D8D8D8"
+      },
       "borderWidth": 1,
       "borderColor": {
         "func": "attr@line.color",
@@ -44,7 +47,10 @@
     },
     {
       "type": "triangle",
-      "background": "#D8D8D8",
+      "background": {
+        "func": "attr@line.color",
+        "value": "#D8D8D8"
+      },
       "borderWidth": 1,
       "borderColor": {
         "func": "attr@line.color",
