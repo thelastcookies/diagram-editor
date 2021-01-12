@@ -1,0 +1,137 @@
+{
+  "modified": "Mon Jan 11 2021 16:18:01 GMT+0800 (CST)",
+  "width": 132,
+  "height": 128,
+  "comps": [
+    {
+      "type": "oval",
+      "background": "rgb(191,172,63)",
+      "borderWidth": 1,
+      "borderColor": "rgb(61,61,61)",
+      "rect": [
+        0,
+        88,
+        132,
+        40
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(191,172,63)",
+      "borderColor": "#979797",
+      "rect": [
+        0,
+        20,
+        132,
+        88
+      ]
+    },
+    {
+      "type": "oval",
+      "background": "rgb(191,172,63)",
+      "borderWidth": 1,
+      "borderColor": "rgb(61,61,61)",
+      "rect": [
+        0,
+        0,
+        132,
+        40
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgba(217,217,217,0)",
+      "borderWidth": 1,
+      "borderColor": "rgb(61,61,61)",
+      "borderWidthAbsolute": true,
+      "rect": [
+        22,
+        54.19521,
+        88,
+        48
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(255,255,255)",
+      "borderColor": "#979797",
+      "rotation": 5.20641,
+      "rect": [
+        64,
+        43.19521,
+        4,
+        70
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(255,255,255)",
+      "borderColor": "#979797",
+      "rotation": 1.0472,
+      "rect": [
+        44.76443,
+        51.72313,
+        2,
+        30
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(255,255,255)",
+      "borderColor": "#979797",
+      "rotation": 1.0472,
+      "rect": [
+        58.25481,
+        59.37118,
+        2,
+        30
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(255,255,255)",
+      "borderColor": "#979797",
+      "rotation": 1.0472,
+      "rect": [
+        71.74519,
+        67.01924,
+        2,
+        30
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(255,255,255)",
+      "borderColor": "#979797",
+      "rotation": 1.0472,
+      "rect": [
+        85.23557,
+        74.6673,
+        2,
+        30
+      ]
+    },
+    {
+      "type": "text",
+      "text": "0",
+      "color": "rgb(255,255,255)",
+      "rect": [
+        97.76352,
+        56.72313,
+        10,
+        10
+      ]
+    },
+    {
+      "type": "text",
+      "text": "0",
+      "color": "rgb(255,255,255)",
+      "rect": [
+        24.23648,
+        89.6673,
+        10,
+        10
+      ]
+    }
+  ]
+}

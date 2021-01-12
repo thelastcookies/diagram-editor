@@ -1,0 +1,115 @@
+{
+  "modified": "Mon Jan 11 2021 15:34:46 GMT+0800 (CST)",
+  "width": 240,
+  "height": 182,
+  "comps": [
+    {
+      "type": "rect",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 1,
+      "borderColor": "rgb(61,61,61)",
+      "borderWidthAbsolute": true,
+      "rect": [
+        10,
+        10,
+        220,
+        76
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 1,
+      "borderColor": "rgb(61,61,61)",
+      "borderWidthAbsolute": true,
+      "rect": [
+        0,
+        0,
+        240,
+        10
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 1,
+      "borderColor": "rgb(61,61,61)",
+      "borderWidthAbsolute": true,
+      "rect": [
+        10,
+        86,
+        220,
+        10
+      ]
+    },
+    {
+      "type": "trapezoid",
+      "background": "#efefef",
+      "borderWidth": 1,
+      "borderColor": "rgb(61,61,61)",
+      "borderWidthAbsolute": true,
+      "rotation": 3.14159,
+      "rect": [
+        10,
+        96,
+        220,
+        76
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 1,
+      "borderColor": "rgb(61,61,61)",
+      "borderWidthAbsolute": true,
+      "rect": [
+        64.75967,
+        172,
+        110.47237,
+        10
+      ]
+    },
+    {
+      "type": "rightTriangle",
+      "background": "#efefef",
+      "borderWidth": 1,
+      "borderColor": "rgb(61,61,61)",
+      "borderWidthAbsolute": true,
+      "rotation": 4.71239,
+      "rect": [
+        155.5,
+        11.5,
+        76,
+        73
+      ]
+    },
+    {
+      "type": "rightTriangle",
+      "background": "#efefef",
+      "borderWidth": 1,
+      "borderColor": "rgb(61,61,61)",
+      "borderWidthAbsolute": true,
+      "rotation": 4.71239,
+      "rect": [
+        82,
+        11.5,
+        76,
+        73
+      ]
+    },
+    {
+      "type": "rightTriangle",
+      "background": "#efefef",
+      "borderWidth": 1,
+      "borderColor": "rgb(61,61,61)",
+      "borderWidthAbsolute": true,
+      "rotation": 4.71239,
+      "rect": [
+        8.5,
+        11.5,
+        76,
+        73
+      ]
+    }
+  ]
+}

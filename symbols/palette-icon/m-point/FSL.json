@@ -1,0 +1,217 @@
+{
+  "modified": "Tue Dec 22 2020 14:50:08 GMT+0800 (CST)",
+  "dataBindings": [
+    {
+      "attr": "node.type",
+      "valueType": "String",
+      "defaultValue": "m-point"
+    },
+    {
+      "attr": "node.name",
+      "valueType": "String",
+      "defaultValue": "switch"
+    },
+    {
+      "attr": "node.color",
+      "valueType": "Color",
+      "defaultValue": "rgb(255,0,0)"
+    },
+    {
+      "attr": "node.state",
+      "valueType": "Boolean",
+      "defaultValue": false,
+      "name": "开关状态"
+    }
+  ],
+  "width": 52,
+  "height": 40,
+  "comps": [
+    {
+      "type": "rect",
+      "background": "rgba(217,217,217,0)",
+      "borderWidth": 1,
+      "borderColor": "#000",
+      "rect": [
+        8,
+        0,
+        30,
+        40
+      ]
+    },
+    {
+      "type": "text",
+      "text": "F",
+      "align": "center",
+      "color": "rgb(255,0,0)",
+      "font": "8px arial, sans-serif",
+      "rect": [
+        0,
+        0,
+        8,
+        8
+      ]
+    },
+    {
+      "type": "text",
+      "text": "L",
+      "align": "center",
+      "color": "rgb(255,255,0)",
+      "font": "8px arial, sans-serif",
+      "rect": [
+        0,
+        32,
+        8,
+        8
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(255,255,0)",
+      "borderColor": "#979797",
+      "rect": [
+        39.2987,
+        28,
+        12,
+        12
+      ]
+    },
+    {
+      "type": "circle",
+      "background": "rgb(0,0,0)",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "rect": [
+        43.93523,
+        28.89474,
+        2.34664,
+        2.33202
+      ]
+    },
+    {
+      "type": "shape",
+      "background": "rgb(0,0,0)",
+      "borderWidth": 0.2,
+      "borderColor": "rgb(0,0,0)",
+      "closePath": true,
+      "points": [
+        44.67399,
+        31.4537,
+        44.67399,
+        31.96643,
+        42.68958,
+        33.14966,
+        42.53083,
+        33.49302,
+        42.53083,
+        33.97792,
+        43.2849,
+        34.37233,
+        44.67399,
+        34.37233,
+        44.47555,
+        35.94997,
+        44.03898,
+        37.52762,
+        43.2849,
+        38.4742,
+        43.08646,
+        39.10526,
+        43.9596,
+        39.10526,
+        45.11056,
+        39.10526,
+        44.9915,
+        38.67141,
+        43.9596,
+        38.63196,
+        44.67399,
+        37.6065,
+        45.22963,
+        35.94997,
+        46.38058,
+        37.21209,
+        45.86464,
+        38.11923,
+        45.70588,
+        38.67141,
+        47.69029,
+        38.67141,
+        47.3331,
+        38.04035,
+        46.45996,
+        38.07979,
+        47.09497,
+        36.77824,
+        45.86464,
+        35.51612,
+        46.02339,
+        33.74128,
+        45.94401,
+        32.59749,
+        47.05528,
+        32.87357,
+        49.00001,
+        32.91301,
+        49.00001,
+        32.47916,
+        47.0156,
+        32.36084,
+        45.22963,
+        31.84811,
+        45.18994,
+        31.4537
+      ]
+    },
+    {
+      "type": "shape",
+      "background": "rgb(255,255,0)",
+      "borderColor": "#979797",
+      "closePath": true,
+      "points": [
+        44.56094,
+        32.82426,
+        44.56094,
+        33.86129,
+        43.92814,
+        33.86129,
+        43.1387,
+        33.52
+      ]
+    },
+    {
+      "type": "circle",
+      "background": "rgb(255,0,0)",
+      "borderColor": "#979797",
+      "rect": [
+        39.2987,
+        28,
+        12,
+        12
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(0,0,0)",
+      "borderWidth": 1,
+      "borderColor": "rgb(0,0,0)",
+      "rect": [
+        44.5487,
+        30.11157,
+        1.5,
+        5
+      ]
+    },
+    {
+      "type": "circle",
+      "background": "rgb(0,0,0)",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "rect": [
+        44.2987,
+        36.70712,
+        2,
+        2
+      ]
+    }
+  ]
+}

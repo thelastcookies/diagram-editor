@@ -99,6 +99,7 @@ class ProgressBar {
             this.mouseMove();
         });
         $(document).on("mouseup", e => {
+            console.log("off");
             $(document).off ("mousemove"); //弹起鼠标不做任何操作
         });
         $("#play-btn").on("click", () => {

@@ -1,0 +1,38 @@
+{
+  "modified": "Tue Dec 22 2020 19:15:49 GMT+0800 (CST)",
+  "dataBindings": [
+    {
+      "attr": "node.type",
+      "valueType": "String",
+      "defaultValue": "m-point"
+    }
+  ],
+  "width": 23,
+  "height": 23,
+  "comps": [
+    {
+      "type": "oval",
+      "background": "rgb(226,250,87)",
+      "borderWidth": 1,
+      "borderColor": "rgb(0,0,0)",
+      "rect": [
+        0,
+        0,
+        23,
+        23
+      ]
+    },
+    {
+      "type": "text",
+      "text": "-",
+      "align": "center",
+      "font": "20px arial, sans-serif",
+      "rect": [
+        0,
+        6.5,
+        23,
+        5
+      ]
+    }
+  ]
+}

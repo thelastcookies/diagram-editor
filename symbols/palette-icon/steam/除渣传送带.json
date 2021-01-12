@@ -1,0 +1,1274 @@
+{
+  "modified": "Tue Dec 22 2020 16:23:09 GMT+0800 (CST)",
+  "width": 416,
+  "height": 630,
+  "comps": [
+    {
+      "type": "rect",
+      "background": "rgba(217,217,217,0)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rect": [
+        200.18087,
+        2,
+        41,
+        626
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "points": [
+        350.95949,
+        494.16131,
+        414.95949,
+        494.16131
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "points": [
+        414.95949,
+        494.16131,
+        414.95949,
+        584.16131
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "points": [
+        350.95949,
+        494.16131,
+        350.95949,
+        529.16131
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "points": [
+        382.95949,
+        584.16131,
+        414.95949,
+        584.16131
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "points": [
+        241.07615,
+        615.13954,
+        282.07615,
+        615.13954
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "points": [
+        241.18087,
+        627.65795,
+        383.09801,
+        584.11586
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "points": [
+        350.95949,
+        528.68681,
+        252.56641,
+        615.46813
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgba(217,217,217,0)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rect": [
+        1.15031,
+        128.00366,
+        41,
+        8
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "points": [
+        1.04051,
+        128.06876,
+        199.91837,
+        2
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "points": [
+        41.80169,
+        128.24049,
+        199.86316,
+        42.4
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 1.5708,
+      "rect": [
+        221.57615,
+        19.77582,
+        14,
+        16
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 4.71239,
+      "rect": [
+        205.57615,
+        19.77582,
+        14,
+        16
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 1.5708,
+      "rect": [
+        221.57615,
+        5.77582,
+        14,
+        16
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 4.71239,
+      "rect": [
+        205.57615,
+        5.77582,
+        14,
+        16
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 1.5708,
+      "rect": [
+        221.57615,
+        47.77582,
+        14,
+        16
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 4.71239,
+      "rect": [
+        205.57615,
+        47.77582,
+        14,
+        16
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 1.5708,
+      "rect": [
+        221.57615,
+        33.77582,
+        14,
+        16
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 4.71239,
+      "rect": [
+        205.57615,
+        33.77582,
+        14,
+        16
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 1.5708,
+      "rect": [
+        221.57615,
+        75.77582,
+        14,
+        16
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 4.71239,
+      "rect": [
+        205.57615,
+        75.77582,
+        14,
+        16
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 1.5708,
+      "rect": [
+        221.57615,
+        61.77582,
+        14,
+        16
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 4.71239,
+      "rect": [
+        205.57615,
+        61.77582,
+        14,
+        16
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 1.5708,
+      "rect": [
+        221.57615,
+        103.77582,
+        14,
+        16
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 4.71239,
+      "rect": [
+        205.57615,
+        103.77582,
+        14,
+        16
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 1.5708,
+      "rect": [
+        221.57615,
+        89.77582,
+        14,
+        16
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 4.71239,
+      "rect": [
+        205.57615,
+        89.77582,
+        14,
+        16
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 1.5708,
+      "rect": [
+        221.57615,
+        131.77582,
+        14,
+        16
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 4.71239,
+      "rect": [
+        205.57615,
+        131.77582,
+        14,
+        16
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 1.5708,
+      "rect": [
+        221.57615,
+        117.77582,
+        14,
+        16
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 4.71239,
+      "rect": [
+        205.57615,
+        117.77582,
+        14,
+        16
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 1.5708,
+      "rect": [
+        221.57615,
+        159.77582,
+        14,
+        16
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 4.71239,
+      "rect": [
+        205.57615,
+        159.77582,
+        14,
+        16
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 1.5708,
+      "rect": [
+        221.57615,
+        145.77582,
+        14,
+        16
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 4.71239,
+      "rect": [
+        205.57615,
+        145.77582,
+        14,
+        16
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 1.5708,
+      "rect": [
+        221.57615,
+        187.77582,
+        14,
+        16
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 4.71239,
+      "rect": [
+        205.57615,
+        187.77582,
+        14,
+        16
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 1.5708,
+      "rect": [
+        221.57615,
+        173.77582,
+        14,
+        16
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 4.71239,
+      "rect": [
+        205.57615,
+        173.77582,
+        14,
+        16
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 1.5708,
+      "rect": [
+        221.57615,
+        215.77582,
+        14,
+        16
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 4.71239,
+      "rect": [
+        205.57615,
+        215.77582,
+        14,
+        16
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 1.5708,
+      "rect": [
+        221.57615,
+        201.77582,
+        14,
+        16
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 4.71239,
+      "rect": [
+        205.57615,
+        201.77582,
+        14,
+        16
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 1.5708,
+      "rect": [
+        221.57615,
+        243.77582,
+        14,
+        16
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 4.71239,
+      "rect": [
+        205.57615,
+        243.77582,
+        14,
+        16
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 1.5708,
+      "rect": [
+        221.57615,
+        229.77582,
+        14,
+        16
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 4.71239,
+      "rect": [
+        205.57615,
+        229.77582,
+        14,
+        16
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 1.5708,
+      "rect": [
+        221.57615,
+        271.77582,
+        14,
+        16
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 4.71239,
+      "rect": [
+        205.57615,
+        271.77582,
+        14,
+        16
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 1.5708,
+      "rect": [
+        221.57615,
+        257.77582,
+        14,
+        16
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 4.71239,
+      "rect": [
+        205.57615,
+        257.77582,
+        14,
+        16
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 1.5708,
+      "rect": [
+        221.57615,
+        299.77582,
+        14,
+        16
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 4.71239,
+      "rect": [
+        205.57615,
+        299.77582,
+        14,
+        16
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 1.5708,
+      "rect": [
+        221.57615,
+        285.77582,
+        14,
+        16
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 4.71239,
+      "rect": [
+        205.57615,
+        285.77582,
+        14,
+        16
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 1.5708,
+      "rect": [
+        221.57615,
+        327.77582,
+        14,
+        16
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 4.71239,
+      "rect": [
+        205.57615,
+        327.77582,
+        14,
+        16
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 1.5708,
+      "rect": [
+        221.57615,
+        313.77582,
+        14,
+        16
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 4.71239,
+      "rect": [
+        205.57615,
+        313.77582,
+        14,
+        16
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 1.5708,
+      "rect": [
+        221.57615,
+        355.77582,
+        14,
+        16
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 4.71239,
+      "rect": [
+        205.57615,
+        355.77582,
+        14,
+        16
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 1.5708,
+      "rect": [
+        221.57615,
+        341.77582,
+        14,
+        16
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 4.71239,
+      "rect": [
+        205.57615,
+        341.77582,
+        14,
+        16
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 1.5708,
+      "rect": [
+        221.57615,
+        383.77582,
+        14,
+        16
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 4.71239,
+      "rect": [
+        205.57615,
+        383.77582,
+        14,
+        16
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 1.5708,
+      "rect": [
+        221.57615,
+        369.77582,
+        14,
+        16
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 4.71239,
+      "rect": [
+        205.57615,
+        369.77582,
+        14,
+        16
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 1.5708,
+      "rect": [
+        221.57615,
+        411.77582,
+        14,
+        16
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 4.71239,
+      "rect": [
+        205.57615,
+        411.77582,
+        14,
+        16
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 1.5708,
+      "rect": [
+        221.57615,
+        397.77582,
+        14,
+        16
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 4.71239,
+      "rect": [
+        205.57615,
+        397.77582,
+        14,
+        16
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 1.5708,
+      "rect": [
+        221.57615,
+        439.77582,
+        14,
+        16
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 4.71239,
+      "rect": [
+        205.57615,
+        439.77582,
+        14,
+        16
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 1.5708,
+      "rect": [
+        221.57615,
+        425.77582,
+        14,
+        16
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 4.71239,
+      "rect": [
+        205.57615,
+        425.77582,
+        14,
+        16
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 1.5708,
+      "rect": [
+        221.57615,
+        467.77582,
+        14,
+        16
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 4.71239,
+      "rect": [
+        205.57615,
+        467.77582,
+        14,
+        16
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 1.5708,
+      "rect": [
+        221.57615,
+        453.77582,
+        14,
+        16
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 4.71239,
+      "rect": [
+        205.57615,
+        453.77582,
+        14,
+        16
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 1.5708,
+      "rect": [
+        221.57615,
+        495.77582,
+        14,
+        16
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 4.71239,
+      "rect": [
+        205.57615,
+        495.77582,
+        14,
+        16
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 1.5708,
+      "rect": [
+        221.57615,
+        481.77582,
+        14,
+        16
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 4.71239,
+      "rect": [
+        205.57615,
+        481.77582,
+        14,
+        16
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 1.5708,
+      "rect": [
+        221.57615,
+        523.77582,
+        14,
+        16
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 4.71239,
+      "rect": [
+        205.57615,
+        523.77582,
+        14,
+        16
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 1.5708,
+      "rect": [
+        221.57615,
+        509.77582,
+        14,
+        16
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 4.71239,
+      "rect": [
+        205.57615,
+        509.77582,
+        14,
+        16
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 1.5708,
+      "rect": [
+        221.57615,
+        551.77582,
+        14,
+        16
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 4.71239,
+      "rect": [
+        205.57615,
+        551.77582,
+        14,
+        16
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 1.5708,
+      "rect": [
+        221.57615,
+        537.77582,
+        14,
+        16
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 4.71239,
+      "rect": [
+        205.57615,
+        537.77582,
+        14,
+        16
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 1.5708,
+      "rect": [
+        221.57615,
+        579.77582,
+        14,
+        16
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 4.71239,
+      "rect": [
+        205.57615,
+        579.77582,
+        14,
+        16
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 1.5708,
+      "rect": [
+        221.57615,
+        565.77582,
+        14,
+        16
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 4.71239,
+      "rect": [
+        205.57615,
+        565.77582,
+        14,
+        16
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 1.5708,
+      "rect": [
+        221.57615,
+        607.77582,
+        14,
+        16
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 4.71239,
+      "rect": [
+        205.57615,
+        607.77582,
+        14,
+        16
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 1.5708,
+      "rect": [
+        221.57615,
+        593.77582,
+        14,
+        16
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rotation": 4.71239,
+      "rect": [
+        205.57615,
+        593.77582,
+        14,
+        16
+      ]
+    }
+  ]
+}

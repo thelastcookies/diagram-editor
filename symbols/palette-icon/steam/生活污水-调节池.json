@@ -1,0 +1,104 @@
+{
+  "modified": "Mon Jan 11 2021 16:12:11 GMT+0800 (CST)",
+  "width": 320,
+  "height": 152,
+  "comps": [
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 1,
+      "borderColor": "rgb(61,61,61)",
+      "borderWidthAbsolute": true,
+      "rect": [
+        0,
+        144,
+        320,
+        8
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 1,
+      "borderColor": "rgb(61,61,61)",
+      "borderWidthAbsolute": true,
+      "rect": [
+        10,
+        0,
+        300,
+        144
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(191,172,63)",
+      "borderColor": "rgb(61,61,61)",
+      "borderWidthAbsolute": true,
+      "rect": [
+        15,
+        5,
+        290,
+        134
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderColor": "rgb(61,61,61)",
+      "borderWidthAbsolute": true,
+      "rect": [
+        208,
+        0.5,
+        8,
+        143
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(85,38,224)",
+      "borderColor": "rgb(61,61,61)",
+      "borderWidthAbsolute": true,
+      "rotation": 5.68201,
+      "rect": [
+        256.58858,
+        -5.53667,
+        8,
+        146
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 3,
+      "borderColor": "rgb(255,255,255)",
+      "dash": true,
+      "dashPattern": [
+        4,
+        4
+      ],
+      "dashColor": "rgb(191,172,63)",
+      "points": [
+        227.03919,
+        6.25516,
+        303.15416,
+        116.266
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 3,
+      "borderColor": "rgb(255,255,255)",
+      "dash": true,
+      "dashPattern": [
+        4,
+        4
+      ],
+      "dashColor": "rgb(191,172,63)",
+      "points": [
+        217.63492,
+        19.5592,
+        296.69702,
+        133.23684
+      ]
+    }
+  ]
+}

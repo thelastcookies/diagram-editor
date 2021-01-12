@@ -1,11 +1,21 @@
 {
   "modified": "Thu Nov 05 2020 15:10:52 GMT+0800 (CST)",
+  "dataBindings": [
+    {
+      "attr": "line.color",
+      "valueType": "Color",
+      "defaultValue": "rgba(217,217,217,0)"
+    }
+  ],
   "width": 192,
   "height": 160,
   "comps": [
     {
       "type": "rect",
-      "background": "rgba(217,217,217,0)",
+      "background": {
+        "func": "attr@line.color",
+        "value": "rgba(217,217,217,0)"
+      },
       "borderWidth": 1,
       "borderColor": "rgb(255,255,255)",
       "rect": [

@@ -1,0 +1,41 @@
+{
+  "modified": "Fri Jan 08 2021 13:35:57 GMT+0800 (CST)",
+  "dataBindings": [
+    {
+      "attr": "node.type",
+      "valueType": "String",
+      "defaultValue": "m-point"
+    },
+    {
+      "attr": "node.name",
+      "valueType": "String",
+      "defaultValue": "pump"
+    },
+    {
+      "attr": "node.state",
+      "valueType": "Boolean",
+      "defaultValue": false,
+      "name": "告警状态"
+    }
+  ],
+  "width": 24,
+  "height": 24,
+  "comps": [
+    {
+      "type": "oval",
+      "background": {
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : 'rgb(0,255,0)';\n}",
+        "value": "rgb(0,255,0)"
+      },
+      "borderWidth": 1,
+      "borderColor": "rgb(61,61,61)",
+      "borderWidthAbsolute": true,
+      "rect": [
+        0,
+        0,
+        24,
+        24
+      ]
+    }
+  ]
+}

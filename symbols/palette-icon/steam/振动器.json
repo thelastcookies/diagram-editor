@@ -1,0 +1,105 @@
+{
+  "modified": "Mon Jan 11 2021 15:18:29 GMT+0800 (CST)",
+  "width": 86,
+  "height": 56,
+  "comps": [
+    {
+      "type": "rect",
+      "background": "rgb(255,255,0)",
+      "borderWidth": 0.5,
+      "borderColor": "#979797",
+      "rect": [
+        69.45811,
+        6.3288,
+        16,
+        16
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(255,0,0)",
+      "borderWidth": 0.5,
+      "borderColor": "#979797",
+      "rect": [
+        69.45811,
+        33.6712,
+        16,
+        16
+      ]
+    },
+    {
+      "type": "text",
+      "text": "M",
+      "align": "center",
+      "font": "9px arial, sans-serif",
+      "rect": [
+        72.45811,
+        9.60166,
+        10,
+        10
+      ]
+    },
+    {
+      "type": "text",
+      "text": "E",
+      "align": "center",
+      "font": "9px arial, sans-serif",
+      "rect": [
+        72.45811,
+        37.09067,
+        10,
+        10
+      ]
+    },
+    {
+      "type": "shape",
+      "background": "#D8D8D8",
+      "borderColor": "#979797",
+      "closePath": true,
+      "points": [
+        18.97937,
+        0,
+        42.97937,
+        0,
+        42.97937,
+        24.45626,
+        30.99937,
+        34.22,
+        18.97937,
+        24.45626
+      ]
+    },
+    {
+      "type": "shape",
+      "background": "#D8D8D8",
+      "borderColor": "#979797",
+      "closePath": true,
+      "points": [
+        18.79118,
+        25.10843,
+        30.57135,
+        34.7949,
+        15.94045,
+        56.04,
+        0,
+        56.04
+      ]
+    },
+    {
+      "type": "shape",
+      "background": "#D8D8D8",
+      "borderColor": "#979797",
+      "closePath": true,
+      "points": [
+        43.20966,
+        25.01042,
+        31.42045,
+        34.82,
+        46.01236,
+        55.97109,
+        62.02045,
+        55.97109
+      ]
+    }
+  ]
+}

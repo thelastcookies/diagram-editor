@@ -1,0 +1,65 @@
+{
+  "modified": "Tue Dec 22 2020 18:32:46 GMT+0800 (CST)",
+  "dataBindings": [
+    {
+      "attr": "node.type",
+      "valueType": "String",
+      "defaultValue": "m-point"
+    }
+  ],
+  "width": 86,
+  "height": 32,
+  "comps": [
+    {
+      "type": "rect",
+      "background": "rgb(0,199,7)",
+      "borderWidth": 1,
+      "borderColor": "rgb(0,0,0)",
+      "rect": [
+        0,
+        0,
+        86,
+        32
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 1,
+      "borderColor": "rgb(0,0,0)",
+      "points": [
+        28.7,
+        0.20202,
+        42.90761,
+        31.83957,
+        57.34589,
+        0.20202
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 1,
+      "borderColor": "rgb(0,0,0)",
+      "points": [
+        57.34589,
+        0,
+        71.5535,
+        31.63755,
+        85.99178,
+        0
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 1,
+      "borderColor": "rgb(0,0,0)",
+      "points": [
+        0.05411,
+        0,
+        14.26173,
+        31.63755,
+        28.7,
+        0
+      ]
+    }
+  ]
+}

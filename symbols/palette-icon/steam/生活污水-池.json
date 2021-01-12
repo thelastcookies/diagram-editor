@@ -1,0 +1,55 @@
+{
+  "modified": "Mon Jan 11 2021 16:19:54 GMT+0800 (CST)",
+  "dataBindings": [
+    {
+      "attr": "line.color",
+      "valueType": "Color",
+      "defaultValue": "rgb(191,172,63)"
+    }
+  ],
+  "width": 120,
+  "height": 88,
+  "comps": [
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 1,
+      "borderColor": "rgb(61,61,61)",
+      "borderWidthAbsolute": true,
+      "rect": [
+        0,
+        83.36842,
+        120,
+        4.63158
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 1,
+      "borderColor": "rgb(61,61,61)",
+      "borderWidthAbsolute": true,
+      "rect": [
+        3.75,
+        0,
+        112.5,
+        83.36842
+      ]
+    },
+    {
+      "type": "rect",
+      "background": {
+        "func": "attr@line.color",
+        "value": "rgb(191,172,63)"
+      },
+      "borderColor": "rgb(61,61,61)",
+      "borderWidthAbsolute": true,
+      "rect": [
+        7,
+        3.68421,
+        106,
+        76
+      ]
+    }
+  ]
+}
