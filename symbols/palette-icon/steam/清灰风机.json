@@ -1,0 +1,315 @@
+{
+  "modified": "Thu Feb 04 2021 16:32:10 GMT+0800 (CST)",
+  "dataBindings": [
+    {
+      "attr": "node.direction",
+      "valueType": "String",
+      "defaultValue": "right"
+    }
+  ],
+  "width": 52,
+  "height": 44,
+  "comps": [
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderJoin": "miter",
+      "gradient": "spread.horizontal",
+      "borderWidthAbsolute": true,
+      "rect": [
+        22.04077,
+        30.525,
+        10.8,
+        7
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderJoin": "miter",
+      "gradient": "spread.horizontal",
+      "borderWidthAbsolute": true,
+      "rect": [
+        13.94077,
+        37.525,
+        27,
+        5.4
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderJoin": "miter",
+      "gradient": "spread.vertical",
+      "borderWidthAbsolute": true,
+      "anchorX": 1.325,
+      "rotation": {
+        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'left')res=180;\nif(dir === 'right')res=0;\nreturn res/180*Math.PI;\n}",
+        "value": 0
+      },
+      "rect": [
+        3.6,
+        4.2125,
+        18,
+        13.175
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderJoin": "miter",
+      "gradient": "spread.vertical",
+      "borderWidthAbsolute": true,
+      "anchorX": 7.62222,
+      "rotation": {
+        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'left')res=180;\nif(dir === 'right')res=0;\nreturn res/180*Math.PI;\n}",
+        "value": 0
+      },
+      "rect": [
+        0,
+        0,
+        3.6,
+        21.6
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderJoin": "miter",
+      "gradient": "spread.vertical",
+      "borderWidthAbsolute": true,
+      "anchorX": -2,
+      "rotation": {
+        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'left')res=180;\nif(dir === 'right')res=0;\nreturn res/180*Math.PI;\n}",
+        "value": 0
+      },
+      "rect": [
+        43.44077,
+        15,
+        8,
+        2
+      ]
+    },
+    {
+      "type": "circle",
+      "background": "rgb(230,230,230)",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderWidthAbsolute": true,
+      "rect": [
+        11.44077,
+        0,
+        32,
+        32
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(217,217,217)",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderWidthAbsolute": true,
+      "rect": [
+        38.24077,
+        14.65,
+        2.7,
+        2.7
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(217,217,217)",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderWidthAbsolute": true,
+      "rect": [
+        13.94077,
+        14.65,
+        2.7,
+        2.7
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(217,217,217)",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderWidthAbsolute": true,
+      "rect": [
+        26.09077,
+        2.5,
+        2.7,
+        2.7
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(217,217,217)",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderWidthAbsolute": true,
+      "rect": [
+        26.09077,
+        26.8,
+        2.7,
+        2.7
+      ]
+    },
+    {
+      "type": "circle",
+      "background": "rgb(200,200,200)",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderWidthAbsolute": true,
+      "rect": [
+        16.64077,
+        5.2,
+        21.6,
+        21.6
+      ]
+    },
+    {
+      "type": "circle",
+      "background": "rgb(120,120,120)",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderWidthAbsolute": true,
+      "rect": [
+        20.24077,
+        8.8,
+        14.4,
+        14.4
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "#D8D8D8"
+      },
+      "borderWidthAbsolute": true,
+      "anchorY": 2.2,
+      "rect": [
+        27.19077,
+        9.4,
+        0.5,
+        3
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "#D8D8D8"
+      },
+      "borderWidthAbsolute": true,
+      "anchorY": 2.2,
+      "rotation": 5.23599,
+      "rect": [
+        27.19077,
+        9.4,
+        0.5,
+        3
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "#D8D8D8"
+      },
+      "borderWidthAbsolute": true,
+      "anchorY": 2.2,
+      "rotation": 4.18879,
+      "rect": [
+        27.19077,
+        9.4,
+        0.5,
+        3
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "#D8D8D8"
+      },
+      "borderWidthAbsolute": true,
+      "anchorY": 2.2,
+      "rotation": 3.14159,
+      "rect": [
+        27.19077,
+        9.4,
+        0.5,
+        3
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "#D8D8D8"
+      },
+      "borderWidthAbsolute": true,
+      "anchorY": 2.2,
+      "rotation": 2.0944,
+      "rect": [
+        27.19077,
+        9.4,
+        0.5,
+        3
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "#D8D8D8"
+      },
+      "borderWidthAbsolute": true,
+      "anchorY": 2.2,
+      "rotation": 1.0472,
+      "rect": [
+        27.19077,
+        9.4,
+        0.5,
+        3
+      ]
+    },
+    {
+      "type": "circle",
+      "background": "rgb(61,61,61)",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderWidthAbsolute": true,
+      "rect": [
+        23.84077,
+        12.4,
+        7.2,
+        7.2
+      ]
+    }
+  ]
+}

@@ -5,6 +5,11 @@
       "attr": "node.label",
       "valueType": "String",
       "defaultValue": "1"
+    },
+    {
+      "attr": "node.type",
+      "valueType": "String",
+      "defaultValue": "m-point"
     }
   ],
   "width": 250,

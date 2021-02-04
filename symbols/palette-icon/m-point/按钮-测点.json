@@ -1,0 +1,45 @@
+{
+  "modified": "Tue Jan 12 2021 09:58:33 GMT+0800 (CST)",
+  "dataBindings": [
+    {
+      "attr": "node.type",
+      "valueType": "String",
+      "defaultValue": "m-point"
+    },
+    {
+      "attr": "node.name",
+      "valueType": "String",
+      "defaultValue": "pump"
+    },
+    {
+      "attr": "node.color",
+      "valueType": "Color",
+      "defaultValue": "rgb(0,255,0)"
+    },
+    {
+      "attr": "node.state",
+      "valueType": "Boolean",
+      "defaultValue": true,
+      "name": "启用状态"
+    }
+  ],
+  "width": 100,
+  "height": 30,
+  "comps": [
+    {
+      "type": "rect",
+      "background": "rgb(0,255,0)",
+      "borderWidth": 2,
+      "borderColor": "#979797",
+      "border3d": true,
+      "border3dColor": "#D8D8D8",
+      "borderWidthAbsolute": true,
+      "rect": [
+        0,
+        0,
+        100,
+        30
+      ]
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "modified": "Thu Feb 04 2021 16:21:49 GMT+0800 (CST)",
+  "width": 12,
+  "height": 70,
+  "comps": [
+    {
+      "type": "rect",
+      "background": "rgb(255,235,195)",
+      "borderWidth": 1,
+      "borderColor": "#FEB64D",
+      "borderJoin": "miter",
+      "borderWidthAbsolute": true,
+      "rect": [
+        0,
+        0,
+        12,
+        55.5
+      ]
+    },
+    {
+      "type": "shape",
+      "background": "rgb(255,235,195)",
+      "borderWidth": 1,
+      "borderColor": "#FEB64D",
+      "borderWidthAbsolute": true,
+      "closePath": true,
+      "points": [
+        0,
+        55.5,
+        12,
+        55.5,
+        7.26053,
+        67.5,
+        4.74267,
+        67.5
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(255,235,195)",
+      "borderWidth": 1,
+      "borderColor": "#FEB64D",
+      "borderJoin": "miter",
+      "gradient": "spread.horizontal",
+      "borderWidthAbsolute": true,
+      "rect": [
+        4.75,
+        67.5,
+        2.5,
+        2.5
+      ]
+    }
+  ]
+}

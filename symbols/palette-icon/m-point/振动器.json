@@ -1,5 +1,17 @@
 {
   "modified": "Mon Jan 11 2021 15:18:29 GMT+0800 (CST)",
+  "dataBindings": [
+    {
+      "attr": "node.type",
+      "valueType": "String",
+      "defaultValue": "m-point"
+    },
+    {
+      "attr": "node.name",
+      "valueType": "String",
+      "defaultValue": "switch"
+    }
+  ],
   "width": 86,
   "height": 56,
   "comps": [

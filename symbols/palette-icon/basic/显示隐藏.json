@@ -1,0 +1,58 @@
+{
+  "modified": "Thu Feb 04 2021 16:31:59 GMT+0800 (CST)",
+  "dataBindings": [
+    {
+      "attr": "node.type",
+      "valueType": "String",
+      "defaultValue": "m-point"
+    },
+    {
+      "attr": "node.name",
+      "valueType": "String",
+      "defaultValue": "switch"
+    },
+    {
+      "attr": "node.label",
+      "valueType": "String",
+      "defaultValue": "显示隐藏"
+    },
+    {
+      "attr": "node.state",
+      "valueType": "Boolean",
+      "defaultValue": true,
+      "name": "显示隐藏"
+    },
+    {
+      "attr": "line.color",
+      "valueType": "Color",
+      "defaultValue": "#FF0000"
+    }
+  ],
+  "width": 70,
+  "height": 24,
+  "comps": [
+    {
+      "type": "text",
+      "text": {
+        "func": "__ht__function(data, view) {\n return data.a('node.label');\n}",
+        "value": "显示隐藏"
+      },
+      "align": "center",
+      "color": {
+        "func": "__ht__function(data, view) {\n return data.a('line.color');\n}",
+        "value": "rgb(255,0,0)"
+      },
+      "visible": {
+        "func": "__ht__function(data, view) {\n return data.a('node.state');\n}",
+        "value": "true"
+      },
+      "font": "16px arial, sans-serif",
+      "rect": [
+        0,
+        0,
+        70,
+        24
+      ]
+    }
+  ]
+}

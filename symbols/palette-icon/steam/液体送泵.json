@@ -1,0 +1,191 @@
+{
+  "modified": "Thu Feb 04 2021 16:20:15 GMT+0800 (CST)",
+  "width": 46,
+  "height": 44,
+  "comps": [
+    {
+      "type": "rect",
+      "background": "rgb(150,150,150)",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderJoin": "miter",
+      "borderWidthAbsolute": true,
+      "rect": [
+        0,
+        40,
+        15,
+        4
+      ]
+    },
+    {
+      "type": "shape",
+      "background": "rgb(150,150,150)",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderWidthAbsolute": true,
+      "visible": {
+        "func": "__ht__function(data, view) {\nreturn data.a('node.state')\n}",
+        "value": true
+      },
+      "closePath": true,
+      "points": [
+        20.03694,
+        10,
+        28.00001,
+        10,
+        11.97854,
+        40,
+        4.00001,
+        40
+      ]
+    },
+    {
+      "type": "shape",
+      "background": "rgb(150,150,150)",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderWidthAbsolute": true,
+      "visible": {
+        "func": "__ht__function(data, view) {\nreturn !data.a('node.state')\n}",
+        "value": true
+      },
+      "closePath": true,
+      "points": [
+        12.00001,
+        10,
+        20.03274,
+        10,
+        36.00001,
+        40,
+        28.05002,
+        40
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(150,150,150)",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderJoin": "miter",
+      "borderWidthAbsolute": true,
+      "rect": [
+        25,
+        40,
+        15,
+        4
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderJoin": "miter",
+      "gradient": "spread.horizontal",
+      "borderWidthAbsolute": true,
+      "rotation": 1.5708,
+      "rect": [
+        26.19439,
+        -1.1944,
+        10,
+        22.3888
+      ]
+    },
+    {
+      "type": "arc",
+      "background": "rgb(230,230,230)",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderWidthAbsolute": true,
+      "arcFrom": 2.35619,
+      "arcTo": 5.49779,
+      "rect": [
+        3.99999,
+        5.075,
+        32,
+        32
+      ]
+    },
+    {
+      "type": "arc",
+      "background": "rgb(200,200,200)",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderWidthAbsolute": true,
+      "arcFrom": -0.7854,
+      "arcTo": 2.35619,
+      "rect": [
+        4.00001,
+        5.075,
+        32,
+        32
+      ]
+    },
+    {
+      "type": "circle",
+      "background": "rgb(215,215,215)",
+      "borderColor": "rgb(0,0,0)",
+      "rect": [
+        10.50001,
+        11.575,
+        19,
+        19
+      ]
+    },
+    {
+      "type": "circle",
+      "background": "rgb(180,180,180)",
+      "borderColor": "rgb(0,0,0)",
+      "rect": [
+        15.99999,
+        17.075,
+        8,
+        8
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderJoin": "miter",
+      "gradient": "spread.horizontal",
+      "borderWidthAbsolute": true,
+      "rotation": 1.5708,
+      "rect": [
+        34.2,
+        8.2,
+        20,
+        3.6
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(217,217,217)",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "gradient": "spread.vertical",
+      "borderWidthAbsolute": true,
+      "rect": [
+        16.99999,
+        20.575,
+        6,
+        1
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(217,217,217)",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "gradient": "spread.vertical",
+      "borderWidthAbsolute": true,
+      "rect": [
+        18.99999,
+        18.075,
+        2,
+        6
+      ]
+    }
+  ]
+}

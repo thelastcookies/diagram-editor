@@ -5,12 +5,14 @@ palette_config = {
             { name: '文字', image: '__text__', type: ht.Text },
             { name: '告警变色', image: 'symbols/palette-icon/basic/告警变色.json', type: ht.Node},
             { name: '数据绑定', image: 'symbols/palette-icon/basic/数据绑定.json', type: ht.Node},
+            { name: '显示隐藏', image: 'symbols/palette-icon/basic/显示隐藏.json', type: ht.Node},
             { name: '母线', image: 'symbols/palette-icon/lines/母线.json', type: ht.Node},
             { name: '坐标点', image: 'symbols/palette-icon/lines/坐标点.json', type: ht.Node},
             { name: '接合点', image: 'symbols/palette-icon/lines/接合点.json', type: ht.Node},
             { name: '交叉线路连接', image: 'symbols/palette-icon/lines/交叉线路连接.json', type: ht.Node},
             // { name: '圆形', image: 'symbols/palette-icon/basic/圆形.json', type: ht.Node},
             { name: '按钮', image: 'symbols/palette-icon/basic/按钮.json', type: ht.Node},
+            { name: '按钮-测点', image: 'symbols/palette-icon/m-point/按钮-测点.json', type: ht.Node},
             // { name: '圆角矩形', image: 'symbols/palette-icon/basic/圆角矩形.json', type: ht.Node},
             { name: '进度条', image: 'symbols/palette-icon/basic/进度条.json', type: ht.Node},
             { name: '刻度线', image: 'symbols/palette-icon/basic/刻度线.json', type: ht.Node},
@@ -69,11 +71,22 @@ palette_config = {
             { name: '变压器常用接法', image: 'symbols/palette-icon/transformer/变压器常用接法.json', type: ht.Node},
             { name: '变压器常用接法2', image: 'symbols/palette-icon/transformer/变压器常用接法2.json', type: ht.Node},
             { name: '伊宁发变组主变', image: 'symbols/palette-icon/transformer/伊宁发变组主变.json', type: ht.Node},
+
+
             // { name: '主变', image: 'symbols/palette-icon/transformer/主变.json', type: ht.Node},
             // { name: '主变2', image: 'symbols/palette-icon/transformer/主变2.json', type: ht.Node},
             // { name: '主变3', image: 'symbols/palette-icon/transformer/主变3.json', type: ht.Node},
             // { name: '主变4', image: 'symbols/palette-icon/transformer/主变4.json', type: ht.Node},
             // { name: '主变5', image: 'symbols/palette-icon/transformer/主变5.json', type: ht.Node},
+
+            { name: '刀闸开关', image: 'symbols/palette-icon/lines/刀闸开关.json', type: ht.Node},
+            { name: '二极管', image: 'symbols/palette-icon/lines/二极管.json', type: ht.Node},
+            { name: '蓄电池组', image: 'symbols/palette-icon/lines/蓄电池组.json', type: ht.Node},
+            { name: '熔断器-小', image: 'symbols/palette-icon/lines/熔断器-小.json', type: ht.Node},
+            { name: '刀闸-详细', image: 'symbols/palette-icon/lines/刀闸-详细.json', type: ht.Node},
+            { name: '逆变器', image: 'symbols/palette-icon/transformer/逆变器.json', type: ht.Node},
+            { name: '静态开关模件', image: 'symbols/palette-icon/transformer/静态开关模件.json', type: ht.Node},
+            { name: '调压稳压器', image: 'symbols/palette-icon/transformer/调压稳压器.json', type: ht.Node},
         ]
     },
     steam: {
@@ -272,7 +285,10 @@ palette_config = {
             { name: '生活污水-初沉池', image: 'symbols/palette-icon/steam/生活污水-初沉池.json', type: ht.Node},
             { name: '生活污水-调节池', image: 'symbols/palette-icon/steam/生活污水-调节池.json', type: ht.Node},
             { name: '氧化池', image: 'symbols/palette-icon/steam/氧化池.json', type: ht.Node},
-            { name: '振动器', image: 'symbols/palette-icon/steam/振动器.json', type: ht.Node},
+            { name: '振动器', image: 'symbols/palette-icon/m-point/振动器.json', type: ht.Node},
+            { name: '锅炉出口', image: 'symbols/palette-icon/steam/锅炉出口.json', type: ht.Node},
+            { name: '清灰风机', image: 'symbols/palette-icon/steam/清灰风机.json', type: ht.Node},
+            { name: '液体送泵', image: 'symbols/palette-icon/steam/液体送泵.json', type: ht.Node},
 
         ]
     },
