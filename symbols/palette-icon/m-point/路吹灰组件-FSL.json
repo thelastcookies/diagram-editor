@@ -60,11 +60,11 @@
       "borderColor": "#979797",
       "visible": {
         "func": "__ht__function(data, view) {\n return Boolean(data.a('node.data')[26]);\n}",
-        "value": false
+        "value": true
       },
       "rect": [
-        42.91932,
-        19,
+        36,
+        32,
         12,
         12
       ]
@@ -76,11 +76,11 @@
       "borderColor": "rgb(0,0,0)",
       "visible": {
         "func": "__ht__function(data, view) {\n return Boolean(data.a('node.data')[26]);\n}",
-        "value": false
+        "value": true
       },
       "rect": [
-        48.16932,
-        21.11157,
+        41.25,
+        34.11157,
         1.5,
         5
       ]
@@ -92,11 +92,11 @@
       "borderColor": "rgb(0,0,0)",
       "visible": {
         "func": "__ht__function(data, view) {\n return Boolean(data.a('node.data')[26]);\n}",
-        "value": false
+        "value": true
       },
       "rect": [
-        47.91932,
-        27.70712,
+        41,
+        40.70712,
         2,
         2
       ]
@@ -112,7 +112,7 @@
       "font": "9px arial, sans-serif",
       "visible": {
         "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r=false;if((d[4]&&!d[12]&&!d[3]&&!d[11])||(d[3]||d[11])){r=true}return r;\n}",
-        "value": false
+        "value": true
       },
       "rect": [
         0,
@@ -129,11 +129,11 @@
       "font": "9px arial, sans-serif",
       "visible": {
         "func": "__ht__function(data, view) {\n return Boolean(data.a('node.data')[19]);\n}",
-        "value": false
+        "value": true
       },
       "rect": [
         0,
-        24,
+        34.11157,
         8,
         8
       ]

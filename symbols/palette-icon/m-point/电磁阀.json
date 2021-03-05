@@ -134,7 +134,7 @@
       "borderColor": "#979797",
       "visible": {
         "func": "__ht__function(data, view) {\n return !Boolean(data.a('node.data')[19]);\n}",
-        "value": false
+        "value": true
       },
       "rect": [
         34.48792,
@@ -147,13 +147,13 @@
       "type": "text",
       "text": {
         "func": "__ht__function(data, view) {\n return Boolean(data.a('node.data')[17])?'M':'A';\n}",
-        "value": "rgb(255,0,0)"
+        "value": "M"
       },
       "align": "center",
       "font": "9px arial, sans-serif",
       "visible": {
         "func": "__ht__function(data, view) {\n return !Boolean(data.a('node.data')[19]);\n}",
-        "value": false
+        "value": true
       },
       "rect": [
         35.48792,
@@ -172,7 +172,7 @@
       "borderColor": "#979797",
       "visible": {
         "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r=true;if(!d[25]&&!d[26]){r=false}return r;\n}",
-        "value": false
+        "value": true
       },
       "rect": [
         34.48792,
@@ -185,13 +185,13 @@
       "type": "text",
       "text": {
         "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r='E';if(!d[26]){r='T';}return r;\n}",
-        "value": "rgb(255,0,0)"
+        "value": "E"
       },
       "align": "center",
       "font": "9px arial, sans-serif",
       "visible": {
         "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r=true;if(!d[25]&&!d[26]){r=false}return r;\n}",
-        "value": false
+        "value": true
       },
       "rect": [
         35.48792,

@@ -86,32 +86,32 @@
       "borderColor": "#979797",
       "visible": {
         "func": "__ht__function(data, view) {\n return !Boolean(data.a('node.data')[19]);\n}",
-        "value": false
+        "value": true
       },
       "rect": [
-        34.48792,
-        3.02714,
-        12,
-        12
+        66.45967,
+        8.56271,
+        16,
+        16
       ]
     },
     {
       "type": "text",
       "text": {
         "func": "__ht__function(data, view) {\n return Boolean(data.a('node.data')[17])?'M':'A';\n}",
-        "value": "rgb(255,0,0)"
+        "value": "M"
       },
       "align": "center",
-      "font": "9px arial, sans-serif",
+      "font": "12px arial, sans-serif",
       "visible": {
         "func": "__ht__function(data, view) {\n return !Boolean(data.a('node.data')[19]);\n}",
-        "value": false
+        "value": true
       },
       "rect": [
-        35.48792,
-        4.3,
-        10,
-        10
+        66.45967,
+        8.56271,
+        16,
+        16
       ]
     },
     {
@@ -124,32 +124,32 @@
       "borderColor": "#979797",
       "visible": {
         "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r=true;if(!d[25]&&!d[26]){r=false}return r;\n}",
-        "value": false
+        "value": true
       },
       "rect": [
-        34.48792,
-        16.97286,
-        12,
-        12
+        66.45967,
+        34.97414,
+        16,
+        16
       ]
     },
     {
       "type": "text",
       "text": {
         "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r='E';if(!d[26]){r='T';}return r;\n}",
-        "value": "rgb(255,0,0)"
+        "value": "E"
       },
       "align": "center",
-      "font": "9px arial, sans-serif",
+      "font": "12px arial, sans-serif",
       "visible": {
         "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r=true;if(!d[25]&&!d[26]){r=false}return r;\n}",
-        "value": false
+        "value": true
       },
       "rect": [
-        35.48792,
-        18.39233,
-        10,
-        10
+        66.45967,
+        34.97414,
+        16,
+        16
       ]
     }
   ]
