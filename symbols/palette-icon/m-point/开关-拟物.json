@@ -2,20 +2,25 @@
   "modified": "Mon Nov 02 2020 15:33:42 GMT+0800 (CST)",
   "dataBindings": [
     {
-      "attr": "node.type",
+      "attr": "node.cate",
       "valueType": "String",
       "defaultValue": "m-point"
     },
     {
-      "attr": "node.name",
+      "attr": "node.type",
       "valueType": "String",
       "defaultValue": "switch"
     },
     {
+      "attr": "node.name",
+      "valueType": "String",
+      "defaultValue": "switch-real"
+    },
+    {
       "attr": "node.state",
       "valueType": "Boolean",
-      "defaultValue": true,
-      "name": "开关状态"
+      "name": "状态值",
+      "defaultValue": false
     }
   ],
   "width": 40,

@@ -2,19 +2,19 @@
   "modified": "Wed Oct 28 2020 18:37:53 GMT+0800 (CST)",
   "dataBindings": [
     {
-      "attr": "node.type",
+      "attr": "node.cate",
       "valueType": "String",
       "defaultValue": "m-point"
     },
     {
-      "attr": "node.name",
+      "attr": "node.type",
       "valueType": "String",
-      "defaultValue": "m-value"
+      "defaultValue": "value"
     },
     {
-      "attr": "node.color",
-      "valueType": "Color",
-      "defaultValue": "rgb(255,0,0)"
+      "attr": "node.name",
+      "valueType": "String",
+      "defaultValue": "motor-value-mate"
     },
     {
       "attr": "node.direction",
@@ -22,10 +22,10 @@
       "defaultValue": "up"
     },
     {
-      "attr": "node.state",
-      "valueType": "Boolean",
-      "defaultValue": true,
-      "name": "启用状态"
+      "attr": "node.data",
+      "valueType": "Array",
+      "name": "状态值",
+      "defaultValue": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,1,0,0,0,0,0]
     }
   ],
   "width": 46,
@@ -63,54 +63,6 @@
         0,
         16,
         16
-      ]
-    },
-    {
-      "type": "rect",
-      "background": "rgb(255,255,0)",
-      "borderWidth": 0.5,
-      "borderColor": "#979797",
-      "rect": [
-        32.80275,
-        3.02714,
-        12,
-        12
-      ]
-    },
-    {
-      "type": "rect",
-      "background": "rgb(255,0,0)",
-      "borderWidth": 0.5,
-      "borderColor": "#979797",
-      "rect": [
-        32.80275,
-        16.97286,
-        12,
-        12
-      ]
-    },
-    {
-      "type": "text",
-      "text": "M",
-      "align": "center",
-      "font": "9px arial, sans-serif",
-      "rect": [
-        33.80275,
-        4.3,
-        10,
-        10
-      ]
-    },
-    {
-      "type": "text",
-      "text": "E",
-      "align": "center",
-      "font": "9px arial, sans-serif",
-      "rect": [
-        33.80275,
-        18.39233,
-        10,
-        10
       ]
     },
     {
@@ -170,6 +122,82 @@
         16,
         11.5,
         15
+      ]
+    },
+    {
+      "type": "rect",
+      "background": {
+        "func": "__ht__function(data, view) {\n return Boolean(data.a('node.data')[17])?'rgb(255,255,0)':'rgb(0,255,0)';\n}",
+        "value": "rgb(255,255,0)"
+      },
+      "borderWidth": 0.5,
+      "borderColor": "#979797",
+      "visible": {
+        "func": "__ht__function(data, view) {\n return !Boolean(data.a('node.data')[19]);\n}",
+        "value": false
+      },
+      "rect": [
+        34.48792,
+        3.02714,
+        12,
+        12
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "__ht__function(data, view) {\n return Boolean(data.a('node.data')[17])?'M':'A';\n}",
+        "value": "rgb(255,0,0)"
+      },
+      "align": "center",
+      "font": "9px arial, sans-serif",
+      "visible": {
+        "func": "__ht__function(data, view) {\n return !Boolean(data.a('node.data')[19]);\n}",
+        "value": false
+      },
+      "rect": [
+        35.48792,
+        4.3,
+        10,
+        10
+      ]
+    },
+    {
+      "type": "rect",
+      "background": {
+        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r='rgb(255,0,0)';if(!d[26]){r='rgb(255,255,0)';}return r;\n}",
+        "value": "rgb(255,255,0)"
+      },
+      "borderWidth": 0.5,
+      "borderColor": "#979797",
+      "visible": {
+        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r=true;if(!d[25]&&!d[26]){r=false}return r;\n}",
+        "value": false
+      },
+      "rect": [
+        34.48792,
+        16.97286,
+        12,
+        12
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r='E';if(!d[26]){r='T';}return r;\n}",
+        "value": "rgb(255,0,0)"
+      },
+      "align": "center",
+      "font": "9px arial, sans-serif",
+      "visible": {
+        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r=true;if(!d[25]&&!d[26]){r=false}return r;\n}",
+        "value": false
+      },
+      "rect": [
+        35.48792,
+        18.39233,
+        10,
+        10
       ]
     }
   ]

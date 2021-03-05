@@ -2,9 +2,14 @@
   "modified": "Fri Oct 30 2020 14:12:04 GMT+0800 (CST)",
   "dataBindings": [
     {
-      "attr": "node.type",
+      "attr": "node.cate",
       "valueType": "String",
       "defaultValue": "m-point"
+    },
+    {
+      "attr": "node.type",
+      "valueType": "String",
+      "defaultValue": "switch"
     },
     {
       "attr": "node.name",
@@ -12,15 +17,10 @@
       "defaultValue": "25"
     },
     {
-      "attr": "node.color",
-      "valueType": "Color",
-      "defaultValue": "rgb(255,0,0)"
-    },
-    {
       "attr": "node.state",
       "valueType": "Boolean",
-      "defaultValue": false,
-      "name": "告警状态"
+      "name": "状态值",
+      "defaultValue": false
     }
   ],
   "width": 40,

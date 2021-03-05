@@ -2,25 +2,25 @@
   "modified": "Wed Nov 04 2020 14:27:10 GMT+0800 (CST)",
   "dataBindings": [
     {
-      "attr": "node.type",
+      "attr": "node.cate",
       "valueType": "String",
       "defaultValue": "m-point"
     },
     {
+      "attr": "node.type",
+      "valueType": "String",
+      "defaultValue": "motor"
+    },
+    {
       "attr": "node.name",
       "valueType": "String",
-      "defaultValue": "m-value"
+      "defaultValue": "motor-fsl"
     },
     {
-      "attr": "node.color",
-      "valueType": "Color",
-      "defaultValue": "rgb(255,0,0)"
-    },
-    {
-      "attr": "node.state",
-      "valueType": "Boolean",
-      "defaultValue": true,
-      "name": "启用状态"
+      "attr": "node.data",
+      "valueType": "Array",
+      "name": "状态值",
+      "defaultValue": [0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,1,0,0,0,0,0]
     }
   ],
   "width": 56,
@@ -52,20 +52,13 @@
       ]
     },
     {
-      "type": "rect",
-      "background": "rgb(255,255,0)",
-      "borderColor": "#979797",
-      "rect": [
-        42.91932,
-        19,
-        12,
-        12
-      ]
-    },
-    {
       "type": "circle",
       "background": "rgb(255,0,0)",
       "borderColor": "#979797",
+      "visible": {
+        "func": "__ht__function(data, view) {\n return Boolean(data.a('node.data')[26]);\n}",
+        "value": false
+      },
       "rect": [
         42.91932,
         19,
@@ -78,6 +71,10 @@
       "background": "rgb(0,0,0)",
       "borderWidth": 1,
       "borderColor": "rgb(0,0,0)",
+      "visible": {
+        "func": "__ht__function(data, view) {\n return Boolean(data.a('node.data')[26]);\n}",
+        "value": false
+      },
       "rect": [
         48.16932,
         21.11157,
@@ -90,6 +87,10 @@
       "background": "rgb(0,0,0)",
       "borderWidth": 0.5,
       "borderColor": "rgb(0,0,0)",
+      "visible": {
+        "func": "__ht__function(data, view) {\n return Boolean(data.a('node.data')[26]);\n}",
+        "value": false
+      },
       "rect": [
         47.91932,
         27.70712,
@@ -98,10 +99,29 @@
       ]
     },
     {
+      "type": "rect",
+      "background": "rgb(255,255,0)",
+      "borderColor": "#979797",
+      "visible": {
+        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r=false;if(d[25]&&!d[26]){r=true}return r;\n}",
+        "value": false
+      },
+      "rect": [
+        42.91932,
+        19,
+        12,
+        12
+      ]
+    },
+    {
       "type": "circle",
       "background": "rgb(0,0,0)",
       "borderWidth": 0.5,
       "borderColor": "rgb(0,0,0)",
+      "visible": {
+        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r=false;if(d[25]&&!d[26]){r=true}return r;\n}",
+        "value": false
+      },
       "rect": [
         47.55585,
         19.89474,
@@ -115,6 +135,10 @@
       "borderWidth": 0.2,
       "borderColor": "rgb(0,0,0)",
       "closePath": true,
+      "visible": {
+        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r=false;if(d[25]&&!d[26]){r=true}return r;\n}",
+        "value": false
+      },
       "points": [
         48.29461,
         22.4537,
@@ -186,9 +210,13 @@
     },
     {
       "type": "shape",
-      "background": "rgb(255,255,0)",
+      "background": "rgba(0,0,0,0)",
       "borderColor": "#979797",
       "closePath": true,
+      "visible": {
+        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r=false;if(d[25]&&!d[26]){r=true}return r;\n}",
+        "value": false
+      },
       "points": [
         48.18156,
         23.82426,
@@ -202,10 +230,17 @@
     },
     {
       "type": "text",
-      "text": "F",
+      "text": {
+        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r='';if(d[3]||d[11]){r='F'}else if(d[4]&&!d[12]&&!d[3]&&!d[11]){r='S'} return r;\n}",
+        "value": "F"
+      },
       "align": "center",
       "color": "rgb(255,0,0)",
       "font": "9px arial, sans-serif",
+      "visible": {
+        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r=false;if((d[4]&&!d[12]&&!d[3]&&!d[11])||(d[3]||d[11])){r=true}return r;\n}",
+        "value": false
+      },
       "rect": [
         0,
         0,
@@ -219,6 +254,10 @@
       "align": "center",
       "color": "rgb(255,255,0)",
       "font": "9px arial, sans-serif",
+      "visible": {
+        "func": "__ht__function(data, view) {\n return Boolean(data.a('node.data')[19]);\n}",
+        "value": false
+      },
       "rect": [
         0,
         24,

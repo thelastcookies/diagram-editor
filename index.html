@@ -356,7 +356,7 @@
                     propertyView.addProperties(data_properties);
                 }
                 if (data instanceof ht.Node) {// node 类型
-                    if (data.a('node.type') === 'm-point') {
+                    if (data.a('node.cate') === 'm-point' || data.a('node.type') === 'm-point') {
                         propertyView.addProperties(m_point_properties);
                         // propertyView.addProperties(threshold_properties);
                     }
@@ -365,6 +365,16 @@
                     }
                     if (data.a('node.name') === 'bus') {
                         propertyView.addProperties(bus_properties);
+                    }
+                    if (data.a('node.name') === 'button') {
+                        if (!data.s('label')) {
+                            data.s({
+                                'label': 'Label',
+                                'label.position': 17,
+                                'label.font': '16px sans-serif',
+                            });
+                        }
+                        propertyView.addProperties(button_properties);
                     }
                     // if (data.a('node.name') === 'heater') {
                     //     propertyView.addProperties(heater_properties);

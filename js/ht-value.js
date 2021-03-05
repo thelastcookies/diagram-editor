@@ -6,28 +6,45 @@
 /**
  * ht.DataModel 的扩展方法
  * 根据数据对图元/组件进行颜色、状态改变
- * @param json - 传入的数据 json，要求与 DataModel 中的 'node.tag' 存在对应关系。
+ * @param data - 传入的数据 json，要求与 DataModel 中的 'node.tag' 存在对应关系。
  */
-ht.DataModel.prototype.setNodeStatusByValue = function (json) {
+ht.DataModel.prototype.setNodeStatusByValue = function (data) {
     let dm = this;
-    json.forEach(item => {
+    data.forEach(item => {
         let node = dm.getDataByNodeTag(item.nodeTag);
         let value = item.value;
+        if (value === "null") return;
         node.forEach(function (node) {
-            if (node.a('node.type') === 'm-point') {
-                value = Number(item.value);
-                node.a('node.state', Boolean(value));
-            }
-            // 如果是 柱状图元
-            if (node instanceof ht.Node && node.a('node.type') === 'zt') {
-                value = Number(item.value)
-                node.s('label') ? node.s('label', String(value)) : '';
-                if ((value > 0 && node.a('zt.dirt') === 'top') || value < 0 && node.a('zt.dirt') === 'bottom') {
-                    node.a('zt.height', Math.abs(value) / (Number(node.a('zt.max')) - Number(node.a('zt.min'))));
-                } else {
-                    node.a('zt.height', 0);
+            if (node.a('node.cate') === 'm-point') {
+                if (node.a('node.type') === 'data') {
+                    node.a('node.label', Number(value).toFixed((node.a('node.label').split('.')[1].length)));
+                    return;
+                }
+                if (node.a('node.type') === 'switch') {
+                    // node.a('node.state', Boolean(item.value));
+                    node.a('node.state', true);
+                }
+                if (node.a('node.type') === 'motor' ||
+                    node.a('node.type') === 'value' ||
+                    node.a('node.type') === 'pump' ||
+                    node.a('node.type') === 'equip') {
+
+                    let va = Number(item.value).toString(2).split('').map(i => Number(i));
+                    va = va.reverse().concat(new Array(32 - va.length).fill(0));
+                    node.a('node.data', va);
+                    // node.a('node.data', [0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0]);
                 }
             }
+            // 如果是 柱状图元
+            // if (node instanceof ht.Node && node.a('node.cate') === 'zt') {
+            //     value = Number(item.value)
+            //     node.s('label') ? node.s('label', String(value)) : '';
+            //     if ((value > 0 && node.a('zt.dirt') === 'top') || value < 0 && node.a('zt.dirt') === 'bottom') {
+            //         node.a('zt.height', Math.abs(value) / (Number(node.a('zt.max')) - Number(node.a('zt.min'))));
+            //     } else {
+            //         node.a('zt.height', 0);
+            //     }
+            // }
             // 如果是 Text
             if (node instanceof ht.Text) {
                 value = Number(item.value)

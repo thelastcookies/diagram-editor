@@ -127,8 +127,6 @@ data_properties = [// 所有的节点都有的属性
     // },
 ];
 
-
-
 threshold_properties = [// 节点的阈值属性设置
      {
         categoryName: '阈值设置',
@@ -514,6 +512,49 @@ shape_properties = [// 折线的属性
     }
 ];
 
+// 按钮图元的配置
+button_properties = [
+    {
+        name: 'button.link',
+        displayName: '链接',
+        accessType: 'attr',
+        valueType: 'text',
+        editable: true
+    },
+    {
+        name: 'label',
+        displayName: 'Label内容',
+        accessType: 'style',
+        editable: true,
+    },
+    {
+        name: 'label.font',
+        displayName: 'Label字体',
+        accessType: 'style',
+        valueType: 'string',
+        editable: true
+    },
+    {
+        name: 'label.position',
+        displayName: 'Label位置',
+        accessType: 'style',
+        valueType: 'string',
+        editable: true,
+        enum: {
+            labels: ["上", "下", "中", "左", "右"],
+            values: [3, 31, 17, 14, 20]
+        }
+    },
+    {
+        name: 'label.color',
+        displayName: 'Label颜色',
+        accessType: 'style',
+        valueType: 'color',
+        editable: true,
+        defaultValue: 'rgb(255, 0, 0)'
+    },
+];
+
 bus_properties = [// 母线的属性
     {
         name: 'node.width',
@@ -535,6 +576,7 @@ node_color_properties = [//普通图元的初始颜色配置
         defaultValue: 'rgb(255, 0, 0)'
     }
 ];
+
 m_point_properties = [//测点图元的配置项
     {
         name: 'node.tag',
@@ -546,6 +588,20 @@ m_point_properties = [//测点图元的配置项
     {
         name: 'node.formula',
         displayName: '公式',
+        accessType: 'attr',
+        valueType: 'text',
+        editable: true
+    },
+    {
+        name: 'node.showName',
+        displayName: '名称',
+        accessType: 'attr',
+        valueType: 'text',
+        editable: true
+    },
+    {
+        name: 'node.sn',
+        displayName: '序列号',
         accessType: 'attr',
         valueType: 'text',
         editable: true
@@ -617,33 +673,7 @@ direction_properties = [
 ];
 // 计量条的设置
 zt_properties = [
-    // {
-    //     name: 'label.opacity',
-    //     displayName: '进度条标签',
-    //     accessType: 'style',
-    //     valueType: 'boolean',
-    //     editable: true,
-    //     defaultValue: false
-    // },
-    // {
-    //     name: 'label',
-    //     displayName: '进度条标签',
-    //     accessType: 'style',
-    //     valueType: 'text',
-    //     editable: true,
-    //     defaultValue: 0
-    // },
-    // {
-    //     name: 'label.position',
-    //     displayName: '进度条标签位置',
-    //     accessType: 'style',
-    //     editable: true,
-    //     defaultValue: "上",
-    //     enum: {
-    //         labels: ["上", "下", "左", "右"],
-    //         values: [3, 31, 14, 20]
-    //     }
-    // },
+
     {
         name: 'bar.min',
         displayName: '进度条最小值',

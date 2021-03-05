@@ -9,6 +9,9 @@
             background-color: #000;
             opacity: 0.8;
         }
+        #container {
+            height: 50%;
+        }
     </style>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <script type="text/javascript" src="js/identifier.js"></script>
@@ -65,7 +68,7 @@
                         window.location.href = 'demo2.html';
                     }
                 } else if (e.kind === 'doubleClickData') {
-                    showNodeDetails (e.data.getTag(), dataToUse, {x: e.event.x, y: e.event.y}, e.data.a('node.type'));
+                    showNodeDetails (e.data.getTag(), dataToUse, {x: e.event.x, y: e.event.y}, e.data.a('node.cate'));
                 } else if (e.kind === 'clickBackground') {
                     let div = document.getElementById("data-display-div");
                     if (div)
@@ -76,7 +79,7 @@
             setContextMenu(load_contextmenu_config, graphView);
             // 请求组态图数据以及初始化
             $.getJSON({
-                url: './和田1.cfd',
+                url: './demo.cfd',
                 success: res => {
                     json = res;
                     dataModel.deserialize(json);
@@ -103,14 +106,14 @@
                 $.ajax ({
                     type: 'POST',
                     url: "http://localhost/node-trend.php",
-                    data: {nodeTagArr: nodeArr, timestamp: '2020-07-01 00:00:00'},
+                    data: {nodeTagArr: nodeArr, timestamp: '2021-03-03 00:00:00'},
                     dataType: "json",
                     success: function (res) {
                         dataToUse = dataModel.formulaPreprocess(res);
                         dataModel.setNodeStatusByValue(dataToUse);
                     }
                 });
-            }, 3000);
+            }, 500);
         }
 
         /**
@@ -132,10 +135,13 @@
                 },
                 dataType: "json",
                 success: function (nodeData) {
-                    let dateResult = dataPretreat(nodeData, startTime, endTime, interval);
+                    // let dateResult = dataPretreat(nodeData, startTime, endTime, interval);
+                    let dateResult = nodeData;
+                    let dataArr = ['2020-05-01 00:00:00', '2020-05-01 00:01:00', '2020-05-01 00:02:00', '2020-05-01 00:03:00', '2020-05-01 00:04:00'];
 
                     historyData = dateResult.data;
-                    progressBar.init(dateResult.timestampArr, progressCallback);
+                    // progressBar.init(dateResult.timestampArr, progressCallback);
+                    progressBar.init(dataArr, progressCallback1);
 
                     if (getDataIntervalID)
                         clearInterval(getDataIntervalID);
@@ -302,11 +308,13 @@
             let isDisplay = document.getElementById("data-display-div") ? document.getElementById("data-display-div").style.display: null;
             if (isDisplay !== null && isDisplay !== "none") {
                 let nodeArr = dataToUse.filter(item => item.nodeTag === nodeSelected);
-                let type = dataModel.getDataByNodeTag(nodeArr[0].nodeTag)[0].a('node.type');
+                let type = dataModel.getDataByNodeTag(nodeArr[0].nodeTag)[0].a('node.cate');
                 updateNodeDetails(nodeArr[0].value, dataToUse[0].timestamp, type);
             }
         }
-
+        function progressCallback1(index) {
+            console.log(index);
+        }
     </script>
 </head>
 <body onload="init();">

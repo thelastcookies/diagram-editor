@@ -2,25 +2,25 @@
   "modified": "Mon Oct 26 2020 11:27:34 GMT+0800 (CST)",
   "dataBindings": [
     {
-      "attr": "node.type",
+      "attr": "node.cate",
       "valueType": "String",
       "defaultValue": "m-point"
     },
     {
+      "attr": "node.type",
+      "valueType": "String",
+      "defaultValue": "equip"
+    },
+    {
       "attr": "node.name",
       "valueType": "String",
-      "defaultValue": "switch"
+      "defaultValue": "circuit-breaker-fsl"
     },
     {
-      "attr": "node.color",
-      "valueType": "Color",
-      "defaultValue": "rgb(255,0,0)"
-    },
-    {
-      "attr": "node.state",
-      "valueType": "Boolean",
-      "defaultValue": false,
-      "name": "开关状态"
+      "attr": "node.data",
+      "valueType": "Array",
+      "name": "状态值",
+      "defaultValue": [0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,1,0,0,0,0,0]
     }
   ],
   "width": 30,
@@ -36,181 +36,6 @@
         0,
         30,
         40
-      ]
-    },
-    {
-      "type": "text",
-      "text": "F",
-      "align": "center",
-      "color": "rgb(255,0,0)",
-      "font": "8px arial, sans-serif",
-      "rect": [
-        -8,
-        0,
-        8,
-        8
-      ]
-    },
-    {
-      "type": "text",
-      "text": "L",
-      "align": "center",
-      "color": "rgb(255,255,0)",
-      "font": "8px arial, sans-serif",
-      "rect": [
-        -8,
-        32,
-        8,
-        8
-      ]
-    },
-    {
-      "type": "rect",
-      "background": "rgb(255,255,0)",
-      "borderColor": "#979797",
-      "rect": [
-        31.2987,
-        28,
-        12,
-        12
-      ]
-    },
-    {
-      "type": "circle",
-      "background": "rgb(0,0,0)",
-      "borderWidth": 0.5,
-      "borderColor": "rgb(0,0,0)",
-      "rect": [
-        35.93523,
-        28.89474,
-        2.34664,
-        2.33202
-      ]
-    },
-    {
-      "type": "shape",
-      "background": "rgb(0,0,0)",
-      "borderWidth": 0.2,
-      "borderColor": "rgb(0,0,0)",
-      "closePath": true,
-      "points": [
-        36.67399,
-        31.4537,
-        36.67399,
-        31.96643,
-        34.68958,
-        33.14966,
-        34.53083,
-        33.49302,
-        34.53083,
-        33.97792,
-        35.2849,
-        34.37233,
-        36.67399,
-        34.37233,
-        36.47555,
-        35.94997,
-        36.03898,
-        37.52762,
-        35.2849,
-        38.4742,
-        35.08646,
-        39.10526,
-        35.9596,
-        39.10526,
-        37.11056,
-        39.10526,
-        36.9915,
-        38.67141,
-        35.9596,
-        38.63196,
-        36.67399,
-        37.6065,
-        37.22963,
-        35.94997,
-        38.38058,
-        37.21209,
-        37.86464,
-        38.11923,
-        37.70588,
-        38.67141,
-        39.69029,
-        38.67141,
-        39.3331,
-        38.04035,
-        38.45996,
-        38.07979,
-        39.09497,
-        36.77824,
-        37.86464,
-        35.51612,
-        38.02339,
-        33.74128,
-        37.94401,
-        32.59749,
-        39.05528,
-        32.87357,
-        41.00001,
-        32.91301,
-        41.00001,
-        32.47916,
-        39.0156,
-        32.36084,
-        37.22963,
-        31.84811,
-        37.18994,
-        31.4537
-      ]
-    },
-    {
-      "type": "shape",
-      "background": "rgb(255,255,0)",
-      "borderColor": "#979797",
-      "closePath": true,
-      "points": [
-        36.56094,
-        32.82426,
-        36.56094,
-        33.86129,
-        35.92814,
-        33.86129,
-        35.1387,
-        33.52
-      ]
-    },
-    {
-      "type": "circle",
-      "background": "rgb(255,0,0)",
-      "borderColor": "#979797",
-      "rect": [
-        31.2987,
-        28,
-        12,
-        12
-      ]
-    },
-    {
-      "type": "rect",
-      "background": "rgb(0,0,0)",
-      "borderWidth": 1,
-      "borderColor": "rgb(0,0,0)",
-      "rect": [
-        36.5487,
-        30.11157,
-        1.5,
-        5
-      ]
-    },
-    {
-      "type": "circle",
-      "background": "rgb(0,0,0)",
-      "borderWidth": 0.5,
-      "borderColor": "rgb(0,0,0)",
-      "rect": [
-        36.2987,
-        36.70712,
-        2,
-        2
       ]
     },
     {
@@ -289,6 +114,220 @@
         30,
         15,
         12.5
+      ]
+    },
+    {
+      "type": "circle",
+      "background": "rgb(255,0,0)",
+      "borderColor": "#979797",
+      "visible": {
+        "func": "__ht__function(data, view) {\n return Boolean(data.a('node.data')[26]);\n}",
+        "value": false
+      },
+      "rect": [
+        42.91932,
+        19,
+        12,
+        12
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(0,0,0)",
+      "borderWidth": 1,
+      "borderColor": "rgb(0,0,0)",
+      "visible": {
+        "func": "__ht__function(data, view) {\n return Boolean(data.a('node.data')[26]);\n}",
+        "value": false
+      },
+      "rect": [
+        48.16932,
+        21.11157,
+        1.5,
+        5
+      ]
+    },
+    {
+      "type": "circle",
+      "background": "rgb(0,0,0)",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "visible": {
+        "func": "__ht__function(data, view) {\n return Boolean(data.a('node.data')[26]);\n}",
+        "value": false
+      },
+      "rect": [
+        47.91932,
+        27.70712,
+        2,
+        2
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(255,255,0)",
+      "borderColor": "#979797",
+      "visible": {
+        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r=false;if(d[25]&&!d[26]){r=true}return r;\n}",
+        "value": false
+      },
+      "rect": [
+        42.91932,
+        19,
+        12,
+        12
+      ]
+    },
+    {
+      "type": "circle",
+      "background": "rgb(0,0,0)",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "visible": {
+        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r=false;if(d[25]&&!d[26]){r=true}return r;\n}",
+        "value": false
+      },
+      "rect": [
+        47.55585,
+        19.89474,
+        2.34664,
+        2.33202
+      ]
+    },
+    {
+      "type": "shape",
+      "background": "rgb(0,0,0)",
+      "borderWidth": 0.2,
+      "borderColor": "rgb(0,0,0)",
+      "closePath": true,
+      "visible": {
+        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r=false;if(d[25]&&!d[26]){r=true}return r;\n}",
+        "value": false
+      },
+      "points": [
+        48.29461,
+        22.4537,
+        48.29461,
+        22.96643,
+        46.3102,
+        24.14966,
+        46.15145,
+        24.49302,
+        46.15145,
+        24.97792,
+        46.90553,
+        25.37233,
+        48.29461,
+        25.37233,
+        48.09617,
+        26.94997,
+        47.6596,
+        28.52762,
+        46.90553,
+        29.4742,
+        46.70709,
+        30.10526,
+        47.58023,
+        30.10526,
+        48.73118,
+        30.10526,
+        48.61212,
+        29.67141,
+        47.58023,
+        29.63196,
+        48.29461,
+        28.6065,
+        48.85025,
+        26.94997,
+        50.00121,
+        28.21209,
+        49.48526,
+        29.11923,
+        49.32651,
+        29.67141,
+        51.31092,
+        29.67141,
+        50.95372,
+        29.04035,
+        50.08058,
+        29.07979,
+        50.71559,
+        27.77824,
+        49.48526,
+        26.51612,
+        49.64401,
+        24.74128,
+        49.56464,
+        23.59749,
+        50.67591,
+        23.87357,
+        52.62063,
+        23.91301,
+        52.62063,
+        23.47916,
+        50.63622,
+        23.36084,
+        48.85025,
+        22.84811,
+        48.81056,
+        22.4537
+      ]
+    },
+    {
+      "type": "shape",
+      "background": "rgba(0,0,0,0)",
+      "borderColor": "#979797",
+      "closePath": true,
+      "visible": {
+        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r=false;if(d[25]&&!d[26]){r=true}return r;\n}",
+        "value": false
+      },
+      "points": [
+        48.18156,
+        23.82426,
+        48.18156,
+        24.86129,
+        47.54877,
+        24.86129,
+        46.96211,
+        24.49302
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r='';if(d[3]||d[11]){r='F'}else if(d[4]&&!d[12]&&!d[3]&&!d[11]){r='S'} return r;\n}",
+        "value": "F"
+      },
+      "align": "center",
+      "color": "rgb(255,0,0)",
+      "font": "9px arial, sans-serif",
+      "visible": {
+        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r=false;if((d[4]&&!d[12]&&!d[3]&&!d[11])||(d[3]||d[11])){r=true}return r;\n}",
+        "value": false
+      },
+      "rect": [
+        0,
+        0,
+        8,
+        8
+      ]
+    },
+    {
+      "type": "text",
+      "text": "L",
+      "align": "center",
+      "color": "rgb(255,255,0)",
+      "font": "9px arial, sans-serif",
+      "visible": {
+        "func": "__ht__function(data, view) {\n return Boolean(data.a('node.data')[19]);\n}",
+        "value": false
+      },
+      "rect": [
+        0,
+        24,
+        8,
+        8
       ]
     }
   ]

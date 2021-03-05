@@ -2,14 +2,25 @@
   "modified": "Thu Oct 29 2020 10:38:08 GMT+0800 (CST)",
   "dataBindings": [
     {
-      "attr": "node.type",
+      "attr": "node.cate",
       "valueType": "String",
       "defaultValue": "m-point"
     },
     {
+      "attr": "node.type",
+      "valueType": "String",
+      "defaultValue": "equip"
+    },
+    {
       "attr": "node.name",
       "valueType": "String",
-      "defaultValue": "switch"
+      "defaultValue": "handler"
+    },
+    {
+      "attr": "node.data",
+      "valueType": "Array",
+      "name": "状态值",
+      "defaultValue": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,1,1,0,0,0,0,0]
     }
   ],
   "width": 76,
@@ -80,24 +91,38 @@
     },
     {
       "type": "rect",
-      "background": "rgb(255,255,0)",
+      "background": {
+        "func": "__ht__function(data, view) {\n return Boolean(data.a('node.data')[17])?'rgb(255,255,0)':'rgb(0,255,0)';\n}",
+        "value": "rgb(255,255,0)"
+      },
       "borderWidth": 0.5,
       "borderColor": "#979797",
+      "visible": {
+        "func": "__ht__function(data, view) {\n return !Boolean(data.a('node.data')[19]);\n}",
+        "value": false
+      },
       "rect": [
-        63.15811,
-        0.00014,
+        34.48792,
+        3.02714,
         12,
         12
       ]
     },
     {
       "type": "text",
-      "text": "M",
+      "text": {
+        "func": "__ht__function(data, view) {\n return Boolean(data.a('node.data')[17])?'M':'A';\n}",
+        "value": "rgb(255,0,0)"
+      },
       "align": "center",
       "font": "9px arial, sans-serif",
+      "visible": {
+        "func": "__ht__function(data, view) {\n return !Boolean(data.a('node.data')[19]);\n}",
+        "value": false
+      },
       "rect": [
-        64.15811,
-        1.273,
+        35.48792,
+        4.3,
         10,
         10
       ]
