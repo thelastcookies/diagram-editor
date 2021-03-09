@@ -33,7 +33,10 @@
   "comps": [
     {
       "type": "rightTriangle",
-      "background": "#D8D8D8",
+      "background": {
+        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r='#D8D8D8';if((d[1]&&!d[13])||d[5]){r='#FF0000'} else if(d[9]||d[13]){r='#00FF00'}return r;\n}",
+        "values": "#D8D8D8"
+      },
       "borderWidth": 0.1,
       "borderColor": "rgb(0,0,0)",
       "anchorX": 1,
@@ -44,6 +47,26 @@
       "rect": [
         4.00001,
         8.00001,
+        12,
+        16
+      ]
+    },
+    {
+      "type": "rightTriangle",
+      "background": {
+        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r='#D8D8D8';if((d[1]&&!d[13])||d[5]){r='#FF0000'} else if(d[9]||d[13]){r='#00FF00'}return r;\n}",
+        "values": "#D8D8D8"
+      },
+      "borderWidth": 0.1,
+      "borderColor": "rgb(0,0,0)",
+      "anchorX": 0,
+      "rotation": {
+        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'up')res=270;\nif(dir === 'right')res=0;\nif(dir === 'down')res=90;\nif(dir === 'left')res=180;\nreturn res/180*Math.PI;\n}",
+        "value": 4.71239
+      },
+      "rect": [
+        15.99994,
+        8.00012,
         12,
         16
       ]
@@ -67,7 +90,10 @@
     },
     {
       "type": "triangle",
-      "background": "#D8D8D8",
+      "background": {
+        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r='#D8D8D8';if((d[1]&&!d[13])||d[5]){r='#FF0000'} else if(d[9]||d[13]){r='#00FF00'}return r;\n}",
+        "values": "#D8D8D8"
+      },
       "borderWidth": 0.1,
       "borderColor": {
         "func": "attr@line.color",
@@ -88,7 +114,10 @@
     },
     {
       "type": "triangle",
-      "background": "#D8D8D8",
+      "background": {
+        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r='#D8D8D8';if((d[1]&&!d[13])||d[5]){r='#FF0000'} else if(d[9]||d[13]){r='#00FF00'}return r;\n}",
+        "values": "#D8D8D8"
+      },
       "borderWidth": 0.1,
       "borderColor": {
         "func": "attr@line.color",
@@ -105,23 +134,6 @@
         16,
         11.5,
         15
-      ]
-    },
-    {
-      "type": "rightTriangle",
-      "background": "#D8D8D8",
-      "borderWidth": 0.1,
-      "borderColor": "rgb(0,0,0)",
-      "anchorX": 0,
-      "rotation": {
-        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'up')res=270;\nif(dir === 'right')res=0;\nif(dir === 'down')res=90;\nif(dir === 'left')res=180;\nreturn res/180*Math.PI;\n}",
-        "value": 4.71239
-      },
-      "rect": [
-        15.99994,
-        8.00012,
-        12,
-        16
       ]
     },
     {

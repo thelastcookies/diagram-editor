@@ -47,7 +47,7 @@ ht.DataModel.prototype.setNodeStatusByValue = function (data) {
             // }
             // 如果是 Text
             if (node instanceof ht.Text) {
-                value = Number(item.value)
+                value = Number(item.value);
                 node.s("text", value.toFixed(2));
             }
         });

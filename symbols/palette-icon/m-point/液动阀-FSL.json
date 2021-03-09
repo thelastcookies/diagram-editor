@@ -33,66 +33,10 @@
   "comps": [
     {
       "type": "rect",
-      "background": "#D8D8D8",
-      "borderWidth": 0.1,
-      "borderColor": "rgb(0,0,0)",
-      "anchorY": 0,
-      "rotation": {
-        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'up')res=0;\nif(dir === 'right')res=90;\nif(dir === 'down')res=180;\nif(dir === 'left')res=270;\nreturn res/180*Math.PI;\n}",
-        "value": 0
+      "background": {
+        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r='#D8D8D8';if((d[1]&&!d[13])||d[5]){r='#FF0000'} else if(d[9]||d[13]){r='#00FF00'}return r;\n}",
+        "values": "#D8D8D8"
       },
-      "rect": [
-        25.49034,
-        16,
-        0.75,
-        6.95
-      ]
-    },
-    {
-      "type": "triangle",
-      "background": "#D8D8D8",
-      "borderWidth": 0.1,
-      "borderColor": {
-        "func": "attr@line.color",
-        "value": "rgb(0,0,0)"
-      },
-      "anchorX": 1.10435,
-      "anchorY": 0,
-      "rotation": {
-        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'up')res=270;\nif(dir === 'right')res=0;\nif(dir === 'down')res=90;\nif(dir === 'left')res=180;\nreturn res/180*Math.PI;\n}",
-        "value": 4.71239
-      },
-      "rect": [
-        13.16537,
-        16,
-        11.5,
-        15
-      ]
-    },
-    {
-      "type": "triangle",
-      "background": "#D8D8D8",
-      "borderWidth": 0.1,
-      "borderColor": {
-        "func": "attr@line.color",
-        "value": "rgb(0,0,0)"
-      },
-      "anchorX": -0.10435,
-      "anchorY": 0,
-      "rotation": {
-        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'up')res=90;\nif(dir === 'right')res=180;\nif(dir === 'down')res=270;\nif(dir === 'left')res=0;\nreturn res/180*Math.PI;\n}",
-        "value": 1.5708
-      },
-      "rect": [
-        27.06537,
-        16,
-        11.5,
-        15
-      ]
-    },
-    {
-      "type": "rect",
-      "background": "#D8D8D8",
       "borderWidth": 0.1,
       "borderColor": "rgb(0,0,0)",
       "anchorX": 0,
@@ -137,6 +81,71 @@
         9.9,
         16,
         0.1
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 0.1,
+      "borderColor": "rgb(0,0,0)",
+      "anchorY": 0,
+      "rotation": {
+        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'up')res=0;\nif(dir === 'right')res=90;\nif(dir === 'down')res=180;\nif(dir === 'left')res=270;\nreturn res/180*Math.PI;\n}",
+        "value": 0
+      },
+      "rect": [
+        25.49034,
+        16,
+        0.75,
+        6.95
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": {
+        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r='#D8D8D8';if((d[1]&&!d[13])||d[5]){r='#FF0000'} else if(d[9]||d[13]){r='#00FF00'}return r;\n}",
+        "values": "#D8D8D8"
+      },
+      "borderWidth": 0.1,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(0,0,0)"
+      },
+      "anchorX": 1.10435,
+      "anchorY": 0,
+      "rotation": {
+        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'up')res=270;\nif(dir === 'right')res=0;\nif(dir === 'down')res=90;\nif(dir === 'left')res=180;\nreturn res/180*Math.PI;\n}",
+        "value": 4.71239
+      },
+      "rect": [
+        13.16537,
+        16,
+        11.5,
+        15
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": {
+        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r='#D8D8D8';if((d[1]&&!d[13])||d[5]){r='#FF0000'} else if(d[9]||d[13]){r='#00FF00'}return r;\n}",
+        "values": "#D8D8D8"
+      },
+      "borderWidth": 0.1,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(0,0,0)"
+      },
+      "anchorX": -0.10435,
+      "anchorY": 0,
+      "rotation": {
+        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'up')res=90;\nif(dir === 'right')res=180;\nif(dir === 'down')res=270;\nif(dir === 'left')res=0;\nreturn res/180*Math.PI;\n}",
+        "value": 1.5708
+      },
+      "rect": [
+        27.06537,
+        16,
+        11.5,
+        15
       ]
     },
     {

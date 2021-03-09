@@ -33,7 +33,10 @@
   "comps": [
     {
       "type": "oval",
-      "background": "#D8D8D8",
+      "background": {
+        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r='#D8D8D8';if((d[1]&&!d[13])||d[5]){r='#FF0000'} else if(d[9]||d[13]){r='#00FF00'}return r;\n}",
+        "values": "#D8D8D8"
+      },
       "borderWidth": 0.1,
       "borderColor": "rgb(0,0,0)",
       "anchorY": 1,
@@ -84,12 +87,12 @@
     },
     {
       "type": "triangle",
-      "background": "#D8D8D8",
-      "borderWidth": 0.1,
-      "borderColor": {
-        "func": "attr@line.color",
-        "value": "rgb(0,0,0)"
+      "background": {
+        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r='#D8D8D8';if((d[1]&&!d[13])||d[5]){r='#FF0000'} else if(d[9]||d[13]){r='#00FF00'}return r;\n}",
+        "values": "#D8D8D8"
       },
+      "borderWidth": 0.1,
+      "borderColor": "rgb(0,0,0)",
       "anchorX": 1.10435,
       "anchorY": 0,
       "rotation": {
@@ -105,12 +108,12 @@
     },
     {
       "type": "triangle",
-      "background": "#D8D8D8",
-      "borderWidth": 0.1,
-      "borderColor": {
-        "func": "attr@line.color",
-        "value": "rgb(0,0,0)"
+      "background": {
+        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r='#D8D8D8';if((d[1]&&!d[13])||d[5]){r='#FF0000'} else if(d[9]||d[13]){r='#00FF00'}return r;\n}",
+        "values": "#D8D8D8"
       },
+      "borderWidth": 0.1,
+      "borderColor": "rgb(0,0,0)",
       "anchorX": -0.10435,
       "anchorY": 0,
       "rotation": {
