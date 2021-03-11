@@ -2,14 +2,19 @@
   "modified": "Thu Oct 29 2020 17:43:41 GMT+0800 (CST)",
   "dataBindings": [
     {
-      "attr": "node.type",
+      "attr": "node.cate",
       "valueType": "String",
       "defaultValue": "m-point"
     },
     {
-      "attr": "node.name",
+      "attr": "node.type",
       "valueType": "String",
       "defaultValue": "data"
+    },
+    {
+      "attr": "node.name",
+      "valueType": "String",
+      "defaultValue": "data-unit"
     },
     {
       "attr": "node.label",
@@ -20,7 +25,7 @@
     {
       "attr": "node.unit",
       "valueType": "String",
-      "defaultValue": "unit",
+      "defaultValue": "",
       "name": "单位"
     },
     {

@@ -33,7 +33,10 @@
   "comps": [
     {
       "type": "oval",
-      "background": "#009A3D",
+      "background": {
+        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r='rgba(0,158,61,0.8)';if(d[4]||d[12]){r='rgb(127,127,127,0.8)';}return r;\n}",
+        "values": "rgba(0,158,61,0.8)"
+      },
       "borderWidth": 2,
       "borderColor": "#009A3D",
       "rect": [
@@ -45,7 +48,10 @@
     },
     {
       "type": "rect",
-      "background": "rgb(217,217,217)",
+      "background": {
+        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r='#FFFFFF';if(d[9]){r='#00FF00';if(d[1]) {r='rgb(192,192,192)'}}return r;\n}",
+        "values": "#FFFFFF"
+      },
       "borderColor": "rgba(255,255,255,0.6)",
       "anchorY": 0.9333,
       "rotation": {
@@ -61,7 +67,10 @@
     },
     {
       "type": "polygon",
-      "background": "rgb(217,217,217)",
+      "background": {
+        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r='#FFFFFF';if(d[9]){r='#00FF00';if(d[1]) {r='rgb(192,192,192)'}}return r;\n}",
+        "values": "#FFFFFF"
+      },
       "borderColor": "rgba(255,255,255,0.6)",
       "polygonSide": 3,
       "anchorX": 0.2,

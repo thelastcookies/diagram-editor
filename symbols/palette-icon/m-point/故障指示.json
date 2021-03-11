@@ -2,20 +2,30 @@
   "modified": "Fri Jan 08 2021 13:35:57 GMT+0800 (CST)",
   "dataBindings": [
     {
-      "attr": "node.type",
+      "attr": "node.cate",
       "valueType": "String",
       "defaultValue": "m-point"
     },
     {
+      "attr": "node.type",
+      "valueType": "String",
+      "defaultValue": "switch"
+    },
+    {
       "attr": "node.name",
       "valueType": "String",
-      "defaultValue": "pump"
+      "defaultValue": "故障指示"
+    },
+    {
+      "attr": "node.color",
+      "valueType": "Color",
+      "defaultValue": "rgb(255,0,0)"
     },
     {
       "attr": "node.state",
       "valueType": "Boolean",
       "defaultValue": false,
-      "name": "告警状态"
+      "name": "故障指示状态"
     }
   ],
   "width": 24,

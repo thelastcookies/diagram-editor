@@ -71,6 +71,7 @@ palette_config = {
             { name: '变压器常用接法', image: 'symbols/palette-icon/transformer/变压器常用接法.json', type: ht.Node},
             { name: '变压器常用接法2', image: 'symbols/palette-icon/transformer/变压器常用接法2.json', type: ht.Node},
             { name: '伊宁发变组主变', image: 'symbols/palette-icon/transformer/伊宁发变组主变.json', type: ht.Node},
+            { name: '主变档位指示', image: 'symbols/palette-icon/m-point/主变档位指示.json', type: ht.Node},
 
 
             // { name: '主变', image: 'symbols/palette-icon/transformer/主变.json', type: ht.Node},

@@ -2,14 +2,19 @@
   "modified": "Sun Sep 27 2020 13:59:17 GMT+0800 (CST)",
   "dataBindings": [
     {
-      "attr": "node.type",
+      "attr": "node.cate",
       "valueType": "String",
       "defaultValue": "m-point"
     },
     {
+      "attr": "node.type",
+      "valueType": "String",
+      "defaultValue": "switch"
+    },
+    {
       "attr": "node.name",
       "valueType": "String",
-      "defaultValue": "G-switch"
+      "defaultValue": "switch"
     },
     {
       "attr": "node.color",

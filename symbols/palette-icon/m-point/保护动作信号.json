@@ -2,9 +2,14 @@
   "modified": "Fri Oct 30 2020 14:05:43 GMT+0800 (CST)",
   "dataBindings": [
     {
-      "attr": "node.type",
+      "attr": "node.cate",
       "valueType": "String",
       "defaultValue": "m-point"
+    },
+    {
+      "attr": "node.type",
+      "valueType": "String",
+      "defaultValue": "switch"
     },
     {
       "attr": "node.name",
@@ -20,7 +25,7 @@
       "attr": "node.state",
       "valueType": "Boolean",
       "defaultValue": false,
-      "name": "告警状态"
+      "name": "信号状态"
     }
   ],
   "width": 24,

@@ -1,0 +1,46 @@
+{
+  "modified": "Tue Mar 09 2021 17:16:16 GMT+0800 (CST)",
+  "dataBindings": [
+    {
+      "attr": "node.cate",
+      "valueType": "String",
+      "defaultValue": "m-point"
+    },
+    {
+      "attr": "node.type",
+      "valueType": "String",
+      "defaultValue": "switch"
+    },
+    {
+      "attr": "node.name",
+      "valueType": "String",
+      "defaultValue": "main-trans-indicator"
+    },
+    {
+      "attr": "node.state",
+      "valueType": "Boolean",
+      "defaultValue": true,
+      "name": "开关状态"
+    }
+  ],
+  "width": 8,
+  "height": 6,
+  "comps": [
+    {
+      "type": "triangle",
+      "background": "rgb(255,0,0)",
+      "visible": {
+        "func": "attr@node.state",
+        "value": false
+      },
+      "borderColor": "rgb(255,0,0)",
+      "borderJoin": "miter",
+      "rect": [
+        0,
+        0,
+        8,
+        6
+      ]
+    }
+  ]
+}

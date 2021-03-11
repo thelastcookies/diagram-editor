@@ -20,7 +20,7 @@
       "attr": "node.data",
       "valueType": "Array",
       "name": "状态值",
-      "defaultValue": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,1,0,0,0,0,0]
+      "defaultValue": [0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,1,0,0,0,0,0]
     }
   ],
   "width": 48,
@@ -30,6 +30,10 @@
       "type": "shape",
       "borderWidth": 1.5,
       "borderColor": "rgb(0,199,7)",
+      "visible": {
+        "func": "__ht__function(data, view) {\nreturn Boolean(data.a('node.data')[1]);\n}",
+        "value": false
+      },
       "points": [
         3.07232,
         3.02714,
@@ -41,6 +45,10 @@
       "type": "shape",
       "borderWidth": 1.5,
       "borderColor": "rgb(0,199,7)",
+      "visible": {
+        "func": "__ht__function(data, view) {\nreturn Boolean(data.a('node.data')[1]);\n}",
+        "value": false
+      },
       "points": [
         3.07232,
         3.02714,
@@ -52,17 +60,10 @@
       "type": "shape",
       "borderWidth": 1.5,
       "borderColor": "rgb(212,0,0)",
-      "points": [
-        3.07232,
-        28.97286,
-        25.12718,
-        3.02714
-      ]
-    },
-    {
-      "type": "shape",
-      "borderWidth": 1.5,
-      "borderColor": "rgb(212,0,0)",
+      "visible": {
+        "func": "__ht__function(data, view) {\nreturn Boolean(data.a('node.data')[9]);\n}",
+        "value": false
+      },
       "points": [
         3.07232,
         28.97286,
@@ -73,7 +74,26 @@
     {
       "type": "shape",
       "borderWidth": 1.5,
+      "borderColor": "rgb(212,0,0)",
+      "visible": {
+        "func": "__ht__function(data, view) {\nreturn Boolean(data.a('node.data')[9]);\n}",
+        "value": false
+      },
+      "points": [
+        3.07232,
+        28.97286,
+        25.12718,
+        3.02714
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 1.5,
       "borderColor": "rgb(226,250,87)",
+      "visible": {
+        "func": "__ht__function(data, view) {\nreturn !Boolean(data.a('node.data')[1]) && !Boolean(data.a('node.data')[9]);\n}",
+        "value": false
+      },
       "points": [
         3.07232,
         16,
@@ -85,6 +105,10 @@
       "type": "shape",
       "borderWidth": 1.5,
       "borderColor": "rgb(226,250,87)",
+      "visible": {
+        "func": "__ht__function(data, view) {\nreturn !Boolean(data.a('node.data')[1]) && !Boolean(data.a('node.data')[9]);\n}",
+        "value": false
+      },
       "points": [
         3.07232,
         16,

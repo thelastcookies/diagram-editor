@@ -21,30 +21,42 @@ ht.DataModel.prototype.setNodeStatusByValue = function (data) {
                     return;
                 }
                 if (node.a('node.type') === 'switch') {
-                    // node.a('node.state', Boolean(item.value));
+                    // node.a('node.state', Boolean(Number(item.value)));
                     node.a('node.state', true);
+                    // node.a('node.state', false);
                 }
                 if (node.a('node.type') === 'motor' ||
                     node.a('node.type') === 'value' ||
                     node.a('node.type') === 'pump' ||
                     node.a('node.type') === 'equip') {
-
+                    if (item.value === "null") return;
+                    // let va = Number("50529024").toString(2).split('').map(i => Number(i));
                     let va = Number(item.value).toString(2).split('').map(i => Number(i));
                     va = va.reverse().concat(new Array(32 - va.length).fill(0));
-                    node.a('node.data', va);
-                    // node.a('node.data', [0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0]);
+                    // node.a('node.data', va);
+                    // node.a('node.data', [0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,1,0,0,0,0,0]);
+                    // node.a('node.data', [0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,1,0,0,0,0,0,0]);
+                    // node.a('node.data', [0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,1,0,0,0,0,0]);
+                    // node.a('node.data', [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,1,0,0,0,0,0]);
+                    // node.a('node.data', [0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,1,0,0,0,0,0]); // 电动阀红
+                    // node.a('node.data', [0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,1,1,0,0,0,0,0]); // 电动阀绿
+                    // node.a('node.data', [0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,1,0,0,0,0,0]); // 电动机全变色 lv
+                    // node.a('node.data', [0,1,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,1,0,0,0,0,0]); // 电动机全变色 hui
+                    // node.a('node.data', [0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,1,0,0,0,0,0]); // 路吹灰 红
+                    // node.a('node.data', [0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,1,0,0,0,0,0]); // 路吹灰 绿
+                    // node.a('node.data', [0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,1,0,0,0,0,0]); // 路吹灰 黄
+                    // node.a('node.data', [0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0]); // 路吹灰 黄
+                    // node.a('node.data', [0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0]); // FSL
+                    // node.a('node.data', [0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0]); // 犁煤器 红
+                    // node.a('node.data', [0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0]); // 犁煤器 绿
+                    // node.a('node.data', [0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0]); // 犁煤器 黄
+                    // node.a('node.data', [0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0]); // 振动器
+                    // node.a('node.data', [0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,1,0,0,0,0,0]); // 振动器
+                }
+                if (node.a('node.type') === 'p-bar') {
+                    node.a('node.value', Number(item.value));
                 }
             }
-            // 如果是 柱状图元
-            // if (node instanceof ht.Node && node.a('node.cate') === 'zt') {
-            //     value = Number(item.value)
-            //     node.s('label') ? node.s('label', String(value)) : '';
-            //     if ((value > 0 && node.a('zt.dirt') === 'top') || value < 0 && node.a('zt.dirt') === 'bottom') {
-            //         node.a('zt.height', Math.abs(value) / (Number(node.a('zt.max')) - Number(node.a('zt.min'))));
-            //     } else {
-            //         node.a('zt.height', 0);
-            //     }
-            // }
             // 如果是 Text
             if (node instanceof ht.Text) {
                 value = Number(item.value);

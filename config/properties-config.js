@@ -577,6 +577,16 @@ node_color_properties = [//普通图元的初始颜色配置
     }
 ];
 
+text_font_properties = [
+    {
+        name: 'text.font',
+        displayName: '字体大小',
+        accessType: 'attr',
+        valueType: 'text',
+        editable: true
+    }
+];
+
 m_point_properties = [//测点图元的配置项
     {
         name: 'node.tag',

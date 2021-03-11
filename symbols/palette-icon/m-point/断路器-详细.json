@@ -2,9 +2,14 @@
   "modified": "Mon Oct 26 2020 11:26:29 GMT+0800 (CST)",
   "dataBindings": [
     {
-      "attr": "node.type",
+      "attr": "node.cate",
       "valueType": "String",
       "defaultValue": "m-point"
+    },
+    {
+      "attr": "node.type",
+      "valueType": "String",
+      "defaultValue": "switch"
     },
     {
       "attr": "node.name",
@@ -12,15 +17,10 @@
       "defaultValue": "switch"
     },
     {
-      "attr": "node.color",
-      "valueType": "Color",
-      "defaultValue": "rgb(255,0,0)"
-    },
-    {
       "attr": "node.state",
       "valueType": "Boolean",
       "defaultValue": false,
-      "name": "开关状态"
+      "name": "断路器状态"
     }
   ],
   "width": 10,
@@ -30,7 +30,7 @@
       "type": "shape",
       "borderWidth": 2,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : 'rgb(0,255,0)';\n}",
         "value": "rgb(255,0,0)"
       },
       "points": [
@@ -44,7 +44,7 @@
       "type": "shape",
       "borderWidth": 2,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : 'rgb(0,255,0)';\n}",
         "value": "rgb(255,0,0)"
       },
       "rotation": 0.7854,
@@ -59,7 +59,7 @@
       "type": "shape",
       "borderWidth": 2,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : 'rgb(0,255,0)';\n}",
         "value": "rgb(255,0,0)"
       },
       "rotation": 2.35619,
@@ -74,7 +74,7 @@
       "type": "shape",
       "borderWidth": 2,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : 'rgb(0,255,0)';\n}",
         "value": "rgb(255,0,0)"
       },
       "points": [

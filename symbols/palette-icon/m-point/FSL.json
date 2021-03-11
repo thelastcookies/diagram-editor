@@ -30,7 +30,10 @@
       "type": "rect",
       "background": "rgba(217,217,217,0)",
       "borderWidth": 1,
-      "borderColor": "rgba(217,217,217)",
+      "borderColor": {
+        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r='#D8D8D8';if(d[9]){r='rgb(0,192,29)'};if(d[1]){r='rgb(192,0,32)'}return r;\n}",
+        "values": "#D8D8D8"
+      },
       "rect": [
         8,
         0,

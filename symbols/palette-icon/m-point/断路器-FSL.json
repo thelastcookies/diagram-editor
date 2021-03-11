@@ -28,9 +28,12 @@
   "comps": [
     {
       "type": "rect",
-      "background": "rgba(217,217,217,0)",
+      "background": "rgb(0,0,0,0)",
       "borderWidth": 1,
-      "borderColor": "#979797",
+      "borderColor": {
+        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r='#00FF00';if(d[17]){r='#979797'}return r;\n}",
+        "value": "#979797"
+      },
       "rect": [
         0,
         0,
@@ -42,21 +45,7 @@
       "type": "shape",
       "borderWidth": 2,
       "borderColor": {
-        "func": "attr@line.color",
-        "value": "rgb(255,0,0)"
-      },
-      "points": [
-        15,
-        12.5,
-        15,
-        0
-      ]
-    },
-    {
-      "type": "shape",
-      "borderWidth": 2,
-      "borderColor": {
-        "func": "attr@line.color",
+        "func": "__ht__function(data, view) {\n return data.a('node.data')[1] ? 'rgb(255,0,0)' : 'rgb(0,255,0)';\n}",
         "value": "rgb(255,0,0)"
       },
       "rotation": 0.7854,
@@ -71,7 +60,7 @@
       "type": "shape",
       "borderWidth": 2,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "__ht__function(data, view) {\n return data.a('node.data')[1] ? 'rgb(255,0,0)' : 'rgb(0,255,0)';\n}",
         "value": "rgb(255,0,0)"
       },
       "rotation": 2.35619,
@@ -86,7 +75,21 @@
       "type": "shape",
       "borderWidth": 2,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "__ht__function(data, view) {\n return data.a('node.data')[1] ? 'rgb(255,0,0)' : 'rgb(0,255,0)';\n}",
+        "value": "rgb(255,0,0)"
+      },
+      "points": [
+        15,
+        12.5,
+        15,
+        0
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "__ht__function(data, view) {\n return data.a('node.data')[1] ? 'rgb(255,0,0)' : 'rgb(0,255,0)';\n}",
         "value": "rgb(255,0,0)"
       },
       "points": [
@@ -100,13 +103,13 @@
       "type": "shape",
       "borderWidth": 2,
       "borderColor": {
-        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : 'rgb(0,255,0)';\n}",
+        "func": "__ht__function(data, view) {\n return data.a('node.data')[1] ? 'rgb(255,0,0)' : 'rgb(0,255,0)';\n}",
         "value": "rgb(255,0,0)"
       },
       "anchorX": 0,
       "anchorY": 1,
       "rotation": {
-        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 0 : Math.PI/180*30;\n}",
+        "func": "__ht__function(data, view) {\n return data.a('node.data')[1] ? 0 : Math.PI/180*30;\n}",
         "value": 0
       },
       "points": [

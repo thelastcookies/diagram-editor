@@ -1,5 +1,12 @@
 {
   "modified": "Fri Oct 23 2020 10:55:44 GMT+0800 (CST)",
+  "dataBindings": [
+    {
+      "attr": "line.color",
+      "valueType": "Color",
+      "defaultValue": "rgb(0,0,0)"
+    }
+  ],
   "width": 10,
   "height": 140,
   "comps": [

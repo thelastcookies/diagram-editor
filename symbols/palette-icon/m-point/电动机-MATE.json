@@ -29,7 +29,7 @@
     {
       "type": "oval",
       "background": {
-        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r='rgba(0,158,61,0.8)';if(!d[4]&&!d[12]){r='rgb(127,127,127,0.8)';}return r;\n}",
+        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r='rgba(0,158,61,0.8)';if(d[4]||d[12]){r='rgb(127,127,127,0.8)';}return r;\n}",
         "values": "rgba(0,158,61,0.8)"
       },
       "borderWidth": 2,

@@ -2,19 +2,19 @@
   "modified": "Fri Nov 13 2020 16:35:26 GMT+0800 (CST)",
   "dataBindings": [
     {
-      "attr": "node.type",
+      "attr": "node.cate",
       "valueType": "String",
       "defaultValue": "m-point"
     },
     {
-      "attr": "node.name",
+      "attr": "node.type",
       "valueType": "String",
-      "defaultValue": "bar"
+      "defaultValue": "p-bar"
     },
     {
-      "attr": "node.value",
-      "valueType": "Number",
-      "defaultValue": 8
+      "attr": "node.name",
+      "valueType": "String",
+      "defaultValue": "p-bar"
     },
     {
       "attr": "node.direction",
@@ -35,6 +35,11 @@
       "attr": "bar.max",
       "valueType": "Number",
       "defaultValue": 10
+    },
+    {
+      "attr": "node.value",
+      "valueType": "Number",
+      "defaultValue": -9999
     }
   ],
   "width": 30,
@@ -61,7 +66,7 @@
       },
       "borderColor": "#979797",
       "fillClipPercentage": {
-        "func": "__ht__function(data, view){\nlet min=data.a('bar.min'),max=data.a('bar.max'),value=data.a('node.value');\nreturn value / Math.abs(max - min);\n}",
+        "func": "__ht__function(data, view){\nlet min=data.a('bar.min'),max=data.a('bar.max'),value=data.a('node.value');\nreturn (value - min) / (max - min);\n}",
         "value": 0
       },
       "rotation": {

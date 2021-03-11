@@ -28,7 +28,10 @@
   "comps": [
     {
       "type": "oval",
-      "background": "rgba(0,158,61,0.8)",
+      "background": {
+        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r='rgba(0,158,61,0.8)';if(d[4]||d[12]){r='rgb(127,127,127,0.8)';}return r;\n}",
+        "values": "rgba(0,158,61,0.8)"
+      },
       "borderWidth": 2,
       "borderColor": "#009A3D",
       "rect": [
@@ -42,7 +45,10 @@
       "type": "text",
       "text": "M",
       "align": "center",
-      "color": "rgb(255,255,255)",
+      "color": {
+        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r='#FFFFFF';if(d[9]){r='#00FF00';if(d[1]) {r='rgb(192,192,192)'}}return r;\n}",
+        "values": "#FFFFFF"
+      },
       "font": "18px arial, sans-serif",
       "rect": [
         19,

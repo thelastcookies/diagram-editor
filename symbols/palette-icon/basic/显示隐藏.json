@@ -2,7 +2,7 @@
   "modified": "Thu Feb 04 2021 16:31:59 GMT+0800 (CST)",
   "dataBindings": [
     {
-      "attr": "node.type",
+      "attr": "node.cate",
       "valueType": "String",
       "defaultValue": "m-point"
     },
@@ -26,6 +26,11 @@
       "attr": "line.color",
       "valueType": "Color",
       "defaultValue": "#FF0000"
+    },
+    {
+      "attr": "text.font",
+      "valueType": "String",
+      "defaultValue": "16px arial, sans-serif"
     }
   ],
   "width": 70,
@@ -46,7 +51,10 @@
         "func": "__ht__function(data, view) {\n return data.a('node.state');\n}",
         "value": "true"
       },
-      "font": "16px arial, sans-serif",
+      "font": {
+        "func": "__ht__function(data, view) {\n return data.a('text.font');\n}",
+        "value": "16px arial, sans-serif"
+      },
       "rect": [
         0,
         0,
