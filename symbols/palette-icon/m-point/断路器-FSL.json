@@ -20,7 +20,7 @@
       "attr": "node.data",
       "valueType": "Array",
       "name": "状态值",
-      "defaultValue": [0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,1,0,0,0,0,0]
+      "defaultValue": [0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0]
     }
   ],
   "width": 30,
@@ -31,7 +31,7 @@
       "background": "rgb(0,0,0,0)",
       "borderWidth": 1,
       "borderColor": {
-        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r='#00FF00';if(d[17]){r='#979797'}return r;\n}",
+        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r='#00FF00';if(d[16]){r='#979797'}return r;\n}",
         "value": "#979797"
       },
       "rect": [
@@ -45,7 +45,7 @@
       "type": "shape",
       "borderWidth": 2,
       "borderColor": {
-        "func": "__ht__function(data, view) {\n return data.a('node.data')[1] ? 'rgb(255,0,0)' : 'rgb(0,255,0)';\n}",
+        "func": "__ht__function(data, view) {\n return data.a('node.data')[0] ? 'rgb(255,0,0)' : 'rgb(0,255,0)';\n}",
         "value": "rgb(255,0,0)"
       },
       "rotation": 0.7854,
@@ -60,7 +60,7 @@
       "type": "shape",
       "borderWidth": 2,
       "borderColor": {
-        "func": "__ht__function(data, view) {\n return data.a('node.data')[1] ? 'rgb(255,0,0)' : 'rgb(0,255,0)';\n}",
+        "func": "__ht__function(data, view) {\n return data.a('node.data')[0] ? 'rgb(255,0,0)' : 'rgb(0,255,0)';\n}",
         "value": "rgb(255,0,0)"
       },
       "rotation": 2.35619,
@@ -75,7 +75,7 @@
       "type": "shape",
       "borderWidth": 2,
       "borderColor": {
-        "func": "__ht__function(data, view) {\n return data.a('node.data')[1] ? 'rgb(255,0,0)' : 'rgb(0,255,0)';\n}",
+        "func": "__ht__function(data, view) {\n return data.a('node.data')[0] ? 'rgb(255,0,0)' : 'rgb(0,255,0)';\n}",
         "value": "rgb(255,0,0)"
       },
       "points": [
@@ -89,7 +89,7 @@
       "type": "shape",
       "borderWidth": 2,
       "borderColor": {
-        "func": "__ht__function(data, view) {\n return data.a('node.data')[1] ? 'rgb(255,0,0)' : 'rgb(0,255,0)';\n}",
+        "func": "__ht__function(data, view) {\n return data.a('node.data')[0] ? 'rgb(255,0,0)' : 'rgb(0,255,0)';\n}",
         "value": "rgb(255,0,0)"
       },
       "points": [
@@ -103,13 +103,13 @@
       "type": "shape",
       "borderWidth": 2,
       "borderColor": {
-        "func": "__ht__function(data, view) {\n return data.a('node.data')[1] ? 'rgb(255,0,0)' : 'rgb(0,255,0)';\n}",
+        "func": "__ht__function(data, view) {\n return data.a('node.data')[0] ? 'rgb(255,0,0)' : 'rgb(0,255,0)';\n}",
         "value": "rgb(255,0,0)"
       },
       "anchorX": 0,
       "anchorY": 1,
       "rotation": {
-        "func": "__ht__function(data, view) {\n return data.a('node.data')[1] ? 0 : Math.PI/180*30;\n}",
+        "func": "__ht__function(data, view) {\n return data.a('node.data')[0] ? 0 : Math.PI/180*30;\n}",
         "value": 0
       },
       "points": [
@@ -124,7 +124,7 @@
       "background": "rgb(255,0,0)",
       "borderColor": "#979797",
       "visible": {
-        "func": "__ht__function(data, view) {\n return Boolean(data.a('node.data')[26]);\n}",
+        "func": "__ht__function(data, view) {\n return Boolean(data.a('node.data')[25]);\n}",
         "value": true
       },
       "rect": [
@@ -140,7 +140,7 @@
       "borderWidth": 1,
       "borderColor": "rgb(0,0,0)",
       "visible": {
-        "func": "__ht__function(data, view) {\n return Boolean(data.a('node.data')[26]);\n}",
+        "func": "__ht__function(data, view) {\n return Boolean(data.a('node.data')[25]);\n}",
         "value": true
       },
       "rect": [
@@ -156,7 +156,7 @@
       "borderWidth": 0.5,
       "borderColor": "rgb(0,0,0)",
       "visible": {
-        "func": "__ht__function(data, view) {\n return Boolean(data.a('node.data')[26]);\n}",
+        "func": "__ht__function(data, view) {\n return Boolean(data.a('node.data')[25]);\n}",
         "value": true
       },
       "rect": [
@@ -171,7 +171,7 @@
       "background": "rgb(255,255,0)",
       "borderColor": "#979797",
       "visible": {
-        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r=false;if(d[25]&&!d[26]){r=true}return r;\n}",
+        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r=false;if(d[24]&&!d[25]){r=true}return r;\n}",
         "value": true
       },
       "rect": [
@@ -187,7 +187,7 @@
       "borderWidth": 0.5,
       "borderColor": "rgb(0,0,0)",
       "visible": {
-        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r=false;if(d[25]&&!d[26]){r=true}return r;\n}",
+        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r=false;if(d[24]&&!d[25]){r=true}return r;\n}",
         "value": true
       },
       "rect": [
@@ -204,7 +204,7 @@
       "borderColor": "rgb(0,0,0)",
       "closePath": true,
       "visible": {
-        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r=false;if(d[25]&&!d[26]){r=true}return r;\n}",
+        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r=false;if(d[24]&&!d[25]){r=true}return r;\n}",
         "value": true
       },
       "points": [
@@ -282,7 +282,7 @@
       "borderColor": "#979797",
       "closePath": true,
       "visible": {
-        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r=false;if(d[25]&&!d[26]){r=true}return r;\n}",
+        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r=false;if(d[24]&&!d[25]){r=true}return r;\n}",
         "value": true
       },
       "points": [
@@ -299,14 +299,14 @@
     {
       "type": "text",
       "text": {
-        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r='';if(d[3]||d[11]){r='F'}else if(d[4]&&!d[12]&&!d[3]&&!d[11]){r='S'} return r;\n}",
+        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r='';if(d[2]||d[10]){r='F'}else if(d[3]&&!d[11]&&!d[2]&&!d[10]){r='S'} return r;\n}",
         "value": "F"
       },
       "align": "center",
       "color": "rgb(255,0,0)",
       "font": "9px arial, sans-serif",
       "visible": {
-        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r=false;if((d[4]&&!d[12]&&!d[3]&&!d[11])||(d[3]||d[11])){r=true}return r;\n}",
+        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r=false;if((d[3]&&!d[11]&&!d[2]&&!d[10])||(d[2]||d[10])){r=true}return r;\n}",
         "value": true
       },
       "rect": [
@@ -323,7 +323,7 @@
       "color": "rgb(255,255,0)",
       "font": "9px arial, sans-serif",
       "visible": {
-        "func": "__ht__function(data, view) {\n return Boolean(data.a('node.data')[19]);\n}",
+        "func": "__ht__function(data, view) {\n return Boolean(data.a('node.data')[18]);\n}",
         "value": true
       },
       "rect": [

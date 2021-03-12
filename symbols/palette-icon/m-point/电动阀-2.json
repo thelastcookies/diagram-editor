@@ -25,7 +25,7 @@
       "attr": "node.data",
       "valueType": "Array",
       "name": "状态值",
-      "defaultValue": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,1,0,0,0,0,0]
+      "defaultValue": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0]
     }
   ],
   "width": 46,
@@ -167,13 +167,13 @@
     {
       "type": "rect",
       "background": {
-        "func": "__ht__function(data, view) {\n return Boolean(data.a('node.data')[17])?'rgb(255,255,0)':'rgb(0,255,0)';\n}",
+        "func": "__ht__function(data, view) {\n return Boolean(data.a('node.data')[16])?'rgb(255,255,0)':'rgb(0,255,0)';\n}",
         "value": "rgb(255,255,0)"
       },
       "borderWidth": 0.5,
       "borderColor": "#979797",
       "visible": {
-        "func": "__ht__function(data, view) {\n return !Boolean(data.a('node.data')[19]);\n}",
+        "func": "__ht__function(data, view) {\n return !Boolean(data.a('node.data')[18]);\n}",
         "value": true
       },
       "rect": [
@@ -186,13 +186,13 @@
     {
       "type": "text",
       "text": {
-        "func": "__ht__function(data, view) {\n return Boolean(data.a('node.data')[17])?'M':'A';\n}",
+        "func": "__ht__function(data, view) {\n return Boolean(data.a('node.data')[16])?'M':'A';\n}",
         "value": "M"
       },
       "align": "center",
       "font": "9px arial, sans-serif",
       "visible": {
-        "func": "__ht__function(data, view) {\n return !Boolean(data.a('node.data')[19]);\n}",
+        "func": "__ht__function(data, view) {\n return !Boolean(data.a('node.data')[18]);\n}",
         "value": true
       },
       "rect": [
@@ -205,13 +205,13 @@
     {
       "type": "rect",
       "background": {
-        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r='rgb(255,0,0)';if(!d[26]){r='rgb(255,255,0)';}return r;\n}",
+        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r='rgb(255,0,0)';if(!d[25]){r='rgb(255,255,0)';}return r;\n}",
         "value": "rgb(255,255,0)"
       },
       "borderWidth": 0.5,
       "borderColor": "#979797",
       "visible": {
-        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r=true;if(!d[25]&&!d[26]){r=false}return r;\n}",
+        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r=true;if(!d[24]&&!d[25]){r=false}return r;\n}",
         "value": true
       },
       "rect": [
@@ -224,13 +224,13 @@
     {
       "type": "text",
       "text": {
-        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r='E';if(!d[26]){r='T';}return r;\n}",
+        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r='E';if(!d[25]){r='T';}return r;\n}",
         "value": "E"
       },
       "align": "center",
       "font": "9px arial, sans-serif",
       "visible": {
-        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r=true;if(!d[25]&&!d[26]){r=false}return r;\n}",
+        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r=true;if(!d[24]&&!d[25]){r=false}return r;\n}",
         "value": true
       },
       "rect": [

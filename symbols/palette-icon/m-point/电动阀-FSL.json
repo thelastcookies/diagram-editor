@@ -25,7 +25,7 @@
       "attr": "node.data",
       "valueType": "Array",
       "name": "状态值",
-      "defaultValue": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,1,0,0,0,0,0]
+      "defaultValue": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0]
     }
   ],
   "width": 56,
@@ -34,7 +34,7 @@
     {
       "type": "oval",
       "background": {
-        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r='#D8D8D8';if((d[1]&&!d[13])||d[5]){r='#FF0000'} else if(d[9]||d[13]){r='#00FF00'}return r;\n}",
+        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r='#D8D8D8';if((d[0]&&!d[12])||d[4]){r='#FF0000'} else if(d[8]||d[12]){r='#00FF00'}return r;\n}",
         "values": "#D8D8D8"
       },
       "borderWidth": 0.1,
@@ -71,7 +71,7 @@
     {
       "type": "rect",
       "background": {
-        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r='#D8D8D8';if((d[1]&&!d[13])||d[5]){r='#FF0000'} else if(d[9]||d[13]){r='#00FF00'}return r;\n}",
+        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r='#D8D8D8';if((d[0]&&!d[12])||d[4]){r='#FF0000'} else if(d[8]||d[12]){r='#00FF00'}return r;\n}",
         "values": "#D8D8D8"
       },
       "borderWidth": 0.1,
@@ -91,7 +91,7 @@
     {
       "type": "triangle",
       "background": {
-        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r='#D8D8D8';if((d[1]&&!d[13])||d[5]){r='#FF0000'} else if(d[9]||d[13]){r='#00FF00'}return r;\n}",
+        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r='#D8D8D8';if((d[0]&&!d[12])||d[4]){r='#FF0000'} else if(d[8]||d[12]){r='#00FF00'}return r;\n}",
         "values": "#D8D8D8"
       },
       "borderWidth": 0.1,
@@ -115,7 +115,7 @@
     {
       "type": "triangle",
       "background": {
-        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r='#D8D8D8';if((d[1]&&!d[13])||d[5]){r='#FF0000'} else if(d[9]||d[13]){r='#00FF00'}return r;\n}",
+        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r='#D8D8D8';if((d[0]&&!d[12])||d[4]){r='#FF0000'} else if(d[8]||d[12]){r='#00FF00'}return r;\n}",
         "values": "#D8D8D8"
       },
       "borderWidth": 0.1,
@@ -141,7 +141,7 @@
       "background": "rgb(255,0,0)",
       "borderColor": "#979797",
       "visible": {
-        "func": "__ht__function(data, view) {\n return Boolean(data.a('node.data')[26]);\n}",
+        "func": "__ht__function(data, view) {\n return Boolean(data.a('node.data')[25]);\n}",
         "value": true
       },
       "rect": [
@@ -157,7 +157,7 @@
       "borderWidth": 1,
       "borderColor": "rgb(0,0,0)",
       "visible": {
-        "func": "__ht__function(data, view) {\n return Boolean(data.a('node.data')[26]);\n}",
+        "func": "__ht__function(data, view) {\n return Boolean(data.a('node.data')[25]);\n}",
         "value": true
       },
       "rect": [
@@ -173,7 +173,7 @@
       "borderWidth": 0.5,
       "borderColor": "rgb(0,0,0)",
       "visible": {
-        "func": "__ht__function(data, view) {\n return Boolean(data.a('node.data')[26]);\n}",
+        "func": "__ht__function(data, view) {\n return Boolean(data.a('node.data')[25]);\n}",
         "value": true
       },
       "rect": [
@@ -188,7 +188,7 @@
       "background": "rgb(255,255,0)",
       "borderColor": "#979797",
       "visible": {
-        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r=false;if(d[25]&&!d[26]){r=true}return r;\n}",
+        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r=false;if(d[24]&&!d[25]){r=true}return r;\n}",
         "value": true
       },
       "rect": [
@@ -204,7 +204,7 @@
       "borderWidth": 0.5,
       "borderColor": "rgb(0,0,0)",
       "visible": {
-        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r=false;if(d[25]&&!d[26]){r=true}return r;\n}",
+        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r=false;if(d[24]&&!d[25]){r=true}return r;\n}",
         "value": true
       },
       "rect": [
@@ -221,7 +221,7 @@
       "borderColor": "rgb(0,0,0)",
       "closePath": true,
       "visible": {
-        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r=false;if(d[25]&&!d[26]){r=true}return r;\n}",
+        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r=false;if(d[24]&&!d[25]){r=true}return r;\n}",
         "value": true
       },
       "points": [
@@ -299,7 +299,7 @@
       "borderColor": "#979797",
       "closePath": true,
       "visible": {
-        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r=false;if(d[25]&&!d[26]){r=true}return r;\n}",
+        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r=false;if(d[24]&&!d[25]){r=true}return r;\n}",
         "value": true
       },
       "points": [
@@ -316,14 +316,14 @@
     {
       "type": "text",
       "text": {
-        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r='';if(d[3]||d[11]){r='F'}else if(d[4]&&!d[12]&&!d[3]&&!d[11]){r='S'} return r;\n}",
+        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r='';if(d[2]||d[10]){r='F'}else if(d[3]&&!d[11]&&!d[2]&&!d[10]){r='S'} return r;\n}",
         "value": "F"
       },
       "align": "center",
       "color": "rgb(255,0,0)",
       "font": "9px arial, sans-serif",
       "visible": {
-        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r=false;if((d[4]&&!d[12]&&!d[3]&&!d[11])||(d[3]||d[11])){r=true}return r;\n}",
+        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r=false;if((d[3]&&!d[11]&&!d[2]&&!d[10])||(d[2]||d[10])){r=true}return r;\n}",
         "value": true
       },
       "rect": [
@@ -340,7 +340,7 @@
       "color": "rgb(255,255,0)",
       "font": "9px arial, sans-serif",
       "visible": {
-        "func": "__ht__function(data, view) {\n return Boolean(data.a('node.data')[19]);\n}",
+        "func": "__ht__function(data, view) {\n return Boolean(data.a('node.data')[18]);\n}",
         "value": true
       },
       "rect": [
