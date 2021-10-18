@@ -15,10 +15,7 @@
     <script src="config/htconfig.js"></script>
 
 
-    <!--    <script src="lib/core/JSylzXFVSW8t.js"></script>-->
-    <!--    <script src="lib/core/KtxGsOutmmQx.js"></script>-->
     <script src="lib/core/ht.js"></script>
-    <!--    <script src="lib/core/buckle.js"></script>-->
     <script src="lib/plugin/ht-cssanimation.js"></script>
     <script src="lib/plugin/ht-form.js"></script>
     <script src="lib/plugin/ht-dialog.js"></script>
@@ -108,7 +105,7 @@
 
 
         indexDataModel.each(function (data) {
-            if (!(data instanceof ht.Edge))
+            if (!(data instanceof ht.Edge) && !(data.a('node.type') === 'barChart' || data.a('node.type') === 'lineChart'))
                 data.setLayer(1);
         });
 
@@ -143,9 +140,7 @@
         g2d.addInteractorListener(e => {
             if (e.kind === 'beginMove') {
                 historyManager.beginTransaction();
-                // console.log('beginMove');
             } else if (e.kind === 'endMove') {
-                // console.log('endMove');
                 historyManager.endTransaction();
             }
         });
@@ -217,8 +212,7 @@
                     var dataJson = ht.Default.parse(data);
                     dm.deserialize(dataJson);
                 });
-            }
-            ;
+            };
             return dm;
         }
 
@@ -314,9 +308,6 @@
                 g2d.getView().addEventListener("drop", function (e) {
                     handleDrop(e);
                 });
-                g2d.getView().addEventListener("dragstart", function (e) {
-                    console.log('drag');
-                });
                 // 添加右键菜单
                 setContextMenu(index_contextmenu_config, g2d);
 
@@ -337,6 +328,12 @@
                 } else if (data instanceof ht.Edge) {
                     return '连线';
                 }
+                else if (data instanceof ht.Node) {
+                    if (data.a('node.type') === 'barChart')
+                        return '柱形图';
+                    if (data.a('node.type') === 'lineChart')
+                        return '折线图';
+                }
                 return data.getName() || '节点'
             };
 
@@ -349,6 +346,8 @@
                     return 'symbols/line.json';
                 } else if (data instanceof ht.Shape) {
                     return 'symbols/polyline.json';
+                } else if (data.getName() === '表格') {
+                    return 'symbols/palette-icon/table-icon.json';
                 }
                 var img = data.getImage();
                 return img ? img : oldGetIconFunc.apply(this, arguments);
@@ -416,6 +415,17 @@
                     }
                     if (data.a('text.font')) {
                         propertyView.addProperties(text_font_properties);
+                    }
+                    if (data.a('node.type') === 'table') {
+                        propertyView.addProperties(table_properties);
+                    }
+                    if (data.a('node.type') === 'barChart') {
+                        propertyView.addProperties(panel_bar_chart_properties);
+                        return;
+                    }
+                    if (data.a('node.type') === 'lineChart') {
+                        propertyView.addProperties(panel_line_chart_properties);
+                        return;
                     }
                     propertyView.addProperties(node_properties);
 
@@ -493,6 +503,15 @@
                         "text.vAlign": "middle",
                         "text.font": "16px arial, sans-serif",
                     })
+                }
+                else if (item.name === "表格") {
+                    node.setImage('symbols/palette-icon/table.json');
+                }
+                else if (item.name === "柱形图") {
+                    node.setImage('symbols/palette-icon/barChart.json');
+                }
+                else if (item.name === "折线图") {
+                    node.setImage('symbols/palette-icon/lineChart-icon.json');
                 } else {
                     node.setImage(image);
                 }
@@ -503,6 +522,7 @@
                 g2d.sm().ss(node);
             }
         }
+
 
 
         /**
@@ -525,11 +545,167 @@
         }
 
 
+
         /***
          * localDataModelStorage
          */
         function localDataModelStorage(dataModel) {
             dataModelStorage['dataModel'] = dataModel.serialize(2);
+        }
+
+        function initPanelView (graphView) {
+            initPanel(graphView);
+            indexDataModel.each(function (data) {
+                if (data.a('node.type') === 'barChart') {
+                    addPanel('bar-chart');
+                }
+                if (data.a('node.type') === 'lineChart') {
+                    addPanel('line-chart');
+                }
+            });
+        }
+        function initPanel (graphView) {
+            let content = `<div id="panel-container" style="padding: 10px;box-sizing: border-box;display: flex;align-items: center;">
+                           <div>嵌板种类：</div>
+                           <select id="slt-type">
+                               <option value="bar-chart">柱形图表</option>
+                               <option value="line-chart">线形图表</option>
+                               <option value="dropdown-list">下拉列表</option>
+                           </select>
+                           <button type='button' value='add panel' onclick="addPanel()" style="margin-left: 20px;border-radius: 5px;">添加</button>
+                      </div>`;
+            panel = window.panel = new ht.widget.Panel({
+                title: "嵌板",
+                exclusive: true,
+                titleColor: "white",
+                content: content,
+                width: 320,
+                resizeMode: "wh",
+                narrowWhenCollapse: true,
+                titleIconSize: 16,
+                restoreToolTip: "Restore"
+            });
+            graphView.getView().appendChild(panel.getView());
+            return panel;
+        }
+
+        let barChart = null,
+            lineChart = null;
+
+        function addPanel(type) {
+            type ? type : type = document.getElementById("slt-type").value;
+            let content = null,
+                title = null,
+                option = null;
+            if (type === 'bar-chart') {
+                if (document.getElementById("panel-barchart-container"))
+                    return;
+                title = '柱状图';
+                content = `<div id="panel-barchart-container" style="width: 300px;height:200px;padding: 10px;"></div>`;
+                option = {
+                    tooltip: {
+                        trigger: 'axis'
+                    },
+                    xAxis: {
+                        type: 'category',
+                        data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+                    },
+                    yAxis: {
+                        type: 'value'
+                    },
+                    series: [{
+                        data: [120, 200, 150, 80, 70, 110, 130],
+                        type: 'bar'
+                    }],
+                    grid: {
+                        top: 20,
+                        right: 10,
+                        bottom: 20,
+                        left: 30
+                    }
+                };
+                if (indexDataModel.getDataByNodeType('barChart').length === 0) {
+                    let node = new ht.Node();
+                    node.setImage('symbols/palette-icon/barChart.json');
+                    node.a('node.type', 'barChart');
+                    node.setLayer(0);
+                    indexDataModel.add(node);
+                }
+            } else if (type === 'line-chart') {
+                if (document.getElementById("panel-linechart-container"))
+                    return;
+                title = '折线图';
+                content = `<div id="panel-linechart-container" style="width: 300px;height:200px;padding: 10px;"></div>`;
+                option = {
+                    tooltip: {
+                        trigger: 'axis'
+                    },
+                    xAxis: {
+                        type: 'category',
+                        data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+                    },
+                    yAxis: {
+                        type: 'value'
+                    },
+                    series: [{
+                        data: [820, 932, 901, 934, 1290, 1330, 1320],
+                        type: 'line'
+                    }],
+                    grid: {
+                        top: 20,
+                        right: 10,
+                        bottom: 20,
+                        left: 30
+                    }
+                };
+                if (indexDataModel.getDataByNodeType('lineChart').length === 0) {
+                    let node = new ht.Node();
+                    node.setImage('symbols/palette-icon/lineChart.json');
+                    node.a('node.type', 'lineChart');
+                    node.setLayer(0);
+                    indexDataModel.add(node);
+                }
+            } else if (type === 'dropdown-list') {
+                title = '下拉列表';
+                content = `<div id="panel-dropdown" style="padding: 10px"><select id="slt-type">
+                               <option value="bar-chart">选项1</option>
+                               <option value="line-chart">选项2</option>
+                               <option value="dropdown-list">选项3</option>
+                           </select></div>`;
+            } else {
+                return;
+            }
+            panel.setInnerPanel({
+                title: title,
+                content: content
+            });
+            if (type === 'bar-chart') {
+                barChart = echarts.getInstanceByDom('bar-chart') ? echarts.getInstanceByDom('bar-chart') : echarts.init(document.getElementById('panel-barchart-container'));
+                barChart.setOption(option);
+            }
+            else if (type === 'line-chart') {
+                lineChart = echarts.getInstanceByDom('line-chart') ? echarts.getInstanceByDom('line-chart') : echarts.init(document.getElementById('panel-linechart-container'));
+                lineChart.setOption(option);
+            }
+            if (barChart)
+                barChart.on('click', params => {
+                    console.log(params.seriesType);
+                    let node = indexDataModel.getDataByNodeType('barChart')[0];
+                    indexDataModel.sm().ss(node);
+                });
+            if (lineChart)
+                lineChart.on('click', params => {
+                    console.log(params.seriesType);
+                    let node = indexDataModel.getDataByNodeType('lineChart')[0];
+                    indexDataModel.sm().ss(node);
+                });
+        }
+
+        function removePanel(graphView) {
+            graphView.getView().removeChild(panel.getView());
+            indexDataModel.removeDataByNodeType('barChart');
+            indexDataModel.removeDataByNodeType('lineChart');
+            panel = null;
         }
 
         function init() {
@@ -546,9 +722,9 @@
                 localDataModelStorage(indexDataModel);
             });
             mainSplit.addToDOM();
-
             g2d.fitContent(true);
 
+            initPanelView(g2d);
         }
     </script>
 </head>

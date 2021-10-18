@@ -1,0 +1,214 @@
+{
+  "v": "7.0.8",
+  "p": {
+    "layers": [
+      "0",
+      1
+    ],
+    "autoAdjustIndex": true,
+    "hierarchicalRendering": false
+  },
+  "d": [
+    {
+      "c": "ht.Node",
+      "i": 2,
+      "p": {
+        "name": "附件15",
+        "layer": 1,
+        "tag": "HS:fd:dlq_01",
+        "image": "symbols/palette-icon/附件15.json",
+        "position": {
+          "x": 31.5,
+          "y": 5.5
+        }
+      },
+      "s": {
+        "label": ""
+      },
+      "a": {
+        "node.tag": "HS:fd:dlq_01"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 3,
+      "p": {
+        "name": "红块",
+        "layer": 1,
+        "tag": "HS:fd_01_03",
+        "image": "symbols/palette-icon/红块.json",
+        "position": {
+          "x": 31.5,
+          "y": 5.5
+        }
+      },
+      "s": {
+        "label": ""
+      },
+      "a": {
+        "node.tag": "HS:fd_01_03"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 4,
+      "p": {
+        "name": "柱状图元",
+        "layer": 1,
+        "tag": "HS:fd_zt_01",
+        "image": "symbols/palette-icon/柱状图元.json",
+        "position": {
+          "x": 170.5,
+          "y": 55.5
+        }
+      },
+      "s": {
+        "label": ""
+      },
+      "a": {
+        "zt.dirt": "bottom",
+        "zt.min": -100,
+        "zt.max": 0,
+        "node.tag": "HS:fd_zt_01"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 5,
+      "p": {
+        "name": "红块",
+        "layer": 1,
+        "tag": "HS:fd_01_01",
+        "image": "symbols/palette-icon/红块.json",
+        "position": {
+          "x": -18.5,
+          "y": 79
+        }
+      },
+      "s": {
+        "label": ""
+      },
+      "a": {
+        "node.tag": "HS:fd_01_01"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 6,
+      "p": {
+        "name": "红块",
+        "layer": 1,
+        "tag": "HS:fd_01_02",
+        "image": "symbols/palette-icon/红块.json",
+        "position": {
+          "x": 36.5,
+          "y": 75
+        }
+      },
+      "s": {
+        "label": ""
+      },
+      "a": {
+        "node.tag": "HS:fd_01_02"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 7,
+      "p": {
+        "name": "柱状图元",
+        "layer": 1,
+        "tag": "HS:fd_zt_01",
+        "image": "symbols/palette-icon/柱状图元.json",
+        "position": {
+          "x": 170.5,
+          "y": -84
+        }
+      },
+      "s": {
+        "label.opacity": true,
+        "label": "80",
+        "label.position": 3
+      },
+      "a": {
+        "zt.min": 0,
+        "node.tag": "HS:fd_zt_01"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 8,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "position": {
+          "x": 24,
+          "y": -117.5
+        }
+      },
+      "s": {
+        "text.align": "center",
+        "text.font": "16px arial, sans-serif",
+        "label": ""
+      },
+      "a": {
+        "node.formula": "‘HS:text_01’ + ‘HS:fd_zt_01’"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 9,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "tag": "HS:text_01",
+        "position": {
+          "x": 23.5,
+          "y": -65
+        }
+      },
+      "s": {
+        "text.align": "center",
+        "text.font": "16px arial, sans-serif",
+        "label": ""
+      },
+      "a": {
+        "node.tag": "HS:text_01"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 10,
+      "p": {
+        "name": "文字",
+        "layer": 1,
+        "position": {
+          "x": -41.5,
+          "y": -66
+        }
+      },
+      "s": {
+        "text": "被加数",
+        "text.align": "center",
+        "text.font": "16px arial, sans-serif",
+        "label": ""
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 11,
+      "p": {
+        "name": "表格",
+        "layer": 1,
+        "image": "symbols/palette-icon/table.json",
+        "position": {
+          "x": 500,
+          "y": 32.5
+        }
+      },
+      "s": {
+        "label": ""
+      }
+    }
+  ]
+}

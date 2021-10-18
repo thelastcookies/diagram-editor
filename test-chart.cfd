@@ -1,0 +1,41 @@
+{
+  "v": "7.0.8",
+  "p": {
+    "layers": [
+      "0",
+      1
+    ],
+    "autoAdjustIndex": true,
+    "hierarchicalRendering": false
+  },
+  "d": [
+    {
+      "c": "ht.Node",
+      "i": 2,
+      "p": {
+        "layer": 0,
+        "tag": "barChart",
+        "image": "symbols/palette-icon/barChart.json"
+      },
+      "a": {
+        "node.type": "barChart",
+        "chart.data.series": "HS:fd_zt_01,HS:fd_zt_02,HS:fd_zt_03",
+        "node.tag": "barChart"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 3,
+      "p": {
+        "layer": 0,
+        "tag": "lineChart",
+        "image": "symbols/palette-icon/lineChart.json"
+      },
+      "a": {
+        "node.type": "lineChart",
+        "node.tag": "lineChart",
+        "chart.data.series": "HS:fd_zt_01,HS:fd_zt_02,HS:fd_zt_03"
+      }
+    }
+  ]
+}

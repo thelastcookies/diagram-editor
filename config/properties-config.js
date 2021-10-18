@@ -1,4 +1,8 @@
-text_properties = [// 文本的属性
+/**
+ * 文本的属性
+ * @type {*[]}
+ */
+text_properties = [
     {
         categoryName: '文本',
         name: 'text',
@@ -86,7 +90,11 @@ text_properties = [// 文本的属性
     // },
 ];
 
-data_properties = [// 所有的节点都有的属性
+/**
+ * 所有的节点都有的属性
+ * @type {*[]}
+ */
+data_properties = [
     {
         name: 'id'
     },
@@ -127,7 +135,172 @@ data_properties = [// 所有的节点都有的属性
     // },
 ];
 
-threshold_properties = [// 节点的阈值属性设置
+/**
+ * 表格的特殊属性
+ * @type {*[]}
+ */
+table_properties = [
+    {
+        categoryName: '表格',
+        displayName: '表格行数',
+        valueType: 'number',
+        editable: true,
+        getValue: function (data) {
+            return JSON.parse(data.a("table.dataSource")).length;
+        },
+        setValue: function(data, property, value, view){
+            let oldData = JSON.parse(data.a("table.dataSource"));
+            let oldLen = oldData.length;
+            if (Number(value) === 0) value = 1;
+            if (Number(value) === Number(oldLen))
+                return;
+            data.a("table.dataSource", JSON.stringify(new Array(value).fill({})));
+        },
+    },
+    {
+        categoryName: '表格',
+        displayName: '表格列数',
+        valueType: 'number',
+        editable: true,
+        getValue: function (data) {
+            return JSON.parse(data.a("table.columns")).length;
+        },
+        setValue: function(data, property, value, view){
+            let oldData = JSON.parse(data.a("table.columns"));
+            let oldLen = oldData.length;
+            if (Number(value) === 0) value = 1;
+            if (Number(value) === Number(oldLen))
+                return;
+            for (let i = 1, len = Math.abs(value - oldLen); i <= len; i++) {
+                value > oldLen ? oldData.push({"key": `column${oldLen + i}`}): oldData.pop();
+            }
+            data.a("table.columns", JSON.stringify(oldData));
+        }
+    },
+    {
+        categoryName: '表格',
+        displayName: '表格列宽设定',
+        valueType: 'text',
+        editable: true,
+        getValue: function (data) {
+            let columns = JSON.parse(data.a("table.columns"));
+            let arrTemp = [];
+            columns.forEach(item => {
+               arrTemp.push(item.width? item.width: 120);
+            });
+            let count = 1;
+            return arrTemp.flatMap((item, index, arr) => {
+                // if (index === 0) return [];
+                // if (index === arr.length - 1){
+                //     return count === 1 ? [item]: [`${item} * ${count}`];
+                // }
+                if (item === arr[index + 1]) {
+                    count++;
+                } else if (item !== arr[index + 1]) {
+                    let res = count === 1 ? [item] : [`${item} * ${count}`];
+                    count = 1;
+                    return res;
+                }
+                return [];
+            }).join(', ');
+        },
+        setValue: function(data, property, value, view){
+            let arrTemp = [], count = 0;
+            let oldData = JSON.parse(data.a("table.columns"));
+            try {
+                arrTemp = value.split(',');
+            } catch (e) {
+                alert("列宽设置格式出错");
+                return;
+            }
+            arrTemp.forEach((item, index) => {
+                let arr = item.replace(/ /g, '').split('*');
+                for (let i = 0; i < (Number(arr[1]) ? Number(arr[1]): 1); i++) {
+                    if (count >= oldData.length)
+                        return;
+                    oldData[count]['width'] = Number(arr[0]);
+                    count++;
+                }
+            });
+            data.a("table.columns", JSON.stringify(oldData));
+        }
+    },
+    {
+        categoryName: '表格',
+        name: "table.head.height",
+        displayName: '表头行高',
+        accessType: 'attr',
+        valueType: 'number',
+        editable: true,
+    },{
+        categoryName: '表格',
+        name: "table.body.height",
+        displayName: '表格行高',
+        accessType: 'attr',
+        valueType: 'number',
+        editable: true,
+    },
+    {
+        categoryName: '表格',
+        name: "table.head.background",
+        displayName: '表头背景色',
+        accessType: 'attr',
+        valueType: 'color',
+        editable: true,
+        // defaultValue: 'rgba(212,212,212, 1)'
+    },
+    {
+        categoryName: '表格',
+        name: "table.body.background",
+        displayName: '表格背景色',
+        accessType: 'attr',
+        valueType: 'color',
+        editable: true,
+    },
+    {
+        categoryName: '表格',
+        name: "table.border.width",
+        displayName: '表格边框宽度',
+        accessType: 'attr',
+        valueType: 'number',
+        editable: true,
+    },
+    {
+        categoryName: '表格',
+        name: "table.border.color",
+        displayName: '表格边框颜色',
+        accessType: 'attr',
+        valueType: 'color',
+        editable: true,
+    },
+    {
+        categoryName: '表格',
+        name: "table.columns",
+        displayName: '表格列设置(JSON)',
+        accessType: 'attr',
+        valueType: 'Object',
+        editable: true,
+        defaultValue: [],
+        setValue: function(data) {
+            console.log(data);
+        }
+    },
+    {
+        categoryName: '表格',
+        name: "table.dataSource",
+        displayName: '表格数据设置(JSON)',
+        accessType: 'attr',
+        valueType: 'Object',
+        editable: true,
+        defaultValue: [],
+    }
+];
+
+/**
+ * 节点的阈值属性设置
+ * @type {*[]}
+ */
+threshold_properties = [
      {
         categoryName: '阈值设置',
         name: 'threshold',
@@ -173,7 +346,11 @@ threshold_properties = [// 节点的阈值属性设置
     // }
 ];
 
-node_properties = [// node 节点的属性
+/**
+ * node 节点的属性
+ * @type {*[]}
+ */
+node_properties = [
     {
         categoryName: '节点属性',
         name: 'parent',
@@ -204,7 +381,7 @@ node_properties = [// node 节点的属性
     },
     {
         categoryName: '节点属性',
-        displayName: '位置坐标X',
+        displayName: '中心位置坐标X',
         name: 'position',
         getValue: function(data){
             return parseInt(data.getPosition().x);
@@ -212,7 +389,7 @@ node_properties = [// node 节点的属性
     },
     {
         categoryName: '节点属性',
-        displayName: '位置坐标Y',
+        displayName: '中心位置坐标Y',
         name: 'position',
         getValue: function(data){
             return parseInt(data.getPosition().y);
@@ -229,7 +406,11 @@ node_properties = [// node 节点的属性
     }
 ];
 
-group_properties = [// 组的属性
+/**
+ * 组的属性
+ * @type {*[]}
+ */
+group_properties = [
     {
         categoryName: '组',
         displayName: '展开',
@@ -421,7 +602,11 @@ group_properties = [// 组的属性
     }
 ];
 
-edge_properties = [// 连线的属性
+/**
+ * 连线的属性
+ * @type {*[]}
+ */
+edge_properties = [
     {
         name: 'body.color',
         displayName: '连线颜色',
@@ -467,7 +652,11 @@ edge_properties = [// 连线的属性
     }
 ];
 
-shape_properties = [// 折线的属性
+/**
+ * 折线的属性
+ * @type {*[]}
+ */
+shape_properties = [
     {
         name: 'shape.border.color',
         displayName: '折线颜色',
@@ -714,4 +903,119 @@ zt_properties = [
         editable: true,
         valueType: 'number',
     }
+];
+/**
+ *
+ */
+chart_properties = [
+    {
+        categoryName: '图表',
+        name:'chart.data.interval',
+        displayName: '图表数据间隔',
+        accessType: 'attr',
+        valueType: 'enum',
+        editable: true,
+        defaultValue: 'center',
+        enum: {
+            values: ['10s', '30s', '1min', '5min', '10min', '30min', '1h']
+        }
+    },
+    {
+        categoryName: '图表',
+        name: 'chart.background',
+        displayName: '图表主题色',
+        accessType: 'attr',
+        valueType: 'color',
+        editable: true,
+    },
+    {
+        categoryName: '图表',
+        name: 'chart.title.text',
+        displayName: '图表标题',
+        accessType: 'attr',
+        valueType: 'text',
+        editable: true,
+    },
+    {
+        categoryName: '图表',
+        name: 'chart.title.color',
+        displayName: '标题颜色',
+        accessType: 'attr',
+        valueType: 'color',
+        editable: true,
+    },
+    {
+        categoryName: '图表',
+        name: 'chart.title.font',
+        displayName: '标题字体',
+        accessType: 'attr',
+        valueType: 'text',
+        editable: true,
+    },
+    {
+        categoryName: '图表',
+        name: 'chart.legend.text',
+        displayName: '图例名称',
+        accessType: 'attr',
+        valueType: 'text',
+        editable: true,
+    },
+    {
+        categoryName: '图表',
+        name: 'chart.legend.color',
+        displayName: '图例颜色',
+        accessType: 'attr',
+        valueType: 'color',
+        editable: true,
+    },
+    {
+        categoryName: '图表',
+        name: 'chart.label.font',
+        displayName: '数值字体',
+        accessType: 'attr',
+        valueType: 'text',
+        editable: true,
+    },
+    {
+        categoryName: '图表',
+        name: 'chart.label.color',
+        displayName: '数值颜色',
+        accessType: 'attr',
+        valueType: 'color',
+        editable: true,
+    },
+
+];
+
+panel_bar_chart_properties = [
+    {
+        categoryName: '图表',
+        name:'chart.data.series',
+        displayName: '图表测点配置',
+        accessType: 'attr',
+        valueType: 'text',
+        editable: true,
+    },
+];
+panel_line_chart_properties = [
+    {
+        categoryName: '图表',
+        name:'chart.data.series',
+        displayName: '图表测点配置',
+        accessType: 'attr',
+        valueType: 'text',
+        editable: true,
+    },
+    {
+        categoryName: '图表',
+        name:'chart.data.interval',
+        displayName: '图表数据间隔',
+        accessType: 'attr',
+        valueType: 'enum',
+        editable: true,
+        defaultValue: 'center',
+        enum: {
+            values: ['10s', '30s', '1min', '5min', '10min', '30min', '1h']
+        }
+    },
 ];

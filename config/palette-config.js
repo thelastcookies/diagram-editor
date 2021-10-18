@@ -3,6 +3,7 @@ palette_config = {
         name: '接线与常用图形',
         items: [
             {name: '文字', image: '__text__', type: ht.Text},
+            {name: '表格', image: 'symbols/palette-icon/table-icon.json', type: ht.Node},
             {name: '告警变色', image: 'symbols/palette-icon/basic/告警变色.json', type: ht.Node},
             {name: '数据绑定', image: 'symbols/palette-icon/basic/数据绑定.json', type: ht.Node},
             {name: '显示隐藏', image: 'symbols/palette-icon/basic/显示隐藏.json', type: ht.Node},

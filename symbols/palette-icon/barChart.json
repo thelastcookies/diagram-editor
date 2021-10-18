@@ -1,0 +1,194 @@
+{
+  "modified": "Thu Aug 06 2020 15:57:59 GMT+0800 (CST)",
+  "dataBindings": [
+    {
+      "attr": "node.type",
+      "valueType": "String",
+      "defaultValue": "barChart"
+    },
+    {
+      "attr": "chart.data",
+      "valueType": "Array",
+      "defaultValue": [471, 482, 567, 525, 590, 637, 780, 679, 848]
+    },
+    {
+      "attr": "chart.data.interval",
+      "valueType": "String",
+      "defaultValue": "1min"
+    },
+    {
+      "attr": "chart.data.series",
+      "valueType": "String",
+      "defaultValue": ""
+    },
+    {
+      "attr": "chart.title.font",
+      "valueType": "String",
+      "defaultValue": "20px Arial"
+    },
+    {
+      "attr": "chart.title.color",
+      "valueType": "Color",
+      "defaultValue": "white"
+    },
+    {
+      "attr": "chart.title.text",
+      "valueType": "String",
+      "defaultValue": "Chart Sample"
+    },
+    {
+      "attr": "chart.background",
+      "valueType": "Color",
+      "defaultValue": "#566CB0"
+    },
+    {
+      "attr": "chart.legend.text",
+      "valueType": "String",
+      "defaultValue": "Legend"
+    },
+    {
+      "attr": "chart.legend.color",
+      "valueType": "Color",
+      "defaultValue": "#20284C"
+    },
+    {
+      "attr": "chart.label.font",
+      "valueType": "String",
+      "defaultValue": "10px Arial"
+    },
+    {
+      "attr": "chart.label.color",
+      "valueType": "Color",
+      "defaultValue": "#20284C"
+    }
+  ],
+  "width": 650,
+  "height": 380,
+  "comps": [
+    {
+      "type": "columnChart",
+      "rect": [10, 60, 630, 260],
+      "label": true,
+      "labelColor": {
+        "func": "attr@chart.label.color"
+      },
+      "labelFont": {
+        "func": "attr@chart.label.font"
+      },
+      "series": [
+        {
+          "color": {
+            "func": "attr@chart.legend.color"
+          },
+          "values": {
+            "func": "attr@chart.data"
+          }
+        }
+      ]
+    },
+    {
+      "type": "rect",
+      "rect": [0, 0, 650, 40],
+      "background": {
+        "func": "attr@chart.background"
+      }
+    },
+    {
+      "type": "text",
+      "rect": [16, 0, 600, 40],
+      "align": "left",
+      "font": {
+        "func": "attr@chart.title.font"
+      },
+      "color": {
+        "func": "attr@chart.title.color"
+      },
+      "text": {
+        "func": "attr@chart.title.text"
+      }
+    },
+    {
+      "type": "rect",
+      "rect": [40, 70, 16, 16],
+      "background": {
+        "func": "attr@chart.legend.color"
+      }
+    },
+    {
+      "type": "text",
+      "rect": [60, 70, 0, 16],
+      "align": "left",
+      "text": {
+        "func": "attr@chart.legend.text"
+      }
+    },
+    {
+      "type": "text",
+      "rect": [55, 322, 0, 16],
+      "align": "center",
+      "text": "Data1"
+    },
+    {
+      "type": "text",
+      "rect": [124, 322, 0, 16],
+      "align": "center",
+      "text": "Data2"
+    },
+    {
+      "type": "text",
+      "rect": [191, 322, 0, 16],
+      "align": "center",
+      "text": "Data3"
+    },
+    {
+      "type": "text",
+      "rect": [259, 322, 0, 16],
+      "align": "center",
+      "text": "Data4"
+    },
+    {
+      "type": "text",
+      "rect": [327, 322, 0, 16],
+      "align": "center",
+      "text": "Data5"
+    },
+    {
+      "type": "text",
+      "rect": [394, 322, 0, 16],
+      "align": "center",
+      "text": "Data5"
+    },
+    {
+      "type": "text",
+      "rect": [462, 322, 0, 16],
+      "align": "center",
+      "text": "Data6"
+    },
+    {
+      "type": "text",
+      "rect": [529, 322, 0, 16],
+      "align": "center",
+      "text": "Data7"
+    },
+    {
+      "type": "text",
+      "rect": [596, 322, 0, 16],
+      "align": "center",
+      "text": "Data8"
+    },
+    {
+      "type": "rect",
+      "rect": [15, 320, 620, 1],
+      "background": {
+        "func": "attr@chart.background"
+      }
+    },
+    {
+      "type": "rect",
+      "rect": [0, 340, 650, 40],
+      "background": {
+        "func": "attr@chart.background"
+      }
+    }
+  ]
+}
