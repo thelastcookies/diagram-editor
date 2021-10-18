@@ -17,7 +17,10 @@ ht.DataModel.prototype.setNodeStatusByValue = function (data) {
         node.forEach(function (node) {
             if (node.a('node.cate') === 'm-point') {
                 if (node.a('node.type') === 'data') {
-                    node.a('node.label', Number(value).toFixed((node.a('node.label').split('.')[1].length)));
+                    let valueArr = node.a('node.label').split('.');
+                    let decLen = 0;
+                    decLen = valueArr[1] ? valueArr[1].length : 0;
+                    node.a('node.label', Number(value).toFixed(decLen));
                     return;
                 }
                 if (node.a('node.type') === 'switch') {
@@ -34,12 +37,12 @@ ht.DataModel.prototype.setNodeStatusByValue = function (data) {
                     let va = Number(item.value).toString(2).split('').map(i => Number(i));
                     va = va.reverse().concat(new Array(32 - va.length).fill(0));
                     // node.a('node.data', va);
-                    // node.a('node.data', [0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,1,0,0,0,0,0]);
-                    // node.a('node.data', [0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,1,0,0,0,0,0,0]);
-                    // node.a('node.data', [0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,1,0,0,0,0,0]);
-                    // node.a('node.data', [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,1,0,0,0,0,0]);
-                    // node.a('node.data', [0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,1,0,0,0,0,0]); // 电动阀红
-                    // node.a('node.data', [0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,1,1,0,0,0,0,0]); // 电动阀绿
+                    node.a('node.data', [0,1,0,1,0,0,0,0,0,0,1,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0]);
+                    // node.a('node.data', [0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,1,0,0,0,0,0,0,0]); // T
+                    // node.a('node.data', [0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0]); //E
+                    // node.a('node.data', [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,1,0,0,0,0,0, 0]);
+                    // node.a('node.data', [0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0]); // 电动阀红
+                    // node.a('node.data', [0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0]); // 电动阀绿
                     // node.a('node.data', [0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,1,0,0,0,0,0]); // 电动机全变色 lv
                     // node.a('node.data', [0,1,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,1,0,0,0,0,0]); // 电动机全变色 hui
                     // node.a('node.data', [0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,1,0,0,0,0,0]); // 路吹灰 红

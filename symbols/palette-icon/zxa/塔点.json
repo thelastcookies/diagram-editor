@@ -1,0 +1,42 @@
+{
+  "modified": "Tue Jul 13 2021 10:21:07 GMT+0800 (中国标准时间)",
+  "width": 36,
+  "height": 36,
+  "comps": [
+    {
+      "type": "rect",
+      "background": "rgba(217,217,217,0)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,0,0)",
+      "rect": [
+        0,
+        0,
+        36,
+        36
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,0,0)",
+      "closePath": true,
+      "points": [
+        0,
+        0,
+        36,
+        36
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,0,0)",
+      "points": [
+        36,
+        0,
+        0,
+        36
+      ]
+    }
+  ]
+}

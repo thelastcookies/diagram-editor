@@ -92,7 +92,7 @@ data_properties = [// 所有的节点都有的属性
     },
     {
         name: 'name',
-        displayName: '名称',
+        displayName: '类型',
         editable: true
     },
     // {
@@ -515,13 +515,6 @@ shape_properties = [// 折线的属性
 // 按钮图元的配置
 button_properties = [
     {
-        name: 'button.link',
-        displayName: '链接',
-        accessType: 'attr',
-        valueType: 'text',
-        editable: true
-    },
-    {
         name: 'label',
         displayName: 'Label内容',
         accessType: 'style',
@@ -555,7 +548,19 @@ button_properties = [
     },
 ];
 
-bus_properties = [// 母线的属性
+// 链接的配置
+link_properties = [
+    {
+        name: 'button.link',
+        displayName: '链接',
+        accessType: 'attr',
+        valueType: 'text',
+        editable: true
+    }
+];
+
+// 母线的属性
+bus_properties = [
     {
         name: 'node.width',
         displayName: '母线颜色宽度',
@@ -566,7 +571,8 @@ bus_properties = [// 母线的属性
     }
 ];
 
-node_color_properties = [//普通图元的初始颜色配置
+//普通图元的初始颜色配置
+node_color_properties = [
     {
         name: 'line.color',
         displayName: '初始颜色',
@@ -587,13 +593,14 @@ text_font_properties = [
     }
 ];
 
-m_point_properties = [//测点图元的配置项
+//测点图元的配置项
+m_point_properties = [
     {
         name: 'node.tag',
         displayName: '标签',
         accessType: 'attr',
         valueType: 'text',
-        editable: true// 设置该属性是否可编辑
+        editable: true
     },
     {
         name: 'node.formula',
@@ -653,6 +660,15 @@ label_properties = [
         valueType: 'text',
         editable: true,
         defaultValue: ''
+    }
+];
+bg_color_properties = [
+    {
+        name: 'node.bgColor',
+        displayName: '初始颜色',
+        accessType: 'attr',
+        valueType: 'color',
+        editable: true,
     }
 ];
 // 部分图元中含有 单位 的设置

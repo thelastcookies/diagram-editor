@@ -164,6 +164,59 @@ toolbar_config_right = [
             height: 16,
             comps: [{
                 type: 'image',
+                name: 'symbols/toolbar-icon/h-center.svg'
+            }]
+        },
+        toolTip: '垂直居中对齐',
+        action: function() {
+            let slModel = indexDataModel.sm().getSelection();
+            if (slModel.size() === 0) {
+                // alert("请选择测点");
+                return;
+            }
+            let bmLeft = slModel.get(0).getPosition().x;
+            historyManager.beginTransaction();
+            slModel.forEach(function (item, index) {
+                if (index === 0) return;
+                let top = item.getPosition().y;
+                item.setPosition(bmLeft, top);
+            });
+            historyManager.endTransaction();
+        }
+    },
+    {
+        icon: {
+            width: 16,
+            height: 16,
+            comps: [{
+                type: 'image',
+                name: 'symbols/toolbar-icon/v-center.svg'
+            }]
+        },
+        toolTip: '水平居中对齐',
+        action: function() {
+            let slModel = indexDataModel.sm().getSelection();
+            if (slModel.size() === 0) {
+                // alert("请选择测点");
+                return;
+            }
+            let bmTop = slModel.get(0).getPosition().y;
+            historyManager.beginTransaction();
+            slModel.forEach(function (item, index) {
+                if (index === 0) return;
+                let left = item.getPosition().x;
+                item.setPosition(left, bmTop);
+            });
+            historyManager.endTransaction();
+        }
+    },
+    'separator',
+    {
+        icon: {
+            width: 16,
+            height: 16,
+            comps: [{
+                type: 'image',
                 name: 'symbols/toolbar-icon/background.svg'
             }]
         },

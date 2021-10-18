@@ -14,7 +14,11 @@
 
     <script src="config/htconfig.js"></script>
 
+
+    <!--    <script src="lib/core/JSylzXFVSW8t.js"></script>-->
+    <!--    <script src="lib/core/KtxGsOutmmQx.js"></script>-->
     <script src="lib/core/ht.js"></script>
+    <!--    <script src="lib/core/buckle.js"></script>-->
     <script src="lib/plugin/ht-cssanimation.js"></script>
     <script src="lib/plugin/ht-form.js"></script>
     <script src="lib/plugin/ht-dialog.js"></script>
@@ -87,7 +91,7 @@
         tooltipDiv.style.border = '1px solid #eee';
 
         // 从 localStorage 中提取 dataModel 并初始化
-        if(dataModelStorage['dataModel']) {
+        if (dataModelStorage['dataModel']) {
             indexDataModel.deserialize(dataModelStorage['dataModel']);
         }
 
@@ -136,6 +140,16 @@
         rightAngleInteractor = new CreateEdgeInteractor(g2d, 'h.v');
         attachInteractor = new CreateAttachInteractor(g2d);
 
+        g2d.addInteractorListener(e => {
+            if (e.kind === 'beginMove') {
+                historyManager.beginTransaction();
+                // console.log('beginMove');
+            } else if (e.kind === 'endMove') {
+                // console.log('endMove');
+                historyManager.endTransaction();
+            }
+        });
+
         // g2d.setInteractors(new ht.List([
         //     defaultInteractor,
         //     selectInteractor,
@@ -153,11 +167,15 @@
 
         // 工具条
         toolbar_left = new ht.widget.Toolbar(toolbar_config_left);
-        toolbar_left.getSelectBackground = function () { return 'rgb(240,239,238)'; }
+        toolbar_left.getSelectBackground = function () {
+            return 'rgb(240,239,238)';
+        }
         toolbar_left.enableToolTip();
 
         toolbar_right = new ht.widget.Toolbar(toolbar_config_right);
-        toolbar_right.getSelectBackground = function () { return 'rgb(240,239,238)'; }
+        toolbar_right.getSelectBackground = function () {
+            return 'rgb(240,239,238)';
+        }
         toolbar_right.enableToolTip();
         // 设置toolbar_right向右靠
         toolbar_right.setStickToRight(true);
@@ -191,15 +209,16 @@
         mainSplit = new ht.widget.SplitView(leftSplit, rightSplit, 'h', -260);
 
         // 初始化mainDataModel
-        function initMainDataModel (source) {
+        function initMainDataModel(source) {
             // 数据容器 承载Data数据的模型
             var dm = new ht.DataModel();
-            if(source) {
-                ht.Default.xhrLoad (source, function (data) {
-                    var dataJson = ht.Default.parse (data);
-                    dm.deserialize (dataJson);
+            if (source) {
+                ht.Default.xhrLoad(source, function (data) {
+                    var dataJson = ht.Default.parse(data);
+                    dm.deserialize(dataJson);
                 });
-            };
+            }
+            ;
             return dm;
         }
 
@@ -222,6 +241,7 @@
                 dm.add(group);// 将节点添加到 palette 的数据容器中
 
                 if (name === 'lines') group.setExpanded(true);
+                if (name === 'ems') group.setExpanded(true);
                 if (name === 'variable') group.setExpanded(true);
                 if (name === 'power') group.setExpanded(true);
                 if (name === 'steam') group.setExpanded(true);
@@ -274,8 +294,7 @@
                         }
                     }
                 };
-            }
-            else {
+            } else {
                 g2d.getView().addEventListener("dragover", function (e) {
                     e.dataTransfer.dropEffect = "copy";
                     e.preventDefault();
@@ -288,13 +307,15 @@
                             'border.color': 'rgb(26,189,156)',
                             'border.width': 1
                         });
-                    }
-                    else {
+                    } else {
                         if (group) group.s('border.width', 0);
                     }
                 });
                 g2d.getView().addEventListener("drop", function (e) {
                     handleDrop(e);
+                });
+                g2d.getView().addEventListener("dragstart", function (e) {
+                    console.log('drag');
                 });
                 // 添加右键菜单
                 setContextMenu(index_contextmenu_config, g2d);
@@ -311,11 +332,9 @@
             compTreeView.getLabel = function (data) {
                 if (data instanceof ht.Text) {
                     return data.s('text');
-                }
-                else if (data instanceof ht.Shape) {
+                } else if (data instanceof ht.Shape) {
                     return '折线';
-                }
-                else if (data instanceof ht.Edge) {
+                } else if (data instanceof ht.Edge) {
                     return '连线';
                 }
                 return data.getName() || '节点'
@@ -350,6 +369,7 @@
                     propertyView.addProperties(data_properties);
                     propertyView.addProperties(threshold_properties);
                     propertyView.addProperties(m_point_properties);
+                    propertyView.addProperties(link_properties);
                     return;// 设置文本类型不显示其他数据
                 }
                 if (data instanceof ht.Data) {// data 类型，所有的节点都基于这个类型
@@ -361,12 +381,11 @@
                         // propertyView.addProperties(threshold_properties);
                     }
                     if (data.a('node.name') === 'bar') {
-                        propertyView.addProperties(zt_properties);
                     }
                     if (data.a('node.name') === 'bus') {
                         propertyView.addProperties(bus_properties);
                     }
-                    if (data.a('node.name') === 'button') {
+                    if (data.a('node.cate') === 'button') {
                         if (!data.s('label')) {
                             data.s({
                                 'label': 'Label',
@@ -375,12 +394,16 @@
                             });
                         }
                         propertyView.addProperties(button_properties);
+                        propertyView.addProperties(link_properties);
                     }
                     // if (data.a('node.name') === 'heater') {
                     //     propertyView.addProperties(heater_properties);
                     // }
-                    if (data.a('line.color')) {
-                        propertyView.addProperties(node_color_properties);
+                    // if (data.a('line.color')) {
+                    //     propertyView.addProperties(node_color_properties);
+                    // }
+                    if (data.a('node.bgColor')) {
+                        propertyView.addProperties(bg_color_properties);
                     }
                     if (data.a('node.label')) {
                         propertyView.addProperties(label_properties);
@@ -410,12 +433,12 @@
         }
 
         // 初始化历史管理事件（用于撤销和重做）
-        function initHistoryManager () {
+        function initHistoryManager() {
             historyManager = new ht.HistoryManager(indexDataModel);
             historyManager.setMaxHistoryCount(200);
             // historyManager.isPropertyUndoable('rect');
             // 绑定触发撤销和重做的按键
-            window.addEventListener('keydown', function(e) {
+            window.addEventListener('keydown', function (e) {
                 // 判断是否为 Mac
                 let isMac = (navigator.platform === "Mac68K") || (navigator.platform === "MacPPC") || (navigator.platform === "Macintosh") || (navigator.platform === "MacIntel");
                 if (isMac) {
@@ -439,7 +462,7 @@
                         }
                     }
                 }
-            })
+            });
         }
 
         // 被拖拽的元素在目标元素上同时鼠标放开触发的事件
@@ -463,16 +486,14 @@
                         "label.position": 17,
                         "label.font": "16px arial, sans-serif"
                     })
-                }
-                else if (item.name === "文字") {
+                } else if (item.name === "文字") {
                     node.s({
                         "text": "TEXT",
                         "text.align": "center",
                         "text.vAlign": "middle",
                         "text.font": "16px arial, sans-serif",
                     })
-                }
-                else {
+                } else {
                     node.setImage(image);
                 }
                 node.s('label', '');
@@ -484,16 +505,15 @@
         }
 
 
-
         /**
          * setContextMenu
          * @param contextmenu_config
          * @param graphView
          */
-        function setContextMenu (contextmenu_config, graphView) {
+        function setContextMenu(contextmenu_config, graphView) {
             let contextmenu = new ht.widget.ContextMenu(contextmenu_config);
             contextmenu.enableGlobalKey();
-            contextmenu.setVisibleFunc(function(item) {
+            contextmenu.setVisibleFunc(function (item) {
                 let data = graphView.sm().ld();
                 if (item.fordata === 1) {
                     return true;
@@ -505,11 +525,10 @@
         }
 
 
-
         /***
          * localDataModelStorage
          */
-        function localDataModelStorage (dataModel) {
+        function localDataModelStorage(dataModel) {
             dataModelStorage['dataModel'] = dataModel.serialize(2);
         }
 
@@ -520,11 +539,11 @@
             initPropertyView();
             initHistoryManager();
             resetDefault();
-            indexDataModel.mm(function (e){
-                localDataModelStorage (indexDataModel);
+            indexDataModel.mm(function (e) {
+                localDataModelStorage(indexDataModel);
             });
-            indexDataModel.md(function (e){
-                localDataModelStorage (indexDataModel);
+            indexDataModel.md(function (e) {
+                localDataModelStorage(indexDataModel);
             });
             mainSplit.addToDOM();
 

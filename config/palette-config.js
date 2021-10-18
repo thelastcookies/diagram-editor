@@ -2,29 +2,39 @@ palette_config = {
     lines: {
         name: '接线与常用图形',
         items: [
-            { name: '文字', image: '__text__', type: ht.Text },
-            { name: '告警变色', image: 'symbols/palette-icon/basic/告警变色.json', type: ht.Node},
-            { name: '数据绑定', image: 'symbols/palette-icon/basic/数据绑定.json', type: ht.Node},
-            { name: '显示隐藏', image: 'symbols/palette-icon/basic/显示隐藏.json', type: ht.Node},
-            { name: '母线', image: 'symbols/palette-icon/lines/母线.json', type: ht.Node},
-            { name: '坐标点', image: 'symbols/palette-icon/lines/坐标点.json', type: ht.Node},
-            { name: '接合点', image: 'symbols/palette-icon/lines/接合点.json', type: ht.Node},
-            { name: '交叉线路连接', image: 'symbols/palette-icon/lines/交叉线路连接.json', type: ht.Node},
+            {name: '文字', image: '__text__', type: ht.Text},
+            {name: '告警变色', image: 'symbols/palette-icon/basic/告警变色.json', type: ht.Node},
+            {name: '数据绑定', image: 'symbols/palette-icon/basic/数据绑定.json', type: ht.Node},
+            {name: '显示隐藏', image: 'symbols/palette-icon/basic/显示隐藏.json', type: ht.Node},
+            {name: '母线', image: 'symbols/palette-icon/lines/母线.json', type: ht.Node},
+            {name: '坐标点', image: 'symbols/palette-icon/lines/坐标点.json', type: ht.Node},
+            {name: '接合点', image: 'symbols/palette-icon/lines/接合点.json', type: ht.Node},
+            {name: '交叉线路连接', image: 'symbols/palette-icon/lines/交叉线路连接.json', type: ht.Node},
             // { name: '圆形', image: 'symbols/palette-icon/basic/圆形.json', type: ht.Node},
-            { name: '按钮', image: 'symbols/palette-icon/basic/按钮.json', type: ht.Node},
-            { name: '按钮-测点', image: 'symbols/palette-icon/m-point/按钮-测点.json', type: ht.Node},
+            {name: '按钮', image: 'symbols/palette-icon/basic/按钮.json', type: ht.Node},
+            {name: '按钮-测点', image: 'symbols/palette-icon/m-point/按钮-测点.json', type: ht.Node},
             // { name: '圆角矩形', image: 'symbols/palette-icon/basic/圆角矩形.json', type: ht.Node},
-            { name: '进度条', image: 'symbols/palette-icon/basic/进度条.json', type: ht.Node},
-            { name: '刻度线', image: 'symbols/palette-icon/basic/刻度线.json', type: ht.Node},
+            {name: '进度条', image: 'symbols/palette-icon/basic/进度条.json', type: ht.Node},
+            {name: '刻度线', image: 'symbols/palette-icon/basic/刻度线.json', type: ht.Node},
+            {name: '返回按钮', image: 'symbols/palette-icon/basic/返回按钮.json', type: ht.Node},
+            // { name: '矩形', image: 'symbols/palette-icon/basic/矩形.json', type: ht.Node},
+        ]
+    },
+    ems: {
+        name: 'EMS组态',
+        items: [
+            {name: '文本框', image: 'symbols/palette-icon/EMS/文本框.json', type: ht.Node},
+            {name: '区域文本框', image: 'symbols/palette-icon/EMS/区域文本框.json', type: ht.Node},
+            {name: '箭头', image: 'symbols/palette-icon/EMS/箭头.json', type: ht.Node},
         ]
     },
     // variable: {
     //     name: '测点配置组件',
     //     items: [
-            // { name: '旋钮开关', image: 'symbols/palette-icon/others/旋钮开关.json', type: ht.Node},
-            // { name: '旋钮开关-旋钮', image: 'symbols/palette-icon/others/旋钮开关-旋钮.json', type: ht.Node},
-            // { name: '特殊开关', image: 'symbols/palette-icon/others/特殊开关.json', type: ht.Node},
-        // ]
+    // { name: '旋钮开关', image: 'symbols/palette-icon/others/旋钮开关.json', type: ht.Node},
+    // { name: '旋钮开关-旋钮', image: 'symbols/palette-icon/others/旋钮开关-旋钮.json', type: ht.Node},
+    // { name: '特殊开关', image: 'symbols/palette-icon/others/特殊开关.json', type: ht.Node},
+    // ]
     // },
      power: {
         name: '电路相关',
@@ -37,6 +47,7 @@ palette_config = {
             { name: '手车', image: 'symbols/palette-icon/m-point/手车.json', type: ht.Node},
             { name: '刀闸', image: 'symbols/palette-icon/m-point/刀闸.json', type: ht.Node},
             { name: '接地开关', image: 'symbols/palette-icon/m-point/接地开关.json', type: ht.Node},
+            { name: '接地开关2', image: 'symbols/palette-icon/lines/接地开关2.json', type: ht.Node},
 
             { name: '负载', image: 'symbols/palette-icon/lines/负载.json', type: ht.Node},
             { name: '电抗', image: 'symbols/palette-icon/lines/电抗.json', type: ht.Node},
@@ -57,10 +68,14 @@ palette_config = {
             { name: '接地方块', image: 'symbols/palette-icon/lines/接地方块.json', type: ht.Node},
             { name: '接地电流互感器', image: 'symbols/palette-icon/lines/接地电流互感器.json', type: ht.Node},
             { name: '接地线圈互感器', image: 'symbols/palette-icon/lines/接地线圈互感器.json', type: ht.Node},
+            { name: '电容器组', image: 'symbols/palette-icon/lines/电容器组.json', type: ht.Node},
+            { name: '电压取样柜', image: 'symbols/palette-icon/lines/电压取样柜.json', type: ht.Node},
+            { name: '动态无功补偿设备', image: 'symbols/palette-icon/lines/动态无功补偿设备.json', type: ht.Node},
 
             { name: '交流发电机', image: 'symbols/palette-icon/transformer/交流发电机.json', type: ht.Node},
             { name: '星型变压器', image: 'symbols/palette-icon/transformer/星型变压器.json', type: ht.Node},
             { name: '三角变压器', image: 'symbols/palette-icon/transformer/三角变压器.json', type: ht.Node},
+            { name: '接地变压器', image: 'symbols/palette-icon/transformer/接地变压器.json', type: ht.Node},
             { name: '分接开关星型变压器', image: 'symbols/palette-icon/transformer/分接开关星型变压器.json', type: ht.Node},
             { name: '开口三角变压器', image: 'symbols/palette-icon/transformer/开口三角变压器.json', type: ht.Node},
             { name: '电动机', image: 'symbols/palette-icon/transformer/电动机.json', type: ht.Node},
@@ -70,8 +85,10 @@ palette_config = {
             { name: '四绕组变压器', image: 'symbols/palette-icon/transformer/四绕组变压器.json', type: ht.Node},
             { name: '变压器常用接法', image: 'symbols/palette-icon/transformer/变压器常用接法.json', type: ht.Node},
             { name: '变压器常用接法2', image: 'symbols/palette-icon/transformer/变压器常用接法2.json', type: ht.Node},
-            { name: '伊宁发变组主变', image: 'symbols/palette-icon/transformer/伊宁发变组主变.json', type: ht.Node},
-            { name: '主变档位指示', image: 'symbols/palette-icon/m-point/主变档位指示.json', type: ht.Node},
+            { name: '取样变压器', image: 'symbols/palette-icon/transformer/取样变压器.json', type: ht.Node},
+            // { name: '伊宁发变组主变', image: 'symbols/palette-icon/transformer/伊宁发变组主变.json', type: ht.Node},
+            // { name: '主变档位指示', image: 'symbols/palette-icon/m-point/主变档位指示.json', type: ht.Node},
+
 
 
             // { name: '主变', image: 'symbols/palette-icon/transformer/主变.json', type: ht.Node},
@@ -88,6 +105,11 @@ palette_config = {
             { name: '逆变器', image: 'symbols/palette-icon/transformer/逆变器.json', type: ht.Node},
             { name: '静态开关模件', image: 'symbols/palette-icon/transformer/静态开关模件.json', type: ht.Node},
             { name: '调压稳压器', image: 'symbols/palette-icon/transformer/调压稳压器.json', type: ht.Node},
+            { name: '塔点', image: 'symbols/palette-icon/zxa/塔点.json', type: ht.Node},
+            { name: '塔点回线', image: 'symbols/palette-icon/zxa/塔点回线.json', type: ht.Node},
+            { name: '塔点回线型2', image: 'symbols/palette-icon/zxa/塔点回线型2.json', type: ht.Node},
+            { name: '风机模型', image: 'symbols/palette-icon/zxa/风机模型.json', type: ht.Node},
+            { name: '线路标点', image: 'symbols/palette-icon/zxa/线路标点.json', type: ht.Node},
         ]
     },
     steam: {
