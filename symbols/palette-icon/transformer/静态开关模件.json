@@ -1,5 +1,12 @@
 {
   "modified": "Wed Feb 03 2021 17:15:53 GMT+0800 (CST)",
+  "dataBindings": [
+    {
+      "attr": "node.line.color",
+      "valueType": "Color",
+      "defaultValue": "rgb(255,0,0)"
+    }
+  ],
   "width": 98,
   "height": 200,
   "comps": [
@@ -7,7 +14,7 @@
       "type": "shape",
       "borderWidth": 2,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.line.color",
         "value": "rgb(255,0,0)"
       },
       "points": [
@@ -22,7 +29,7 @@
       "background": "rgb(255,0,0)",
       "borderWidth": 2,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.line.color",
         "value": "rgb(255,0,0)"
       },
       "borderJoin": "miter",
@@ -50,7 +57,7 @@
       "type": "shape",
       "borderWidth": 2,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.line.color",
         "value": "rgb(255,0,0)"
       },
       "rotation": 3.14159,
@@ -66,7 +73,7 @@
       "background": "rgb(255,0,0)",
       "borderWidth": 2,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.line.color",
         "value": "rgb(255,0,0)"
       },
       "borderJoin": "miter",
@@ -120,7 +127,7 @@
       "type": "shape",
       "borderWidth": 2,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.line.color",
         "value": "rgb(255,0,0)"
       },
       "points": [
@@ -135,7 +142,7 @@
       "background": "rgb(255,0,0)",
       "borderWidth": 2,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.line.color",
         "value": "rgb(255,0,0)"
       },
       "borderJoin": "miter",
@@ -163,7 +170,7 @@
       "type": "shape",
       "borderWidth": 2,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.line.color",
         "value": "rgb(255,0,0)"
       },
       "rotation": 3.14159,
@@ -179,7 +186,7 @@
       "background": "rgb(255,0,0)",
       "borderWidth": 2,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.line.color",
         "value": "rgb(255,0,0)"
       },
       "borderJoin": "miter",

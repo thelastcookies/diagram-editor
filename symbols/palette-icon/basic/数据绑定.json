@@ -29,7 +29,7 @@
       "name": "单位"
     },
     {
-      "attr": "line.color",
+      "attr": "node.line.color",
       "valueType": "Color",
       "defaultValue": "#00FF00"
     }
@@ -45,7 +45,7 @@
       },
       "align": "right",
       "color": {
-        "func": "attr@line.color",
+        "func": "attr@node.line.color",
         "value": "#00FF00"
       },
       "font": "16px arial, sans-serif",
@@ -63,7 +63,7 @@
         "value": "unit"
       },
       "color": {
-        "func": "attr@line.color",
+        "func": "attr@node.line.color",
         "value": "#00FF00"
       },
       "font": "16px arial, sans-serif",

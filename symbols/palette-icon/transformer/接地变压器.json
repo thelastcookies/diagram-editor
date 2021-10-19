@@ -2,7 +2,7 @@
   "modified": "Wed Jun 02 2021 13:40:26 GMT+0800 (中国标准时间)",
   "dataBindings": [
     {
-      "attr": "line.color",
+      "attr": "node.line.color",
       "valueType": "Color",
       "defaultValue": "rgb(255,0,0)"
     }
@@ -14,7 +14,7 @@
       "type": "shape",
       "borderWidth": 2,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.line.color",
         "value": "rgb(255,0,0)"
       },
       "rotation": -0.06249,
@@ -29,7 +29,7 @@
       "type": "shape",
       "borderWidth": 2,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.line.color",
         "value": "rgb(255,0,0)"
       },
       "rotation": -0.06249,
@@ -44,7 +44,7 @@
       "type": "shape",
       "borderWidth": 2,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.line.color",
         "value": "rgb(255,0,0)"
       },
       "rotation": -0.06249,
@@ -59,7 +59,7 @@
       "type": "oval",
       "borderWidth": 2,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.line.color",
         "value": "rgb(255,0,0)"
       },
       "rotation": -0.5236,
@@ -74,7 +74,7 @@
       "type": "shape",
       "borderWidth": 2,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.line.color",
         "value": "rgb(255,0,0)"
       },
       "rotation": -0.06249,
@@ -89,7 +89,7 @@
       "type": "shape",
       "borderWidth": 2,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.line.color",
         "value": "rgb(255,0,0)"
       },
       "rotation": -0.06249,
@@ -104,7 +104,7 @@
       "type": "shape",
       "borderWidth": 2,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.line.color",
         "value": "rgb(255,0,0)"
       },
       "rotation": -0.06249,

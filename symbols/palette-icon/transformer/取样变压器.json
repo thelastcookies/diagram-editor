@@ -7,7 +7,7 @@
       "type": "circle",
       "borderWidth": 2,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.line.color",
         "value": "rgb(255,0,0)"
       },
       "displayName": "2",
@@ -22,7 +22,7 @@
       "type": "circle",
       "borderWidth": 2,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.line.color",
         "value": "rgb(255,0,0)"
       },
       "displayName": "2",
@@ -37,7 +37,7 @@
       "type": "circle",
       "borderWidth": 2,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.line.color",
         "value": "rgb(255,0,0)"
       },
       "displayName": "2",
@@ -52,7 +52,7 @@
       "type": "shape",
       "borderWidth": 2,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.line.color",
         "value": "rgb(255,0,0)"
       },
       "points": [
@@ -66,7 +66,7 @@
       "type": "shape",
       "borderWidth": 2,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.line.color",
         "value": "rgb(255,0,0)"
       },
       "points": [
@@ -80,7 +80,7 @@
       "type": "shape",
       "borderWidth": 2,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.line.color",
         "value": "rgb(255,0,0)"
       },
       "points": [

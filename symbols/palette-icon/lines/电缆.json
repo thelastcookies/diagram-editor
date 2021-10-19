@@ -2,7 +2,7 @@
   "modified": "Mon Sep 21 2020 16:33:28 GMT+0800 (CST)",
   "dataBindings": [
     {
-      "attr": "line.color",
+      "attr": "node.line.color",
       "valueType": "Color",
       "defaultValue": "rgb(255,0,0)"
     }
@@ -14,7 +14,7 @@
       "type": "shape",
       "borderWidth": 2,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.line.color",
         "value": "rgb(255,0,0)"
       },
       "rotation": 1.5708,
@@ -29,7 +29,7 @@
       "type": "triangle",
       "borderWidth": 2,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.line.color",
         "value": "rgb(255,0,0)"
       },
       "borderJoin": "miter",

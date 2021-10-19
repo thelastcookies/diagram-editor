@@ -2,7 +2,7 @@
   "modified": "Thu Feb 04 2021 15:18:57 GMT+0800 (CST)",
   "dataBindings": [
     {
-      "attr": "line.color",
+      "attr": "node.line.color",
       "valueType": "Color",
       "defaultValue": "rgb(255,0,0)"
     }
@@ -14,7 +14,7 @@
       "type": "rect",
       "borderWidth": 2,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.line.color",
         "value": "rgb(255,0,0)"
       },
       "rect": [
@@ -28,7 +28,7 @@
       "type": "shape",
       "borderWidth": 2,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.line.color",
         "value": "rgb(255,0,0)"
       },
       "anchorY": 0,

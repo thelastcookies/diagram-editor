@@ -1,7 +1,7 @@
 {
   "dataBindings": [
     {
-      "attr": "line.color",
+      "attr": "node.line.color",
       "valueType": "Color",
       "defaultValue": "rgb(255,0,0)"
     },
@@ -31,7 +31,7 @@
       "type": "rect",
       "borderWidth": 2,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.line.color",
         "value": "rgb(255,0,0)"
       },
       "shadowColor": "#1ABC9C",
@@ -46,7 +46,7 @@
       "type": "shape",
       "borderWidth": 2,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.line.color",
         "value": "rgb(255,0,0)"
       },
       "shadowColor": "#1ABC9C",
@@ -61,7 +61,7 @@
       "type": "shape",
       "borderWidth": 2,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.line.color",
         "value": "rgb(255,0,0)"
       },
       "shadowColor": "#1ABC9C",
@@ -76,7 +76,7 @@
       "type": "triangle",
       "borderWidth": 6,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.line.color",
         "value": "rgb(255,0,0)"
       },
       "borderJoin": "miter",

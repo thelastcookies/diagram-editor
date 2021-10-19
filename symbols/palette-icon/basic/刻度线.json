@@ -2,7 +2,7 @@
   "modified": "Fri Oct 23 2020 10:55:44 GMT+0800 (CST)",
   "dataBindings": [
     {
-      "attr": "line.color",
+      "attr": "node.line.color",
       "valueType": "Color",
       "defaultValue": "rgb(0,0,0)"
     }
@@ -17,7 +17,7 @@
         "value": 1
       },
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.line.color",
         "value": "rgb(0,0,0)"
       },
       "rotation": 1.5708,
@@ -43,7 +43,7 @@
         "value": 1
       },
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.line.color",
         "value": "rgb(0,0,0)"
       },
       "anchorY": 0,
@@ -70,7 +70,7 @@
         "value": 1
       },
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.line.color",
         "value": "rgb(0,0,0)"
       },
       "anchorY": 0,
@@ -97,7 +97,7 @@
         "value": 1
       },
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.line.color",
         "value": "rgb(0,0,0)"
       },
       "anchorY": 0,
@@ -124,7 +124,7 @@
         "value": 1
       },
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.line.color",
         "value": "rgb(0,0,0)"
       },
       "anchorY": 0,
@@ -151,7 +151,7 @@
         "value": 1
       },
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.line.color",
         "value": "rgb(0,0,0)"
       },
       "anchorY": 0,
@@ -178,7 +178,7 @@
         "value": 1
       },
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.line.color",
         "value": "rgb(0,0,0)"
       },
       "anchorY": 0,
@@ -205,7 +205,7 @@
         "value": 1
       },
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.line.color",
         "value": "rgb(0,0,0)"
       },
       "anchorY": 0,

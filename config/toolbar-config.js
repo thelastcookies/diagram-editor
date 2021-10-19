@@ -116,22 +116,22 @@ toolbar_config_left = [
 ];
 
 toolbar_config_right = [
-    {
-        id: 'panel',
-        toolTip: '嵌板',
-        icon: {
-            width: 16,
-            height: 16,
-            comps: [{
-                type: 'image',
-                name: 'symbols/toolbar-icon/panel.svg',
-                color: colorObject
-            }]
-        },
-        action: function() {
-            panel ? removePanel(g2d) : initPanel(g2d);
-        }
-    },
+    // {
+    //     id: 'panel',
+    //     toolTip: '嵌板',
+    //     icon: {
+    //         width: 16,
+    //         height: 16,
+    //         comps: [{
+    //             type: 'image',
+    //             name: 'symbols/toolbar-icon/panel.svg',
+    //             color: colorObject
+    //         }]
+    //     },
+    //     action: function() {
+    //         panel ? removePanel(g2d) : initPanel(g2d);
+    //     }
+    // },
     {
         icon: {
             width: 16,

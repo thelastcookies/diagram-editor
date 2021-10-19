@@ -347,7 +347,7 @@
                 } else if (data instanceof ht.Shape) {
                     return 'symbols/polyline.json';
                 } else if (data.getName() === '表格') {
-                    return 'symbols/palette-icon/table-icon.json';
+                    return 'symbols/palette-icon/basic/table-icon.json';
                 }
                 var img = data.getImage();
                 return img ? img : oldGetIconFunc.apply(this, arguments);
@@ -401,8 +401,8 @@
                     // if (data.a('line.color')) {
                     //     propertyView.addProperties(node_color_properties);
                     // }
-                    if (data.a('node.bgColor')) {
-                        propertyView.addProperties(bg_color_properties);
+                    if (data.a('node.line.color')) {
+                        propertyView.addProperties(node_line_color_properties);
                     }
                     if (data.a('node.label')) {
                         propertyView.addProperties(label_properties);
@@ -419,14 +419,14 @@
                     if (data.a('node.type') === 'table') {
                         propertyView.addProperties(table_properties);
                     }
-                    if (data.a('node.type') === 'barChart') {
-                        propertyView.addProperties(panel_bar_chart_properties);
-                        return;
-                    }
-                    if (data.a('node.type') === 'lineChart') {
-                        propertyView.addProperties(panel_line_chart_properties);
-                        return;
-                    }
+                    // if (data.a('node.type') === 'barChart') {
+                    //     propertyView.addProperties(panel_bar_chart_properties);
+                    //     return;
+                    // }
+                    // if (data.a('node.type') === 'lineChart') {
+                    //     propertyView.addProperties(panel_line_chart_properties);
+                    //     return;
+                    // }
                     propertyView.addProperties(node_properties);
 
                 }
@@ -505,7 +505,7 @@
                     })
                 }
                 else if (item.name === "表格") {
-                    node.setImage('symbols/palette-icon/table.json');
+                    node.setImage('symbols/palette-icon/basic/table.json');
                 }
                 else if (item.name === "柱形图") {
                     node.setImage('symbols/palette-icon/barChart.json');
@@ -724,7 +724,7 @@
             mainSplit.addToDOM();
             g2d.fitContent(true);
 
-            initPanelView(g2d);
+            // initPanelView(g2d);
         }
     </script>
 </head>

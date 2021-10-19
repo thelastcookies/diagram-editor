@@ -53,13 +53,26 @@
       "valueType": "PositiveNumber",
       "name": "TableBodyHeight",
       "defaultValue": 30
+    },
+    {
+      "attr": "table.head.show",
+      "valueType": "Boolean",
+      "name": "TableShowHead",
+      "defaultValue": true
+    },
+    {
+      "attr": "table.head.merge",
+      "valueType": "Boolean",
+      "name": "TableHeadMerge",
+      "defaultValue": true
     }
   ],
   "width": 500,
   "height": 160,
+  "fitSize": true,
   "comps": [
     {
-      "type": "components/table.json",
+      "type": "symbols/palette-icon/components/table.json",
       "layoutH": "left",
       "layoutV": "top",
       "displayName": "tableComp",
@@ -142,6 +155,14 @@
       "tdHeight": {
         "func": "attr@table.body.height",
         "value": 30
+      },
+      "showHead": {
+        "func": "attr@table.head.show",
+        "value": true
+      },
+      "headMerge": {
+        "func": "attr@table.head.merge",
+        "value": true
       },
       "showHeadRowLine": true,
       "thColor": {

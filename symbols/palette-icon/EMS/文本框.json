@@ -17,7 +17,7 @@
       "defaultValue": "数据值"
     },
     {
-      "attr": "node.bgColor",
+      "attr": "node.line.color",
       "valueType": "Color",
       "defaultValue": "#164478"
     }
@@ -28,7 +28,7 @@
     {
       "type": "rect",
       "background": {
-        "func": "attr@node.bgColor",
+        "func": "attr@node.line.color",
         "value": "#164478"
       },
       "borderColor": "#979797",

@@ -2,7 +2,7 @@
   "modified": "Fri Mar 12 2021 10:05:04 GMT+0800 (CST)",
   "dataBindings": [
     {
-      "attr": "line.color",
+      "attr": "node.line.color",
       "valueType": "Color",
       "defaultValue": "rgb(0,255,0)"
     }
@@ -13,7 +13,7 @@
     {
       "type": "rect",
       "background": {
-        "func": "attr@line.color",
+        "func": "attr@node.line.color",
         "value": "#00FF00"
       },
       "borderColor": "#979797",

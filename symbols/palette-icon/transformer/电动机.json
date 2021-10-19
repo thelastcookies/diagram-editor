@@ -1,5 +1,12 @@
 {
   "modified": "Tue Oct 27 2020 17:39:17 GMT+0800 (CST)",
+  "dataBindings": [
+    {
+      "attr": "node.line.color",
+      "valueType": "Color",
+      "defaultValue": "rgb(255,0,0)"
+    }
+  ],
   "width": 36,
   "height": 36,
   "comps": [
@@ -7,7 +14,7 @@
       "type": "oval",
       "borderWidth": 2,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.line.color",
         "value": "rgb(255,0,0)"
       },
       "rotation": 4.71239,

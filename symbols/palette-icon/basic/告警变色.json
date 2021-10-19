@@ -28,7 +28,7 @@
       "name": "告警状态"
     },
     {
-      "attr": "line.color",
+      "attr": "node.line.color",
       "valueType": "Color",
       "defaultValue": "#D8D8D8"
     }
@@ -44,7 +44,7 @@
       },
       "align": "center",
       "color": {
-        "func": "__ht__function(data, view) {\n return data.a('node.state') ? '#FF0000' : data.a('line.color');\n}",
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? '#FF0000' : data.a('node.line.color');\n}",
         "value": "rgb(190,190,190)"
       },
       "font": "16px arial, sans-serif",

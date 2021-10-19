@@ -23,7 +23,7 @@
       "name": "显示隐藏"
     },
     {
-      "attr": "line.color",
+      "attr": "node.line.color",
       "valueType": "Color",
       "defaultValue": "#FF0000"
     },
@@ -44,7 +44,7 @@
       },
       "align": "center",
       "color": {
-        "func": "__ht__function(data, view) {\n return data.a('line.color');\n}",
+        "func": "__ht__function(data, view) {\n return data.a('node.line.color');\n}",
         "value": "rgb(255,0,0)"
       },
       "visible": {

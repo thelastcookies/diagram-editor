@@ -225,6 +225,24 @@ table_properties = [
             data.a("table.columns", JSON.stringify(oldData));
         }
     },
+    // {
+    //     categoryName: '表格',
+    //     name: "table.head.show",
+    //     displayName: '表头显示',
+    //     accessType: 'attr',
+    //     valueType: 'boolean',
+    //     defaultValue: true,
+    //     editable: true
+    // },
+    {
+        categoryName: '表格',
+        name: "table.head.merge",
+        displayName: '表头合并',
+        accessType: 'attr',
+        valueType: 'boolean',
+        defaultValue: false,
+        editable: true
+    },
     {
         categoryName: '表格',
         name: "table.head.height",
@@ -291,7 +309,7 @@ table_properties = [
         displayName: '表格数据设置(JSON)',
         accessType: 'attr',
         valueType: 'Object',
-        editable: true,
+        // editable: true,
         defaultValue: [],
     }
 ];
@@ -851,9 +869,9 @@ label_properties = [
         defaultValue: ''
     }
 ];
-bg_color_properties = [
+node_line_color_properties = [
     {
-        name: 'node.bgColor',
+        name: 'node.line.color',
         displayName: '初始颜色',
         accessType: 'attr',
         valueType: 'color',
