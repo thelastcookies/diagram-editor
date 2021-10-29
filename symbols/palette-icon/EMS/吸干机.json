@@ -1,0 +1,323 @@
+{
+  "modified": "Thu Oct 28 2021 00:36:50 GMT+0800 (中国标准时间)",
+  "width": 140,
+  "height": 56,
+  "comps": [
+    {
+      "type": "rect",
+      "background": "#37AEE1",
+      "borderWidth": 1,
+      "borderColor": "#37AEE1",
+      "gradientColor": "",
+      "rect": [
+        0,
+        46,
+        140,
+        10
+      ]
+    },
+    {
+      "type": "trapezoid",
+      "background": "#49B2F8",
+      "borderWidth": 1,
+      "borderColor": "#37AEE1",
+      "gradient": "linear.northwest",
+      "gradientColor": "#25597C",
+      "rotation": 4.71239,
+      "rect": [
+        -8.5,
+        16.5,
+        25,
+        8
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#49B2F8",
+      "borderWidth": 1,
+      "borderColor": "#37AEE1",
+      "gradient": "linear.south",
+      "gradientColor": "#25597C",
+      "rect": [
+        8,
+        8,
+        22,
+        25
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#37AEE1",
+      "borderWidth": 1,
+      "borderColor": "#37AEE1",
+      "gradientColor": "",
+      "rect": [
+        10.5,
+        10,
+        17,
+        2
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#37AEE1",
+      "borderWidth": 1,
+      "borderColor": "#37AEE1",
+      "gradientColor": "",
+      "rect": [
+        10.5,
+        14,
+        17,
+        2
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#37AEE1",
+      "borderWidth": 1,
+      "borderColor": "#37AEE1",
+      "gradientColor": "",
+      "rect": [
+        10.5,
+        18,
+        17,
+        2
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#37AEE1",
+      "borderWidth": 1,
+      "borderColor": "#37AEE1",
+      "gradientColor": "",
+      "rect": [
+        10.5,
+        22,
+        17,
+        2
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#37AEE1",
+      "borderWidth": 1,
+      "borderColor": "#37AEE1",
+      "gradientColor": "",
+      "rect": [
+        10.5,
+        26.5,
+        9,
+        11
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#49B2F8",
+      "borderWidth": 1,
+      "borderColor": "#37AEE1",
+      "gradient": "linear.south",
+      "gradientColor": "#25597C",
+      "rect": [
+        8,
+        35,
+        22,
+        11
+      ]
+    },
+    {
+      "type": "trapezoid",
+      "background": "#49B2F8",
+      "borderWidth": 1,
+      "borderColor": "#37AEE1",
+      "gradient": "linear.northeast",
+      "gradientColor": "#25597C",
+      "rotation": 1.5708,
+      "rect": [
+        23,
+        18.5,
+        18,
+        4
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#49B2F8",
+      "borderWidth": 1,
+      "borderColor": "#37AEE1",
+      "gradient": "linear.north",
+      "gradientColor": "#25597C",
+      "rect": [
+        34,
+        12,
+        31,
+        34
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#49B2F8",
+      "borderWidth": 1,
+      "borderColor": "#37AEE1",
+      "gradient": "linear.south",
+      "gradientColor": "#25597C",
+      "rect": [
+        34,
+        12,
+        31,
+        34
+      ]
+    },
+    {
+      "type": "shape",
+      "background": "#49B2F8",
+      "borderWidth": 1,
+      "borderColor": "#37AEE1",
+      "gradient": "linear.south",
+      "gradientColor": "#25597C",
+      "closePath": true,
+      "points": [
+        65,
+        18.5,
+        65,
+        38.29799,
+        69.69697,
+        38.29799,
+        69.69697,
+        43.5,
+        91.30303,
+        43.5,
+        91.30303,
+        38.29799,
+        95.94223,
+        38.29799,
+        96,
+        18.5
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#37AEE1",
+      "borderWidth": 1,
+      "borderColor": "#37AEE1",
+      "gradient": "linear.north",
+      "gradientColor": "",
+      "rect": [
+        71.5,
+        40,
+        2.5,
+        6
+      ]
+    },
+    {
+      "type": "shape",
+      "background": "#49B2F8",
+      "borderWidth": 1,
+      "borderColor": "#37AEE1",
+      "gradient": "linear.south",
+      "gradientColor": "#25597C",
+      "closePath": true,
+      "points": [
+        96,
+        8,
+        122,
+        8,
+        122,
+        41.09677,
+        116.09091,
+        41.09677,
+        116.09091,
+        46,
+        106.63636,
+        46,
+        106.63636,
+        41.09677,
+        96,
+        41.09677
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#49B2F8",
+      "borderWidth": 1,
+      "borderColor": "#37AEE1",
+      "gradient": "linear.south",
+      "gradientColor": "#25597C",
+      "rect": [
+        99,
+        18.5,
+        4,
+        8
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#49B2F8",
+      "borderWidth": 1,
+      "borderColor": "#37AEE1",
+      "gradientColor": "#25597C",
+      "rect": [
+        107,
+        10,
+        13,
+        8
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#37AEE1",
+      "borderWidth": 1,
+      "borderColor": "#37AEE1",
+      "gradientColor": "",
+      "rotation": 1.5708,
+      "rect": [
+        108.5,
+        -7.5,
+        3,
+        18
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#37AEE1",
+      "borderWidth": 1,
+      "borderColor": "#37AEE1",
+      "gradientColor": "",
+      "rotation": 3.14159,
+      "rect": [
+        127,
+        16,
+        3,
+        18
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#37AEE1",
+      "borderWidth": 1,
+      "borderColor": "#37AEE1",
+      "gradientColor": "",
+      "rotation": 3.14159,
+      "rect": [
+        108.5,
+        3,
+        3,
+        5
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#49B2F8",
+      "borderWidth": 1,
+      "borderColor": "#37AEE1",
+      "gradient": "linear.southeast",
+      "gradientColor": "#25597C",
+      "rotation": 4.71239,
+      "rect": [
+        123,
+        22.5,
+        3,
+        5
+      ]
+    }
+  ]
+}

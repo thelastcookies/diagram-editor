@@ -94,7 +94,7 @@
 
         // 拓扑组件
         g2d = window.graph = new ht.graph.GraphView(indexDataModel);
-        g2d.setLayers(['0', 1]);
+        g2d.setLayers(['0', 1, 2, 3]);
         if (g2d.getEditInteractor()) {
             g2d.getEditInteractor().setStyle('anchorVisible', false);
         }
@@ -105,8 +105,8 @@
 
 
         indexDataModel.each(function (data) {
-            if (!(data instanceof ht.Edge) && !(data.a('node.type') === 'barChart' || data.a('node.type') === 'lineChart'))
-                data.setLayer(1);
+            if (!(data instanceof ht.Edge) && !(data instanceof ht.Shape) && !(data.a('node.type') === 'barChart' || data.a('node.type') === 'lineChart'))
+                data.setLayer(2);
         });
 
 
@@ -517,7 +517,7 @@
                 }
                 node.s('label', '');
                 node.p(g2d.lp(e));
-                node.setLayer(1);
+                node.setLayer(2);
                 g2d.dm().add(node);
                 g2d.sm().ss(node);
             }

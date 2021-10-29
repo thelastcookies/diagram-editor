@@ -18,7 +18,7 @@ palette_config = {
             {name: '进度条', image: 'symbols/palette-icon/basic/进度条.json', type: ht.Node},
             {name: '刻度线', image: 'symbols/palette-icon/basic/刻度线.json', type: ht.Node},
             {name: '返回按钮', image: 'symbols/palette-icon/basic/返回按钮.json', type: ht.Node},
-            // { name: '矩形', image: 'symbols/palette-icon/basic/矩形.json', type: ht.Node},
+            { name: '矩形', image: 'symbols/palette-icon/basic/矩形.json', type: ht.Node},
         ]
     },
     ems: {
@@ -27,6 +27,18 @@ palette_config = {
             {name: '文本框', image: 'symbols/palette-icon/EMS/文本框.json', type: ht.Node},
             {name: '区域文本框', image: 'symbols/palette-icon/EMS/区域文本框.json', type: ht.Node},
             {name: '箭头', image: 'symbols/palette-icon/EMS/箭头.json', type: ht.Node},
+            {name: '信号指示灯', image: 'symbols/palette-icon/EMS/信号指示灯.json', type: ht.Node},
+            {name: '泵', image: 'symbols/palette-icon/EMS/泵.json', type: ht.Node},
+            {name: '储气罐', image: 'symbols/palette-icon/EMS/储气罐.json', type: ht.Node},
+            {name: '锅炉', image: 'symbols/palette-icon/EMS/锅炉.json', type: ht.Node},
+            {name: '过滤器', image: 'symbols/palette-icon/EMS/过滤器.json', type: ht.Node},
+            {name: '集水坑', image: 'symbols/palette-icon/EMS/集水坑.json', type: ht.Node},
+            {name: '开关', image: 'symbols/palette-icon/EMS/开关.json', type: ht.Node},
+            {name: '空压机-开关', image: 'symbols/palette-icon/EMS/空压机-开关.json', type: ht.Node},
+            {name: '冷干机', image: 'symbols/palette-icon/EMS/冷干机.json', type: ht.Node},
+            {name: '污水井', image: 'symbols/palette-icon/EMS/污水井.json', type: ht.Node},
+            {name: '污水井-开关', image: 'symbols/palette-icon/EMS/污水井-开关.json', type: ht.Node},
+            {name: '吸干机', image: 'symbols/palette-icon/EMS/吸干机.json', type: ht.Node},
         ]
     },
     // variable: {
