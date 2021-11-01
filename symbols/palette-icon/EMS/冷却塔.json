@@ -1,0 +1,141 @@
+{
+  "modified": "Sat Oct 30 2021 00:36:35 GMT+0800 (中国标准时间)",
+  "width": 56,
+  "height": 90,
+  "comps": [
+    {
+      "type": "rect",
+      "background": "rgba(19,98,255,0.1)",
+      "borderWidth": 1,
+      "borderColor": "#7DD3FF",
+      "rect": [
+        22,
+        0,
+        12,
+        9
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#7DD3FF",
+      "borderWidth": 1,
+      "borderColor": "#7DD3FF",
+      "rect": [
+        20,
+        3,
+        16,
+        3
+      ]
+    },
+    {
+      "type": "shape",
+      "background": "rgba(19,98,255,0.1)",
+      "borderWidth": 1,
+      "borderColor": "#7DD3FF",
+      "closePath": true,
+      "points": [
+        22,
+        9.10554,
+        0,
+        27,
+        56,
+        27,
+        34,
+        9
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#7DD3FF",
+      "borderWidth": 1,
+      "borderColor": "#7DD3FF",
+      "rect": [
+        0,
+        25.5,
+        56,
+        3
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgba(19,98,255,0.1)",
+      "borderWidth": 1,
+      "borderColor": "#7DD3FF",
+      "rotation": 3.14159,
+      "rect": [
+        22,
+        81,
+        12,
+        9
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#7DD3FF",
+      "borderWidth": 1,
+      "borderColor": "#7DD3FF",
+      "rotation": 3.14159,
+      "rect": [
+        20,
+        84,
+        16,
+        3
+      ]
+    },
+    {
+      "type": "shape",
+      "background": "rgba(19,98,255,0.1)",
+      "borderWidth": 1,
+      "borderColor": "#7DD3FF",
+      "rotation": 3.14159,
+      "closePath": true,
+      "points": [
+        22,
+        63.10554,
+        0,
+        81,
+        56,
+        81,
+        34,
+        63
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#7DD3FF",
+      "borderWidth": 1,
+      "borderColor": "#7DD3FF",
+      "rotation": 3.14159,
+      "rect": [
+        0,
+        61.5,
+        56,
+        3
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgba(19,98,255,0.1)",
+      "borderWidth": 1,
+      "borderColor": "#7DD3FF",
+      "rect": [
+        2,
+        28.5,
+        52,
+        33
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgba(19,98,255,0.1)",
+      "borderWidth": 1,
+      "borderColor": "#7DD3FF",
+      "rect": [
+        19,
+        36,
+        18,
+        18
+      ]
+    }
+  ]
+}

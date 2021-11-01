@@ -878,6 +878,15 @@ node_line_color_properties = [
         editable: true,
     }
 ];
+node_border_color_properties = [
+    {
+        name: 'node.border.color',
+        displayName: '边框颜色',
+        accessType: 'attr',
+        valueType: 'color',
+        editable: true,
+    }
+];
 // 部分图元中含有 单位 的设置
 unit_properties = [
     {

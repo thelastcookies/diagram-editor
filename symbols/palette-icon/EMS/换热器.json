@@ -1,0 +1,31 @@
+{
+  "modified": "Fri Oct 29 2021 23:58:37 GMT+0800 (中国标准时间)",
+  "width": 112,
+  "height": 70,
+  "comps": [
+    {
+      "type": "rect",
+      "background": "#085168",
+      "borderWidth": 1,
+      "borderColor": "#FFFFFF",
+      "rect": [
+        0,
+        0,
+        112,
+        70
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#0083AC",
+      "borderWidth": 1,
+      "borderColor": "#FFFFFF",
+      "rect": [
+        7,
+        7,
+        98,
+        56
+      ]
+    }
+  ]
+}

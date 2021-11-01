@@ -5,6 +5,11 @@
       "attr": "node.line.color",
       "valueType": "Color",
       "defaultValue": "rgb(0,255,0)"
+    },
+    {
+      "attr": "node.border.color",
+      "valueType": "Color",
+      "defaultValue": "rgba(0, 0, 0, 0)"
     }
   ],
   "width": 100,
@@ -16,6 +21,12 @@
         "func": "attr@node.line.color",
         "value": "#00FF00"
       },
+      "borderWidth": 1,
+      "borderColor": {
+        "func": "attr@node.border.color",
+        "value": "rgba(0, 0, 0, 0)"
+      },
+      "borderWidthAbsolute": true,
       "rect": [
         0,
         0,

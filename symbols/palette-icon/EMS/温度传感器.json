@@ -1,0 +1,91 @@
+{
+  "modified": "Sat Oct 30 2021 00:57:07 GMT+0800 (中国标准时间)",
+  "width": 10,
+  "height": 34,
+  "comps": [
+    {
+      "type": "rect",
+      "background": "#006300",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rect": [
+        0,
+        0,
+        7,
+        4
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#006300",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rect": [
+        4,
+        4,
+        2,
+        2
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#006300",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rect": [
+        0,
+        6,
+        10,
+        12
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#006300",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rect": [
+        0,
+        18,
+        10,
+        2
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#006300",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rect": [
+        3.5,
+        20,
+        3.5,
+        2
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#006300",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rect": [
+        3.5,
+        32,
+        3.5,
+        2
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#006300",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rect": [
+        4.25,
+        22,
+        2,
+        10
+      ]
+    }
+  ]
+}
