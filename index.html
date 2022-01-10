@@ -235,10 +235,10 @@
                 dm.add(group);// 将节点添加到 palette 的数据容器中
 
                 if (name === 'lines') group.setExpanded(true);
-                if (name === 'ems') group.setExpanded(true);
-                if (name === 'variable') group.setExpanded(true);
-                if (name === 'power') group.setExpanded(true);
-                if (name === 'steam') group.setExpanded(true);
+                if (name === 'sxjk') group.setExpanded(true);
+                // if (name === 'ems') group.setExpanded(true);
+                // if (name === 'power') group.setExpanded(true);
+                // if (name === 'steam') group.setExpanded(true);
 
                 info.items.forEach(function (item) {
                     // 新建 ht.Node 类型节点
@@ -375,9 +375,15 @@
                     propertyView.addProperties(data_properties);
                 }
                 if (data instanceof ht.Node) {// node 类型
-                    if (data.a('node.cate') === 'm-point' || data.a('node.type') === 'm-point') {
+                    if (
+                        (data.a('node.cate') === 'm-point' || data.a('node.type') === 'm-point')
+                        && data.a('node.type') !== 'cb'
+                    ) {
                         propertyView.addProperties(m_point_properties);
                         // propertyView.addProperties(threshold_properties);
+                    }
+                    if (data.a('node.type') === 'cb') {
+                        propertyView.addProperties(cb_properties);
                     }
                     if (data.a('node.name') === 'bar') {
                     }
@@ -390,22 +396,22 @@
                                 'label': 'Label',
                                 'label.position': 17,
                                 'label.font': '16px sans-serif',
+                                'label.color': "rgb(255, 255, 255)",
+                                'label.offset.y': -1
                             });
                         }
-                        propertyView.addProperties(button_properties);
+                        propertyView.addProperties(label_properties);
                         propertyView.addProperties(link_properties);
                     }
-                    // if (data.a('node.name') === 'heater') {
-                    //     propertyView.addProperties(heater_properties);
-                    // }
-                    // if (data.a('line.color')) {
-                    //     propertyView.addProperties(node_color_properties);
-                    // }
+
                     if (data.a('node.line.color')) {
                         propertyView.addProperties(node_line_color_properties);
                     }
                     if (data.a('node.border.color')) {
                         propertyView.addProperties(node_border_color_properties);
+                    }
+                    if (data.a('node.border.width')) {
+                        propertyView.addProperties(node_border_width_properties);
                     }
                     if (data.a('node.label')) {
                         propertyView.addProperties(label_properties);
@@ -419,8 +425,25 @@
                     if (data.a('text.font')) {
                         propertyView.addProperties(text_font_properties);
                     }
+                    if (data.a('node.value.max') || data.a('node.value.min')) {
+                        propertyView.addProperties(max_min_properties);
+                    }
+                    if (data.a('node.part.enable') !== undefined) {
+                        propertyView.addProperties(part_enable_properties);
+                    }
                     if (data.a('node.type') === 'table') {
                         propertyView.addProperties(table_properties);
+                    }
+                    if (data.a('node.type') === 'signalBoard') {
+                        if (!data.s('label')) {
+                            data.s({
+                                'label': 'Label',
+                                'label.position': 17,
+                                'label.font': '16px sans-serif',
+                                'label.offset.y': -1
+                            });
+                        }
+                        propertyView.addProperties(label_properties);
                     }
                     // if (data.a('node.type') === 'barChart') {
                     //     propertyView.addProperties(panel_bar_chart_properties);
@@ -431,7 +454,6 @@
                     //     return;
                     // }
                     propertyView.addProperties(node_properties);
-
                 }
                 // if (data instanceof ht.Group) {// 组类型
                 //     propertyView.addProperties(group_properties);

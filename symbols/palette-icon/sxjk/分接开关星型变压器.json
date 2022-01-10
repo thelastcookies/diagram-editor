@@ -1,0 +1,104 @@
+{
+  "modified": "Sun Jan 09 2022 21:22:04 GMT+0800 (中国标准时间)",
+  "dataBindings": [
+    {
+      "attr": "node.line.color",
+      "valueType": "Color",
+      "defaultValue": "rgb(255,0,0)"
+    }
+  ],
+  "width": 60,
+  "height": 60,
+  "comps": [
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@node.line.color",
+        "value": "rgb(255,0,0)"
+      },
+      "rotation": -1.10969,
+      "points": [
+        -6.93424,
+        -5.50463,
+        64.6988,
+        68.52139
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@node.line.color",
+        "value": "rgb(255,0,0)"
+      },
+      "points": [
+        58.11388,
+        8.80982,
+        80.2013,
+        15.00633,
+        66.58751,
+        34.76927
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@node.line.color",
+        "value": "rgb(255,0,0)"
+      },
+      "rotation": -1.10969,
+      "points": [
+        19.01118,
+        25.07979,
+        40.64545,
+        14.33581
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@node.line.color",
+        "value": "rgb(255,0,0)"
+      },
+      "rotation": -1.10969,
+      "points": [
+        39.08359,
+        49.42231,
+        41.10183,
+        25.87779
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@node.line.color",
+        "value": "rgb(255,0,0)"
+      },
+      "rotation": -1.10969,
+      "points": [
+        29.42971,
+        44.43628,
+        9.30819,
+        31.08821
+      ]
+    },
+    {
+      "type": "oval",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@node.line.color",
+        "value": "rgb(255,0,0)"
+      },
+      "rect": [
+        1,
+        1,
+        58,
+        58
+      ]
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "modified": "Tue Nov 02 2021 17:40:31 GMT+0800 (中国标准时间)",
+  "width": 38,
+  "height": 34,
+  "comps": [
+    {
+      "type": "triangle",
+      "background": "#0083AC",
+      "borderWidth": 1,
+      "borderColor": "#EFEFEF",
+      "rotation": 1.5708,
+      "rect": [
+        -7.5,
+        7.54781,
+        34,
+        19
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "#0083AC",
+      "borderWidth": 1,
+      "borderColor": "#EFEFEF",
+      "rotation": 4.71239,
+      "rect": [
+        11.5,
+        7.54781,
+        34,
+        19
+      ]
+    }
+  ]
+}

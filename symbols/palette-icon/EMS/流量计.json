@@ -1,0 +1,67 @@
+{
+  "modified": "Tue Nov 02 2021 17:36:28 GMT+0800 (中国标准时间)",
+  "width": 64,
+  "height": 32,
+  "comps": [
+    {
+      "type": "rect",
+      "background": "#0083AC",
+      "borderWidth": 1,
+      "borderColor": "#EFEFEF",
+      "rect": [
+        -1,
+        11.5,
+        12,
+        21
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#0083AC",
+      "borderWidth": 1,
+      "borderColor": "#EFEFEF",
+      "rect": [
+        11,
+        15,
+        41,
+        13
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#0083AC",
+      "borderWidth": 1,
+      "borderColor": "#EFEFEF",
+      "rect": [
+        11,
+        0,
+        41,
+        4
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#0083AC",
+      "borderWidth": 1,
+      "borderColor": "#EFEFEF",
+      "rect": [
+        52,
+        11.5,
+        12,
+        21
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#0083AC",
+      "borderWidth": 1,
+      "borderColor": "#EFEFEF",
+      "rect": [
+        25.75,
+        4,
+        11.5,
+        11
+      ]
+    }
+  ]
+}

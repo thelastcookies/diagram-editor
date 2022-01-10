@@ -1,0 +1,58 @@
+{
+  "modified": "Sun Jan 09 2022 17:52:41 GMT+0800 (中国标准时间)",
+  "dataBindings": [
+    {
+      "attr": "node.cate",
+      "valueType": "String",
+      "defaultValue": "button"
+    },
+    {
+      "attr": "node.name",
+      "valueType": "String",
+      "defaultValue": "button"
+    },
+    {
+      "attr": "button.link",
+      "valueType": "String",
+      "defaultValue": ""
+    },
+    {
+      "attr": "node.line.color",
+      "valueType": "Color",
+      "defaultValue": "rgb(2,27,53)"
+    }
+  ],
+  "width": 100,
+  "height": 30,
+  "comps": [
+    {
+      "type": "rect",
+      "background": "rgba(2,27,53,0.4)",
+      "borderWidth": 2,
+      "borderColor": "rgba(180,222,255,0.2)",
+      "borderWidthAbsolute": true,
+      "rect": [
+        0,
+        0,
+        100,
+        30
+      ]
+    },
+    {
+      "type": "rect",
+      "background": {
+        "func": "attr@node.line.color",
+        "value": "rgb(2,27,53)"
+      },
+      "borderWidth": 2,
+      "borderColor": "rgb(255,255,255)",
+      "borderWidthAbsolute": true,
+      "rect": [
+        1,
+        1,
+        98,
+        28
+      ]
+    }
+  ]
+}

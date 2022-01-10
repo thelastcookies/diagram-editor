@@ -7,6 +7,11 @@
       "defaultValue": "rgb(0,255,0)"
     },
     {
+      "attr": "node.border.width",
+      "valueType": "Number",
+      "defaultValue": "1"
+    },
+    {
       "attr": "node.border.color",
       "valueType": "Color",
       "defaultValue": "rgba(0, 0, 0, 0)"
@@ -21,7 +26,10 @@
         "func": "attr@node.line.color",
         "value": "#00FF00"
       },
-      "borderWidth": 1,
+      "borderWidth": {
+        "func": "attr@node.border.width",
+        "value": 1
+      },
       "borderColor": {
         "func": "attr@node.border.color",
         "value": "rgba(0, 0, 0, 0)"

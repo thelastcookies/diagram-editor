@@ -33,9 +33,13 @@ var index_contextmenu_config = [
                 else
                     return;
                 // 复制 Style
-                node.setStyleMap(item.getStyleMap());
+                if (item.getStyleMap()) {
+                    node.setStyleMap(JSON.parse(JSON.stringify(item.getStyleMap())));
+                }
                 // 复制 Attr
-                node.setAttrObject(item.getAttrObject());
+                if (item.getAttrObject()) {
+                    node.setAttrObject(JSON.parse(JSON.stringify(item.getAttrObject())));
+                }
                 // 复制其他属性
                 // 名称
                 node.setName(item.getName());

@@ -43,10 +43,11 @@ text_properties = [
     {
         categoryName: '文本',
         name: 'text.font',
-        displayName: '字体大小',
+        displayName: '字体',
         accessType: 'style',
         valueType: 'text',
-        editable: true
+        editable: true,
+        defaultValue: '20待定2.jsonpx arial, sans-serif'
     },
     // {
     //     categoryName: '文本',
@@ -386,7 +387,8 @@ node_properties = [
         valueType: 'number',
         getValue: function(data){
             return parseInt(data.getWidth());
-        }
+        },
+        editable: true
     },
     {
         categoryName: '节点属性',
@@ -395,7 +397,8 @@ node_properties = [
         valueType: 'number',
         getValue: function(data){
             return parseInt(data.getHeight());
-        }
+        },
+        editable: true
     },
     {
         categoryName: '节点属性',
@@ -719,8 +722,8 @@ shape_properties = [
     }
 ];
 
-// 按钮图元的配置
-button_properties = [
+// 图元中含有 label 的设置
+label_properties = [
     {
         name: 'label',
         displayName: 'Label内容',
@@ -741,8 +744,8 @@ button_properties = [
         valueType: 'string',
         editable: true,
         enum: {
-            labels: ["上", "下", "中", "左", "右"],
-            values: [3, 31, 17, 14, 20]
+            labels: ["上", "下", "中", "左", "右", "外部上", "外部下", "外部左", "外部右"],
+            values: [11, 23, 17, 16, 18, 3, 31, 14, 20]
         }
     },
     {
@@ -804,7 +807,7 @@ text_font_properties = [
 m_point_properties = [
     {
         name: 'node.tag',
-        displayName: '标签',
+        displayName: '测点',
         accessType: 'attr',
         valueType: 'text',
         editable: true
@@ -859,16 +862,16 @@ m_point_properties = [
 ];
 
 // 图元中含有 label 的设置
-label_properties = [
-    {
-        name: 'node.label',
-        displayName: '模板Label',
-        accessType: 'attr',
-        valueType: 'text',
-        editable: true,
-        defaultValue: ''
-    }
-];
+// label_properties = [
+//     {
+//         name: 'node.label',
+//         displayName: '模板Label',
+//         accessType: 'attr',
+//         valueType: 'text',
+//         editable: true,
+//         defaultValue: ''
+//     }
+// ];
 node_line_color_properties = [
     {
         name: 'node.line.color',
@@ -878,13 +881,22 @@ node_line_color_properties = [
         editable: true,
     }
 ];
+node_border_width_properties = [
+    {
+        name: 'node.border.width',
+        displayName: '边框宽度',
+        accessType: 'attr',
+        valueType: 'number',
+        editable: true
+    }
+];
 node_border_color_properties = [
     {
         name: 'node.border.color',
         displayName: '边框颜色',
         accessType: 'attr',
         valueType: 'color',
-        editable: true,
+        editable: true
     }
 ];
 // 部分图元中含有 单位 的设置
@@ -913,22 +925,32 @@ direction_properties = [
         defaultValue: 'up'
     }
 ];
-// 计量条的设置
-zt_properties = [
+// 最大最小值 配置项
+max_min_properties = [
 
     {
-        name: 'bar.min',
-        displayName: '进度条最小值',
+        name: 'node.value.min',
+        displayName: '最小值',
         accessType: 'attr',
         editable: true,
         valueType: 'number',
     },
     {
-        name: 'bar.max',
-        displayName: '进度条最大值',
+        name: 'node.value.max',
+        displayName: '最大值',
         accessType: 'attr',
         editable: true,
         valueType: 'number',
+    }
+];
+// 部分可见 配置项
+part_enable_properties = [
+    {
+        name: 'node.part.enable',
+        displayName: '内部可用',
+        accessType: 'attr',
+        editable: true,
+        valueType: 'boolean',
     }
 ];
 /**
@@ -1044,5 +1066,29 @@ panel_line_chart_properties = [
         enum: {
             values: ['10s', '30s', '1min', '5min', '10min', '30min', '1h']
         }
+    },
+];
+// 断路器的配置项
+cb_properties = [
+    {
+        name: 'node.tag.cb',
+        displayName: '断路器测点',
+        accessType: 'attr',
+        valueType: 'text',
+        editable: true
+    },
+    {
+        name: 'node.tag.sw',
+        displayName: '手车测点',
+        accessType: 'attr',
+        valueType: 'text',
+        editable: true
+    },
+    {
+        name: 'node.showName',
+        displayName: '名称',
+        accessType: 'attr',
+        valueType: 'text',
+        editable: true
     },
 ];

@@ -1,0 +1,119 @@
+{
+  "modified": "Sun Jan 09 2022 22:10:57 GMT+0800 (中国标准时间)",
+  "dataBindings": [
+    {
+      "attr": "node.cate",
+      "valueType": "String",
+      "defaultValue": "m-point"
+    },
+    {
+      "attr": "node.type",
+      "valueType": "String",
+      "defaultValue": "switch"
+    },
+    {
+      "attr": "node.name",
+      "valueType": "String",
+      "defaultValue": "switch"
+    },
+    {
+      "attr": "node.state",
+      "valueType": "Boolean",
+      "defaultValue": true,
+      "name": "手车状态"
+    },
+    {
+      "attr": "node.line.color",
+      "valueType": "Color",
+      "defaultValue": "rgb(255, 0, 0)"
+    }
+  ],
+  "width": 40,
+  "height": 46,
+  "comps": [
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "#D8D8D8"
+      },
+      "visible": {
+        "func": "__ht__function(data, view) {\n return !data.a('node.state') \n}",
+        "value": true
+      },
+      "displayName": "箭头",
+      "points": [
+        2.25778,
+        36.99685,
+        20.02158,
+        25.2058,
+        37.86399,
+        36.99685
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "__ht__function(data, view) {\n return data.a('node.switch') ? 'rgb(255,0,0)' : data.a('line.color');\n}",
+        "value": "rgb(255,0,0)"
+      },
+      "displayName": "箭头",
+      "points": [
+        2.13601,
+        19.74417,
+        19.89981,
+        7.95312,
+        37.74222,
+        19.74417
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "__ht__function(data, view) {\n return data.a('node.switch') ? 'rgb(255,0,0)' : data.a('line.color');\n}",
+        "value": "rgb(255,0,0)"
+      },
+      "rotation": -3.14159,
+      "points": [
+        19.93914,
+        46,
+        20,
+        27.60483
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "__ht__function(data, view) {\n return data.a('node.switch') ? 'rgb(255,0,0)' : data.a('line.color');\n}",
+        "value": "rgb(255,0,0)"
+      },
+      "rotation": -3.14159,
+      "points": [
+        19.93911,
+        7.18232,
+        19.93911,
+        0
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "#FF0000",
+      "visible": {
+        "func": "__ht__function(data, view) {\n return data.a('node.state') \n}",
+        "value": true
+      },
+      "rotation": -3.14159,
+      "points": [
+        20,
+        27.60483,
+        20,
+        7.95308
+      ]
+    }
+  ]
+}
