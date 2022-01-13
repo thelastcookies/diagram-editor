@@ -138,10 +138,74 @@ toolbar_config_right = [
             height: 16,
             comps: [{
                 type: 'image',
+                name: 'symbols/toolbar-icon/h-justify.svg'
+            }]
+        },
+        toolTip: '垂直均分',
+        action: function() {
+            let slModel = indexDataModel.sm().getSelection();
+            if (slModel.size() === 0) {
+                return;
+            }
+            historyManager.beginTransaction();
+            let nodeArr = [];
+            let nodeMap = new Map();
+            slModel.forEach(item => { nodeArr.push(item) });
+            nodeArr.sort((a, b) => { return a.getPosition().y - b.getPosition().y});
+            let min = nodeArr[0].getPosition().y;
+            let max = nodeArr[nodeArr.length - 1].getPosition().y;
+            let heightItem = (max - min) / (nodeArr.length - 1);
+            for (let i = 0, len = nodeArr.length; i < len; i++) {
+                nodeMap.set(nodeArr[i].getId(), min + i * heightItem);
+            }
+            slModel.forEach(function (item, index) {
+                item.setPosition(item.getPosition().x, nodeMap.get(item.getId()));
+            });
+            historyManager.endTransaction();
+        }
+    },
+    {
+        icon: {
+            width: 16,
+            height: 16,
+            comps: [{
+                type: 'image',
+                name: 'symbols/toolbar-icon/v-justify.svg'
+            }]
+        },
+        toolTip: '水平均分',
+        action: function() {
+            let slModel = indexDataModel.sm().getSelection();
+            if (slModel.size() === 0) {
+                return;
+            }
+            historyManager.beginTransaction();
+            let nodeArr = [];
+            let nodeMap = new Map();
+            slModel.forEach(item => { nodeArr.push(item) });
+            nodeArr.sort((a, b) => { return a.getPosition().x - b.getPosition().x});
+            let min = nodeArr[0].getPosition().x;
+            let max = nodeArr[nodeArr.length - 1].getPosition().x;
+            let heightItem = (max - min) / (nodeArr.length - 1);
+            for (let i = 0, len = nodeArr.length; i < len; i++) {
+                nodeMap.set(nodeArr[i].getId(), min + i * heightItem);
+            }
+            slModel.forEach(function (item, index) {
+                item.setPosition(nodeMap.get(item.getId()), item.getPosition().y);
+            });
+            historyManager.endTransaction();
+        }
+    },
+    {
+        icon: {
+            width: 16,
+            height: 16,
+            comps: [{
+                type: 'image',
                 name: 'symbols/toolbar-icon/h-center.svg'
             }]
         },
-        toolTip: '垂直居中对齐',
+        toolTip: '垂直对齐',
         action: function() {
             let slModel = indexDataModel.sm().getSelection();
             if (slModel.size() === 0) {
@@ -167,7 +231,7 @@ toolbar_config_right = [
                 name: 'symbols/toolbar-icon/v-center.svg'
             }]
         },
-        toolTip: '水平居中对齐',
+        toolTip: '水平对齐',
         action: function() {
             let slModel = indexDataModel.sm().getSelection();
             if (slModel.size() === 0) {

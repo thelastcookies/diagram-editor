@@ -22,13 +22,13 @@
       "attr": "table.head.background",
       "valueType": "Color",
       "name": "TableHeadBackground",
-      "defaultValue": "rgb(240,240,240)"
+      "defaultValue": "rgb(0, 41, 87)"
     },
     {
       "attr": "table.body.background",
       "valueType": "Color",
       "name": "TableBodyBackground",
-      "defaultValue": "rgb(255,255,255)"
+      "defaultValue": "rgb(0, 41, 87)"
     },
     {
       "attr": "table.border.width",
@@ -40,7 +40,7 @@
       "attr": "table.border.color",
       "valueType": "Color",
       "name": "TableBorderColor",
-      "defaultValue": "rgb(212,212,212)"
+      "defaultValue": "rgb(255, 255, 255)"
     },
     {
       "attr": "table.head.height",
@@ -110,11 +110,11 @@
       },
       "thBackground": {
         "func": "attr@table.head.background",
-        "value": "rgb(240,240,240)"
+        "value": "rgb(0, 41, 87)"
       },
       "tdBackground": {
         "func": "attr@table.body.background",
-        "value": "rgb(255,255,255)"
+        "value": "rgb(0, 41, 87)"
       },
       "borderWidth": {
         "func": "attr@table.border.width",
@@ -122,11 +122,11 @@
       },
       "borderColor": {
         "func": "attr@table.border.color",
-        "value": "rgb(212,212,212)"
+        "value": "rgb(255, 255, 255)"
       },
       "columnLineColor": {
         "func": "attr@table.column.line.color",
-        "value": "rgb(212,212,212)"
+        "value": "rgb(255, 255, 255)"
       },
       "columnLineWidth": {
         "func": "attr@table.column.line.width",
@@ -134,7 +134,7 @@
       },
       "rowLineColor": {
         "func": "attr@table.row.line.color",
-        "value": "rgb(212,212,212)"
+        "value": "rgb(255, 255, 255)"
       },
       "rowLineWidth": {
         "func": "attr@table.row.line.width",

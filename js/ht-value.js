@@ -171,6 +171,27 @@ ht.DataModel.prototype.getNodeTags = function (){
     return nodeArr;
 };
 
+ht.Node.prototype.getNodeTag = function () {
+    let tag;
+    if (this.a('node.type') === 'cb') {
+        tag = this.a('node.tag.cb') + "|" + this.a('node.tag.sw');
+    } else {
+        tag = this.getTag() || this.a('node.tag');
+    }
+    return tag;
+}
+
+ht.Node.prototype.setNodeTag = function (tag) {
+    if (this.a('node.type') === 'cb') {
+        this.a('node.tag.cb', tag.split("|")[0]);
+        this.a('node.tag.sw', tag.split("|")[1]);
+    } else {
+        this.setTag(tag);
+        this.a('node.tag', tag);
+    }
+    return tag;
+}
+
 /**
  * ht.DataModel 的扩展方法
  * 针对图元/组件中包含公式（node.formula) 属性进行的预处理

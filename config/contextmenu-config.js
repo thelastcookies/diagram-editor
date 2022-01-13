@@ -1,6 +1,5 @@
 // let progressSplit = null;
 let mainView = null;
-let slModelList = new ht.List();
 
 var index_contextmenu_config = [
     {
@@ -11,7 +10,7 @@ var index_contextmenu_config = [
             return !slCount.length;
         },
         action: function () {
-            slModelList = g2d.sm().toSelection();
+            nodeListCopy();
         }
     },
     {
@@ -20,61 +19,8 @@ var index_contextmenu_config = [
         disabled: function () {
             return !slModelList.length;
         },
-        action: function(item, event) {
-            let copyNodeArr = [];
-            slModelList.each(function (item, index) {
-                let node = null;
-                if (item instanceof ht.Text)
-                    node = new ht.Text();
-                else if (item instanceof ht.Shape)
-                    node = new ht.Shape();
-                else if (item instanceof ht.Node)
-                    node = new ht.Node();
-                else
-                    return;
-                // 复制 Style
-                if (item.getStyleMap()) {
-                    node.setStyleMap(JSON.parse(JSON.stringify(item.getStyleMap())));
-                }
-                // 复制 Attr
-                if (item.getAttrObject()) {
-                    node.setAttrObject(JSON.parse(JSON.stringify(item.getAttrObject())));
-                }
-                // 复制其他属性
-                // 名称
-                node.setName(item.getName());
-                // Tag
-                // node.setTag(item.getTag());
-                // 宿主
-                node.setHost(item.getHost());
-                // 父元素
-                node.setParent(item.getParent());
-                // 图片或者连线设置
-                if (item instanceof ht.Edge) {
-
-                }
-                else if (item instanceof ht.Shape) {
-                    node.setPoints(item.getPoints());
-                }
-                else {
-                    node.setImage(item.getImage());
-                }
-                // 图层
-                node.setLayer(item.getLayer());
-                // 旋转角度
-                node.setRotation(item.getRotation());
-                // 位置与大小
-                // node.setRect(item.getRect());
-                node.setHeight(item.getHeight());
-                node.setWidth(item.getWidth());
-                // 修改位置
-                // node.setPosition(event.clientX + 30 - 260, event.clientY + 30 - 25);
-                let tempPosition = item.getPosition();
-                node.setPosition(parseInt(tempPosition.x + 30), parseInt(tempPosition.y + 30));
-                indexDataModel.add(node);
-                copyNodeArr.push(node);
-            });
-            g2d.sm().ss(copyNodeArr);
+        action: function(item, e) {
+            nodeListPaste(e);
         }
     },
     {

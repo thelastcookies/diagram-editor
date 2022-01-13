@@ -70,8 +70,9 @@ let initTagChangeDialog = function (content) {
                 let sourceReg = new RegExp(sourceStr, 'g');
                 let nodeArr = indexDataModel.getDatas();
                 nodeArr.forEach(function (item) {
-                    let tagSource = item.getTag();
-                    item.setTag(tagSource.replace(sourceReg, targetStr));
+                    let tagSource = item.getNodeTag();
+                    if (tagSource)
+                        item.setNodeTag(tagSource.replace(sourceReg, targetStr));
                 });
                 tagChangeDialog.hide();
             }

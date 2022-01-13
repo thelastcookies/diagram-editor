@@ -70,6 +70,7 @@
     <script src="config/datamodel-config.js"></script>
     <!--数字计算-->
     <script src="js/calculate.js"></script>
+    <script src="js/ht-value.js"></script>
 
     <!--json图片-->
     <!--    <script src="js/predefine.js"></script>-->
@@ -78,7 +79,7 @@
         // 用于界面渲染的 dataModel
         let indexDataModel = new ht.DataModel();
         //用于保存 复制粘贴 所需节点
-        let copyNodeArr = [];
+        let slModelList = new ht.List();
         // 将编辑的内容保存在浏览器中
         let dataModelStorage = window.localStorage;
 
@@ -468,23 +469,30 @@
         }
 
         // 初始化历史管理事件（用于撤销和重做）
-        function initHistoryManager() {
+        function initContext() {
             historyManager = new ht.HistoryManager(indexDataModel);
             historyManager.setMaxHistoryCount(200);
             // historyManager.isPropertyUndoable('rect');
             // 绑定触发撤销和重做的按键
+            // 绑定复制粘贴按键
             window.addEventListener('keydown', function (e) {
                 // 判断是否为 Mac
                 let isMac = (navigator.platform === "Mac68K") || (navigator.platform === "MacPPC") || (navigator.platform === "Macintosh") || (navigator.platform === "MacIntel");
                 if (isMac) {
                     if (e.metaKey) {
-                        if (e.key === 'z' || e.key === 'Z') {//ctrl + z
+                        // 撤销 重做
+                        if (e.key === 'z' || e.key === 'Z') {//cmd + z
                             e.preventDefault();
                             historyManager.undo();
-                        } else if (e.key === 'y' || e.key === 'Y') {//ctrl + y
+                        } else if (e.key === 'y' || e.key === 'Y') {//cmd + y
                             e.preventDefault();
                             historyManager.redo();
                         }
+                        // // 复制 粘贴
+                        // if (e.key === 'c' || e.key === 'C') {//cmd + c
+                        // } else if (e.key === 'v' || e.key === 'V') {//cmd + v
+                        //     // nodeListPaste(e);
+                        // }
                     }
                 } else {
                     if (e.ctrlKey) {
@@ -495,10 +503,109 @@
                             e.preventDefault();
                             historyManager.redo();
                         }
+                        // // 复制 粘贴
+                        // if (e.key === 'c' || e.key === 'C') {//ctrl + c
+                        // } else if (e.key === 'v' || e.key === 'V') {//ctrl + v
+                        //
+                        // }
                     }
                 }
             });
         }
+        // 复制粘贴原生事件的处理
+        document.addEventListener('copy', function(e){
+            if (document.getSelection().toString().length) {
+                // 清空 slModelList
+                slModelList = new ht.List();
+            }
+            else if (g2d.sm().toSelection().length) {
+                e.clipboardData.setData('text/plain', "");
+                nodeListCopy();
+                e.preventDefault();
+            }
+        });
+        document.addEventListener('paste', function(e){
+            if (e.clipboardData.items.length) {
+
+            } else if (slModelList.length) {
+                e.preventDefault();
+                nodeListPaste(e);
+            }
+        });
+
+        function nodeListCopy() {
+            slModelList = g2d.sm().toSelection();
+        }
+
+        function nodeListPaste(e) {
+            let loginPoint = null;
+            if (e && e.type === 'mouseup') {
+                loginPoint = g2d.getLogicalPoint(e);
+            }
+            console.log(window.clipboardData);
+            historyManager.beginTransaction();
+            let copyNodeArr = [];
+            slModelList.each(function (item, index) {
+                let node = null;
+                if (item instanceof ht.Text)
+                    node = new ht.Text();
+                else if (item instanceof ht.Shape)
+                    node = new ht.Shape();
+                else if (item instanceof ht.Node)
+                    node = new ht.Node();
+                else
+                    return;
+                // 复制 Style
+                if (item.getStyleMap()) {
+                    node.setStyleMap(JSON.parse(JSON.stringify(item.getStyleMap())));
+                }
+                // 复制 Attr
+                if (item.getAttrObject()) {
+                    node.setAttrObject(JSON.parse(JSON.stringify(item.getAttrObject())));
+                }
+                // 复制其他属性
+                // 名称
+                node.setName(item.getName());
+                // Tag
+                // node.setTag(item.getTag());
+                // 宿主
+                node.setHost(item.getHost());
+                // 父元素
+                node.setParent(item.getParent());
+                // 图片或者连线设置
+                if (item instanceof ht.Edge) {
+
+                }
+                else if (item instanceof ht.Shape) {
+                    node.setPoints(item.getPoints());
+                }
+                else {
+                    node.setImage(item.getImage());
+                }
+                // 图层
+                node.setLayer(item.getLayer());
+                // 旋转角度
+                node.setRotation(item.getRotation());
+                // 位置与大小
+                // node.setRect(item.getRect());
+                node.setHeight(item.getHeight());
+                node.setWidth(item.getWidth());
+                // 修改位置
+                // node.setPosition(event.clientX + 30 - 260, event.clientY + 30 - 25);
+                let tempPosition = item.getPosition();
+                // if (loginPoint) {
+                //     node.setPosition(parseInt(loginPoint.x + 30), parseInt(loginPoint.y + 30));
+                // } else {
+                    node.setPosition(parseInt(tempPosition.x + 30), parseInt(tempPosition.y + 30));
+                // }
+                indexDataModel.add(node);
+                copyNodeArr.push(node);
+            });
+            g2d.sm().ss(copyNodeArr);
+            historyManager.endTransaction();
+        }
+
+
 
         // 被拖拽的元素在目标元素上同时鼠标放开触发的事件
         function handleDrop(e) {
@@ -738,7 +845,7 @@
             initGraphView();
             initTreeView();
             initPropertyView();
-            initHistoryManager();
+            initContext();
             resetDefault();
             indexDataModel.mm(function (e) {
                 localDataModelStorage(indexDataModel);
