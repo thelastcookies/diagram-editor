@@ -1,0 +1,59 @@
+{
+  "modified": "Tue Nov 03 2020 18:13:41 GMT+0800 (CST)",
+  "dataBindings": [
+    {
+      "attr": "node.direction",
+      "valueType": "String",
+      "defaultValue": "up"
+    }
+  ],
+  "width": 32,
+  "height": 32,
+  "comps": [
+    {
+      "type": "oval",
+      "background": "#009A3D",
+      "borderWidth": 2,
+      "borderColor": "#009A3D",
+      "rect": [
+        1,
+        1,
+        30,
+        30
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(217,217,217)",
+      "borderColor": "rgba(255,255,255,0.6)",
+      "anchorY": 0.9333,
+      "rotation": {
+        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'up')res=180;\nif(dir === 'right')res=270;\nif(dir === 'down')res=0;\nif(dir === 'left')res=90;\nreturn res/180*Math.PI;\n}",
+        "value": 0
+      },
+      "rect": [
+        14.42891,
+        2.84716,
+        3.14219,
+        14.09284
+      ]
+    },
+    {
+      "type": "polygon",
+      "background": "rgb(217,217,217)",
+      "borderColor": "rgba(255,255,255,0.6)",
+      "polygonSide": 3,
+      "anchorX": 0.2,
+      "rotation": {
+        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'up')res=270;\nif(dir === 'right')res=0;\nif(dir === 'down')res=90;\nif(dir === 'left')res=180;\nreturn res/180*Math.PI;\n}",
+        "value": 1.5708
+      },
+      "rect": [
+        12.50005,
+        7,
+        17.5,
+        18
+      ]
+    }
+  ]
+}

@@ -1,0 +1,196 @@
+{
+  "modified": "Tue Dec 22 2020 14:48:23 GMT+0800 (CST)",
+  "dataBindings": [
+    {
+      "attr": "node.cate",
+      "valueType": "String",
+      "defaultValue": "m-point"
+    },
+    {
+      "attr": "node.type",
+      "valueType": "String",
+      "defaultValue": "equip"
+    },
+    {
+      "attr": "node.name",
+      "valueType": "String",
+      "defaultValue": "coal-plough"
+    },
+    {
+      "attr": "node.data",
+      "valueType": "Array",
+      "name": "状态值",
+      "defaultValue": [1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0]
+    }
+  ],
+  "width": 48,
+  "height": 32,
+  "comps": [
+    {
+      "type": "shape",
+      "borderWidth": 1.5,
+      "borderColor": "rgb(0,199,7)",
+      "visible": {
+        "func": "__ht__function(data, view) {\nreturn Boolean(data.a('node.data')[0]);\n}",
+        "value": false
+      },
+      "points": [
+        3.07232,
+        3.02714,
+        25.12718,
+        3.02714
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 1.5,
+      "borderColor": "rgb(0,199,7)",
+      "visible": {
+        "func": "__ht__function(data, view) {\nreturn Boolean(data.a('node.data')[0]);\n}",
+        "value": false
+      },
+      "points": [
+        3.07232,
+        3.02714,
+        25.12718,
+        28.97286
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 1.5,
+      "borderColor": "rgb(212,0,0)",
+      "visible": {
+        "func": "__ht__function(data, view) {\nreturn Boolean(data.a('node.data')[8]);\n}",
+        "value": false
+      },
+      "points": [
+        3.07232,
+        28.97286,
+        25.12718,
+        28.97286
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 1.5,
+      "borderColor": "rgb(212,0,0)",
+      "visible": {
+        "func": "__ht__function(data, view) {\nreturn Boolean(data.a('node.data')[8]);\n}",
+        "value": false
+      },
+      "points": [
+        3.07232,
+        28.97286,
+        25.12718,
+        3.02714
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 1.5,
+      "borderColor": "rgb(226,250,87)",
+      "visible": {
+        "func": "__ht__function(data, view) {\nreturn !Boolean(data.a('node.data')[0]) && !Boolean(data.a('node.data')[8]);\n}",
+        "value": false
+      },
+      "points": [
+        3.07232,
+        16,
+        25.12718,
+        28.97286
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 1.5,
+      "borderColor": "rgb(226,250,87)",
+      "visible": {
+        "func": "__ht__function(data, view) {\nreturn !Boolean(data.a('node.data')[0]) && !Boolean(data.a('node.data')[8]);\n}",
+        "value": false
+      },
+      "points": [
+        3.07232,
+        16,
+        25.12718,
+        3.02714
+      ]
+    },
+    {
+      "type": "rect",
+      "background": {
+        "func": "__ht__function(data, view) {\n return Boolean(data.a('node.data')[16])?'rgb(255,255,0)':'rgb(0,255,0)';\n}",
+        "value": "rgb(255,255,0)"
+      },
+      "borderWidth": 0.5,
+      "borderColor": "#979797",
+      "visible": {
+        "func": "__ht__function(data, view) {\n return !Boolean(data.a('node.data')[18]);\n}",
+        "value": true
+      },
+      "rect": [
+        34.48792,
+        3.02714,
+        12,
+        12
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "__ht__function(data, view) {\n return Boolean(data.a('node.data')[16])?'M':'A';\n}",
+        "value": "M"
+      },
+      "align": "center",
+      "font": "9px arial, sans-serif",
+      "visible": {
+        "func": "__ht__function(data, view) {\n return !Boolean(data.a('node.data')[18]);\n}",
+        "value": true
+      },
+      "rect": [
+        35.48792,
+        4.3,
+        10,
+        10
+      ]
+    },
+    {
+      "type": "rect",
+      "background": {
+        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r='rgb(255,0,0)';if(!d[25]){r='rgb(255,255,0)';}return r;\n}",
+        "value": "rgb(255,255,0)"
+      },
+      "borderWidth": 0.5,
+      "borderColor": "#979797",
+      "visible": {
+        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r=true;if(!d[24]&&!d[25]){r=false}return r;\n}",
+        "value": true
+      },
+      "rect": [
+        34.48792,
+        16.97286,
+        12,
+        12
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r='E';if(!d[25]){r='T';}return r;\n}",
+        "value": "E"
+      },
+      "align": "center",
+      "font": "9px arial, sans-serif",
+      "visible": {
+        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r=true;if(!d[24]&&!d[25]){r=false}return r;\n}",
+        "value": true
+      },
+      "rect": [
+        35.48792,
+        18.39233,
+        10,
+        10
+      ]
+    }
+  ]
+}

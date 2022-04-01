@@ -1,0 +1,162 @@
+{
+  "modified": "Fri Oct 30 2020 15:16:28 GMT+0800 (CST)",
+  "dataBindings": [
+    {
+      "attr": "node.cate",
+      "valueType": "String",
+      "defaultValue": "m-point"
+    },
+    {
+      "attr": "node.type",
+      "valueType": "String",
+      "defaultValue": "equip"
+    },
+    {
+      "attr": "node.name",
+      "valueType": "String",
+      "defaultValue": "dash-cleaner"
+    },
+    {
+      "attr": "node.data",
+      "valueType": "Array",
+      "name": "状态值",
+      "defaultValue": [0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,1,0,0,0,0,0,0]
+    }
+  ],
+  "width": 48,
+  "height": 44,
+  "comps": [
+    {
+      "type": "rect",
+      "background": "rgba(0,0,0,0)",
+      "borderWidth": 3,
+      "borderColor": "rgb(255,0,255)",
+      "borderJoin": "miter",
+      "borderWidthAbsolute": true,
+      "rect": [
+        8,
+        0,
+        26,
+        44
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgba(0,0,0,0)",
+      "borderWidth": 3,
+      "borderColor": {
+        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r='#D8D8D8';if(!d[16]){r='#00FF00';}return r;\n}",
+        "values": "#D8D8D8"
+      },
+      "borderJoin": "miter",
+      "borderWidthAbsolute": true,
+      "rect": [
+        9,
+        1,
+        24,
+        42
+      ]
+    },
+    {
+      "type": "rect",
+      "background": {
+        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r='#D8D8D8';if(d[3]||d[11]){r='#FFFF00'}if(d[0]||d[4]){r='#FF0000';}if(d[8]||d[12]){r='#00FF00';}return r;\n}",
+        "values": "#D8D8D8"
+      },
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "borderJoin": "miter",
+      "borderWidthAbsolute": true,
+      "rect": [
+        10,
+        2,
+        22,
+        40
+      ]
+    },
+    {
+      "type": "circle",
+      "background": "rgb(255,0,0)",
+      "borderColor": "#979797",
+      "visible": {
+        "func": "__ht__function(data, view) {\n return Boolean(data.a('node.data')[25]);\n}",
+        "value": true
+      },
+      "rect": [
+        36,
+        32,
+        12,
+        12
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(0,0,0)",
+      "borderWidth": 1,
+      "borderColor": "rgb(0,0,0)",
+      "visible": {
+        "func": "__ht__function(data, view) {\n return Boolean(data.a('node.data')[25]);\n}",
+        "value": true
+      },
+      "rect": [
+        41.25,
+        34.11157,
+        1.5,
+        5
+      ]
+    },
+    {
+      "type": "circle",
+      "background": "rgb(0,0,0)",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "visible": {
+        "func": "__ht__function(data, view) {\n return Boolean(data.a('node.data')[25]);\n}",
+        "value": true
+      },
+      "rect": [
+        41,
+        40.70712,
+        2,
+        2
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r='';if(d[2]||d[10]){r='F'}else if(d[3]&&!d[11]&&!d[2]&&!d[10]){r='S'} return r;\n}",
+        "value": "F"
+      },
+      "align": "center",
+      "color": "rgb(255,0,0)",
+      "font": "9px arial, sans-serif",
+      "visible": {
+        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r=false;if((d[3]&&!d[11]&&!d[2]&&!d[10])||(d[2]||d[10])){r=true}return r;\n}",
+        "value": true
+      },
+      "rect": [
+        0,
+        0,
+        8,
+        8
+      ]
+    },
+    {
+      "type": "text",
+      "text": "L",
+      "align": "center",
+      "color": "rgb(255,255,0)",
+      "font": "9px arial, sans-serif",
+      "visible": {
+        "func": "__ht__function(data, view) {\n return Boolean(data.a('node.data')[18]);\n}",
+        "value": true
+      },
+      "rect": [
+        0,
+        34.11157,
+        8,
+        8
+      ]
+    }
+  ]
+}
