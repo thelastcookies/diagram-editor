@@ -102,7 +102,6 @@ palette_config = {
             { name: '电阻', image: 'symbols/palette-icon/sxjk/电阻.json', type: ht.Node},
             { name: '电流互感器', image: 'symbols/palette-icon/sxjk/电流互感器.json', type: ht.Node},
             { name: '带电显示器', image: 'symbols/palette-icon/sxjk/接地负载.json', type: ht.Node},
-            { name: '动态无功补偿', image: 'symbols/palette-icon/sxjk/动态无功补偿.json', type: ht.Node},
             { name: '接地避雷器', image: 'symbols/palette-icon/sxjk/接地避雷器.json', type: ht.Node},
             { name: '接地放电间隙', image: 'symbols/palette-icon/sxjk/接地放电间隙.json', type: ht.Node},
             { name: '接地电阻', image: 'symbols/palette-icon/sxjk/接地电阻.json', type: ht.Node},
@@ -112,7 +111,11 @@ palette_config = {
             { name: '遥信信号', image: 'symbols/palette-icon/sxjk/遥信信号.json', type: ht.Node},
             { name: '硬压板', image: 'symbols/palette-icon/sxjk/硬压板.json', type: ht.Node},
             { name: '网络信号', image: 'symbols/palette-icon/sxjk/网络信号.json', type: ht.Node},
+            { name: '逆变器', image: 'symbols/palette-icon/sxjk/逆变器.json', type: ht.Node},
 
+            { name: '动态无功补偿', image: 'symbols/palette-icon/sxjk/动态无功补偿.json', type: ht.Node},
+            { name: '燃机发电机', image: 'symbols/palette-icon/sxjk/燃机发电机.json', type: ht.Node},
+            { name: '交流发电机', image: 'symbols/palette-icon/sxjk/交流发电机.json', type: ht.Node},
             { name: '星型变压器', image: 'symbols/palette-icon/sxjk/星型变压器.json', type: ht.Node},
             { name: '三角变压器', image: 'symbols/palette-icon/sxjk/三角变压器.json', type: ht.Node},
             { name: '接地变压器', image: 'symbols/palette-icon/sxjk/接地变压器.json', type: ht.Node},
@@ -124,6 +127,7 @@ palette_config = {
             { name: '四绕组变压器', image: 'symbols/palette-icon/sxjk/四绕组变压器.json', type: ht.Node},
             { name: '变压器常用接法', image: 'symbols/palette-icon/sxjk/变压器常用接法.json', type: ht.Node},
             { name: '变压器常用接法2', image: 'symbols/palette-icon/sxjk/变压器常用接法2.json', type: ht.Node},
+            // { name: '取样变压器', image: 'symbols/palette-icon/transformer/取样变压器.json', type: ht.Node},
         ]
     },
     // power: {
@@ -199,6 +203,7 @@ palette_config = {
             // { name: '状态标志', image: 'symbols/palette-icon/steam/状态标志.json', type: ht.Node},
             // { name: '指示灯', image: 'symbols/palette-icon/steam/指示灯.json', type: ht.Node},
             { name: '电动机', image: 'symbols/palette-icon/m-point/电动机.json', type: ht.Node},
+            { name: '风机', image: 'symbols/palette-icon/m-point/风机-揭东.json', type: ht.Node},
             // { name: '泵-FSL', image: 'symbols/palette-icon/m-point/泵-FSL.json', type: ht.Node},
             { name: '泵', image: 'symbols/palette-icon/m-point/泵.json', type: ht.Node},
             // { name: '泵-普通', image: 'symbols/palette-icon/steam/泵-普通.json', type: ht.Node},
@@ -206,6 +211,7 @@ palette_config = {
             { name: '电动阀-2', image: 'symbols/palette-icon/m-point/电动阀-2.json', type: ht.Node},
             { name: '气动阀', image: 'symbols/palette-icon/m-point/气动阀.json', type: ht.Node},
             { name: '气动阀-2', image: 'symbols/palette-icon/m-point/气动阀-2.json', type: ht.Node},
+            { name: '气动开关', image: 'symbols/palette-icon/m-point/气动开关.json', type: ht.Node},
             { name: '电磁阀', image: 'symbols/palette-icon/m-point/电磁阀.json', type: ht.Node},
             { name: '液动阀', image: 'symbols/palette-icon/m-point/液动阀.json', type: ht.Node},
             // { name: '液动阀-FSL', image: 'symbols/palette-icon/m-point/液动阀-FSL.json', type: ht.Node},
@@ -223,6 +229,7 @@ palette_config = {
             { name: '闸阀', image: 'symbols/palette-icon/steam/闸阀.json', type: ht.Node},
             { name: '止回阀', image: 'symbols/palette-icon/steam/止回阀.json', type: ht.Node},
             { name: '角阀', image: 'symbols/palette-icon/steam/角阀.json', type: ht.Node},
+            { name: '低压汽水系统-1', image: 'symbols/palette-icon/steam/低压汽水系统-1.json', type: ht.Node},
 
             // { name: '贮水槽', image: 'symbols/palette-icon/steam/贮水槽.json', type: ht.Node},
             // { name: '水罐', image: 'symbols/palette-icon/steam/水罐.json', type: ht.Node},
