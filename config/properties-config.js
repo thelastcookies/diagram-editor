@@ -104,6 +104,15 @@ data_properties = [
         displayName: '类型',
         editable: true
     },
+    {
+        name: 'layer',
+        displayName: '层级',
+        editable: true,
+        enum: {
+            labels: [1, 2, 3],
+            values: [1, 2, 3]
+        }
+    },
     // {
     //     name: 'tag',// 设置了 name 属性，如果没有设置 accessType 则默认通过 get/setTag 来获取和设置 tag 值
     //     displayName: '标签',// 用于存取属性名的显示文本值，若为空则显示name属性值
@@ -670,7 +679,7 @@ edge_properties = [
         valueType: 'color',
         defaultValue: 'rgb(0, 0, 0)',
         editable: true
-    }
+    },
 ];
 
 /**

@@ -1,0 +1,169 @@
+{
+  "modified": "Tue Apr 12 2022 17:42:38 GMT+0800 (中国标准时间)",
+  "dataBindings": [
+    {
+      "attr": "node.cate",
+      "valueType": "String",
+      "defaultValue": "m-point"
+    },
+    {
+      "attr": "node.type",
+      "valueType": "String",
+      "defaultValue": "value"
+    },
+    {
+      "attr": "node.name",
+      "valueType": "String",
+      "defaultValue": "gas-value-mate"
+    },
+    {
+      "attr": "node.direction",
+      "valueType": "String",
+      "defaultValue": "up"
+    },
+    {
+      "attr": "node.data",
+      "valueType": "Array",
+      "name": "状态值",
+      "defaultValue": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "width": 32,
+  "height": 32,
+  "comps": [
+    {
+      "type": "shape",
+      "background": {
+        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r='#D8D8D8';if((d[0]&&!d[12])||d[4]){r='#FF0000'} else if(d[8]||d[12]){r='#00FF00'}return r;\n}",
+        "value": null
+      },
+      "borderWidth": 0.1,
+      "borderColor": "rgb(0,0,0)",
+      "anchorY": 1.44143,
+      "rotation": {
+        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'up')res=0;\nif(dir === 'right')res=90;\nif(dir === 'down')res=180;\nif(dir === 'left')res=270;\nreturn res/180*Math.PI;\n}",
+        "value": 0
+      },
+      "closePath": true,
+      "points": [
+        7,
+        12.02714,
+        7,
+        12.02714,
+        7.468,
+        3.02714,
+        16,
+        3.02714,
+        24.532,
+        3.02714,
+        25,
+        12.02714,
+        25,
+        12.02714
+      ],
+      "segments": [
+        1,
+        4,
+        4
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 0.1,
+      "borderColor": "rgb(0,0,0)",
+      "anchorY": 0.36372,
+      "rotation": {
+        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'up')res=0;\nif(dir === 'right')res=90;\nif(dir === 'down')res=180;\nif(dir === 'left')res=270;\nreturn res/180*Math.PI;\n}",
+        "value": 0
+      },
+      "rect": [
+        15.625,
+        12.02714,
+        0.75,
+        10.92286
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": {
+        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r='#D8D8D8';if((d[0]&&!d[12])||d[4]){r='#FF0000'} else if(d[8]||d[12]){r='#00FF00'}return r;\n}",
+        "value": null
+      },
+      "borderWidth": 0.1,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(0,0,0)"
+      },
+      "anchorX": 1.10435,
+      "anchorY": 0,
+      "rotation": {
+        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'up')res=270;\nif(dir === 'right')res=0;\nif(dir === 'down')res=90;\nif(dir === 'left')res=180;\nreturn res/180*Math.PI;\n}",
+        "value": 4.71239
+      },
+      "rect": [
+        3.30003,
+        16,
+        11.5,
+        15
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": {
+        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r='#D8D8D8';if((d[0]&&!d[12])||d[4]){r='#FF0000'} else if(d[8]||d[12]){r='#00FF00'}return r;\n}",
+        "value": null
+      },
+      "borderWidth": 0.1,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(0,0,0)"
+      },
+      "anchorX": -0.10435,
+      "anchorY": 0,
+      "rotation": {
+        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'up')res=90;\nif(dir === 'right')res=180;\nif(dir === 'down')res=270;\nif(dir === 'left')res=0;\nreturn res/180*Math.PI;\n}",
+        "value": 1.5708
+      },
+      "rect": [
+        17.20003,
+        16,
+        11.5,
+        15
+      ]
+    }
+  ]
+}

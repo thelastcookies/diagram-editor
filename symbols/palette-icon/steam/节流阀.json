@@ -1,0 +1,90 @@
+{
+  "modified": "Tue Apr 12 2022 18:30:20 GMT+0800 (中国标准时间)",
+  "dataBindings": [
+    {
+      "attr": "node.line.color",
+      "valueType": "Color",
+      "defaultValue": "#D8D8D8"
+    }
+  ],
+  "width": 32,
+  "height": 32,
+  "comps": [
+    {
+      "type": "triangle",
+      "background": {
+        "func": "attr@node.line.color",
+        "value": "#D8D8D8"
+      },
+      "borderWidth": 0.1,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(0,0,0)"
+      },
+      "anchorX": 1.10435,
+      "anchorY": 0,
+      "rotation": 4.71239,
+      "rect": [
+        3.30003,
+        16,
+        11.5,
+        15
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": {
+        "func": "attr@node.line.color",
+        "value": "#D8D8D8"
+      },
+      "borderWidth": 0.1,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(0,0,0)"
+      },
+      "anchorX": -0.10435,
+      "anchorY": 0,
+      "rotation": 1.5708,
+      "rect": [
+        17.20003,
+        16,
+        11.5,
+        15
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": {
+        "func": "attr@node.line.color",
+        "value": "#D8D8D8"
+      },
+      "borderWidth": 0.1,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(0,0,0)"
+      },
+      "rotation": 3.14159,
+      "rect": [
+        14.75004,
+        7.95003,
+        2.5,
+        15
+      ]
+    },
+    {
+      "type": "rect",
+      "background": {
+        "func": "attr@node.line.color",
+        "value": "#D8D8D8"
+      },
+      "borderWidth": 0.1,
+      "borderColor": "rgb(0,0,0)",
+      "rect": [
+        15.625,
+        2.95003,
+        0.75,
+        5
+      ]
+    }
+  ]
+}

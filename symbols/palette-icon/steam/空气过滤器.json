@@ -1,0 +1,107 @@
+{
+  "modified": "Tue Apr 12 2022 18:28:37 GMT+0800 (中国标准时间)",
+  "dataBindings": [
+    {
+      "attr": "node.line.color",
+      "valueType": "Color",
+      "defaultValue": "#D8D8D8"
+    }
+  ],
+  "width": 32,
+  "height": 48,
+  "comps": [
+    {
+      "type": "rect",
+      "background": {
+        "func": "attr@node.line.color",
+        "value": "#D8D8D8"
+      },
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "rotation": 0.7854,
+      "rect": [
+        5.5,
+        22.65076,
+        21,
+        21
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 0.5,
+      "borderColor": {
+        "func": "attr@node.line.color",
+        "value": "#D8D8D8"
+      },
+      "dash": true,
+      "dashPattern": [
+        2,
+        2
+      ],
+      "pixelPerfect": true,
+      "points": [
+        1.15077,
+        33.15076,
+        30.54371,
+        32.98135
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 0.5,
+      "borderColor": {
+        "func": "attr@node.line.color",
+        "value": "#D8D8D8"
+      },
+      "points": [
+        12.0343,
+        21.7742,
+        12.03429,
+        7.7742
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 0.5,
+      "borderColor": {
+        "func": "attr@node.line.color",
+        "value": "#D8D8D8"
+      },
+      "points": [
+        19.66018,
+        21.7742,
+        19.66017,
+        7.7742
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 0.5,
+      "borderColor": {
+        "func": "attr@node.line.color",
+        "value": "#D8D8D8"
+      },
+      "points": [
+        6,
+        7.7742,
+        6,
+        7.7742,
+        10.82016,
+        3.38914,
+        15.82016,
+        3.36314,
+        20.82016,
+        3.33714,
+        26,
+        7.6702,
+        26,
+        7.6702
+      ],
+      "segments": [
+        1,
+        4,
+        4
+      ]
+    }
+  ]
+}

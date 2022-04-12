@@ -1,0 +1,137 @@
+{
+  "modified": "Tue Apr 12 2022 18:24:27 GMT+0800 (中国标准时间)",
+  "dataBindings": [
+    {
+      "attr": "node.cate",
+      "valueType": "String",
+      "defaultValue": "m-point"
+    },
+    {
+      "attr": "node.type",
+      "valueType": "String",
+      "defaultValue": "value"
+    },
+    {
+      "attr": "node.name",
+      "valueType": "String",
+      "defaultValue": "gas-value-mate"
+    },
+    {
+      "attr": "node.line.color",
+      "valueType": "Color",
+      "defaultValue": "#D8D8D8"
+    },
+    {
+      "attr": "node.data",
+      "valueType": "Array",
+      "name": "状态值",
+      "defaultValue": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "width": 32,
+  "height": 20,
+  "comps": [
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 0.1,
+      "borderColor": "rgb(0,0,0)",
+      "anchorY": 0.36372,
+      "rotation": 0,
+      "rect": [
+        15.62499,
+        2.03855,
+        0.75,
+        10.92286
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": {
+        "func": "attr@node.line.color",
+        "value": "#D8D8D8"
+      },
+      "borderWidth": 0.1,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(0,0,0)"
+      },
+      "anchorX": 1.10435,
+      "anchorY": 0,
+      "rotation": 4.71239,
+      "rect": [
+        3.30002,
+        6.01141,
+        11.5,
+        15
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": {
+        "func": "attr@node.line.color",
+        "value": "#D8D8D8"
+      },
+      "borderWidth": 0.1,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(0,0,0)"
+      },
+      "anchorX": -0.10435,
+      "anchorY": 0,
+      "rotation": 1.5708,
+      "rect": [
+        17.20002,
+        6.01141,
+        11.5,
+        15
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 0.1,
+      "borderColor": "rgb(0,0,0)",
+      "rotation": 1.5708,
+      "rect": [
+        15.62499,
+        -8.33645,
+        0.75,
+        20
+      ]
+    }
+  ]
+}

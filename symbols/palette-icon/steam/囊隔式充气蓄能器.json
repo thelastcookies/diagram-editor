@@ -1,5 +1,5 @@
 {
-  "modified": "Tue Apr 12 2022 18:29:22 GMT+0800 (中国标准时间)",
+  "modified": "Tue Apr 12 2022 18:57:19 GMT+0800 (中国标准时间)",
   "dataBindings": [
     {
       "attr": "node.line.color",
@@ -11,39 +11,44 @@
   "height": 32,
   "comps": [
     {
-      "type": "rect",
+      "type": "roundRect",
       "background": {
         "func": "attr@node.line.color",
         "value": "#D8D8D8"
       },
       "borderWidth": 0.5,
       "borderColor": "rgb(0,0,0)",
-      "rotation": 0.7854,
       "rect": [
-        5.5,
-        5.5,
-        21,
-        21
+        8,
+        1,
+        16,
+        30
       ]
     },
     {
       "type": "shape",
       "borderWidth": 0.5,
-      "borderColor": {
-        "func": "attr@node.line.color",
-        "value": "#D8D8D8"
-      },
-      "dash": true,
-      "dashPattern": [
-        2,
-        2
-      ],
-      "pixelPerfect": true,
+      "borderColor": "rgb(0,0,0)",
       "points": [
-        1.15076,
-        16,
-        30.5437,
-        15.83059
+        8,
+        20.19502,
+        8,
+        20.19502,
+        11.77862,
+        23.3385,
+        15.77862,
+        23.3385,
+        19.77862,
+        23.3385,
+        24,
+        20.19502,
+        24,
+        20.19502
+      ],
+      "segments": [
+        1,
+        4,
+        4
       ]
     }
   ]
