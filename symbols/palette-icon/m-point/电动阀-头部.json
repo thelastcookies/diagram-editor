@@ -1,0 +1,56 @@
+{
+  "modified": "Tue Apr 19 2022 13:54:56 GMT+0800 (中国标准时间)",
+  "width": 16,
+  "height": 23,
+  "comps": [
+    {
+      "type": "oval",
+      "background": "#D8D8D8",
+      "borderWidth": 0.1,
+      "borderColor": "rgb(0,0,0)",
+      "rotation": {
+        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'up')res=0;\nif(dir === 'right')res=90;\nif(dir === 'down')res=180;\nif(dir === 'left')res=270;\nreturn res/180*Math.PI;\n}",
+        "value": 0
+      },
+      "rect": [
+        0,
+        0,
+        16,
+        16
+      ]
+    },
+    {
+      "type": "text",
+      "text": "M",
+      "align": "center",
+      "color": "rgb(255,255,255)",
+      "anchorY": 1,
+      "rotation": {
+        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'up')res=0;\nif(dir === 'right')res=90;\nif(dir === 'down')res=180;\nif(dir === 'left')res=270;\nreturn res/180*Math.PI;\n}",
+        "value": 0.00873
+      },
+      "rect": [
+        0,
+        0,
+        16,
+        16
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 0.1,
+      "borderColor": "rgb(0,0,0)",
+      "rotation": {
+        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'up')res=0;\nif(dir === 'right')res=90;\nif(dir === 'down')res=180;\nif(dir === 'left')res=270;\nreturn res/180*Math.PI;\n}",
+        "value": 0
+      },
+      "rect": [
+        7.625,
+        16,
+        0.75,
+        6.95
+      ]
+    }
+  ]
+}

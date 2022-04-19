@@ -39,7 +39,7 @@
     {
       "attr": "node.value",
       "valueType": "Number",
-      "defaultValue": -9999
+      "defaultValue": 5
     }
   ],
   "width": 30,
