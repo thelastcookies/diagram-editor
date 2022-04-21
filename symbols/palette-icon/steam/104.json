@@ -1,0 +1,19 @@
+{
+  "modified": "Thu Apr 21 2022 16:03:56 GMT+0800 (中国标准时间)",
+  "width": 30,
+  "height": 14,
+  "comps": [
+    {
+      "type": "roundRect",
+      "background": "rgb(0,0,0)",
+      "borderWidth": 1,
+      "borderColor": "rgb(0,0,0)",
+      "rect": [
+        0,
+        0,
+        30,
+        14
+      ]
+    }
+  ]
+}

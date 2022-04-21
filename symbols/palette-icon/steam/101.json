@@ -1,0 +1,162 @@
+{
+  "modified": "Thu Apr 21 2022 15:55:25 GMT+0800 (中国标准时间)",
+  "width": 15,
+  "height": 31,
+  "comps": [
+    {
+      "type": "rect",
+      "borderWidth": 1,
+      "borderColor": "#D8D8D8",
+      "rect": [
+        0.5,
+        0.5,
+        14,
+        30
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderColor": "#D8D8D8",
+      "rotation": 1.309,
+      "rect": [
+        6.4826,
+        -3.55772,
+        1.90729,
+        14.5
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderColor": "#D8D8D8",
+      "rotation": 1.309,
+      "rect": [
+        6.4826,
+        0.97136,
+        1.90729,
+        14.5
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderColor": "#D8D8D8",
+      "rotation": 1.309,
+      "rect": [
+        6.4826,
+        5.52864,
+        1.90729,
+        14.5
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderColor": "#D8D8D8",
+      "rotation": 1.309,
+      "rect": [
+        6.28139,
+        10.25,
+        1.90729,
+        14.5
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderColor": "#D8D8D8",
+      "rotation": 1.309,
+      "rect": [
+        6.28139,
+        14.97136,
+        1.90729,
+        14.5
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderColor": "#D8D8D8",
+      "rotation": 1.309,
+      "rect": [
+        6.28139,
+        19.52864,
+        1.90729,
+        14.5
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderColor": "#D8D8D8",
+      "rotation": 1.8326,
+      "rect": [
+        6.58321,
+        -3.55774,
+        1.90729,
+        14.5
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderColor": "#D8D8D8",
+      "rotation": 1.8326,
+      "rect": [
+        6.58321,
+        0.97134,
+        1.90729,
+        14.5
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderColor": "#D8D8D8",
+      "rotation": 1.8326,
+      "rect": [
+        6.58321,
+        5.52862,
+        1.90729,
+        14.5
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderColor": "#D8D8D8",
+      "rotation": 1.8326,
+      "rect": [
+        6.38199,
+        10.24998,
+        1.90729,
+        14.5
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderColor": "#D8D8D8",
+      "rotation": 1.8326,
+      "rect": [
+        6.38199,
+        14.97134,
+        1.90729,
+        14.5
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderColor": "#D8D8D8",
+      "rotation": 1.8326,
+      "rect": [
+        6.38199,
+        19.52862,
+        1.90729,
+        14.5
+      ]
+    }
+  ]
+}

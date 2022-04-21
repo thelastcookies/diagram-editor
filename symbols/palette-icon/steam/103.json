@@ -1,0 +1,41 @@
+{
+  "modified": "Thu Apr 21 2022 16:02:39 GMT+0800 (中国标准时间)",
+  "width": 15,
+  "height": 18,
+  "comps": [
+    {
+      "type": "rect",
+      "background": "rgb(217,217,217)",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(151,151,151)",
+      "rect": [
+        0,
+        0,
+        15,
+        18
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(151,151,151)",
+      "points": [
+        0,
+        5.10608,
+        15,
+        5.10608
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(151,151,151)",
+      "points": [
+        0,
+        12.89392,
+        15,
+        12.89392
+      ]
+    }
+  ]
+}
