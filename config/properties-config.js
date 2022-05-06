@@ -1068,8 +1068,8 @@ panel_line_chart_properties = [
         }
     },
 ];
-// 断路器的配置项
-cb_properties = [
+// 断路器的配置项（含手车）
+cb_equip_properties = [
     {
         name: 'node.tag.cb',
         displayName: '断路器测点',
@@ -1080,6 +1080,51 @@ cb_properties = [
     {
         name: 'node.tag.sw',
         displayName: '手车测点',
+        accessType: 'attr',
+        valueType: 'text',
+        editable: true
+    },
+    {
+        name: 'node.oper.close',
+        displayName: '合闸控制测点',
+        accessType: 'attr',
+        valueType: 'text',
+        editable: true
+    },
+    {
+        name: 'node.oper.open',
+        displayName: '开闸控制测点',
+        accessType: 'attr',
+        valueType: 'text',
+        editable: true
+    },
+    {
+        name: 'node.showName',
+        displayName: '名称',
+        accessType: 'attr',
+        valueType: 'text',
+        editable: true
+    },
+];
+// 断路器的配置项
+cb_properties = [
+    {
+        name: 'node.tag.cb',
+        displayName: '断路器测点',
+        accessType: 'attr',
+        valueType: 'text',
+        editable: true
+    },
+    {
+        name: 'node.oper.close',
+        displayName: '合闸控制测点',
+        accessType: 'attr',
+        valueType: 'text',
+        editable: true
+    },
+    {
+        name: 'node.oper.open',
+        displayName: '开闸控制测点',
         accessType: 'attr',
         valueType: 'text',
         editable: true

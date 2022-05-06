@@ -9,7 +9,7 @@
     {
       "attr": "node.type",
       "valueType": "String",
-      "defaultValue": "switch"
+      "defaultValue": "cb"
     },
     {
       "attr": "node.name",
@@ -21,6 +21,16 @@
       "valueType": "Boolean",
       "defaultValue": true,
       "name": "断路器状态"
+    },
+    {
+      "attr": "node.oper.close",
+      "valueType": "String",
+      "name": "合闸控制测点"
+    },
+    {
+      "attr": "node.oper.open",
+      "valueType": "String",
+      "name": "开闸控制测点"
     }
   ],
   "width": 30,
