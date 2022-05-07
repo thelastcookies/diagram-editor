@@ -14,7 +14,7 @@
     {
       "attr": "node.name",
       "valueType": "String",
-      "defaultValue": "switch"
+      "defaultValue": "sw"
     },
     {
       "attr": "node.color",

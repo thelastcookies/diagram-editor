@@ -806,20 +806,6 @@ text_font_properties = [
 //测点图元的配置项
 m_point_properties = [
     {
-        name: 'node.tag',
-        displayName: '测点',
-        accessType: 'attr',
-        valueType: 'text',
-        editable: true
-    },
-    {
-        name: 'node.formula',
-        displayName: '公式',
-        accessType: 'attr',
-        valueType: 'text',
-        editable: true
-    },
-    {
         name: 'node.showName',
         displayName: '名称',
         accessType: 'attr',
@@ -829,6 +815,20 @@ m_point_properties = [
     {
         name: 'node.sn',
         displayName: '序列号',
+        accessType: 'attr',
+        valueType: 'text',
+        editable: true
+    },
+    {
+        name: 'node.tag',
+        displayName: '测点',
+        accessType: 'attr',
+        valueType: 'text',
+        editable: true
+    },
+    {
+        name: 'node.formula',
+        displayName: '公式',
         accessType: 'attr',
         valueType: 'text',
         editable: true
@@ -1137,3 +1137,26 @@ cb_properties = [
         editable: true
     },
 ];
+sw_properties = [
+    {
+        name: 'node.oper.close',
+        displayName: '合闸控制测点',
+        accessType: 'attr',
+        valueType: 'text',
+        editable: true
+    },
+    {
+        name: 'node.oper.open',
+        displayName: '开闸控制测点',
+        accessType: 'attr',
+        valueType: 'text',
+        editable: true
+    },
+    {
+        name: 'node.showName',
+        displayName: '名称',
+        accessType: 'attr',
+        valueType: 'text',
+        editable: true
+    },
+]

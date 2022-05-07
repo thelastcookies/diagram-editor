@@ -383,11 +383,14 @@
                         propertyView.addProperties(m_point_properties);
                         // propertyView.addProperties(threshold_properties);
                     }
-                    if (data.a('node.type') === 'cb') {
+                    if (data.a('node.name') === 'cb') {
                         propertyView.addProperties(cb_properties);
                     }
-                    if (data.a('node.type') === 'cb-equip') {
+                    if (data.a('node.name') === 'cb-equip') {
                         propertyView.addProperties(cb_equip_properties);
+                    }
+                    if (data.a('node.name') === 'sw') {
+                        propertyView.addProperties(sw_properties);
                     }
                     if (data.a('node.name') === 'bar') {
                     }
