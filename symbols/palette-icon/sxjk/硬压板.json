@@ -9,7 +9,7 @@
     {
       "attr": "node.type",
       "valueType": "String",
-      "defaultValue": "switch-yyb"
+      "defaultValue": "switch"
     },
     {
       "attr": "node.name",
@@ -19,7 +19,7 @@
     {
       "attr": "node.state",
       "valueType": "Boolean",
-      "defaultValue": true,
+      "defaultValue": false,
       "name": "信号状态"
     }
   ],
@@ -42,14 +42,20 @@
     },
     {
       "type": "rect",
-      "background": "rgb(0,78,0)",
+      "background": {
+        "func": "__ht__function(data, view){\nlet state=data.a('node.state'),res=0;\nif(state === true)res='rgb(177,0,0)';\nif(state === false)res='rgb(0,78,0)';\nreturn res;\n}",
+        "value": "rgb(0,78,0)"
+      },
       "borderWidth": 1,
       "borderColor": "rgb(0,51,82)",
-      "rotation": 5.58505,
+      "rotation": {
+        "func": "__ht__function(data, view){\nlet state=data.a('node.state'),res=0;\nif(state === true)res=0;\nif(state === false)res=40;\nreturn res/180*Math.PI;\n}",
+        "value": 5.58505
+      },
       "rect": [
-        13,
+        16,
         3,
-        12,
+        6,
         44
       ]
     },

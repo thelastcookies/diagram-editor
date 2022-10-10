@@ -2,9 +2,14 @@
   "modified": "Wed Dec 02 2020 15:20:28 GMT+0800 (CST)",
   "dataBindings": [
     {
-      "attr": "node.type",
+      "attr": "node.cate",
       "valueType": "String",
       "defaultValue": "m-point"
+    },
+    {
+      "attr": "node.type",
+      "valueType": "String",
+      "defaultValue": "switch"
     },
     {
       "attr": "node.name",
@@ -15,6 +20,12 @@
       "attr": "node.line.color",
       "valueType": "Color",
       "defaultValue": "rgb(255,0,0)"
+    },
+    {
+      "attr": "node.state",
+      "valueType": "Boolean",
+      "defaultValue": false,
+      "name": "信号状态"
     }
   ],
   "width": 30,
@@ -23,7 +34,7 @@
     {
       "type": "oval",
       "background": {
-        "func": "attr@node.line.color",
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? data.a('node.line.color') : 'rgb(0,255,0)';\n}",
         "value": "rgb(255,0,0)"
       },
       "rect": [

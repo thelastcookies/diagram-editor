@@ -9,7 +9,7 @@
     {
       "attr": "node.type",
       "valueType": "String",
-      "defaultValue": "switch-yyb"
+      "defaultValue": "switch"
     },
     {
       "attr": "node.name",
@@ -19,7 +19,7 @@
     {
       "attr": "node.state",
       "valueType": "Boolean",
-      "defaultValue": true,
+      "defaultValue": false,
       "name": "信号状态"
     }
   ],
@@ -28,7 +28,10 @@
   "comps": [
     {
       "type": "rect",
-      "background": "rgb(0,255,0)",
+      "background": {
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : 'rgb(0,255,0)';\n}",
+        "value": "rgb(255,0,0)"
+      },
       "borderColor": "#979797",
       "rect": [
         9,
@@ -39,7 +42,10 @@
     },
     {
       "type": "rect",
-      "background": "rgb(0,255,0)",
+      "background": {
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : 'rgb(0,255,0)';\n}",
+        "value": "rgb(255,0,0)"
+      },
       "borderColor": "#979797",
       "rect": [
         0,
@@ -50,7 +56,10 @@
     },
     {
       "type": "rect",
-      "background": "rgb(0,255,0)",
+      "background": {
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : 'rgb(0,255,0)';\n}",
+        "value": "rgb(255,0,0)"
+      },
       "borderColor": "#979797",
       "rect": [
         0,
@@ -61,7 +70,10 @@
     },
     {
       "type": "rect",
-      "background": "rgb(0,255,0)",
+      "background": {
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : 'rgb(0,255,0)';\n}",
+        "value": "rgb(255,0,0)"
+      },
       "borderColor": "#979797",
       "rect": [
         30.02217,
@@ -72,7 +84,10 @@
     },
     {
       "type": "rect",
-      "background": "rgb(0,255,0)",
+      "background": {
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : 'rgb(0,255,0)';\n}",
+        "value": "rgb(255,0,0)"
+      },
       "borderColor": "#979797",
       "rect": [
         6.00443,
@@ -83,7 +98,10 @@
     },
     {
       "type": "rect",
-      "background": "rgb(0,255,0)",
+      "background": {
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : 'rgb(0,255,0)';\n}",
+        "value": "rgb(255,0,0)"
+      },
       "borderColor": "#979797",
       "rect": [
         12.00887,
@@ -94,7 +112,10 @@
     },
     {
       "type": "rect",
-      "background": "rgb(0,255,0)",
+      "background": {
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : 'rgb(0,255,0)';\n}",
+        "value": "rgb(255,0,0)"
+      },
       "borderColor": "#979797",
       "rect": [
         18.0133,
@@ -105,7 +126,10 @@
     },
     {
       "type": "rect",
-      "background": "rgb(0,255,0)",
+      "background": {
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : 'rgb(0,255,0)';\n}",
+        "value": "rgb(255,0,0)"
+      },
       "borderColor": "#979797",
       "rect": [
         24.01774,
@@ -116,7 +140,10 @@
     },
     {
       "type": "rect",
-      "background": "rgb(0,255,0)",
+      "background": {
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : 'rgb(0,255,0)';\n}",
+        "value": "rgb(255,0,0)"
+      },
       "borderColor": "#979797",
       "rect": [
         36.02661,

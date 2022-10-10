@@ -9,7 +9,7 @@
     {
       "attr": "node.type",
       "valueType": "String",
-      "defaultValue": "switch-ro"
+      "defaultValue": "switch"
     },
     {
       "attr": "node.name",
@@ -19,7 +19,7 @@
     {
       "attr": "node.state",
       "valueType": "Boolean",
-      "defaultValue": true,
+      "defaultValue": false,
       "name": "信号状态"
     }
   ],
@@ -59,7 +59,10 @@
       "borderWidth": 1,
       "borderColor": "rgb(0,78,0)",
       "anchorY": 3.38476,
-      "rotation": 0,
+      "rotation": {
+        "func": "__ht__function(data, view){\nlet state=data.a('node.state'),res=0;\nif(state === true)res=0;\nif(state === false)res=90;\nreturn res/180*Math.PI;\n}",
+        "value": 0
+      },
       "rect": [
         19.9495,
         4.0404,
@@ -73,7 +76,10 @@
       "borderWidth": 1,
       "borderColor": "rgb(0,78,0)",
       "pixelPerfect": true,
-      "rotation": 0,
+      "rotation": {
+        "func": "__ht__function(data, view){\nlet state=data.a('node.state'),res=0;\nif(state === true)res=0;\nif(state === false)res=90;\nreturn res/180*Math.PI;\n}",
+        "value": 0
+      },
       "closePath": true,
       "points": [
         20.03676,

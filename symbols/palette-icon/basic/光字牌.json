@@ -19,7 +19,7 @@
     {
       "attr": "node.state",
       "valueType": "Boolean",
-      "defaultValue": true,
+      "defaultValue": false,
       "name": "光字牌状态"
     }
   ],
@@ -29,7 +29,7 @@
     {
       "type": "rect",
       "background": {
-        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(0,255,0)' : 'rgb(255,0,0)';\n}",
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : 'rgb(0,255,0)';\n}",
         "value": "rgb(0,255,0)"
       },
       "rect": [

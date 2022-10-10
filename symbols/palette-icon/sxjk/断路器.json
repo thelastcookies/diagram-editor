@@ -9,17 +9,17 @@
     {
       "attr": "node.type",
       "valueType": "String",
-      "defaultValue": "cb"
+      "defaultValue": "switch"
     },
     {
       "attr": "node.name",
       "valueType": "String",
-      "defaultValue": "cb"
+      "defaultValue": "switch-cb"
     },
     {
       "attr": "node.state",
       "valueType": "Boolean",
-      "defaultValue": true,
+      "defaultValue": false,
       "name": "断路器状态"
     }
   ],

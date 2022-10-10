@@ -827,6 +827,13 @@ m_point_properties = [
         editable: true
     },
     {
+        name: 'node.rate',
+        displayName: '测点计算倍率',
+        accessType: 'attr',
+        valueType: 'text',
+        editable: true
+    },
+    {
         name: 'node.formula',
         displayName: '公式',
         accessType: 'attr',

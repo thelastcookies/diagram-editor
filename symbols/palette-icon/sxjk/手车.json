@@ -14,18 +14,13 @@
     {
       "attr": "node.name",
       "valueType": "String",
-      "defaultValue": "switch"
+      "defaultValue": "switch-sc"
     },
     {
       "attr": "node.state",
       "valueType": "Boolean",
-      "defaultValue": true,
+      "defaultValue": false,
       "name": "手车状态"
-    },
-    {
-      "attr": "node.line.color",
-      "valueType": "Color",
-      "defaultValue": "rgb(255, 0, 0)"
     }
   ],
   "width": 40,
@@ -34,10 +29,7 @@
     {
       "type": "shape",
       "borderWidth": 2,
-      "borderColor": {
-        "func": "attr@line.color",
-        "value": "#D8D8D8"
-      },
+      "borderColor": "rgb(0,255,0)",
       "visible": {
         "func": "__ht__function(data, view) {\n return !data.a('node.state') \n}",
         "value": true
@@ -56,7 +48,7 @@
       "type": "shape",
       "borderWidth": 2,
       "borderColor": {
-        "func": "__ht__function(data, view) {\n return data.a('node.switch') ? 'rgb(255,0,0)' : data.a('line.color');\n}",
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : 'rgb(0,255,0)';\n}",
         "value": "rgb(255,0,0)"
       },
       "displayName": "箭头",
@@ -73,7 +65,7 @@
       "type": "shape",
       "borderWidth": 2,
       "borderColor": {
-        "func": "__ht__function(data, view) {\n return data.a('node.switch') ? 'rgb(255,0,0)' : data.a('line.color');\n}",
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : 'rgb(0,255,0)';\n}",
         "value": "rgb(255,0,0)"
       },
       "rotation": -3.14159,
@@ -88,7 +80,7 @@
       "type": "shape",
       "borderWidth": 2,
       "borderColor": {
-        "func": "__ht__function(data, view) {\n return data.a('node.switch') ? 'rgb(255,0,0)' : data.a('line.color');\n}",
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : 'rgb(0,255,0)';\n}",
         "value": "rgb(255,0,0)"
       },
       "rotation": -3.14159,

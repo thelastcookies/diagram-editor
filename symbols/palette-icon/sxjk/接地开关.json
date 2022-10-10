@@ -24,7 +24,7 @@
     {
       "attr": "node.state",
       "valueType": "Boolean",
-      "defaultValue": true,
+      "defaultValue": false,
       "name": "开关状态"
     }
   ],
