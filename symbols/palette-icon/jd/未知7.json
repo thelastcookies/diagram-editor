@@ -1,0 +1,310 @@
+{
+  "modified": "Thu Dec 08 2022 16:26:56 GMT+0800 (中国标准时间)",
+  "dataBindings": [
+    {
+      "attr": "node.type",
+      "valueType": "String",
+      "defaultValue": "m-point"
+    },
+    {
+      "attr": "node.name",
+      "valueType": "String",
+      "defaultValue": "signal"
+    },
+    {
+      "attr": "node.state",
+      "valueType": "Boolean",
+      "defaultValue": true,
+      "name": "状态值"
+    },
+    {
+      "attr": "node.direction",
+      "valueType": "String",
+      "defaultValue": "left"
+    }
+  ],
+  "width": 36,
+  "height": 34,
+  "comps": [
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "#979797",
+      "anchorX": 1.45,
+      "rotation": {
+        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'right')res=180;\nif(dir === 'left')res=0;\nreturn res/180*Math.PI;\n}",
+        "value": 0
+      },
+      "rect": [
+        0,
+        0,
+        19,
+        10
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 0.5,
+      "borderColor": "#979797",
+      "anchorX": 5,
+      "rotation": {
+        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'right')res=180;\nif(dir === 'left')res=0;\nreturn res/180*Math.PI;\n}",
+        "value": 0
+      },
+      "points": [
+        11,
+        0,
+        7,
+        10
+      ]
+    },
+    {
+      "type": "rect",
+      "background": {
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(0,255,0)' : 'rgb(255,0,0)';\n}",
+        "value": "rgb(255,0,0)"
+      },
+      "borderWidth": 0.5,
+      "borderColor": "#979797",
+      "rotation": 1.5708,
+      "rect": [
+        10.54568,
+        8.43463,
+        33.86919,
+        17
+      ]
+    },
+    {
+      "type": "shape",
+      "background": "rgb(143,143,143)",
+      "borderWidth": 1,
+      "borderColor": "rgb(138,129,129)",
+      "rotation": 1.5708,
+      "points": [
+        27.48028,
+        5.28939,
+        27.48028,
+        22.07063,
+        27.48028,
+        22.07063,
+        27.48028,
+        22.07063
+      ],
+      "segments": [
+        1,
+        4
+      ]
+    },
+    {
+      "type": "oval",
+      "background": {
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(0,255,0)' : 'rgb(255,0,0)';\n}",
+        "value": "rgb(255,0,0)"
+      },
+      "borderWidth": 1,
+      "borderColor": "#979797",
+      "anchorX": -1,
+      "rotation": {
+        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'right')res=180;\nif(dir === 'left')res=0;\nreturn res/180*Math.PI;\n}",
+        "value": 0
+      },
+      "rect": [
+        30.39756,
+        4.1316,
+        3,
+        2
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 1,
+      "borderColor": "#979797",
+      "clipDirection": "right",
+      "anchorX": -3,
+      "rotation": {
+        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'right')res=180;\nif(dir === 'left')res=0;\nreturn res/180*Math.PI;\n}",
+        "value": 0
+      },
+      "points": [
+        33.70528,
+        5,
+        35.80457,
+        4.94169
+      ]
+    },
+    {
+      "type": "shape",
+      "background": {
+        "func": "attr@arrow.color",
+        "value": "rgb(143,143,143)"
+      },
+      "borderColor": "rgb(138,129,129)",
+      "points": [
+        31.78126,
+        8.47717,
+        31.78126,
+        12.00751,
+        36,
+        10.24234,
+        31.78126,
+        8.47717
+      ]
+    },
+    {
+      "type": "shape",
+      "background": "rgb(143,143,143)",
+      "borderWidth": 1,
+      "borderColor": "rgb(138,129,129)",
+      "rotation": 1.5708,
+      "points": [
+        27.48724,
+        5.94831,
+        27.48724,
+        14.53634,
+        27.48724,
+        14.53634,
+        27.48724,
+        14.53634
+      ],
+      "segments": [
+        1,
+        4
+      ]
+    },
+    {
+      "type": "shape",
+      "background": {
+        "func": "attr@arrow.color",
+        "value": "rgb(143,143,143)"
+      },
+      "borderColor": "rgb(138,129,129)",
+      "anchorX": {
+        "func": "__ht__function(data, view){\n return data.a('node.direction') === 'right'? -2.7 : 0.5;\n}",
+        "value": 0
+      },
+      "anchorY": {
+        "func": "__ht__function(data, view){\n return data.a('node.direction') === 'right'? 1 : 0.5;\n}",
+        "value": 0
+      },
+      "rotation": {
+        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'right')res=220;\nif(dir === 'left')res=-44;\nreturn res/180*Math.PI;\n}",
+        "value": 0
+      },
+      "points": [
+        33.80026,
+        14.2746,
+        33.80026,
+        19.7254,
+        36.14051,
+        17,
+        33.80026,
+        14.2746
+      ]
+    },
+    {
+      "type": "shape",
+      "background": "rgb(143,143,143)",
+      "borderWidth": 1,
+      "borderColor": "rgb(138,129,129)",
+      "rotation": {
+        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'right')res=-44;\nif(dir === 'left')res=44;\nreturn res/180*Math.PI;\n}",
+        "value": 0
+      },
+      "points": [
+        27.48724,
+        35.14486,
+        27.48724,
+        24.69274,
+        27.48724,
+        15.14486
+      ]
+    },
+    {
+      "type": "oval",
+      "background": {
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(0,255,0)' : 'rgb(255,0,0)';\n}",
+        "value": "rgb(255,0,0)"
+      },
+      "borderWidth": 1,
+      "borderColor": "#979797",
+      "anchorX": -1,
+      "rotation": {
+        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'right')res=180;\nif(dir === 'left')res=0;\nreturn res/180*Math.PI;\n}",
+        "value": 0
+      },
+      "rect": [
+        30.39756,
+        29.37441,
+        3,
+        2
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 1,
+      "borderColor": "#979797",
+      "clipDirection": "right",
+      "anchorX": -3,
+      "rotation": {
+        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'right')res=180;\nif(dir === 'left')res=0;\nreturn res/180*Math.PI;\n}",
+        "value": 0
+      },
+      "points": [
+        33.70528,
+        30.32309,
+        35.80457,
+        30.26478
+      ]
+    },
+    {
+      "type": "shape",
+      "background": {
+        "func": "attr@arrow.color",
+        "value": "rgb(143,143,143)"
+      },
+      "borderColor": "rgb(138,129,129)",
+      "rotation": 3.14159,
+      "points": [
+        19.08966,
+        8.47718,
+        19.08966,
+        12.00752,
+        23.3084,
+        10.24235,
+        19.08966,
+        8.47718
+      ]
+    },
+    {
+      "type": "shape",
+      "background": {
+        "func": "attr@arrow.color",
+        "value": "rgb(143,143,143)"
+      },
+      "borderColor": "rgb(138,129,129)",
+      "anchorX": {
+        "func": "__ht__function(data, view){\n return data.a('node.direction') === 'right'? 3.8 : 0.5;\n}",
+        "value": 0
+      },
+      "anchorY": {
+        "func": "__ht__function(data, view){\n return data.a('node.direction') === 'right'? 3.9 : 0.5;\n}",
+        "value": 0
+      },
+      "rotation": {
+        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'right')res=44;\nif(dir === 'left')res=-227;\nreturn res/180*Math.PI;\n}",
+        "value": 0
+      },
+      "points": [
+        18.6918,
+        30.5064,
+        18.6918,
+        35.9572,
+        21.03205,
+        33.2318,
+        18.6918,
+        30.5064
+      ]
+    }
+  ]
+}

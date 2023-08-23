@@ -1,0 +1,110 @@
+{
+  "modified": "Fri Jun 09 2023 09:39:56 GMT+0800 (中国标准时间)",
+  "dataBindings": [
+    {
+      "attr": "node.cate",
+      "valueType": "String",
+      "defaultValue": "m-point"
+    },
+    {
+      "attr": "node.type",
+      "valueType": "String",
+      "defaultValue": "text_DIY_choose"
+    },
+    {
+      "attr": "node.name",
+      "valueType": "String",
+      "defaultValue": "switch"
+    },
+    {
+      "attr": "node.state",
+      "valueType": "Number",
+      "defaultValue": -1,
+      "name": "字牌状态"
+    },
+    {
+      "attr": "signal.color",
+      "valueType": "Color",
+      "defaultValue": "rgb(0,0,0)"
+    },
+    {
+      "attr": "node.signal",
+      "valueType": "Number",
+      "defaultValue": 0
+    },
+    {
+      "attr": "node.signal.text",
+      "valueType": "Text",
+      "defaultValue": "Text"
+    },
+    {
+      "attr": "node.signal1",
+      "valueType": "Number",
+      "defaultValue": 1
+    },
+    {
+      "attr": "node.signal.text1",
+      "valueType": "Text",
+      "defaultValue": "Text"
+    },
+    {
+      "attr": "node.signal2",
+      "valueType": "Number",
+      "defaultValue": 2
+    },
+    {
+      "attr": "node.signal.text2",
+      "valueType": "Text",
+      "defaultValue": "Text"
+    },
+    {
+      "attr": "node.signal3",
+      "valueType": "Number",
+      "defaultValue": 3
+    },
+    {
+      "attr": "node.signal.text3",
+      "valueType": "Text",
+      "defaultValue": "Text"
+    },
+    {
+      "attr": "signal.font",
+      "valueType": "string",
+      "defaultValue": "14px arial, sans-serif"
+    },
+    {
+      "attr": "signal.align",
+      "valueType": "string",
+      "defaultValue": "center"
+    }
+  ],
+  "width": 80,
+  "height": 20,
+  "comps": [
+    {
+      "type": "text",
+      "text": {
+        "func": "__ht__function(data, view) {\n let d=data.a('node.state'),k=data.a('node.signal'),k1=data.a('node.signal1'),k2=data.a('node.signal2'),k3=data.a('node.signal3'),text=data.a('node.signal.text'),text1=data.a('node.signal.text1'),text2=data.a('node.signal.text2'),text3=data.a('node.signal.text3'),r='TEXT';\n if(d==k) r= text;\n if(d==k1) r=text1;\nif(d==k2) r=text2;\nif(d==k3) r=text3;\n return r\n}",
+        "value": "文本"
+      },
+      "color": {
+        "func": "__ht__function(data, view) {\n let d=data.a('node.state'),r='#000000';\n if(d) r= data.a('signal.color')\n return r;\n}",
+        "value": "#000000"
+      },
+      "font": {
+        "func": "__ht__function(data, view) {\n return data.a('signal.font');\n}",
+        "value": "14px arial, sans-serif"
+      },
+      "align": {
+        "func": "__ht__function(data, view) {\n return data.a('signal.align');\n}",
+        "value": "center"
+      },
+      "rect": [
+        0,
+        2,
+        91,
+        18
+      ]
+    }
+  ]
+}

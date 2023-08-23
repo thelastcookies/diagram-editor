@@ -1,0 +1,105 @@
+{
+  "modified": "Wed Jun 07 2023 17:40:47 GMT+0800 (中国标准时间)",
+  "dataBindings": [
+    {
+      "attr": "node.cate",
+      "valueType": "String",
+      "defaultValue": "m-point"
+    },
+    {
+      "attr": "node.type",
+      "valueType": "String",
+      "defaultValue": "switch"
+    },
+    {
+      "attr": "node.name",
+      "valueType": "String",
+      "defaultValue": "switch"
+    },
+    {
+      "attr": "node.state",
+      "valueType": "Boolean",
+      "defaultValue": false,
+      "name": "电磁阀状态"
+    }
+  ],
+  "width": 32,
+  "height": 18,
+  "comps": [
+    {
+      "type": "rect",
+      "background": {
+        "func": "__ht__function(data, view) {\nreturn data.a('node.state') ? 'rgb(255,0,0)' : 'rgb(0,255,0)';\n}",
+        "value": "rgb(0,255,0)"
+      },
+      "borderWidth": 0.1,
+      "borderColor": "rgb(0,0,0)",
+      "anchorY": 0,
+      "rect": [
+        15.62504,
+        3.29996,
+        0.75,
+        6.95
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": {
+        "func": "__ht__function(data, view) {\nreturn data.a('node.state') ? 'rgb(255,0,0)' : 'rgb(0,255,0)';\n}",
+        "value": "rgb(0,255,0)"
+      },
+      "borderWidth": 0.1,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(0,0,0)"
+      },
+      "anchorX": 1.10435,
+      "anchorY": 0,
+      "rotation": 4.71239,
+      "rect": [
+        3.30007,
+        3.29996,
+        11.5,
+        15
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": {
+        "func": "__ht__function(data, view) {\nreturn data.a('node.state') ? 'rgb(255,0,0)' : 'rgb(0,255,0)';\n}",
+        "value": "rgb(0,255,0)"
+      },
+      "borderWidth": 0.1,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(0,0,0)"
+      },
+      "anchorX": -0.10435,
+      "anchorY": 0,
+      "rotation": 1.5708,
+      "rect": [
+        17.20007,
+        3.29996,
+        11.5,
+        15
+      ]
+    },
+    {
+      "type": "rect",
+      "background": {
+        "func": "__ht__function(data, view) {\nreturn data.a('node.state') ? 'rgb(255,0,0)' : 'rgb(0,255,0)';\n}",
+        "value": "rgb(0,255,0)"
+      },
+      "borderWidth": 0.1,
+      "borderColor": "rgb(0,0,0)",
+      "anchorY": 0,
+      "rotation": 1.5708,
+      "rect": [
+        22.00004,
+        2.29996,
+        2,
+        14
+      ]
+    }
+  ]
+}

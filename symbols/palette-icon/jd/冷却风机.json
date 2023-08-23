@@ -1,0 +1,105 @@
+{
+  "modified": "Thu Dec 08 2022 14:36:19 GMT+0800 (中国标准时间)",
+  "dataBindings": [
+    {
+      "attr": "node.cate",
+      "valueType": "String",
+      "defaultValue": "m-point"
+    },
+    {
+      "attr": "node.type",
+      "valueType": "String",
+      "defaultValue": "switch"
+    },
+    {
+      "attr": "node.name",
+      "valueType": "String",
+      "defaultValue": "switch"
+    },
+    {
+      "attr": "node.state",
+      "valueType": "Boolean",
+      "defaultValue": false,
+      "name": "冷却风机状态"
+    },
+    {
+      "attr": "node.direction",
+      "valueType": "String",
+      "defaultValue": "left"
+    }
+  ],
+  "width": 13,
+  "height": 10,
+  "comps": [
+    {
+      "type": "rect",
+      "background": {
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : 'rgb(0,255,0)';\n}",
+        "value": "rgb(0,255,0)"
+      },
+      "borderWidth": 1,
+      "borderColor": "#979797",
+      "anchorX": 0.9,
+      "rotation": {
+        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'right')res=180;\nif(dir === 'left')res=0;\nreturn res/180*Math.PI;\n}",
+        "value": 0
+      },
+      "rect": [
+        0,
+        0,
+        8.837,
+        3.4832
+      ]
+    },
+    {
+      "type": "oval",
+      "background": {
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : 'rgb(0,255,0)';\n}",
+        "value": "rgb(0,255,0)"
+      },
+      "borderWidth": 1,
+      "borderColor": "#979797",
+      "rect": [
+        2.64465,
+        0,
+        10,
+        10
+      ]
+    },
+    {
+      "type": "oval",
+      "background": {
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : 'rgb(0,255,0)';\n}",
+        "value": "rgb(0,255,0)"
+      },
+      "borderWidth": 1,
+      "borderColor": "#979797",
+      "rect": [
+        4.14465,
+        1.5,
+        7,
+        7
+      ]
+    },
+    {
+      "type": "trapezoid",
+      "background": {
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : 'rgb(0,255,0)';\n}",
+        "value": "rgb(0,255,0)"
+      },
+      "borderWidth": 1,
+      "borderColor": "#979797",
+      "anchorX": 0.53,
+      "rotation": {
+        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'right')res=90;\nif(dir === 'left')res=-90;\nreturn res/180*Math.PI;\n}",
+        "value": 0
+      },
+      "rect": [
+        5.3709,
+        3.59646,
+        3.96649,
+        2.83671
+      ]
+    }
+  ]
+}

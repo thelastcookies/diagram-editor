@@ -378,13 +378,16 @@
                 if (data instanceof ht.Node) {// node 类型
                     if (
                         (data.a('node.cate') === 'm-point' || data.a('node.type') === 'm-point')
-                        && data.a('node.type') !== 'cb'
+                        && data.a('node.type') !== 'cb'&& data.a('node.type') !== 'ddf'
                     ) {
                         propertyView.addProperties(m_point_properties);
                         // propertyView.addProperties(threshold_properties);
                     }
                     if (data.a('node.type') === 'cb') {
                         propertyView.addProperties(cb_properties);
+                    }
+                    if (data.a('node.type') === 'ddf') {
+                        propertyView.addProperties(ddf_properties);
                     }
                     if (data.a('node.name') === 'bar') {
                     }
@@ -435,6 +438,9 @@
                     if (data.a('node.type') === 'table') {
                         propertyView.addProperties(table_properties);
                     }
+                    if (data.a('node.background')) {
+                        propertyView.addProperties(node_background);
+                    }
                     if (data.a('node.type') === 'signalBoard') {
                         if (!data.s('label')) {
                             data.s({
@@ -445,6 +451,15 @@
                             });
                         }
                         propertyView.addProperties(label_properties);
+                    }
+                    if (data.a('node.type') === 'signal-DIY') {
+                        propertyView.addProperties(label_text_DIY);
+                    }
+                    if (data.a('node.type') === 'text-DIY') {
+                        propertyView.addProperties(text_DIY);
+                    }
+                    if (data.a('node.type') === 'text_DIY_choose') {
+                        propertyView.addProperties(text_DIY_choose);
                     }
                     // if (data.a('node.type') === 'barChart') {
                     //     propertyView.addProperties(panel_bar_chart_properties);

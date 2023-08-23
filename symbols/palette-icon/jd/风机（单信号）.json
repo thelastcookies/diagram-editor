@@ -1,0 +1,120 @@
+{
+  "modified": "Thu Dec 08 2022 14:31:05 GMT+0800 (中国标准时间)",
+  "dataBindings": [
+    {
+      "attr": "node.cate",
+      "valueType": "String",
+      "defaultValue": "m-point"
+    },
+    {
+      "attr": "node.type",
+      "valueType": "String",
+      "defaultValue": "switch"
+    },
+    {
+      "attr": "node.name",
+      "valueType": "String",
+      "defaultValue": "switch"
+    },
+    {
+      "attr": "node.direction",
+      "valueType": "String",
+      "defaultValue": "right"
+    },
+    {
+      "attr": "node.state",
+      "valueType": "Boolean",
+      "defaultValue": true,
+      "name": "风机运行状态"
+    }
+  ],
+  "width": 35,
+  "height": 25,
+  "comps": [
+    {
+      "type": "rect",
+      "background": {
+        "func": "__ht__function(data, view) {\n let d=data.a('node.state'), r='#D8D8D8';if(d){r='#FF0000'} else{r='#00FF00'}return r;\n}",
+        "values": "#D8D8D8"
+      },
+      "borderWidth": 1,
+      "borderColor": "#979797",
+      "anchorX": 0,
+      "rotation": {
+        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'left')res=180;\nif(dir === 'right')res=0;\nreturn res/180*Math.PI;\n}",
+        "value": 0
+      },
+      "rect": [
+        14.59495,
+        0.23279,
+        20,
+        10.92199
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": {
+        "func": "__ht__function(data, view) {\n let d=data.a('node.state'), r='#D8D8D8';if(d){r='#FF0000'} else{r='#00FF00'}return r;\n}",
+        "values": "#D8D8D8"
+      },
+      "borderWidth": 1,
+      "borderColor": "#979797",
+      "rect": [
+        0,
+        6.14825,
+        27.17415,
+        18.6052
+      ]
+    },
+    {
+      "type": "oval",
+      "background": {
+        "func": "__ht__function(data, view) {\n let d=data.a('node.state'), r='#D8D8D8';if(d){r='#FF0000'} else{r='#00FF00'}return r;\n}",
+        "values": "#D8D8D8"
+      },
+      "borderWidth": 1,
+      "borderColor": "#979797",
+      "rotation": 3.07005,
+      "rect": [
+        3.34916,
+        0.68923,
+        20,
+        20
+      ]
+    },
+    {
+      "type": "shape",
+      "background": "rgb(0,255,0)",
+      "borderWidth": 1,
+      "borderColor": "#979797",
+      "anchorX": 0.46,
+      "rotation": {
+        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'left')res=206;\nif(dir === 'right')res=0;\nreturn res/180*Math.PI;\n}",
+        "value": 0
+      },
+      "points": [
+        4.95613,
+        14.78263,
+        23.60073,
+        12.02455
+      ]
+    },
+    {
+      "type": "shape",
+      "background": "rgb(0,255,0)",
+      "borderWidth": 1,
+      "borderColor": "#979797",
+      "anchorX": 0.46,
+      "rotation": {
+        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'left')res=166;\nif(dir === 'right')res=0;\nreturn res/180*Math.PI;\n}",
+        "value": 0
+      },
+      "points": [
+        6.54137,
+        3.48732,
+        22.64854,
+        7.90025
+      ]
+    }
+  ]
+}

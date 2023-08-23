@@ -1,0 +1,102 @@
+{
+  "modified": "Tue Oct 25 2022 17:11:21 GMT+0800 (中国标准时间)",
+  "width": 140,
+  "height": 70,
+  "comps": [
+    {
+      "type": "rect",
+      "background": "rgba(151,151,151,0.1)",
+      "borderWidth": 1,
+      "borderColor": "#979797",
+      "rotation": 1.5708,
+      "rect": [
+        46.62582,
+        2.18408,
+        49.58401,
+        65.88156
+      ]
+    },
+    {
+      "type": "shape",
+      "background": "rgba(151,151,151,0.1)",
+      "borderWidth": 1,
+      "borderColor": "#979797",
+      "rotation": 1.5708,
+      "closePath": true,
+      "points": [
+        89.43327,
+        45.21548,
+        98.97072,
+        24.95955,
+        129.49056,
+        24.95955,
+        139.02801,
+        45.21548
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgba(151,151,151,0.1)",
+      "borderWidth": 1,
+      "borderColor": "#979797",
+      "rotation": 1.5708,
+      "rect": [
+        116.65651,
+        27.00274,
+        30.96276,
+        15.99453
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgba(151,151,151,0.1)",
+      "borderWidth": 1,
+      "borderColor": "#979797",
+      "rotation": 1.5708,
+      "rect": [
+        16.62739,
+        27.68674,
+        30.96276,
+        13.2068
+      ]
+    },
+    {
+      "type": "roundRect",
+      "background": "rgba(151,151,151,0.1)",
+      "borderWidth": 1,
+      "borderColor": "#979797",
+      "rect": [
+        17.3586,
+        0,
+        8.25674,
+        70
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgba(151,151,151,0.1)",
+      "borderWidth": 1,
+      "borderColor": "#979797",
+      "rotation": 1.5708,
+      "rect": [
+        -3.56758,
+        28.84535,
+        30.96276,
+        10.88959
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgba(151,151,151,0.1)",
+      "borderWidth": 1,
+      "borderColor": "#979797",
+      "rotation": 1.5708,
+      "rect": [
+        -17.22092,
+        31.5115,
+        41.51303,
+        6.05959
+      ]
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "modified": "Wed Oct 28 2020 16:47:43 GMT+0800 (CST)",
+  "dataBindings": [
+    {
+      "attr": "node.cate",
+      "valueType": "String",
+      "defaultValue": "m-point"
+    },
+    {
+      "attr": "node.type",
+      "valueType": "String",
+      "defaultValue": "switch"
+    },
+    {
+      "attr": "node.name",
+      "valueType": "String",
+      "defaultValue": "switch"
+    },
+    {
+      "attr": "node.state",
+      "valueType": "Boolean",
+      "defaultValue": true,
+      "name": "电动机状态"
+    }
+  ],
+  "width": 34,
+  "height": 32,
+  "comps": [
+    {
+      "type": "oval",
+      "background": {
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : 'rgb(0,255,0)';\n}",
+        "values": "#D8D8D8"
+      },
+      "borderWidth": 2,
+      "borderColor": "#979797",
+      "rect": [
+        1.51208,
+        1,
+        30,
+        30
+      ]
+    },
+    {
+      "type": "text",
+      "text": "M",
+      "align": "center",
+      "color": "#000",
+      "font": "18px arial, sans-serif",
+      "rect": [
+        11.51208,
+        11,
+        10,
+        10
+      ]
+    }
+  ]
+}

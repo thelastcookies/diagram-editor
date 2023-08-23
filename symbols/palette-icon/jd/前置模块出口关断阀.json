@@ -1,0 +1,128 @@
+{
+  "modified": "Thu Jun 08 2023 10:36:44 GMT+0800 (中国标准时间)",
+  "dataBindings": [
+    {
+      "attr": "node.cate",
+      "valueType": "String",
+      "defaultValue": "m-point"
+    },
+    {
+      "attr": "node.type",
+      "valueType": "String",
+      "defaultValue": "m-state"
+    },
+    {
+      "attr": "node.name",
+      "valueType": "String",
+      "defaultValue": "switch"
+    },
+    {
+      "attr": "node.state",
+      "valueType": "Number",
+      "defaultValue": 1,
+      "name": "状态"
+    }
+  ],
+  "width": 30,
+  "height": 18,
+  "comps": [
+    {
+      "type": "rect",
+      "background": {
+        "func": "__ht__function(data, view) {\nreturn data.a('node.state') === 3 ? 'rgb(255,0,0)' : 'rgb(0,255,0)';\n}",
+        "value": "rgb(0,255,0)"
+      },
+      "borderWidth": 0.1,
+      "borderColor": "rgb(0,0,0)",
+      "anchorY": 0,
+      "rect": [
+        14.62504,
+        8.44881,
+        0.75,
+        4
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": {
+        "func": "__ht__function(data, view) {\nreturn data.a('node.state') === 3 ? 'rgb(255,0,0)' : 'rgb(0,255,0)';\n}",
+        "value": "rgb(0,255,0)"
+      },
+      "borderWidth": 0.1,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(0,0,0)"
+      },
+      "anchorX": 1.10435,
+      "anchorY": 0,
+      "rotation": 4.71239,
+      "rect": [
+        3.95659,
+        6.4053,
+        10,
+        13
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": {
+        "func": "__ht__function(data, view) {\nreturn data.a('node.state') === 3 ? 'rgb(255,0,0)' : 'rgb(0,255,0)';\n}",
+        "value": "rgb(0,255,0)"
+      },
+      "borderWidth": 0.1,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(0,0,0)"
+      },
+      "anchorX": -0.10435,
+      "anchorY": 0,
+      "rotation": 1.5708,
+      "rect": [
+        16.04354,
+        6.40535,
+        10,
+        13
+      ]
+    },
+    {
+      "type": "rightTriangle",
+      "background": {
+        "func": "__ht__function(data, view) {\nreturn data.a('node.state') === 3 ? 'rgb(255,0,0)' : 'rgb(0,255,0)';\n}",
+        "value": "rgb(0,255,0)"
+      },
+      "borderWidth": 0.1,
+      "borderColor": "rgb(0,0,0)",
+      "anchorX": 1,
+      "rotation": {
+        "func": "__ht__function(data, view){\nlet res=180;\nreturn res/180*Math.PI;\n}",
+        "value": -3.14159
+      },
+      "rect": [
+        3.00012,
+        0.55118,
+        8,
+        8
+      ]
+    },
+    {
+      "type": "rightTriangle",
+      "background": {
+        "func": "__ht__function(data, view) {\nreturn data.a('node.state') === 3 ? 'rgb(255,0,0)' : 'rgb(0,255,0)';\n}",
+        "value": "rgb(0,255,0)"
+      },
+      "borderWidth": 0.1,
+      "borderColor": "rgb(0,0,0)",
+      "anchorX": 0,
+      "rotation": {
+        "func": "__ht__function(data, view){\nlet res=0;\nreturn res/180*Math.PI;\n}",
+        "value": 0
+      },
+      "rect": [
+        11.00004,
+        0.55115,
+        8,
+        8
+      ]
+    }
+  ]
+}

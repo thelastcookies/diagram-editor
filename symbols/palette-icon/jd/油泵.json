@@ -1,0 +1,175 @@
+{
+  "modified": "Thu Jun 08 2023 10:07:25 GMT+0800 (中国标准时间)",
+  "dataBindings": [
+    {
+      "attr": "node.cate",
+      "valueType": "String",
+      "defaultValue": "m-point"
+    },
+    {
+      "attr": "node.type",
+      "valueType": "String",
+      "defaultValue": "m-state"
+    },
+    {
+      "attr": "node.name",
+      "valueType": "String",
+      "defaultValue": "switch"
+    },
+    {
+      "attr": "node.state",
+      "valueType": "Number",
+      "defaultValue": 1,
+      "name": "油泵状态"
+    },
+    {
+      "attr": "node.direction",
+      "valueType": "String",
+      "defaultValue": "right"
+    }
+  ],
+  "width": 33,
+  "height": 22,
+  "comps": [
+    {
+      "type": "rect",
+      "background": {
+        "func": "__ht__function(data, view) {\n let d=data.a('node.state'),r='rgb(0,255,0)';if(d==1) r='rgb(0,255,0)';\nif(d == 3) r='rgb(255,0,0)'\n return r;\n}",
+        "value": "rgb(0,255,0)"
+      },
+      "anchorX": 0,
+      "rotation": {
+        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'left')res=180;\nif(dir === 'right')res=0;\nreturn res/180*Math.PI;\n}",
+        "value": 0
+      },
+      "borderWidth": 1,
+      "borderColor": "#979797",
+      "rect": [
+        12,
+        0.4,
+        20,
+        10.92199
+      ]
+    },
+    {
+      "type": "oval",
+      "background": {
+        "func": "__ht__function(data, view) {\n let d=data.a('node.state'),r='rgb(0,255,0)';if(d==1) r='rgb(0,255,0)';\nif(d == 3) r='rgb(255,0,0)'\n return r;\n}",
+        "value": "rgb(0,255,0)"
+      },
+      "borderWidth": 1,
+      "borderColor": "#979797",
+      "rotation": 3.14159,
+      "rect": [
+        2.34916,
+        0.61122,
+        20,
+        20
+      ]
+    },
+    {
+      "type": "oval",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "#979797",
+      "rect": [
+        6.5,
+        4.61122,
+        12,
+        12
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": {
+        "func": "__ht__function(data, view) {\n let d=data.a('node.state'),r='rgb(0,255,0)';if(d==1) r='rgb(0,255,0)';\nif(d == 3) r='rgb(255,0,0)'\n return r;\n}",
+        "value": "rgb(0,255,0)"
+      },
+      "borderWidth": 0.2,
+      "borderColor": "#979797",
+      "rotation": 1.12115,
+      "rect": [
+        10.31473,
+        6.17103,
+        4.06885,
+        2.24164
+      ]
+    },
+    {
+      "type": "oval",
+      "background": "rgb(0,0,0)",
+      "borderWidth": 0.1,
+      "borderColor": "rgb(0,0,0)",
+      "rect": [
+        11.5,
+        9.61122,
+        2,
+        2
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": {
+        "func": "__ht__function(data, view) {\n let d=data.a('node.state'),r='rgb(0,255,0)';if(d==1) r='rgb(0,255,0)';\nif(d == 3) r='rgb(255,0,0)'\n return r;\n}",
+        "value": "rgb(0,255,0)"
+      },
+      "borderWidth": 0.2,
+      "borderColor": "#979797",
+      "rotation": 2.52519,
+      "rect": [
+        13.77354,
+        8.71052,
+        4.06885,
+        2.24164
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": {
+        "func": "__ht__function(data, view) {\n let d=data.a('node.state'),r='rgb(0,255,0)';if(d==1) r='rgb(0,255,0)';\nif(d == 3) r='rgb(255,0,0)'\n return r;\n}",
+        "value": "rgb(0,255,0)"
+      },
+      "borderWidth": 0.2,
+      "borderColor": "#979797",
+      "rotation": 1.09422,
+      "rect": [
+        13.39478,
+        11.8123,
+        4.06885,
+        2.24164
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": {
+        "func": "__ht__function(data, view) {\n let d=data.a('node.state'),r='rgb(0,255,0)';if(d==1) r='rgb(0,255,0)';\nif(d == 3) r='rgb(255,0,0)'\n return r;\n}",
+        "value": "rgb(0,255,0)"
+      },
+      "borderWidth": 0.2,
+      "borderColor": "#979797",
+      "rotation": 2.42463,
+      "rect": [
+        9.11075,
+        12.80117,
+        4.06885,
+        2.24164
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": {
+        "func": "__ht__function(data, view) {\n let d=data.a('node.state'),r='rgb(0,255,0)';if(d==1) r='rgb(0,255,0)';\nif(d == 3) r='rgb(255,0,0)'\n return r;\n}",
+        "value": "rgb(0,255,0)"
+      },
+      "borderWidth": 0.2,
+      "borderColor": "#979797",
+      "rotation": 3.65669,
+      "rect": [
+        6.78816,
+        9.4904,
+        4.06885,
+        2.24164
+      ]
+    }
+  ]
+}

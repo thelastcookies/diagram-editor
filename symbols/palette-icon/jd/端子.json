@@ -1,0 +1,39 @@
+{
+  "modified": "Tue Oct 25 2022 14:41:02 GMT+0800 (中国标准时间)",
+  "width": 26,
+  "height": 21,
+  "comps": [
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "rotation": 0.97772,
+      "points": [
+        13,
+        -4.61628,
+        13,
+        25.38372,
+        13,
+        25.38372,
+        13,
+        25.38372
+      ],
+      "segments": [
+        1,
+        4
+      ]
+    },
+    {
+      "type": "oval",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "rotation": 0,
+      "rect": [
+        3,
+        0,
+        20,
+        20
+      ]
+    }
+  ]
+}

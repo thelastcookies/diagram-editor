@@ -1,0 +1,183 @@
+{
+  "modified": "Thu Dec 08 2022 15:17:10 GMT+0800 (中国标准时间)",
+  "dataBindings": [
+    {
+      "attr": "node.cate",
+      "valueType": "String",
+      "defaultValue": "m-point"
+    },
+    {
+      "attr": "node.type",
+      "valueType": "String",
+      "defaultValue": "switch"
+    },
+    {
+      "attr": "node.name",
+      "valueType": "String",
+      "defaultValue": "switch"
+    },
+    {
+      "attr": "node.state",
+      "valueType": "Boolean",
+      "defaultValue": false,
+      "name": "加热器状态"
+    }
+  ],
+  "width": 32,
+  "height": 29,
+  "comps": [
+    {
+      "type": "rect",
+      "background": {
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : '#D8D8D8';\n}",
+        "value": "#D8D8D8"
+      },
+      "borderWidth": 1,
+      "borderColor": "#979797",
+      "rect": [
+        0.5,
+        0,
+        31,
+        29
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": {
+        "func": "attr@node.width",
+        "value": 1
+      },
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(0,255,0)"
+      },
+      "clipDirection": "left",
+      "rotation": 1.5708,
+      "points": [
+        1.23994,
+        16.71224,
+        12.23994,
+        16.71224,
+        12.23994,
+        16.71224,
+        12.23994,
+        16.71224
+      ],
+      "segments": [
+        1,
+        4
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": {
+        "func": "attr@node.width",
+        "value": 1
+      },
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(0,255,0)"
+      },
+      "clipDirection": "left",
+      "rotation": 1.5708,
+      "points": [
+        19.87669,
+        16.31062,
+        30.87669,
+        16.31062,
+        30.87669,
+        16.31062,
+        30.87669,
+        16.31062
+      ],
+      "segments": [
+        1,
+        4
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 1,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(0,255,0)"
+      },
+      "rotation": 0,
+      "points": [
+        10.70245,
+        7.06808,
+        16.12114,
+        9.93101
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 1,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(0,255,0)"
+      },
+      "rotation": 0,
+      "points": [
+        16.12114,
+        9.93101,
+        20.90763,
+        6.78777
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": {
+        "func": "attr@node.width",
+        "value": 1
+      },
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(0,255,0)"
+      },
+      "clipDirection": "left",
+      "rotation": 0.67354,
+      "points": [
+        20.03184,
+        8.93935,
+        26.03184,
+        8.93935,
+        26.03184,
+        8.93935,
+        26.03184,
+        8.93935
+      ],
+      "segments": [
+        1,
+        4
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": {
+        "func": "attr@node.width",
+        "value": 1
+      },
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(0,255,0)"
+      },
+      "clipDirection": "left",
+      "rotation": 5.59454,
+      "points": [
+        6.05627,
+        9.30578,
+        12.05627,
+        9.30578,
+        12.05627,
+        9.30578,
+        12.05627,
+        9.30578
+      ],
+      "segments": [
+        1,
+        4
+      ]
+    }
+  ]
+}

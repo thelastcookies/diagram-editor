@@ -1,0 +1,121 @@
+{
+  "modified": "Thu Jun 08 2023 09:37:53 GMT+0800 (中国标准时间)",
+  "dataBindings": [
+    {
+      "attr": "node.cate",
+      "valueType": "String",
+      "defaultValue": "m-point"
+    },
+    {
+      "attr": "node.type",
+      "valueType": "String",
+      "defaultValue": "switch"
+    },
+    {
+      "attr": "node.name",
+      "valueType": "String",
+      "defaultValue": "switch"
+    },
+    {
+      "attr": "node.state",
+      "valueType": "Boolean",
+      "defaultValue": false,
+      "name": "人孔状态"
+    },
+    {
+      "attr": "node.background",
+      "valueType": "Color",
+      "defaultValue": "rgb(0,255,0)"
+    },
+    {
+      "attr": "background.close",
+      "valueType": "Color",
+      "defaultValue": "rgb(255, 0, 0)"
+    }
+  ],
+  "width": 20,
+  "height": 32,
+  "comps": [
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "rect": [
+        2.55912,
+        0,
+        8,
+        32
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "points": [
+        6.55912,
+        0,
+        6.55912,
+        32
+      ]
+    },
+    {
+      "type": "rect",
+      "background": {
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? data.a('background.close') : data.a('node.background');\n}",
+        "value": "rgb(0,255,0)"
+      },
+      "borderWidth": 0.5,
+      "borderColor": {
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? data.a('background.close') : data.a('node.background');\n}",
+        "value": "rgb(0,255,0)"
+      },
+      "rect": [
+        7.55912,
+        5,
+        1,
+        22
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(0,0,0)",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "rect": [
+        4.5,
+        9,
+        2.5,
+        14
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 1,
+      "borderColor": {
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? data.a('background.close') : data.a('node.background');\n}",
+        "value": "rgb(0,255,0)"
+      },
+      "points": [
+        8.55912,
+        16,
+        13.55912,
+        16
+      ]
+    },
+    {
+      "type": "border",
+      "color": {
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? data.a('background.close') : data.a('node.background');\n}",
+        "value": "rgb(0,255,0)"
+      },
+      "width": 0.8,
+      "rect": [
+        13.44,
+        12,
+        5,
+        8
+      ]
+    }
+  ]
+}

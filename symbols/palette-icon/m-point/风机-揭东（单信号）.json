@@ -1,0 +1,95 @@
+{
+  "modified": "Thu Apr 07 2022 17:58:11 GMT+0800 (中国标准时间)",
+  "dataBindings": [
+    {
+      "attr": "node.cate",
+      "valueType": "String",
+      "defaultValue": "m-point"
+    },
+    {
+      "attr": "node.type",
+      "valueType": "String",
+      "defaultValue": "switch"
+    },
+    {
+      "attr": "node.name",
+      "valueType": "String",
+      "defaultValue": "switch"
+    },
+    {
+      "attr": "node.state",
+      "valueType": "Boolean",
+      "defaultValue": true,
+      "name": "风机状态"
+    }
+  ],
+  "width": 34,
+  "height": 38,
+  "comps": [
+    {
+      "type": "oval",
+      "background": {
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : 'rgb(0,255,0)';\n}",
+        "values": "#D8D8D8"
+      },
+      "borderWidth": 2,
+      "borderColor": "#979797",
+      "rect": [
+        2,
+        1.48259,
+        30,
+        30
+      ]
+    },
+    {
+      "type": "text",
+      "text": "M",
+      "align": "center",
+      "color": "#D8D8D8",
+      "font": "18px arial, sans-serif",
+      "rect": [
+        12,
+        11.48259,
+        10,
+        10
+      ]
+    },
+    {
+      "type": "shape",
+      "background": {
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : 'rgb(0,255,0)';\n}",
+        "values": "#D8D8D8"
+      },
+      "borderWidth": 1,
+      "borderColor": "#979797",
+      "closePath": true,
+      "points": [
+        0.50016,
+        37.48063,
+        7.06966,
+        28.49766,
+        7.06966,
+        28.49766,
+        11.85358,
+        32.02509,
+        16.94076,
+        32.02509,
+        22.02794,
+        32.02509,
+        26.88016,
+        28.49766,
+        26.88016,
+        28.49766,
+        33.50775,
+        37.48063
+      ],
+      "segments": [
+        1,
+        2,
+        4,
+        4,
+        2
+      ]
+    }
+  ]
+}

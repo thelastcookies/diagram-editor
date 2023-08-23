@@ -1,0 +1,114 @@
+{
+  "modified": "Thu Dec 08 2022 09:55:15 GMT+0800 (中国标准时间)",
+  "width": 42,
+  "height": 83,
+  "comps": [
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 1,
+      "borderColor": "#979797",
+      "rect": [
+        5.79196,
+        28.02206,
+        0,
+        13.90071
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 1,
+      "borderColor": "#979797",
+      "rect": [
+        12.85264,
+        0,
+        16.10717,
+        5.7368
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 1,
+      "borderColor": "#979797",
+      "rect": [
+        5.51615,
+        18.30733,
+        30.78014,
+        64
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 1,
+      "borderColor": "#979797",
+      "rect": [
+        0,
+        30.66982,
+        5.51615,
+        11.25296
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 1,
+      "borderColor": "#979797",
+      "rect": [
+        36.2963,
+        30.66982,
+        5.51615,
+        11.25296
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 1,
+      "borderColor": "#979797",
+      "rect": [
+        14.17652,
+        11.16627,
+        13.45942,
+        65.75256
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 1,
+      "borderColor": "#979797",
+      "points": [
+        20.7959,
+        5.76044,
+        20.90623,
+        11.16627
+      ]
+    },
+    {
+      "type": "shape",
+      "background": "#D8D8D8",
+      "borderWidth": 1,
+      "borderColor": "#D8D8D8",
+      "gradientColor": "#D8D8D8",
+      "points": [
+        12.85264,
+        76.91883,
+        28.95981,
+        76.91883
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 1,
+      "borderColor": "#979797",
+      "points": [
+        12.85264,
+        2.75808,
+        28.62884,
+        2.8684
+      ]
+    }
+  ]
+}

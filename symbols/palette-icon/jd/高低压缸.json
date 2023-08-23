@@ -1,0 +1,68 @@
+{
+  "modified": "Thu Dec 08 2022 10:23:44 GMT+0800 (中国标准时间)",
+  "width": 210,
+  "height": 71,
+  "comps": [
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 1,
+      "borderColor": "#979797",
+      "gradient": "spread.vertical",
+      "rect": [
+        0,
+        30.49123,
+        210,
+        9.60887
+      ]
+    },
+    {
+      "type": "trapezoid",
+      "background": "#979797",
+      "borderWidth": 1,
+      "borderColor": "#979797",
+      "gradient": "spread.horizontal",
+      "rotation": 1.5708,
+      "rect": [
+        11.1556,
+        5.01176,
+        70.59066,
+        60.56737
+      ]
+    },
+    {
+      "type": "trapezoid",
+      "background": "#979797",
+      "borderWidth": 1,
+      "borderColor": "#979797",
+      "gradient": "spread.horizontal",
+      "rotation": 4.71239,
+      "rect": [
+        114.11628,
+        -10.73523,
+        70.59066,
+        92.06157
+      ]
+    },
+    {
+      "type": "text",
+      "text": "高压缸",
+      "rect": [
+        18.58198,
+        10.5,
+        50,
+        50
+      ]
+    },
+    {
+      "type": "text",
+      "text": "低压缸",
+      "rect": [
+        120.66923,
+        10.29544,
+        50,
+        50
+      ]
+    }
+  ]
+}

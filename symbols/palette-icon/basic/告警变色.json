@@ -31,6 +31,11 @@
       "attr": "node.line.color",
       "valueType": "Color",
       "defaultValue": "#D8D8D8"
+    },
+    {
+      "attr": "label.color",
+      "valueType": "Color",
+      "defaultValue": "rgb(255, 0, 0)"
     }
   ],
   "width": 70,
@@ -44,7 +49,7 @@
       },
       "align": "center",
       "color": {
-        "func": "__ht__function(data, view) {\n return data.a('node.state') ? '#FF0000' : data.a('node.line.color');\n}",
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? data.a('label.color') : data.a('node.line.color');\n}",
         "value": "rgb(190,190,190)"
       },
       "font": "16px arial, sans-serif",

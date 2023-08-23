@@ -1,0 +1,218 @@
+{
+  "modified": "Tue Oct 25 2022 16:35:09 GMT+0800 (中国标准时间)",
+  "width": 18,
+  "height": 104,
+  "comps": [
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 1,
+      "borderColor": "rgb(0,0,0)",
+      "rotation": 0,
+      "rect": [
+        0,
+        0,
+        18,
+        104
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgba(0,0,0,0)",
+      "borderWidth": 1,
+      "borderColor": "rgb(0,0,0)",
+      "borderCap": "square",
+      "borderJoin": "bevel",
+      "rotation": 1.5708,
+      "rect": [
+        6.81639,
+        -2.46809,
+        4.71552,
+        17.65169
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 1,
+      "borderColor": "rgb(0,0,0)",
+      "points": [
+        4,
+        0,
+        4,
+        104
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 1,
+      "borderColor": "rgb(0,0,0)",
+      "points": [
+        9,
+        0,
+        9,
+        104
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 1,
+      "borderColor": "rgb(0,0,0)",
+      "points": [
+        14,
+        0,
+        14,
+        104
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgba(0,0,0,0)",
+      "borderWidth": 1,
+      "borderColor": "rgb(0,0,0)",
+      "borderCap": "square",
+      "borderJoin": "bevel",
+      "rotation": 1.5708,
+      "rect": [
+        6.81639,
+        6.81639,
+        4.71552,
+        17.65169
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgba(0,0,0,0)",
+      "borderWidth": 1,
+      "borderColor": "rgb(0,0,0)",
+      "borderCap": "square",
+      "borderJoin": "bevel",
+      "rotation": 1.5708,
+      "rect": [
+        6.81639,
+        16.53191,
+        4.71552,
+        17.65169
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgba(0,0,0,0)",
+      "borderWidth": 1,
+      "borderColor": "rgb(0,0,0)",
+      "borderCap": "square",
+      "borderJoin": "bevel",
+      "rotation": 1.5708,
+      "rect": [
+        6.81639,
+        25.81639,
+        4.71552,
+        17.65169
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgba(0,0,0,0)",
+      "borderWidth": 1,
+      "borderColor": "rgb(0,0,0)",
+      "borderCap": "square",
+      "borderJoin": "bevel",
+      "rotation": 1.5708,
+      "rect": [
+        6.81639,
+        35.17415,
+        4.71552,
+        17.65169
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgba(0,0,0,0)",
+      "borderWidth": 1,
+      "borderColor": "rgb(0,0,0)",
+      "borderCap": "square",
+      "borderJoin": "bevel",
+      "rotation": 1.5708,
+      "rect": [
+        6.81639,
+        44.81639,
+        4.71552,
+        17.65169
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgba(0,0,0,0)",
+      "borderWidth": 1,
+      "borderColor": "rgb(0,0,0)",
+      "borderCap": "square",
+      "borderJoin": "bevel",
+      "rotation": 1.5708,
+      "rect": [
+        6.81639,
+        54.17415,
+        4.71552,
+        17.65169
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgba(0,0,0,0)",
+      "borderWidth": 1,
+      "borderColor": "rgb(0,0,0)",
+      "borderCap": "square",
+      "borderJoin": "bevel",
+      "rotation": 1.5708,
+      "rect": [
+        6.81639,
+        63.53191,
+        4.71552,
+        17.65169
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgba(0,0,0,0)",
+      "borderWidth": 1,
+      "borderColor": "rgb(0,0,0)",
+      "borderCap": "square",
+      "borderJoin": "bevel",
+      "rotation": 1.5708,
+      "rect": [
+        6.81639,
+        73.17415,
+        4.71552,
+        17.65169
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgba(0,0,0,0)",
+      "borderWidth": 1,
+      "borderColor": "rgb(0,0,0)",
+      "borderCap": "square",
+      "borderJoin": "bevel",
+      "rotation": 1.5708,
+      "rect": [
+        6.81639,
+        82.53191,
+        4.71552,
+        17.65169
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgba(0,0,0,0)",
+      "borderWidth": 1,
+      "borderColor": "rgb(0,0,0)",
+      "borderCap": "square",
+      "borderJoin": "bevel",
+      "rotation": 1.5708,
+      "rect": [
+        6.81639,
+        92.17415,
+        4.71552,
+        17.65169
+      ]
+    }
+  ]
+}

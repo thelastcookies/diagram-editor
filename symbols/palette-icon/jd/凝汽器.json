@@ -1,0 +1,368 @@
+{
+  "modified": "Tue Oct 25 2022 17:12:31 GMT+0800 (中国标准时间)",
+  "width": 100,
+  "height": 86,
+  "comps": [
+    {
+      "type": "oval",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "gradient": "radial.south",
+      "rect": [
+        50,
+        70.73121,
+        49.61596,
+        15.32553
+      ]
+    },
+    {
+      "type": "oval",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "gradient": "radial.south",
+      "rect": [
+        0.19202,
+        70.73121,
+        49.80798,
+        15.32553
+      ]
+    },
+    {
+      "type": "oval",
+      "background": "#D8D8D8",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "gradient": "radial.south",
+      "rect": [
+        0.19202,
+        0,
+        99.61596,
+        18.73121
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(217,217,217)",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "rotation": 1.5708,
+      "rect": [
+        15,
+        -6.26879,
+        70,
+        100
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "rotation": 1.5708,
+      "points": [
+        -18.73684,
+        43.73121,
+        51.26316,
+        43.73121
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "rotation": 1.5708,
+      "points": [
+        -15,
+        43.73121,
+        55,
+        43.73121
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "rotation": 1.5708,
+      "points": [
+        -30.73684,
+        43.73121,
+        39.26316,
+        43.73121
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "rotation": 1.5708,
+      "points": [
+        -22.73684,
+        43.73121,
+        47.26316,
+        43.73121
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "rotation": 1.5708,
+      "points": [
+        -26.73684,
+        43.73121,
+        43.26316,
+        43.73121
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "rotation": 1.5708,
+      "points": [
+        1.26316,
+        43.73121,
+        71.26316,
+        43.73121
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "rotation": 1.5708,
+      "points": [
+        5,
+        43.73121,
+        75,
+        43.73121
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "rotation": 1.5708,
+      "points": [
+        -10.73684,
+        43.73121,
+        59.26316,
+        43.73121
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "rotation": 1.5708,
+      "points": [
+        -2.73684,
+        43.73121,
+        67.26316,
+        43.73121
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "rotation": 1.5708,
+      "points": [
+        -6.73684,
+        43.73121,
+        63.26316,
+        43.73121
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "rotation": 1.5708,
+      "points": [
+        21.26316,
+        43.73121,
+        91.26316,
+        43.73121
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "rotation": 1.5708,
+      "points": [
+        25,
+        43.73121,
+        95,
+        43.73121
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "rotation": 1.5708,
+      "points": [
+        9.26316,
+        43.73121,
+        79.26316,
+        43.73121
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "rotation": 1.5708,
+      "points": [
+        17.26316,
+        43.73121,
+        87.26316,
+        43.73121
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "rotation": 1.5708,
+      "points": [
+        13.26316,
+        43.73121,
+        83.26316,
+        43.73121
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "rotation": 1.5708,
+      "points": [
+        41.26316,
+        43.73121,
+        111.26316,
+        43.73121
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "rotation": 1.5708,
+      "points": [
+        45,
+        43.73121,
+        115,
+        43.73121
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "rotation": 1.5708,
+      "points": [
+        29.26316,
+        43.73121,
+        99.26316,
+        43.73121
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "rotation": 1.5708,
+      "points": [
+        37.26316,
+        43.73121,
+        107.26316,
+        43.73121
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "rotation": 1.5708,
+      "points": [
+        33.26316,
+        43.73121,
+        103.26316,
+        43.73121
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "rotation": 1.5708,
+      "points": [
+        61,
+        43.73121,
+        131,
+        43.73121
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "rotation": 1.5708,
+      "points": [
+        49,
+        43.73121,
+        119,
+        43.73121
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "rotation": 1.5708,
+      "points": [
+        57,
+        43.73121,
+        127,
+        43.73121
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "rotation": 1.5708,
+      "points": [
+        53,
+        43.73121,
+        123,
+        43.73121
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 0.5,
+      "borderColor": "rgb(0,0,0)",
+      "points": [
+        50,
+        8,
+        50,
+        0
+      ]
+    },
+    {
+      "type": "text",
+      "text": "凝汽器",
+      "rect": [
+        30,
+        17.73121,
+        40,
+        50
+      ]
+    }
+  ]
+}

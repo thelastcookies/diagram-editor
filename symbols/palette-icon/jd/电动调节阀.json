@@ -1,0 +1,217 @@
+{
+  "modified": "Wed Dec 14 2022 14:09:51 GMT+0800 (中国标准时间)",
+  "dataBindings": [
+    {
+      "attr": "node.cate",
+      "valueType": "String",
+      "defaultValue": "m-point"
+    },
+    {
+      "attr": "node.type",
+      "valueType": "String",
+      "defaultValue": "data"
+    },
+    {
+      "attr": "node.name",
+      "valueType": "String",
+      "defaultValue": "data-unit"
+    },
+    {
+      "attr": "node.direction",
+      "valueType": "String",
+      "defaultValue": "up"
+    },
+    {
+      "attr": "node.label",
+      "valueType": "String",
+      "defaultValue": "0.00",
+      "name": "数据值"
+    },
+    {
+      "attr": "node.line.color",
+      "valueType": "Color",
+      "defaultValue": "#000000"
+    },
+    {
+      "attr": "node.unit",
+      "valueType": "String",
+      "defaultValue": "%",
+      "name": "单位"
+    }
+  ],
+  "width": 79,
+  "height": 29,
+  "comps": [
+    {
+      "type": "rect",
+      "background": "",
+      "borderWidth": 1,
+      "borderColor": "#979797",
+      "offsetX": {
+        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'up')res=-35;\nif(dir === 'right')res=-80;\nif(dir === 'down')res=-34;\nif(dir === 'left')res=0;\nreturn res;\n}",
+        "value": 0
+      },
+      "offsetY": {
+        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'up')res=17;\nif(dir === 'right')res=-5;\nif(dir === 'down')res=-25;\nif(dir === 'left')res=0;\nreturn res;\n}",
+        "value": 0
+      },
+      "rect": [
+        31.71631,
+        14.46143,
+        35.63436,
+        11.21147
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "__ht__function(data, view) {\n return data.a('node.unit');\n}",
+        "value": "%"
+      },
+      "offsetX": {
+        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'up')res=-35;\nif(dir === 'right')res=-80;\nif(dir === 'down')res=-34;\nif(dir === 'left')res=0;\nreturn res;\n}",
+        "value": 0
+      },
+      "offsetY": {
+        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'up')res=17;\nif(dir === 'right')res=-5;\nif(dir === 'down')res=-25;\nif(dir === 'left')res=0;\nreturn res;\n}",
+        "value": 0
+      },
+      "rect": [
+        67.35067,
+        14.17288,
+        19.13318,
+        13.20849
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "__ht__function(data, view) {\n return data.a('node.label');\n}",
+        "value": "0.00"
+      },
+      "color": {
+        "func": "attr@node.line.color",
+        "value": "#000000"
+      },
+      "offsetX": {
+        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'up')res=-35;\nif(dir === 'right')res=-80;\nif(dir === 'down')res=-34;\nif(dir === 'left')res=0;\nreturn res;\n}",
+        "value": 0
+      },
+      "offsetY": {
+        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'up')res=17;\nif(dir === 'right')res=-5;\nif(dir === 'down')res=-25;\nif(dir === 'left')res=0;\nreturn res;\n}",
+        "value": 0
+      },
+      "rect": [
+        31.56278,
+        13.20862,
+        25.6186,
+        16.0737
+      ]
+    },
+    {
+      "type": "oval",
+      "background": {
+        "func": "__ht__function(data, view) {\n let d=data.a('node.label'),r='#00FF00';if(d<5) r='#00FF00';\nif(d>5) r='#FF0000'\n return r;\n}",
+        "value": "#00FF00"
+      },
+      "borderWidth": 0.1,
+      "borderColor": "rgb(0,0,0)",
+      "anchorY": 1,
+      "rotation": {
+        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'up')res=0;\nif(dir === 'right')res=90;\nif(dir === 'down')res=180;\nif(dir === 'left')res=270;\nreturn res/180*Math.PI;\n}",
+        "value": 0
+      },
+      "rect": [
+        7.00008,
+        -0.17719,
+        16,
+        16
+      ]
+    },
+    {
+      "type": "text",
+      "text": "M",
+      "align": "center",
+      "color": "rgb(255,255,255)",
+      "anchorY": 1,
+      "rotation": {
+        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'up')res=0;\nif(dir === 'right')res=90;\nif(dir === 'down')res=180;\nif(dir === 'left')res=270;\nreturn res/180*Math.PI;\n}",
+        "value": 0
+      },
+      "rect": [
+        7.00008,
+        -0.17719,
+        16,
+        16
+      ]
+    },
+    {
+      "type": "rect",
+      "background": {
+        "func": "__ht__function(data, view) {\n let d=data.a('node.label'),r='#00FF00';if(d<5) r='#00FF00';\nif(d>5) r='#FF0000'\n return r;\n}",
+        "value": "#00FF00"
+      },
+      "borderWidth": 0.1,
+      "borderColor": "rgb(0,0,0)",
+      "anchorY": 0,
+      "rotation": {
+        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'up')res=0;\nif(dir === 'right')res=90;\nif(dir === 'down')res=180;\nif(dir === 'left')res=270;\nreturn res/180*Math.PI;\n}",
+        "value": 0
+      },
+      "rect": [
+        14.62508,
+        15.82281,
+        0.75,
+        6.95
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": {
+        "func": "__ht__function(data, view) {\n let d=data.a('node.label'),r='#00FF00';if(d<5) r='#00FF00';\nif(d>5) r='#FF0000'\n return r;\n}",
+        "value": "#00FF00"
+      },
+      "borderWidth": 0.1,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(0,0,0)"
+      },
+      "anchorX": 1.10435,
+      "anchorY": 0,
+      "rotation": {
+        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'up')res=270;\nif(dir === 'right')res=0;\nif(dir === 'down')res=90;\nif(dir === 'left')res=180;\nreturn res/180*Math.PI;\n}",
+        "value": 4.71239
+      },
+      "rect": [
+        2.30011,
+        15.82281,
+        11.5,
+        15
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": {
+        "func": "__ht__function(data, view) {\n let d=data.a('node.label'),r='#00FF00';if(d<5) r='#00FF00';\nif(d>5) r='#FF0000'\n return r;\n}",
+        "value": "#00FF00"
+      },
+      "borderWidth": 0.1,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(0,0,0)"
+      },
+      "anchorX": -0.10435,
+      "anchorY": 0,
+      "rotation": {
+        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'up')res=90;\nif(dir === 'right')res=180;\nif(dir === 'down')res=270;\nif(dir === 'left')res=0;\nreturn res/180*Math.PI;\n}",
+        "value": 1.5708
+      },
+      "rect": [
+        16.20011,
+        15.82281,
+        11.5,
+        15
+      ]
+    }
+  ]
+}

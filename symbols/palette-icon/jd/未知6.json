@@ -1,0 +1,255 @@
+{
+  "modified": "Thu Oct 27 2022 11:13:12 GMT+0800 (中国标准时间)",
+  "width": 47,
+  "height": 17,
+  "comps": [
+    {
+      "type": "rect",
+      "background": "rgb(217,217,217)",
+      "borderWidth": 0.5,
+      "borderColor": "#979797",
+      "rotation": -3.14159,
+      "rect": [
+        0.05104,
+        -0.03946,
+        47.24438,
+        17
+      ]
+    },
+    {
+      "type": "shape",
+      "background": {
+        "func": "attr@arrow.color",
+        "value": "rgb(143,143,143)"
+      },
+      "borderColor": "rgb(138,129,129)",
+      "rotation": 1.5708,
+      "points": [
+        18.65098,
+        13.10572,
+        18.65098,
+        16.63606,
+        22.86972,
+        14.87089,
+        18.65098,
+        13.10572
+      ]
+    },
+    {
+      "type": "shape",
+      "background": "rgb(143,143,143)",
+      "borderWidth": 1,
+      "borderColor": "rgb(138,129,129)",
+      "rotation": -3.14159,
+      "points": [
+        20.76035,
+        0.08964,
+        20.76035,
+        12.87089,
+        20.76035,
+        12.87089,
+        20.76035,
+        12.87089
+      ],
+      "segments": [
+        1,
+        4
+      ]
+    },
+    {
+      "type": "shape",
+      "background": "rgb(143,143,143)",
+      "borderWidth": 1,
+      "borderColor": "rgb(138,129,129)",
+      "rotation": -3.14159,
+      "points": [
+        23.52552,
+        0.06992,
+        23.52552,
+        16.85116,
+        23.52552,
+        16.85116,
+        23.52552,
+        16.85116
+      ],
+      "segments": [
+        1,
+        4
+      ]
+    },
+    {
+      "type": "shape",
+      "background": {
+        "func": "attr@arrow.color",
+        "value": "rgb(143,143,143)"
+      },
+      "borderColor": "rgb(138,129,129)",
+      "rotation": -2.38663,
+      "points": [
+        -0.45032,
+        -1.93865,
+        -0.45032,
+        3.51215,
+        1.88993,
+        0.78675,
+        -0.45032,
+        -1.93865
+      ]
+    },
+    {
+      "type": "shape",
+      "background": "rgb(143,143,143)",
+      "borderWidth": 1,
+      "borderColor": "rgb(138,129,129)",
+      "anchorX": 0.52886,
+      "anchorY": 1,
+      "rotation": -0.84839,
+      "points": [
+        18.56261,
+        -6.17412,
+        18.56261,
+        16.40731,
+        18.56261,
+        16.40731,
+        18.56261,
+        16.40731
+      ],
+      "segments": [
+        1,
+        4
+      ]
+    },
+    {
+      "type": "oval",
+      "background": "#D8D8D8",
+      "borderWidth": 1,
+      "borderColor": "#979797",
+      "rotation": 0.05524,
+      "rect": [
+        3.12828,
+        12.07625,
+        2.31678,
+        2.97872
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 1,
+      "borderColor": "#979797",
+      "rotation": 0.05524,
+      "points": [
+        4.15788,
+        15.05626,
+        4.33323,
+        16.73822
+      ]
+    },
+    {
+      "type": "oval",
+      "background": "#D8D8D8",
+      "borderWidth": 1,
+      "borderColor": "#979797",
+      "rotation": 0.05524,
+      "rect": [
+        43.12828,
+        12.18563,
+        2.31678,
+        2.97872
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 1,
+      "borderColor": "#979797",
+      "rotation": 0.05524,
+      "points": [
+        44.15788,
+        15.16564,
+        44.33323,
+        16.8476
+      ]
+    },
+    {
+      "type": "shape",
+      "background": {
+        "func": "attr@arrow.color",
+        "value": "rgb(143,143,143)"
+      },
+      "borderColor": "rgb(138,129,129)",
+      "rotation": 1.5708,
+      "points": [
+        24.65098,
+        13.10572,
+        24.65098,
+        16.63606,
+        28.86972,
+        14.87089,
+        24.65098,
+        13.10572
+      ]
+    },
+    {
+      "type": "shape",
+      "background": "rgb(143,143,143)",
+      "borderWidth": 1,
+      "borderColor": "rgb(138,129,129)",
+      "rotation": -3.14159,
+      "points": [
+        26.76035,
+        0.08964,
+        26.76035,
+        12.87089,
+        26.76035,
+        12.87089,
+        26.76035,
+        12.87089
+      ],
+      "segments": [
+        1,
+        4
+      ]
+    },
+    {
+      "type": "shape",
+      "background": {
+        "func": "attr@arrow.color",
+        "value": "rgb(143,143,143)"
+      },
+      "borderColor": "rgb(138,129,129)",
+      "rotation": -0.72686,
+      "points": [
+        45.4996,
+        -1.91123,
+        45.4996,
+        3.53957,
+        47.83985,
+        0.81417,
+        45.4996,
+        -1.91123
+      ]
+    },
+    {
+      "type": "shape",
+      "background": "rgb(143,143,143)",
+      "borderWidth": 1,
+      "borderColor": "rgb(138,129,129)",
+      "anchorX": 0.52886,
+      "anchorY": 1,
+      "rotation": 0.81138,
+      "points": [
+        30.18093,
+        -5.1548,
+        30.18093,
+        16.40509,
+        30.18093,
+        16.40509,
+        30.18093,
+        16.40509
+      ],
+      "segments": [
+        1,
+        4
+      ]
+    }
+  ]
+}

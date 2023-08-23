@@ -1,0 +1,78 @@
+{
+  "modified": "Thu Oct 27 2022 13:41:17 GMT+0800 (中国标准时间)",
+  "width": 20,
+  "height": 20,
+  "comps": [
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,0,0)",
+      "rect": [
+        0,
+        0,
+        20,
+        20
+      ]
+    },
+    {
+      "type": "oval",
+      "background": "#D8D8D8",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,0,0)",
+      "rect": [
+        1.5,
+        1,
+        17,
+        17
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(255,0,0)",
+      "borderWidth": 1,
+      "borderColor": "rgb(105,104,104)",
+      "rect": [
+        3.76675,
+        7.5,
+        12.46651,
+        4
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(255,0,0)",
+      "borderWidth": 1,
+      "borderColor": "rgb(105,104,104)",
+      "rotation": 1.5708,
+      "rect": [
+        3.76675,
+        8,
+        12.46651,
+        4
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,0,0)",
+      "points": [
+        8,
+        8,
+        8,
+        11
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,0,0)",
+      "points": [
+        12,
+        8,
+        12,
+        11
+      ]
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "modified": "Thu Dec 08 2022 10:31:57 GMT+0800 (中国标准时间)",
+  "width": 47,
+  "height": 20,
+  "comps": [
+    {
+      "type": "border",
+      "color": "rgb(255,0,0)",
+      "width": 1,
+      "rect": [
+        0.11269,
+        0,
+        46.88731,
+        20
+      ]
+    },
+    {
+      "type": "oval",
+      "background": "rgb(255,0,0)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,0,0)",
+      "rect": [
+        11.2762,
+        6.62687,
+        6,
+        6
+      ]
+    },
+    {
+      "type": "shape",
+      "background": "rgb(255,0,0)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,0,0)",
+      "points": [
+        6.93972,
+        16.5985,
+        8.16256,
+        15.78919,
+        12.78684,
+        12.62687,
+        12.78684,
+        12.62687
+      ],
+      "segments": [
+        1,
+        4
+      ]
+    },
+    {
+      "type": "shape",
+      "background": "rgb(255,0,0)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,0,0)",
+      "points": [
+        16.75453,
+        7.59771,
+        17.97737,
+        6.82614,
+        22.60165,
+        3.81127,
+        22.60165,
+        3.81127
+      ],
+      "segments": [
+        1,
+        4
+      ]
+    },
+    {
+      "type": "oval",
+      "background": "rgb(255,0,0)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,0,0)",
+      "rect": [
+        28.73483,
+        6.62687,
+        6,
+        6
+      ]
+    },
+    {
+      "type": "shape",
+      "background": "rgb(255,0,0)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,0,0)",
+      "points": [
+        24.39835,
+        16.5985,
+        25.62119,
+        15.78919,
+        30.24547,
+        12.62687,
+        30.24547,
+        12.62687
+      ],
+      "segments": [
+        1,
+        4
+      ]
+    },
+    {
+      "type": "shape",
+      "background": "rgb(255,0,0)",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,0,0)",
+      "points": [
+        34.21316,
+        7.59771,
+        35.436,
+        6.82614,
+        40.06028,
+        3.81127,
+        40.06028,
+        3.81127
+      ],
+      "segments": [
+        1,
+        4
+      ]
+    }
+  ]
+}

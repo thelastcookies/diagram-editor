@@ -732,40 +732,40 @@ shape_properties = [
 ];
 
 // 图元中含有 label 的设置
-label_properties = [
-    {
-        name: 'label',
-        displayName: 'Label内容',
-        accessType: 'style',
-        editable: true,
-    },
-    {
-        name: 'label.font',
-        displayName: 'Label字体',
-        accessType: 'style',
-        valueType: 'string',
-        editable: true
-    },
-    {
-        name: 'label.position',
-        displayName: 'Label位置',
-        accessType: 'style',
-        valueType: 'string',
-        editable: true,
-        enum: {
-            labels: ["上", "下", "中", "左", "右", "外部上", "外部下", "外部左", "外部右"],
-            values: [11, 23, 17, 16, 18, 3, 31, 14, 20]
-        }
-    },
-    {
-        name: 'label.color',
-        displayName: 'Label颜色',
-        accessType: 'style',
-        valueType: 'color',
-        editable: true,
-        defaultValue: 'rgb(255, 0, 0)'
-    },
-];
+// label_properties = [
+//     {
+//         name: 'label',
+//         displayName: 'Label内容',
+//         accessType: 'style',
+//         editable: true,
+//     },
+//     {
+//         name: 'label.font',
+//         displayName: 'Label字体',
+//         accessType: 'style',
+//         valueType: 'string',
+//         editable: true
+//     },
+//     {
+//         name: 'label.position',
+//         displayName: 'Label位置',
+//         accessType: 'style',
+//         valueType: 'string',
+//         editable: true,
+//         enum: {
+//             labels: ["上", "下", "中", "左", "右", "外部上", "外部下", "外部左", "外部右"],
+//             values: [11, 23, 17, 16, 18, 3, 31, 14, 20]
+//         }
+//     },
+//     {
+//         name: 'label.color',
+//         displayName: 'Label颜色',
+//         accessType: 'style',
+//         valueType: 'color',
+//         editable: true,
+//         defaultValue: 'rgb(255, 0, 0)'
+//     },
+// ];
 
 // 链接的配置
 link_properties = [
@@ -871,16 +871,48 @@ m_point_properties = [
 ];
 
 // 图元中含有 label 的设置
-// label_properties = [
-//     {
-//         name: 'node.label',
-//         displayName: '模板Label',
-//         accessType: 'attr',
-//         valueType: 'text',
-//         editable: true,
-//         defaultValue: ''
-//     }
-// ];
+label_properties = [
+	{
+        name: 'label',
+        displayName: 'Label内容',
+        accessType: 'style',
+        editable: true,
+    },
+	{
+        name: 'label.font',
+        displayName: 'Label字体',
+        accessType: 'style',
+        valueType: 'string',
+        editable: true
+    },
+	{
+        name: 'label.position',
+        displayName: 'Label位置',
+        accessType: 'style',
+        valueType: 'string',
+        editable: true,
+        enum: {
+           labels: ["上", "下", "中", "左", "右", "外部上", "外部下", "外部左", "外部右"],
+           values: [11, 23, 17, 16, 18, 3, 31, 14, 20]
+        }
+    },
+    {
+        name: 'node.label',
+        displayName: '模板Label',
+        accessType: 'attr',
+        valueType: 'text',
+        editable: true,
+        defaultValue: ''
+    },
+    {
+        name: 'label.color',
+        displayName: 'Label颜色',
+        accessType: 'style',
+        valueType: 'color',
+        editable: true,
+        defaultValue: 'rgb(255, 0, 0)'
+    },
+];
 node_line_color_properties = [
     {
         name: 'node.line.color',
@@ -1099,5 +1131,236 @@ cb_properties = [
         accessType: 'attr',
         valueType: 'text',
         editable: true
+    },
+];
+//背景颜色配置项
+node_background = [
+    {
+        name: 'node.background',
+        displayName: '初始颜色',
+        accessType: 'attr',
+        valueType: 'color',
+        editable: true,
+    },
+    {
+        name: 'background.close',
+        displayName: '运行颜色',
+        accessType: 'attr',
+        valueType: 'color',
+        editable: true,
+    }
+]
+
+// 电动阀等两个测点图元的配置项
+ddf_properties = [
+    {
+        name: 'node.tag.ddfk',
+        displayName: '开/运行/合闸测点',
+        accessType: 'attr',
+        valueType: 'text',
+        editable: true
+    },
+    {
+        name: 'node.tag.ddfg',
+        displayName: '关/停止/分闸测点',
+        accessType: 'attr',
+        valueType: 'text',
+        editable: true
+    },
+    {
+        name: 'node.showName',
+        displayName: '名称',
+        accessType: 'attr',
+        valueType: 'text',
+        editable: true
+    },
+];
+//自定义测点返回文字
+label_text_DIY = [
+    {
+        name: 'node.signal.text0',
+        displayName: '信号0内容',
+        accessType: 'attr',
+        valueType: 'text',
+        editable: true
+    },
+    {
+        name: 'node.signal.text1',
+        displayName: '信号1内容',
+        accessType: 'attr',
+        valueType: 'text',
+        editable: true,
+    },
+    {
+        name: 'signal.color.text0',
+        displayName: '信号0内容颜色',
+        accessType: 'attr',
+        valueType: 'color',
+        editable: true,
+    },
+    {
+        name: 'signal.color.text1',
+        displayName: '信号1内容颜色',
+        accessType: 'attr',
+        valueType: 'color',
+        editable: true,
+    },
+    {
+        name: 'signal.font',
+        displayName: '字体大小',
+        accessType: 'attr',
+        valueType: 'string',
+        defaultValue: "14px arial, sans-serif",
+        editable: true
+    },
+    {
+        name: 'signal.align',
+        displayName: '水平对齐',
+        accessType: 'attr',
+        editable: true,
+        defaultValue: 'center',
+        enum: {
+            values: ['left', 'center', 'right']
+        }
+    },
+];
+//自定义单测点返回文字
+text_DIY = [
+    {
+        name: 'node.isSet',
+        displayName: '文字是否根据信号值变动',
+        accessType: 'attr',
+        valueType: 'text',
+        editable: true
+    },
+    {
+        name: 'node.signal',
+        displayName: '信号值0',
+        accessType: 'attr',
+        valueType: 'text',
+        editable: true
+    },
+    {
+        name: 'node.signal.text',
+        displayName: '文本内容',
+        accessType: 'attr',
+        valueType: 'text',
+        editable: true
+    },
+    {
+        name: 'signal.color',
+        displayName: '初始字体颜色',
+        accessType: 'attr',
+        valueType: 'color',
+        editable: true,
+    },
+    {
+        name: 'signal.color1',
+        displayName: '运行字体颜色',
+        accessType: 'attr',
+        valueType: 'color',
+        editable: true,
+    },
+    {
+        name: 'signal.font',
+        displayName: '字体大小',
+        accessType: 'attr',
+        valueType: 'string',
+        defaultValue: "14px arial, sans-serif",
+        editable: true
+    },
+    {
+        name: 'signal.align',
+        displayName: '水平对齐',
+        accessType: 'attr',
+        editable: true,
+        defaultValue: 'center',
+        enum: {
+            values: ['left', 'center', 'right']
+        }
+    },
+];
+//自定义单测点返回文字 文字随测点变化（目前仅3个信号）
+text_DIY_choose = [
+    {
+        name: 'node.signal',
+        displayName: '信号值0',
+        accessType: 'attr',
+        valueType: 'text',
+        editable: true
+    },
+    {
+        name: 'node.signal.text',
+        displayName: '文本内容',
+        accessType: 'attr',
+        valueType: 'text',
+        editable: true
+    },
+    {
+        name: 'node.signal1',
+        displayName: '信号值1',
+        accessType: 'attr',
+        valueType: 'text',
+        editable: true
+    },
+    {
+        name: 'node.signal.text1',
+        displayName: '文本内容1',
+        accessType: 'attr',
+        valueType: 'text',
+        editable: true
+    },
+    {
+        name: 'node.signal2',
+        displayName: '信号值2',
+        accessType: 'attr',
+        valueType: 'text',
+        editable: true
+    },
+    {
+        name: 'node.signal.text2',
+        displayName: '文本内容2',
+        accessType: 'attr',
+        valueType: 'text',
+        editable: true
+    },
+    {
+        name: 'node.signal3',
+        displayName: '信号值3',
+        accessType: 'attr',
+        valueType: 'text',
+        editable: true
+    },
+    {
+        name: 'node.signal.text3',
+        displayName: '文本内容3',
+        accessType: 'attr',
+        valueType: 'text',
+        editable: true
+    },
+    {
+        name: 'signal.color',
+        displayName: '字体颜色',
+        accessType: 'attr',
+        valueType: 'color',
+        editable: true,
+    },
+    {
+        name: 'signal.font',
+        displayName: '字体大小',
+        accessType: 'attr',
+        valueType: 'string',
+        defaultValue: "14px arial, sans-serif",
+        editable: true
+    },
+    {
+        name: 'signal.align',
+        displayName: '水平对齐',
+        accessType: 'attr',
+        editable: true,
+        defaultValue: 'center',
+        enum: {
+            values: ['left', 'center', 'right']
+        }
     },
 ];

@@ -1,0 +1,171 @@
+{
+  "modified": "Thu Jun 08 2023 14:58:36 GMT+0800 (中国标准时间)",
+  "dataBindings": [
+    {
+      "attr": "node.cate",
+      "valueType": "String",
+      "defaultValue": "m-point"
+    },
+    {
+      "attr": "node.type",
+      "valueType": "String",
+      "defaultValue": "m-state"
+    },
+    {
+      "attr": "node.name",
+      "valueType": "String",
+      "defaultValue": "switch"
+    },
+    {
+      "attr": "node.direction",
+      "valueType": "String",
+      "defaultValue": "up"
+    },
+    {
+      "attr": "node.state",
+      "valueType": "Number",
+      "defaultValue": 0,
+      "name": "状态"
+    }
+  ],
+  "width": 32,
+  "height": 27,
+  "comps": [
+    {
+      "type": "rect",
+      "background": {
+        "func": "__ht__function(data, view) {\n let d=data.a('node.state'),r='#00FF00';if(d<=0) r='#00FF00';\nif(d==100) r='#FF0000'\nif(d>0&&d<100) r='#FFFFFF'\n return r;\n}",
+        "value": "#00FF00"
+      },
+      "borderWidth": 0.1,
+      "borderColor": "rgb(0,0,0)",
+      "anchorY": 0,
+      "rotation": {
+        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'up')res=0;\nif(dir === 'right')res=90;\nif(dir === 'down')res=180;\nif(dir === 'left')res=270;\nreturn res/180*Math.PI;\n}",
+        "value": 0
+      },
+      "rect": [
+        15.62504,
+        12.64992,
+        0.75,
+        6.95
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": {
+        "func": "__ht__function(data, view) {\n let d=data.a('node.state'),r='#00FF00';if(d<=0) r='#00FF00';\nif(d==100) r='#FF0000'\nif(d>0&&d<100) r='#FFFFFF'\n return r;\n}",
+        "value": "#00FF00"
+      },
+      "borderWidth": 0.1,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(0,0,0)"
+      },
+      "anchorX": 1.10435,
+      "anchorY": 0,
+      "rotation": {
+        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'up')res=270;\nif(dir === 'right')res=0;\nif(dir === 'down')res=90;\nif(dir === 'left')res=180;\nreturn res/180*Math.PI;\n}",
+        "value": 4.71239
+      },
+      "rect": [
+        3.30007,
+        12.64992,
+        11.5,
+        15
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": {
+        "func": "__ht__function(data, view) {\n let d=data.a('node.state'),r='#00FF00';if(d<=0) r='#00FF00';\nif(d==100) r='#FF0000'\nif(d>0&&d<100) r='#FFFFFF'\n return r;\n}",
+        "value": "#00FF00"
+      },
+      "borderWidth": 0.1,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(0,0,0)"
+      },
+      "anchorX": -0.10435,
+      "anchorY": 0,
+      "rotation": {
+        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'up')res=90;\nif(dir === 'right')res=180;\nif(dir === 'down')res=270;\nif(dir === 'left')res=0;\nreturn res/180*Math.PI;\n}",
+        "value": 1.5708
+      },
+      "rect": [
+        17.20007,
+        12.64992,
+        11.5,
+        15
+      ]
+    },
+    {
+      "type": "rect",
+      "background": {
+        "func": "__ht__function(data, view) {\n let d=data.a('node.state'),r='#00FF00';if(d<=0) r='#00FF00';\nif(d==100) r='#FF0000'\nif(d>0&&d<100) r='#FFFFFF'\n return r;\n}",
+        "value": "#00FF00"
+      },
+      "borderWidth": 0.1,
+      "borderColor": "rgb(0,0,0)",
+      "anchorX": 0,
+      "rotation": {
+        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'up')res=270;\nif(dir === 'right')res=0;\nif(dir === 'down')res=90;\nif(dir === 'left')res=180;\nreturn res/180*Math.PI;\n}",
+        "value": 4.71239
+      },
+      "rect": [
+        15.99998,
+        4.65004,
+        12,
+        16
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 0.1,
+      "borderColor": "rgb(0,0,0)",
+      "anchorX": 1,
+      "rotation": {
+        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'up')res=90;\nif(dir === 'right')res=180;\nif(dir === 'down')res=270;\nif(dir === 'left')res=0;\nreturn res/180*Math.PI;\n}",
+        "value": 1.5708
+      },
+      "points": [
+        12.00007,
+        12.64994,
+        16.00007,
+        12.64991
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(0,0,0)",
+      "borderColor": "rgb(0,0,0)",
+      "anchorY": 41,
+      "rotation": {
+        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'up')res=0;\nif(dir === 'right')res=90;\nif(dir === 'down')res=180;\nif(dir === 'left')res=270;\nreturn res/180*Math.PI;\n}",
+        "value": 0
+      },
+      "rect": [
+        8.00009,
+        8.54992,
+        16,
+        0.1
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(0,0,0)",
+      "borderColor": "rgb(0,0,0)",
+      "anchorY": 58,
+      "rotation": {
+        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'up')res=0;\nif(dir === 'right')res=90;\nif(dir === 'down')res=180;\nif(dir === 'left')res=270;\nreturn res/180*Math.PI;\n}",
+        "value": 0
+      },
+      "rect": [
+        8.00011,
+        6.9,
+        16,
+        0.1
+      ]
+    }
+  ]
+}

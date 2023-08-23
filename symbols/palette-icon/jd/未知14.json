@@ -1,0 +1,114 @@
+{
+  "modified": "Mon Jan 09 2023 17:08:50 GMT+0800 (中国标准时间)",
+  "width": 36,
+  "height": 62,
+  "comps": [
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(0,255,0)",
+      "points": [
+        10.28273,
+        38,
+        10.28273,
+        31.56671
+      ]
+    },
+    {
+      "type": "circle",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@lineColor",
+        "value": "rgb(0,255,0)"
+      },
+      "displayName": "1",
+      "rect": [
+        6.28273,
+        0,
+        19.83089,
+        19.83089
+      ]
+    },
+    {
+      "type": "circle",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@lineColor",
+        "value": "rgb(0,255,0)"
+      },
+      "displayName": "1",
+      "rect": [
+        6.28273,
+        13.73582,
+        19.83089,
+        19.83089
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(0,255,0)",
+      "points": [
+        22.28273,
+        38,
+        22.28273,
+        31.56671
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(0,255,0)",
+      "borderColor": "#979797",
+      "rect": [
+        4.01721,
+        37.62017,
+        24.25839,
+        9.96848
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(0,255,0)",
+      "borderWidth": 1,
+      "borderColor": "#979797",
+      "rect": [
+        0.50862,
+        48.58156,
+        13.53436,
+        12.8834
+      ]
+    },
+    {
+      "type": "text",
+      "text": "A",
+      "rect": [
+        0.50862,
+        49.93246,
+        11.38269,
+        9.76528
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(221,255,0)",
+      "borderWidth": 1,
+      "borderColor": "#979797",
+      "rect": [
+        16.14641,
+        48.58156,
+        19.74977,
+        12.8834
+      ]
+    },
+    {
+      "type": "text",
+      "text": "NP",
+      "rect": [
+        15.26328,
+        48.16524,
+        19.47951,
+        13.29973
+      ]
+    }
+  ]
+}

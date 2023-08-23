@@ -1,0 +1,1028 @@
+{
+  "modified": "Mon Jan 09 2023 17:08:34 GMT+0800 (中国标准时间)",
+  "dataBindings": [
+    {
+      "attr": "node.cate",
+      "valueType": "String",
+      "defaultValue": "m-point"
+    },
+    {
+      "attr": "node.type",
+      "valueType": "String",
+      "defaultValue": "switch"
+    },
+    {
+      "attr": "node.state",
+      "valueType": "Boolean",
+      "defaultValue": true,
+      "name": "点火燃烧器状态"
+    }
+  ],
+  "width": 260,
+  "height": 260,
+  "comps": [
+    {
+      "type": "oval",
+      "background": "#D8D8D8",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,0,0)",
+      "rect": [
+        1,
+        1,
+        257.93309,
+        257.93309
+      ]
+    },
+    {
+      "type": "oval",
+      "background": "rgb(107,102,102)",
+      "borderWidth": 1,
+      "borderColor": "#979797",
+      "anchorX": 0.47942,
+      "anchorY": 0.52169,
+      "rotation": -0.1697,
+      "rect": [
+        48.31749,
+        48.53327,
+        164.13924,
+        164.13924
+      ]
+    },
+    {
+      "type": "trapezoid",
+      "background": "rgb(107,102,102)",
+      "borderWidth": 1,
+      "borderColor": "#979797",
+      "rotation": -0.1697,
+      "rect": [
+        102.96412,
+        25.84535,
+        23.44847,
+        32.82785
+      ]
+    },
+    {
+      "type": "trapezoid",
+      "background": "rgb(107,102,102)",
+      "borderWidth": 1,
+      "borderColor": "#979797",
+      "anchorY": 3.21607,
+      "rotation": 0.1676,
+      "rect": [
+        118.02287,
+        24.56451,
+        23.44847,
+        32.82785
+      ]
+    },
+    {
+      "type": "trapezoid",
+      "background": "rgb(107,102,102)",
+      "borderWidth": 1,
+      "borderColor": "#979797",
+      "anchorY": 3.21607,
+      "rotation": 0.50943,
+      "rect": [
+        117.96635,
+        24.23476,
+        23.44847,
+        32.82785
+      ]
+    },
+    {
+      "type": "trapezoid",
+      "background": "rgb(107,102,102)",
+      "borderWidth": 1,
+      "borderColor": "#979797",
+      "anchorY": 3.21607,
+      "rotation": 0.83664,
+      "rect": [
+        117.96635,
+        24.23476,
+        23.44847,
+        32.82785
+      ]
+    },
+    {
+      "type": "trapezoid",
+      "background": "rgb(107,102,102)",
+      "borderWidth": 1,
+      "borderColor": "#979797",
+      "anchorY": 3.21607,
+      "rotation": 1.1648,
+      "rect": [
+        118.07067,
+        24.21686,
+        23.44847,
+        32.82785
+      ]
+    },
+    {
+      "type": "trapezoid",
+      "background": "rgb(107,102,102)",
+      "borderWidth": 1,
+      "borderColor": "#979797",
+      "rotation": 1.47277,
+      "rect": [
+        207.56105,
+        106.62442,
+        23.44847,
+        32.82785
+      ]
+    },
+    {
+      "type": "trapezoid",
+      "background": "rgb(107,102,102)",
+      "borderWidth": 1,
+      "borderColor": "#979797",
+      "anchorY": 3.21607,
+      "rotation": 1.81007,
+      "rect": [
+        118.82632,
+        26.1879,
+        23.44847,
+        32.82785
+      ]
+    },
+    {
+      "type": "trapezoid",
+      "background": "rgb(107,102,102)",
+      "borderWidth": 1,
+      "borderColor": "#979797",
+      "anchorY": 3.21607,
+      "rotation": 2.15191,
+      "rect": [
+        119.15929,
+        26.15515,
+        23.44847,
+        32.82785
+      ]
+    },
+    {
+      "type": "trapezoid",
+      "background": "rgb(107,102,102)",
+      "borderWidth": 1,
+      "borderColor": "#979797",
+      "anchorY": 3.21607,
+      "rotation": 2.47911,
+      "rect": [
+        119.15929,
+        26.15515,
+        23.44847,
+        32.82785
+      ]
+    },
+    {
+      "type": "trapezoid",
+      "background": "rgb(107,102,102)",
+      "borderWidth": 1,
+      "borderColor": "#979797",
+      "anchorY": 3.21607,
+      "rotation": 2.80727,
+      "rect": [
+        119.16965,
+        26.26049,
+        23.44847,
+        32.82785
+      ]
+    },
+    {
+      "type": "trapezoid",
+      "background": "rgb(107,102,102)",
+      "borderWidth": 1,
+      "borderColor": "#979797",
+      "rotation": 3.12196,
+      "rect": [
+        120.95205,
+        204.83189,
+        23.44847,
+        32.82785
+      ]
+    },
+    {
+      "type": "trapezoid",
+      "background": "rgb(107,102,102)",
+      "borderWidth": 1,
+      "borderColor": "#979797",
+      "anchorY": 3.21607,
+      "rotation": -2.82393,
+      "rect": [
+        119.20141,
+        26.52351,
+        23.44847,
+        32.82785
+      ]
+    },
+    {
+      "type": "trapezoid",
+      "background": "rgb(107,102,102)",
+      "borderWidth": 1,
+      "borderColor": "#979797",
+      "anchorY": 3.21607,
+      "rotation": -2.48209,
+      "rect": [
+        119.20797,
+        26.85803,
+        23.44847,
+        32.82785
+      ]
+    },
+    {
+      "type": "trapezoid",
+      "background": "rgb(107,102,102)",
+      "borderWidth": 1,
+      "borderColor": "#979797",
+      "anchorY": 3.21607,
+      "rotation": -2.15489,
+      "rect": [
+        119.20797,
+        26.85803,
+        23.44847,
+        32.82785
+      ]
+    },
+    {
+      "type": "trapezoid",
+      "background": "rgb(107,102,102)",
+      "borderWidth": 1,
+      "borderColor": "#979797",
+      "anchorY": 3.21607,
+      "rotation": -1.82673,
+      "rect": [
+        119.10214,
+        26.86012,
+        23.44847,
+        32.82785
+      ]
+    },
+    {
+      "type": "trapezoid",
+      "background": "rgb(107,102,102)",
+      "borderWidth": 1,
+      "borderColor": "#979797",
+      "rotation": -1.51875,
+      "rect": [
+        29.60762,
+        109.32285,
+        23.44847,
+        32.82785
+      ]
+    },
+    {
+      "type": "trapezoid",
+      "background": "rgb(107,102,102)",
+      "borderWidth": 1,
+      "borderColor": "#979797",
+      "anchorY": 3.21607,
+      "rotation": -1.18145,
+      "rect": [
+        118.64968,
+        24.79824,
+        23.44847,
+        32.82785
+      ]
+    },
+    {
+      "type": "trapezoid",
+      "background": "rgb(107,102,102)",
+      "borderWidth": 1,
+      "borderColor": "#979797",
+      "anchorY": 3.21607,
+      "rotation": -0.83962,
+      "rect": [
+        118.31554,
+        24.78085,
+        23.44847,
+        32.82785
+      ]
+    },
+    {
+      "type": "trapezoid",
+      "background": "rgb(107,102,102)",
+      "borderWidth": 1,
+      "borderColor": "#979797",
+      "anchorY": 3.21607,
+      "rotation": -0.51241,
+      "rect": [
+        118.31554,
+        24.78085,
+        23.44847,
+        32.82785
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 1,
+      "borderColor": "#979797",
+      "anchorX": 0.45888,
+      "anchorY": 9,
+      "rect": [
+        117.00987,
+        15.06908,
+        24.68091,
+        12.7244
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 1,
+      "borderColor": "#979797",
+      "anchorX": 0.45888,
+      "anchorY": 9,
+      "rotation": 0.3283,
+      "rect": [
+        118.24231,
+        15.74141,
+        24.68091,
+        12.7244
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 1,
+      "borderColor": "#979797",
+      "anchorX": 0.45888,
+      "anchorY": 9,
+      "rotation": 0.66516,
+      "rect": [
+        118.31512,
+        15.32739,
+        24.68091,
+        12.7244
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 1,
+      "borderColor": "#979797",
+      "anchorX": 0.45888,
+      "anchorY": 9,
+      "rotation": 0.97284,
+      "rect": [
+        118.31512,
+        15.32739,
+        24.68091,
+        12.7244
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 1,
+      "borderColor": "#979797",
+      "anchorX": 0.45888,
+      "anchorY": 9,
+      "rotation": 1.31538,
+      "rect": [
+        118.31512,
+        15.32739,
+        24.68091,
+        12.7244
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 1,
+      "borderColor": "#979797",
+      "anchorX": 0.45888,
+      "anchorY": 9,
+      "rotation": 1.62835,
+      "rect": [
+        118.55695,
+        18.5537,
+        24.68091,
+        12.7244
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 1,
+      "borderColor": "#979797",
+      "anchorX": 0.45888,
+      "anchorY": 9,
+      "rotation": 1.95665,
+      "rect": [
+        117.81482,
+        19.74545,
+        24.68091,
+        12.7244
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 1,
+      "borderColor": "#979797",
+      "anchorX": 0.45888,
+      "anchorY": 9,
+      "rotation": 2.29351,
+      "rect": [
+        118.22398,
+        19.84195,
+        24.68091,
+        12.7244
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 1,
+      "borderColor": "#979797",
+      "anchorX": 0.45888,
+      "anchorY": 9,
+      "rotation": 2.60119,
+      "rect": [
+        118.22398,
+        19.84195,
+        24.68091,
+        12.7244
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 1,
+      "borderColor": "#979797",
+      "anchorX": 0.45888,
+      "anchorY": 9,
+      "rotation": 2.94372,
+      "rect": [
+        118.22398,
+        19.84195,
+        24.68091,
+        12.7244
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 1,
+      "borderColor": "#979797",
+      "anchorX": 0.45888,
+      "anchorY": 9,
+      "rotation": -2.95979,
+      "rect": [
+        121.32307,
+        20.07247,
+        24.68091,
+        12.7244
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 1,
+      "borderColor": "#979797",
+      "anchorX": 0.45888,
+      "anchorY": 9,
+      "rotation": -2.63149,
+      "rect": [
+        120.23248,
+        19.18839,
+        24.68091,
+        12.7244
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 1,
+      "borderColor": "#979797",
+      "anchorX": 0.45888,
+      "anchorY": 9,
+      "rotation": -2.29463,
+      "rect": [
+        120.086,
+        19.58244,
+        24.68091,
+        12.7244
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 1,
+      "borderColor": "#979797",
+      "anchorX": 0.45888,
+      "anchorY": 9,
+      "rotation": -1.98695,
+      "rect": [
+        120.086,
+        19.58244,
+        24.68091,
+        12.7244
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 1,
+      "borderColor": "#979797",
+      "anchorX": 0.45888,
+      "anchorY": 9,
+      "rotation": -1.64441,
+      "rect": [
+        120.086,
+        19.58244,
+        24.68091,
+        12.7244
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 1,
+      "borderColor": "#979797",
+      "anchorX": 0.45888,
+      "anchorY": 9,
+      "rotation": -1.33144,
+      "rect": [
+        120.43149,
+        16.36557,
+        24.68091,
+        12.7244
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 1,
+      "borderColor": "#979797",
+      "anchorX": 0.45888,
+      "anchorY": 9,
+      "rotation": -1.00314,
+      "rect": [
+        121.37684,
+        15.32763,
+        24.68091,
+        12.7244
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 1,
+      "borderColor": "#979797",
+      "anchorX": 0.45888,
+      "anchorY": 9,
+      "rotation": -0.66628,
+      "rect": [
+        120.99188,
+        15.15875,
+        24.68091,
+        12.7244
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 1,
+      "borderColor": "#979797",
+      "anchorX": 0.45888,
+      "anchorY": 9,
+      "rotation": -0.3586,
+      "rect": [
+        120.99188,
+        15.15875,
+        24.68091,
+        12.7244
+      ]
+    },
+    {
+      "type": "diamond",
+      "background": {
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : 'rgb(107,102,102)';\n}",
+        "value": "rgb(255,0,0)"
+      },
+      "borderWidth": 1,
+      "borderColor": "rgba(255,255,0,0)",
+      "gradient": "linear.north",
+      "gradientColor": {
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(247,255,0)' : 'rgb(107,102,102)';\n}",
+        "value": "rgb(247,255,0)"
+      },
+      "rect": [
+        121.78066,
+        50.37514,
+        16.37179,
+        26.95137
+      ]
+    },
+    {
+      "type": "diamond",
+      "background": {
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : 'rgb(107,102,102)';\n}",
+        "value": "rgb(255,0,0)"
+      },
+      "borderWidth": 1,
+      "borderColor": "rgba(255,255,0,0)",
+      "gradient": "linear.north",
+      "gradientColor": {
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(247,255,0)' : 'rgb(107,102,102)';\n}",
+        "value": "rgb(247,255,0)"
+      },
+      "anchorX": 0.54432,
+      "anchorY": 3,
+      "rotation": 0.33568,
+      "rect": [
+        121.55131,
+        50.37514,
+        16.37179,
+        26.95137
+      ]
+    },
+    {
+      "type": "diamond",
+      "background": {
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : 'rgb(107,102,102)';\n}",
+        "value": "rgb(255,0,0)"
+      },
+      "borderWidth": 1,
+      "borderColor": "rgba(255,255,0,0)",
+      "gradient": "linear.north",
+      "gradientColor": {
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(247,255,0)' : 'rgb(107,102,102)';\n}",
+        "value": "rgb(247,255,0)"
+      },
+      "anchorX": 0.54432,
+      "anchorY": 3,
+      "rotation": 0.66525,
+      "rect": [
+        121.55131,
+        51.06909,
+        16.37179,
+        26.95137
+      ]
+    },
+    {
+      "type": "diamond",
+      "background": {
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : 'rgb(107,102,102)';\n}",
+        "value": "rgb(255,0,0)"
+      },
+      "borderWidth": 1,
+      "borderColor": "rgba(255,255,0,0)",
+      "gradient": "linear.north",
+      "gradientColor": {
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(247,255,0)' : 'rgb(107,102,102)';\n}",
+        "value": "rgb(247,255,0)"
+      },
+      "anchorX": 0.54432,
+      "anchorY": 3,
+      "rotation": 1.00794,
+      "rect": [
+        121.55131,
+        49.55449,
+        16.37179,
+        26.95137
+      ]
+    },
+    {
+      "type": "diamond",
+      "background": {
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : 'rgb(107,102,102)';\n}",
+        "value": "rgb(255,0,0)"
+      },
+      "borderWidth": 1,
+      "borderColor": "rgba(255,255,0,0)",
+      "gradient": "linear.north",
+      "gradientColor": {
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(247,255,0)' : 'rgb(107,102,102)';\n}",
+        "value": "rgb(247,255,0)"
+      },
+      "anchorX": 0.54432,
+      "anchorY": 3,
+      "rotation": 1.31657,
+      "rect": [
+        120.1021,
+        49.8264,
+        16.37179,
+        26.95137
+      ]
+    },
+    {
+      "type": "diamond",
+      "background": {
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : 'rgb(107,102,102)';\n}",
+        "value": "rgb(255,0,0)"
+      },
+      "borderWidth": 1,
+      "borderColor": "rgba(255,255,0,0)",
+      "gradient": "linear.north",
+      "gradientColor": {
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(247,255,0)' : 'rgb(107,102,102)';\n}",
+        "value": "rgb(247,255,0)"
+      },
+      "anchorX": 0.54432,
+      "anchorY": 3,
+      "rotation": 1.64108,
+      "rect": [
+        119.31864,
+        51.4508,
+        16.37179,
+        26.95137
+      ]
+    },
+    {
+      "type": "diamond",
+      "background": {
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : 'rgb(107,102,102)';\n}",
+        "value": "rgb(255,0,0)"
+      },
+      "borderWidth": 1,
+      "borderColor": "rgba(255,255,0,0)",
+      "gradient": "linear.north",
+      "gradientColor": {
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(247,255,0)' : 'rgb(107,102,102)';\n}",
+        "value": "rgb(247,255,0)"
+      },
+      "anchorX": 0.54432,
+      "anchorY": 3,
+      "rotation": 1.99619,
+      "rect": [
+        120.5264,
+        49.48942,
+        16.37179,
+        26.95137
+      ]
+    },
+    {
+      "type": "diamond",
+      "background": {
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : 'rgb(107,102,102)';\n}",
+        "value": "rgb(255,0,0)"
+      },
+      "borderWidth": 1,
+      "borderColor": "rgba(255,255,0,0)",
+      "gradient": "linear.north",
+      "gradientColor": {
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(247,255,0)' : 'rgb(107,102,102)';\n}",
+        "value": "rgb(247,255,0)"
+      },
+      "anchorX": 0.54432,
+      "anchorY": 3,
+      "rotation": 2.31601,
+      "rect": [
+        120.67327,
+        49.58851,
+        16.37179,
+        26.95137
+      ]
+    },
+    {
+      "type": "diamond",
+      "background": {
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : 'rgb(107,102,102)';\n}",
+        "value": "rgb(255,0,0)"
+      },
+      "borderWidth": 1,
+      "borderColor": "rgba(255,255,0,0)",
+      "gradient": "linear.north",
+      "gradientColor": {
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(247,255,0)' : 'rgb(107,102,102)';\n}",
+        "value": "rgb(247,255,0)"
+      },
+      "anchorX": 0.54432,
+      "anchorY": 3,
+      "rotation": 2.6363,
+      "rect": [
+        119.60989,
+        49.3896,
+        16.37179,
+        26.95137
+      ]
+    },
+    {
+      "type": "diamond",
+      "background": {
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : 'rgb(107,102,102)';\n}",
+        "value": "rgb(255,0,0)"
+      },
+      "borderWidth": 1,
+      "borderColor": "rgba(255,255,0,0)",
+      "gradient": "linear.north",
+      "gradientColor": {
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(247,255,0)' : 'rgb(107,102,102)';\n}",
+        "value": "rgb(247,255,0)"
+      },
+      "rotation": -3.04047,
+      "rect": [
+        112.44619,
+        183.2353,
+        16.37179,
+        26.95137
+      ]
+    },
+    {
+      "type": "diamond",
+      "background": {
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : 'rgb(107,102,102)';\n}",
+        "value": "rgb(255,0,0)"
+      },
+      "borderWidth": 1,
+      "borderColor": "rgba(255,255,0,0)",
+      "gradient": "linear.north",
+      "gradientColor": {
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(247,255,0)' : 'rgb(107,102,102)';\n}",
+        "value": "rgb(247,255,0)"
+      },
+      "anchorX": 0.54432,
+      "anchorY": 3,
+      "rotation": -2.70479,
+      "rect": [
+        118.86484,
+        47.52474,
+        16.37179,
+        26.95137
+      ]
+    },
+    {
+      "type": "diamond",
+      "background": {
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : 'rgb(107,102,102)';\n}",
+        "value": "rgb(255,0,0)"
+      },
+      "borderWidth": 1,
+      "borderColor": "rgba(255,255,0,0)",
+      "gradient": "linear.north",
+      "gradientColor": {
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(247,255,0)' : 'rgb(107,102,102)';\n}",
+        "value": "rgb(247,255,0)"
+      },
+      "anchorX": 0.54432,
+      "anchorY": 3,
+      "rotation": -2.37522,
+      "rect": [
+        120.05777,
+        47.56937,
+        16.37179,
+        26.95137
+      ]
+    },
+    {
+      "type": "diamond",
+      "background": {
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : 'rgb(107,102,102)';\n}",
+        "value": "rgb(255,0,0)"
+      },
+      "borderWidth": 1,
+      "borderColor": "rgba(255,255,0,0)",
+      "gradient": "linear.north",
+      "gradientColor": {
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(247,255,0)' : 'rgb(107,102,102)';\n}",
+        "value": "rgb(247,255,0)"
+      },
+      "anchorX": 0.54432,
+      "anchorY": 3,
+      "rotation": -2.03253,
+      "rect": [
+        120.85229,
+        47.23587,
+        16.37179,
+        26.95137
+      ]
+    },
+    {
+      "type": "diamond",
+      "background": {
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : 'rgb(107,102,102)';\n}",
+        "value": "rgb(255,0,0)"
+      },
+      "borderWidth": 1,
+      "borderColor": "rgba(255,255,0,0)",
+      "gradient": "linear.north",
+      "gradientColor": {
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(247,255,0)' : 'rgb(107,102,102)';\n}",
+        "value": "rgb(247,255,0)"
+      },
+      "anchorX": 0.54432,
+      "anchorY": 3,
+      "rotation": -1.7239,
+      "rect": [
+        121.83475,
+        45.49936,
+        16.37179,
+        26.95137
+      ]
+    },
+    {
+      "type": "diamond",
+      "background": {
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : 'rgb(107,102,102)';\n}",
+        "value": "rgb(255,0,0)"
+      },
+      "borderWidth": 1,
+      "borderColor": "rgba(255,255,0,0)",
+      "gradient": "linear.north",
+      "gradientColor": {
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(247,255,0)' : 'rgb(107,102,102)';\n}",
+        "value": "rgb(247,255,0)"
+      },
+      "anchorX": 0.54432,
+      "anchorY": 3,
+      "rotation": -1.39939,
+      "rect": [
+        121.97795,
+        45.29574,
+        16.37179,
+        26.95137
+      ]
+    },
+    {
+      "type": "diamond",
+      "background": {
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : 'rgb(107,102,102)';\n}",
+        "value": "rgb(255,0,0)"
+      },
+      "borderWidth": 1,
+      "borderColor": "rgba(255,255,0,0)",
+      "gradient": "linear.north",
+      "gradientColor": {
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(247,255,0)' : 'rgb(107,102,102)';\n}",
+        "value": "rgb(247,255,0)"
+      },
+      "anchorX": 0.54432,
+      "anchorY": 3,
+      "rotation": -1.04428,
+      "rect": [
+        122.53539,
+        46.95789,
+        16.37179,
+        26.95137
+      ]
+    },
+    {
+      "type": "diamond",
+      "background": {
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : 'rgb(107,102,102)';\n}",
+        "value": "rgb(255,0,0)"
+      },
+      "borderWidth": 1,
+      "borderColor": "rgba(255,255,0,0)",
+      "gradient": "linear.north",
+      "gradientColor": {
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(247,255,0)' : 'rgb(107,102,102)';\n}",
+        "value": "rgb(247,255,0)"
+      },
+      "anchorX": 0.54432,
+      "anchorY": 3,
+      "rotation": -0.72446,
+      "rect": [
+        124.17583,
+        47.24573,
+        16.37179,
+        26.95137
+      ]
+    },
+    {
+      "type": "diamond",
+      "background": {
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : 'rgb(107,102,102)';\n}",
+        "value": "rgb(255,0,0)"
+      },
+      "borderWidth": 1,
+      "borderColor": "rgba(255,255,0,0)",
+      "gradient": "linear.north",
+      "gradientColor": {
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(247,255,0)' : 'rgb(107,102,102)';\n}",
+        "value": "rgb(247,255,0)"
+      },
+      "anchorX": 0.54432,
+      "anchorY": 3,
+      "rotation": -0.40417,
+      "rect": [
+        125.2137,
+        47.55098,
+        16.37179,
+        26.95137
+      ]
+    },
+    {
+      "type": "diamond",
+      "background": {
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : 'rgb(107,102,102)';\n}",
+        "value": "rgb(255,0,0)"
+      },
+      "borderWidth": 1,
+      "borderColor": "rgba(255,255,0,0)",
+      "gradient": "linear.north",
+      "gradientColor": {
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(247,255,0)' : 'rgb(107,102,102)';\n}",
+        "value": "rgb(247,255,0)"
+      },
+      "rotation": 2.96856,
+      "rect": [
+        133.50488,
+        181.88632,
+        16.37179,
+        26.95137
+      ]
+    }
+  ]
+}

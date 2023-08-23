@@ -1,0 +1,86 @@
+{
+  "modified": "Tue Jun 06 2023 17:42:29 GMT+0800 (中国标准时间)",
+  "dataBindings": [
+    {
+      "attr": "node.cate",
+      "valueType": "String",
+      "defaultValue": "m-point"
+    },
+    {
+      "attr": "node.type",
+      "valueType": "String",
+      "defaultValue": "switch"
+    },
+    {
+      "attr": "node.name",
+      "valueType": "String",
+      "defaultValue": "switch"
+    },
+    {
+      "attr": "node.state",
+      "valueType": "Boolean",
+      "defaultValue": false,
+      "name": "状态"
+    },
+    {
+      "attr": "node.background",
+      "valueType": "Color",
+      "defaultValue": "rgb(0,255,0)"
+    },
+    {
+      "attr": "background.close",
+      "valueType": "Color",
+      "defaultValue": "rgb(255, 0, 0)"
+    }
+  ],
+  "width": 50,
+  "height": 50,
+  "comps": [
+    {
+      "type": "rect",
+      "background": {
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? data.a('background.close') : data.a('node.background');\n}",
+        "value": "rgb(0,255,0)"
+      },
+      "borderWidth": 1,
+      "borderColor": "rgb(0,0,0)",
+      "rect": [
+        0,
+        0,
+        50,
+        50
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 1,
+      "borderColor": "#D8D8D8",
+      "rect": [
+        10,
+        10,
+        30,
+        30
+      ]
+    },
+    {
+      "type": "rect",
+      "background": {
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? data.a('background.close') : data.a('node.background');\n}",
+        "value": "rgb(0,255,0)"
+      },
+      "rotation": {
+        "func": "__ht__function(data, view){\nlet dir=data.a('node.state'),res=0;\nif(dir)res=90;\n else res=0;\nreturn res/180*Math.PI;\n}",
+        "value": 0
+      },
+      "borderWidth": 1,
+      "borderColor": "rgb(0,0,0)",
+      "rect": [
+        10,
+        21,
+        30,
+        8
+      ]
+    }
+  ]
+}
