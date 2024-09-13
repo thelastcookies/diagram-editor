@@ -12,6 +12,7 @@
         }
     </style>
 
+    <script src="./js/lodash.js"></script>
     <script src="config/htconfig.js"></script>
 
     <script src="lib/core/JSylzXFVSW8t.js"></script>
@@ -698,8 +699,8 @@
         /***
          * localDataModelStorage
          */
-        function localDataModelStorage(dataModel) {
-            dataModelStorage['dataModel'] = dataModel.serialize(2);
+        function localDataModelStorage() {
+            dataModelStorage['dataModel'] = indexDataModel.serialize(2);
         }
 
         function initPanelView (graphView) {
@@ -865,10 +866,10 @@
             initContext();
             resetDefault();
             indexDataModel.mm(function (e) {
-                localDataModelStorage(indexDataModel);
+                _.debounce(localDataModelStorage, 500);
             });
             indexDataModel.md(function (e) {
-                localDataModelStorage(indexDataModel);
+                _.debounce(localDataModelStorage, 500);
             });
             mainSplit.addToDOM();
             g2d.fitContent(true);
