@@ -264,7 +264,7 @@ toolbar_config_right = [
             g2d.removeBottomPainter(gridPainter);
             gridPainter = new ht.graph.GridPainter(g2d, gridColorStatus === 'light' ? 'dark' : 'light');
             g2d.addBottomPainter(gridPainter);
-            document.getElementsByClassName('editCanvas')[0].parentNode.style.backgroundColor = gridColorStatus === 'light' ? '#aaa' : '#FFF';
+            document.getElementsByClassName('editCanvas')[0].parentNode.style.backgroundColor = gridColorStatus === 'light' ? '#111' : '#FFF';
         }
     },
     {
