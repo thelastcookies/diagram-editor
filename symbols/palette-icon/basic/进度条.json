@@ -27,12 +27,12 @@
       "defaultValue": "rgb(0,255,0)"
     },
     {
-      "attr": "bar.min",
+      "attr": "node.value.min",
       "valueType": "Number",
       "defaultValue": 0
     },
     {
-      "attr": "bar.max",
+      "attr": "node.value.max",
       "valueType": "Number",
       "defaultValue": 10
     },
