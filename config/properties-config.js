@@ -12,6 +12,13 @@ text_properties = [
     },
     {
         categoryName: '文本',
+        name: 'text.vertical',
+        displayName: '文字竖排',
+        accessType: 'style',
+        editable: true
+    },
+    {
+        categoryName: '文本',
         name: 'text.align',
         displayName: '水平对齐',
         accessType: 'style',
@@ -47,7 +54,7 @@ text_properties = [
         accessType: 'style',
         valueType: 'text',
         editable: true,
-        defaultValue: '20待定2.jsonpx arial, sans-serif'
+        defaultValue: '20px arial, sans-serif'
     },
     // {
     //     categoryName: '文本',
