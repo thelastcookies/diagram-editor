@@ -1,0 +1,97 @@
+{
+  "modified": "Fri Nov 08 2024 15:49:07 GMT+0800 (中国标准时间)",
+  "width": 30,
+  "height": 34,
+  "comps": [
+    {
+      "type": "oval",
+      "background": "#D8D8D8",
+      "borderWidth": 0.1,
+      "borderColor": "rgb(0,0,0)",
+      "rotation": {
+        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'up')res=0;\nif(dir === 'right')res=90;\nif(dir === 'down')res=180;\nif(dir === 'left')res=270;\nreturn res/180*Math.PI;\n}",
+        "value": 0
+      },
+      "rect": [
+        6.90345,
+        0,
+        16,
+        16
+      ]
+    },
+    {
+      "type": "text",
+      "text": "D",
+      "align": "center",
+      "color": "rgb(255,255,255)",
+      "anchorY": 1,
+      "rotation": {
+        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'up')res=0;\nif(dir === 'right')res=90;\nif(dir === 'down')res=180;\nif(dir === 'left')res=270;\nreturn res/180*Math.PI;\n}",
+        "value": 0.00873
+      },
+      "rect": [
+        7.20861,
+        1.05423,
+        16,
+        16
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 0.1,
+      "borderColor": "rgb(0,0,0)",
+      "rotation": {
+        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'up')res=0;\nif(dir === 'right')res=90;\nif(dir === 'down')res=180;\nif(dir === 'left')res=270;\nreturn res/180*Math.PI;\n}",
+        "value": 0
+      },
+      "rect": [
+        14.52845,
+        16,
+        0.75,
+        6.47716
+      ]
+    },
+    {
+      "type": "rightTriangle",
+      "background": "rgb(217,217,217)",
+      "borderWidth": 0.1,
+      "borderColor": "rgb(0,0,0)",
+      "rect": [
+        0,
+        21,
+        30,
+        13
+      ]
+    },
+    {
+      "type": "rightTriangle",
+      "background": "rgb(217,217,217)",
+      "borderWidth": 0.1,
+      "borderColor": "rgb(0,0,0)",
+      "rotation": 3.14159,
+      "rect": [
+        0,
+        21,
+        30,
+        13
+      ]
+    },
+    {
+      "type": "oval",
+      "background": "#D8D8D8",
+      "borderWidth": 0.1,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(0,0,0)"
+      },
+      "rotation": 4.71239,
+      "rect": [
+        13.90345,
+        26.5,
+        2,
+        2
+      ]
+    }
+  ]
+}

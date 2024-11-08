@@ -1,0 +1,115 @@
+{
+  "modified": "Fri Nov 08 2024 15:55:15 GMT+0800 (中国标准时间)",
+  "width": 30,
+  "height": 42,
+  "comps": [
+    {
+      "type": "oval",
+      "background": "#D8D8D8",
+      "borderWidth": 0.1,
+      "borderColor": "rgb(0,0,0)",
+      "rotation": {
+        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'up')res=0;\nif(dir === 'right')res=90;\nif(dir === 'down')res=180;\nif(dir === 'left')res=270;\nreturn res/180*Math.PI;\n}",
+        "value": 0
+      },
+      "rect": [
+        6.90345,
+        0,
+        16,
+        16
+      ]
+    },
+    {
+      "type": "text",
+      "text": "M",
+      "align": "center",
+      "color": "rgb(255,255,255)",
+      "anchorY": 1,
+      "rotation": {
+        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'up')res=0;\nif(dir === 'right')res=90;\nif(dir === 'down')res=180;\nif(dir === 'left')res=270;\nreturn res/180*Math.PI;\n}",
+        "value": 0.00873
+      },
+      "rect": [
+        6.83361,
+        0.93016,
+        16,
+        16
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#D8D8D8",
+      "borderWidth": 0.1,
+      "borderColor": "rgb(0,0,0)",
+      "rotation": {
+        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'up')res=0;\nif(dir === 'right')res=90;\nif(dir === 'down')res=180;\nif(dir === 'left')res=270;\nreturn res/180*Math.PI;\n}",
+        "value": 0
+      },
+      "rect": [
+        14.52845,
+        16,
+        0.75,
+        6.47716
+      ]
+    },
+    {
+      "type": "arc",
+      "background": "rgb(0,0,0)",
+      "borderWidth": 0.1,
+      "borderColor": "rgb(0,0,0)",
+      "arcFrom": 0.7854,
+      "arcTo": 2.35619,
+      "rect": [
+        4.90345,
+        22,
+        20,
+        20
+      ]
+    },
+    {
+      "type": "arc",
+      "background": "#D8D8D8",
+      "borderWidth": 0.1,
+      "borderColor": "rgb(0,0,0)",
+      "arcFrom": 0.7854,
+      "arcTo": 2.35619,
+      "rotation": 1.5708,
+      "rect": [
+        4.90345,
+        22,
+        20,
+        20
+      ]
+    },
+    {
+      "type": "arc",
+      "background": "rgb(0,0,0)",
+      "borderWidth": 0.1,
+      "borderColor": "rgb(0,0,0)",
+      "arcFrom": 0.7854,
+      "arcTo": 2.35619,
+      "rotation": 3.14159,
+      "rect": [
+        4.90345,
+        22,
+        20,
+        20
+      ]
+    },
+    {
+      "type": "arc",
+      "background": "#D8D8D8",
+      "borderWidth": 0.1,
+      "borderColor": "rgb(0,0,0)",
+      "arcFrom": 0.7854,
+      "arcTo": 2.35619,
+      "rotation": 4.71239,
+      "rect": [
+        4.90345,
+        22,
+        20,
+        20
+      ]
+    }
+  ]
+}
