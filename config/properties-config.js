@@ -116,8 +116,8 @@ data_properties = [
         displayName: '层级',
         editable: true,
         enum: {
-            labels: [1, 2, 3],
-            values: [1, 2, 3]
+            labels: [1, 2, 3, 4, 5],
+            values: [1, 2, 3, 4, 5]
         }
     },
     // {
