@@ -1,0 +1,72 @@
+{
+  "modified": "Tue Nov 26 2024 14:39:21 GMT+0800 (中国标准时间)",
+  "dataBindings": [
+    {
+      "attr": "node.cate",
+      "valueType": "String",
+      "defaultValue": "m-point"
+    },
+    {
+      "attr": "node.type",
+      "valueType": "String",
+      "defaultValue": "switch"
+    },
+    {
+      "attr": "node.name",
+      "valueType": "String",
+      "defaultValue": "fire"
+    },
+    {
+      "attr": "node.state",
+      "valueType": "Boolean",
+      "defaultValue": true,
+      "name": "开关状态"
+    }
+  ],
+  "width": 40,
+  "height": 20,
+  "comps": [
+    {
+      "type": "diamond",
+      "background": {
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : 'rgb(107,102,102)';\n}",
+        "value": "rgb(255,0,0)"
+      },
+      "borderWidth": 1,
+      "borderColor": "rgba(255,255,0,0)",
+      "gradient": "linear.north",
+      "gradientColor": {
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(247,255,0)' : 'rgb(107,102,102)';\n}",
+        "value": "rgb(247,255,0)"
+      },
+      "rotation": 1.5708,
+      "rect": [
+        10,
+        -10,
+        20,
+        40
+      ]
+    },
+    {
+      "type": "diamond",
+      "background": {
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : 'rgb(107,102,102)';\n}",
+        "value": "rgb(255,0,0)"
+      },
+      "borderWidth": 1,
+      "borderColor": "rgba(255,255,0,0)",
+      "gradient": "linear.north",
+      "gradientColor": {
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(247,255,0)' : 'rgb(107,102,102)';\n}",
+        "value": "rgb(247,255,0)"
+      },
+      "rotation": 1.5708,
+      "rect": [
+        24,
+        -2,
+        8,
+        24
+      ]
+    }
+  ]
+}

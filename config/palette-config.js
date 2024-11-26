@@ -492,6 +492,7 @@ palette_config = {
             { name: 'TCS信号字牌', image: 'symbols/palette-icon/jd/TCS信号字牌.json', type: ht.Node },
             { name: '泵（1,3信号）', image: 'symbols/palette-icon/jd/泵（1,3信号）.json', type: ht.Node },
             { name: '汽机中停阀', image: 'symbols/palette-icon/jd/汽机中停阀.json', type: ht.Node },
+            { name: '火焰标志', image: 'symbols/palette-icon/m-point/火焰标志.json', type: ht.Node },
         ]
     },
     others: {
