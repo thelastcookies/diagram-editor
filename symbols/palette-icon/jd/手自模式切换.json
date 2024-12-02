@@ -1,0 +1,27 @@
+{
+  "modified": "Mon Dec 02 2024 21:21:40 GMT+0800 (中国标准时间)",
+  "width": 30,
+  "height": 14,
+  "comps": [
+    {
+      "type": "circle",
+      "background": "#D8D8D8",
+      "rect": [
+        -0.00001,
+        0,
+        14,
+        14
+      ]
+    },
+    {
+      "type": "circle",
+      "background": "#D8D8D8",
+      "rect": [
+        16,
+        0,
+        14,
+        14
+      ]
+    }
+  ]
+}

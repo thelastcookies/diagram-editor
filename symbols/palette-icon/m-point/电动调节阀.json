@@ -1,0 +1,118 @@
+{
+  "modified": "Mon Dec 02 2024 21:41:28 GMT+0800 (中国标准时间)",
+  "dataBindings": [
+    {
+      "attr": "node.cate",
+      "valueType": "String",
+      "defaultValue": "m-point"
+    },
+    {
+      "attr": "node.type",
+      "valueType": "String",
+      "defaultValue": "valve"
+    },
+    {
+      "attr": "node.name",
+      "valueType": "String",
+      "defaultValue": "电动调节阀"
+    },
+    {
+      "attr": "node.state",
+      "valueType": "Boolean",
+      "defaultValue": 1,
+      "name": "电动调节阀状态"
+    }
+  ],
+  "width": 30,
+  "height": 30,
+  "comps": [
+    {
+      "type": "rightTriangle",
+      "background": {
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : 'rgba(0,255,0)';\n}",
+        "value": "rgb(255,0,0)"
+      },
+      "borderWidth": 0.1,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(0,0,0)"
+      },
+      "anchorY": 1.20919,
+      "rotation": 3.14159,
+      "rect": [
+        -0.00001,
+        3.39778,
+        30,
+        11
+      ]
+    },
+    {
+      "type": "rightTriangle",
+      "background": {
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : 'rgba(0,255,0)';\n}",
+        "value": "rgb(255,0,0)"
+      },
+      "borderWidth": 0.1,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(0,0,0)"
+      },
+      "anchorY": -1.20919,
+      "rotation": 0,
+      "rect": [
+        0.00003,
+        19,
+        30,
+        11
+      ]
+    },
+    {
+      "type": "rect",
+      "background": {
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : 'rgba(0,255,0)';\n}",
+        "value": "rgb(255,0,0)"
+      },
+      "borderWidth": 0.1,
+      "borderColor": "rgb(0,0,0)",
+      "anchorY": 0,
+      "rotation": 0,
+      "rect": [
+        14.62505,
+        16,
+        0.75,
+        3
+      ]
+    },
+    {
+      "type": "oval",
+      "background": {
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : 'rgba(0,255,0)';\n}",
+        "value": "rgb(255,0,0)"
+      },
+      "borderWidth": 0.1,
+      "borderColor": "rgb(0,0,0)",
+      "anchorY": 1,
+      "rotation": 0,
+      "rect": [
+        7.00005,
+        0,
+        16,
+        16
+      ]
+    },
+    {
+      "type": "text",
+      "text": "M",
+      "align": "center",
+      "color": "rgb(255,255,255)",
+      "anchorY": 1,
+      "rotation": 0,
+      "rect": [
+        7.00005,
+        0,
+        16,
+        16
+      ]
+    }
+  ]
+}
