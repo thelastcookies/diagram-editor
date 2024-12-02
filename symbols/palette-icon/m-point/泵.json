@@ -2,9 +2,31 @@
   "modified": "Tue Nov 03 2020 18:13:41 GMT+0800 (CST)",
   "dataBindings": [
     {
+      "attr": "node.type",
+      "valueType": "String",
+      "defaultValue": "ddf"
+    },
+    {
+      "attr": "node.name",
+      "valueType": "String",
+      "defaultValue": "switch"
+    },
+    {
       "attr": "node.direction",
       "valueType": "String",
       "defaultValue": "up"
+    },
+    {
+      "attr": "node.state",
+      "valueType": "Boolean",
+      "defaultValue": true,
+      "name": "泵合闸状态"
+    },
+    {
+      "attr": "node.switch",
+      "valueType": "Boolean",
+      "defaultValue": true,
+      "name": "泵分闸状态"
     }
   ],
   "width": 32,
@@ -12,9 +34,12 @@
   "comps": [
     {
       "type": "oval",
-      "background": "#009A3D",
+      "background": {
+        "func": "__ht__function(data, view) {\n let d=data.a('node.state'), k=data.a('node.switch'), r='#D8D8D8';if(d===k){r='#FFFF00'} else if(d===true&&k===false){r='#FF0000'} else if(d===false&&k===true){r='#00FF00'}return r;\n}",
+        "values": "#D8D8D8"
+      },
       "borderWidth": 2,
-      "borderColor": "#009A3D",
+      "borderColor": "#979797",
       "rect": [
         1,
         1,
@@ -24,7 +49,10 @@
     },
     {
       "type": "rect",
-      "background": "rgb(217,217,217)",
+      "background": {
+        "func": "__ht__function(data, view) {\n let d=data.a('node.state'), k=data.a('node.switch'), r='#D8D8D8';if(d===k){r='rgb(255,200,89)'} else if(d===true&&k===false){r='rgb(255,102,102)'} else if(d===false&&k===true){r='rgb(192,192,192)'}return r;\n}",
+        "values": "#D8D8D8"
+      },
       "borderColor": "rgba(255,255,255,0.6)",
       "anchorY": 0.9333,
       "rotation": {
@@ -40,7 +68,10 @@
     },
     {
       "type": "polygon",
-      "background": "rgb(217,217,217)",
+      "background": {
+        "func": "__ht__function(data, view) {\n let d=data.a('node.state'), k=data.a('node.switch'), r='#D8D8D8';if(d===k){r='rgb(255,200,89)'} else if(d===true&&k===false){r='rgb(255,102,102)'} else if(d===false&&k===true){r='rgb(192,192,192)'}return r;\n}",
+        "values": "#D8D8D8"
+      },
       "borderColor": "rgba(255,255,255,0.6)",
       "polygonSide": 3,
       "anchorX": 0.2,

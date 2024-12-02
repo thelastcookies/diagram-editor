@@ -19,8 +19,18 @@
     {
       "attr": "node.state",
       "valueType": "Boolean",
-      "defaultValue": true,
+      "defaultValue": false,
       "name": "光字牌状态"
+    },
+    {
+      "attr": "node.background",
+      "valueType": "Color",
+      "defaultValue": "rgb(0,255,0)"
+    },
+    {
+      "attr": "background.close",
+      "valueType": "Color",
+      "defaultValue": "rgb(255, 0, 0)"
     }
   ],
   "width": 300,
@@ -29,7 +39,7 @@
     {
       "type": "rect",
       "background": {
-        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(0,255,0)' : 'rgb(255,0,0)';\n}",
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? data.a('background.close') : data.a('node.background');\n}",
         "value": "rgb(0,255,0)"
       },
       "rect": [

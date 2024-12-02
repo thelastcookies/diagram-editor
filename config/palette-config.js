@@ -493,6 +493,12 @@ palette_config = {
             { name: '泵（1,3信号）', image: 'symbols/palette-icon/jd/泵（1,3信号）.json', type: ht.Node },
             { name: '汽机中停阀', image: 'symbols/palette-icon/jd/汽机中停阀.json', type: ht.Node },
             { name: '火焰标志', image: 'symbols/palette-icon/m-point/火焰标志.json', type: ht.Node },
+
+            { name: '手动泵', image: 'symbols/palette-icon/m-point/手动泵.json', type: ht.Node },
+            { name: '气动调节阀-1', image: 'symbols/palette-icon/m-point/气动调节阀-1.json', type: ht.Node },
+            { name: '电动执行器', image: 'symbols/palette-icon/m-point/电动执行器.json', type: ht.Node },
+            { name: '电动调节阀', image: 'symbols/palette-icon/m-point/电动调节阀.json', type: ht.Node },
+            { name: '手自模式切换', image: 'symbols/palette-icon/jd/手自模式切换.json', type: ht.Node },
         ]
     },
     others: {

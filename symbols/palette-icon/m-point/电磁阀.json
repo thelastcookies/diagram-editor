@@ -9,7 +9,7 @@
     {
       "attr": "node.type",
       "valueType": "String",
-      "defaultValue": "value"
+      "defaultValue": "ddf"
     },
     {
       "attr": "node.name",
@@ -22,10 +22,16 @@
       "defaultValue": "up"
     },
     {
-      "attr": "node.data",
-      "valueType": "Array",
-      "name": "状态值",
-      "defaultValue": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0]
+      "attr": "node.state",
+      "valueType": "Boolean",
+      "defaultValue": true,
+      "name": "电磁阀运行状态"
+    },
+    {
+      "attr": "node.switch",
+      "valueType": "Boolean",
+      "defaultValue": true,
+      "name": "电磁阀停止状态"
     }
   ],
   "width": 32,
@@ -34,7 +40,7 @@
     {
       "type": "rightTriangle",
       "background": {
-        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r='#D8D8D8';if((d[0]&&!d[12])||d[4]){r='#FF0000'} else if(d[8]||d[12]){r='#00FF00'}return r;\n}",
+        "func": "__ht__function(data, view) {\n let d=data.a('node.state'), k=data.a('node.switch'), r='rgb(255,0,0)';if(d===k){r='#FFFF00'} else if(d===true&&k===false){r='#FF0000'} else if(d===false&&k===true){r='#00FF00'}return r;\n}",
         "values": "#D8D8D8"
       },
       "borderWidth": 0.1,
@@ -54,7 +60,7 @@
     {
       "type": "rightTriangle",
       "background": {
-        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r='#D8D8D8';if((d[0]&&!d[12])||d[4]){r='#FF0000'} else if(d[8]||d[12]){r='#00FF00'}return r;\n}",
+        "func": "__ht__function(data, view) {\n let d=data.a('node.state'), k=data.a('node.switch'), r='rgb(255,0,0)';if(d===k){r='#FFFF00'} else if(d===true&&k===false){r='#FF0000'} else if(d===false&&k===true){r='#00FF00'}return r;\n}",
         "values": "#D8D8D8"
       },
       "borderWidth": 0.1,
@@ -91,7 +97,7 @@
     {
       "type": "triangle",
       "background": {
-        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r='#D8D8D8';if((d[0]&&!d[12])||d[4]){r='#FF0000'} else if(d[8]||d[12]){r='#00FF00'}return r;\n}",
+        "func": "__ht__function(data, view) {\n let d=data.a('node.state'), k=data.a('node.switch'), r='rgb(255,0,0)';if(d===k){r='#FFFF00'} else if(d===true&&k===false){r='#FF0000'} else if(d===false&&k===true){r='#00FF00'}return r;\n}",
         "values": "#D8D8D8"
       },
       "borderWidth": 0.1,
@@ -115,7 +121,7 @@
     {
       "type": "triangle",
       "background": {
-        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r='#D8D8D8';if((d[0]&&!d[12])||d[4]){r='#FF0000'} else if(d[8]||d[12]){r='#00FF00'}return r;\n}",
+        "func": "__ht__function(data, view) {\n let d=data.a('node.state'), k=data.a('node.switch'), r='rgb(255,0,0)';if(d===k){r='#FFFF00'} else if(d===true&&k===false){r='#FF0000'} else if(d===false&&k===true){r='#00FF00'}return r;\n}",
         "values": "#D8D8D8"
       },
       "borderWidth": 0.1,

@@ -9,7 +9,7 @@
     {
       "attr": "node.type",
       "valueType": "String",
-      "defaultValue": "switch"
+      "defaultValue": "ddf"
     },
     {
       "attr": "node.name",
@@ -20,7 +20,13 @@
       "attr": "node.state",
       "valueType": "Boolean",
       "defaultValue": true,
-      "name": "断路器状态"
+      "name": "断路器运行状态"
+    },
+    {
+      "attr": "node.switch",
+      "valueType": "Boolean",
+      "defaultValue": true,
+      "name": "断路器停止状态"
     }
   ],
   "width": 30,
@@ -29,12 +35,12 @@
     {
       "type": "rect",
       "background": {
-        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : 'rgba(0,0,0,0)';\n}",
+        "func": "__ht__function(data, view) {\n let d=data.a('node.state'), k=data.a('node.switch'), r='rgb(255,0,0)';if(d===k){r='#FFFF00'} else if(d===true&&k===false){r='#FF0000'} else if(d===false&&k===true){r='#00FF00'}return r;\n}",
         "value": "rgb(255,0,0)"
       },
       "borderWidth": 2,
       "borderColor": {
-        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : 'rgb(0,255,0)';\n}",
+        "func": "__ht__function(data, view) {\n let d=data.a('node.state'), k=data.a('node.switch'), r='rgb(255,0,0)';if(d===k){r='#FFFF00'} else if(d===true&&k===false){r='#FF0000'} else if(d===false&&k===true){r='#00FF00'}return r;\n}",
         "value": "rgb(255,0,0)"
       },
       "rect": [

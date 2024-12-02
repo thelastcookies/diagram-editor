@@ -9,18 +9,24 @@
     {
       "attr": "node.type",
       "valueType": "String",
-      "defaultValue": "motor"
+      "defaultValue": "ddf"
     },
     {
       "attr": "node.name",
       "valueType": "String",
-      "defaultValue": "motor-mate"
+      "defaultValue": "switch"
     },
     {
-      "attr": "node.data",
-      "valueType": "Array",
-      "name": "状态值",
-      "defaultValue": [0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0]
+      "attr": "node.state",
+      "valueType": "Boolean",
+      "defaultValue": true,
+      "name": "电动机合闸状态"
+    },
+    {
+      "attr": "node.switch",
+      "valueType": "Boolean",
+      "defaultValue": true,
+      "name": "电动机分闸状态"
     }
   ],
   "width": 34,
@@ -29,11 +35,11 @@
     {
       "type": "oval",
       "background": {
-        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r='rgba(0,158,61,0.8)';if(d[3]||d[11]){r='rgb(127,127,127,0.8)';}return r;\n}",
-        "values": "rgba(0,158,61,0.8)"
+        "func": "__ht__function(data, view) {\n let d=data.a('node.state'), k=data.a('node.switch'), r='#D8D8D8';if(d===k){r='#FFFF00'} else if(d===true&&k===false){r='#FF0000'} else if(d===false&&k===true){r='#00FF00'}return r;\n}",
+        "values": "#D8D8D8"
       },
       "borderWidth": 2,
-      "borderColor": "#009A3D",
+      "borderColor": "#979797",
       "rect": [
         1.51208,
         1,
@@ -46,8 +52,8 @@
       "text": "M",
       "align": "center",
       "color": {
-        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r='#FFFFFF';if(d[8]){r='#00FF00'}if(d[0]||!d[8]){r='#FF0000'}if(d[0]&&d[8]){r='rgb(192,192,192)'}return r;\n}",
-        "values": "#FFFFFF"
+        "func": "__ht__function(data, view) {\n let d=data.a('node.state'), k=data.a('node.switch'), r='#D8D8D8';if(d===k){r='rgb(255,200,89)'} else if(d===true&&k===false){r='rgb(255,102,102)'} else if(d===false&&k===true){r='rgb(192,192,192)'}return r;\n}",
+        "values": "#D8D8D8"
       },
       "font": "18px arial, sans-serif",
       "rect": [

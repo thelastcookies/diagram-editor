@@ -1,0 +1,313 @@
+{
+  "modified": "Thu Sep 12 2024 15:43:29 GMT+0800 (中国标准时间)",
+  "width": 30,
+  "height": 30,
+  "comps": [
+    {
+      "type": "oval",
+      "background": "#D8D8D8",
+      "borderWidth": 1,
+      "borderColor": "rgb(51,51,51)",
+      "rect": [
+        0,
+        0,
+        30,
+        30
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 1,
+      "borderColor": "rgb(51,51,51)",
+      "points": [
+        10,
+        4,
+        14,
+        8,
+        13.94509,
+        4,
+        10.00703,
+        7.93806
+      ],
+      "segments": [
+        1,
+        2,
+        1,
+        2
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 1,
+      "borderColor": "rgb(51,51,51)",
+      "points": [
+        10,
+        10,
+        14,
+        14,
+        13.94509,
+        10,
+        10.00703,
+        13.93806
+      ],
+      "segments": [
+        1,
+        2,
+        1,
+        2
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 1,
+      "borderColor": "rgb(51,51,51)",
+      "points": [
+        10,
+        16,
+        14,
+        20,
+        13.94509,
+        16,
+        10.00703,
+        19.93806
+      ],
+      "segments": [
+        1,
+        2,
+        1,
+        2
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 1,
+      "borderColor": "rgb(51,51,51)",
+      "points": [
+        10,
+        22,
+        14,
+        26,
+        13.94509,
+        22,
+        10.00703,
+        25.93806
+      ],
+      "segments": [
+        1,
+        2,
+        1,
+        2
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 1,
+      "borderColor": "rgb(51,51,51)",
+      "points": [
+        16,
+        4,
+        20,
+        8,
+        19.94509,
+        4,
+        16.00703,
+        7.93806
+      ],
+      "segments": [
+        1,
+        2,
+        1,
+        2
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 1,
+      "borderColor": "rgb(51,51,51)",
+      "points": [
+        16,
+        10,
+        20,
+        14,
+        19.94509,
+        10,
+        16.00703,
+        13.93806
+      ],
+      "segments": [
+        1,
+        2,
+        1,
+        2
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 1,
+      "borderColor": "rgb(51,51,51)",
+      "points": [
+        16,
+        16,
+        20,
+        20,
+        19.94509,
+        16,
+        16.00703,
+        19.93806
+      ],
+      "segments": [
+        1,
+        2,
+        1,
+        2
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 1,
+      "borderColor": "rgb(51,51,51)",
+      "points": [
+        16,
+        22,
+        20,
+        26,
+        19.94509,
+        22,
+        16.00703,
+        25.93806
+      ],
+      "segments": [
+        1,
+        2,
+        1,
+        2
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 1,
+      "borderColor": "rgb(51,51,51)",
+      "points": [
+        4,
+        7,
+        8,
+        11,
+        7.94509,
+        7,
+        4.00703,
+        10.93806
+      ],
+      "segments": [
+        1,
+        2,
+        1,
+        2
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 1,
+      "borderColor": "rgb(51,51,51)",
+      "points": [
+        4,
+        13,
+        8,
+        17,
+        7.94509,
+        13,
+        4.00703,
+        16.93806
+      ],
+      "segments": [
+        1,
+        2,
+        1,
+        2
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 1,
+      "borderColor": "rgb(51,51,51)",
+      "points": [
+        4,
+        19,
+        8,
+        23,
+        7.94509,
+        19,
+        4.00703,
+        22.93806
+      ],
+      "segments": [
+        1,
+        2,
+        1,
+        2
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 1,
+      "borderColor": "rgb(51,51,51)",
+      "points": [
+        22.15517,
+        7,
+        26.15517,
+        11,
+        26.10026,
+        7,
+        22.16219,
+        10.93806
+      ],
+      "segments": [
+        1,
+        2,
+        1,
+        2
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 1,
+      "borderColor": "rgb(51,51,51)",
+      "points": [
+        22.15517,
+        13,
+        26.15517,
+        17,
+        26.10026,
+        13,
+        22.16219,
+        16.93806
+      ],
+      "segments": [
+        1,
+        2,
+        1,
+        2
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 1,
+      "borderColor": "rgb(51,51,51)",
+      "points": [
+        22.15517,
+        19,
+        26.15517,
+        23,
+        26.10026,
+        19,
+        22.16219,
+        22.93806
+      ],
+      "segments": [
+        1,
+        2,
+        1,
+        2
+      ]
+    }
+  ]
+}

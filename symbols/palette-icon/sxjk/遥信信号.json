@@ -4,6 +4,11 @@
     {
       "attr": "node.type",
       "valueType": "String",
+      "defaultValue": "switch"
+    },
+    {
+      "attr": "node.cate",
+      "valueType": "String",
       "defaultValue": "m-point"
     },
     {
@@ -12,9 +17,20 @@
       "defaultValue": "signal"
     },
     {
-      "attr": "node.line.color",
+      "attr": "node.state",
+      "valueType": "Boolean",
+      "defaultValue": false,
+      "name": "遥信状态"
+    },
+    {
+      "attr": "node.background",
       "valueType": "Color",
-      "defaultValue": "rgb(255,0,0)"
+      "defaultValue": "rgb(0,255,0)"
+    },
+    {
+      "attr": "background.close",
+      "valueType": "Color",
+      "defaultValue": "rgb(255, 0, 0)"
     }
   ],
   "width": 30,
@@ -23,7 +39,7 @@
     {
       "type": "oval",
       "background": {
-        "func": "attr@node.line.color",
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? data.a('background.close') : data.a('node.background');\n}",
         "value": "rgb(255,0,0)"
       },
       "rect": [
