@@ -9,7 +9,7 @@
     {
       "attr": "node.type",
       "valueType": "String",
-      "defaultValue": "pump"
+      "defaultValue": "valve"
     },
     {
       "attr": "node.name",
