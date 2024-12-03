@@ -14,13 +14,13 @@
     {
       "attr": "node.name",
       "valueType": "String",
-      "defaultValue": "手动泵"
+      "defaultValue": "手动阀"
     },
     {
       "attr": "node.state",
       "valueType": "Boolean",
       "defaultValue": 1,
-      "name": "手动泵状态"
+      "name": "手动阀状态"
     }
   ],
   "width": 30,

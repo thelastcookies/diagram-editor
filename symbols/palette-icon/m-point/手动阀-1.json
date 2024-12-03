@@ -1,0 +1,161 @@
+{
+  "modified": "Tue Dec 03 2024 11:25:18 GMT+0800 (中国标准时间)",
+  "dataBindings": [
+    {
+      "attr": "node.cate",
+      "valueType": "String",
+      "defaultValue": "m-point"
+    },
+    {
+      "attr": "node.type",
+      "valueType": "String",
+      "defaultValue": "valve"
+    },
+    {
+      "attr": "node.name",
+      "valueType": "String",
+      "defaultValue": "手动阀-1"
+    },
+    {
+      "attr": "node.value",
+      "valueType": "Boolean",
+      "defaultValue": 50,
+      "name": "手动阀-1状态"
+    }
+  ],
+  "width": 30,
+  "height": 30,
+  "comps": [
+    {
+      "type": "oval",
+      "background": {
+        "func": "__ht__function(data, view) {\n if(data.a('node.value') < 5) {return 'rgb(0,255,0)'} else if (data.a('node.value') > 95) {return 'rgb(255,0,0)'} else {return '#D8D8D8'};\n}",
+        "value": "#D8D8D8"
+      },
+      "borderWidth": 0.1,
+      "borderColor": "rgb(0,0,0)",
+      "anchorY": 1,
+      "rotation": 0,
+      "rect": [
+        7.00004,
+        0,
+        16,
+        16
+      ]
+    },
+    {
+      "type": "text",
+      "text": "H",
+      "align": "center",
+      "vAlign": "top",
+      "color": "rgb(255,255,255)",
+      "anchorY": 1,
+      "rotation": 0,
+      "rect": [
+        7.00004,
+        0,
+        16,
+        16
+      ]
+    },
+    {
+      "type": "rect",
+      "background": {
+        "func": "__ht__function(data, view) {\n if(data.a('node.value') < 5) {return 'rgb(0,255,0)'} else if (data.a('node.value') > 95) {return 'rgb(255,0,0)'} else {return '#D8D8D8'};\n}",
+        "value": "#D8D8D8"
+      },
+      "borderWidth": 0.1,
+      "borderColor": "rgb(0,0,0)",
+      "anchorY": 0,
+      "rotation": 0,
+      "rect": [
+        14.62508,
+        16,
+        0.75,
+        8.24996
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": {
+        "func": "__ht__function(data, view) {\n if(data.a('node.value') < 5) {return 'rgb(0,255,0)'} else if (data.a('node.value') > 95) {return 'rgb(255,0,0)'} else {return '#D8D8D8'};\n}",
+        "value": "#D8D8D8"
+      },
+      "borderWidth": 0.1,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(0,0,0)"
+      },
+      "anchorX": 1.10435,
+      "anchorY": 0,
+      "rotation": 4.71239,
+      "rect": [
+        2.30007,
+        17.29996,
+        11.5,
+        15
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": {
+        "func": "__ht__function(data, view) {\n if(data.a('node.value') < 5) {return 'rgb(0,255,0)'} else if (data.a('node.value') > 95) {return 'rgb(255,0,0)'} else {return '#D8D8D8'};\n}",
+        "value": "#D8D8D8"
+      },
+      "borderWidth": 0.1,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(0,0,0)"
+      },
+      "anchorX": -0.10435,
+      "anchorY": 0,
+      "rotation": 1.5708,
+      "rect": [
+        16.20007,
+        17.29996,
+        11.5,
+        15
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": {
+        "func": "__ht__function(data, view) {\n if(data.a('node.value') < 5) {return 'rgb(0,255,0)'} else if (data.a('node.value') > 95) {return 'rgb(255,0,0)'} else {return '#D8D8D8'};\n}",
+        "value": "#D8D8D8"
+      },
+      "borderWidth": 0.1,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(0,0,0)"
+      },
+      "anchorY": 1.20919,
+      "rotation": 3.14159,
+      "rect": [
+        -0.00002,
+        10.34434,
+        30,
+        5.75
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": {
+        "func": "__ht__function(data, view) {\n if(data.a('node.value') < 5) {return 'rgb(0,255,0)'} else if (data.a('node.value') > 95) {return 'rgb(255,0,0)'} else {return '#D8D8D8'};\n}",
+        "value": "#D8D8D8"
+      },
+      "borderWidth": 0.1,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(0,0,0)"
+      },
+      "anchorY": -1.20919,
+      "rotation": 0,
+      "rect": [
+        -0.00002,
+        24.25006,
+        30,
+        5.75
+      ]
+    }
+  ]
+}

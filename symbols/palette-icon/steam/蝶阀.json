@@ -1,57 +1,56 @@
 {
-  "modified": "Wed Nov 04 2020 18:21:05 GMT+0800 (CST)",
-  "dataBindings": [
-    {
-      "attr": "line.color",
-      "valueType": "Color",
-      "defaultValue": "#D8D8D8"
-    }
-  ],
+  "modified": "Tue Dec 03 2024 11:32:18 GMT+0800 (中国标准时间)",
   "width": 30,
-  "height": 14,
+  "height": 12,
   "comps": [
     {
-      "type": "rect",
-      "background": "rgba(217,217,217,0)",
-      "borderWidth": 0.5,
-      "borderColor": "rgb(0,0,0)",
-      "borderWidthAbsolute": true,
+      "type": "rightTriangle",
+      "background": "#D8D8D8",
+      "borderWidth": 0.1,
+      "borderColor": {
+        "func": "attr@line.color",
+        "value": "rgb(0,0,0)"
+      },
+      "anchorX": 1.10435,
+      "anchorY": 0,
+      "rotation": 4.71239,
       "rect": [
-        0,
-        0,
-        30,
-        14
+        -13.25225,
+        -1.20017,
+        12,
+        30.00005
       ]
     },
     {
       "type": "rightTriangle",
-      "background": {
+      "background": "#D8D8D8",
+      "borderWidth": 0.1,
+      "borderColor": {
         "func": "attr@line.color",
-        "value": "#D8D8D8"
+        "value": "rgb(0,0,0)"
       },
-      "borderColor": "rgb(255,255,255)",
+      "rotation": 1.5708,
       "rect": [
-        0.5,
-        0.5,
-        29,
-        13
+        8.99998,
+        -9.00002,
+        12,
+        30.00003
       ]
     },
     {
       "type": "oval",
-      "background": {
+      "background": "#D8D8D8",
+      "borderWidth": 0.1,
+      "borderColor": {
         "func": "attr@line.color",
-        "value": "#D8D8D8"
+        "value": "rgb(0,0,0)"
       },
-      "borderWidth": 0.5,
-      "borderColor": "rgb(0,0,0)",
-      "borderWidthAbsolute": true,
       "rotation": 4.71239,
       "rect": [
-        11,
-        3,
-        8,
-        8
+        11.99997,
+        3.05205,
+        6,
+        6
       ]
     }
   ]
