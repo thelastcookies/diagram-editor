@@ -9,23 +9,17 @@
     {
       "attr": "node.type",
       "valueType": "String",
-      "defaultValue": "value"
+      "defaultValue": "valve"
     },
     {
       "attr": "node.name",
       "valueType": "String",
-      "defaultValue": "gas-value-mate-2"
+      "defaultValue": "gas-valve"
     },
     {
-      "attr": "node.direction",
-      "valueType": "String",
-      "defaultValue": "up"
-    },
-    {
-      "attr": "node.data",
-      "valueType": "Array",
-      "name": "状态值",
-      "defaultValue": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0]
+      "attr": "node.value",
+      "valueType": "Number",
+      "defaultValue": 50
     }
   ],
   "width": 32,
@@ -33,14 +27,14 @@
   "comps": [
     {
       "type": "shape",
-      "background": "#D8D8D8",
+      "background": {
+        "func": "__ht__function(data, view) {\n if(data.a('node.value') < 5) {return 'rgb(0,255,0)'} else if (data.a('node.value') > 95) {return 'rgb(255,0,0)'} else {return '#D8D8D8'};\n}",
+        "value": "#D8D8D8"
+      },
       "borderWidth": 0.1,
       "borderColor": "rgb(0,0,0)",
       "anchorY": 1.44143,
-      "rotation": {
-        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'up')res=0;\nif(dir === 'right')res=90;\nif(dir === 'down')res=180;\nif(dir === 'left')res=270;\nreturn res/180*Math.PI;\n}",
-        "value": 0
-      },
+      "rotation": 0,
       "closePath": true,
       "points": [
         7,
@@ -66,14 +60,14 @@
     },
     {
       "type": "rect",
-      "background": "#D8D8D8",
+      "background": {
+        "func": "__ht__function(data, view) {\n if(data.a('node.value') < 5) {return 'rgb(0,255,0)'} else if (data.a('node.value') > 95) {return 'rgb(255,0,0)'} else {return '#D8D8D8'};\n}",
+        "value": "#D8D8D8"
+      },
       "borderWidth": 0.1,
       "borderColor": "rgb(0,0,0)",
       "anchorY": 0.36372,
-      "rotation": {
-        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'up')res=0;\nif(dir === 'right')res=90;\nif(dir === 'down')res=180;\nif(dir === 'left')res=270;\nreturn res/180*Math.PI;\n}",
-        "value": 0
-      },
+      "rotation": 0,
       "rect": [
         15.625,
         12.02714,
@@ -83,18 +77,15 @@
     },
     {
       "type": "triangle",
-      "background": "#D8D8D8",
-      "borderWidth": 0.1,
-      "borderColor": {
-        "func": "attr@line.color",
-        "value": "rgb(0,0,0)"
+      "background": {
+        "func": "__ht__function(data, view) {\n if(data.a('node.value') < 5) {return 'rgb(0,255,0)'} else if (data.a('node.value') > 95) {return 'rgb(255,0,0)'} else {return '#D8D8D8'};\n}",
+        "value": "#D8D8D8"
       },
+      "borderWidth": 0.1,
+      "borderColor": "rgb(0,0,0)",
       "anchorX": 1.10435,
       "anchorY": 0,
-      "rotation": {
-        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'up')res=270;\nif(dir === 'right')res=0;\nif(dir === 'down')res=90;\nif(dir === 'left')res=180;\nreturn res/180*Math.PI;\n}",
-        "value": 4.71239
-      },
+      "rotation": 4.71239,
       "rect": [
         3.30004,
         16,
@@ -104,18 +95,15 @@
     },
     {
       "type": "triangle",
-      "background": "#D8D8D8",
-      "borderWidth": 0.1,
-      "borderColor": {
-        "func": "attr@line.color",
-        "value": "rgb(0,0,0)"
+      "background": {
+        "func": "__ht__function(data, view) {\n if(data.a('node.value') < 5) {return 'rgb(0,255,0)'} else if (data.a('node.value') > 95) {return 'rgb(255,0,0)'} else {return '#D8D8D8'};\n}",
+        "value": "#D8D8D8"
       },
+      "borderWidth": 0.1,
+      "borderColor": "rgb(0,0,0)",
       "anchorX": -0.10402,
       "anchorY": 0,
-      "rotation": {
-        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'up')res=90;\nif(dir === 'right')res=180;\nif(dir === 'down')res=270;\nif(dir === 'left')res=0;\nreturn res/180*Math.PI;\n}",
-        "value": 1.5708
-      },
+      "rotation": 1.5708,
       "rect": [
         17.19623,
         16,
@@ -125,17 +113,14 @@
     },
     {
       "type": "triangle",
-      "background": "#D8D8D8",
+      "background": {
+        "func": "__ht__function(data, view) {\n if(data.a('node.value') < 5) {return 'rgb(0,255,0)'} else if (data.a('node.value') > 95) {return 'rgb(255,0,0)'} else {return '#D8D8D8'};\n}",
+        "value": "#D8D8D8"
+      },
       "borderWidth": 0.1,
-      "borderColor": {
-        "func": "attr@line.color",
-        "value": "rgb(0,0,0)"
-      },
+      "borderColor": "rgb(0,0,0)",
       "anchorY": 1.20919,
-      "rotation": {
-        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'up')res=180;\nif(dir === 'right')res=270;\nif(dir === 'down')res=0;\nif(dir === 'left')res=90;\nreturn res/180*Math.PI;\n}",
-        "value": 3.14159
-      },
+      "rotation": 3.14159,
       "rect": [
         0.99996,
         9.06714,
@@ -145,17 +130,14 @@
     },
     {
       "type": "triangle",
-      "background": "#D8D8D8",
+      "background": {
+        "func": "__ht__function(data, view) {\n if(data.a('node.value') < 5) {return 'rgb(0,255,0)'} else if (data.a('node.value') > 95) {return 'rgb(255,0,0)'} else {return '#D8D8D8'};\n}",
+        "value": "#D8D8D8"
+      },
       "borderWidth": 0.1,
-      "borderColor": {
-        "func": "attr@line.color",
-        "value": "rgb(0,0,0)"
-      },
+      "borderColor": "rgb(0,0,0)",
       "anchorY": -1.20919,
-      "rotation": {
-        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'up')res=0;\nif(dir === 'right')res=90;\nif(dir === 'down')res=180;\nif(dir === 'left')res=270;\nreturn res/180*Math.PI;\n}",
-        "value": 0
-      },
+      "rotation": 0,
       "rect": [
         0.99996,
         22.97286,
