@@ -22,6 +22,9 @@ palette_config = {
             { name: '圆形', image: 'symbols/palette-icon/basic/圆形-0.json', type: ht.Node },
             { name: '三角形', image: 'symbols/palette-icon/basic/三角形-0.json', type: ht.Node },
             { name: '梯形', image: 'symbols/palette-icon/basic/梯形-0.json', type: ht.Node },
+            { name: '1/4圆环', image: 'symbols/palette-icon/basic/4分之1圆弧.json', type: ht.Node },
+            { name: '1/2圆环', image: 'symbols/palette-icon/basic/2分之1圆弧.json', type: ht.Node },
+            { name: '3/4圆环', image: 'symbols/palette-icon/basic/4分之3圆弧.json', type: ht.Node },
         ]
     },
     // ems: {
