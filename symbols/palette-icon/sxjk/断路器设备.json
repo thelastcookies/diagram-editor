@@ -19,14 +19,19 @@
     {
       "attr": "node.state",
       "valueType": "Boolean",
-      "defaultValue": true,
+      "defaultValue": false,
       "name": "断路器状态"
     },
     {
       "attr": "node.switch",
       "valueType": "Boolean",
-      "defaultValue": true,
+      "defaultValue": false,
       "name": "手车状态"
+    },
+    {
+      "attr": "node.line.color",
+      "valueType": "Color",
+      "defaultValue": "rgb(0, 255, 0)"
     }
   ],
   "width": 44,
@@ -40,7 +45,7 @@
       },
       "borderWidth": 2,
       "borderColor": {
-        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : 'rgb(0,255,0)';\n}",
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : data.a('node.line.color');\n}",
         "value": "rgb(255,0,0)"
       },
       "rotation": 0,
@@ -55,11 +60,11 @@
       "type": "shape",
       "borderWidth": 2,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.line.color",
         "value": "#D8D8D8"
       },
       "visible": {
-        "func": "__ht__function(data, view) {\n return !data.a('node.state') \n}",
+        "func": "__ht__function(data, view) {\n return !data.a('node.switch') \n}",
         "value": true
       },
       "displayName": "箭头",
@@ -77,7 +82,7 @@
       "type": "shape",
       "borderWidth": 2,
       "borderColor": {
-        "func": "__ht__function(data, view) {\n return data.a('node.switch') ? 'rgb(255,0,0)' : data.a('line.color');\n}",
+        "func": "__ht__function(data, view) {\n return data.a('node.switch') ? 'rgb(255,0,0)' : data.a('node.line.color');\n}",
         "value": "rgb(255,0,0)"
       },
       "displayName": "箭头",
@@ -95,7 +100,7 @@
       "type": "shape",
       "borderWidth": 2,
       "borderColor": {
-        "func": "__ht__function(data, view) {\n return data.a('node.switch') ? 'rgb(255,0,0)' : data.a('line.color');\n}",
+        "func": "__ht__function(data, view) {\n return data.a('node.switch') ? 'rgb(255,0,0)' : data.a('node.line.color');\n}",
         "value": "rgb(255,0,0)"
       },
       "rotation": -3.14159,
@@ -110,7 +115,7 @@
       "type": "shape",
       "borderWidth": 2,
       "borderColor": {
-        "func": "__ht__function(data, view) {\n return data.a('node.switch') ? 'rgb(255,0,0)' : data.a('line.color');\n}",
+        "func": "__ht__function(data, view) {\n return data.a('node.switch') ? 'rgb(255,0,0)' : data.a('node.line.color');\n}",
         "value": "rgb(255,0,0)"
       },
       "rotation": -3.14159,
@@ -126,7 +131,7 @@
       "borderWidth": 2,
       "borderColor": "#FF0000",
       "visible": {
-        "func": "__ht__function(data, view) {\n return data.a('node.state') \n}",
+        "func": "__ht__function(data, view) {\n return data.a('node.switch') \n}",
         "value": true
       },
       "rotation": -3.14159,
@@ -141,11 +146,11 @@
       "type": "shape",
       "borderWidth": 2,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.line.color",
         "value": "#D8D8D8"
       },
       "visible": {
-        "func": "__ht__function(data, view) {\n return !data.a('node.state') \n}",
+        "func": "__ht__function(data, view) {\n return !data.a('node.switch') \n}",
         "value": true
       },
       "displayName": "箭头",
@@ -163,7 +168,7 @@
       "type": "shape",
       "borderWidth": 2,
       "borderColor": {
-        "func": "__ht__function(data, view) {\n return data.a('node.switch') ? 'rgb(255,0,0)' : data.a('line.color');\n}",
+        "func": "__ht__function(data, view) {\n return data.a('node.switch') ? 'rgb(255,0,0)' : data.a('node.line.color');\n}",
         "value": "rgb(255,0,0)"
       },
       "displayName": "箭头",
@@ -181,7 +186,7 @@
       "type": "shape",
       "borderWidth": 2,
       "borderColor": {
-        "func": "__ht__function(data, view) {\n return data.a('node.switch') ? 'rgb(255,0,0)' : data.a('line.color');\n}",
+        "func": "__ht__function(data, view) {\n return data.a('node.switch') ? 'rgb(255,0,0)' : data.a('node.line.color');\n}",
         "value": "rgb(255,0,0)"
       },
       "rotation": 0,
@@ -196,7 +201,7 @@
       "type": "shape",
       "borderWidth": 2,
       "borderColor": {
-        "func": "__ht__function(data, view) {\n return data.a('node.switch') ? 'rgb(255,0,0)' : data.a('line.color');\n}",
+        "func": "__ht__function(data, view) {\n return data.a('node.switch') ? 'rgb(255,0,0)' : data.a('node.line.color');\n}",
         "value": "rgb(255,0,0)"
       },
       "rotation": 0,
@@ -212,7 +217,7 @@
       "borderWidth": 2,
       "borderColor": "#FF0000",
       "visible": {
-        "func": "__ht__function(data, view) {\n return data.a('node.state') \n}",
+        "func": "__ht__function(data, view) {\n return data.a('node.switch') \n}",
         "value": true
       },
       "rotation": 0,
