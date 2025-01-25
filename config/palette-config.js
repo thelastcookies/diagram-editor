@@ -25,6 +25,8 @@ palette_config = {
             { name: '1/4圆环', image: 'symbols/palette-icon/basic/4分之1圆弧.json', type: ht.Node },
             { name: '1/2圆环', image: 'symbols/palette-icon/basic/2分之1圆弧.json', type: ht.Node },
             { name: '3/4圆环', image: 'symbols/palette-icon/basic/4分之3圆弧.json', type: ht.Node },
+            { name: '多信号图元1', image: 'symbols/palette-icon/basic/多信号图元1.json', type: ht.Node },
+            { name: '多信号图元2', image: 'symbols/palette-icon/basic/多信号图元2.json', type: ht.Node },
         ]
     },
     // ems: {
