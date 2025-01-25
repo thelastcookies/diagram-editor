@@ -1,0 +1,37 @@
+{
+  "modified": "Sat Jan 25 2025 13:22:22 GMT+0800 (中国标准时间)",
+  "width": 50,
+  "height": 50,
+  "dataBindings": [
+    {
+      "attr": "node.cate",
+      "valueType": "String",
+      "defaultValue": "m-point"
+    },
+    {
+      "attr": "node.data",
+      "valueType": "Array",
+      "name": "状态值",
+      "defaultValue": [
+        0
+      ]
+    }
+  ],
+  "comps": [
+    {
+      "type": "rect",
+      "background": {
+        "func": "__ht__function(data, view){\n let val = data.a('node.data'), value = '#57BE37';\n if(val == 0){value='#57BE37'}else if(val == 1){value='#EA3323'}else if(val == 2){value='#FFFF55'};return value\n}",
+        "value": "rgb(0, 255, 0)"
+      },
+      "borderWidth": 1,
+      "borderColor": "rgb(255,255,255)",
+      "rect": [
+        0,
+        0,
+        50,
+        50
+      ]
+    }
+  ]
+}

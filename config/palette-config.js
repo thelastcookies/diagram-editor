@@ -27,6 +27,8 @@ palette_config = {
             { name: '3/4圆环', image: 'symbols/palette-icon/basic/4分之3圆弧.json', type: ht.Node },
             { name: '多信号图元1', image: 'symbols/palette-icon/basic/多信号图元1.json', type: ht.Node },
             { name: '多信号图元2', image: 'symbols/palette-icon/basic/多信号图元2.json', type: ht.Node },
+            { name: '文字状态变换', image: 'symbols/palette-icon/basic/文字状态变换.json', type: ht.Node },
+            { name: '振打变换', image: 'symbols/palette-icon/basic/振打变换.json', type: ht.Node },
         ]
     },
     // ems: {
