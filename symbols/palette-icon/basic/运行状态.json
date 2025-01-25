@@ -1,0 +1,38 @@
+{
+  "modified": "Sat Jan 25 2025 14:57:55 GMT+0800 (中国标准时间)",
+  "width": 100,
+  "height": 50,
+  "dataBindings": [
+    {
+      "attr": "node.cate",
+      "valueType": "String",
+      "defaultValue": "m-point"
+    },
+    {
+      "attr": "node.data",
+      "valueType": "Array",
+      "name": "状态值",
+      "defaultValue": [
+        1
+      ]
+    }
+  ],
+  "comps": [
+    {
+      "type": "text",
+      "text": "运行状态",
+      "align": "center",
+      "color": {
+        "func": "__ht__function(data, view){\n let val = data.a('node.data'), value = 'rgba(255,0,0,1)';\n if(val == 1){value='rgba(255,0,0,1)'}else{value='rgba(255,0,0,0)'};return value\n}",
+        "value": "rgba(255,0,0,1)"
+      },
+      "font": "20px arial, sans-serif",
+      "rect": [
+        0,
+        0,
+        100,
+        50
+      ]
+    }
+  ]
+}

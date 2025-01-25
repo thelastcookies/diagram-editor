@@ -25,12 +25,8 @@ palette_config = {
             { name: '1/4圆环', image: 'symbols/palette-icon/basic/4分之1圆弧.json', type: ht.Node },
             { name: '1/2圆环', image: 'symbols/palette-icon/basic/2分之1圆弧.json', type: ht.Node },
             { name: '3/4圆环', image: 'symbols/palette-icon/basic/4分之3圆弧.json', type: ht.Node },
-            { name: '多信号图元1', image: 'symbols/palette-icon/basic/多信号图元1.json', type: ht.Node },
-            { name: '多信号图元2', image: 'symbols/palette-icon/basic/多信号图元2.json', type: ht.Node },
-            { name: '文字状态变换', image: 'symbols/palette-icon/basic/文字状态变换.json', type: ht.Node },
-            { name: '振打变换', image: 'symbols/palette-icon/basic/振打变换.json', type: ht.Node },
-            { name: 'ECMS手车1', image: 'symbols/palette-icon/basic/ECMS手车1.json', type: ht.Node },
-            { name: 'ECMS手车2', image: 'symbols/palette-icon/basic/ECMS手车2.json', type: ht.Node },
+            //{ name: 'ECMS手车1', image: 'symbols/palette-icon/basic/ECMS手车1.json', type: ht.Node },
+            //{ name: 'ECMS手车2', image: 'symbols/palette-icon/basic/ECMS手车2.json', type: ht.Node },
         ]
     },
     // ems: {
@@ -510,6 +506,14 @@ palette_config = {
             { name: '电动执行器', image: 'symbols/palette-icon/m-point/电动执行器.json', type: ht.Node },
             { name: '电动调节阀', image: 'symbols/palette-icon/m-point/电动调节阀.json', type: ht.Node },
             { name: '手自模式切换', image: 'symbols/palette-icon/jd/手自模式切换.json', type: ht.Node },
+
+            { name: '多信号图元1', image: 'symbols/palette-icon/basic/多信号图元1.json', type: ht.Node },
+            { name: '多信号图元2', image: 'symbols/palette-icon/basic/多信号图元2.json', type: ht.Node },
+            { name: '文字状态变换', image: 'symbols/palette-icon/basic/文字状态变换.json', type: ht.Node },
+            { name: '振打变换', image: 'symbols/palette-icon/basic/振打变换.json', type: ht.Node },
+            { name: '停止状态', image: 'symbols/palette-icon/basic/停止状态.json', type: ht.Node },
+            { name: '运行状态', image: 'symbols/palette-icon/basic/运行状态.json', type: ht.Node },
+            { name: '未运行状态', image: 'symbols/palette-icon/basic/未运行状态.json', type: ht.Node },
         ]
     },
     others: {
