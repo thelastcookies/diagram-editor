@@ -1,0 +1,130 @@
+{
+  "modified": "Sat Jan 25 2025 13:43:07 GMT+0800 (中国标准时间)",
+  "width": 50,
+  "height": 150,
+  "dataBindings": [
+    {
+      "attr": "node.cate",
+      "valueType": "String",
+      "defaultValue": "m-point"
+    },
+    {
+      "attr": "node.data",
+      "valueType": "Array",
+      "name": "状态值",
+      "defaultValue": [
+        0
+      ]
+    }
+  ],
+  "comps": [
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "__ht__function(data, view){\n let val = data.a('node.data'), value = 'rgba(0, 255, 0 ,1)';\n if(val == 0){value='rgba(0, 255, 0 ,1)'}else{value='rgba(0, 255, 0 ,0)'};return value\n}",
+        "value": "rgba(0, 255, 0, 1)"
+      },
+      "points": [
+        6.27263,
+        0,
+        33,
+        24.87314,
+        6,
+        50,
+        17.27263,
+        0,
+        44,
+        24.87314,
+        17,
+        50,
+        43.72737,
+        150,
+        17,
+        125.12686,
+        44,
+        100,
+        32.72737,
+        150,
+        6,
+        125.12686,
+        33,
+        100
+      ],
+      "segments": [
+        1,
+        2,
+        2,
+        1,
+        2,
+        2,
+        1,
+        2,
+        2,
+        1,
+        2,
+        2
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "__ht__function(data, view){\n let val = data.a('node.data'), value = 'rgba(255, 0, 0, 1)';\n if(val == 1){value='rgba(255, 0, 0, 1)'}else{value='rgba(255, 0, 0, 0)'};return value\n}",
+        "value": "rgba(255, 0, 0, 1)"
+      },
+      "points": [
+        50,
+        112.27263,
+        25.12686,
+        139,
+        0,
+        112,
+        50,
+        123.27263,
+        25.12686,
+        150,
+        0,
+        123,
+        25.09936,
+        138.30744,
+        25.09936,
+        106.4164,
+        0,
+        37.72737,
+        24.87314,
+        11,
+        50,
+        38,
+        0,
+        26.72737,
+        24.87314,
+        0,
+        50,
+        27,
+        24.90064,
+        11.69256,
+        24.90064,
+        43.5836
+      ],
+      "segments": [
+        1,
+        2,
+        2,
+        1,
+        2,
+        2,
+        1,
+        2,
+        1,
+        2,
+        2,
+        1,
+        2,
+        2,
+        1,
+        2
+      ]
+    }
+  ]
+}

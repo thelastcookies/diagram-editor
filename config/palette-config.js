@@ -29,6 +29,8 @@ palette_config = {
             { name: '多信号图元2', image: 'symbols/palette-icon/basic/多信号图元2.json', type: ht.Node },
             { name: '文字状态变换', image: 'symbols/palette-icon/basic/文字状态变换.json', type: ht.Node },
             { name: '振打变换', image: 'symbols/palette-icon/basic/振打变换.json', type: ht.Node },
+            { name: 'ECMS手车1', image: 'symbols/palette-icon/basic/ECMS手车1.json', type: ht.Node },
+            { name: 'ECMS手车2', image: 'symbols/palette-icon/basic/ECMS手车2.json', type: ht.Node },
         ]
     },
     // ems: {
