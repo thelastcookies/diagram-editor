@@ -9,12 +9,10 @@
       "defaultValue": "m-point"
     },
     {
-      "attr": "node.data",
-      "valueType": "Array",
+      "attr": "node.value",
+      "valueType": "Number",
       "name": "状态值",
-      "defaultValue": [
-        1
-      ]
+      "defaultValue": 1
     },
     {
       "attr": "node.line.color",
