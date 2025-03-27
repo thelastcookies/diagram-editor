@@ -9,17 +9,22 @@
       "defaultValue": "m-point"
     },
     {
+      "attr": "node.type",
+      "valueType": "String",
+      "defaultValue": "equip"
+    },
+    {
       "attr": "node.value",
       "valueType": "Number",
       "name": "状态值",
-      "defaultValue":  0
+      "defaultValue": "0"
     }
   ],
   "comps": [
     {
       "type": "rect",
       "background": {
-        "func": "__ht__function(data, view){\n let val = data.a('node.value'), value = '#57BE37';\n if(val == 0){value='#57BE37'}else if(val == 1){value='#EA3323'}else if(val == 2){value='#FFFF55'};return value\n}",
+        "func": "__ht__function(data, view){\n let val = Number(data.a('node.value')), value = '#57BE37';\n if(val === 0){value='#57BE37'}else if(val === 1){value='#EA3323'}else if(val === 2){value='#FFFF55'};return value\n}",
         "value": "rgb(0, 255, 0)"
       },
       "borderWidth": 1,

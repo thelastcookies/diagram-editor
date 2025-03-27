@@ -9,6 +9,11 @@
       "defaultValue": "m-point"
     },
     {
+      "attr": "node.type",
+      "valueType": "String",
+      "defaultValue": "equip"
+    },
+    {
       "attr": "node.value",
       "valueType": "Number",
       "name": "状态值",
@@ -24,7 +29,7 @@
     {
       "type": "text",
       "text": {
-        "func": "__ht__function(data, view){\n let val = data.a('node.value'), value = '连续';\n if(val == 1){value='连续'}else if(val == 2){value='自动'}else if(val == 9){value='停止'};return value\n}",
+        "func": "__ht__function(data, view){\n let val = Number(data.a('node.value')), value = '连续';\n if(val === 1){value='连续'}else if(val === 2){value='自动'}else if(val === 9){value='停止'};return value\n}",
         "value": "连续"
       },
       "color": {
