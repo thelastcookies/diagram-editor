@@ -117,6 +117,7 @@ palette_config = {
             { name: '接地电阻2', image: 'symbols/palette-icon/sxjk/接地电阻2.json', type: ht.Node },
             { name: 'IGBT', image: 'symbols/palette-icon/sxjk/IGBT.json', type: ht.Node },
             { name: '远方就地信号', image: 'symbols/palette-icon/sxjk/远方就地信号.json', type: ht.Node },
+            { name: '远方就地文字信号', image: 'symbols/palette-icon/sxjk/远方就地文字信号.json', type: ht.Node },
             { name: '遥信信号', image: 'symbols/palette-icon/sxjk/遥信信号.json', type: ht.Node },
             { name: '遥信信号2', image: 'symbols/palette-icon/sxjk/遥信信号2.json', type: ht.Node },
             { name: '硬压板', image: 'symbols/palette-icon/sxjk/硬压板.json', type: ht.Node },
