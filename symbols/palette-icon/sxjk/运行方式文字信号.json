@@ -1,0 +1,49 @@
+{
+  "modified": "Sat Jan 25 2025 13:02:38 GMT+0800 (中国标准时间)",
+  "width": 50,
+  "height": 50,
+  "dataBindings": [
+    {
+      "attr": "node.cate",
+      "valueType": "String",
+      "defaultValue": "m-point"
+    },
+    {
+      "attr": "node.type",
+      "valueType": "String",
+      "defaultValue": "equip"
+    },
+    {
+      "attr": "node.value",
+      "valueType": "Number",
+      "name": "状态值",
+      "defaultValue": 0
+    },
+    {
+      "attr": "node.line.color",
+      "valueType": "Color",
+      "defaultValue": "#fff"
+    }
+  ],
+  "comps": [
+    {
+      "type": "text",
+      "text": {
+        "func": "__ht__function(data, view){\n let val = Number(data.a('node.value')), value = '手动连续';\n if(val === 0){value='手动连续'}else if(val === 1){value='脉冲模式'}else if(val === 2){value='自动连续'}else if(val === 10){value='开始试验'};return value\n}",
+        "value": "手动连续"
+      },
+      "color": {
+        "func": "attr@node.line.color",
+        "value": "rgba(0, 0, 0, 1)"
+      },
+      "align": "center",
+      "font": "20px arial, sans-serif",
+      "rect": [
+        0,
+        0,
+        50,
+        50
+      ]
+    }
+  ]
+}

@@ -516,6 +516,10 @@ palette_config = {
             { name: '停止状态', image: 'symbols/palette-icon/basic/停止状态.json', type: ht.Node },
             { name: '运行状态', image: 'symbols/palette-icon/basic/运行状态.json', type: ht.Node },
             { name: '未运行状态', image: 'symbols/palette-icon/basic/未运行状态.json', type: ht.Node },
+
+            { name: '运行状态文字信号', image: 'symbols/palette-icon/sxjk/运行状态文字信号.json', type: ht.Node },
+            { name: '风机状态文字信号', image: 'symbols/palette-icon/sxjk/风机状态文字信号.json', type: ht.Node },
+            { name: '运行方式文字信号', image: 'symbols/palette-icon/sxjk/运行方式文字信号.json', type: ht.Node },
         ]
     },
     others: {
