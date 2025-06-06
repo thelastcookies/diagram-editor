@@ -1140,6 +1140,30 @@ cb_properties = [
         editable: true
     },
 ];
+// 双侧点的配置项
+db_properties = [
+    {
+        name: 'node.tag.at',
+        displayName: '测点 1',
+        accessType: 'attr',
+        valueType: 'text',
+        editable: true
+    },
+    {
+        name: 'node.tag.bt',
+        displayName: '测点 2',
+        accessType: 'attr',
+        valueType: 'text',
+        editable: true
+    },
+    {
+        name: 'node.showName',
+        displayName: '名称',
+        accessType: 'attr',
+        valueType: 'text',
+        editable: true
+    },
+];
 //背景颜色配置项
 node_background = [
     {
