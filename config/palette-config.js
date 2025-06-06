@@ -218,6 +218,7 @@ palette_config = {
             { name: '电动机', image: 'symbols/palette-icon/m-point/电动机.json', type: ht.Node },
             { name: '电动机（单信号）', image: 'symbols/palette-icon/m-point/电动机（单信号）.json', type: ht.Node },
             { name: '电动机2（单信号）', image: 'symbols/palette-icon/m-point/电动机2（单信号）.json', type: ht.Node },
+            { name: '电动机3（多信号）', image: 'symbols/palette-icon/m-point/电动机3（多信号）.json', type: ht.Node },
             { name: '风机', image: 'symbols/palette-icon/m-point/风机-揭东.json', type: ht.Node },
             { name: '风机（单信号）', image: 'symbols/palette-icon/m-point/风机-揭东（单信号）.json', type: ht.Node },
             // { name: '泵-FSL', image: 'symbols/palette-icon/m-point/泵-FSL.json', type: ht.Node},
