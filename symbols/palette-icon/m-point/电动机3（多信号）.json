@@ -9,18 +9,23 @@
     {
       "attr": "node.type",
       "valueType": "String",
-      "defaultValue": "db"
+      "defaultValue": "cb"
+    },
+    {
+      "attr": "node.name",
+      "valueType": "String",
+      "defaultValue": "switch"
     },
     {
       "attr": "node.state",
       "valueType": "Boolean",
-      "name": "测点 1",
+      "name": "断路器状态",
       "defaultValue": 0
     },
     {
       "attr": "node.switch",
       "valueType": "Boolean",
-      "name": "测点 2",
+      "name": "手车状态",
       "defaultValue": 1
     }
   ],
@@ -30,7 +35,7 @@
     {
       "type": "oval",
       "background": {
-        "func": "__ht__function(data, view) {\n let val1 = data.a('node.state'),val2 = data.a('node.switch'),bg='rgb(0,255,0)';if(!val1 && !val2){bg='rgb(0,255,0)'} else{bg='rgb(255,0,0)'}return bg\n}",
+        "func": "__ht__function(data, view) {\n let bg='rgb(0,255,0)';if(!data.a('node.state') && !data.a('node.switch')){bg='rgb(0,255,0)'} else{bg='rgb(255,0,0)'}return bg\n}",
         "values": "#D8D8D8"
       },
       "borderWidth": 2,
