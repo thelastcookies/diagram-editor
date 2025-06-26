@@ -9,7 +9,7 @@
     {
       "attr": "node.type",
       "valueType": "String",
-      "defaultValue": ""
+      "defaultValue": "equip"
     },
     {
       "attr": "node.name",
@@ -28,7 +28,7 @@
     {
       "type": "rect",
       "background": {
-        "func": "__ht__function(data, view) {\n if(data.a('node.value') < 5) {return 'rgb(0,255,0)'} else if (data.a('node.value') > 95) {return 'rgb(255,0,0)'} else {return '#D8D8D8'};\n}",
+        "func": "__ht__function(data, view) {\n let val = Number(data.a('node.value')),value = '#57BE37';\n if(val === 0){value='rgb(0,255,0)'}else if(val === 1){value='rgb(255,0,0)'};return value \n}",
         "value": "#D8D8D8"
       },
       "borderWidth": 0.1,
@@ -44,7 +44,7 @@
     {
       "type": "rect",
       "background": {
-        "func": "__ht__function(data, view) {\n if(data.a('node.value') < 5) {return 'rgb(0,255,0)'} else if (data.a('node.value') > 95) {return 'rgb(255,0,0)'} else {return '#D8D8D8'};\n}",
+        "func": "__ht__function(data, view) {\n let val = Number(data.a('node.value')),value = '#57BE37';\n if(val === 0){value='rgb(0,255,0)'}else if(val === 1){value='rgb(255,0,0)'};return value \n}",
         "value": "rgb(255,0,0)"
       },
       "borderWidth": 0.1,
@@ -61,7 +61,7 @@
     {
       "type": "oval",
       "background": {
-        "func": "__ht__function(data, view) {\n if(data.a('node.value') < 5) {return 'rgb(0,255,0)'} else if (data.a('node.value') > 95) {return 'rgb(255,0,0)'} else {return '#D8D8D8'};\n}",
+        "func": "__ht__function(data, view) {\n let val = Number(data.a('node.value')),value = '#57BE37';\n if(val === 0){value='rgb(0,255,0)'}else if(val === 1){value='rgb(255,0,0)'};return value \n}",
         "value": "rgb(255,0,0)"
       },
       "borderWidth": 0.1,
