@@ -2,66 +2,76 @@
   "modified": "Wed Jul 29 2020 09:41:41 GMT+0800 (CST)",
   "dataBindings": [
     {
+      "attr": "node.name",
+      "valueType": "String",
+      "defaultValue": "表格"
+    },
+    {
+      "attr": "node.cate",
+      "valueType": "String",
+      "defaultValue": "static"
+    },
+    {
       "attr": "node.type",
       "valueType": "String",
       "defaultValue": "table"
     },
     {
-      "attr": "table.columns",
+      "attr": "node.table.columns",
       "valueType": "Object",
       "name": "TableColumnDef",
       "defaultValue": "[{\"key\":\"column1\"},{\"key\":\"column2\"},{\"key\":\"column3\"},{\"key\":\"column4\"}]"
     },
     {
-      "attr": "table.dataSource",
+      "attr": "node.table.dataSource",
       "valueType": "Object",
       "name": "TableDataSource",
       "defaultValue": "[{},{},{},{}]"
     },
     {
-      "attr": "table.head.background",
+      "attr": "node.table.head.background",
       "valueType": "Color",
       "name": "TableHeadBackground",
-      "defaultValue": "rgb(0, 41, 87)"
+      "defaultValue": "rgb(240,240,240)"
     },
     {
-      "attr": "table.body.background",
+      "attr": "node.table.body.background",
       "valueType": "Color",
       "name": "TableBodyBackground",
-      "defaultValue": "rgb(0, 41, 87)"
+      "defaultValue": "rgb(255,255,255)"
     },
     {
-      "attr": "table.border.width",
+      "attr": "node.table.border.width",
       "valueType": "PositiveNumber",
       "name": "TableBorderWidth",
       "defaultValue": 2
     },
     {
-      "attr": "table.border.color",
+      "attr": "node.table.border.color",
       "valueType": "Color",
       "name": "TableBorderColor",
-      "defaultValue": "rgb(255, 255, 255)"
+      "defaultValue": "rgb(212,212,212)"
     },
     {
-      "attr": "table.head.height",
+      "attr": "node.table.head.height",
       "valueType": "PositiveNumber",
       "name": "TableHeadHeight",
       "defaultValue": 30
     },
     {
-      "attr": "table.body.height",
+      "attr": "node.table.body.height",
       "valueType": "PositiveNumber",
       "name": "TableBodyHeight",
       "defaultValue": 30
     },
     {
-      "attr": "table.head.show",
+      "attr": "node.table.head.show",
       "valueType": "Boolean",
       "name": "TableShowHead",
       "defaultValue": true
     },
     {
-      "attr": "table.head.merge",
+      "attr": "node.table.head.merge",
       "valueType": "Boolean",
       "name": "TableHeadMerge",
       "defaultValue": true
@@ -84,7 +94,7 @@
         160
       ],
       "columns": {
-        "func": "attr@table.columns",
+        "func": "attr@node.table.columns",
         "value": [
           {
             "key": "column1"
@@ -101,7 +111,7 @@
         ]
       },
       "dataSource": {
-        "func": "attr@table.dataSource",
+        "func": "attr@node.table.dataSource",
         "value": [
           {},
           {},
@@ -109,80 +119,80 @@
         ]
       },
       "thBackground": {
-        "func": "attr@table.head.background",
-        "value": "rgb(0, 41, 87)"
+        "func": "attr@node.table.head.background",
+        "value": "rgb(240,240,240)"
       },
       "tdBackground": {
-        "func": "attr@table.body.background",
-        "value": "rgb(0, 41, 87)"
+        "func": "attr@node.table.body.background",
+        "value": "rgb(255,255,255)"
       },
       "borderWidth": {
-        "func": "attr@table.border.width",
+        "func": "attr@node.table.border.width",
         "value": 2
       },
       "borderColor": {
-        "func": "attr@table.border.color",
-        "value": "rgb(255, 255, 255)"
+        "func": "attr@node.table.border.color",
+        "value": "rgb(212,212,212)"
       },
       "columnLineColor": {
-        "func": "attr@table.column.line.color",
-        "value": "rgb(255, 255, 255)"
+        "func": "attr@node.table.column.line.color",
+        "value": "rgb(212,212,212)"
       },
       "columnLineWidth": {
-        "func": "attr@table.column.line.width",
+        "func": "attr@node.table.column.line.width",
         "value": 2
       },
       "rowLineColor": {
-        "func": "attr@table.row.line.color",
-        "value": "rgb(255, 255, 255)"
+        "func": "attr@node.table.row.line.color",
+        "value": "rgb(212,212,212)"
       },
       "rowLineWidth": {
-        "func": "attr@table.row.line.width",
+        "func": "attr@node.table.row.line.width",
         "value": 2
       },
       "thFontSize": {
-        "func": "attr@table.head.font.size",
+        "func": "attr@node.table.head.font.size",
         "value": 14
       },
       "tdFontSize": {
-        "func": "attr@table.body.font.size",
+        "func": "attr@node.table.body.font.size",
         "value": 14
       },
       "thHeight": {
-        "func": "attr@table.head.height",
+        "func": "attr@node.table.head.height",
         "value": 30
       },
       "tdHeight": {
-        "func": "attr@table.body.height",
+        "func": "attr@node.table.body.height",
         "value": 30
       },
       "showHead": {
-        "func": "attr@table.head.show",
+        "func": "attr@node.table.head.show",
         "value": true
       },
       "headMerge": {
-        "func": "attr@table.head.merge",
+        "func": "attr@node.table.head.merge",
         "value": true
       },
       "showHeadRowLine": true,
       "thColor": {
-        "func": "attr@table.head.color",
-        "value": "rgb(255,0,0)"
+        "func": "attr@node.table.head.color",
+        "value": "#FF0000"
       },
       "tdColor": {
-        "func": "attr@table.body.color",
-        "value": "rgb(255,0,0)"
+        "func": "attr@node.table.body.color",
+        "value": "#FF0000"
       },
       "cellPadding": {
-        "func": "attr@table.cell.padding",
+        "func": "attr@node.table.cell.padding",
         "value": 0
       },
       "thFontFamily": {
-        "func": "attr@table.head.font.family",
+        "func": "attr@node.table.head.font.family",
         "value": "Kai,sans-serif, arial"
       },
       "tdFontFamily": {
-        "func": "attr@table.body.font.family",
+        "func": "attr@node.table.body.font.family",
         "value": "sans-serif, arial"
       }
     }

@@ -14,7 +14,7 @@
     {
       "attr": "node.color",
       "valueType": "Color",
-      "defaultValue": "rgb(255,0,0)"
+      "defaultValue": "#FF0000"
     },
     {
       "attr": "node.direction",
@@ -36,7 +36,7 @@
       "background": "#D8D8D8",
       "borderWidth": 0.1,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.color",
         "value": "rgb(0,0,0)"
       },
       "anchorX": 1.10435,
@@ -57,7 +57,7 @@
       "background": "#D8D8D8",
       "borderWidth": 0.1,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.color",
         "value": "rgb(0,0,0)"
       },
       "anchorX": -0.10402,
@@ -78,7 +78,7 @@
       "background": "#D8D8D8",
       "borderWidth": 0.1,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.color",
         "value": "rgb(0,0,0)"
       },
       "anchorY": 1.20919,
@@ -98,7 +98,7 @@
       "background": "#D8D8D8",
       "borderWidth": 0.1,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.color",
         "value": "rgb(0,0,0)"
       },
       "anchorY": -1.20919,

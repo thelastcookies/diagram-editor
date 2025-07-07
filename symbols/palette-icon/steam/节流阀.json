@@ -2,7 +2,7 @@
   "modified": "Tue Apr 12 2022 18:30:20 GMT+0800 (中国标准时间)",
   "dataBindings": [
     {
-      "attr": "node.line.color",
+      "attr": "node.color",
       "valueType": "Color",
       "defaultValue": "#D8D8D8"
     }
@@ -13,12 +13,12 @@
     {
       "type": "triangle",
       "background": {
-        "func": "attr@node.line.color",
+        "func": "attr@node.color",
         "value": "#D8D8D8"
       },
       "borderWidth": 0.1,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.color",
         "value": "rgb(0,0,0)"
       },
       "anchorX": 1.10435,
@@ -34,12 +34,12 @@
     {
       "type": "triangle",
       "background": {
-        "func": "attr@node.line.color",
+        "func": "attr@node.color",
         "value": "#D8D8D8"
       },
       "borderWidth": 0.1,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.color",
         "value": "rgb(0,0,0)"
       },
       "anchorX": -0.10435,
@@ -55,12 +55,12 @@
     {
       "type": "triangle",
       "background": {
-        "func": "attr@node.line.color",
+        "func": "attr@node.color",
         "value": "#D8D8D8"
       },
       "borderWidth": 0.1,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.color",
         "value": "rgb(0,0,0)"
       },
       "rotation": 3.14159,
@@ -74,7 +74,7 @@
     {
       "type": "rect",
       "background": {
-        "func": "attr@node.line.color",
+        "func": "attr@node.color",
         "value": "#D8D8D8"
       },
       "borderWidth": 0.1,

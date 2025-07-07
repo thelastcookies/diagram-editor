@@ -17,7 +17,7 @@
     },
     {
       "type": "rect",
-      "background": "rgb(255,0,0)",
+      "background": "#FF0000",
       "borderWidth": 1,
       "borderColor": "#979797",
       "rect": [
@@ -29,7 +29,7 @@
     },
     {
       "type": "rect",
-      "background": "rgb(255,0,0)",
+      "background": "#FF0000",
       "borderWidth": 1,
       "borderColor": "#979797",
       "rotation": 1.5708,
@@ -43,7 +43,7 @@
     {
       "type": "shape",
       "borderWidth": 1,
-      "borderColor": "rgb(255,0,0)",
+      "borderColor": "#FF0000",
       "points": [
         6,
         5.5,
@@ -54,7 +54,7 @@
     {
       "type": "shape",
       "borderWidth": 1,
-      "borderColor": "rgb(255,0,0)",
+      "borderColor": "#FF0000",
       "points": [
         10,
         5.5,

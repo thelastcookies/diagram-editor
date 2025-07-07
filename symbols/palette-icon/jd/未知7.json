@@ -62,8 +62,8 @@
     {
       "type": "rect",
       "background": {
-        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(0,255,0)' : 'rgb(255,0,0)';\n}",
-        "value": "rgb(255,0,0)"
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? '#00FF00' : '#FF0000';\n}",
+        "value": "#FF0000"
       },
       "borderWidth": 0.5,
       "borderColor": "#979797",
@@ -99,8 +99,8 @@
     {
       "type": "oval",
       "background": {
-        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(0,255,0)' : 'rgb(255,0,0)';\n}",
-        "value": "rgb(255,0,0)"
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? '#00FF00' : '#FF0000';\n}",
+        "value": "#FF0000"
       },
       "borderWidth": 1,
       "borderColor": "#979797",
@@ -223,8 +223,8 @@
     {
       "type": "oval",
       "background": {
-        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(0,255,0)' : 'rgb(255,0,0)';\n}",
-        "value": "rgb(255,0,0)"
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? '#00FF00' : '#FF0000';\n}",
+        "value": "#FF0000"
       },
       "borderWidth": 1,
       "borderColor": "#979797",

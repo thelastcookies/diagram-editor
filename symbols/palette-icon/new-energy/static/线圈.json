@@ -1,0 +1,157 @@
+{
+  "modified": "Thu Oct 22 2020 11:06:21 GMT+0800 (CST)",
+  "dataBindings": [
+    {
+      "attr": "node.name",
+      "valueType": "String",
+      "defaultValue": "线圈"
+    },
+    {
+      "attr": "node.color",
+      "valueType": "Color",
+      "defaultValue": "#FF0000"
+    }
+  ],
+  "width": 12,
+  "height": 34,
+  "comps": [
+    {
+      "type": "arc",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@node.color",
+        "value": "#FF0000"
+      },
+      "arcFrom": 0,
+      "arcTo": 3.14159,
+      "arcClose": false,
+      "rotation": 1.5708,
+      "rect": [
+        1,
+        1.5,
+        10,
+        10
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@node.color",
+        "value": "#FF0000"
+      },
+      "points": [
+        5.5,
+        1.5,
+        9.5,
+        1.5
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@node.color",
+        "value": "#FF0000"
+      },
+      "points": [
+        5.5,
+        11.5,
+        9.5,
+        11.5
+      ]
+    },
+    {
+      "type": "arc",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@node.color",
+        "value": "#FF0000"
+      },
+      "arcFrom": 0,
+      "arcTo": 3.14159,
+      "arcClose": false,
+      "rotation": 1.5708,
+      "rect": [
+        1,
+        12,
+        10,
+        10
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@node.color",
+        "value": "#FF0000"
+      },
+      "points": [
+        5.5,
+        12,
+        9.5,
+        12
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@node.color",
+        "value": "#FF0000"
+      },
+      "points": [
+        5.5,
+        22,
+        9.5,
+        22
+      ]
+    },
+    {
+      "type": "arc",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@node.color",
+        "value": "#FF0000"
+      },
+      "arcFrom": 0,
+      "arcTo": 3.14159,
+      "arcClose": false,
+      "rotation": 1.5708,
+      "rect": [
+        1,
+        22.5,
+        10,
+        10
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@node.color",
+        "value": "#FF0000"
+      },
+      "points": [
+        5.5,
+        22.5,
+        9.5,
+        22.5
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@node.color",
+        "value": "#FF0000"
+      },
+      "points": [
+        5.5,
+        32.5,
+        9.5,
+        32.5
+      ]
+    }
+  ]
+}

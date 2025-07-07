@@ -82,7 +82,7 @@
       "background": "#D8D8D8",
       "borderWidth": 0.1,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.color",
         "value": "rgb(0,0,0)"
       },
       "rotation": 4.71239,

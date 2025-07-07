@@ -2,6 +2,11 @@
   "modified": "Sun Jan 09 2022 20:03:41 GMT+0800 (中国标准时间)",
   "dataBindings": [
     {
+      "attr": "node.name",
+      "valueType": "String",
+      "defaultValue": "光字牌"
+    },
+    {
       "attr": "node.cate",
       "valueType": "String",
       "defaultValue": "m-point"
@@ -9,28 +14,22 @@
     {
       "attr": "node.type",
       "valueType": "String",
-      "defaultValue": "signalBoard"
-    },
-    {
-      "attr": "node.name",
-      "valueType": "String",
-      "defaultValue": "signalBoard"
+      "defaultValue": "switch"
     },
     {
       "attr": "node.state",
       "valueType": "Boolean",
-      "defaultValue": false,
-      "name": "光字牌状态"
+      "defaultValue": false
     },
     {
-      "attr": "node.background",
+      "attr": "node.background.color",
       "valueType": "Color",
-      "defaultValue": "rgb(0,255,0)"
+      "defaultValue": "#00FF00"
     },
     {
-      "attr": "background.close",
+      "attr": "node.background.color2",
       "valueType": "Color",
-      "defaultValue": "rgb(255, 0, 0)"
+      "defaultValue": "#FF0000"
     }
   ],
   "width": 300,
@@ -39,8 +38,8 @@
     {
       "type": "rect",
       "background": {
-        "func": "__ht__function(data, view) {\n return data.a('node.state') ? data.a('background.close') : data.a('node.background');\n}",
-        "value": "rgb(0,255,0)"
+        "func": "__ht__function(data, view) { return data.a('node.state') ? data.a('node.background.color2') : data.a('node.background.color');}",
+        "value": "#00FF00"
       },
       "rect": [
         0,

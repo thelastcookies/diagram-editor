@@ -14,7 +14,7 @@
     {
       "attr": "node.color",
       "valueType": "Color",
-      "defaultValue": "rgb(255,0,0)"
+      "defaultValue": "#FF0000"
     },
     {
       "attr": "node.state",
@@ -31,7 +31,7 @@
       "background": "#D8D8D8",
       "borderWidth": 1,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.color",
         "value": "#D8D8D8"
       },
       "rotation": 4.71239,
@@ -47,7 +47,7 @@
       "background": "#D8D8D8",
       "borderWidth": 1,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.color",
         "value": "#D8D8D8"
       },
       "rotation": 1.5708,
@@ -63,7 +63,7 @@
       "background": "#D8D8D8",
       "borderWidth": 1,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.color",
         "value": "#D8D8D8"
       },
       "rotation": 3.14159,
@@ -79,7 +79,7 @@
       "background": "#D8D8D8",
       "borderWidth": 1,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.color",
         "value": "#D8D8D8"
       },
       "rect": [

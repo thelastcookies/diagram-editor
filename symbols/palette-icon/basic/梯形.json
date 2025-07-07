@@ -1,0 +1,55 @@
+{
+  "modified": "Wed Sep 09 2020 17:21:53 GMT+0800 (中国标准时间)",
+  "dataBindings": [
+    {
+      "attr": "node.name",
+      "valueType": "String",
+      "defaultValue": "梯形"
+    },
+    {
+      "attr": "node.background.color",
+      "valueType": "Color",
+      "defaultValue": "rgba(0, 0, 0, 0)"
+    },
+    {
+      "attr": "node.border.width",
+      "valueType": "Number",
+      "defaultValue": "2"
+    },
+    {
+      "attr": "node.border.color",
+      "valueType": "Color",
+      "defaultValue": "#FF0000"
+    }
+  ],
+  "width": 60,
+  "height": 48,
+  "comps": [
+    {
+      "type": "shape",
+      "background": {
+        "func": "attr@node.background.color",
+        "value": "rgba(0, 0, 0, 0)"
+      },
+      "borderWidth": {
+        "func": "attr@node.border.width",
+        "value": 2
+      },
+      "borderColor": {
+        "func": "attr@node.border.color",
+        "value": "#FF0000"
+      },
+      "closePath": true,
+      "points": [
+        20,
+        0,
+        0,
+        48,
+        60,
+        48,
+        40,
+        0
+      ]
+    }
+  ]
+}

@@ -30,8 +30,8 @@
       "type": "shape",
       "borderWidth": 2,
       "borderColor": {
-        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : 'rgb(0,255,0)';\n}",
-        "value": "rgb(255,0,0)"
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? '#FF0000' : '#00FF00';\n}",
+        "value": "#FF0000"
       },
       "points": [
         5,
@@ -44,8 +44,8 @@
       "type": "shape",
       "borderWidth": 2,
       "borderColor": {
-        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : 'rgb(0,255,0)';\n}",
-        "value": "rgb(255,0,0)"
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? '#FF0000' : '#00FF00';\n}",
+        "value": "#FF0000"
       },
       "rotation": 0.7854,
       "points": [
@@ -59,8 +59,8 @@
       "type": "shape",
       "borderWidth": 2,
       "borderColor": {
-        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : 'rgb(0,255,0)';\n}",
-        "value": "rgb(255,0,0)"
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? '#FF0000' : '#00FF00';\n}",
+        "value": "#FF0000"
       },
       "rotation": 2.35619,
       "points": [
@@ -74,8 +74,8 @@
       "type": "shape",
       "borderWidth": 2,
       "borderColor": {
-        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : 'rgb(0,255,0)';\n}",
-        "value": "rgb(255,0,0)"
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? '#FF0000' : '#00FF00';\n}",
+        "value": "#FF0000"
       },
       "points": [
         5,
@@ -88,8 +88,8 @@
       "type": "shape",
       "borderWidth": 2,
       "borderColor": {
-        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : 'rgb(0,255,0)';\n}",
-        "value": "rgb(255,0,0)"
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? '#FF0000' : '#00FF00';\n}",
+        "value": "#FF0000"
       },
       "anchorX": 0,
       "anchorY": 1,

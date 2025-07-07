@@ -845,7 +845,6 @@
     },
     {
       "type": "rect",
-      "background": "rgba(217,217,217,0)",
       "borderWidth": 0.5,
       "borderColor": "rgb(0,0,0)",
       "borderJoin": "miter",
@@ -865,7 +864,6 @@
     },
     {
       "type": "rect",
-      "background": "rgba(217,217,217,0)",
       "borderWidth": 0.5,
       "borderColor": "rgb(255,255,255)",
       "borderJoin": "miter",
@@ -879,7 +877,6 @@
     },
     {
       "type": "rect",
-      "background": "rgba(217,217,217,0)",
       "borderWidth": 0.5,
       "borderColor": "rgb(255,255,255)",
       "borderJoin": "miter",
@@ -893,7 +890,6 @@
     },
     {
       "type": "rect",
-      "background": "rgba(217,217,217,0)",
       "borderWidth": 0.5,
       "borderColor": "rgb(255,255,255)",
       "borderJoin": "miter",
@@ -907,7 +903,6 @@
     },
     {
       "type": "rect",
-      "background": "rgba(217,217,217,0)",
       "borderWidth": 0.5,
       "borderColor": "rgb(255,255,255)",
       "borderJoin": "miter",
@@ -921,7 +916,6 @@
     },
     {
       "type": "rect",
-      "background": "rgba(217,217,217,0)",
       "borderWidth": 0.5,
       "borderColor": "rgb(255,255,255)",
       "borderJoin": "miter",
@@ -935,7 +929,6 @@
     },
     {
       "type": "rect",
-      "background": "rgba(217,217,217,0)",
       "borderWidth": 0.5,
       "borderColor": "rgb(255,255,255)",
       "borderJoin": "miter",
@@ -949,7 +942,6 @@
     },
     {
       "type": "rect",
-      "background": "rgba(217,217,217,0)",
       "borderWidth": 0.5,
       "borderColor": "rgb(255,255,255)",
       "borderJoin": "miter",
@@ -963,7 +955,6 @@
     },
     {
       "type": "trapezoid",
-      "background": "rgba(217,217,217,0)",
       "borderWidth": 0.5,
       "borderColor": "rgb(255,255,255)",
       "borderJoin": "miter",
@@ -978,7 +969,6 @@
     },
     {
       "type": "trapezoid",
-      "background": "rgba(217,217,217,0)",
       "borderWidth": 0.5,
       "borderColor": "rgb(255,255,255)",
       "borderJoin": "miter",
@@ -993,7 +983,6 @@
     },
     {
       "type": "rect",
-      "background": "rgba(217,217,217,0)",
       "borderWidth": 0.5,
       "borderColor": "rgb(255,255,255)",
       "borderJoin": "miter",
@@ -1151,7 +1140,6 @@
     },
     {
       "type": "rect",
-      "background": "rgba(217,217,217,0)",
       "borderWidth": 0.5,
       "borderColor": "rgb(255,255,255)",
       "borderJoin": "miter",
@@ -1165,7 +1153,6 @@
     },
     {
       "type": "rect",
-      "background": "rgba(217,217,217,0)",
       "borderWidth": 0.5,
       "borderColor": "rgb(255,255,255)",
       "borderJoin": "miter",
@@ -1212,7 +1199,6 @@
     },
     {
       "type": "rect",
-      "background": "rgba(217,217,217,0)",
       "borderWidth": 0.5,
       "borderColor": "rgb(0,199,7)",
       "borderJoin": "miter",
@@ -1232,7 +1218,6 @@
     },
     {
       "type": "rect",
-      "background": "rgba(217,217,217,0)",
       "borderWidth": 0.5,
       "borderColor": "rgb(255,255,255)",
       "borderJoin": "miter",
@@ -1246,7 +1231,6 @@
     },
     {
       "type": "rect",
-      "background": "rgba(217,217,217,0)",
       "borderWidth": 0.5,
       "borderColor": "rgb(255,255,255)",
       "borderJoin": "miter",
@@ -1260,7 +1244,6 @@
     },
     {
       "type": "rect",
-      "background": "rgba(217,217,217,0)",
       "borderWidth": 0.5,
       "borderColor": "rgb(255,255,255)",
       "borderJoin": "miter",
@@ -1340,7 +1323,6 @@
     },
     {
       "type": "rect",
-      "background": "rgba(217,217,217,0)",
       "borderWidth": 0.5,
       "borderColor": "rgb(255,255,255)",
       "borderJoin": "miter",
@@ -1354,7 +1336,6 @@
     },
     {
       "type": "rect",
-      "background": "rgba(217,217,217,0)",
       "borderWidth": 0.5,
       "borderColor": "rgb(255,255,255)",
       "borderJoin": "miter",
@@ -1395,7 +1376,6 @@
     },
     {
       "type": "rect",
-      "background": "rgba(217,217,217,0)",
       "borderWidth": 0.5,
       "borderColor": "rgb(255,255,255)",
       "borderJoin": "miter",
@@ -1427,7 +1407,6 @@
     },
     {
       "type": "rect",
-      "background": "rgba(217,217,217,0)",
       "borderWidth": 0.5,
       "borderColor": "rgb(255,255,255)",
       "borderJoin": "miter",
@@ -1513,7 +1492,7 @@
       "type": "triangle",
       "borderWidth": 4,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.color",
         "value": "rgb(255,255,255)"
       },
       "borderJoin": "miter",
@@ -1538,7 +1517,6 @@
     },
     {
       "type": "circle",
-      "background": "rgba(217,217,217,0)",
       "borderWidth": 0.5,
       "borderColor": "rgb(255,255,255)",
       "borderJoin": "miter",
@@ -1600,7 +1578,6 @@
     },
     {
       "type": "arc",
-      "background": "rgba(217,217,217,0)",
       "borderWidth": 0.5,
       "borderColor": "rgb(255,255,255)",
       "borderJoin": "miter",

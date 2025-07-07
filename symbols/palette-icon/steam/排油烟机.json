@@ -144,7 +144,7 @@
       "background": "#D8D8D8",
       "borderWidth": 0.5,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.color",
         "value": "#D8D8D8"
       },
       "borderWidthAbsolute": true,
@@ -161,7 +161,7 @@
       "background": "#D8D8D8",
       "borderWidth": 0.5,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.color",
         "value": "#D8D8D8"
       },
       "borderWidthAbsolute": true,
@@ -179,7 +179,7 @@
       "background": "#D8D8D8",
       "borderWidth": 0.5,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.color",
         "value": "#D8D8D8"
       },
       "borderWidthAbsolute": true,
@@ -197,7 +197,7 @@
       "background": "#D8D8D8",
       "borderWidth": 0.5,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.color",
         "value": "#D8D8D8"
       },
       "borderWidthAbsolute": true,
@@ -215,7 +215,7 @@
       "background": "#D8D8D8",
       "borderWidth": 0.5,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.color",
         "value": "#D8D8D8"
       },
       "borderWidthAbsolute": true,
@@ -233,7 +233,7 @@
       "background": "#D8D8D8",
       "borderWidth": 0.5,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.color",
         "value": "#D8D8D8"
       },
       "borderWidthAbsolute": true,

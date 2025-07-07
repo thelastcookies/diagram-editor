@@ -1,0 +1,97 @@
+{
+  "modified": "Tue Jul 13 2021 10:16:06 GMT+0800 (中国标准时间)",
+  "dataBindings": [
+    {
+      "attr": "node.name",
+      "valueType": "String",
+      "defaultValue": "风机模型"
+    },
+    {
+      "attr": "node.color",
+      "valueType": "Color",
+      "defaultValue": "#FF0000"
+    }
+  ],
+  "width": 52,
+  "height": 77,
+  "comps": [
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@node.color",
+        "value": "#FF0000"
+      },
+      "rotation": -1.10969,
+      "points": [
+        14.14447,
+        19.13988,
+        37.83424,
+        7.33029
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@node.color",
+        "value": "#FF0000"
+      },
+      "rotation": -1.10969,
+      "points": [
+        38.96314,
+        51.16475,
+        40.82932,
+        25.06132
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@node.color",
+        "value": "#FF0000"
+      },
+      "rotation": -1.10969,
+      "points": [
+        23.04643,
+        45.66525,
+        0.71979,
+        30.54024
+      ]
+    },
+    {
+      "type": "oval",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@node.color",
+        "value": "#FF0000"
+      },
+      "rect": [
+        23.0072,
+        26.84419,
+        6,
+        6
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 1,
+      "borderColor": {
+        "func": "attr@node.color",
+        "value": "#FF0000"
+      },
+      "closePath": true,
+      "points": [
+        23.5809,
+        32.84419,
+        20.5809,
+        76.47018,
+        31.5809,
+        76.47018,
+        28.5809,
+        32.84419
+      ]
+    }
+  ]
+}

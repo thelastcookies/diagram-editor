@@ -15,7 +15,7 @@
       "background": "rgba(0,0,0,0)",
       "borderWidth": 2,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.color",
         "value": "rgb(242,83,75)"
       },
       "anchorY": 1,

@@ -8,7 +8,7 @@
       "background": "#D8D8D8",
       "borderWidth": 0.5,
       "borderColor": {
-        "func": "attr@node.line.color",
+        "func": "attr@node.color",
         "value": "rgb(0,0,0)"
       },
       "borderJoin": "miter",
@@ -26,7 +26,7 @@
       "background": "#D8D8D8",
       "borderWidth": 0.5,
       "borderColor": {
-        "func": "attr@node.line.color",
+        "func": "attr@node.color",
         "value": "rgb(0,0,0)"
       },
       "borderJoin": "miter",
@@ -44,7 +44,7 @@
       "background": "#D8D8D8",
       "borderWidth": 0.5,
       "borderColor": {
-        "func": "attr@node.line.color",
+        "func": "attr@node.color",
         "value": "rgb(0,0,0)"
       },
       "borderJoin": "miter",

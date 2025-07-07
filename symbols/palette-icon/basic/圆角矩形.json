@@ -1,18 +1,49 @@
 {
   "modified": "Fri Oct 23 2020 11:03:45 GMT+0800 (CST)",
-  "width": 40,
-  "height": 20,
+  "dataBindings": [
+    {
+      "attr": "node.name",
+      "valueType": "String",
+      "defaultValue": "圆角矩形"
+    },
+    {
+      "attr": "node.background.color",
+      "valueType": "Color",
+      "defaultValue": "rgba(0, 0, 0, 0)"
+    },
+    {
+      "attr": "node.border.width",
+      "valueType": "Number",
+      "defaultValue": "2"
+    },
+    {
+      "attr": "node.border.color",
+      "valueType": "Color",
+      "defaultValue": "#FF0000"
+    }
+  ],
+  "width": 60,
+  "height": 60,
   "comps": [
     {
       "type": "roundRect",
-      "background": "rgba(217,217,217,0)",
-      "borderWidth": 1,
-      "borderColor": "#979797",
+      "background": {
+        "func": "attr@node.background.color",
+        "value": "rgba(0, 0, 0, 0)"
+      },
+      "borderWidth": {
+        "func": "attr@node.border.width",
+        "value": 2
+      },
+      "borderColor": {
+        "func": "attr@node.border.color",
+        "value": "#FF0000"
+      },
       "rect": [
         0,
         0,
-        40,
-        20
+        60,
+        60
       ]
     }
   ]

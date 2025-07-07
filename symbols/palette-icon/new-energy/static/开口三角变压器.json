@@ -1,0 +1,52 @@
+{
+  "modified": "Sun Jan 09 2022 21:28:13 GMT+0800 (中国标准时间)",
+  "dataBindings": [
+    {
+      "attr": "node.name",
+      "valueType": "String",
+      "defaultValue": "开口三角变压器"
+    },
+    {
+      "attr": "node.color",
+      "valueType": "Color",
+      "defaultValue": "#FF0000"
+    }
+  ],
+  "width": 60,
+  "height": 60,
+  "comps": [
+    {
+      "type": "oval",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@node.color",
+        "value": "#FF0000"
+      },
+      "rotation": 4.71239,
+      "rect": [
+        1,
+        1,
+        58,
+        58
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@node.color",
+        "value": "#FF0000"
+      },
+      "points": [
+        43.458,
+        25.45714,
+        19.47254,
+        15.33895,
+        19.47254,
+        44.66105,
+        43.458,
+        34.54286
+      ]
+    }
+  ]
+}

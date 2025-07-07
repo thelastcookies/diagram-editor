@@ -28,7 +28,6 @@
   "comps": [
     {
       "type": "rect",
-      "background": "rgba(217,217,217,0)",
       "borderWidth": 1,
       "borderColor": {
         "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r='#D8D8D8';if(d[8]){r='rgb(0,192,29)'};if(d[0]){r='rgb(192,0,32)'}return r;\n}",
@@ -43,7 +42,7 @@
     },
     {
       "type": "circle",
-      "background": "rgb(255,0,0)",
+      "background": "#FF0000",
       "borderColor": "#979797",
       "visible": {
         "func": "__ht__function(data, view) {\n return Boolean(data.a('node.data')[25]);\n}",
@@ -90,7 +89,7 @@
     },
     {
       "type": "rect",
-      "background": "rgb(255,255,0)",
+      "background": "#FFFF00",
       "borderColor": "#979797",
       "visible": {
         "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r=false;if(d[24]&&!d[25]){r=true}return r;\n}",
@@ -225,7 +224,7 @@
         "value": "F"
       },
       "align": "center",
-      "color": "rgb(255,0,0)",
+      "color": "#FF0000",
       "font": "9px arial, sans-serif",
       "visible": {
         "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r=false;if((d[1]&&!d[11]&&!d[2]&&!d[10])||(d[2]||d[10])){r=true}return r;\n}",
@@ -242,7 +241,7 @@
       "type": "text",
       "text": "L",
       "align": "center",
-      "color": "rgb(255,255,0)",
+      "color": "#FFFF00",
       "font": "9px arial, sans-serif",
       "visible": {
         "func": "__ht__function(data, view) {\n return Boolean(data.a('node.data')[18]);\n}",

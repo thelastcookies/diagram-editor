@@ -2,12 +2,17 @@
   "modified": "Thu Feb 04 2021 16:31:59 GMT+0800 (CST)",
   "dataBindings": [
     {
+      "attr": "node.name",
+      "valueType": "String",
+      "defaultValue": "显示隐藏"
+    },
+    {
       "attr": "node.cate",
       "valueType": "String",
       "defaultValue": "m-point"
     },
     {
-      "attr": "node.name",
+      "attr": "node.type",
       "valueType": "String",
       "defaultValue": "switch"
     },
@@ -19,18 +24,12 @@
     {
       "attr": "node.state",
       "valueType": "Boolean",
-      "defaultValue": true,
-      "name": "显示隐藏"
+      "defaultValue": true
     },
     {
-      "attr": "node.line.color",
+      "attr": "node.color",
       "valueType": "Color",
       "defaultValue": "#FF0000"
-    },
-    {
-      "attr": "text.font",
-      "valueType": "String",
-      "defaultValue": "16px arial, sans-serif"
     }
   ],
   "width": 70,
@@ -39,22 +38,19 @@
     {
       "type": "text",
       "text": {
-        "func": "__ht__function(data, view) {\n return data.a('node.label');\n}",
+        "func": "__ht__function(data, view) { return data.a('node.label') }",
         "value": "显示隐藏"
       },
       "align": "center",
       "color": {
-        "func": "__ht__function(data, view) {\n return data.a('node.line.color');\n}",
-        "value": "rgb(255,0,0)"
+        "func": "__ht__function(data, view) { return data.a('node.color') }",
+        "value": "#FF0000"
       },
       "visible": {
-        "func": "__ht__function(data, view) {\n return data.a('node.state');\n}",
+        "func": "__ht__function(data, view) { return data.a('node.state') }",
         "value": "true"
       },
-      "font": {
-        "func": "__ht__function(data, view) {\n return data.a('text.font');\n}",
-        "value": "16px arial, sans-serif"
-      },
+      "font": "16px arial, sans-serif",
       "rect": [
         0,
         0,

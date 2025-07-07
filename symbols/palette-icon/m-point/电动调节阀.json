@@ -29,12 +29,12 @@
     {
       "type": "rightTriangle",
       "background": {
-        "func": "__ht__function(data, view) {\n let val = Number(data.a('node.value')), value = 'rgb(255,0,0)';\n if(val === 0){value='rgb(0,255,0)'}else if(val === 1){value='rgb(255,0,0)'};return value\n}",
-        "value": "rgb(255,0,0)"
+        "func": "__ht__function(data, view) {\n let val = Number(data.a('node.value')), value = '#FF0000';\n if(val === 0){value='#00FF00'}else if(val === 1){value='#FF0000'};return value\n}",
+        "value": "#FF0000"
       },
       "borderWidth": 0.1,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.color",
         "value": "rgb(0,0,0)"
       },
       "anchorY": 1.20919,
@@ -49,12 +49,12 @@
     {
       "type": "rightTriangle",
       "background": {
-        "func": "__ht__function(data, view) {\n let val = Number(data.a('node.value')), value = 'rgb(255,0,0)';\n if(val === 0){value='rgb(0,255,0)'}else if(val === 1){value='rgb(255,0,0)'};return value\n}",
-        "value": "rgb(255,0,0)"
+        "func": "__ht__function(data, view) {\n let val = Number(data.a('node.value')), value = '#FF0000';\n if(val === 0){value='#00FF00'}else if(val === 1){value='#FF0000'};return value\n}",
+        "value": "#FF0000"
       },
       "borderWidth": 0.1,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.color",
         "value": "rgb(0,0,0)"
       },
       "anchorY": -1.20919,
@@ -69,8 +69,8 @@
     {
       "type": "rect",
       "background": {
-        "func": "__ht__function(data, view) {\n let val = Number(data.a('node.value')), value = 'rgb(255,0,0)';\n if(val === 0){value='rgb(0,255,0)'}else if(val === 1){value='rgb(255,0,0)'};return value\n}",
-        "value": "rgb(255,0,0)"
+        "func": "__ht__function(data, view) {\n let val = Number(data.a('node.value')), value = '#FF0000';\n if(val === 0){value='#00FF00'}else if(val === 1){value='#FF0000'};return value\n}",
+        "value": "#FF0000"
       },
       "borderWidth": 0.1,
       "borderColor": "rgb(0,0,0)",
@@ -86,8 +86,8 @@
     {
       "type": "oval",
       "background": {
-        "func": "__ht__function(data, view) {\n let val = Number(data.a('node.value')), value = 'rgb(255,0,0)';\n if(val === 0){value='rgb(0,255,0)'}else if(val === 1){value='rgb(255,0,0)'};return value\n}",
-        "value": "rgb(255,0,0)"
+        "func": "__ht__function(data, view) {\n let val = Number(data.a('node.value')), value = '#FF0000';\n if(val === 0){value='#00FF00'}else if(val === 1){value='#FF0000'};return value\n}",
+        "value": "#FF0000"
       },
       "borderWidth": 0.1,
       "borderColor": "rgb(0,0,0)",

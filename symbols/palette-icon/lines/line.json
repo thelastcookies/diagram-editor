@@ -1,0 +1,17 @@
+{
+  "width": 100,
+  "height": 10,
+  "comps": [
+    {
+      "type": "shape",
+      "borderWidth": 4,
+      "borderColor": "#FF0000",
+      "points": [
+        5,
+        5,
+        96,
+        5
+      ]
+    }
+  ]
+}

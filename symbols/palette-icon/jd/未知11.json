@@ -7,7 +7,7 @@
       "type": "rect",
       "background": "#D8D8D8",
       "borderWidth": 1,
-      "borderColor": "rgb(255,0,0)",
+      "borderColor": "#FF0000",
       "rect": [
         0,
         0,
@@ -19,7 +19,7 @@
       "type": "oval",
       "background": "#D8D8D8",
       "borderWidth": 1,
-      "borderColor": "rgb(255,0,0)",
+      "borderColor": "#FF0000",
       "rect": [
         1.5,
         1,
@@ -29,7 +29,7 @@
     },
     {
       "type": "rect",
-      "background": "rgb(255,0,0)",
+      "background": "#FF0000",
       "borderWidth": 1,
       "borderColor": "rgb(105,104,104)",
       "rect": [
@@ -41,7 +41,7 @@
     },
     {
       "type": "rect",
-      "background": "rgb(255,0,0)",
+      "background": "#FF0000",
       "borderWidth": 1,
       "borderColor": "rgb(105,104,104)",
       "rotation": 1.5708,
@@ -55,7 +55,7 @@
     {
       "type": "shape",
       "borderWidth": 1,
-      "borderColor": "rgb(255,0,0)",
+      "borderColor": "#FF0000",
       "points": [
         8,
         8,
@@ -66,7 +66,7 @@
     {
       "type": "shape",
       "borderWidth": 1,
-      "borderColor": "rgb(255,0,0)",
+      "borderColor": "#FF0000",
       "points": [
         12,
         8,

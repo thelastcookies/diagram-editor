@@ -84,7 +84,7 @@
     },
     {
       "type": "shape",
-      "background": "rgb(0,255,0)",
+      "background": "#00FF00",
       "borderWidth": 1,
       "borderColor": "#979797",
       "anchorX": 0.46,
@@ -101,7 +101,7 @@
     },
     {
       "type": "shape",
-      "background": "rgb(0,255,0)",
+      "background": "#00FF00",
       "borderWidth": 1,
       "borderColor": "#979797",
       "anchorX": 0.46,

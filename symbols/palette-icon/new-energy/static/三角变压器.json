@@ -1,0 +1,49 @@
+{
+  "modified": "Sun Jan 09 2022 21:25:23 GMT+0800 (中国标准时间)",
+  "dataBindings": [
+    {
+      "attr": "node.name",
+      "valueType": "String",
+      "defaultValue": "三角变压器"
+    },
+    {
+      "attr": "node.color",
+      "valueType": "Color",
+      "defaultValue": "#FF0000"
+    }
+  ],
+  "width": 60,
+  "height": 60,
+  "comps": [
+    {
+      "type": "polygon",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@node.color",
+        "value": "#FF0000"
+      },
+      "polygonSide": 3,
+      "rect": [
+        13.33603,
+        13.36621,
+        33.26757,
+        33.26757
+      ]
+    },
+    {
+      "type": "oval",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@node.color",
+        "value": "#FF0000"
+      },
+      "rotation": 4.71239,
+      "rect": [
+        1.00003,
+        1.00003,
+        57.93957,
+        57.93957
+      ]
+    }
+  ]
+}

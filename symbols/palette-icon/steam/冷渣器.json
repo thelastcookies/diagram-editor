@@ -83,7 +83,6 @@
     },
     {
       "type": "rect",
-      "background": "rgba(217,217,217,0)",
       "borderWidth": 1,
       "borderColor": "rgb(255,255,255)",
       "rect": [
@@ -95,7 +94,6 @@
     },
     {
       "type": "rect",
-      "background": "rgba(217,217,217,0)",
       "borderWidth": 1,
       "borderColor": "rgb(255,255,255)",
       "rect": [
@@ -107,7 +105,6 @@
     },
     {
       "type": "rect",
-      "background": "rgba(217,217,217,0)",
       "borderWidth": 1,
       "borderColor": "rgb(255,255,255)",
       "rect": [
@@ -119,7 +116,6 @@
     },
     {
       "type": "rect",
-      "background": "rgba(217,217,217,0)",
       "borderWidth": 1,
       "borderColor": "rgb(255,255,255)",
       "rect": [
@@ -142,7 +138,6 @@
     },
     {
       "type": "rect",
-      "background": "rgba(217,217,217,0)",
       "borderWidth": 0.5,
       "borderColor": "rgb(255,255,255)",
       "rotation": 2.0944,

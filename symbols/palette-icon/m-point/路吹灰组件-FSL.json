@@ -76,7 +76,7 @@
     },
     {
       "type": "circle",
-      "background": "rgb(255,0,0)",
+      "background": "#FF0000",
       "borderColor": "#979797",
       "visible": {
         "func": "__ht__function(data, view) {\n return Boolean(data.a('node.data')[25]);\n}",
@@ -128,7 +128,7 @@
         "value": "F"
       },
       "align": "center",
-      "color": "rgb(255,0,0)",
+      "color": "#FF0000",
       "font": "9px arial, sans-serif",
       "visible": {
         "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r=false;if((d[3]&&!d[11]&&!d[2]&&!d[10])||(d[2]||d[10])){r=true}return r;\n}",
@@ -145,7 +145,7 @@
       "type": "text",
       "text": "L",
       "align": "center",
-      "color": "rgb(255,255,0)",
+      "color": "#FFFF00",
       "font": "9px arial, sans-serif",
       "visible": {
         "func": "__ht__function(data, view) {\n return Boolean(data.a('node.data')[18]);\n}",

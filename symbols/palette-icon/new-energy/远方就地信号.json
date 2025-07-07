@@ -1,0 +1,53 @@
+{
+  "modified": "Thu Oct 29 2020 17:43:41 GMT+0800 (CST)",
+  "dataBindings": [
+    {
+      "attr": "node.name",
+      "valueType": "String",
+      "defaultValue": "远方就地信号"
+    },
+    {
+      "attr": "node.cate",
+      "valueType": "String",
+      "defaultValue": "m-point"
+    },
+    {
+      "attr": "node.type",
+      "valueType": "String",
+      "defaultValue": "switch"
+    },
+    {
+      "attr": "node.state",
+      "valueType": "Boolean",
+      "defaultValue": false
+    },
+    {
+      "attr": "node.color",
+      "valueType": "Color",
+      "defaultValue": "#000"
+    }
+  ],
+  "width": 50,
+  "height": 50,
+  "comps": [
+    {
+      "type": "text",
+      "text": {
+        "func": "__ht__function(data, view){ return data.a('node.state') ? '就地' : '远方';}",
+        "value": "远方"
+      },
+      "color": {
+        "func": "attr@node.color",
+        "value": "#000"
+      },
+      "align": "center",
+      "font": "16px arial, sans-serif",
+      "rect": [
+        0,
+        0,
+        50,
+        50
+      ]
+    }
+  ]
+}

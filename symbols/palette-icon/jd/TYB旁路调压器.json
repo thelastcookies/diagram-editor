@@ -6,7 +6,7 @@
     {
       "type": "oval",
       "borderWidth": 2,
-      "borderColor": "rgb(255,0,0)",
+      "borderColor": "#FF0000",
       "rect": [
         4.38556,
         3,
@@ -18,7 +18,7 @@
       "type": "shape",
       "background": {
         "func": "attr@arrow.color",
-        "value": "rgb(255,0,0)"
+        "value": "#FF0000"
       },
       "borderColor": "#40ACFF",
       "rotation": -0.59308,
@@ -36,7 +36,7 @@
     {
       "type": "shape",
       "borderWidth": 2,
-      "borderColor": "rgb(255,0,0)",
+      "borderColor": "#FF0000",
       "rotation": 0.97772,
       "points": [
         13.52039,
@@ -56,7 +56,7 @@
     {
       "type": "oval",
       "borderWidth": 2,
-      "borderColor": "rgb(255,0,0)",
+      "borderColor": "#FF0000",
       "fillClipPercentage": 0.5,
       "clipPercentage": 0.35,
       "clipDirection": "left",

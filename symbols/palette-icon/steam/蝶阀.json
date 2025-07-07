@@ -8,7 +8,7 @@
       "background": "#D8D8D8",
       "borderWidth": 0.1,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.color",
         "value": "rgb(0,0,0)"
       },
       "anchorX": 1.10435,
@@ -26,7 +26,7 @@
       "background": "#D8D8D8",
       "borderWidth": 0.1,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.color",
         "value": "rgb(0,0,0)"
       },
       "rotation": 1.5708,
@@ -42,7 +42,7 @@
       "background": "#D8D8D8",
       "borderWidth": 0.1,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.color",
         "value": "rgb(0,0,0)"
       },
       "rotation": 4.71239,

@@ -30,7 +30,7 @@
     {
       "attr": "signal.color1",
       "valueType": "Color",
-      "defaultValue": "rgb(0,255,0)"
+      "defaultValue": "#00FF00"
     },
     {
       "attr": "node.signal",

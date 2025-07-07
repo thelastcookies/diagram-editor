@@ -1648,8 +1648,8 @@
     {
       "type": "diamond",
       "background": {
-        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : 'rgb(0,0,0)';\n}",
-        "value": "rgb(255,0,0)"
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? '#FF0000' : 'rgb(0,0,0)';\n}",
+        "value": "#FF0000"
       },
       "borderWidth": 1,
       "borderColor": "rgba(255,255,0,0)",
@@ -1670,8 +1670,8 @@
     {
       "type": "diamond",
       "background": {
-        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : 'rgb(0,0,0)';\n}",
-        "value": "rgb(255,0,0)"
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? '#FF0000' : 'rgb(0,0,0)';\n}",
+        "value": "#FF0000"
       },
       "borderWidth": 1,
       "borderColor": "rgba(255,255,0,0)",

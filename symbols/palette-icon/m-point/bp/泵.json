@@ -14,7 +14,7 @@
     {
       "attr": "node.color",
       "valueType": "Color",
-      "defaultValue": "rgb(255,0,0)"
+      "defaultValue": "#FF0000"
     },
     {
       "attr": "node.state",
@@ -64,7 +64,7 @@
     },
     {
       "type": "rect",
-      "background": "rgb(255,255,0)",
+      "background": "#FFFF00",
       "borderWidth": 0.5,
       "borderColor": "#979797",
       "rect": [
@@ -76,7 +76,7 @@
     },
     {
       "type": "rect",
-      "background": "rgb(255,0,0)",
+      "background": "#FF0000",
       "borderWidth": 0.5,
       "borderColor": "#979797",
       "rect": [
@@ -114,7 +114,7 @@
       "type": "text",
       "text": "F",
       "align": "center",
-      "color": "rgb(255,0,0)",
+      "color": "#FF0000",
       "font": "9px arial, sans-serif",
       "rect": [
         -9,
@@ -127,7 +127,7 @@
       "type": "text",
       "text": "L",
       "align": "center",
-      "color": "rgb(255,255,0)",
+      "color": "#FFFF00",
       "font": "9px arial, sans-serif",
       "rect": [
         -9,

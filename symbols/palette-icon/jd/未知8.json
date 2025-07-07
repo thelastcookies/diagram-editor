@@ -6,7 +6,7 @@
     {
       "type": "oval",
       "borderWidth": 2,
-      "borderColor": "rgb(255,0,0)",
+      "borderColor": "#FF0000",
       "rotation": 4.71239,
       "rect": [
         0.98227,
@@ -18,7 +18,7 @@
     {
       "type": "text",
       "text": "G",
-      "color": "rgb(255,0,0)",
+      "color": "#FF0000",
       "rect": [
         11.64849,
         5,
@@ -29,7 +29,7 @@
     {
       "type": "text",
       "text": "3",
-      "color": "rgb(255,0,0)",
+      "color": "#FF0000",
       "rect": [
         6.29698,
         17,

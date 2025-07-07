@@ -1,0 +1,53 @@
+{
+  "modified": "Wed Feb 03 2021 17:06:16 GMT+0800 (CST)",
+  "dataBindings": [
+    {
+      "attr": "node.name",
+      "valueType": "String",
+      "defaultValue": "二极管"
+    },
+    {
+      "attr": "node.color",
+      "valueType": "Color",
+      "defaultValue": "#FF0000"
+    }
+  ],
+  "width": 24,
+  "height": 28,
+  "comps": [
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@node.color",
+        "value": "#FF0000"
+      },
+      "points": [
+        23.37114,
+        28,
+        23.37114,
+        0
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": {
+        "func": "attr@node.color",
+        "value": "#FF0000"
+      },
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@node.color",
+        "value": "#FF0000"
+      },
+      "borderJoin": "miter",
+      "rotation": 1.5708,
+      "rect": [
+        -0.99572,
+        4,
+        24,
+        20
+      ]
+    }
+  ]
+}

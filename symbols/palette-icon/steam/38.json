@@ -13,7 +13,7 @@
     {
       "type": "oval",
       "background": {
-        "func": "attr@line.color",
+        "func": "attr@node.color",
         "value": "rgb(0,199,7)"
       },
       "borderWidth": 3,

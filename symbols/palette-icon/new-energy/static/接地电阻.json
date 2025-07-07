@@ -1,0 +1,103 @@
+{
+  "modified": "Sun Jan 09 2022 21:51:26 GMT+0800 (中国标准时间)",
+  "dataBindings": [
+    {
+      "attr": "node.name",
+      "valueType": "String",
+      "defaultValue": "接地电阻"
+    },
+    {
+      "attr": "node.color",
+      "valueType": "Color",
+      "defaultValue": "#FF0000"
+    }
+  ],
+  "width": 24,
+  "height": 76,
+  "comps": [
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@node.color",
+        "value": "#FF0000"
+      },
+      "points": [
+        12,
+        13,
+        12,
+        0
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@node.color",
+        "value": "#FF0000"
+      },
+      "points": [
+        12,
+        66.12727,
+        12,
+        51
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@node.color",
+        "value": "#FF0000"
+      },
+      "points": [
+        0,
+        66.12727,
+        24,
+        66.12727
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@node.color",
+        "value": "#FF0000"
+      },
+      "points": [
+        3,
+        70.25211,
+        21,
+        70.25211
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@node.color",
+        "value": "#FF0000"
+      },
+      "points": [
+        7,
+        74.37273,
+        17,
+        74.37273
+      ]
+    },
+    {
+      "type": "rect",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@node.color",
+        "value": "#FF0000"
+      },
+      "rect": [
+        2,
+        13,
+        20,
+        38
+      ]
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "modified": "Sun Mar 01 2020 17:17:38 GMT+0800 (CST)",
+  "dataBindings": [
+    {
+      "attr": "node.name",
+      "valueType": "String",
+      "defaultValue": "辅助点"
+    },
+    {
+      "attr": "node.color",
+      "valueType": "Color",
+      "defaultValue": "#FF0000"
+    }
+  ],
+  "width": 2,
+  "height": 2,
+  "comps": [
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@node.color",
+        "value": "#FF0000"
+      },
+      "points": [
+        0,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1
+      ],
+      "segments": [
+        1,
+        4
+      ]
+    }
+  ]
+}

@@ -29,7 +29,7 @@
     {
       "type": "rect",
       "background": {
-        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : '#D8D8D8';\n}",
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? '#FF0000' : '#D8D8D8';\n}",
         "value": "#D8D8D8"
       },
       "borderWidth": 1,
@@ -48,8 +48,8 @@
         "value": 1
       },
       "borderColor": {
-        "func": "attr@line.color",
-        "value": "rgb(0,255,0)"
+        "func": "attr@node.color",
+        "value": "#00FF00"
       },
       "clipDirection": "left",
       "rotation": 1.5708,
@@ -75,8 +75,8 @@
         "value": 1
       },
       "borderColor": {
-        "func": "attr@line.color",
-        "value": "rgb(0,255,0)"
+        "func": "attr@node.color",
+        "value": "#00FF00"
       },
       "clipDirection": "left",
       "rotation": 1.5708,
@@ -99,8 +99,8 @@
       "type": "shape",
       "borderWidth": 1,
       "borderColor": {
-        "func": "attr@line.color",
-        "value": "rgb(0,255,0)"
+        "func": "attr@node.color",
+        "value": "#00FF00"
       },
       "rotation": 0,
       "points": [
@@ -114,8 +114,8 @@
       "type": "shape",
       "borderWidth": 1,
       "borderColor": {
-        "func": "attr@line.color",
-        "value": "rgb(0,255,0)"
+        "func": "attr@node.color",
+        "value": "#00FF00"
       },
       "rotation": 0,
       "points": [
@@ -132,8 +132,8 @@
         "value": 1
       },
       "borderColor": {
-        "func": "attr@line.color",
-        "value": "rgb(0,255,0)"
+        "func": "attr@node.color",
+        "value": "#00FF00"
       },
       "clipDirection": "left",
       "rotation": 0.67354,
@@ -159,8 +159,8 @@
         "value": 1
       },
       "borderColor": {
-        "func": "attr@line.color",
-        "value": "rgb(0,255,0)"
+        "func": "attr@node.color",
+        "value": "#00FF00"
       },
       "clipDirection": "left",
       "rotation": 5.59454,

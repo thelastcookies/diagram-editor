@@ -1,0 +1,71 @@
+{
+  "modified": "Mon May 25 2020 11:07:10 GMT+0800 (CST)",
+  "dataBindings": [
+    {
+      "attr": "node.name",
+      "valueType": "String",
+      "defaultValue": "信号"
+    },
+    {
+      "attr": "node.cate",
+      "valueType": "String",
+      "defaultValue": "m-point"
+    },
+    {
+      "attr": "node.type",
+      "valueType": "String",
+      "defaultValue": "switch"
+    },
+    {
+      "attr": "node.state",
+      "valueType": "Boolean",
+      "defaultValue": true
+    }
+  ],
+  "width": 60,
+  "height": 60,
+  "comps": [
+    {
+      "type": "rect",
+      "background": "rgb(255,255,255)",
+      "borderWidth": 1,
+      "borderColor": "#000",
+      "gradientColor": "rgb(255,255,255)",
+      "rect": [
+        0,
+        0,
+        60,
+        60
+      ]
+    },
+    {
+      "type": "oval",
+      "background": "rgb(65,135,0)",
+      "borderWidth": 1,
+      "borderColor": "rgb(0,78,0)",
+      "displayName": "椭圆形",
+      "rect": [
+        10.8,
+        10.8,
+        38,
+        38
+      ]
+    },
+    {
+      "type": "image",
+      "color": null,
+      "name": "./symbols/palette-icon/components/旋钮开关-旋钮.json",
+      "displayName": "旋钮开关-旋钮",
+      "rotation": {
+        "func": "__ht__function(data, view) { let res = data.a('node.state') ? 0 : 90; return res/180*Math.PI;}",
+        "value": 0
+      },
+      "rect": [
+        24,
+        3.4,
+        12.24,
+        50.04
+      ]
+    }
+  ]
+}

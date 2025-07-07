@@ -156,7 +156,7 @@
     },
     {
       "type": "circle",
-      "background": "rgb(0,255,0)",
+      "background": "#00FF00",
       "borderWidth": 0.5,
       "borderColor": "rgb(0,0,0)",
       "borderWidthAbsolute": true,

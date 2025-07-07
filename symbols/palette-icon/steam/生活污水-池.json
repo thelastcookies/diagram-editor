@@ -39,7 +39,7 @@
     {
       "type": "rect",
       "background": {
-        "func": "attr@line.color",
+        "func": "attr@node.color",
         "value": "rgb(191,172,63)"
       },
       "borderColor": "rgb(61,61,61)",

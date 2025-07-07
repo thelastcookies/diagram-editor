@@ -7,7 +7,7 @@
       "type": "shape",
       "borderWidth": 5,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.color",
         "value": "#D8D8D8"
       },
       "borderWidthAbsolute": true,
@@ -22,7 +22,7 @@
       "type": "shape",
       "borderWidth": 5,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.color",
         "value": "#D8D8D8"
       },
       "borderWidthAbsolute": true,
@@ -37,7 +37,7 @@
       "type": "shape",
       "borderWidth": 5,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.color",
         "value": "#009A3D"
       },
       "borderWidthAbsolute": true,
@@ -52,7 +52,7 @@
       "type": "shape",
       "borderWidth": 5,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.color",
         "value": "#D8D8D8"
       },
       "borderWidthAbsolute": true,
@@ -67,7 +67,7 @@
       "type": "shape",
       "borderWidth": 5,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.color",
         "value": "#009A3D"
       },
       "borderWidthAbsolute": true,
@@ -82,7 +82,7 @@
       "type": "shape",
       "borderWidth": 5,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.color",
         "value": "#009A3D"
       },
       "borderWidthAbsolute": true,
@@ -97,7 +97,7 @@
       "type": "shape",
       "borderWidth": 5,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.color",
         "value": "#009A3D"
       },
       "borderWidthAbsolute": true,
@@ -112,7 +112,7 @@
       "type": "shape",
       "borderWidth": 5,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.color",
         "value": "#009A3D"
       },
       "borderWidthAbsolute": true,
@@ -127,7 +127,7 @@
       "type": "shape",
       "borderWidth": 5,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.color",
         "value": "#009A3D"
       },
       "borderWidthAbsolute": true,
@@ -142,7 +142,7 @@
       "type": "shape",
       "borderWidth": 5,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.color",
         "value": "#009A3D"
       },
       "borderWidthAbsolute": true,
@@ -157,7 +157,7 @@
       "type": "shape",
       "borderWidth": 5,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.color",
         "value": "#009A3D"
       },
       "borderWidthAbsolute": true,
@@ -172,7 +172,7 @@
       "type": "shape",
       "borderWidth": 5,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.color",
         "value": "#009A3D"
       },
       "borderWidthAbsolute": true,
@@ -187,7 +187,7 @@
       "type": "shape",
       "borderWidth": 5,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.color",
         "value": "#009A3D"
       },
       "borderWidthAbsolute": true,
@@ -202,7 +202,7 @@
       "type": "shape",
       "borderWidth": 5,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.color",
         "value": "#009A3D"
       },
       "borderWidthAbsolute": true,
@@ -217,7 +217,7 @@
       "type": "shape",
       "borderWidth": 5,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.color",
         "value": "#009A3D"
       },
       "borderWidthAbsolute": true,
@@ -232,7 +232,7 @@
       "type": "shape",
       "borderWidth": 5,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.color",
         "value": "#009A3D"
       },
       "borderWidthAbsolute": true,
@@ -247,7 +247,7 @@
       "type": "shape",
       "borderWidth": 5,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.color",
         "value": "#009A3D"
       },
       "borderWidthAbsolute": true,
@@ -262,7 +262,7 @@
       "type": "shape",
       "borderWidth": 5,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.color",
         "value": "#009A3D"
       },
       "borderWidthAbsolute": true,
@@ -277,7 +277,7 @@
       "type": "shape",
       "borderWidth": 5,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.color",
         "value": "#009A3D"
       },
       "borderWidthAbsolute": true,
@@ -292,7 +292,7 @@
       "type": "shape",
       "borderWidth": 5,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.color",
         "value": "#009A3D"
       },
       "borderWidthAbsolute": true,
@@ -307,7 +307,7 @@
       "type": "shape",
       "borderWidth": 5,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.color",
         "value": "#009A3D"
       },
       "borderWidthAbsolute": true,
@@ -322,7 +322,7 @@
       "type": "shape",
       "borderWidth": 5,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.color",
         "value": "#009A3D"
       },
       "borderWidthAbsolute": true,
@@ -337,7 +337,7 @@
       "type": "shape",
       "borderWidth": 5,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.color",
         "value": "#009A3D"
       },
       "borderWidthAbsolute": true,
@@ -352,7 +352,7 @@
       "type": "shape",
       "borderWidth": 5,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.color",
         "value": "#009A3D"
       },
       "borderWidthAbsolute": true,

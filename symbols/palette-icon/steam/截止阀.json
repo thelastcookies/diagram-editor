@@ -4,7 +4,7 @@
     {
       "attr": "line.color",
       "valueType": "Color",
-      "defaultValue": "rgb(255, 0, 0)"
+      "defaultValue": "#FF0000"
     }
   ],
   "width": 30,
@@ -14,12 +14,12 @@
     {
       "type": "triangle",
       "background": {
-        "func": "attr@line.color",
+        "func": "attr@node.color",
         "value": "#D8D8D8"
       },
       "borderWidth": 1,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.color",
         "value": "#D8D8D8"
       },
       "rotation": 4.71239,
@@ -33,12 +33,12 @@
     {
       "type": "triangle",
       "background": {
-        "func": "attr@line.color",
+        "func": "attr@node.color",
         "value": "#D8D8D8"
       },
       "borderWidth": 1,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.color",
         "value": "#D8D8D8"
       },
       "rotation": 1.5708,

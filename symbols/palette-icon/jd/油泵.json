@@ -34,8 +34,8 @@
     {
       "type": "rect",
       "background": {
-        "func": "__ht__function(data, view) {\n let d=data.a('node.state'),r='rgb(0,255,0)';if(d==1) r='rgb(0,255,0)';\nif(d == 3) r='rgb(255,0,0)'\n return r;\n}",
-        "value": "rgb(0,255,0)"
+        "func": "__ht__function(data, view) {\n let d=data.a('node.state'),r='#00FF00';if(d==1) r='#00FF00';\nif(d == 3) r='#FF0000'\n return r;\n}",
+        "value": "#00FF00"
       },
       "anchorX": 0,
       "rotation": {
@@ -54,8 +54,8 @@
     {
       "type": "oval",
       "background": {
-        "func": "__ht__function(data, view) {\n let d=data.a('node.state'),r='rgb(0,255,0)';if(d==1) r='rgb(0,255,0)';\nif(d == 3) r='rgb(255,0,0)'\n return r;\n}",
-        "value": "rgb(0,255,0)"
+        "func": "__ht__function(data, view) {\n let d=data.a('node.state'),r='#00FF00';if(d==1) r='#00FF00';\nif(d == 3) r='#FF0000'\n return r;\n}",
+        "value": "#00FF00"
       },
       "borderWidth": 1,
       "borderColor": "#979797",
@@ -82,8 +82,8 @@
     {
       "type": "triangle",
       "background": {
-        "func": "__ht__function(data, view) {\n let d=data.a('node.state'),r='rgb(0,255,0)';if(d==1) r='rgb(0,255,0)';\nif(d == 3) r='rgb(255,0,0)'\n return r;\n}",
-        "value": "rgb(0,255,0)"
+        "func": "__ht__function(data, view) {\n let d=data.a('node.state'),r='#00FF00';if(d==1) r='#00FF00';\nif(d == 3) r='#FF0000'\n return r;\n}",
+        "value": "#00FF00"
       },
       "borderWidth": 0.2,
       "borderColor": "#979797",
@@ -110,8 +110,8 @@
     {
       "type": "triangle",
       "background": {
-        "func": "__ht__function(data, view) {\n let d=data.a('node.state'),r='rgb(0,255,0)';if(d==1) r='rgb(0,255,0)';\nif(d == 3) r='rgb(255,0,0)'\n return r;\n}",
-        "value": "rgb(0,255,0)"
+        "func": "__ht__function(data, view) {\n let d=data.a('node.state'),r='#00FF00';if(d==1) r='#00FF00';\nif(d == 3) r='#FF0000'\n return r;\n}",
+        "value": "#00FF00"
       },
       "borderWidth": 0.2,
       "borderColor": "#979797",
@@ -126,8 +126,8 @@
     {
       "type": "triangle",
       "background": {
-        "func": "__ht__function(data, view) {\n let d=data.a('node.state'),r='rgb(0,255,0)';if(d==1) r='rgb(0,255,0)';\nif(d == 3) r='rgb(255,0,0)'\n return r;\n}",
-        "value": "rgb(0,255,0)"
+        "func": "__ht__function(data, view) {\n let d=data.a('node.state'),r='#00FF00';if(d==1) r='#00FF00';\nif(d == 3) r='#FF0000'\n return r;\n}",
+        "value": "#00FF00"
       },
       "borderWidth": 0.2,
       "borderColor": "#979797",
@@ -142,8 +142,8 @@
     {
       "type": "triangle",
       "background": {
-        "func": "__ht__function(data, view) {\n let d=data.a('node.state'),r='rgb(0,255,0)';if(d==1) r='rgb(0,255,0)';\nif(d == 3) r='rgb(255,0,0)'\n return r;\n}",
-        "value": "rgb(0,255,0)"
+        "func": "__ht__function(data, view) {\n let d=data.a('node.state'),r='#00FF00';if(d==1) r='#00FF00';\nif(d == 3) r='#FF0000'\n return r;\n}",
+        "value": "#00FF00"
       },
       "borderWidth": 0.2,
       "borderColor": "#979797",
@@ -158,8 +158,8 @@
     {
       "type": "triangle",
       "background": {
-        "func": "__ht__function(data, view) {\n let d=data.a('node.state'),r='rgb(0,255,0)';if(d==1) r='rgb(0,255,0)';\nif(d == 3) r='rgb(255,0,0)'\n return r;\n}",
-        "value": "rgb(0,255,0)"
+        "func": "__ht__function(data, view) {\n let d=data.a('node.state'),r='#00FF00';if(d==1) r='#00FF00';\nif(d == 3) r='#FF0000'\n return r;\n}",
+        "value": "#00FF00"
       },
       "borderWidth": 0.2,
       "borderColor": "#979797",

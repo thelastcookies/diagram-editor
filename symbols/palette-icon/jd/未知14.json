@@ -6,7 +6,7 @@
     {
       "type": "shape",
       "borderWidth": 2,
-      "borderColor": "rgb(0,255,0)",
+      "borderColor": "#00FF00",
       "points": [
         10.28273,
         38,
@@ -19,7 +19,7 @@
       "borderWidth": 2,
       "borderColor": {
         "func": "attr@lineColor",
-        "value": "rgb(0,255,0)"
+        "value": "#00FF00"
       },
       "displayName": "1",
       "rect": [
@@ -34,7 +34,7 @@
       "borderWidth": 2,
       "borderColor": {
         "func": "attr@lineColor",
-        "value": "rgb(0,255,0)"
+        "value": "#00FF00"
       },
       "displayName": "1",
       "rect": [
@@ -47,7 +47,7 @@
     {
       "type": "shape",
       "borderWidth": 2,
-      "borderColor": "rgb(0,255,0)",
+      "borderColor": "#00FF00",
       "points": [
         22.28273,
         38,
@@ -57,7 +57,7 @@
     },
     {
       "type": "rect",
-      "background": "rgb(0,255,0)",
+      "background": "#00FF00",
       "borderColor": "#979797",
       "rect": [
         4.01721,
@@ -68,7 +68,7 @@
     },
     {
       "type": "rect",
-      "background": "rgb(0,255,0)",
+      "background": "#00FF00",
       "borderWidth": 1,
       "borderColor": "#979797",
       "rect": [

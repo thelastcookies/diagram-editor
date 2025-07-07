@@ -2,37 +2,33 @@
   "modified": "Sun Jan 03 2016 15:49:48 GMT+0800 (中国标准时间)",
   "dataBindings": [
     {
-      "attr": "node.line.color",
-      "valueType": "Color",
-      "defaultValue": "rgba(255, 0, 0, 0)"
+      "attr": "node.name",
+      "valueType": "String",
+      "defaultValue": "4分之1圆弧"
     },
     {
       "attr": "node.border.width",
       "valueType": "Number",
-      "defaultValue": "1"
+      "defaultValue": "2"
     },
     {
       "attr": "node.border.color",
       "valueType": "Color",
-      "defaultValue": "rgba(255, 0, 0, 1)"
+      "defaultValue": "#FF0000"
     }
   ],
-  "width": 100,
-  "height": 100,
+  "width": 60,
+  "height": 60,
   "comps": [
     {
       "type": "arc",
-      "background": {
-        "func": "attr@node.line.color",
-        "value": "rgba(255, 0, 0, 0)"
-      },
       "borderWidth": {
         "func": "attr@node.border.width",
-        "value": 1
+        "value": 2
       },
       "borderColor": {
         "func": "attr@node.border.color",
-        "value": "rgba(255, 0, 0, 1)"
+        "value": "#FF0000"
       },
       "gradientColor": "rgba(255,255,255,0)",
       "fillClipDirection": "left",
@@ -40,10 +36,10 @@
       "arcTo": 1.5708,
       "arcClose": false,
       "rect": [
-        -0.07067,
         0,
-        100,
-        100
+        0,
+        60,
+        60
       ]
     }
   ]

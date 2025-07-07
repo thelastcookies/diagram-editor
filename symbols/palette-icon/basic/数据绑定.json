@@ -2,6 +2,11 @@
   "modified": "Thu Oct 29 2020 17:43:41 GMT+0800 (CST)",
   "dataBindings": [
     {
+      "attr": "node.name",
+      "valueType": "String",
+      "defaultValue": "数据绑定"
+    },
+    {
       "attr": "node.cate",
       "valueType": "String",
       "defaultValue": "m-point"
@@ -9,18 +14,12 @@
     {
       "attr": "node.type",
       "valueType": "String",
-      "defaultValue": "data"
-    },
-    {
-      "attr": "node.name",
-      "valueType": "String",
-      "defaultValue": "data-unit"
+      "defaultValue": "text"
     },
     {
       "attr": "node.label",
       "valueType": "String",
-      "defaultValue": "###.#",
-      "name": "数据值"
+      "defaultValue": "###.#"
     },
     {
       "attr": "node.unit",
@@ -29,7 +28,7 @@
       "name": "单位"
     },
     {
-      "attr": "node.line.color",
+      "attr": "node.color",
       "valueType": "Color",
       "defaultValue": "#00FF00"
     }
@@ -40,12 +39,12 @@
     {
       "type": "text",
       "text": {
-        "func": "__ht__function(data, view) {\n return data.a('node.label');\n}",
+        "func": "__ht__function(data, view) { return data.a('node.label') }",
         "value": "#.###"
       },
       "align": "right",
       "color": {
-        "func": "attr@node.line.color",
+        "func": "attr@node.color",
         "value": "#00FF00"
       },
       "font": "16px arial, sans-serif",
@@ -59,11 +58,11 @@
     {
       "type": "text",
       "text": {
-        "func": "__ht__function(data, view) {\n return data.a('node.unit');\n}",
+        "func": "__ht__function(data, view) { return data.a('node.unit') }",
         "value": "unit"
       },
       "color": {
-        "func": "attr@node.line.color",
+        "func": "attr@node.color",
         "value": "#00FF00"
       },
       "font": "16px arial, sans-serif",

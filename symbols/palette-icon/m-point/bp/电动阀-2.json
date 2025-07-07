@@ -36,7 +36,7 @@
       "background": "#D8D8D8",
       "borderWidth": 0.1,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.color",
         "value": "rgb(0,0,0)"
       },
       "anchorX": 1.10435,
@@ -57,7 +57,7 @@
       "background": "#D8D8D8",
       "borderWidth": 0.1,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.color",
         "value": "rgb(0,0,0)"
       },
       "anchorX": -0.10402,
@@ -78,7 +78,7 @@
       "background": "#D8D8D8",
       "borderWidth": 0.1,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.color",
         "value": "rgb(0,0,0)"
       },
       "anchorY": 1.20919,
@@ -98,7 +98,7 @@
       "background": "#D8D8D8",
       "borderWidth": 0.1,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.color",
         "value": "rgb(0,0,0)"
       },
       "anchorY": -1.20919,
@@ -167,8 +167,8 @@
     {
       "type": "rect",
       "background": {
-        "func": "__ht__function(data, view) {\n return Boolean(data.a('node.data')[16])?'rgb(255,255,0)':'rgb(0,255,0)';\n}",
-        "value": "rgb(255,255,0)"
+        "func": "__ht__function(data, view) {\n return Boolean(data.a('node.data')[16])?'#FFFF00':'#00FF00';\n}",
+        "value": "#FFFF00"
       },
       "borderWidth": 0.5,
       "borderColor": "#979797",
@@ -205,8 +205,8 @@
     {
       "type": "rect",
       "background": {
-        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r='rgb(255,0,0)';if(!d[25]){r='rgb(255,255,0)';}return r;\n}",
-        "value": "rgb(255,255,0)"
+        "func": "__ht__function(data, view) {\n let d=data.a('node.data'),r='#FF0000';if(!d[25]){r='#FFFF00';}return r;\n}",
+        "value": "#FFFF00"
       },
       "borderWidth": 0.5,
       "borderColor": "#979797",

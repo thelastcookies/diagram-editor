@@ -19,7 +19,7 @@
     {
       "attr": "node.color",
       "valueType": "Color",
-      "defaultValue": "rgb(255,0,0)"
+      "defaultValue": "#FF0000"
     },
     {
       "attr": "node.state",
@@ -34,7 +34,7 @@
     {
       "type": "oval",
       "background": {
-        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : 'rgb(255,235,195)';\n}",
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? '#FF0000' : 'rgb(255,235,195)';\n}",
         "value": "rgb(255,235,195)"
       },
       "borderWidth": 0.2,

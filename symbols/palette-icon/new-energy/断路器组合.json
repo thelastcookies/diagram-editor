@@ -1,0 +1,215 @@
+{
+  "modified": "Mon Jan 06 2025 17:54:39 GMT+0800 (中国标准时间)",
+  "dataBindings": [
+    {
+      "attr": "node.name",
+      "valueType": "String",
+      "defaultValue": "断路器组合"
+    },
+    {
+      "attr": "node.cate",
+      "valueType": "String",
+      "defaultValue": "m-point"
+    },
+    {
+      "attr": "node.type",
+      "valueType": "String",
+      "defaultValue": "CB"
+    },
+    {
+      "attr": "node.state.CB",
+      "valueType": "Boolean",
+      "defaultValue": true,
+      "name": "断路器状态"
+    },
+    {
+      "attr": "node.state.drawout",
+      "valueType": "Boolean",
+      "defaultValue": true,
+      "name": "手车状态"
+    }
+  ],
+  "width": 44,
+  "height": 142,
+  "comps": [
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "#00FF00",
+      "visible": {
+        "func": "__ht__function(data, view) { return !data.a('node.state.drawout');}",
+        "value": true
+      },
+      "displayName": "箭头",
+      "points": [
+        4.1969,
+        36.99685,
+        21.9607,
+        25.2058,
+        39.80311,
+        36.99685
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "__ht__function(data, view) { return data.a('node.state.drawout') ? '#FF0000' : '#00FF00';}",
+        "value": "#FF0000"
+      },
+      "displayName": "箭头",
+      "points": [
+        4.1969,
+        19.74413,
+        21.9607,
+        7.95308,
+        39.80311,
+        19.74413
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "__ht__function(data, view) { return data.a('node.state.drawout') ? '#FF0000' : '#00FF00';}",
+        "value": "#FF0000"
+      },
+      "rotation": -3.14159,
+      "points": [
+        21.9696,
+        46,
+        22.0304,
+        25.2058
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "__ht__function(data, view) { return data.a('node.state.drawout') ? '#FF0000' : '#00FF00';}",
+        "value": "#FF0000"
+      },
+      "rotation": -3.14159,
+      "points": [
+        22.00001,
+        7.95308,
+        21.99999,
+        0
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "#FF0000",
+      "visible": {
+        "func": "__ht__function(data, view) { return data.a('node.state.drawout');}",
+        "value": true
+      },
+      "rotation": -3.14159,
+      "points": [
+        22.00001,
+        25.2058,
+        21.99999,
+        7.95308
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "#00FF00",
+      "visible": {
+        "func": "__ht__function(data, view) { return !data.a('node.state.drawout');}",
+        "value": true
+      },
+      "displayName": "箭头",
+      "rotation": 3.14159,
+      "points": [
+        4.1969,
+        116.7942,
+        21.9607,
+        105.00315,
+        39.80311,
+        116.7942
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "__ht__function(data, view) { return data.a('node.state.drawout') ? '#FF0000' : '#00FF00';}",
+        "value": "#FF0000"
+      },
+      "displayName": "箭头",
+      "rotation": 3.14159,
+      "points": [
+        4.1969,
+        134.04688,
+        21.9607,
+        122.25583,
+        39.80311,
+        134.04688
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "__ht__function(data, view) { return data.a('node.state.drawout') ? '#FF0000' : '#00FF00';}",
+        "value": "#FF0000"
+      },
+      "points": [
+        22,
+        116.79425,
+        22,
+        96.9467
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "__ht__function(data, view) { return data.a('node.state.drawout') ? '#FF0000' : '#00FF00';}",
+        "value": "#FF0000"
+      },
+      "points": [
+        22,
+        142,
+        22,
+        134.04693
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "#FF0000",
+      "visible": {
+        "func": "__ht__function(data, view) { return data.a('node.state.drawout');}",
+        "value": true
+      },
+      "points": [
+        22,
+        134.04693,
+        22,
+        116.79425
+      ]
+    },
+    {
+      "type": "rect",
+      "background": {
+        "func": "__ht__function(data, view) { return data.a('node.state.CB') ? '#FF0000' : 'rgba(0,0,0,0)';}",
+        "value": "#FF0000"
+      },
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "__ht__function(data, view) { return data.a('node.state.CB') ? '#FF0000' : '#00FF00';}",
+        "value": "#FF0000"
+      },
+      "rect": [
+        7,
+        46,
+        30,
+        50
+      ]
+    }
+  ]
+}

@@ -4,7 +4,7 @@
     {
       "attr": "line.color",
       "valueType": "Color",
-      "defaultValue": "rgb(255,0,0)"
+      "defaultValue": "#FF0000"
     }
   ],
   "width": 30,
@@ -13,8 +13,8 @@
     {
       "type": "shape",
       "background": {
-        "func": "attr@line.color",
-        "value": "rgb(255,0,0)"
+        "func": "attr@node.color",
+        "value": "#FF0000"
       },
       "borderWidth": 0.5,
       "borderColor": "rgb(0,0,0)",

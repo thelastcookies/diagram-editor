@@ -1,0 +1,67 @@
+{
+  "modified": "Thu Oct 22 2020 15:34:20 GMT+0800 (CST)",
+  "dataBindings": [
+    {
+      "attr": "node.name",
+      "valueType": "String",
+      "defaultValue": "线路交叉点"
+    },
+    {
+      "attr": "node.color",
+      "valueType": "Color",
+      "defaultValue": "#FF0000"
+    }
+  ],
+  "width": 14,
+  "height": 12,
+  "comps": [
+    {
+      "type": "arc",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@node.color",
+        "value": "#FF0000"
+      },
+      "arcFrom": 0,
+      "arcTo": 3.14159,
+      "arcClose": false,
+      "rotation": -1.57079,
+      "rect": [
+        2.99094,
+        1,
+        10,
+        10
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@node.color",
+        "value": "#FF0000"
+      },
+      "rotation": 3.14159,
+      "points": [
+        5.99094,
+        11.00002,
+        7.99094,
+        11.00002
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@node.color",
+        "value": "#FF0000"
+      },
+      "rotation": 3.14159,
+      "points": [
+        5.99094,
+        0.99998,
+        7.99094,
+        0.99998
+      ]
+    }
+  ]
+}

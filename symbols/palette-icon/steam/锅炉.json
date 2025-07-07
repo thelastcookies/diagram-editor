@@ -147,7 +147,7 @@
     },
     {
       "type": "shape",
-      "background": "rgb(255,0,0)",
+      "background": "#FF0000",
       "borderColor": "#979797",
       "closePath": true,
       "points": [
@@ -411,7 +411,7 @@
     },
     {
       "type": "shape",
-      "background": "rgb(255,255,0)",
+      "background": "#FFFF00",
       "borderColor": "#979797",
       "closePath": true,
       "points": [
@@ -467,7 +467,7 @@
     },
     {
       "type": "shape",
-      "background": "rgb(255,0,0)",
+      "background": "#FF0000",
       "borderColor": "#979797",
       "closePath": true,
       "points": [
@@ -731,7 +731,7 @@
     },
     {
       "type": "shape",
-      "background": "rgb(255,255,0)",
+      "background": "#FFFF00",
       "borderColor": "#979797",
       "closePath": true,
       "points": [

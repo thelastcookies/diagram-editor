@@ -28,12 +28,12 @@
     {
       "type": "triangle",
       "background": {
-        "func": "__ht__function(data, view) {\n if(data.a('node.value') < 5) {return 'rgb(0,255,0)'} else if (data.a('node.value') > 95) {return 'rgb(255,0,0)'} else {return '#D8D8D8'};\n}",
+        "func": "__ht__function(data, view) {\n if(data.a('node.value') < 5) {return '#00FF00'} else if (data.a('node.value') > 95) {return '#FF0000'} else {return '#D8D8D8'};\n}",
         "value": "#D8D8D8"
       },
       "borderWidth": 0.1,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.color",
         "value": "rgb(0,0,0)"
       },
       "anchorX": 1.10435,
@@ -49,12 +49,12 @@
     {
       "type": "triangle",
       "background": {
-        "func": "__ht__function(data, view) {\n if(data.a('node.value') < 5) {return 'rgb(0,255,0)'} else if (data.a('node.value') > 95) {return 'rgb(255,0,0)'} else {return '#D8D8D8'};\n}",
+        "func": "__ht__function(data, view) {\n if(data.a('node.value') < 5) {return '#00FF00'} else if (data.a('node.value') > 95) {return '#FF0000'} else {return '#D8D8D8'};\n}",
         "value": "#D8D8D8"
       },
       "borderWidth": 0.1,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.color",
         "value": "rgb(0,0,0)"
       },
       "anchorX": -0.10402,
@@ -70,12 +70,12 @@
     {
       "type": "triangle",
       "background": {
-        "func": "__ht__function(data, view) {\n if(data.a('node.value') < 5) {return 'rgb(0,255,0)'} else if (data.a('node.value') > 95) {return 'rgb(255,0,0)'} else {return '#D8D8D8'};\n}",
+        "func": "__ht__function(data, view) {\n if(data.a('node.value') < 5) {return '#00FF00'} else if (data.a('node.value') > 95) {return '#FF0000'} else {return '#D8D8D8'};\n}",
         "value": "#D8D8D8"
       },
       "borderWidth": 0.1,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.color",
         "value": "rgb(0,0,0)"
       },
       "anchorY": 1.20919,
@@ -90,12 +90,12 @@
     {
       "type": "triangle",
       "background": {
-        "func": "__ht__function(data, view) {\n if(data.a('node.value') < 5) {return 'rgb(0,255,0)'} else if (data.a('node.value') > 95) {return 'rgb(255,0,0)'} else {return '#D8D8D8'};\n}",
+        "func": "__ht__function(data, view) {\n if(data.a('node.value') < 5) {return '#00FF00'} else if (data.a('node.value') > 95) {return '#FF0000'} else {return '#D8D8D8'};\n}",
         "value": "#D8D8D8"
       },
       "borderWidth": 0.1,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.color",
         "value": "rgb(0,0,0)"
       },
       "anchorY": -1.20919,
@@ -109,7 +109,7 @@
     {
       "type": "rect",
       "background": {
-        "func": "__ht__function(data, view) {\n if(data.a('node.value') < 5) {return 'rgb(0,255,0)'} else if (data.a('node.value') > 95) {return 'rgb(255,0,0)'} else {return '#D8D8D8'};\n}",
+        "func": "__ht__function(data, view) {\n if(data.a('node.value') < 5) {return '#00FF00'} else if (data.a('node.value') > 95) {return '#FF0000'} else {return '#D8D8D8'};\n}",
         "value": "#D8D8D8"
       },
       "borderWidth": 0.1,
@@ -125,7 +125,7 @@
     {
       "type": "oval",
       "background": {
-        "func": "__ht__function(data, view) {\n if(data.a('node.value') < 5) {return 'rgb(0,255,0)'} else if (data.a('node.value') > 95) {return 'rgb(255,0,0)'} else {return '#D8D8D8'};\n}",
+        "func": "__ht__function(data, view) {\n if(data.a('node.value') < 5) {return '#00FF00'} else if (data.a('node.value') > 95) {return '#FF0000'} else {return '#D8D8D8'};\n}",
         "value": "#D8D8D8"
       },
       "borderWidth": 0.1,

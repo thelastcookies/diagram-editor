@@ -29,8 +29,8 @@
     {
       "type": "shape",
       "background": {
-        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : 'rgba(0,255,0)';\n}",
-        "value": "rgb(255,0,0)"
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? '#FF0000' : 'rgba(0,255,0)';\n}",
+        "value": "#FF0000"
       },
       "borderWidth": 0.1,
       "borderColor": "rgb(0,0,0)",
@@ -62,8 +62,8 @@
     {
       "type": "rect",
       "background": {
-        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : 'rgba(0,255,0)';\n}",
-        "value": "rgb(255,0,0)"
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? '#FF0000' : 'rgba(0,255,0)';\n}",
+        "value": "#FF0000"
       },
       "borderWidth": 0.1,
       "borderColor": "rgb(0,0,0)",
@@ -79,8 +79,8 @@
     {
       "type": "rightTriangle",
       "background": {
-        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : 'rgba(0,255,0)';\n}",
-        "value": "rgb(255,0,0)"
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? '#FF0000' : 'rgba(0,255,0)';\n}",
+        "value": "#FF0000"
       },
       "borderWidth": 0.1,
       "borderColor": "rgb(0,0,0)",
@@ -96,8 +96,8 @@
     {
       "type": "rightTriangle",
       "background": {
-        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : 'rgba(0,255,0)';\n}",
-        "value": "rgb(255,0,0)"
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? '#FF0000' : 'rgba(0,255,0)';\n}",
+        "value": "#FF0000"
       },
       "borderWidth": 0.1,
       "borderColor": "rgb(0,0,0)",

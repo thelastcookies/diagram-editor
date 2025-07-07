@@ -2,6 +2,11 @@
   "modified": "Fri Nov 13 2020 16:35:26 GMT+0800 (CST)",
   "dataBindings": [
     {
+      "attr": "node.name",
+      "valueType": "String",
+      "defaultValue": "进度条"
+    },
+    {
       "attr": "node.cate",
       "valueType": "String",
       "defaultValue": "m-point"
@@ -9,27 +14,22 @@
     {
       "attr": "node.type",
       "valueType": "String",
-      "defaultValue": "p-bar"
+      "defaultValue": "value"
     },
     {
-      "attr": "node.name",
-      "valueType": "String",
-      "defaultValue": "p-bar"
-    },
-    {
-      "attr": "node.direction",
+      "attr": "node.direction.vertical",
       "valueType": "String",
       "defaultValue": "up"
     },
     {
-      "attr": "node.line.color",
+      "attr": "node.color",
       "valueType": "Color",
-      "defaultValue": "rgb(0,255,0)"
+      "defaultValue": "#00FF00"
     },
     {
       "attr": "node.value.min",
       "valueType": "Number",
-      "defaultValue": -100
+      "defaultValue": 0
     },
     {
       "attr": "node.value.max",
@@ -39,7 +39,7 @@
     {
       "attr": "node.value",
       "valueType": "Number",
-      "defaultValue": -90
+      "defaultValue": 50
     }
   ],
   "width": 30,
@@ -47,7 +47,6 @@
   "comps": [
     {
       "type": "rect",
-      "background": "rgba(217,217,217,0)",
       "borderWidth": 1,
       "borderColor": "rgb(97,97,97)",
       "borderWidthAbsolute": true,
@@ -61,16 +60,16 @@
     {
       "type": "rect",
       "background": {
-        "func": "attr@node.line.color",
-        "value": "rgb(0,255,0)"
+        "func": "attr@node.color",
+        "value": "#00FF00"
       },
       "borderColor": "#979797",
       "fillClipPercentage": {
-        "func": "__ht__function(data, view){\nlet min=data.a('node.value.min'),max=data.a('node.value.max'),value=data.a('node.value');\nreturn (value - min) / (max - min);\n}",
+        "func": "__ht__function(data, view){ let min=data.a('node.value.min'),max=data.a('node.value.max'),value=data.a('node.value'); return (value - min) / (max - min); }",
         "value": 0
       },
       "rotation": {
-        "func": "__ht__function(data, view){\nlet dir=data.a('node.direction'),res=0;\nif(dir === 'up')res=0;\nif(dir === 'down')res=180;\nreturn res/180*Math.PI;\n}",
+        "func": "__ht__function(data, view){ let dir=data.a('node.direction.vertical'),res=0; if(dir === 'up')res=0; else if(dir === 'down')res=180; return res/180*Math.PI; }",
         "value": 0
       },
       "rect": [

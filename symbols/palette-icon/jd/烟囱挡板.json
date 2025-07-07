@@ -5,7 +5,7 @@
   "comps": [
     {
       "type": "border",
-      "color": "rgb(255,0,0)",
+      "color": "#FF0000",
       "width": 1,
       "rect": [
         0.11269,
@@ -16,9 +16,9 @@
     },
     {
       "type": "oval",
-      "background": "rgb(255,0,0)",
+      "background": "#FF0000",
       "borderWidth": 1,
-      "borderColor": "rgb(255,0,0)",
+      "borderColor": "#FF0000",
       "rect": [
         11.2762,
         6.62687,
@@ -28,9 +28,9 @@
     },
     {
       "type": "shape",
-      "background": "rgb(255,0,0)",
+      "background": "#FF0000",
       "borderWidth": 1,
-      "borderColor": "rgb(255,0,0)",
+      "borderColor": "#FF0000",
       "points": [
         6.93972,
         16.5985,
@@ -48,9 +48,9 @@
     },
     {
       "type": "shape",
-      "background": "rgb(255,0,0)",
+      "background": "#FF0000",
       "borderWidth": 1,
-      "borderColor": "rgb(255,0,0)",
+      "borderColor": "#FF0000",
       "points": [
         16.75453,
         7.59771,
@@ -68,9 +68,9 @@
     },
     {
       "type": "oval",
-      "background": "rgb(255,0,0)",
+      "background": "#FF0000",
       "borderWidth": 1,
-      "borderColor": "rgb(255,0,0)",
+      "borderColor": "#FF0000",
       "rect": [
         28.73483,
         6.62687,
@@ -80,9 +80,9 @@
     },
     {
       "type": "shape",
-      "background": "rgb(255,0,0)",
+      "background": "#FF0000",
       "borderWidth": 1,
-      "borderColor": "rgb(255,0,0)",
+      "borderColor": "#FF0000",
       "points": [
         24.39835,
         16.5985,
@@ -100,9 +100,9 @@
     },
     {
       "type": "shape",
-      "background": "rgb(255,0,0)",
+      "background": "#FF0000",
       "borderWidth": 1,
-      "borderColor": "rgb(255,0,0)",
+      "borderColor": "#FF0000",
       "points": [
         34.21316,
         7.59771,

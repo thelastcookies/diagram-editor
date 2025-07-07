@@ -5,7 +5,7 @@
   "comps": [
     {
       "type": "rect",
-      "background": "rgb(0,255,0)",
+      "background": "#00FF00",
       "borderWidth": 0.5,
       "borderColor": "rgb(0,0,0)",
       "borderJoin": "miter",
@@ -23,7 +23,7 @@
     },
     {
       "type": "shape",
-      "background": "rgb(0,255,0)",
+      "background": "#00FF00",
       "borderWidth": 0.5,
       "borderColor": "rgb(0,0,0)",
       "borderWidthAbsolute": true,
@@ -41,7 +41,7 @@
     },
     {
       "type": "shape",
-      "background": "rgb(0,255,0)",
+      "background": "#00FF00",
       "borderWidth": 0.5,
       "borderColor": "rgb(0,0,0)",
       "borderWidthAbsolute": true,
@@ -59,7 +59,7 @@
     },
     {
       "type": "rect",
-      "background": "rgb(0,255,0)",
+      "background": "#00FF00",
       "borderWidth": 0.5,
       "borderColor": "rgb(0,0,0)",
       "borderJoin": "miter",
@@ -77,7 +77,7 @@
     },
     {
       "type": "shape",
-      "background": "rgb(0,255,0)",
+      "background": "#00FF00",
       "borderWidth": 0.5,
       "borderColor": "rgb(0,0,0)",
       "borderWidthAbsolute": true,
@@ -95,7 +95,7 @@
     },
     {
       "type": "shape",
-      "background": "rgb(0,255,0)",
+      "background": "#00FF00",
       "borderWidth": 0.5,
       "borderColor": "rgb(0,0,0)",
       "borderWidthAbsolute": true,
@@ -113,7 +113,7 @@
     },
     {
       "type": "rect",
-      "background": "rgb(0,255,0)",
+      "background": "#00FF00",
       "borderWidth": 0.5,
       "borderColor": "rgb(0,0,0)",
       "borderJoin": "miter",
@@ -131,7 +131,7 @@
     },
     {
       "type": "shape",
-      "background": "rgb(0,255,0)",
+      "background": "#00FF00",
       "borderWidth": 0.5,
       "borderColor": "rgb(0,0,0)",
       "borderWidthAbsolute": true,
@@ -149,7 +149,7 @@
     },
     {
       "type": "shape",
-      "background": "rgb(0,255,0)",
+      "background": "#00FF00",
       "borderWidth": 0.5,
       "borderColor": "rgb(0,0,0)",
       "borderWidthAbsolute": true,
@@ -167,7 +167,7 @@
     },
     {
       "type": "rect",
-      "background": "rgb(0,255,0)",
+      "background": "#00FF00",
       "borderWidth": 0.5,
       "borderColor": "rgb(0,0,0)",
       "borderJoin": "miter",
@@ -185,7 +185,7 @@
     },
     {
       "type": "shape",
-      "background": "rgb(0,255,0)",
+      "background": "#00FF00",
       "borderWidth": 0.5,
       "borderColor": "rgb(0,0,0)",
       "borderWidthAbsolute": true,
@@ -203,7 +203,7 @@
     },
     {
       "type": "shape",
-      "background": "rgb(0,255,0)",
+      "background": "#00FF00",
       "borderWidth": 0.5,
       "borderColor": "rgb(0,0,0)",
       "borderWidthAbsolute": true,

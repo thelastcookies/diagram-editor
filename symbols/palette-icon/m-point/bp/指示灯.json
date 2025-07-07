@@ -14,7 +14,7 @@
     {
       "attr": "node.color",
       "valueType": "Color",
-      "defaultValue": "rgb(255,0,0)"
+      "defaultValue": "#FF0000"
     },
     {
       "attr": "node.state",

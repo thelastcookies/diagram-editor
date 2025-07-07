@@ -1,0 +1,54 @@
+{
+  "modified": "Sun Jan 09 2022 22:08:45 GMT+0800 (中国标准时间)",
+  "dataBindings": [
+    {
+      "attr": "node.name",
+      "valueType": "String",
+      "defaultValue": "断路器（双测点）"
+    },
+    {
+      "attr": "node.cate",
+      "valueType": "String",
+      "defaultValue": "m-point"
+    },
+    {
+      "attr": "node.type",
+      "valueType": "String",
+      "defaultValue": "ctmp"
+    },
+    {
+      "attr": "node.state.closing",
+      "valueType": "Boolean",
+      "defaultValue": true,
+      "name": "开/运行/合闸状态"
+    },
+    {
+      "attr": "node.state.trip",
+      "valueType": "Boolean",
+      "defaultValue": false,
+      "name": "关/停止/分闸状态"
+    }
+  ],
+  "width": 30,
+  "height": 50,
+  "comps": [
+    {
+      "type": "rect",
+      "background": {
+        "func": "__ht__function(data, view) { let d=data.a('node.state.closing'), k=data.a('node.state.trip'), r='#FF0000'; if(d===k) {r='#FFFF00'} else if(d===true&&k===false) {r='#FF0000'} else if(d===false&&k===true) {r='#00FF00'} return r; }",
+        "value": "#FF0000"
+      },
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "__ht__function(data, view) { let d=data.a('node.state.closing'), k=data.a('node.state.trip'), r='#FF0000'; if(d===k) {r='#FFFF00'} else if(d===true&&k===false) {r='#FF0000'} else if(d===false&&k===true) {r='#00FF00'} return r; }",
+        "value": "#FF0000"
+      },
+      "rect": [
+        0,
+        0,
+        30,
+        50
+      ]
+    }
+  ]
+}

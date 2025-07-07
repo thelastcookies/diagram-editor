@@ -2,6 +2,11 @@
   "modified": "Thu Nov 05 2020 13:44:51 GMT+0800 (CST)",
   "dataBindings": [
     {
+      "attr": "node.name",
+      "valueType": "String",
+      "defaultValue": "告警变色"
+    },
+    {
       "attr": "node.cate",
       "valueType": "String",
       "defaultValue": "m-point"
@@ -12,11 +17,6 @@
       "defaultValue": "switch"
     },
     {
-      "attr": "node.name",
-      "valueType": "String",
-      "defaultValue": "warn"
-    },
-    {
       "attr": "node.label",
       "valueType": "String",
       "defaultValue": "告警变色"
@@ -24,18 +24,17 @@
     {
       "attr": "node.state",
       "valueType": "Boolean",
-      "defaultValue": false,
-      "name": "告警状态"
+      "defaultValue": false
     },
     {
-      "attr": "node.line.color",
+      "attr": "node.color",
       "valueType": "Color",
       "defaultValue": "#D8D8D8"
     },
     {
-      "attr": "label.color",
+      "attr": "node.color2",
       "valueType": "Color",
-      "defaultValue": "rgb(255, 0, 0)"
+      "defaultValue": "#FF0000"
     }
   ],
   "width": 70,
@@ -44,12 +43,12 @@
     {
       "type": "text",
       "text": {
-        "func": "__ht__function(data, view) {\n return data.a('node.label');\n}",
+        "func": "__ht__function(data, view) { return data.a('node.label') }",
         "value": "告警变色"
       },
       "align": "center",
       "color": {
-        "func": "__ht__function(data, view) {\n return data.a('node.state') ? data.a('label.color') : data.a('node.line.color');\n}",
+        "func": "__ht__function(data, view) { return data.a('node.state') ? data.a('node.color2') : data.a('node.color') }",
         "value": "rgb(190,190,190)"
       },
       "font": "16px arial, sans-serif",

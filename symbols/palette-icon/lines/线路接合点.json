@@ -1,0 +1,37 @@
+{
+  "modified": "Mon Sep 21 2020 16:41:22 GMT+0800 (CST)",
+  "dataBindings": [
+    {
+      "attr": "node.name",
+      "valueType": "String",
+      "defaultValue": "线路接合点"
+    },
+    {
+      "attr": "node.color",
+      "valueType": "Color",
+      "defaultValue": "#FF0000"
+    }
+  ],
+  "width": 12,
+  "height": 12,
+  "comps": [
+    {
+      "type": "oval",
+      "background": {
+        "func": "attr@node.color",
+        "value": "#FF0000"
+      },
+      "borderWidth": 1,
+      "borderColor": {
+        "func": "attr@node.color",
+        "value": "#FF0000"
+      },
+      "rect": [
+        0,
+        0,
+        12,
+        12
+      ]
+    }
+  ]
+}

@@ -4,7 +4,7 @@
     {
       "attr": "line.color",
       "valueType": "Color",
-      "defaultValue": "rgb(0,255,0)"
+      "defaultValue": "#00FF00"
     }
   ],
   "width": 18,
@@ -13,13 +13,13 @@
     {
       "type": "shape",
       "background": {
-        "func": "attr@line.color",
-        "value": "rgb(0,255,0)"
+        "func": "attr@node.color",
+        "value": "#00FF00"
       },
       "borderWidth": 1,
       "borderColor": {
-        "func": "attr@line.color",
-        "value": "rgb(0,255,0)"
+        "func": "attr@node.color",
+        "value": "#00FF00"
       },
       "closePath": true,
       "points": [

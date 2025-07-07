@@ -29,8 +29,8 @@
     {
       "type": "rect",
       "background": {
-        "func": "__ht__function(data, view) {\nreturn data.a('node.state') === 3 ? 'rgb(255,0,0)' : 'rgb(0,255,0)';\n}",
-        "value": "rgb(0,255,0)"
+        "func": "__ht__function(data, view) {\nreturn data.a('node.state') === 3 ? '#FF0000' : '#00FF00';\n}",
+        "value": "#00FF00"
       },
       "borderWidth": 0.1,
       "borderColor": "rgb(0,0,0)",
@@ -45,12 +45,12 @@
     {
       "type": "triangle",
       "background": {
-        "func": "__ht__function(data, view) {\nreturn data.a('node.state') === 3 ? 'rgb(255,0,0)' : 'rgb(0,255,0)';\n}",
-        "value": "rgb(0,255,0)"
+        "func": "__ht__function(data, view) {\nreturn data.a('node.state') === 3 ? '#FF0000' : '#00FF00';\n}",
+        "value": "#00FF00"
       },
       "borderWidth": 0.1,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.color",
         "value": "rgb(0,0,0)"
       },
       "anchorX": 1.10435,
@@ -66,12 +66,12 @@
     {
       "type": "triangle",
       "background": {
-        "func": "__ht__function(data, view) {\nreturn data.a('node.state') === 3 ? 'rgb(255,0,0)' : 'rgb(0,255,0)';\n}",
-        "value": "rgb(0,255,0)"
+        "func": "__ht__function(data, view) {\nreturn data.a('node.state') === 3 ? '#FF0000' : '#00FF00';\n}",
+        "value": "#00FF00"
       },
       "borderWidth": 0.1,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.color",
         "value": "rgb(0,0,0)"
       },
       "anchorX": -0.10435,
@@ -87,8 +87,8 @@
     {
       "type": "rightTriangle",
       "background": {
-        "func": "__ht__function(data, view) {\nreturn data.a('node.state') === 3 ? 'rgb(255,0,0)' : 'rgb(0,255,0)';\n}",
-        "value": "rgb(0,255,0)"
+        "func": "__ht__function(data, view) {\nreturn data.a('node.state') === 3 ? '#FF0000' : '#00FF00';\n}",
+        "value": "#00FF00"
       },
       "borderWidth": 0.1,
       "borderColor": "rgb(0,0,0)",
@@ -107,8 +107,8 @@
     {
       "type": "rightTriangle",
       "background": {
-        "func": "__ht__function(data, view) {\nreturn data.a('node.state') === 3 ? 'rgb(255,0,0)' : 'rgb(0,255,0)';\n}",
-        "value": "rgb(0,255,0)"
+        "func": "__ht__function(data, view) {\nreturn data.a('node.state') === 3 ? '#FF0000' : '#00FF00';\n}",
+        "value": "#00FF00"
       },
       "borderWidth": 0.1,
       "borderColor": "rgb(0,0,0)",

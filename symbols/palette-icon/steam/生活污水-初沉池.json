@@ -40,7 +40,6 @@
     },
     {
       "type": "rect",
-      "background": "rgba(217,217,217,0)",
       "borderWidth": 1,
       "borderColor": "rgb(61,61,61)",
       "borderWidthAbsolute": true,

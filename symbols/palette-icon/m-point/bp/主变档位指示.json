@@ -28,12 +28,12 @@
   "comps": [
     {
       "type": "triangle",
-      "background": "rgb(255,0,0)",
+      "background": "#FF0000",
       "visible": {
         "func": "attr@node.state",
         "value": false
       },
-      "borderColor": "rgb(255,0,0)",
+      "borderColor": "#FF0000",
       "borderJoin": "miter",
       "rect": [
         0,

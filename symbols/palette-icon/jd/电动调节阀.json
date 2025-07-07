@@ -28,7 +28,7 @@
       "name": "数据值"
     },
     {
-      "attr": "node.line.color",
+      "attr": "node.color",
       "valueType": "Color",
       "defaultValue": "#000000"
     },
@@ -90,7 +90,7 @@
         "value": "0.00"
       },
       "color": {
-        "func": "attr@node.line.color",
+        "func": "attr@node.color",
         "value": "#000000"
       },
       "offsetX": {
@@ -173,7 +173,7 @@
       },
       "borderWidth": 0.1,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.color",
         "value": "rgb(0,0,0)"
       },
       "anchorX": 1.10435,
@@ -197,7 +197,7 @@
       },
       "borderWidth": 0.1,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.color",
         "value": "rgb(0,0,0)"
       },
       "anchorX": -0.10435,

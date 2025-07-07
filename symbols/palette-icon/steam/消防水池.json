@@ -5,7 +5,6 @@
   "comps": [
     {
       "type": "rect",
-      "background": "rgba(217,217,217,0)",
       "borderWidth": 1,
       "borderColor": "rgb(217,217,217)",
       "borderJoin": "miter",
@@ -20,7 +19,7 @@
       "type": "shape",
       "borderWidth": 2,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.color",
         "value": "#009A3D"
       },
       "points": [
@@ -34,7 +33,7 @@
       "type": "shape",
       "borderWidth": 2,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.color",
         "value": "#009A3D"
       },
       "points": [
@@ -48,7 +47,7 @@
       "type": "shape",
       "borderWidth": 2,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.color",
         "value": "#009A3D"
       },
       "points": [
@@ -62,7 +61,7 @@
       "type": "shape",
       "borderWidth": 2,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.color",
         "value": "#009A3D"
       },
       "points": [
@@ -76,7 +75,7 @@
       "type": "shape",
       "borderWidth": 2,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.color",
         "value": "#009A3D"
       },
       "points": [
@@ -90,7 +89,7 @@
       "type": "shape",
       "borderWidth": 2,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.color",
         "value": "#009A3D"
       },
       "points": [
@@ -104,7 +103,7 @@
       "type": "shape",
       "borderWidth": 2,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.color",
         "value": "#009A3D"
       },
       "points": [
@@ -118,7 +117,7 @@
       "type": "shape",
       "borderWidth": 2,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.color",
         "value": "#009A3D"
       },
       "points": [
@@ -132,7 +131,7 @@
       "type": "shape",
       "borderWidth": 2,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.color",
         "value": "#009A3D"
       },
       "points": [
@@ -146,7 +145,7 @@
       "type": "shape",
       "borderWidth": 2,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.color",
         "value": "#009A3D"
       },
       "points": [
@@ -160,7 +159,7 @@
       "type": "shape",
       "borderWidth": 2,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.color",
         "value": "#009A3D"
       },
       "points": [
@@ -174,7 +173,7 @@
       "type": "shape",
       "borderWidth": 2,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.color",
         "value": "#009A3D"
       },
       "points": [
@@ -188,7 +187,7 @@
       "type": "shape",
       "borderWidth": 2,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.color",
         "value": "#009A3D"
       },
       "points": [
@@ -202,7 +201,7 @@
       "type": "shape",
       "borderWidth": 2,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.color",
         "value": "#009A3D"
       },
       "points": [
@@ -216,7 +215,7 @@
       "type": "shape",
       "borderWidth": 2,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.color",
         "value": "#009A3D"
       },
       "points": [
@@ -230,7 +229,7 @@
       "type": "shape",
       "borderWidth": 2,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.color",
         "value": "#009A3D"
       },
       "points": [

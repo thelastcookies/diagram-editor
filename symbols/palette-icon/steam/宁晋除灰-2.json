@@ -8,7 +8,7 @@
       "background": "rgba(0,0,0,0)",
       "borderWidth": 1,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.color",
         "value": "rgb(255,255,255)"
       },
       "borderJoin": "miter",
@@ -25,7 +25,7 @@
       "background": "rgba(0,0,0,0)",
       "borderWidth": 1,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.color",
         "value": "rgb(255,255,255)"
       },
       "borderJoin": "miter",

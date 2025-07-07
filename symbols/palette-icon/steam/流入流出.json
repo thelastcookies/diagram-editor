@@ -13,11 +13,11 @@
     {
       "type": "triangle",
       "background":  {
-        "func": "attr@line.color",
+        "func": "attr@node.color",
         "value": "#009A3D"
       },
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.color",
         "value": "#009A3D"
       },
       "rotation": 1.5708,
@@ -32,7 +32,7 @@
       "type": "shape",
       "borderWidth": 6,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.color",
         "value": "#009A3D"
       },
       "rotation": 1.5708,

@@ -121,22 +121,6 @@ data_properties = [
         }
     },
     // {
-    //     name: 'tag',// 设置了 name 属性，如果没有设置 accessType 则默认通过 get/setTag 来获取和设置 tag 值
-    //     displayName: '标签',// 用于存取属性名的显示文本值，若为空则显示name属性值
-    //     editable: true// 设置该属性是否可编辑
-    // },
-
-
-    // {
-    //     name: 'label2',// 设置了 name 属性，如果没有设置 accessType 则默认通过 get/setTag 来获取和设置 tag 值
-    //     displayName: '属性2',// 用于存取属性名的显示文本值，若为空则显示name属性值
-    //     accessType: 'style',
-    //     valueType: 'text',
-    //     editable: true// 设置该属性是否可编辑
-    // },
-
-
-    // {
     //     name: '2d.editable',// 结合 accessType，则通过 node.s('2d.editable') 获取和设置该属性
     //     accessType: 'style',// 操作存取属性类型
     //     displayName: '可编辑',// 用于存取属性名的显示文本值，若为空则显示name属性值
@@ -163,15 +147,15 @@ table_properties = [
         valueType: 'number',
         editable: true,
         getValue: function (data) {
-            return JSON.parse(data.a("table.dataSource")).length;
+            return JSON.parse(data.a("node.table.dataSource")).length;
         },
-        setValue: function(data, property, value, view){
-            let oldData = JSON.parse(data.a("table.dataSource"));
+        setValue: function (data, property, value, view) {
+            let oldData = JSON.parse(data.a("node.table.dataSource"));
             let oldLen = oldData.length;
             if (Number(value) === 0) value = 1;
             if (Number(value) === Number(oldLen))
                 return;
-            data.a("table.dataSource", JSON.stringify(new Array(value).fill({})));
+            data.a("node.table.dataSource", JSON.stringify(new Array(value).fill({})));
         },
     },
     {
@@ -180,18 +164,18 @@ table_properties = [
         valueType: 'number',
         editable: true,
         getValue: function (data) {
-            return JSON.parse(data.a("table.columns")).length;
+            return JSON.parse(data.a("node.table.columns")).length;
         },
-        setValue: function(data, property, value, view){
-            let oldData = JSON.parse(data.a("table.columns"));
+        setValue: function (data, property, value, view) {
+            let oldData = JSON.parse(data.a("node.table.columns"));
             let oldLen = oldData.length;
             if (Number(value) === 0) value = 1;
             if (Number(value) === Number(oldLen))
                 return;
             for (let i = 1, len = Math.abs(value - oldLen); i <= len; i++) {
-                value > oldLen ? oldData.push({"key": `column${oldLen + i}`}): oldData.pop();
+                value > oldLen ? oldData.push({ "key": `column${oldLen + i}` }) : oldData.pop();
             }
-            data.a("table.columns", JSON.stringify(oldData));
+            data.a("node.table.columns", JSON.stringify(oldData));
         }
     },
     {
@@ -200,10 +184,10 @@ table_properties = [
         valueType: 'text',
         editable: true,
         getValue: function (data) {
-            let columns = JSON.parse(data.a("table.columns"));
+            let columns = JSON.parse(data.a("node.table.columns"));
             let arrTemp = [];
             columns.forEach(item => {
-               arrTemp.push(item.width? item.width: 120);
+                arrTemp.push(item.width ? item.width : 120);
             });
             let count = 1;
             return arrTemp.flatMap((item, index, arr) => {
@@ -221,9 +205,9 @@ table_properties = [
                 return [];
             }).join(', ');
         },
-        setValue: function(data, property, value, view){
+        setValue: function (data, property, value, view) {
             let arrTemp = [], count = 0;
-            let oldData = JSON.parse(data.a("table.columns"));
+            let oldData = JSON.parse(data.a("node.table.columns"));
             try {
                 arrTemp = value.split(',');
             } catch (e) {
@@ -232,19 +216,19 @@ table_properties = [
             }
             arrTemp.forEach((item, index) => {
                 let arr = item.replace(/ /g, '').split('*');
-                for (let i = 0; i < (Number(arr[1]) ? Number(arr[1]): 1); i++) {
+                for (let i = 0; i < (Number(arr[1]) ? Number(arr[1]) : 1); i++) {
                     if (count >= oldData.length)
                         return;
                     oldData[count]['width'] = Number(arr[0]);
                     count++;
                 }
             });
-            data.a("table.columns", JSON.stringify(oldData));
+            data.a("node.table.columns", JSON.stringify(oldData));
         }
     },
     // {
     //     categoryName: '表格',
-    //     name: "table.head.show",
+    //     name: "node.table.head.show",
     //     displayName: '表头显示',
     //     accessType: 'attr',
     //     valueType: 'boolean',
@@ -253,7 +237,7 @@ table_properties = [
     // },
     {
         categoryName: '表格',
-        name: "table.head.merge",
+        name: "node.table.head.merge",
         displayName: '表头合并',
         accessType: 'attr',
         valueType: 'boolean',
@@ -262,14 +246,14 @@ table_properties = [
     },
     {
         categoryName: '表格',
-        name: "table.head.height",
+        name: "node.table.head.height",
         displayName: '表头行高',
         accessType: 'attr',
         valueType: 'number',
         editable: true,
-    },{
+    }, {
         categoryName: '表格',
-        name: "table.body.height",
+        name: "node.table.body.height",
         displayName: '表格行高',
         accessType: 'attr',
         valueType: 'number',
@@ -277,7 +261,7 @@ table_properties = [
     },
     {
         categoryName: '表格',
-        name: "table.head.background",
+        name: "node.table.head.background",
         displayName: '表头背景色',
         accessType: 'attr',
         valueType: 'color',
@@ -286,7 +270,7 @@ table_properties = [
     },
     {
         categoryName: '表格',
-        name: "table.body.background",
+        name: "node.table.body.background",
         displayName: '表格背景色',
         accessType: 'attr',
         valueType: 'color',
@@ -294,7 +278,7 @@ table_properties = [
     },
     {
         categoryName: '表格',
-        name: "table.border.width",
+        name: "node.table.border.width",
         displayName: '表格边框宽度',
         accessType: 'attr',
         valueType: 'number',
@@ -302,7 +286,7 @@ table_properties = [
     },
     {
         categoryName: '表格',
-        name: "table.border.color",
+        name: "node.table.border.color",
         displayName: '表格边框颜色',
         accessType: 'attr',
         valueType: 'color',
@@ -310,19 +294,19 @@ table_properties = [
     },
     {
         categoryName: '表格',
-        name: "table.columns",
+        name: "node.table.columns",
         displayName: '表格列设置(JSON)',
         accessType: 'attr',
         valueType: 'Object',
         editable: true,
         defaultValue: [],
-        setValue: function(data) {
+        setValue: function (data) {
             console.log(data);
         }
     },
     {
         categoryName: '表格',
-        name: "table.dataSource",
+        name: "node.table.dataSource",
         displayName: '表格数据设置(JSON)',
         accessType: 'attr',
         valueType: 'Object',
@@ -336,7 +320,7 @@ table_properties = [
  * @type {*[]}
  */
 threshold_properties = [
-     {
+    {
         categoryName: '阈值设置',
         name: 'threshold',
         displayName: '阈值1',
@@ -352,7 +336,7 @@ threshold_properties = [
         editable: true,
         enum: {
             labels: ["", "绿色", "蓝色", "红色", "黄色", "黑色"],
-            values: ['', 'rgb(0,255,0)', 'rgb(0,0,255)', 'rgb(255,0,0)', 'rgb(255,255,0)', 'rgb(100,100,100)']
+            values: ['', '#00FF00', 'rgb(0,0,255)', '#FF0000', '#FFFF00', 'rgb(100,100,100)']
         }
     },
     {
@@ -364,7 +348,7 @@ threshold_properties = [
         defaultValue: '',
         enum: {
             labels: ["", "绿色", "蓝色", "红色", "黄色", "黑色"],
-            values: ['', 'rgb(0,255,0)', 'rgb(0,0,255)', 'rgb(255,0,0)', 'rgb(255,255,0)', 'rgb(100,100,100)']
+            values: ['', '#00FF00', 'rgb(0,0,255)', '#FF0000', '#FFFF00', 'rgb(100,100,100)']
         }
     },
     // {
@@ -376,7 +360,7 @@ threshold_properties = [
     //     defaultValue: '',
     //     enum: {
     //         labels: ["", "绿色", "蓝色", "红色", "黄色", "黑色"],
-    //         values: ['', 'rgb(0,255,0)', 'rgb(0,0,255)', 'rgb(255,0,0)', 'rgb(255,255,0)', 'rgb(100,100,100)']
+    //         values: ['', '#00FF00', 'rgb(0,0,255)', '#FF0000', '#FFFF00', 'rgb(100,100,100)']
     //     }
     // }
 ];
@@ -401,7 +385,7 @@ node_properties = [
         displayName: '宽度',
         name: 'width',
         valueType: 'number',
-        getValue: function(data){
+        getValue: function (data) {
             return parseInt(data.getWidth());
         },
         editable: true
@@ -411,7 +395,7 @@ node_properties = [
         displayName: '高度',
         name: 'height',
         valueType: 'number',
-        getValue: function(data){
+        getValue: function (data) {
             return parseInt(data.getHeight());
         },
         editable: true
@@ -420,7 +404,7 @@ node_properties = [
         categoryName: '节点属性',
         displayName: '中心位置坐标X',
         name: 'position',
-        getValue: function(data){
+        getValue: function (data) {
             return parseInt(data.getPosition().x);
         }
     },
@@ -428,7 +412,7 @@ node_properties = [
         categoryName: '节点属性',
         displayName: '中心位置坐标Y',
         name: 'position',
-        getValue: function(data){
+        getValue: function (data) {
             return parseInt(data.getPosition().y);
         }
     },
@@ -437,7 +421,7 @@ node_properties = [
         displayName: '角度',
         name: 'rotation',
         valueType: 'number',
-        getValue: function(data) {
+        getValue: function (data) {
             return Math.round(data.getRotation() / Math.PI * 180) + '°';
         }
     }
@@ -535,10 +519,10 @@ group_properties = [
         name: 'group.border.pattern',
         editable: true,
         accessType: 'style',
-        setValue: function(data, property, value, view){
+        setValue: function (data, property, value, view) {
             data.s('group.border.pattern', eval(value));
         },
-        formatValue: function(value){
+        formatValue: function (value) {
             return '[' + (value || '') + ']';
         }
     },
@@ -585,12 +569,12 @@ group_properties = [
         editable: true,
         accessType: 'style',
         enum: {
-            values: ['linear.southwest','linear.southeast','linear.northwest','linear.northeast',
-                'linear.north','linear.south','linear.west','linear.east',
-                'radial.center','radial.southwest','radial.southeast','radial.northwest','radial.northeast',
-                'radial.north','radial.south','radial.west','radial.east',
-                'spread.horizontal','spread.vertical','spread.diagonal','spread.antidiagonal',
-                'spread.north','spread.south','spread.west','spread.east']
+            values: ['linear.southwest', 'linear.southeast', 'linear.northwest', 'linear.northeast',
+                'linear.north', 'linear.south', 'linear.west', 'linear.east',
+                'radial.center', 'radial.southwest', 'radial.southeast', 'radial.northwest', 'radial.northeast',
+                'radial.north', 'radial.south', 'radial.west', 'radial.east',
+                'spread.horizontal', 'spread.vertical', 'spread.diagonal', 'spread.antidiagonal',
+                'spread.north', 'spread.south', 'spread.west', 'spread.east']
         }
     },
     {
@@ -633,7 +617,7 @@ group_properties = [
         name: 'group.title.font',
         accessType: 'style',
         editable: true,
-        formatValue: function(value){
+        formatValue: function (value) {
             return value || ht.Default.labelFont;
         }
     }
@@ -650,7 +634,7 @@ edge_properties = [
         accessType: 'style',
         valueType: 'color',
         editable: true,
-        defaultValue: 'rgb(255, 0, 0)',
+        defaultValue: '#FF0000',
     },
     {
         name: 'edge.width',
@@ -672,10 +656,10 @@ edge_properties = [
         displayName: '虚线间隔',
         accessType: 'style',
         editable: true,
-        getValue: function(data){
+        getValue: function (data) {
             return data.s('edge.dash.pattern');
         },
-        setValue: function(data, property, value, view){
+        setValue: function (data, property, value, view) {
             data.s('edge.dash.pattern', value.split(","));
         },
     },
@@ -721,10 +705,10 @@ shape_properties = [
         displayName: '虚线间隔',
         accessType: 'style',
         editable: true,
-        getValue: function(data){
+        getValue: function (data) {
             return data.s('shape.dash.pattern');
         },
-        setValue: function(data, property, value, view){
+        setValue: function (data, property, value, view) {
             data.s('shape.dash.pattern', value.split(","));
         },
     },
@@ -738,42 +722,6 @@ shape_properties = [
     }
 ];
 
-// 图元中含有 label 的设置
-// label_properties = [
-//     {
-//         name: 'label',
-//         displayName: 'Label内容',
-//         accessType: 'style',
-//         editable: true,
-//     },
-//     {
-//         name: 'label.font',
-//         displayName: 'Label字体',
-//         accessType: 'style',
-//         valueType: 'string',
-//         editable: true
-//     },
-//     {
-//         name: 'label.position',
-//         displayName: 'Label位置',
-//         accessType: 'style',
-//         valueType: 'string',
-//         editable: true,
-//         enum: {
-//             labels: ["上", "下", "中", "左", "右", "外部上", "外部下", "外部左", "外部右"],
-//             values: [11, 23, 17, 16, 18, 3, 31, 14, 20]
-//         }
-//     },
-//     {
-//         name: 'label.color',
-//         displayName: 'Label颜色',
-//         accessType: 'style',
-//         valueType: 'color',
-//         editable: true,
-//         defaultValue: 'rgb(255, 0, 0)'
-//     },
-// ];
-
 // 链接的配置
 link_properties = [
     {
@@ -782,30 +730,6 @@ link_properties = [
         accessType: 'attr',
         valueType: 'text',
         editable: true
-    }
-];
-
-// 母线的属性
-bus_properties = [
-    {
-        name: 'node.width',
-        displayName: '母线颜色宽度',
-        accessType: 'attr',
-        valueType: 'number',
-        editable: true,
-        defaultValue: 8
-    }
-];
-
-//普通图元的初始颜色配置
-node_color_properties = [
-    {
-        name: 'line.color',
-        displayName: '初始颜色',
-        accessType: 'attr',
-        valueType: 'color',
-        editable: true,
-        defaultValue: 'rgb(255, 0, 0)'
     }
 ];
 
@@ -835,13 +759,13 @@ m_point_properties = [
         valueType: 'text',
         editable: true
     },
-    {
-        name: 'node.showName',
-        displayName: '名称',
-        accessType: 'attr',
-        valueType: 'text',
-        editable: true
-    },
+    // {
+    //     name: 'node.showName',
+    //     displayName: '名称',
+    //     accessType: 'attr',
+    //     valueType: 'text',
+    //     editable: true
+    // },
     {
         name: 'node.sn',
         displayName: '序列号',
@@ -849,87 +773,80 @@ m_point_properties = [
         valueType: 'text',
         editable: true
     },
-    // {
-    //     name: 'label',// 设置了 name 属性，如果没有设置 accessType 则默认通过 get/setTag 来获取和设置 tag 值
-    //     displayName: '标签显示',// 用于存取属性名的显示文本值，若为空则显示name属性值
-    //     accessType: 'style',
-    //     valueType: 'text',
-    //     editable: true// 设置该属性是否可编辑
-    // },
-    // {
-    //     name: 'label',
-    //     displayName: '进度条标签',
-    //     accessType: 'style',
-    //     valueType: 'text',
-    //     editable: true,
-    //     defaultValue: 0
-    // },
-    // {
-    //     name: 'label.position',
-    //     displayName: '进度条标签位置',
-    //     accessType: 'style',
-    //     editable: true,
-    //     defaultValue: "上",
-    //     enum: {
-    //         labels: ["上", "下", "左", "右"],
-    //         values: [3, 31, 14, 20]
-    //     }
-    // },
 ];
 
-// 图元中含有 label 的设置
 label_properties = [
-	{
+    {
         name: 'label',
-        displayName: 'Label内容',
+        displayName: 'Label 内容',
         accessType: 'style',
         editable: true,
     },
-	{
+    {
         name: 'label.font',
-        displayName: 'Label字体',
+        displayName: 'Label 字体',
         accessType: 'style',
         valueType: 'string',
         editable: true
     },
-	{
+    {
         name: 'label.position',
-        displayName: 'Label位置',
+        displayName: 'Label 位置',
         accessType: 'style',
         valueType: 'string',
         editable: true,
         enum: {
-           labels: ["上", "下", "中", "左", "右", "外部上", "外部下", "外部左", "外部右"],
-           values: [11, 23, 17, 16, 18, 3, 31, 14, 20]
+            labels: ["上", "下", "中", "左", "右", "外部上", "外部下", "外部左", "外部右"],
+            values: [11, 23, 17, 16, 18, 3, 31, 14, 20]
         }
     },
     {
+        name: 'label.color',
+        displayName: 'Label 颜色',
+        accessType: 'style',
+        valueType: 'color',
+        editable: true,
+        defaultValue: '#FF0000'
+    },
+];
+
+// node.color 属性
+const node_color_properties = [
+    {
+        name: 'node.color',
+        displayName: '颜色',
+        accessType: 'attr',
+        valueType: 'color',
+        editable: true,
+        defaultValue: '#FF0000'
+    }
+];
+
+// node.color2 属性
+const node_color2_properties = [
+    {
+        name: 'node.color2',
+        displayName: '状态切换颜色',
+        accessType: 'attr',
+        valueType: 'color',
+        editable: true,
+        defaultValue: '#00FF00'
+    }
+];
+
+// node.label 属性
+const label_template_properties = [
+    {
         name: 'node.label',
-        displayName: '模板Label',
+        displayName: 'Label 模板',
         accessType: 'attr',
         valueType: 'text',
         editable: true,
         defaultValue: ''
     },
-    {
-        name: 'label.color',
-        displayName: 'Label颜色',
-        accessType: 'style',
-        valueType: 'color',
-        editable: true,
-        defaultValue: 'rgb(255, 0, 0)'
-    },
-];
-node_line_color_properties = [
-    {
-        name: 'node.line.color',
-        displayName: '初始颜色',
-        accessType: 'attr',
-        valueType: 'color',
-        editable: true,
-    }
-];
-node_border_width_properties = [
+]
+
+const node_border_width_properties = [
     {
         name: 'node.border.width',
         displayName: '边框宽度',
@@ -938,7 +855,8 @@ node_border_width_properties = [
         editable: true
     }
 ];
-node_border_color_properties = [
+
+const node_border_color_properties = [
     {
         name: 'node.border.color',
         displayName: '边框颜色',
@@ -947,6 +865,7 @@ node_border_color_properties = [
         editable: true
     }
 ];
+
 // 部分图元中含有 单位 的设置
 unit_properties = [
     {
@@ -958,8 +877,41 @@ unit_properties = [
         defaultValue: 'unit'
     }
 ];
-// 带有转向功能的图元的朝向设置
-direction_properties = [
+
+// 垂直向设置属性
+const direction_vertical_properties = [
+    {
+        name: 'node.direction.vertical',
+        displayName: '组件朝向',
+        accessType: 'attr',
+        valueType: 'text',
+        editable: true,
+        enum: {
+            labels: ["向上", "向下"],
+            values: ["up", "down"]
+        },
+        defaultValue: 'up'
+    }
+];
+
+// 水平方向设置属性
+const direction_horizontal_properties = [
+    {
+        name: 'node.direction.horizontal',
+        displayName: '组件朝向',
+        accessType: 'attr',
+        valueType: 'text',
+        editable: true,
+        enum: {
+            labels: ["向左", "向右"],
+            values: ["left", "right"]
+        },
+        defaultValue: 'left'
+    }
+];
+
+// 垂直水平方向设置属性
+const direction_properties = [
     {
         name: 'node.direction',
         displayName: '组件朝向',
@@ -973,9 +925,9 @@ direction_properties = [
         defaultValue: 'up'
     }
 ];
-// 最大最小值 配置项
-max_min_properties = [
 
+// 最大最小值 配置项
+const max_min_properties = [
     {
         name: 'node.value.min',
         displayName: '最小值',
@@ -991,6 +943,7 @@ max_min_properties = [
         valueType: 'number',
     }
 ];
+
 // 部分可见 配置项
 part_enable_properties = [
     {
@@ -1001,144 +954,23 @@ part_enable_properties = [
         valueType: 'boolean',
     }
 ];
-/**
- *
- */
-chart_properties = [
-    {
-        categoryName: '图表',
-        name:'chart.data.interval',
-        displayName: '图表数据间隔',
-        accessType: 'attr',
-        valueType: 'enum',
-        editable: true,
-        defaultValue: 'center',
-        enum: {
-            values: ['10s', '30s', '1min', '5min', '10min', '30min', '1h']
-        }
-    },
-    {
-        categoryName: '图表',
-        name: 'chart.background',
-        displayName: '图表主题色',
-        accessType: 'attr',
-        valueType: 'color',
-        editable: true,
-    },
-    {
-        categoryName: '图表',
-        name: 'chart.title.text',
-        displayName: '图表标题',
-        accessType: 'attr',
-        valueType: 'text',
-        editable: true,
-    },
-    {
-        categoryName: '图表',
-        name: 'chart.title.color',
-        displayName: '标题颜色',
-        accessType: 'attr',
-        valueType: 'color',
-        editable: true,
-    },
-    {
-        categoryName: '图表',
-        name: 'chart.title.font',
-        displayName: '标题字体',
-        accessType: 'attr',
-        valueType: 'text',
-        editable: true,
-    },
-    {
-        categoryName: '图表',
-        name: 'chart.legend.text',
-        displayName: '图例名称',
-        accessType: 'attr',
-        valueType: 'text',
-        editable: true,
-    },
-    {
-        categoryName: '图表',
-        name: 'chart.legend.color',
-        displayName: '图例颜色',
-        accessType: 'attr',
-        valueType: 'color',
-        editable: true,
-    },
-    {
-        categoryName: '图表',
-        name: 'chart.label.font',
-        displayName: '数值字体',
-        accessType: 'attr',
-        valueType: 'text',
-        editable: true,
-    },
-    {
-        categoryName: '图表',
-        name: 'chart.label.color',
-        displayName: '数值颜色',
-        accessType: 'attr',
-        valueType: 'color',
-        editable: true,
-    },
 
-];
-
-panel_bar_chart_properties = [
+// 双测点断路器的配置项
+const CB_properties = [
     {
-        categoryName: '图表',
-        name:'chart.data.series',
-        displayName: '图表测点配置',
-        accessType: 'attr',
-        valueType: 'text',
-        editable: true,
-    },
-];
-panel_line_chart_properties = [
-    {
-        categoryName: '图表',
-        name:'chart.data.series',
-        displayName: '图表测点配置',
-        accessType: 'attr',
-        valueType: 'text',
-        editable: true,
-    },
-    {
-        categoryName: '图表',
-        name:'chart.data.interval',
-        displayName: '图表数据间隔',
-        accessType: 'attr',
-        valueType: 'enum',
-        editable: true,
-        defaultValue: 'center',
-        enum: {
-            values: ['10s', '30s', '1min', '5min', '10min', '30min', '1h']
-        }
-    },
-];
-// 断路器的配置项
-cb_properties = [
-    {
-        name: 'node.tag.cb',
+        name: 'node.tag.CB',
         displayName: '断路器测点',
         accessType: 'attr',
         valueType: 'text',
         editable: true
     },
     {
-        name: 'node.tag.sw',
+        name: 'node.tag.drawout',
         displayName: '手车测点',
         accessType: 'attr',
         valueType: 'text',
         editable: true
-    },
-    {
-        name: 'node.showName',
-        displayName: '名称',
-        accessType: 'attr',
-        valueType: 'text',
-        editable: true
-    },
+    }
 ];
 // 双侧点的配置项
 db_properties = [
@@ -1156,56 +988,59 @@ db_properties = [
         valueType: 'text',
         editable: true
     },
-    {
-        name: 'node.showName',
-        displayName: '名称',
-        accessType: 'attr',
-        valueType: 'text',
-        editable: true
-    },
+    // {
+    //     name: 'node.showName',
+    //     displayName: '名称',
+    //     accessType: 'attr',
+    //     valueType: 'text',
+    //     editable: true
+    // },
 ];
-//背景颜色配置项
-node_background = [
+
+// node.background.color 属性
+const node_background_color_properties = [
     {
-        name: 'node.background',
-        displayName: '初始颜色',
+        name: 'node.background.color',
+        displayName: '背景色',
         accessType: 'attr',
         valueType: 'color',
         editable: true,
-    },
+        defaultValue: '#FF0000'
+    }
+];
+
+// node.background.color2 属性
+const node_background_color2_properties = [
     {
-        name: 'background.close',
-        displayName: '运行颜色',
+        name: 'node.background.color2',
+        displayName: '状态切换背景色',
         accessType: 'attr',
         valueType: 'color',
         editable: true,
+        defaultValue: '#00FF00'
     }
 ]
 
-// 电动阀等两个测点图元的配置项
-ddf_properties = [
+// 断路器，电动阀等两个合分测点图元的配置项
+const ctmp_properties = [
     {
-        name: 'node.tag.ddfk',
+        // Closing Measurement Point
+        name: 'node.tag.cmp',
         displayName: '开/运行/合闸测点',
         accessType: 'attr',
         valueType: 'text',
         editable: true
     },
     {
-        name: 'node.tag.ddfg',
+        // Trip Measurement Point
+        name: 'node.tag.tmp',
         displayName: '关/停止/分闸测点',
         accessType: 'attr',
         valueType: 'text',
         editable: true
     },
-    {
-        name: 'node.showName',
-        displayName: '名称',
-        accessType: 'attr',
-        valueType: 'text',
-        editable: true
-    },
 ];
+
 //自定义测点返回文字
 label_text_DIY = [
     {
@@ -1255,6 +1090,7 @@ label_text_DIY = [
         }
     },
 ];
+
 //自定义单测点返回文字
 text_DIY = [
     {
@@ -1311,6 +1147,7 @@ text_DIY = [
         }
     },
 ];
+
 //自定义单测点返回文字 文字随测点变化（目前仅3个信号）
 text_DIY_choose = [
     {

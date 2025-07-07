@@ -29,7 +29,7 @@
     {
       "type": "oval",
       "background": {
-        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(0,255,0)' : 'rgb(255,0,0)';\n}",
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? '#00FF00' : '#FF0000';\n}",
         "values": "#D8D8D8"
       },
       "borderWidth": 2,

@@ -14,7 +14,7 @@
     {
       "attr": "node.color",
       "valueType": "Color",
-      "defaultValue": "rgb(0,255,0)"
+      "defaultValue": "#00FF00"
     },
     {
       "attr": "node.state",
@@ -28,7 +28,7 @@
   "comps": [
     {
       "type": "rect",
-      "background": "rgb(0,255,0)",
+      "background": "#00FF00",
       "borderWidth": 2,
       "borderColor": "#979797",
       "border3d": true,

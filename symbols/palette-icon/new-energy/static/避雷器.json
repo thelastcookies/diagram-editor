@@ -1,0 +1,81 @@
+{
+  "modified": "Mon Oct 26 2020 13:54:41 GMT+0800 (CST)",
+  "dataBindings": [
+    {
+      "attr": "node.name",
+      "valueType": "String",
+      "defaultValue": "避雷器"
+    },
+    {
+      "attr": "node.color",
+      "valueType": "Color",
+      "defaultValue": "#FF0000"
+    }
+  ],
+  "width": 24,
+  "height": 64,
+  "comps": [
+    {
+      "type": "rect",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@node.color",
+        "value": "#FF0000"
+      },
+      "shadowColor": "#1ABC9C",
+      "rect": [
+        2,
+        13,
+        20,
+        38
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@node.color",
+        "value": "#FF0000"
+      },
+      "shadowColor": "#1ABC9C",
+      "points": [
+        12,
+        19.53662,
+        12,
+        0
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": {
+        "func": "attr@node.color",
+        "value": "#FF0000"
+      },
+      "shadowColor": "#1ABC9C",
+      "points": [
+        12,
+        64,
+        12,
+        51
+      ]
+    },
+    {
+      "type": "triangle",
+      "borderWidth": 6,
+      "borderColor": {
+        "func": "attr@node.color",
+        "value": "#FF0000"
+      },
+      "borderJoin": "miter",
+      "shadowColor": "#1ABC9C",
+      "rotation": 3.14159,
+      "rect": [
+        10.5,
+        20.53662,
+        3,
+        4
+      ]
+    }
+  ]
+}

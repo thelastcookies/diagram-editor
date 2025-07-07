@@ -86,8 +86,8 @@
     {
       "type": "circle",
       "background": {
-        "func": "__ht__function(data, view) {\n return data.a('node.state') ? 'rgb(255,0,0)' : 'rgb(0,255,0)';\n}",
-        "value": "rgb(0,255,0)"
+        "func": "__ht__function(data, view) {\n return data.a('node.state') ? '#FF0000' : '#00FF00';\n}",
+        "value": "#00FF00"
       },
       "borderWidth": 0.5,
       "borderColor": "rgb(0,0,0)",

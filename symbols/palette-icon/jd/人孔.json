@@ -25,12 +25,12 @@
     {
       "attr": "node.background",
       "valueType": "Color",
-      "defaultValue": "rgb(0,255,0)"
+      "defaultValue": "#00FF00"
     },
     {
       "attr": "background.close",
       "valueType": "Color",
-      "defaultValue": "rgb(255, 0, 0)"
+      "defaultValue": "#FF0000"
     }
   ],
   "width": 20,
@@ -63,12 +63,12 @@
       "type": "rect",
       "background": {
         "func": "__ht__function(data, view) {\n return data.a('node.state') ? data.a('background.close') : data.a('node.background');\n}",
-        "value": "rgb(0,255,0)"
+        "value": "#00FF00"
       },
       "borderWidth": 0.5,
       "borderColor": {
         "func": "__ht__function(data, view) {\n return data.a('node.state') ? data.a('background.close') : data.a('node.background');\n}",
-        "value": "rgb(0,255,0)"
+        "value": "#00FF00"
       },
       "rect": [
         7.55912,
@@ -94,7 +94,7 @@
       "borderWidth": 1,
       "borderColor": {
         "func": "__ht__function(data, view) {\n return data.a('node.state') ? data.a('background.close') : data.a('node.background');\n}",
-        "value": "rgb(0,255,0)"
+        "value": "#00FF00"
       },
       "points": [
         8.55912,
@@ -107,7 +107,7 @@
       "type": "border",
       "color": {
         "func": "__ht__function(data, view) {\n return data.a('node.state') ? data.a('background.close') : data.a('node.background');\n}",
-        "value": "rgb(0,255,0)"
+        "value": "#00FF00"
       },
       "width": 0.8,
       "rect": [

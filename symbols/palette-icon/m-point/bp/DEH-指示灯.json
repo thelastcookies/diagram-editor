@@ -17,7 +17,7 @@
   "comps": [
     {
       "type": "oval",
-      "background": "rgb(255,0,0)",
+      "background": "#FF0000",
       "borderWidth": 0.5,
       "borderColor": "rgb(61,61,61)",
       "borderWidthAbsolute": true,

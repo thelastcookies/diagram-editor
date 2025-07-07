@@ -215,7 +215,6 @@
     },
     {
       "type": "rect",
-      "background": "rgba(217,217,217,0)",
       "borderWidth": 0.5,
       "borderColor": "rgb(0,0,0)",
       "borderJoin": "miter",
@@ -229,7 +228,6 @@
     },
     {
       "type": "rect",
-      "background": "rgba(217,217,217,0)",
       "borderWidth": 0.5,
       "borderColor": "rgb(0,0,0)",
       "borderJoin": "miter",
@@ -243,7 +241,6 @@
     },
     {
       "type": "rect",
-      "background": "rgba(217,217,217,0)",
       "borderWidth": 0.5,
       "borderColor": "rgb(0,0,0)",
       "borderJoin": "miter",
@@ -257,7 +254,6 @@
     },
     {
       "type": "rect",
-      "background": "rgba(217,217,217,0)",
       "borderWidth": 0.5,
       "borderColor": "rgb(0,0,0)",
       "borderJoin": "miter",
@@ -271,7 +267,6 @@
     },
     {
       "type": "rect",
-      "background": "rgba(217,217,217,0)",
       "borderWidth": 0.5,
       "borderColor": "rgb(0,0,0)",
       "borderJoin": "miter",
@@ -285,7 +280,6 @@
     },
     {
       "type": "rect",
-      "background": "rgba(217,217,217,0)",
       "borderWidth": 0.5,
       "borderColor": "rgb(0,0,0)",
       "borderJoin": "miter",
@@ -299,7 +293,6 @@
     },
     {
       "type": "rect",
-      "background": "rgba(217,217,217,0)",
       "borderWidth": 0.5,
       "borderColor": "rgb(0,0,0)",
       "borderJoin": "miter",
@@ -313,7 +306,6 @@
     },
     {
       "type": "rect",
-      "background": "rgba(217,217,217,0)",
       "borderWidth": 0.5,
       "borderColor": "rgb(0,0,0)",
       "borderJoin": "miter",
@@ -327,7 +319,6 @@
     },
     {
       "type": "rect",
-      "background": "rgba(217,217,217,0)",
       "borderWidth": 0.5,
       "borderColor": "rgb(0,0,0)",
       "borderJoin": "miter",
@@ -341,7 +332,6 @@
     },
     {
       "type": "rect",
-      "background": "rgba(217,217,217,0)",
       "borderWidth": 0.5,
       "borderColor": "rgb(0,0,0)",
       "borderJoin": "miter",
@@ -355,7 +345,6 @@
     },
     {
       "type": "rect",
-      "background": "rgba(217,217,217,0)",
       "borderWidth": 0.5,
       "borderColor": "rgb(0,0,0)",
       "borderJoin": "miter",

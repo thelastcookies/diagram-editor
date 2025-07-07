@@ -35,7 +35,7 @@
     {
       "type": "oval",
       "background": {
-        "func": "__ht__function(data, view) {\n let bg='rgb(0,255,0)';if(!data.a('node.state') && !data.a('node.switch')){bg='rgb(0,255,0)'} else{bg='rgb(255,0,0)'}return bg\n}",
+        "func": "__ht__function(data, view) {\n let bg='#00FF00';if(!data.a('node.state') && !data.a('node.switch')){bg='#00FF00'} else{bg='#FF0000'}return bg\n}",
         "values": "#D8D8D8"
       },
       "borderWidth": 2,

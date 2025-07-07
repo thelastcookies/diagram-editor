@@ -47,7 +47,7 @@
       "type": "shape",
       "borderWidth": 2,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.color",
         "value": "#009A3D"
       },
       "points": [
@@ -61,7 +61,7 @@
       "type": "shape",
       "borderWidth": 2,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.color",
         "value": "#009A3D"
       },
       "points": [
@@ -75,7 +75,7 @@
       "type": "shape",
       "borderWidth": 2,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.color",
         "value": "#009A3D"
       },
       "points": [
@@ -89,7 +89,7 @@
       "type": "shape",
       "borderWidth": 2,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.color",
         "value": "#009A3D"
       },
       "points": [
@@ -103,7 +103,7 @@
       "type": "shape",
       "borderWidth": 2,
       "borderColor": {
-        "func": "attr@line.color",
+        "func": "attr@node.color",
         "value": "#009A3D"
       },
       "points": [
