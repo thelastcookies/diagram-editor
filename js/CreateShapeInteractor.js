@@ -1,3 +1,4 @@
+// 不规则图形 交互器
 var CreateShapeInteractor = function (graphView, type) {
     CreateShapeInteractor.superClass.constructor.call(this, graphView);
     this._points = new ht.List();

@@ -1,3 +1,4 @@
+// 连线 交互器
 var CreateEdgeInteractor = function (graphView, type) {
     CreateEdgeInteractor.superClass.constructor.call(this, graphView);
 
@@ -80,7 +81,7 @@ ht.Default.def(CreateEdgeInteractor, ht.graph.Interactor, {
             var edge = new ht.Edge(this._source, this._target);
 
             edge.s('edge.type', this._type);
-            edge.s('body.color', "rgb(255, 0, 0)");
+            edge.s('body.color', "#FF0000");
             edge.s('edge.dash.pattern', [8, 8]);
 
             edge.setParent(graphView.getCurrentSubGraph());

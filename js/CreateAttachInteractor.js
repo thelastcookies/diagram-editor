@@ -1,3 +1,4 @@
+// 吸附 交互器
 var CreateAttachInteractor = function (graphView, type) {
     CreateAttachInteractor.superClass.constructor.call(this, graphView);
 
@@ -82,7 +83,7 @@ ht.Default.def(CreateAttachInteractor, ht.graph.Interactor, {
             var edge = new ht.Edge(this._source, this._target);
 
             edge.s('edge.type', this._type);
-            edge.s('body.color', "rgb(255, 0, 0)");
+            edge.s('body.color', "#FF0000");
 
             edge.setParent(graphView.getCurrentSubGraph());
         }

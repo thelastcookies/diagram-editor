@@ -8,25 +8,14 @@ function getFileAsJSON(fileDOMID) {
 	// Handle progress, success, and errors
     reader.fileName = file.name.replace(".cfd", "");
     reader.result = result;
-	reader.onprogress = updateProgress;
+	// reader.onprogress = updateProgress;
 	reader.onload = loaded;
-	reader.onerror = errorHandler;
+	// reader.onerror = errorHandler;
 
   	// Read file into memory as UTF-16
   	reader.readAsText(file, "UTF-8");
 
   	return file.name;
-}
-
-function updateProgress(evt) {
-	if (evt.lengthComputable) {
-  	// evt.loaded and evt.total are ProgressEvent properties
-  		var loaded = (evt.loaded / evt.total);
-  		if (loaded < 1) {
-  		  	// Increase the prog bar length
-  		  	// style.width = (loaded * 200) + "px";
-  		}
-    }
 }
 
 function loaded(evt) {
