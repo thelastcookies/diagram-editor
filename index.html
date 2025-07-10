@@ -70,9 +70,6 @@
     <!--右键菜单栏的内容-->
     <script src="config/contextmenu-config.js"></script>
 
-    <!--json图片-->
-    <!--    <script src="js/predefine.js"></script>-->
-
     <script type="text/javascript">
         // 用于界面渲染的 dataModel
         let indexDataModel = new ht.DataModel();
@@ -221,8 +218,6 @@
                 dm.add(group);// 将节点添加到 palette 的数据容器中
 
                 if (name === 'lines') group.setExpanded(true);
-                // if (name === 'sxjk') group.setExpanded(true);
-                // if (name === 'ems') group.setExpanded(true);
                 if (name === 'power') group.setExpanded(true);
                 if (name === 'steam') group.setExpanded(true);
 
@@ -348,31 +343,32 @@
                 let data = indexDataModel.sm().ld();
 
                 // 针对不同类型的节点设置不同的属性内容
-                if (data instanceof ht.Text) {// 文本类型
+                if (data instanceof ht.Text) {
+                    // 文本类型
                     propertyView.addProperties(text_properties);
                     propertyView.addProperties(data_properties);
-                    propertyView.addProperties(threshold_properties);
+                    // propertyView.addProperties(threshold_properties);
                     propertyView.addProperties(m_point_properties);
                     propertyView.addProperties(link_properties);
                     return;// 设置文本类型不显示其他数据
                 }
-                if (data instanceof ht.Data) {// data 类型，所有的节点都基于这个类型
+                if (data instanceof ht.Data) {
+                    // data 类型，所有的节点都基于这个类型
                     propertyView.addProperties(data_properties);
                 }
-                if (data instanceof ht.Node) {// node 类型
-                    if (data.a('node.cate') === 'm-point'
-                        && data.a('node.type') !== 'CB' && data.a('node.type') !== 'ctmp' && data.a('node.type') !== 'db'
+                if (data instanceof ht.Node) {
+                    // node 类型
+                    if (
+                        data.a('node.cate') === 'm-point' &&
+                        (data.a('node.type') !== 'CB'
+                            || data.a('node.type') !== 'ctmp')
                     ) {
                         propertyView.addProperties(m_point_properties);
-                        // propertyView.addProperties(threshold_properties);
                     }
-                    if (data.a('node.type') === 'CB') {
-                        propertyView.addProperties(CB_properties);
-                    }
-                    if (data.a('node.type') === 'db') {
-                        propertyView.addProperties(db_properties);
-                    }
-                    if (data.a('node.type') === 'ctmp') propertyView.addProperties(ctmp_properties);
+
+                    if (data.a('node.label') !== undefined) propertyView.addProperties(label_template_properties);
+                    if (data.a('node.unit') !== undefined) propertyView.addProperties(unit_properties);
+                    if (data.a('text.font') !== undefined) propertyView.addProperties(text_font_properties);
 
                     if (data.a('node.color') !== undefined) propertyView.addProperties(node_color_properties);
                     if (data.a('node.color2') !== undefined) propertyView.addProperties(node_color2_properties);
@@ -380,28 +376,40 @@
                     if (data.a('node.background.color') !== undefined) propertyView.addProperties(node_background_color_properties);
                     if (data.a('node.background.color2') !== undefined) propertyView.addProperties(node_background_color2_properties);
 
-                    if (data.a('node.border.color') !== undefined) propertyView.addProperties(node_border_color_properties);
                     if (data.a('node.border.width') !== undefined) propertyView.addProperties(node_border_width_properties);
-
-                    if (data.a('node.label') !== undefined) propertyView.addProperties(label_template_properties);
-                    if (data.a('node.unit') !== undefined) propertyView.addProperties(unit_properties);
+                    if (data.a('node.border.color') !== undefined) propertyView.addProperties(node_border_color_properties);
 
                     if (data.a('node.direction.vertical') !== undefined) propertyView.addProperties(direction_vertical_properties);
                     if (data.a('node.direction.horizontal') !== undefined) propertyView.addProperties(direction_horizontal_properties);
                     if (data.a('node.direction') !== undefined) propertyView.addProperties(direction_properties);
 
-                    if (data.a('text.font')) {
-                        propertyView.addProperties(text_font_properties);
-                    }
                     if (data.a('node.value.max') !== undefined || data.a('node.value.min') !== undefined)
                         propertyView.addProperties(max_min_properties);
 
-                    if (data.a('node.part.enable') !== undefined) {
-                        propertyView.addProperties(part_enable_properties);
-                    }
-                    if (data.a('node.type') === 'table') {
-                        propertyView.addProperties(table_properties);
-                    }
+                    /**
+                     * 指定类型图元
+                     */
+
+                    // 表格图元
+                    if (data.a('node.type') === 'table') propertyView.addProperties(table_properties);
+
+                    // 开关量图元逻辑反转
+                    if (data.a('node.type') === 'switch') propertyView.addProperties(switch_properties);
+
+                    // 双测点断路器
+                    if (data.a('node.type') === 'CB') propertyView.addProperties(CB_properties);
+
+                    // 合分测点图元
+                    if (data.a('node.type') === 'ctmp') propertyView.addProperties(ctmp_properties);
+
+                    // if (data.a('node.type') === 'barChart') {
+                    //     propertyView.addProperties(panel_bar_chart_properties);
+                    //     return;
+                    // }
+                    // if (data.a('node.type') === 'lineChart') {
+                    //     propertyView.addProperties(panel_line_chart_properties);
+                    //     return;
+                    // }
 
                     /**
                      * 指定具名图元
@@ -431,23 +439,7 @@
                         }
                         propertyView.addProperties(label_properties);
                     }
-                    if (data.a('node.type') === 'signal-DIY') {
-                        propertyView.addProperties(label_text_DIY);
-                    }
-                    if (data.a('node.type') === 'text-DIY') {
-                        propertyView.addProperties(text_DIY);
-                    }
-                    if (data.a('node.type') === 'text_DIY_choose') {
-                        propertyView.addProperties(text_DIY_choose);
-                    }
-                    // if (data.a('node.type') === 'barChart') {
-                    //     propertyView.addProperties(panel_bar_chart_properties);
-                    //     return;
-                    // }
-                    // if (data.a('node.type') === 'lineChart') {
-                    //     propertyView.addProperties(panel_line_chart_properties);
-                    //     return;
-                    // }
+
                     propertyView.addProperties(node_properties);
                 }
                 // if (data instanceof ht.Group) {// 组类型

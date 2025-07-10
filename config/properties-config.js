@@ -1,7 +1,7 @@
 /**
- * 文本的属性
- * @type {*[]}
+ * 原生属性
  */
+// 文本的属性
 text_properties = [
     {
         categoryName: '文本',
@@ -98,10 +98,7 @@ text_properties = [
     // },
 ];
 
-/**
- * 所有的节点都有的属性
- * @type {*[]}
- */
+// 所有的节点都有的属性
 data_properties = [
     {
         name: 'id'
@@ -136,10 +133,7 @@ data_properties = [
     // },
 ];
 
-/**
- * 表格的特殊属性
- * @type {*[]}
- */
+// 表格的特殊属性
 table_properties = [
     {
         categoryName: '表格',
@@ -315,60 +309,7 @@ table_properties = [
     }
 ];
 
-/**
- * 节点的阈值属性设置
- * @type {*[]}
- */
-threshold_properties = [
-    {
-        categoryName: '阈值设置',
-        name: 'threshold',
-        displayName: '阈值1',
-        accessType: 'attr',
-        valueType: 'number',
-        editable: true
-    },
-    {
-        categoryName: '阈值设置',
-        name: 'moreThenThColor',
-        displayName: '高于阈值1颜色',
-        accessType: 'attr',
-        editable: true,
-        enum: {
-            labels: ["", "绿色", "蓝色", "红色", "黄色", "黑色"],
-            values: ['', '#00FF00', 'rgb(0,0,255)', '#FF0000', '#FFFF00', 'rgb(100,100,100)']
-        }
-    },
-    {
-        categoryName: '阈值设置',
-        name: 'lessThenThColor',
-        displayName: '低于阈值1颜色',
-        accessType: 'attr',
-        editable: true,
-        defaultValue: '',
-        enum: {
-            labels: ["", "绿色", "蓝色", "红色", "黄色", "黑色"],
-            values: ['', '#00FF00', 'rgb(0,0,255)', '#FF0000', '#FFFF00', 'rgb(100,100,100)']
-        }
-    },
-    // {
-    //     categoryName: '阈值设置',
-    //     name: 'lessThenThColor',
-    //     displayName: '低于阈值1颜色',
-    //     accessType: 'attr',
-    //     editable: true,
-    //     defaultValue: '',
-    //     enum: {
-    //         labels: ["", "绿色", "蓝色", "红色", "黄色", "黑色"],
-    //         values: ['', '#00FF00', 'rgb(0,0,255)', '#FF0000', '#FFFF00', 'rgb(100,100,100)']
-    //     }
-    // }
-];
-
-/**
- * node 节点的属性
- * @type {*[]}
- */
+// node 节点的属性
 node_properties = [
     {
         categoryName: '节点属性',
@@ -427,10 +368,7 @@ node_properties = [
     }
 ];
 
-/**
- * 组的属性
- * @type {*[]}
- */
+// 组的属性
 group_properties = [
     {
         categoryName: '组',
@@ -623,10 +561,7 @@ group_properties = [
     }
 ];
 
-/**
- * 连线的属性
- * @type {*[]}
- */
+// 连线的属性
 edge_properties = [
     {
         name: 'body.color',
@@ -673,10 +608,7 @@ edge_properties = [
     },
 ];
 
-/**
- * 折线的属性
- * @type {*[]}
- */
+// 折线 属性
 shape_properties = [
     {
         name: 'shape.border.color',
@@ -722,17 +654,7 @@ shape_properties = [
     }
 ];
 
-// 链接的配置
-link_properties = [
-    {
-        name: 'button.link',
-        displayName: '链接',
-        accessType: 'attr',
-        valueType: 'text',
-        editable: true
-    }
-];
-
+// 字体 属性
 text_font_properties = [
     {
         name: 'text.font',
@@ -743,38 +665,7 @@ text_font_properties = [
     }
 ];
 
-//测点图元的配置项
-m_point_properties = [
-    {
-        name: 'node.tag',
-        displayName: '测点',
-        accessType: 'attr',
-        valueType: 'text',
-        editable: true
-    },
-    {
-        name: 'node.formula',
-        displayName: '公式',
-        accessType: 'attr',
-        valueType: 'text',
-        editable: true
-    },
-    // {
-    //     name: 'node.showName',
-    //     displayName: '名称',
-    //     accessType: 'attr',
-    //     valueType: 'text',
-    //     editable: true
-    // },
-    {
-        name: 'node.sn',
-        displayName: '序列号',
-        accessType: 'attr',
-        valueType: 'text',
-        editable: true
-    },
-];
-
+// 原生 label 属性
 label_properties = [
     {
         name: 'label',
@@ -810,7 +701,46 @@ label_properties = [
     },
 ];
 
-// node.color 属性
+/**
+ * 自定义扩展属性
+ */
+
+// 自定义 label 属性
+const label_template_properties = [
+    {
+        name: 'node.label',
+        displayName: 'Label 模板',
+        accessType: 'attr',
+        valueType: 'text',
+        editable: true,
+        defaultValue: ''
+    },
+];
+
+// 单位 属性
+const unit_properties = [
+    {
+        name: 'node.unit',
+        displayName: '单位',
+        accessType: 'attr',
+        valueType: 'text',
+        editable: true,
+        defaultValue: 'unit'
+    }
+];
+
+// 链接 配置
+const link_properties = [
+    {
+        name: 'button.link',
+        displayName: '链接',
+        accessType: 'attr',
+        valueType: 'text',
+        editable: true
+    }
+];
+
+// 图元颜色 属性
 const node_color_properties = [
     {
         name: 'node.color',
@@ -822,7 +752,7 @@ const node_color_properties = [
     }
 ];
 
-// node.color2 属性
+// 图元切换颜色 属性
 const node_color2_properties = [
     {
         name: 'node.color2',
@@ -834,18 +764,31 @@ const node_color2_properties = [
     }
 ];
 
-// node.label 属性
-const label_template_properties = [
+// 图元背景色 属性
+const node_background_color_properties = [
     {
-        name: 'node.label',
-        displayName: 'Label 模板',
+        name: 'node.background.color',
+        displayName: '背景色',
         accessType: 'attr',
-        valueType: 'text',
+        valueType: 'color',
         editable: true,
-        defaultValue: ''
-    },
+        defaultValue: '#FF0000'
+    }
+];
+
+// 图元切换背景色 属性
+const node_background_color2_properties = [
+    {
+        name: 'node.background.color2',
+        displayName: '状态切换背景色',
+        accessType: 'attr',
+        valueType: 'color',
+        editable: true,
+        defaultValue: '#00FF00'
+    }
 ]
 
+// 边框宽度 属性
 const node_border_width_properties = [
     {
         name: 'node.border.width',
@@ -856,6 +799,7 @@ const node_border_width_properties = [
     }
 ];
 
+// 边框颜色 属性
 const node_border_color_properties = [
     {
         name: 'node.border.color',
@@ -866,19 +810,7 @@ const node_border_color_properties = [
     }
 ];
 
-// 部分图元中含有 单位 的设置
-unit_properties = [
-    {
-        name: 'node.unit',
-        displayName: '单位',
-        accessType: 'attr',
-        valueType: 'text',
-        editable: true,
-        defaultValue: 'unit'
-    }
-];
-
-// 垂直向设置属性
+// 垂直方向 属性
 const direction_vertical_properties = [
     {
         name: 'node.direction.vertical',
@@ -894,7 +826,7 @@ const direction_vertical_properties = [
     }
 ];
 
-// 水平方向设置属性
+// 水平方向 属性
 const direction_horizontal_properties = [
     {
         name: 'node.direction.horizontal',
@@ -910,7 +842,7 @@ const direction_horizontal_properties = [
     }
 ];
 
-// 垂直水平方向设置属性
+// 垂直水平方向 属性
 const direction_properties = [
     {
         name: 'node.direction',
@@ -926,7 +858,55 @@ const direction_properties = [
     }
 ];
 
-// 最大最小值 配置项
+/**
+ * 测点相关配置属性
+ */
+
+// 测点图元属性
+const m_point_properties = [
+    {
+        name: 'node.tag',
+        displayName: '测点',
+        accessType: 'attr',
+        valueType: 'text',
+        editable: true
+    },
+    {
+        name: 'node.formula',
+        displayName: '公式',
+        accessType: 'attr',
+        valueType: 'text',
+        editable: true
+    },
+    // {
+    //     name: 'node.showName',
+    //     displayName: '名称',
+    //     accessType: 'attr',
+    //     valueType: 'text',
+    //     editable: true
+    // },
+    {
+        name: 'node.sn',
+        displayName: '序列号',
+        accessType: 'attr',
+        valueType: 'text',
+        editable: true
+    },
+];
+
+// 开关量图元反转 属性
+const switch_properties = [
+    {
+        name: 'node.type.switch.reverse',
+        displayName: '开关量逻辑反转',
+        accessType: 'attr',
+        valueType: 'boolean',
+        editable: true,
+        defaultValue: false,
+    },
+];
+
+// 最大最小值 属性
 const max_min_properties = [
     {
         name: 'node.value.min',
@@ -941,17 +921,6 @@ const max_min_properties = [
         accessType: 'attr',
         editable: true,
         valueType: 'number',
-    }
-];
-
-// 部分可见 配置项
-part_enable_properties = [
-    {
-        name: 'node.part.enable',
-        displayName: '内部可用',
-        accessType: 'attr',
-        editable: true,
-        valueType: 'boolean',
     }
 ];
 
@@ -972,54 +941,6 @@ const CB_properties = [
         editable: true
     }
 ];
-// 双侧点的配置项
-db_properties = [
-    {
-        name: 'node.tag.at',
-        displayName: '测点 1',
-        accessType: 'attr',
-        valueType: 'text',
-        editable: true
-    },
-    {
-        name: 'node.tag.bt',
-        displayName: '测点 2',
-        accessType: 'attr',
-        valueType: 'text',
-        editable: true
-    },
-    // {
-    //     name: 'node.showName',
-    //     displayName: '名称',
-    //     accessType: 'attr',
-    //     valueType: 'text',
-    //     editable: true
-    // },
-];
-
-// node.background.color 属性
-const node_background_color_properties = [
-    {
-        name: 'node.background.color',
-        displayName: '背景色',
-        accessType: 'attr',
-        valueType: 'color',
-        editable: true,
-        defaultValue: '#FF0000'
-    }
-];
-
-// node.background.color2 属性
-const node_background_color2_properties = [
-    {
-        name: 'node.background.color2',
-        displayName: '状态切换背景色',
-        accessType: 'attr',
-        valueType: 'color',
-        editable: true,
-        defaultValue: '#00FF00'
-    }
-]
 
 // 断路器，电动阀等两个合分测点图元的配置项
 const ctmp_properties = [
@@ -1041,194 +962,49 @@ const ctmp_properties = [
     },
 ];
 
-//自定义测点返回文字
-label_text_DIY = [
+// 阈值 属性
+threshold_properties = [
     {
-        name: 'node.signal.text0',
-        displayName: '信号0内容',
+        categoryName: '阈值设置',
+        name: 'threshold',
+        displayName: '阈值1',
         accessType: 'attr',
-        valueType: 'text',
+        valueType: 'number',
         editable: true
     },
     {
-        name: 'node.signal.text1',
-        displayName: '信号1内容',
-        accessType: 'attr',
-        valueType: 'text',
-        editable: true,
-    },
-    {
-        name: 'signal.color.text0',
-        displayName: '信号0内容颜色',
-        accessType: 'attr',
-        valueType: 'color',
-        editable: true,
-    },
-    {
-        name: 'signal.color.text1',
-        displayName: '信号1内容颜色',
-        accessType: 'attr',
-        valueType: 'color',
-        editable: true,
-    },
-    {
-        name: 'signal.font',
-        displayName: '字体大小',
-        accessType: 'attr',
-        valueType: 'string',
-        defaultValue: "14px arial, sans-serif",
-        editable: true
-    },
-    {
-        name: 'signal.align',
-        displayName: '水平对齐',
+        categoryName: '阈值设置',
+        name: 'moreThenThColor',
+        displayName: '高于阈值1颜色',
         accessType: 'attr',
         editable: true,
-        defaultValue: 'center',
         enum: {
-            values: ['left', 'center', 'right']
+            labels: ["", "绿色", "蓝色", "红色", "黄色", "黑色"],
+            values: ['', '#00FF00', 'rgb(0,0,255)', '#FF0000', '#FFFF00', 'rgb(100,100,100)']
         }
     },
-];
-
-//自定义单测点返回文字
-text_DIY = [
     {
-        name: 'node.isSet',
-        displayName: '文字是否根据信号值变动',
-        accessType: 'attr',
-        valueType: 'text',
-        editable: true
-    },
-    {
-        name: 'node.signal',
-        displayName: '信号值0',
-        accessType: 'attr',
-        valueType: 'text',
-        editable: true
-    },
-    {
-        name: 'node.signal.text',
-        displayName: '文本内容',
-        accessType: 'attr',
-        valueType: 'text',
-        editable: true
-    },
-    {
-        name: 'signal.color',
-        displayName: '初始字体颜色',
-        accessType: 'attr',
-        valueType: 'color',
-        editable: true,
-    },
-    {
-        name: 'signal.color1',
-        displayName: '运行字体颜色',
-        accessType: 'attr',
-        valueType: 'color',
-        editable: true,
-    },
-    {
-        name: 'signal.font',
-        displayName: '字体大小',
-        accessType: 'attr',
-        valueType: 'string',
-        defaultValue: "14px arial, sans-serif",
-        editable: true
-    },
-    {
-        name: 'signal.align',
-        displayName: '水平对齐',
+        categoryName: '阈值设置',
+        name: 'lessThenThColor',
+        displayName: '低于阈值1颜色',
         accessType: 'attr',
         editable: true,
-        defaultValue: 'center',
+        defaultValue: '',
         enum: {
-            values: ['left', 'center', 'right']
+            labels: ["", "绿色", "蓝色", "红色", "黄色", "黑色"],
+            values: ['', '#00FF00', 'rgb(0,0,255)', '#FF0000', '#FFFF00', 'rgb(100,100,100)']
         }
     },
-];
-
-//自定义单测点返回文字 文字随测点变化（目前仅3个信号）
-text_DIY_choose = [
-    {
-        name: 'node.signal',
-        displayName: '信号值0',
-        accessType: 'attr',
-        valueType: 'text',
-        editable: true
-    },
-    {
-        name: 'node.signal.text',
-        displayName: '文本内容',
-        accessType: 'attr',
-        valueType: 'text',
-        editable: true
-    },
-    {
-        name: 'node.signal1',
-        displayName: '信号值1',
-        accessType: 'attr',
-        valueType: 'text',
-        editable: true
-    },
-    {
-        name: 'node.signal.text1',
-        displayName: '文本内容1',
-        accessType: 'attr',
-        valueType: 'text',
-        editable: true
-    },
-    {
-        name: 'node.signal2',
-        displayName: '信号值2',
-        accessType: 'attr',
-        valueType: 'text',
-        editable: true
-    },
-    {
-        name: 'node.signal.text2',
-        displayName: '文本内容2',
-        accessType: 'attr',
-        valueType: 'text',
-        editable: true
-    },
-    {
-        name: 'node.signal3',
-        displayName: '信号值3',
-        accessType: 'attr',
-        valueType: 'text',
-        editable: true
-    },
-    {
-        name: 'node.signal.text3',
-        displayName: '文本内容3',
-        accessType: 'attr',
-        valueType: 'text',
-        editable: true
-    },
-    {
-        name: 'signal.color',
-        displayName: '字体颜色',
-        accessType: 'attr',
-        valueType: 'color',
-        editable: true,
-    },
-    {
-        name: 'signal.font',
-        displayName: '字体大小',
-        accessType: 'attr',
-        valueType: 'string',
-        defaultValue: "14px arial, sans-serif",
-        editable: true
-    },
-    {
-        name: 'signal.align',
-        displayName: '水平对齐',
-        accessType: 'attr',
-        editable: true,
-        defaultValue: 'center',
-        enum: {
-            values: ['left', 'center', 'right']
-        }
-    },
+    // {
+    //     categoryName: '阈值设置',
+    //     name: 'lessThenThColor',
+    //     displayName: '低于阈值1颜色',
+    //     accessType: 'attr',
+    //     editable: true,
+    //     defaultValue: '',
+    //     enum: {
+    //         labels: ["", "绿色", "蓝色", "红色", "黄色", "黑色"],
+    //         values: ['', '#00FF00', 'rgb(0,0,255)', '#FF0000', '#FFFF00', 'rgb(100,100,100)']
+    //     }
+    // }
 ];
