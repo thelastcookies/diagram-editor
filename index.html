@@ -618,6 +618,10 @@
                 node.s('label', '');
                 node.p(g2d.lp(e));
                 node.setLayer(2);
+
+                // 强行写入宽高
+                node.setWidth(node.getWidth());
+                node.setHeight(node.getHeight());
                 g2d.dm().add(node);
                 g2d.sm().ss(node);
             }

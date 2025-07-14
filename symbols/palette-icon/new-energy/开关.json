@@ -19,7 +19,7 @@
     {
       "attr": "node.state",
       "valueType": "Boolean",
-      "defaultValue": false
+      "defaultValue": true
     }
   ],
   "width": 50,
